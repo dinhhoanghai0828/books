@@ -1,0 +1,77 @@
+.searchClass {
+  position: fixed; /* Cố định phần tìm kiếm */
+  top: 60px; /* Đặt phần tìm kiếm bắt đầu từ dưới header (giả sử header cao 60px, bạn có thể điều chỉnh tùy ý) */
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  z-index: 1000; /* Đảm bảo nó nằm trên các phần tử khác */
+  padding: 10px 35px;
+  width: 100%; /* Đảm bảo phần tìm kiếm chiếm toàn bộ chiều ngang */
+  height: 80px; /* Chiều cao cố định cho phần tìm kiếm */
+}
+
+.rowClass {
+  padding-bottom: 20px;
+  background-color: #ffffff;
+}
+.colClass {
+  display: flex; /* Sử dụng flexbox để căn đều các cột */
+  flex-wrap: wrap;
+}
+.frameClass {
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  padding: 16px;
+  width: 100%;
+}
+.audioClass {
+  display: flex; /* Sửa lại, không cần dấu nháy đơn */
+  align-items: center;
+  justify-content: space-between;
+}
+.engClass {
+  font-size: 16px;
+}
+.viClass {
+  display: block;
+  margin-top: 8px;
+}
+.emptyClass {
+  margin-top: 150px;
+}
+.spinClass {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.spinDivClass {
+  position: relative;
+  height: 300px;
+}
+
+
+.bookClass{
+  padding-left: 16px;
+  background-color: #ffffff;
+  padding-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .contentClass {
+    padding: 16px;
+    background-color: #ffffff;
+    padding-bottom: 40px;
+    padding-top: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contentClass {
+    padding: 16px;
+    background-color: #ffffff;
+    padding-bottom: 40px;
+    padding-top: 150px;
+  }
+}

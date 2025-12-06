@@ -1,0 +1,13 @@
+@rem de trong thu muc /etc/systemd/system
+cription=Next.js App
+After=network.target
+
+[Service]
+User=root
+Group=root
+WorkingDirectory=/var/www/book2/2_FRONT_END
+ExecStart=/usr/bin/npm start
+
+[Install]
+WantedBy=multi-user.target
+

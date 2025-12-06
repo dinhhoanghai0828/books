@@ -1,0 +1,97 @@
+.volume-title {
+  margin-bottom: 20px;
+}
+
+.content-item {
+  width: 100%; /* Đảm bảo phần tử con không bị thu hẹp */
+  max-width: 1200px; /* Giới hạn độ rộng cho nội dung */
+  text-align: left; /* Căn trái nội dung */
+  margin-bottom: 16px;
+}
+
+.eng-line {
+  display: flex; /* Sử dụng flex để đảm bảo các nút thẳng hàng */
+  align-items: center; /* Đảm bảo các phần tử thẳng hàng theo chiều dọc */
+  justify-content: space-between; /* Giữ khoảng cách giữa nội dung và nút */
+}
+
+.engClass {
+  font-size: 18px;
+  color: #000;
+  flex: 1; /* Chiếm toàn bộ không gian còn lại để căn trái */
+}
+
+.button-group {
+  display: flex; /* Nhóm nút theo chiều ngang */
+}
+
+.viClass {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.8;
+  font-weight: 500;
+}
+
+@media (max-width: 480px) {
+  .engClass {
+    font-size: 15px;
+    color: #000;
+    flex: 1; /* Chiếm toàn bộ không gian còn lại để căn trái */
+  }
+  .viClass {
+    font-size: 14px;
+    color: #555;
+  }
+  .content-container {
+    padding: 20px;
+    padding-top: 180px; /* Đẩy nội dung xuống dưới Breadcrumb */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Căn giữa theo chiều ngang toàn bộ nội dung */
+    padding-bottom: 150px;
+    background-color: #ffffff;
+  }
+}
+
+@media (min-width: 768px) {
+  .content-container {
+    padding: 20px;
+    padding-top: 150px; /* Đẩy nội dung xuống dưới Breadcrumb */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Căn giữa theo chiều ngang toàn bộ nội dung */
+    padding-bottom: 150px;
+    background-color: #ffffff;
+  }
+}
+
+.volume-title {
+  margin-top: 20px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.volume-vi-name {
+  font-size: 1.2rem;
+  color: #444;
+  display: block;
+  margin-top: 6px;
+  text-align: center;
+  font-weight: 500;
+  border-bottom: 2px solid #ddd; /* Thêm gạch chân nhẹ */
+  padding-bottom: 20px;
+}
+
+.volume-total-sentence {
+  font-size: 1.2rem; /* Kích thước nhỏ hơn cho tiếng Việt */
+  color: gray; /* Tùy chỉnh màu sắc nếu cần */
+  display: block; /* Hiển thị dòng bên dưới */
+  margin-top: 10px;
+  text-align: center;
+}
+.highlight-missing {
+  background-color: #ffe58f;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 0 2px;
+}

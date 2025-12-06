@@ -1,0 +1,28 @@
+/* Add this to your CSS file (content.css or equivalent) */
+.custom-button {
+  background-color: transparent;
+  color: #1890ff; /* Light blue text color */
+  border: 2px solid #1890ff; /* Border same as text color */
+  font-size: 14px;
+  display: inline-flex; /* Use inline-flex to align content properly */
+  align-items: center; /* Vertically center icon and text */
+  justify-content: center; /* Horizontally center icon and text */
+  gap: 8px; /* Proper space between icon and text */
+}
+
+.custom-button .anticon {
+  font-size: 18px; /* Standard size for square icon */
+  margin: 0; /* Ensure no extra space around icon */
+}
+
+.custom-button:hover {
+  background-color: #1890ff; /* Background turns blue */
+  color: white; /* Text turns white on hover */
+  border-color: #1890ff; /* Keep border same as background */
+}
+
+.custom-button:active {
+  background-color: #40a9ff; /* Lighter blue when clicked */
+  color: white;
+  border-color: #40a9ff;
+}

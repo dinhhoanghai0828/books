@@ -1,0 +1,12 @@
+dịch hay và sát nghĩa điền vào '' định dạng sql tương ứng như câu mẫu
+('Language is endlessly variable','Ngôn ngữ biến đổi không ngừng','00:00:06.800','00:00:09.300','tedtalks-1'),
+
+
+dịch hay và sát nghĩa điền vào '' tương ứng như câu mẫu
+(UUID(),'life-diary-animated-40','I\'m 7 But I Know Everything','Tôi 7 Tuổi Nhưng Biết Mọi Thứ','STORIES_TEEN_STORY_01_LIFE_DIARY_ANIMATED_040.mp3',NULL,'00:00:00.000','00:14:27.920','life-diary-animated','NO',40),
+
+
+https://turboscribe.ai/vi?ref=gad&gad_source=1&gclid=Cj0KCQiAz6q-BhCfARIsAOezPxmd9DwumaEAS-1spNngNw2qQfPG13ja8T9MM4idLqsOd4RhR4KgJ2MaAlUEEALw_wcB
+
+
+learningenglish.voanews.com

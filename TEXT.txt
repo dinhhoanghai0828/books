@@ -1,0 +1,35 @@
+0. Cài đặt
+	Auto Close Tag: tự đống đóng thẻ
+	Auto Complete Tag
+	Auto Rename Tage
+	Code Spell Checker : kiểm tra chính tả
+1. Tạo dự án mới với next js
+npx create-next-app@latest
+2. Cài đặt MUI
+	Các thành phần của MUI
+		npm install @mui/material @emotion/react @emotion/styled
+	Các icon của MUI
+		npm install @mui/icons-material
+3. Cài đặt thư viện
+	slick-carousel: Thư viện Slick Carousel thực tế, dùng để tạo slider.
+		npm install react-slick slick-carousel
+	Muốn code sướng hơn được gợi ý phải cài bản DT
+		npm install --save @types/react-slick
+		
+4. Thư viện cho audio
+	react-h5-audio-player
+		npm i react-h5-audio-player
+	Vì phiên bản không tương thích react 19.0.0 nên chạy lệnh không kiểm tra tương thích trước
+		npm install --legacy-peer-deps
+	Hạ phiên bản react và react-dom từ 19 xuống 18.2
+5. Cài đặt axios
+	npm install axios
+	
+6. Cài đặt antd
+	npm i antd
+	npm install react-responsive
+7.	Cài đặt react router
+	npm i react-router
+	npm i typescript @types/react @types/node
+
+

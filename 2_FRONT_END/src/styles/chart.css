@@ -1,0 +1,115 @@
+.container {
+  padding: 20px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.title {
+  margin-bottom: 16px;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+.subtitle {
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+.tableWrapper {
+  margin-bottom: 40px;
+}
+
+.controls {
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.chartWrapper {
+  width: 100%;
+  min-width: 300px;
+}
+
+/* Mobile tối ưu hiển thị */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  .ant-table {
+    /* Target the Ant Design table */
+    width: 100%;
+    overflow-x: auto; /* Enable horizontal scrolling for the table */
+    display: block; /* Important for horizontal scroll to work */
+  }
+
+  .ant-table-content {
+    table-layout: fixed; /* Prevents content from stretching the table */
+    width: max-content; /* Table takes up only as much space as its content */
+  }
+
+  .ant-table-thead > tr > th,
+  .ant-table-tbody > tr > td {
+    white-space: nowrap; /* Prevents text from wrapping */
+    padding: 8px; /* Smaller padding for mobile */
+    font-size: 12px; /* Smaller font size for mobile */
+  }
+}
+
+/* Thêm kiểu cho DatePicker */
+.ant-picker {
+  border-radius: 8px; /* Bo tròn các góc */
+  padding: 6px 12px; /* Thêm khoảng cách bên trong */
+  font-size: 14px; /* Tăng kích thước font */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ nhẹ */
+  transition: all 0.3s ease; /* Thêm hiệu ứng chuyển động */
+}
+
+/* Thay đổi màu sắc viền khi focus */
+.ant-picker-focused {
+  border-color: #007bff; /* Màu viền khi có focus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Bóng đổ khi focus */
+}
+
+/* Kiểu cho placeholder */
+.ant-picker-input > input::placeholder {
+  color: #888; /* Màu placeholder */
+  font-style: italic; /* Kiểu chữ nghiêng */
+}
+
+/* Tùy chỉnh kiểu cho các nút ngày (next/prev) */
+.ant-picker-header-prev-btn,
+.ant-picker-header-next-btn {
+  background-color: #007bff;
+  border-radius: 50%;
+  color: white;
+  padding: 6px;
+}
+
+.ant-picker-header-prev-btn:hover,
+.ant-picker-header-next-btn:hover {
+  background-color: #0056b3; /* Màu hover */
+}
+
+/* Tùy chỉnh nút chọn ngày */
+.ant-picker-cell {
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.ant-picker-cell:hover {
+  background-color: #f0f0f0; /* Màu nền khi hover */
+}
+
+.ant-picker-cell-selected {
+  background-color: #007bff; /* Màu nền khi chọn ngày */
+  color: white;
+}
+
+/* Đảm bảo rằng các biểu tượng điều hướng nhỏ (prev, next) cũng có sự tương phản cao */
+.ant-picker-header-next-btn,
+.ant-picker-header-prev-btn {
+  background-color: #007bff;
+  border-radius: 50%;
+  color: white;
+}

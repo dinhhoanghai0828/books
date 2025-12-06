@@ -1,0 +1,148 @@
+.spin-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh; /* Căn giữa theo chiều dọc */
+}
+.spinDivClass {
+  position: relative;
+  height: 300px;
+}
+
+.pagination-container {
+  border-top: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: center;
+  position: fixed; /* Fix the position */
+  bottom: 0; /* Align the container at the bottom */
+  left: 0; /* Ensure it spans the full width */
+  width: 100%; /* Ensure the pagination takes full width */
+  background-color: #fff; /* Optional: Ensure background is visible */
+  z-index: 100; /* Optional: Make sure it stays on top of other content */
+  padding: 15px 0; /* Add padding for better spacing */
+}
+
+.bookRowClass {
+  padding-right: 35px;
+  background-color: #ffffff;
+}
+.colClass {
+  display: flex; /* Sử dụng flexbox để căn đều các cột */
+  flex-wrap: wrap;
+  background-color: #ffffff;
+}
+
+.bookClass {
+  padding-left: 35px;
+  padding-top: 120px;
+  background-color: #ffffff;
+  padding-bottom: 40px;
+}
+
+/* styles.css */
+.bookClass img {
+  padding-top: 25px;
+  border-radius: 8px; /* Giữ bo góc */
+}
+/* Header styling */
+.headerClass {
+  position: fixed; /* Fix the position at the top */
+  top: 0; /* Align the header at the top of the page */
+  left: 0; /* Ensure it's aligned with the left side of the page */
+  width: 100%; /* Make sure the header spans the full width of the screen */
+  background-color: #fff; /* Set the background color */
+  z-index: 1000; /* Make sure it's above other content */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow to separate from content */
+  padding: 10px 20px; /* Add padding around the header content */
+}
+
+.breadCrumbClass {
+  position: fixed; /* Cố định vị trí của Breadcrumb */
+  left: 0;
+  width: 100%; /* Breadcrumb chiếm toàn bộ chiều ngang */
+  background-color: #f7f7f7; /* Nền sáng để phân biệt */
+  z-index: 999; /* Đảm bảo Breadcrumb nằm trên nội dung */
+  padding: 15px 20px; /* Tăng padding để tạo không gian */
+  padding-left: 35px;
+  padding-top: 90px;
+}
+@media (min-width: 768px) {
+  .bookClass img {
+    height: 100px; /* Chiều cao nhỏ hơn trên màn hình di động */
+    object-fit: contain; /* Đảm bảo hiển thị đầy đủ hình ảnh */
+  }
+  .volumeClass {
+    padding-left: 35px;
+    padding-top: 145px;
+    padding-right: 35px;
+    padding-bottom: 70px;
+    background-color: #ffffff;
+  }
+}
+
+@media (max-width: 768px) {
+  .bookClass img {
+    height: 200px; /* Chiều cao nhỏ hơn trên màn hình di động */
+    object-fit: contain; /* Đảm bảo hiển thị đầy đủ hình ảnh */
+    border-radius: '8px';
+  }
+}
+
+@media (max-width: 480px) {
+  .bookClass img {
+    height: 100px; /* Giảm thêm kích thước trên màn hình rất nhỏ */
+    object-fit: contain;
+  }
+  .volumeClass {
+    padding-left: 35px;
+    padding-top: 160px;
+    padding-right: 35px;
+    padding-bottom: 70px;
+    background-color: #ffffff;
+  }
+}
+.frameClass {
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  padding: 16px;
+  width: 100%;
+}
+.engClass {
+  font-size: 18px;
+  color: #000;
+  flex: 1; /* Chiếm toàn bộ không gian còn lại để căn trái */
+}
+
+.viClass {
+  font-size: 16px;
+  color: #555;
+}
+
+.bookEngName {
+  position: absolute;
+  bottom: 10px; /* Add spacing from the bottom */
+  right: 10px; /* Add spacing from the right */
+  font-size: 14px; /* Adjust the font size as needed */
+  color: #000; /* Set the text color */
+  padding: 8px 12px; /* Add some padding for better spacing */
+  font-weight: bold; /* Make the text bold for emphasis */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.7
+  ); /* Optional: Add a light background to make it stand out */
+  border-radius: 8px; /* Rounded corners */
+}
+
+.paddingBottom {
+  padding-bottom: 30px;
+}
+
+.testBookEngName {
+  font-size: 14px; /* Adjust the font size as needed */
+  color: #000; /* Set the text color */
+  padding: 8px 12px; /* Add some padding for better spacing */
+  font-weight: bold; /* Make the text bold for emphasis */
+  border-radius: 8px; /* Rounded corners */
+}

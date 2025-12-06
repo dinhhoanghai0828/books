@@ -1,0 +1,265 @@
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+/* =====================================TEST START========================================= */
+body {
+  background-color: #ffffff; /* Nền trắng */
+  font-family: 'Arial', sans-serif; /* Font chữ dễ đọc */
+  margin: 0;
+  padding: 0;
+}
+
+.test-container {
+  max-width: 1400px; /* Giới hạn chiều rộng tối đa */
+  margin: auto; /* Căn giữa */
+  padding: 30px; /* Khoảng cách bên trong */
+  background: white; /* Nền trắng cho phần nội dung */
+  border-radius: 10px; /* Bo tròn các góc */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Đổ bóng mạnh hơn */
+}
+
+.test-title {
+  text-align: center; /* Căn giữa tiêu đề */
+  color: #4a90e2; /* Màu chữ sáng xanh */
+  margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
+  font-size: 24px; /* Kích thước chữ tiêu đề lớn hơn */
+}
+
+.sentence-container {
+  margin: 20px 0; /* Khoảng cách giữa các câu */
+  padding: 15px; /* Khoảng cách bên trong */
+  border: 1px solid #ccc; /* Đường viền nhẹ */
+  border-radius: 8px; /* Bo tròn các góc */
+  background: #f9f9f9; /* Nền câu sáng hơn */
+  transition: background 0.3s; /* Hiệu ứng chuyển đổi cho nền */
+}
+
+.sentence-container:hover {
+  background: #f1f1f1; /* Nền khi hover */
+}
+
+.viClass {
+  font-size: 18px; /* Kích thước chữ câu tiếng Việt lớn hơn */
+  color: #333; /* Màu chữ cho tiếng Việt */
+}
+
+.engClass {
+  display: flex;
+  flex-wrap: wrap; /* Từ xáo trộn nằm trên nhiều hàng */
+  margin-top: 10px; /* Khoảng cách giữa tiếng Việt và từ xáo trộn */
+}
+
+.word {
+  padding: 10px 15px; /* Khoảng cách bên trong từ */
+  margin: 5px; /* Khoảng cách giữa các từ */
+  border: 1px solid #4a90e2; /* Đường viền màu xanh */
+  border-radius: 5px; /* Bo tròn các góc từ */
+  background: #e7f0ff; /* Nền từ sáng màu xanh nhạt */
+  cursor: pointer; /* Con trỏ khi di chuột qua */
+  transition: background 0.3s, transform 0.3s; /* Hiệu ứng chuyển đổi */
+}
+
+.word:hover {
+  background: #d4e4ff; /* Nền khi hover */
+  transform: translateY(-2px); /* Nâng nhẹ từ khi hover */
+}
+
+.selected-container {
+  display: flex;
+  align-items: center; /* Căn giữa theo chiều dọc */
+  margin-top: 10px; /* Khoảng cách trên */
+}
+
+.selectedWords {
+  display: flex;
+  flex-wrap: wrap; /* Các từ đã chọn nằm trên nhiều hàng */
+}
+
+.selected-word {
+  background: #4a90e2; /* Nền cho từ đã chọn */
+  color: white; /* Màu chữ trắng */
+  border: none; /* Bỏ đường viền */
+  padding: 8px 12px; /* Khoảng cách bên trong từ đã chọn */
+  margin: 5px; /* Khoảng cách giữa các từ đã chọn */
+  border-radius: 5px; /* Bo tròn các góc */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Đổ bóng nhẹ cho từ đã chọn */
+}
+
+.result-icon {
+  font-size: 24px; /* Kích thước biểu tượng kết quả */
+  margin-left: 10px; /* Khoảng cách với từ đã chọn */
+}
+
+.button-container {
+  position: fixed;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: white; /* Giữ nút hiển thị rõ ràng */
+  padding: 30px 0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.check-btn {
+  background-color: #007bff; /* Màu nền nút kiểm tra */
+  color: white;
+  border: 1px solid #ccc;
+  font-weight: bold;
+  font-size: 18px; /* Tăng kích thước chữ */
+  height: 50px; /* Tăng chiều cao */
+  min-width: 160px; /* Độ rộng tối thiểu */
+  padding: 12px 24px; /* Tăng khoảng đệm */
+  border-radius: 5px; /* Bo tròn góc */
+  transition: background 0.3s, transform 0.3s; /* Hiệu ứng chuyển đổi */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Khi hover, làm nút sáng hơn một chút */
+.check-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Hiệu ứng phóng to nhẹ khi hover */
+}
+
+/* Nếu dùng với flex container, đảm bảo nó không bị nhỏ */
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Khoảng cách giữa các nút */
+}
+
+.check-btn:hover {
+  background-color: #0056b3; /* Màu khi hover nút */
+  transform: scale(1.05); /* Phóng to nút khi hover */
+}
+
+.check-btn:disabled {
+  background-color: #6c757d; /* Màu nền khi nút bị vô hiệu hóa */
+}
+
+.reload-btn {
+  background-color: #f0f0f0;
+  color: black;
+  border: 1px solid #ccc;
+  font-weight: bold;
+  font-size: 18px; /* Tăng kích thước chữ */
+  height: 50px; /* Tăng chiều cao */
+  min-width: 160px; /* Độ rộng tối thiểu */
+  padding: 12px 24px; /* Tăng khoảng đệm */
+  border-radius: 5px; /* Bo tròn góc */
+  transition: background 0.3s, transform 0.3s; /* Hiệu ứng chuyển đổi */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hiệu ứng khi hover */
+.reload-btn:hover {
+  background-color: #e0e0e0; /* Màu hover tối hơn */
+  transform: scale(1.05); /* Phóng to nhẹ khi hover */
+}
+.score {
+  text-align: center;
+  font-size: 24px; /* Kích thước chữ lớn hơn cho điểm số */
+  margin-top: 20px;
+  font-weight: bold; /* Chữ đậm */
+  color: #4a90e2; /* Màu chữ cho điểm số */
+}
+.correct-answer {
+  display: block; /* Đảm bảo hiển thị xuống dòng */
+  margin-top: 10px; /* Khoảng cách trên */
+  font-size: 17px; /* Kích thước chữ lớn hơn */
+  font-weight: bold; /* Chữ đậm */
+  color: #4caf50; /* Màu chữ cho đáp án đúng (xanh lá) */
+}
+
+/* Các mã CSS khác giữ nguyên */
+
+/* Chế độ mobile: giảm kích thước chữ */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px; /* Giảm kích thước chữ chung */
+  }
+
+  .test-title {
+    font-size: 18px; /* Giảm kích thước tiêu đề */
+  }
+
+  .viClass {
+    font-size: 16px; /* Giảm kích thước chữ tiếng Việt */
+  }
+
+  .word {
+    font-size: 14px; /* Giảm kích thước chữ trong các từ */
+    padding: 6px 10px; /* Giảm padding để tiết kiệm không gian */
+  }
+
+  .selected-word {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  .check-btn {
+    font-size: 14px; /* Giảm kích thước chữ nút */
+    padding: 8px 15px;
+  }
+
+  .score {
+    font-size: 18px; /* Giảm kích thước chữ điểm số */
+  }
+
+  .correct-answer {
+    font-size: 15px; /* Giảm kích thước chữ đáp án đúng */
+  }
+
+  .result-icon {
+    font-size: 20px; /* Giảm kích thước biểu tượng kết quả */
+  }
+}
+/* =====================================TEST END========================================= */

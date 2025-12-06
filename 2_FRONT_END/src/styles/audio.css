@@ -1,0 +1,35 @@
+.audio-component-fixed {
+  position: fixed;
+  bottom: 0; /* Gắn ở phía dưới màn hình */
+  left: 50%; /* Căn giữa theo chiều ngang */
+  transform: translateX(-50%); /* Dịch chuyển để căn giữa chính xác */
+  z-index: 1000; /* Đảm bảo nằm trên các thành phần khác */
+  background-color: #fff; /* Màu nền (tuỳ chọn) */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng (tuỳ chọn) */
+  padding: 10px; /* Khoảng cách bên trong */
+  border-radius: 10px 10px 0 0; /* Bo góc trên */
+  width: 100%; /* Chiếm toàn bộ chiều rộng */
+  box-sizing: border-box; /* Box sizing để tính đúng chiều rộng bao gồm padding, border */
+}
+
+@media (max-width: 480px) {
+  .audio-component-fixed {
+    width: 100%; /* Full-width cho mobile */
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .audio-component-fixed {
+    width: 100%; /* Full-width cho tablet */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (min-width: 769px) {
+  .audio-component-fixed {
+    width: 400px; /* Cho web từ 768px trở lên */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
