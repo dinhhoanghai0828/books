@@ -27,7 +27,7 @@ public class RunSQLComponent {
     // Autowire bean cụ thể
     //    @Autowired
     private DataSource dataSource;
-    String path = "G:\\20_PROJECT\\2_books\\3_DATABASE\\";
+    String path = "G:\\20_PROJECT\\books\\3_DATABASE\\";
     //    String path = "E:\\2_books\\3_DATABASE\\";
     private String url;
     private String username;
