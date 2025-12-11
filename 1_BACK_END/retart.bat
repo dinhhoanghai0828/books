@@ -5,9 +5,6 @@ set userName=root
 set password=Thanphong@93
 set server_ip=91.108.111.253
 
-call %~dp0\putty\plink.exe -batch -ssh %userName%@%server_ip% -pw %password% "sudo chmod 777 /var/www/backend"
-call %~dp0\putty\plink.exe -batch -ssh %userName%@%server_ip% -pw %password% "sudo rm -rf /var/www/backend/demo.war"
-call %~dp0\putty\pscp.exe -pw %password% %~dp0\target\demo.war %userName%@%server_ip%:/var/www/backend
 call %~dp0\putty\plink.exe -batch -ssh %userName%@%server_ip% -pw %password% "sudo kill -9 `sudo lsof -t -i:8080`"
 call %~dp0\putty\plink.exe -batch -ssh %userName%@%server_ip% -pw %password% "nohup java -jar /var/www/backend/demo.war  &"
 call %~dp0\putty\plink.exe -batch -ssh %userName%@%server_ip% -pw %password% "sudo tail -500f /var/www/backend/nohup.out"
