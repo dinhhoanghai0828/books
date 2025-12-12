@@ -25,27 +25,27 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-//        http
-//                .cors().and()
-//                .csrf().disable()
-//                .authorizeRequests()
-//                .antMatchers("/login").permitAll()
-//                .antMatchers("/**").permitAll()
-//                .anyRequest().authenticated()
-//                .and()
-//                .formLogin().disable()                  // Vô hiệu hóa giao diện form login mặc định
-//                .httpBasic().disable();
-
         http
                 .cors().and()
                 .csrf().disable()
-                .authorizeHttpRequests(authorizeRequests -> authorizeRequests
-                        .requestMatchers("/login").permitAll()
-                        .requestMatchers("/**").permitAll()
-                        .anyRequest().authenticated()
-                )
-                .formLogin().disable()
+                .authorizeRequests()
+                .antMatchers("/login").permitAll()
+                .antMatchers("/**").permitAll()
+                .anyRequest().authenticated()
+                .and()
+                .formLogin().disable()                  // Vô hiệu hóa giao diện form login mặc định
                 .httpBasic().disable();
+
+//        http
+//                .cors().and()
+//                .csrf().disable()
+//                .authorizeHttpRequests(authorizeRequests -> authorizeRequests
+//                        .requestMatchers("/login").permitAll()
+//                        .requestMatchers("/**").permitAll()
+//                        .anyRequest().authenticated()
+//                )
+//                .formLogin().disable()
+//                .httpBasic().disable();
 
         return http.build();
     }
