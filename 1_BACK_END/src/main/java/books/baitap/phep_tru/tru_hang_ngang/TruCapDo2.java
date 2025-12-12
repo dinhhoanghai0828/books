@@ -1,5 +1,6 @@
-package books.baitap.congtru;
+package books.baitap.phep_tru.tru_hang_ngang;
 
+import books.baitap.utils.BaiTapUtils;
 import org.apache.poi.xwpf.usermodel.BreakType;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 
@@ -9,17 +10,17 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class BaiTapTruPhamVi10Den20 {
+public class TruCapDo2 {
     public static void main(String[] args) throws IOException {
         XWPFDocument document = new XWPFDocument();
-        FileOutputStream out = new FileOutputStream("BaiTapTru10_20.docx");
+        FileOutputStream out = new FileOutputStream("TruCapDo2.docx");
 
-        generateSubtractionExercises(document, "Bài tập: Phép trừ (phạm vi 10 đến 20)", 240);
+        generateSubtractionExercises(document, "Bài tập: Phép trừ số có 2 chữ số với số có 1 chữ số (có nhớ)", 240);
 
         document.write(out);
         out.close();
         document.close();
-        System.out.println("✅ Đã tạo xong file Word: BaiTapTru10_20.docx");
+        System.out.println("✅ Đã tạo xong file Word: TruCapDo2.docx");
     }
 
     private static void generateSubtractionExercises(XWPFDocument doc, String title, int totalCount) {
@@ -27,11 +28,11 @@ public class BaiTapTruPhamVi10Den20 {
         Random rand = new Random();
 
         while (problems.size() < totalCount) {
-            int a = rand.nextInt(11) + 10;    // a từ 10 đến 20
-            int b = rand.nextInt(a - 9) + 10; // b từ 10 đến a
+            int a = rand.nextInt(11) + 10;   // số bị trừ từ 10 đến 20
+            int b = rand.nextInt(9) + 1;     // số trừ từ 1 đến 9
 
-            // Bỏ trường hợp a = b
-            if (a == b) {
+            // chỉ lấy phép trừ có nhớ => hàng đơn vị a < hàng đơn vị b
+            if ((a % 10) >= (b % 10)) {
                 continue;
             }
 

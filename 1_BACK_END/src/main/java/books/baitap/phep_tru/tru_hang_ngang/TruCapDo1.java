@@ -1,6 +1,8 @@
-package books.baitap.congtru;
+package books.baitap.phep_tru.tru_hang_ngang;
 
-import org.apache.poi.xwpf.usermodel.*;
+import books.baitap.utils.BaiTapUtils;
+import org.apache.poi.xwpf.usermodel.BreakType;
+import org.apache.poi.xwpf.usermodel.XWPFDocument;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -8,28 +10,33 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class BaiTapCong3So {
+public class TruCapDo1 {
     public static void main(String[] args) throws IOException {
         XWPFDocument document = new XWPFDocument();
-        FileOutputStream out = new FileOutputStream("BaiTapCong3So.docx");
+        FileOutputStream out = new FileOutputStream("TruCapDo1.docx");
 
-        generateAdditionExercises(document, "Bài tập: Phép cộng 3 số", 240);
+        generateSubtractionExercises(document, "Bài tập: Phép trừ 2 số có 1 chữ số", 240);
 
         document.write(out);
         out.close();
         document.close();
-        System.out.println("✅ Đã tạo xong file Word: BaiTapCong3So.docx");
+        System.out.println("✅ Đã tạo xong file Word: TruCapDo1.docx");
     }
 
-    private static void generateAdditionExercises(XWPFDocument doc, String title, int totalCount) {
+    private static void generateSubtractionExercises(XWPFDocument doc, String title, int totalCount) {
         List<String> problems = new ArrayList<>();
         Random rand = new Random();
 
-        for (int i = 0; i < totalCount; i++) {
-            int a = rand.nextInt(10) + 1;  // số từ 1-10
-            int b = rand.nextInt(10) + 1;
-            int c = rand.nextInt(10) + 1;
-            String problem = String.format("%2s  + %2s  + %2s  =", a, b, c);
+        while (problems.size() < totalCount) {
+            int a = rand.nextInt(10) + 1;       // a từ 1 đến 10
+            int b = rand.nextInt(a + 1);        // b từ 0 đến a, đảm bảo a - b ≥ 0
+
+            // Bỏ trường hợp b = 0 và a = b
+            if (b == 0 || a == b) {
+                continue;
+            }
+
+            String problem = String.format("%2s  - %2s  =", a, b);
             problems.add(problem);
         }
 
