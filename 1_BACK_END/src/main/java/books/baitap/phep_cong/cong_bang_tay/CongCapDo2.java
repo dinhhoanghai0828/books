@@ -1,17 +1,21 @@
-package books.baitap.congtru;
+package books.baitap.phep_cong.cong_bang_tay;
 
-import org.apache.poi.xwpf.usermodel.*;
+import books.baitap.utils.BaiTapUtils;
+import org.apache.poi.xwpf.usermodel.BreakType;
+import org.apache.poi.xwpf.usermodel.XWPFDocument;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 public class CongCapDo2 {
     public static void main(String[] args) throws IOException {
         XWPFDocument document = new XWPFDocument();
         FileOutputStream out = new FileOutputStream("CongCapDo2.docx");
 
-        generateAdditionExercises(document, "Bài tập: Phép cộng 2 số có 1 chữ số", 240);
+        generateAdditionExercises(document, "Bài tập: Phép cộng 2 số có 1 chữ số (tổng > 10)", 240);
 
         document.write(out);
         out.close();
@@ -23,12 +27,19 @@ public class CongCapDo2 {
         List<String> problems = new ArrayList<>();
         Random rand = new Random();
 
-        for (int i = 0; i < totalCount; i++) {
+        while (problems.size() < totalCount) {
             int a = rand.nextInt(9) + 1; // 1-9
             int b = rand.nextInt(9) + 1; // 1-9
+
+            // chỉ lấy khi tổng > 10
+            if (a + b <= 10) {
+                continue;
+            }
+
             String problem = String.format("%2s  + %2s  =", a, b);
             problems.add(problem);
         }
+
         int perPage = 24; // số bài trên 1 trang
         int pageCount = (int) Math.ceil(problems.size() / (double) perPage);
 

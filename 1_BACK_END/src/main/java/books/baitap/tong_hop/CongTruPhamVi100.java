@@ -1,5 +1,6 @@
-package books.baitap.congtru;
+package books.baitap.tong_hop;
 
+import books.baitap.utils.BaiTapUtils;
 import org.apache.poi.xwpf.usermodel.BreakType;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 
@@ -9,27 +10,37 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class CongCapDo4 {
+public class CongTruPhamVi100 {
     public static void main(String[] args) throws IOException {
         XWPFDocument document = new XWPFDocument();
-        FileOutputStream out = new FileOutputStream("CongCapDo4.docx");
+        FileOutputStream out = new FileOutputStream("CongTruPhamVi100.docx");
 
-        generateAdditionExercises(document, "Bài tập: Cộng 2 số có 2 chữ số phạm vi 10-20", 240);
+        generateExercises(document, "Bài tập: Cộng trừ 2 số có 2 chữ số (≤100)", 240);
 
         document.write(out);
         out.close();
         document.close();
-        System.out.println("✅ Đã tạo xong file Word: CongCapDo4.docx");
+        System.out.println("✅ Đã tạo xong file Word: CongTruPhamVi100.docx");
     }
 
-    private static void generateAdditionExercises(XWPFDocument doc, String title, int totalCount) {
+    private static void generateExercises(XWPFDocument doc, String title, int totalCount) {
         List<String> problems = new ArrayList<>();
         Random rand = new Random();
 
-        for (int i = 0; i < totalCount; i++) {
-            int a = rand.nextInt(11) + 10; // số từ 10 đến 20
-            int b = rand.nextInt(11) + 10; // số từ 10 đến 20
-            String problem = String.format("%2s  + %2s  =", a, b);
+        while (problems.size() < totalCount) {
+            int a = rand.nextInt(90) + 10; // số từ 10 đến 99
+            int b = rand.nextInt(90) + 10; // số từ 10 đến 99
+
+            String problem;
+            if (rand.nextBoolean()) {
+                // phép cộng
+                if (a + b > 100) continue;
+                problem = String.format("%2d + %2d =", a, b);
+            } else {
+                // phép trừ
+                if (a - b < 0) continue;
+                problem = String.format("%2d - %2d =", a, b);
+            }
             problems.add(problem);
         }
 

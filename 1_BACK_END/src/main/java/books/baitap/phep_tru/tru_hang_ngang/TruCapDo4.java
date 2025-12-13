@@ -1,22 +1,26 @@
-package books.baitap.congtru;
+package books.baitap.phep_tru.tru_hang_ngang;
 
-import org.apache.poi.xwpf.usermodel.*;
+import books.baitap.utils.BaiTapUtils;
+import org.apache.poi.xwpf.usermodel.BreakType;
+import org.apache.poi.xwpf.usermodel.XWPFDocument;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
-public class BaiTapTru {
+public class TruCapDo4 {
     public static void main(String[] args) throws IOException {
         XWPFDocument document = new XWPFDocument();
-        FileOutputStream out = new FileOutputStream("BaiTapTru.docx");
+        FileOutputStream out = new FileOutputStream("TruCapDo4.docx");
 
-        generateSubtractionExercises(document, "Bài tập: Phép trừ", 240);
+        generateSubtractionExercises(document, "Bài tập: Phép trừ 2 số có 2 chữ số trong phạm vi 20 (không nhớ)", 240);
 
         document.write(out);
         out.close();
         document.close();
-        System.out.println("✅ Đã tạo xong file Word: BaiTapTru.docx");
+        System.out.println("✅ Đã tạo xong file Word: TruCapDo4.docx");
     }
 
     private static void generateSubtractionExercises(XWPFDocument doc, String title, int totalCount) {
@@ -24,11 +28,16 @@ public class BaiTapTru {
         Random rand = new Random();
 
         while (problems.size() < totalCount) {
-            int a = rand.nextInt(10) + 1;       // a từ 1 đến 10
-            int b = rand.nextInt(a + 1);        // b từ 0 đến a, đảm bảo a - b ≥ 0
+            int a = rand.nextInt(11) + 10;   // số bị trừ từ 10 → 20
+            int b = rand.nextInt(11) + 10;   // số trừ từ 10 → 20
 
-            // Bỏ trường hợp b = 0 và a = b
-            if (b == 0 || a == b) {
+            // đảm bảo không âm
+            if (a < b) {
+                continue;
+            }
+
+            // chỉ lấy phép trừ KHÔNG NHỚ => hàng đơn vị a >= hàng đơn vị b
+            if ((a % 10) < (b % 10)) {
                 continue;
             }
 
