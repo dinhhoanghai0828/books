@@ -16,7 +16,7 @@ public class TruCapDo5_3 {
         FileOutputStream out = new FileOutputStream("TruCapDo5_HangDoc.docx");
 
         generateSubtractionExercises(document,
-                "Bài tập: Trừ 2 số (số thứ 1 từ 20–30, số thứ 2 từ 1–9), có nhớ theo cột dọc",
+                "Bài tập: Trừ 2 số (số thứ 1 từ 40–50, số thứ 2 từ 1–9), có nhớ theo cột dọc",
                 240);
 
         document.write(out);

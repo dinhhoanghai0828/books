@@ -10,47 +10,64 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class TruCapDo5_2 {
+public class TruCapDo9 {
     public static void main(String[] args) throws IOException {
         XWPFDocument document = new XWPFDocument();
-        FileOutputStream out = new FileOutputStream("TruCapDo5_HangDoc.docx");
+        FileOutputStream out = new FileOutputStream("TruCapDo9_HangDoc.docx");
 
-        generateSubtractionExercises(document,
-                "Bài tập: Trừ 2 số (số thứ 1 từ 30–40, số thứ 2 từ 1–9), có nhớ theo cột dọc",
-                240);
+        generateSubtractionExercises(
+                document,
+                "Bài tập: Phép trừ 2 số có 2 chữ số trong phạm vi 100 (có nhớ và không nhớ) – Dạng cột dọc",
+                240
+        );
 
         document.write(out);
         out.close();
         document.close();
-        System.out.println("✅ Đã tạo xong file Word: TruCapDo5_HangDoc.docx");
+
+        System.out.println("✅ Đã tạo xong file Word: TruCapDo9_HangDoc.docx");
     }
 
     private static void generateSubtractionExercises(XWPFDocument doc, String title, int totalCount) {
         List<String> problems = new ArrayList<>();
         Random rand = new Random();
 
+        int coNho = 0;
+        int khongNho = 0;
+
         while (problems.size() < totalCount) {
-            int a = rand.nextInt(11) + 30; // 30 → 40
-            int b = rand.nextInt(9) + 1;   // số thứ 2: 1 → 9
+            int a = rand.nextInt(90) + 10; // 10 → 99
+            int b = rand.nextInt(90) + 10;
 
-            // chỉ lấy phép trừ có nhớ (hàng đơn vị của a < b)
-            if ((a % 10) >= (b % 10)) continue;
+            if (a < b) continue; // không âm
 
-            String problem = String.format("%2s - %2s =", a, b);
+            boolean isBorrow = (a % 10) < (b % 10);
+
+            // đảm bảo phân bố tương đối đều
+            if (isBorrow && coNho > totalCount / 2) continue;
+            if (!isBorrow && khongNho > totalCount / 2) continue;
+
+            String problem = String.format("%2d - %2d =", a, b);
             problems.add(problem);
+
+            if (isBorrow) {
+                coNho++;
+            } else {
+                khongNho++;
+            }
         }
 
-        // mỗi trang có 20 phép trừ
+        // mỗi trang 20 phép tính
         int perPage = 20;
         int pageCount = (int) Math.ceil(problems.size() / (double) perPage);
 
         BaiTapUtils.addTitle(doc, title);
+
         for (int page = 0; page < pageCount; page++) {
             int from = page * perPage;
             int to = Math.min(from + perPage, problems.size());
-            List<String> pageProblems = problems.subList(from, to);
 
-            // bảng phép trừ cột dọc
+            List<String> pageProblems = problems.subList(from, to);
             BaiTapUtils.addVerticalSubtractTable(doc, pageProblems);
 
             if (page < pageCount - 1) {
