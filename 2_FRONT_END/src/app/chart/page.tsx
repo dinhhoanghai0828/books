@@ -21,6 +21,7 @@ const ChartPage = () => {
   const [startDate, setStartDate] = useState<any>(dayjs().subtract(1, 'month'));
   const [endDate, setEndDate] = useState<any>(dayjs());
   const [extremeData, setExtremeData] = useState([]);
+  const [extremeWorldPriceData, setExtremeWorldPriceData] = useState([]);
 
   const fetchChartData = async () => {
     if (!startDate || !endDate) {
@@ -63,14 +64,48 @@ const ChartPage = () => {
       });
       setFilteredData(processedData);
       console.log(processedData);
+      // if (processedData.length > 0) {
+      //   const minDiff = processedData.reduce((prev, curr) =>
+      //     parseFloat(curr.totalInvestmentDiff) <
+      //     parseFloat(prev.totalInvestmentDiff)
+      //       ? curr
+      //       : prev
+      //   );
+      //   const maxDiff = processedData.reduce((prev, curr) =>
+      //     parseFloat(curr.totalInvestmentDiff) >
+      //     parseFloat(prev.totalInvestmentDiff)
+      //       ? curr
+      //       : prev
+      //   );
+      //   setExtremeData([minDiff, maxDiff]);
+      // }
+
       if (processedData.length > 0) {
+        // Min / Max theo LỢI NHUẬN (giữ nguyên)
         const minDiff = processedData.reduce((prev, curr) =>
-          parseFloat(curr.totalInvestmentDiff) < parseFloat(prev.totalInvestmentDiff) ? curr : prev
+          Number(curr.totalInvestmentDiff) < Number(prev.totalInvestmentDiff)
+            ? curr
+            : prev
         );
+
         const maxDiff = processedData.reduce((prev, curr) =>
-          parseFloat(curr.totalInvestmentDiff) > parseFloat(prev.totalInvestmentDiff) ? curr : prev
+          Number(curr.totalInvestmentDiff) > Number(prev.totalInvestmentDiff)
+            ? curr
+            : prev
         );
+
         setExtremeData([minDiff, maxDiff]);
+
+        // ✅ Min / Max theo GIÁ THẾ GIỚI
+        const minWorldPrice = processedData.reduce((prev, curr) =>
+          curr.worldPrice < prev.worldPrice ? curr : prev
+        );
+
+        const maxWorldPrice = processedData.reduce((prev, curr) =>
+          curr.worldPrice > prev.worldPrice ? curr : prev
+        );
+
+        setExtremeWorldPriceData([minWorldPrice, maxWorldPrice]);
       }
     } catch (error) {
       message.error('Lỗi khi tải dữ liệu biểu đồ!');
@@ -329,6 +364,16 @@ const ChartPage = () => {
           </LineChart>
         </ResponsiveContainer>
       </div>
+      <div className="table-wrapper">
+        <h3 className="subtitle">Ngày có Giá Thế Giới thấp nhất và cao nhất</h3>
+        <Table
+          dataSource={extremeWorldPriceData}
+          columns={extremeColumns}
+          rowKey="createdAt"
+          pagination={false}
+        />
+      </div>
+
       <div className="table-wrapper">
         <h3 className="subtitle">Ngày có chênh lệch thấp nhất và cao nhất</h3>
         <Table
