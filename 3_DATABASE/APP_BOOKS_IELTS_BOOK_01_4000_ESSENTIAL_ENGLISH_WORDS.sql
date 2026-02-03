@@ -1648,7 +1648,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME, VOLUME_SLUG) VALUES
 	('For the first time, many people came to eat','Vì thế, lần đầu tiên có rất nhiều người đến đây ăn uống','00:01:13.400','00:01:17.000','4000-essential-english-words-42'),
 	('The chef realized that the restaurant\'s problems were his fault','Người bếp trưởng đã nhận ra vấn đề của nhà hàng là do lỗi của mình','00:01:17.000','00:01:21.000','4000-essential-english-words-42'),
 	('The chef learned an important lesson','Ông đã học được một bài học quan trọng','00:01:21.000','00:01:24.000','4000-essential-english-words-42'),
-	('The new, generous chef insisted on giving the customers a free meal','Người bếp trưởng mới hào phóng quyết định cho khách một bữa ăn miễn phí','00:01:24.000','00:01:29.500','4000-essential-english-words-42'),
+	('The new, generous chef insisted on giving the customers a free meal','Người bếp trưởng mới kiên quyết cho khách một bữa ăn miễn phí','00:01:24.000','00:01:29.500','4000-essential-english-words-42'),
 
 
 	/* ('4000 Essential English Words - Volume 2: Lesson 13 - The Cat and the Fox','4000 Từ Tiếng Anh Quan Trọng - Tập 2: Bài 13 - Mèo và Cáo','00:00:00.000','00:01:37.000','4000-essential-english-words-43'), */
