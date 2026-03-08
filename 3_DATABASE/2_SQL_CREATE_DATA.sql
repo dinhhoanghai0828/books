@@ -8,7 +8,8 @@ INSERT INTO CATEGORIES(UUID,SLUG,ENG,VI,NUMBER) VALUES
 	(UUID(),'truyen','Story','Truyện',1),
 	(UUID(),'sach','Book','Sách',2),
 	(UUID(),'bao','News','Báo',3),
-	(UUID(),'tro-chuyen','Conversations','Trò chuyện',4);
+	(UUID(),'tro-chuyen','Conversations','Trò chuyện',4),
+	(UUID(),'tieng-anh-co-ban','Basic English','Tiếng anh cơ bản',5);
 
 --	DU LIEU BANG SUBCATEGORIES
 INSERT INTO SUBCATEGORIES(UUID,SLUG,ENG,VI,CATEGORY_SLUG,NUMBER) VALUES
@@ -21,7 +22,8 @@ INSERT INTO SUBCATEGORIES(UUID,SLUG,ENG,VI,CATEGORY_SLUG,NUMBER) VALUES
 	(UUID(),'sach-triet-ly','Philosophy book','Sách triết lý','sach',2),
 	(UUID(),'tin-tuc-hang-ngay','Daily News','Tin tức hàng ngày','bao',1),
 	(UUID(),'doi-thoai-hoc-thuat','Academic conversations','Đối thoại học thuật','tro-chuyen',1),
-	(UUID(),'tro-chuyen-hang-ngay','Daily Conversations','Trò chuyện hàng ngày','tro-chuyen',2);
+	(UUID(),'tro-chuyen-hang-ngay','Daily Conversations','Trò chuyện hàng ngày','tro-chuyen',2),
+	(UUID(),'tieng-anh-co-ban-cap-do-1','Basic English Level 1','Tiếng anh cơ bản cấp độ 1','tieng-anh-co-ban',5);
 	
 --	DU LIEU BANG BOOKS
 INSERT INTO BOOKS(UUID,SLUG,ENG,VI,AUTHOR,DESCRIPTION,SUBCATEGORY_SLUG,IMG,NUMBER) VALUES
@@ -38,10 +40,16 @@ INSERT INTO BOOKS(UUID,SLUG,ENG,VI,AUTHOR,DESCRIPTION,SUBCATEGORY_SLUG,IMG,NUMBE
 	(UUID(),'voa','VOA','Báo nước ngoài','Nhiều tác giả','Thông tin kinh tế, chính trị, khoa học, xã hội, giáo dục, du lịch','tin-tuc-hang-ngay','VOA.png',2),
 	(UUID(),'tedtalks','TedTalks','TedTalks','Nhiều tác giả','Thảo luận về các vấn đề trong cuộc sống','doi-thoai-hoc-thuat','TEDTALKS.png',1),
 	(UUID(),'all-ears-english','All Ears English','All Ears English','Nhiều tác giả','Thảo luận về các vấn đề trong cuộc sống','doi-thoai-hoc-thuat','ALL_EARS_ENGLISH.png',2),
-	(UUID(),'dhar-mann-studio','Dhar Mann Studio','Dhar Mann Studio','Nhiều tác giả','Các cuộc hội thoại ngắn thường ngày','tro-chuyen-hang-ngay','DHAR_MANN_STUDIO.png',1);
+	(UUID(),'dhar-mann-studio','Dhar Mann Studio','Dhar Mann Studio','Nhiều tác giả','Các cuộc hội thoại ngắn thường ngày','tro-chuyen-hang-ngay','DHAR_MANN_STUDIO.png',1),
+	(UUID(),'tiger-club-learning','TigerCub Learning','TigerCub Learning','Nhiều tác giả','Học các câu tiếng anh đơn giản','tieng-anh-co-ban-cap-do-1','TIGER_CLUB_LEARNING.png',5);
 	
 --	DU LIEU BANG VOLUMES
 TRUNCATE TABLE VOLUMES;
+INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,CHECKED,NUMBER) VALUES
+	(UUID(),'tiger-club-learning-1','Farm Fun','Niềm vui từ nông trại','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_001.mp3',NULL,'00:00:00.000','00:04:04.100','tiger-club-learning','YES',1),
+	(UUID(),'tiger-club-learning-2','Farm Play','Vui chơi cùng nông trại','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_002.mp3',NULL,'00:00:00.000','00:04:07.900','tiger-club-learning','YES',2);
+	
+
 INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,CHECKED,NUMBER) VALUES
 	(UUID(),'economist-1','China approves the world\'s most expensive infrastructure project','Trung Quốc phê duyệt dự án cơ sở hạ tầng đắt nhất thế giới','NEWS_DAILY_NEW_01_ECONOMIST_001.mp3',NULL,'00:00:00.000','00:03:29.270','economist','YES',1),
 	(UUID(),'economist-2','Why canada should join EU','Tại sao Canada nên gia nhập EU','NEWS_DAILY_NEW_01_ECONOMIST_002.mp3',NULL,'00:00:00.000','00:07:55.230','economist','NO',2),

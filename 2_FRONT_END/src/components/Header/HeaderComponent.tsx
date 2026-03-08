@@ -30,6 +30,24 @@ const items: CustomMenuItem[] = [
     href: '/',
   },
   {
+    label: 'Tiếng anh cơ bản',
+    key: 'tieng-anh-co-ban',
+    icon: <ReadOutlined />,
+    href: '/tieng-anh-co-ban',
+    children: [
+      {
+        label: 'Tiếng anh cơ bản cấp độ 1',
+        key: 'tienganhcoban1',
+        href: '/tieng-anh-co-ban/tieng-anh-co-ban-cap-do-1',
+      },
+      {
+        label: 'Tiếng anh cơ bản cấp độ 2',
+        key: 'tienganhcoban2',
+        href: '/tieng-anh-co-ban/tieng-anh-co-ban-cap-do-2',
+      }
+    ],
+  },
+  {
     label: 'Truyện',
     key: 'truyen',
     icon: <ReadOutlined />,

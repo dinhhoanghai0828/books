@@ -8,7 +8,8 @@ INSERT INTO CATEGORIES(UUID,SLUG,ENG,VI,NUMBER) VALUES
 	(UUID(),'truyen','Story','Truyện',1),
 	(UUID(),'sach','Book','Sách',2),
 	(UUID(),'bao','News','Báo',3),
-	(UUID(),'tro-chuyen','Conversations','Trò chuyện',4);
+	(UUID(),'tro-chuyen','Conversations','Trò chuyện',4),
+	(UUID(),'tieng-anh-co-ban','Basic English','Tiếng anh cơ bản',5);
 
 --	DU LIEU BANG SUBCATEGORIES
 INSERT INTO SUBCATEGORIES(UUID,SLUG,ENG,VI,CATEGORY_SLUG,NUMBER) VALUES
@@ -21,7 +22,8 @@ INSERT INTO SUBCATEGORIES(UUID,SLUG,ENG,VI,CATEGORY_SLUG,NUMBER) VALUES
 	(UUID(),'sach-triet-ly','Philosophy book','Sách triết lý','sach',2),
 	(UUID(),'tin-tuc-hang-ngay','Daily News','Tin tức hàng ngày','bao',1),
 	(UUID(),'doi-thoai-hoc-thuat','Academic conversations','Đối thoại học thuật','tro-chuyen',1),
-	(UUID(),'tro-chuyen-hang-ngay','Daily Conversations','Trò chuyện hàng ngày','tro-chuyen',2);
+	(UUID(),'tro-chuyen-hang-ngay','Daily Conversations','Trò chuyện hàng ngày','tro-chuyen',2),
+	(UUID(),'tieng-anh-co-ban-cap-do-1','Basic English Level 1','Tiếng anh cơ bản cấp độ 1','tieng-anh-co-ban',5);
 	
 --	DU LIEU BANG BOOKS
 INSERT INTO BOOKS(UUID,SLUG,ENG,VI,AUTHOR,DESCRIPTION,SUBCATEGORY_SLUG,IMG,NUMBER) VALUES
@@ -38,10 +40,16 @@ INSERT INTO BOOKS(UUID,SLUG,ENG,VI,AUTHOR,DESCRIPTION,SUBCATEGORY_SLUG,IMG,NUMBE
 	(UUID(),'voa','VOA','Báo nước ngoài','Nhiều tác giả','Thông tin kinh tế, chính trị, khoa học, xã hội, giáo dục, du lịch','tin-tuc-hang-ngay','VOA.png',2),
 	(UUID(),'tedtalks','TedTalks','TedTalks','Nhiều tác giả','Thảo luận về các vấn đề trong cuộc sống','doi-thoai-hoc-thuat','TEDTALKS.png',1),
 	(UUID(),'all-ears-english','All Ears English','All Ears English','Nhiều tác giả','Thảo luận về các vấn đề trong cuộc sống','doi-thoai-hoc-thuat','ALL_EARS_ENGLISH.png',2),
-	(UUID(),'dhar-mann-studio','Dhar Mann Studio','Dhar Mann Studio','Nhiều tác giả','Các cuộc hội thoại ngắn thường ngày','tro-chuyen-hang-ngay','DHAR_MANN_STUDIO.png',1);
+	(UUID(),'dhar-mann-studio','Dhar Mann Studio','Dhar Mann Studio','Nhiều tác giả','Các cuộc hội thoại ngắn thường ngày','tro-chuyen-hang-ngay','DHAR_MANN_STUDIO.png',1),
+	(UUID(),'tiger-club-learning','TigerCub Learning','TigerCub Learning','Nhiều tác giả','Học các câu tiếng anh đơn giản','tieng-anh-co-ban-cap-do-1','TIGER_CLUB_LEARNING.png',5);
 	
 --	DU LIEU BANG VOLUMES
 TRUNCATE TABLE VOLUMES;
+INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,CHECKED,NUMBER) VALUES
+	(UUID(),'tiger-club-learning-1','Farm Fun','Niềm vui từ nông trại','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_001.mp3',NULL,'00:00:00.000','00:04:04.100','tiger-club-learning','YES',1),
+	(UUID(),'tiger-club-learning-2','Farm Play','Vui chơi cùng nông trại','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_002.mp3',NULL,'00:00:00.000','00:04:07.900','tiger-club-learning','YES',2);
+	
+
 INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,CHECKED,NUMBER) VALUES
 	(UUID(),'economist-1','China approves the world\'s most expensive infrastructure project','Trung Quốc phê duyệt dự án cơ sở hạ tầng đắt nhất thế giới','NEWS_DAILY_NEW_01_ECONOMIST_001.mp3',NULL,'00:00:00.000','00:03:29.270','economist','YES',1),
 	(UUID(),'economist-2','Why canada should join EU','Tại sao Canada nên gia nhập EU','NEWS_DAILY_NEW_01_ECONOMIST_002.mp3',NULL,'00:00:00.000','00:07:55.230','economist','NO',2),
@@ -657,6 +665,52 @@ INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,CHE
 	(UUID(),'dhar-mann-studio-1','Mean girls reject teen from tiktok dance group, they live to regret their decision','Những cô gái kiêu kỳ từ chối cô thiếu niên tham gia nhóm nhảy TikTok, họ phải hối hận vì quyết định này','CONVERSATIONS_DAILY_CONVERSATION_01_DHAR_MANN_STUDIO_001.mp3',NULL,'00:00:00.000','00:05:24.290','dhar-mann-studio','NO',1),
 	(UUID(),'dhar-mann-studio-2','Poor dad can’t buy birthday cake, stranger changes his life forever','Người cha nghèo không thể mua bánh sinh nhật, một người lạ đã thay đổi cuộc đời ông mãi mãi','CONVERSATIONS_DAILY_CONVERSATION_01_DHAR_MANN_STUDIO_002.mp3',NULL,'00:00:00.000','00:07:13.710','dhar-mann-studio','NO',2),
 	(UUID(),'dhar-mann-studio-3','Two employees compete for promotion, what happens in the end is shocking','Hai nhân viên cạnh tranh để được thăng chức, điều xảy ra cuối cùng khiến mọi người bất ngờ','CONVERSATIONS_DAILY_CONVERSATION_01_DHAR_MANN_STUDIO_003.mp3',NULL,'00:00:00.000','00:08:15.260','dhar-mann-studio','NO',3);
+INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES  
+	('It\'s Storytime','Đến giờ kể chuyện rồi','00:00:01.930','00:00:03.790','tiger-club-learning-1'),
+	('Farm Fun By Elisa Leung','Niềm vui nông trại - Elisa Leung','00:00:06.240','00:00:10.800','tiger-club-learning-1'),
+	('This is a rooster','Đây là một con gà trống','00:00:12.200','00:00:14.310','tiger-club-learning-1'),
+	('The rooster is singing','Con gà trống đang gáy','00:00:14.910','00:00:17.300','tiger-club-learning-1'),
+	('This is a cow','Đây là một con bò','00:00:19.560','00:00:21.240','tiger-club-learning-1'),
+	('The cow is eating','Con bò đang ăn','00:00:21.780','00:00:23.800','tiger-club-learning-1'),
+	('This is a horse','Đây là một con ngựa','00:00:26.640','00:00:28.360','tiger-club-learning-1'),
+	('The horse is running','Con ngựa đang chạy','00:00:29.080','00:00:31.400','tiger-club-learning-1'),
+	('This is a bird','Đây là một con chim','00:00:34.130','00:00:36.250','tiger-club-learning-1'),
+	('The bird is flying','Con chim đang bay','00:00:36.830','00:00:39.200','tiger-club-learning-1'),
+	('This is a cat','Đây là một con mèo','00:00:41.640','00:00:43.750','tiger-club-learning-1'),
+	('The cat is laughing','Con mèo đang cười','00:00:43.880','00:00:46.520','tiger-club-learning-1'),
+	('This is a mouse','Đây là một con chuột','00:00:49.350','00:00:51.270','tiger-club-learning-1'),
+	('The mouse is hiding','Con chuột đang trốn','00:00:52.210','00:00:54.600','tiger-club-learning-1'),
+	('Let\'s read','Chúng ta cùng đọc nào','00:00:58.160','00:00:59.080','tiger-club-learning-1'),
+	('Rooster Singing','Gà trống gáy','00:01:01.600','00:01:04.300','tiger-club-learning-1'),
+	('Cow Eating','Con bò đang ăn','00:01:06.000','00:01:09.300','tiger-club-learning-1'),
+	('Horse Running','Con ngựa đang chạy','00:01:11.000','00:01:14.000','tiger-club-learning-1'),
+	('Bird Flying','Con chim đang bay','0:01:15.200','00:01:19.200','tiger-club-learning-1'),
+	('Cat Laughing','Con mèo đang cười','00:01:20.900','00:01:24.100','tiger-club-learning-1'),
+	('Mouse Hidings','Con chuột đang trốn','00:01:25.900','00:01:30.000','tiger-club-learning-1'),
+	('Let\'s do the activities','Chúng ta cùng làm các hoạt động nhé','00:01:31.900','00:01:34.500','tiger-club-learning-1'),
+	('Activity 1 Color the pictures','Hoạt động 1: Tô màu các bức tranh','00:01:35.840','00:01:39.020','tiger-club-learning-1'),
+	('Say the name of each animal','Hãy nói tên của từng con vật','00:01:40.000','00:01:42.280','tiger-club-learning-1'),
+	('Horse Cow Bird Rooster Cat Mouse Activity 2 Trace the dots to find all the animals','Ngựa, bò, chim, gà trống, mèo, chuột. Hoạt động 2: Nối các chấm để tìm tất cả các con vật','00:01:43.800','00:02:02.140','tiger-club-learning-1'),
+	('What is each animal doing?','Mỗi con vật đang làm gì?','00:02:03.000','00:02:05.760','tiger-club-learning-1'),
+	('The rooster is singing','Con gà trống đang gáy','00:02:06.720','00:02:08.280','tiger-club-learning-1'),
+	('The cow is eating','Con bò đang ăn','00:02:09.080','00:02:11.680','tiger-club-learning-1'),
+	('The bird is flying','Con chim đang bay','00:02:12.620','00:02:15.220','tiger-club-learning-1'),
+	('The horse is running','Con ngựa đang chạy','00:02:16.560','00:02:18.680','tiger-club-learning-1'),
+	('The cat is laughing','Con mèo đang cười','00:02:19.680','00:02:22.100','tiger-club-learning-1'),
+	('The mouse is hiding','Con chuột đang trốn','00:02:23.300','00:02:26.060','tiger-club-learning-1'),
+	('Activity 3 Help the animals find each other','Hoạt động 3: Giúp các con vật tìm thấy nhau','00:02:28.650','00:02:34.350','tiger-club-learning-1'),
+	('Match them with the same color','Ghép chúng với màu giống nhau','00:02:35.130','00:02:37.690','tiger-club-learning-1'),
+	('Horse Cow Bird Rooster Cat Mouse Activity 4 Say the sound of each letter','Ngựa, bò, chim, gà trống, mèo, chuột. Hoạt động 4: Hãy đọc âm của từng chữ cái','00:02:39.310','00:02:57.720','tiger-club-learning-1'),
+	('Color the picture that begins with the same sound','Tô màu bức tranh bắt đầu bằng cùng âm','00:02:58.680','00:03:03.080','tiger-club-learning-1'),
+	('Cat Horse Activity 5 Test your understanding of the story','Mèo, ngựa. Hoạt động 5: Kiểm tra sự hiểu biết của bạn về câu chuyện','00:03:08.640','00:03:20.870','tiger-club-learning-1'),
+	('Say the name of each animal and what it is doing','Hãy nói tên mỗi con vật và nó đang làm gì','00:03:21.910','00:03:25.750','tiger-club-learning-1'),
+	('Horse The horse is running','Ngựa. Con ngựa đang chạy','00:03:26.790','00:03:30.230','tiger-club-learning-1'),
+	('Cow The cow is eating','Bò. Con bò đang ăn','00:03:30.230','00:03:34.950','tiger-club-learning-1'),
+	('Cat The cat is laughing','Mèo. Con mèo đang cười','00:03:36.430','00:03:39.750','tiger-club-learning-1'),
+	('Rooster The rooster is singing','Gà trống. Con gà trống đang gáy','00:03:41.550','00:03:44.850','tiger-club-learning-1'),
+	('Mouse The mouse is hiding','Chuột. Con chuột đang trốn','00:03:46.930','00:03:50.090','tiger-club-learning-1'),
+	('Bird The bird is flying','Chim. Con chim đang bay','00:03:52.270','00:03:54.990','tiger-club-learning-1'),
+	('Activity 5 Help the animals find each other','Hoạt động 5: Giúp các con vật tìm thấy nhau','00:04:01.840','00:04:04.100','tiger-club-learning-1');
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME, VOLUME_SLUG) VALUES
 --	BOOK_01_01_01_4000_ESSENTIAL_ENGLISH_WORDS
 	/* ('4000 Essential English Words - Volume 1: Lesson 1 - The lion and the rabbit','4000 Từ Tiếng Anh Quan Trọng - Tập 1: Bài 1 - Sư tử và thỏ','00:00:00.000','00:02:11.000','4000-essential-english-words-1'), */
