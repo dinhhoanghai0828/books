@@ -47,7 +47,8 @@ INSERT INTO BOOKS(UUID,SLUG,ENG,VI,AUTHOR,DESCRIPTION,SUBCATEGORY_SLUG,IMG,NUMBE
 TRUNCATE TABLE VOLUMES;
 INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,CHECKED,NUMBER) VALUES
 	(UUID(),'tiger-club-learning-1','Farm Fun','Niềm vui từ nông trại','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_001.mp3',NULL,'00:00:00.000','00:04:04.100','tiger-club-learning','YES',1),
-	(UUID(),'tiger-club-learning-2','Farm Play','Vui chơi cùng nông trại','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_002.mp3',NULL,'00:00:00.000','00:03:56.900','tiger-club-learning','YES',2);
+	(UUID(),'tiger-club-learning-2','Farm Play','Vui chơi cùng nông trại','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_002.mp3',NULL,'00:00:00.000','00:03:56.900','tiger-club-learning','YES',2),
+	(UUID(),'tiger-club-learning-3','Big And Little On The Farm','Lớn và nhỏ trong trang trại','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_003.mp3',NULL,'00:00:00.000','00:03:56.900','tiger-club-learning','YES',3);
 	
 
 INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,CHECKED,NUMBER) VALUES
@@ -666,6 +667,7 @@ INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,CHE
 	(UUID(),'dhar-mann-studio-2','Poor dad can’t buy birthday cake, stranger changes his life forever','Người cha nghèo không thể mua bánh sinh nhật, một người lạ đã thay đổi cuộc đời ông mãi mãi','CONVERSATIONS_DAILY_CONVERSATION_01_DHAR_MANN_STUDIO_002.mp3',NULL,'00:00:00.000','00:07:13.710','dhar-mann-studio','NO',2),
 	(UUID(),'dhar-mann-studio-3','Two employees compete for promotion, what happens in the end is shocking','Hai nhân viên cạnh tranh để được thăng chức, điều xảy ra cuối cùng khiến mọi người bất ngờ','CONVERSATIONS_DAILY_CONVERSATION_01_DHAR_MANN_STUDIO_003.mp3',NULL,'00:00:00.000','00:08:15.260','dhar-mann-studio','NO',3);
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES  
+	/* 'tiger-club-learning-1','Farm Fun','Niềm vui từ nông trại','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_001.mp3',NULL,'00:00:00.000','00:04:04.100' */
 	('It\'s Storytime','Đến giờ kể chuyện rồi','00:00:01.930','00:00:03.790','tiger-club-learning-1'),
 	('Farm Fun By Elisa Leung','Niềm vui nông trại - Elisa Leung','00:00:06.240','00:00:10.800','tiger-club-learning-1'),
 	('This is a rooster','Đây là một con gà trống','00:00:12.200','00:00:14.310','tiger-club-learning-1'),
@@ -731,7 +733,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Bird','Con chim','00:03:52.100','00:03:53.100','tiger-club-learning-1'),
 	('The bird is flying','Con chim đang bay','00:03:53.100','00:03:55.400','tiger-club-learning-1'),
 	
-
+	/* 'tiger-club-learning-2','Farm Play','Vui chơi cùng nông trại','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_002.mp3',NULL,'00:00:00.000','00:03:56.900' */
 	('It\'s Storytime','Đến giờ kể chuyện rồi','00:00:04.450','00:00:06.610','tiger-club-learning-2'),
 	('Farm Play by Elisa Leung','Trò chơi nông trại của Elisa Leung: Tôi là một chú heo con','00:00:07.250','00:00:12.000','tiger-club-learning-2'),
 	('I am a piglet','Tôi là một chú heo con','00:00:12.700','00:00:15.440','tiger-club-learning-2'),
@@ -763,14 +765,89 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Puppy','Cún con','00:02:41.000','00:02:42.700','tiger-club-learning-2'),
 	('Activity 4: Say the sound of each letter','Hoạt động 4: Nói âm của từng chữ cái','00:02:43.900','00:02:49.000','tiger-club-learning-2'),
 	('Color the picture that begins with the same sound','Tô màu bức tranh bắt đầu bằng cùng âm','00:02:50.140','00:02:54.420','tiger-club-learning-2'),
-	('D Duckling G Goose P Puppy Activity 5 Test your understanding of the story','D - Vịt con, G - Ngỗng, P - Cún con. Hoạt động 5: Kiểm tra mức độ hiểu câu chuyện','00:02:55.420','00:03:11.870','tiger-club-learning-2'),
+	('D Duckling','Vịt con','00:02:55.420','0:02:58.500','tiger-club-learning-2'),
+	('G Goose','G - Ngỗng con','00:02:58.800','00:03:02.000','tiger-club-learning-2'),
+	('P Puppy','P - Cún con','00:03:02.000','00:03:04.800','tiger-club-learning-2'),
+	('Activity 5: Test your understanding of the story','Hoạt động 5: Kiểm tra mức độ hiểu câu chuyện','00:03:06.300','00:03:12.000','tiger-club-learning-2'),
 	('Say the name of each animal and what it does','Hãy nói tên từng con vật và hành động của nó','00:03:13.070','00:03:16.890','tiger-club-learning-2'),
-	('Duckling The duckling paddles','Vịt con: Chú vịt con bơi quẫy nước','00:03:19.300','00:03:22.740','tiger-club-learning-2'),
-	('Goose The goose dances','Ngỗng: Con ngỗng nhảy múa','00:03:24.340','00:03:27.200','tiger-club-learning-2'),
-	('Rabbit The rabbit hops','Thỏ: Con thỏ nhảy lò cò','00:03:29.080','00:03:32.420','tiger-club-learning-2'),
-	('Lamb The lamb skips','Cừu con: Chú cừu con nhảy chân sáo','00:03:34.060','00:03:37.280','tiger-club-learning-2'),
-	('Puppy The puppy jumps','Cún con: Chú cún con nhảy lên','00:03:38.920','00:03:41.560','tiger-club-learning-2'),
-	('Piglet The piglet rolls','Heo con: Chú heo con lăn tròn','00:03:42.860','00:03:45.780','tiger-club-learning-2');
+	('Duckling. The duckling paddles','Vịt con: Chú vịt con bơi quẫy nước','00:03:19.300','00:03:22.900','tiger-club-learning-2'),
+	('Goose. The goose dances','Ngỗng: Con ngỗng nhảy múa','00:03:24.340','00:03:27.500','tiger-club-learning-2'),
+	('Rabbit. The rabbit hops','Thỏ: Con thỏ nhảy lò cò','00:03:29.000','00:03:32.700','tiger-club-learning-2'),
+	('Lamb. The lamb skips','Cừu con: Chú cừu con nhảy chân sáo','00:03:33.800','00:03:37.500','tiger-club-learning-2'),
+	('Puppy. The puppy jumps','Cún con: Chú cún con nhảy lên','00:03:38.920','00:03:41.800','tiger-club-learning-2'),
+	('Piglet. The piglet rolls','Heo con: Chú heo con lăn tròn','00:03:42.700','00:03:45.900','tiger-club-learning-2'),
+	
+	/* 'tiger-club-learning-3','Big And Little On The Farm','Lớn và nhỏ trong trang trại','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_003.mp3',NULL,'00:00:00.000','00:03:56.900' */
+	('It\'s Storytime','Đến giờ kể chuyện rồi','00:00:04.270','00:00:06.610','tiger-club-learning-3'),
+	('Big and Little on the Farm by Elisa Leung','Những con vật to và nhỏ ở trang trại - Elisa Leung','00:00:07.770','00:00:16.300','tiger-club-learning-3'),
+	('I am a big pig','Tớ là một chú lợn to','00:00:17.000','00:00:20.100','tiger-club-learning-3'),
+	('I like big apples','Tớ thích những quả táo to','00:00:20.140','00:00:22.900','tiger-club-learning-3'),
+	('I am a little piglet','Tớ là một chú lợn con bé nhỏ','00:00:24.240','00:00:27.200','tiger-club-learning-3'),
+	('I like little apples','Tớ thích những quả táo nhỏ','00:00:27.600','00:00:29.500','tiger-club-learning-3'),
+	('I am a big dog','Tớ là một chú chó to','00:00:31.840','00:00:34.700','tiger-club-learning-3'),
+	('I like big bones','Tớ thích những khúc xương to','00:00:35.380','00:00:37.700','tiger-club-learning-3'),
+	('I am a little puppy','Tớ là một chú chó con bé nhỏ','00:00:40.120','00:00:42.600','tiger-club-learning-3'),
+	('I like little bones','Tớ thích những khúc xương nhỏ','00:00:43.320','00:00:45.800','tiger-club-learning-3'),
+	('I am a big duck','Tớ là một chú vịt to','00:00:47.980','00:00:50.900','tiger-club-learning-3'),
+	('I like big fish','Tớ thích những con cá to','00:00:51.300','00:00:53.800','tiger-club-learning-3'),
+	('I am a little duckling','Tớ là một chú vịt con bé nhỏ','00:00:56.810','00:00:59.800','tiger-club-learning-3'),
+	('I like little fish','Tớ thích những con cá bé nhỏ','00:01:00.070','00:01:02.700','tiger-club-learning-3'),
+	('Let\'s read','Chúng mình cùng đọc nào','00:01:03.590','00:01:05.300','tiger-club-learning-3'),
+	('Big pig','Lợn to','00:01:07.090','00:01:08.300','tiger-club-learning-3'),
+	('Big apples','Táo to','00:01:08.790','00:01:10.600','tiger-club-learning-3'),
+	('Little piglet','Chú lợn con bé nhỏ','00:01:12.050','00:01:13.800','tiger-club-learning-3'),
+	('Little apples','Quả táo nhỏ','00:01:14.130','00:01:15.400','tiger-club-learning-3'),
+	('Big dog','Chó to','00:01:16.850','00:01:18.510','tiger-club-learning-3'),
+	('Big bones','Khúc xương to','00:01:19.070','00:01:20.400','tiger-club-learning-3'),
+	('Little puppy','Chó con bé nhỏ','00:01:21.950','00:01:23.500','tiger-club-learning-3'),
+	('Little bones','Khúc xương nhỏ','00:01:24.150','00:01:25.500','tiger-club-learning-3'),
+	('Big duck','Con vịt to','00:01:26.470','00:01:28.500','tiger-club-learning-3'),
+	('Big fish','Con cá to','00:01:29.030','00:01:30.390','tiger-club-learning-3'),
+	('Little duckling','Vịt con bé nhỏ','00:01:31.390','00:01:33.450','tiger-club-learning-3'),
+	('Little fish','Con cá bé nhỏ','00:01:33.910','00:01:35.270','tiger-club-learning-3'),
+	('Let\'s do the activities','Chúng mình cùng làm hoạt động nhé','00:01:37.590','00:01:39.190','tiger-club-learning-3'),
+	('Activity 1: Color the pictures','Hoạt động 1: Hãy tô màu các bức tranh','00:01:41.490','00:01:45.100','tiger-club-learning-3'),
+	('Say the name of each animal','Hãy nói tên của từng con vật','00:01:45.600','00:01:48.300','tiger-club-learning-3'),
+	('Dog','Chó','00:01:50.010','00:01:50.800','tiger-club-learning-3'),
+	('Puppy','Chó con','00:01:51.430','00:01:52.600','tiger-club-learning-3'),
+	('Duck','Vịt','00:01:53.670','00:01:54.700','tiger-club-learning-3'),
+	('Pig','Lợn','00:01:55.850','00:01:56.800','tiger-club-learning-3'),
+	('Piglet','Lợn con','00:01:57.870','00:01:58.990','tiger-club-learning-3'),
+	('Duckling','Vịt con','00:02:00.070','00:02:00.770','tiger-club-learning-3'),
+	('Activity 2: Draw a line to the food each animal likes to eat','Hoạt động 2: Nối mỗi con vật với món ăn mà nó thích','00:02:02.150','00:02:10.300','tiger-club-learning-3'),
+	('The big pig likes big apples','Chú lợn to thích những quả táo to','00:02:11.150','00:02:14.900','tiger-club-learning-3'),
+	('The little piglet likes little apples','Chú lợn con bé nhỏ thích những quả táo nhỏ','00:02:15.870','00:02:19.400','tiger-club-learning-3'),
+	('The big dog likes big bones','Chú chó to thích những khúc xương to','00:02:20.730','00:02:24.600','tiger-club-learning-3'),
+	('The little puppy likes little bones','Chú chó con bé nhỏ thích những khúc xương nhỏ','00:02:25.430','00:02:29.500','tiger-club-learning-3'),
+	('The big duck likes big fish','Chú vịt to thích những con cá to','00:02:29.390','00:02:33.500','tiger-club-learning-3'),
+	('The little duckling likes little fish','Chú vịt con bé nhỏ thích những con cá nhỏ','00:02:33.850','00:02:37.700','tiger-club-learning-3'),
+	('Activity 3: Help the mother find its baby','Hoạt động 3: Giúp con mẹ tìm con của mình','00:02:39.270','00:02:43.800','tiger-club-learning-3'),
+	('Match them with the same color','Nối chúng với cùng màu nhé','00:02:44.790','00:02:47.400','tiger-club-learning-3'),
+	('Dog','Chó','00:02:48.510','00:02:49.800','tiger-club-learning-3'),
+	('Puppy','Chó con','00:02:50.570','00:02:51.600','tiger-club-learning-3'),
+	('Pig','Lợn','00:02:52.790','00:02:53.500','tiger-club-learning-3'),
+	('Piglet','Lợn con','00:02:54.510','00:02:55.700','tiger-club-learning-3'),
+	('Duck','Vịt','00:02:56.590','00:02:57.500','tiger-club-learning-3'),
+	('Duckling','Vịt con','00:02:58.830','00:02:59.870','tiger-club-learning-3'),
+	('Activity 4: Say the sound of each letter','Hoạt động 4: Hãy đọc âm của từng chữ cái','00:03:02.300','00:03:07.200','tiger-club-learning-3'),
+	('Color the picture that begins with the same sound','Tô màu bức tranh bắt đầu với cùng âm','00:03:08.110','00:03:12.530','tiger-club-learning-3'),
+	('A...Apple','A... Táo','00:03:12.800','00:03:16.150','tiger-club-learning-3'),
+	('B...Bone','B... Xương','00:03:17.790','000:03:19.800','tiger-club-learning-3'),
+	('Fish','Cá','00:03:22.580','00:03:23.500','tiger-club-learning-3'),
+	('Activity 5: Test your understanding of the story','Hoạt động 5: Kiểm tra xem bạn hiểu câu chuyện chưa','00:03:25.240','000:03:29.800','tiger-club-learning-3'),
+	('Say the name of each animal and the food it likes to eat','Hãy nói tên mỗi con vật và món ăn nó thích','00:03:31.080','00:03:36.400','tiger-club-learning-3'),
+	('Pig','Lợn','00:03:37.480','00:03:38.700','tiger-club-learning-3'),
+	('The big pig likes big apples','Chú lợn to thích những quả táo to','00:03:39.840','00:03:43.500','tiger-club-learning-3'),
+	('Piglet','Lợn con','00:03:45.260','00:03:46.500','tiger-club-learning-3'),
+	('The little piglet likes little apples','Chú lợn con nhỏ thích những quả táo nhỏ','00:03:47.160','00:03:50.700','tiger-club-learning-3'),
+	('Dog','Chó','00:03:51.780','00:03:52.700','tiger-club-learning-3'),
+	('The big dog likes big bones','Chú chó to thích những khúc xương to','00:03:53.220','00:03:56.500','tiger-club-learning-3'),
+	('Puppy','Chó con','00:03:57.800','00:03:58.400','tiger-club-learning-3'),
+	('The little puppy likes little bones','Chú chó con nhỏ thích những khúc xương nhỏ','00:03:58.840','00:04:02.300','tiger-club-learning-3'),
+	('Duck','Vịt','00:04:03.700','00:04:04.600','tiger-club-learning-3'),
+	('The big duck likes big fish','Chú vịt to thích những con cá to','00:04:04.820','00:04:07.900','tiger-club-learning-3'),
+	('Duckling','Vịt con','00:04:07.740','00:04:09.900','tiger-club-learning-3'),
+	('The little duckling likes little fish','Chú vịt con nhỏ thích những con cá nhỏ','00:04:10.720','00:04:14.700','tiger-club-learning-3');
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME, VOLUME_SLUG) VALUES
 --	BOOK_01_01_01_4000_ESSENTIAL_ENGLISH_WORDS
