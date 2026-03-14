@@ -41,7 +41,8 @@ INSERT INTO BOOKS(UUID,SLUG,ENG,VI,AUTHOR,DESCRIPTION,SUBCATEGORY_SLUG,IMG,NUMBE
 	(UUID(),'tedtalks','TedTalks','TedTalks','Nhiều tác giả','Thảo luận về các vấn đề trong cuộc sống','doi-thoai-hoc-thuat','TEDTALKS.png',1),
 	(UUID(),'all-ears-english','All Ears English','All Ears English','Nhiều tác giả','Thảo luận về các vấn đề trong cuộc sống','doi-thoai-hoc-thuat','ALL_EARS_ENGLISH.png',2),
 	(UUID(),'dhar-mann-studio','Dhar Mann Studio','Dhar Mann Studio','Nhiều tác giả','Các cuộc hội thoại ngắn thường ngày','tro-chuyen-hang-ngay','DHAR_MANN_STUDIO.png',1),
-	(UUID(),'tiger-club-learning','TigerCub Learning','TigerCub Learning','Nhiều tác giả','Học các câu tiếng anh đơn giản','tieng-anh-co-ban-cap-do-1','TIGER_CLUB_LEARNING.png',5);
+	(UUID(),'tiger-club-learning','TigerCub Learning','TigerCub Learning','Nhiều tác giả','Học các câu tiếng anh đơn giản','tieng-anh-co-ban-cap-do-1','TIGER_CLUB_LEARNING.png',5),
+	(UUID(),'peppa-pig','Peppa Pig','Lợn Peppa','Nhiều tác giả','Học các câu tiếng anh đơn giản','tieng-anh-co-ban-cap-do-1','PEPPA_PIG.png',5);
 	
 --	DU LIEU BANG VOLUMES
 TRUNCATE TABLE VOLUMES;
@@ -49,7 +50,18 @@ INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,CHE
 	(UUID(),'tiger-club-learning-1','Farm Fun','Niềm vui từ nông trại','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_001.mp3',NULL,'00:00:00.000','00:04:04.100','tiger-club-learning','YES',1),
 	(UUID(),'tiger-club-learning-2','Farm Play','Vui chơi cùng nông trại','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_002.mp3',NULL,'00:00:00.000','00:03:56.900','tiger-club-learning','YES',2),
 	(UUID(),'tiger-club-learning-3','Big And Little On The Farm','Lớn và nhỏ trong trang trại','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_003.mp3',NULL,'00:00:00.000','00:03:56.900','tiger-club-learning','YES',3);
-	
+
+INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,CHECKED,NUMBER) VALUES
+	(UUID(),'peppa-pig-1','Muddy Puddles','Vũng Bùn','BASIC_ENGLISH_BASIC_ENGLISH_02_PEPPA_PIG_001.mp3',NULL,'00:00:00.000','00:04:04.100','peppa-pig','YES',1),
+	(UUID(),'peppa-pig-2','Mr Dinosaur Is Lost','Ông khủng long bị lạc','BASIC_ENGLISH_BASIC_ENGLISH_02_PEPPA_PIG_002.mp3',NULL,'00:00:00.000','00:03:56.900','peppa-pig','YES',2),
+	(UUID(),'peppa-pig-3','Best Friend','Bạn thân','BASIC_ENGLISH_BASIC_ENGLISH_02_PEPPA_PIG_003.mp3',NULL,'00:00:00.000','00:03:56.900','peppa-pig','YES',3),
+	(UUID(),'peppa-pig-4','Polly Parrot','Con vẹt Polly','BASIC_ENGLISH_BASIC_ENGLISH_02_PEPPA_PIG_004.mp3',NULL,'00:00:00.000','00:03:56.900','peppa-pig','YES',4),
+	(UUID(),'peppa-pig-5','Hide and Seek','Trốn tìm','BASIC_ENGLISH_BASIC_ENGLISH_02_PEPPA_PIG_005.mp3',NULL,'00:00:00.000','00:03:56.900','peppa-pig','YES',5),
+	(UUID(),'peppa-pig-6','The Playgroup','Chương trình sinh hoạt – học tập dành cho trẻ nhỏ','BASIC_ENGLISH_BASIC_ENGLISH_02_PEPPA_PIG_006.mp3',NULL,'00:00:00.000','00:03:56.900','peppa-pig','YES',6),
+	(UUID(),'peppa-pig-7','Mummy Pig At Work','Heo mẹ đang làm việc','BASIC_ENGLISH_BASIC_ENGLISH_02_PEPPA_PIG_007.mp3',NULL,'00:00:00.000','00:03:56.900','peppa-pig','YES',7),
+	(UUID(),'peppa-pig-8','Piggy In The Middle','Người kẹt ở giữa','BASIC_ENGLISH_BASIC_ENGLISH_02_PEPPA_PIG_008.mp3',NULL,'00:00:00.000','00:03:56.900','peppa-pig','YES',8),
+	(UUID(),'peppa-pig-9','Daddy Loses His Glasses ','Bố làm mất kính','BASIC_ENGLISH_BASIC_ENGLISH_02_PEPPA_PIG_009.mp3',NULL,'00:00:00.000','00:03:56.900','peppa-pig','YES',9),
+	(UUID(),'peppa-pig-10','Gardening','Làm vườn','BASIC_ENGLISH_BASIC_ENGLISH_02_PEPPA_PIG_010.mp3',NULL,'00:00:00.000','00:03:56.900','peppa-pig','YES',10);
 
 INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,CHECKED,NUMBER) VALUES
 	(UUID(),'economist-1','China approves the world\'s most expensive infrastructure project','Trung Quốc phê duyệt dự án cơ sở hạ tầng đắt nhất thế giới','NEWS_DAILY_NEW_01_ECONOMIST_001.mp3',NULL,'00:00:00.000','00:03:29.270','economist','YES',1),
