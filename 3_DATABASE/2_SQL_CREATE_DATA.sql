@@ -52,7 +52,7 @@ INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,CHE
 	(UUID(),'tiger-club-learning-3','Big And Little On The Farm','Lớn và nhỏ trong trang trại','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_003.mp3',NULL,'00:00:00.000','00:03:56.900','tiger-club-learning','YES',3);
 
 INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,CHECKED,NUMBER) VALUES
-	(UUID(),'peppa-pig-1','Muddy Puddles','Vũng Bùn','BASIC_ENGLISH_BASIC_ENGLISH_02_PEPPA_PIG_001.mp3',NULL,'00:00:00.000','00:04:04.100','peppa-pig','YES',1),
+	(UUID(),'peppa-pig-1','Muddy Puddles','Vũng Bùn','BASIC_ENGLISH_BASIC_ENGLISH_02_PEPPA_PIG_001.mp3',NULL,'00:00:00.000','00:04:56.100','peppa-pig','YES',1),
 	(UUID(),'peppa-pig-2','Mr Dinosaur Is Lost','Ông khủng long bị lạc','BASIC_ENGLISH_BASIC_ENGLISH_02_PEPPA_PIG_002.mp3',NULL,'00:00:00.000','00:03:56.900','peppa-pig','YES',2),
 	(UUID(),'peppa-pig-3','Best Friend','Bạn thân','BASIC_ENGLISH_BASIC_ENGLISH_02_PEPPA_PIG_003.mp3',NULL,'00:00:00.000','00:03:56.900','peppa-pig','YES',3),
 	(UUID(),'peppa-pig-4','Polly Parrot','Con vẹt Polly','BASIC_ENGLISH_BASIC_ENGLISH_02_PEPPA_PIG_004.mp3',NULL,'00:00:00.000','00:03:56.900','peppa-pig','YES',4),
