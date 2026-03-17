@@ -84,6 +84,7 @@ const ContentComponent = ({
         handlePauseAudio(true);
       } else {
         handlePlayAudio(startTime, endTime);
+        //  Lap vo han
         handleToggleAudio(itemId, startTime, endTime, true);
       }
 

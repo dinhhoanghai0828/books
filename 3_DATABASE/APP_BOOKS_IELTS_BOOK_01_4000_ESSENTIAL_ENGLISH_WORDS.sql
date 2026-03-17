@@ -6171,7 +6171,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME, VOLUME_SLUG) VALUES
 	('He had a streak of blood on his shirt and some pebbles stuck in his skin','Cậu có một vết máu ở trên áo và một vài viên sỏi dính trên da','00:00:45.900','00:00:50.700','4000-essential-english-words-180'),
 	('Then a man appeared','Sau đó, một người đàn ông xuất hiện','00:00:50.700','00:00:52.400','4000-essential-english-words-180'),
 	('"I will take you home"','"Chú sẽ đưa cháu về nhà"','00:00:52.400','00:00:53.800','4000-essential-english-words-180'),
-	('"First, let\'s get you cleaned up," he said','"Trước tiên, chúng ta hãy tắm rửa cho cháu thật sạch sẽ," ông nói','00:00:53.800','00:00:56.700','4000-essential-english-words-180'),
+	('"First, let\'s get you cleaned up," he said','"Trước tiên, chúng ta hãy lau rửa sạch sẽ cho cháu đã," ông nói','00:00:53.800','00:00:56.700','4000-essential-english-words-180'),
 	('Lucas followed him','Lucas đi theo sau ông','00:00:56.700','00:00:58.100','4000-essential-english-words-180'),
 	('When they arrived at the cottage, he realized the man was the mad hatter','Khi họ đến ngôi nhà tranh, cậu bé nhận ra người đàn ông chính là thợ làm mũ điên','00:00:58.100','00:01:02.800','4000-essential-english-words-180'),
 	('He sat down inside','Ông ta ngồi xuống bên trong','00:01:02.800','00:01:04.300','4000-essential-english-words-180'),
