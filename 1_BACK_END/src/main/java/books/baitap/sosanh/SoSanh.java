@@ -11,10 +11,12 @@ public class SoSanh {
     private static final Random RANDOM = new Random();
 
     public static void main(String[] args) throws Exception {
-        List<String> problems = generateProblems(200);
-        createWordFile(problems, "BaiTapToanLop1.docx");
+        List<String> problems = generateProblems(300);
+        createWordFile(problems, "SoSanh.docx");
         System.out.println("Đã tạo file Word thành công!");
     }
+
+    private static final String GAP = "   ";
 
     private static List<String> generateProblems(int total) {
         List<String> list = new ArrayList<>();
@@ -26,21 +28,45 @@ public class SoSanh {
             int b = rand();
             int c = rand();
 
+            int missing;
+
             switch (type) {
+                // a + x < b + c
                 case 0:
-                    list.add(a + " + … < " + b + " + " + c);
+                    int right0 = b + c;
+                    if (right0 == 0) { i--; continue; }
+                    missing = RANDOM.nextInt(right0); // x < right0
+                    list.add(a + GAP + "+" + GAP + "…" + GAP + "<" + GAP + b + GAP + "+" + GAP + c);
                     break;
+
+                // a + x > b + c
                 case 1:
-                    list.add(a + " + … > " + b + " + " + c);
+                    int right1 = b + c;
+                    missing = right1 + 1 + RANDOM.nextInt(9);
+                    list.add(a + GAP + "+" + GAP + "…" + GAP + ">" + GAP + b + GAP + "+" + GAP + c);
                     break;
+
+                // a + b = c + x
                 case 2:
-                    list.add(a + " + " + b + " = " + c + " + …");
+                    int left2 = a + b;
+                    if (left2 < c) { i--; continue; }
+                    missing = left2 - c;
+                    list.add(a + GAP + "+" + GAP + b + GAP + "=" + GAP + c + GAP + "+" + GAP + "…");
                     break;
+
+                // a + b > c + x
                 case 3:
-                    list.add(a + " + " + b + " > " + c + " + …");
+                    int left3 = a + b;
+                    if (left3 == 0) { i--; continue; }
+                    missing = RANDOM.nextInt(left3);
+                    list.add(a + GAP + "+" + GAP + b + GAP + ">" + GAP + c + GAP + "+" + GAP + "…");
                     break;
+
+                // a + b < c + x
                 case 4:
-                    list.add(a + " + " + b + " < " + c + " + …");
+                    int left4 = a + b;
+                    missing = left4 + 1 + RANDOM.nextInt(9);
+                    list.add(a + GAP + "+" + GAP + b + GAP + "<" + GAP + c + GAP + "+" + GAP + "…");
                     break;
             }
         }
@@ -62,6 +88,7 @@ public class SoSanh {
             titleRun.setText("BÀI TẬP ĐIỀN SỐ LỚP 1");
             titleRun.setBold(true);
             titleRun.setFontSize(20);
+            titleRun.setFontFamily("Times New Roman");
 
             // Table 2 columns full width
             XWPFTable table = document.createTable(1, 2);
@@ -79,7 +106,7 @@ public class SoSanh {
 
                 XWPFTableCell cell = row.getCell(col);
 
-                // tăng chiều cao dòng (khoảng cách dọc)
+                // tăng chiều cao dòng
                 row.setHeight(900);
 
                 XWPFParagraph p = cell.getParagraphs().get(0);
@@ -93,9 +120,11 @@ public class SoSanh {
                 XWPFRun run = p.createRun();
                 run.setText(problem);
                 run.setFontSize(18);
+                run.setFontFamily("Times New Roman");
 
                 col++;
             }
+
             document.write(out);
         }
     }
