@@ -131,6 +131,107 @@ public class BaiTapUtils {
         }
     }
 
+    public static void addVerticalAdditionTableHangDoc(XWPFDocument doc, List<String> problems) {
+        int total = problems.size();
+        int columns = 4;
+        int rowsPerPage = 5;
+        int totalRows = (int) Math.ceil(total / (double) columns);
+
+        for (int pageStartRow = 0; pageStartRow < totalRows; pageStartRow += rowsPerPage) {
+            int pageEndRow = Math.min(pageStartRow + rowsPerPage, totalRows);
+            int pageRowCount = pageEndRow - pageStartRow;
+
+            XWPFTable table = doc.createTable(pageRowCount, columns);
+            table.removeBorders();
+            table.setWidth("100%");
+            table.setTableAlignment(TableRowAlign.CENTER);
+
+            BigInteger colWidth = BigInteger.valueOf(2500);
+            for (int i = 0; i < pageRowCount; i++) {
+                XWPFTableRow row = table.getRow(i);
+                row.setHeight(1500);
+                for (int j = 0; j < columns; j++) {
+                    row.getCell(j).getCTTc().addNewTcPr().addNewTcW().setW(colWidth);
+                }
+            }
+
+            for (int i = 0; i < pageRowCount * columns; i++) {
+                int problemIndex = pageStartRow * columns + i;
+                if (problemIndex >= total) break;
+
+                int rowIndex = i / columns;
+                int colIndex = i % columns;
+
+                String problem = problems.get(problemIndex);
+
+                // ===== PARSE =====
+                String[] mainParts = problem.split("=");
+                String left = mainParts[0];
+                String sum = mainParts.length > 1 ? mainParts[1].trim() : "";
+
+                String[] parts = left.split("\\+");
+                String a = parts[0].trim();
+                String b = parts[1].trim();
+
+                if (a.isEmpty()) a = " ";
+                if (b.isEmpty()) b = " ";
+
+                XWPFTableCell cell = table.getRow(rowIndex).getCell(colIndex);
+                cell.removeParagraph(0);
+
+                // --- Dòng 1 ---
+                XWPFParagraph para1 = cell.addParagraph();
+                para1.setAlignment(ParagraphAlignment.RIGHT);
+
+                XWPFRun run1 = para1.createRun();
+                run1.setFontFamily("Courier New");
+                run1.setFontSize(18);
+                run1.setText(String.format("%4s", a));
+
+                XWPFParagraph para2 = cell.addParagraph();
+                para2.setAlignment(ParagraphAlignment.RIGHT);
+                para2.setSpacingAfter(0);
+                para2.setSpacingAfterLines(0);
+
+                XWPFRun run = para2.createRun();
+                run.setFontFamily("Courier New");
+                run.setFontSize(18);
+
+                if (b.trim().isEmpty()) {
+                    para2.setAlignment(ParagraphAlignment.LEFT);
+                    run.setText(String.format("%6s+", "")); // dấu + + 5 khoảng trắng
+                } else {
+                    run.setText(String.format("+ %3s", b)); // dấu + + b
+                }
+
+                // --- Dòng 3 ---
+                XWPFParagraph para3 = cell.addParagraph();
+                para3.setAlignment(ParagraphAlignment.RIGHT);
+                para3.setSpacingAfterLines(0);
+
+                XWPFRun run3 = para3.createRun();
+                run3.setFontFamily("Courier New");
+                run3.setFontSize(18);
+                run3.setText("─────");
+
+                // --- Dòng 4 ---
+                XWPFParagraph para4 = cell.addParagraph();
+                para4.setAlignment(ParagraphAlignment.RIGHT);
+                para4.setSpacingBeforeLines(0);
+
+                XWPFRun run4 = para4.createRun();
+                run4.setFontFamily("Courier New");
+                run4.setFontSize(18);
+                run4.setText(String.format("%4s", sum));
+            }
+
+            if (pageEndRow < totalRows) {
+                XWPFParagraph pageBreak = doc.createParagraph();
+                pageBreak.setPageBreak(true);
+            }
+        }
+    }
+
     public static void addVerticalSubtractTable(XWPFDocument doc, List<String> problems) {
         int total = problems.size();
         int columns = 4;
@@ -180,8 +281,8 @@ public class BaiTapUtils {
                 // --- Dòng 2: số dưới ---
                 XWPFParagraph para2 = cell.addParagraph();
                 para2.setAlignment(ParagraphAlignment.CENTER);
-                para2.setSpacingAfter(0);       // ✅ bỏ khoảng cách theo đơn vị point
-                para2.setSpacingAfterLines(0);  // ✅ bỏ khoảng cách theo dòng (dự phòng)
+                para2.setSpacingAfter(0);
+                para2.setSpacingAfterLines(0);
 
                 XWPFRun run2 = para2.createRun();
                 run2.setFontFamily("Courier New");
@@ -197,6 +298,103 @@ public class BaiTapUtils {
                 run3.setFontFamily("Courier New");
                 run3.setFontSize(18);
                 run3.setText("_____");
+            }
+
+            if (pageEndRow < totalRows) {
+                XWPFParagraph pageBreak = doc.createParagraph();
+                pageBreak.setPageBreak(true);
+            }
+        }
+    }
+
+    public static void addVerticalSubtractTableHangDoc(XWPFDocument doc, List<String> problems) {
+        int total = problems.size();
+        int columns = 4;
+        int rowsPerPage = 5;
+        int totalRows = (int) Math.ceil(total / (double) columns);
+
+        for (int pageStartRow = 0; pageStartRow < totalRows; pageStartRow += rowsPerPage) {
+            int pageEndRow = Math.min(pageStartRow + rowsPerPage, totalRows);
+            int pageRowCount = pageEndRow - pageStartRow;
+
+            XWPFTable table = doc.createTable(pageRowCount, columns);
+            table.removeBorders();
+            table.setWidth("100%");
+            table.setTableAlignment(TableRowAlign.CENTER);
+
+            BigInteger colWidth = BigInteger.valueOf(2500);
+            for (int i = 0; i < pageRowCount; i++) {
+                XWPFTableRow row = table.getRow(i);
+                row.setHeight(1500);
+                for (int j = 0; j < columns; j++) {
+                    row.getCell(j).getCTTc().addNewTcPr().addNewTcW().setW(colWidth);
+                }
+            }
+
+            for (int i = 0; i < pageRowCount * columns; i++) {
+                int problemIndex = pageStartRow * columns + i;
+                if (problemIndex >= total) break;
+
+                int rowIndex = i / columns;
+                int colIndex = i % columns;
+
+                String problem = problems.get(problemIndex);
+
+                // ===== PARSE =====
+                String[] mainParts = problem.split("=");
+                String left = mainParts[0];
+                String result = mainParts.length > 1 ? mainParts[1].trim() : "";
+
+                String[] parts = left.split("-");
+                String a = parts[0].trim();
+                String b = parts[1].trim();
+
+                if (a.isEmpty()) a = " ";
+                if (b.isEmpty()) b = " ";
+
+                XWPFTableCell cell = table.getRow(rowIndex).getCell(colIndex);
+                cell.removeParagraph(0);
+
+                // --- Dòng 1: số trên ---
+                XWPFParagraph para1 = cell.addParagraph();
+                para1.setAlignment(ParagraphAlignment.RIGHT);
+                XWPFRun run1 = para1.createRun();
+                run1.setFontFamily("Courier New");
+                run1.setFontSize(18);
+                run1.setText(String.format("%4s", a));
+
+                // --- Dòng 2: số dưới với dấu trừ ---
+                XWPFParagraph para2 = cell.addParagraph();
+                para2.setAlignment(ParagraphAlignment.RIGHT);
+                para2.setSpacingAfter(0);
+                para2.setSpacingAfterLines(0);
+                XWPFRun run2 = para2.createRun();
+                run2.setFontFamily("Courier New");
+                run2.setFontSize(18);
+                if (b.trim().equals("")) {
+                    para2.setAlignment(ParagraphAlignment.LEFT);
+                    run2.setText(String.format("%6s-", "")); // dấu - cho trống
+                } else {
+                    run2.setText(String.format("- %3s", b));
+                }
+
+                // --- Dòng 3: gạch ngang ---
+                XWPFParagraph para3 = cell.addParagraph();
+                para3.setAlignment(ParagraphAlignment.RIGHT);
+                para3.setSpacingAfterLines(0);
+                XWPFRun run3 = para3.createRun();
+                run3.setFontFamily("Courier New");
+                run3.setFontSize(18);
+                run3.setText("─────");
+
+                // --- Dòng 4: kết quả nếu muốn hiển thị ---
+                XWPFParagraph para4 = cell.addParagraph();
+                para4.setAlignment(ParagraphAlignment.RIGHT);
+                para4.setSpacingBeforeLines(0);
+                XWPFRun run4 = para4.createRun();
+                run4.setFontFamily("Courier New");
+                run4.setFontSize(18);
+                run4.setText(String.format("%4s", result));
             }
 
             if (pageEndRow < totalRows) {
