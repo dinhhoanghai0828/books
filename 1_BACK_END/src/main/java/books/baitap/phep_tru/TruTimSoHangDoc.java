@@ -59,7 +59,7 @@ public class TruTimSoHangDoc {
 
         List<String> problems = generateProblems(level, totalCount);
 
-        int perPage = 20;
+        int perPage = 16;
         int pageCount = (int) Math.ceil(problems.size() / (double) perPage);
 
         BaiTapUtils.addTitle(document, title);

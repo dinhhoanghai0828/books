@@ -325,7 +325,7 @@ public class BaiTapUtils {
             BigInteger colWidth = BigInteger.valueOf(2500);
             for (int i = 0; i < pageRowCount; i++) {
                 XWPFTableRow row = table.getRow(i);
-                row.setHeight(1500);
+                row.setHeight(2800);
                 for (int j = 0; j < columns; j++) {
                     row.getCell(j).getCTTc().addNewTcPr().addNewTcW().setW(colWidth);
                 }
