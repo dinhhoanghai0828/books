@@ -859,7 +859,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME, VOLUME_SLUG) VALUES
 	('I don\'t feel like flirting if there was no Emma','Tôi không cảm thấy muốn tán tỉnh nếu không có Emma','00:08:25.440','00:08:27.420','your-animated-story-show-3'),
 	('And he, well, I don\'t know, couldn\'t stand it anymore','Còn anh ấy, thì tôi không biết, không thể chịu đựng được nữa','00:08:27.740','00:08:30.800','your-animated-story-show-3'),
 	('So I told him to stop at this random clothing store and insisted he try on this fancy suit','Vậy là tôi bảo anh ấy dừng lại ở một cửa hàng quần áo ngẫu nhiên và khăng khăng yêu cầu anh ấy thử bộ vest sang trọng này','00:08:30.980','00:08:35.179','your-animated-story-show-3'),
-	('Whoa, you cleaned up nicely, huh?','Ồ, anh chỉnh chu lắm đấy nhỉ?','00:08:35.179','00:08:37.679','your-animated-story-show-3'),
+	('Whoa, you cleaned up nicely, huh?','Ồ, anh chỉn chu lắm đấy nhỉ?','00:08:35.179','00:08:37.679','your-animated-story-show-3'),
 	('Do I not look good usually?','Thế tôi không đẹp bình thường à?','00:08:38.059','00:08:39.400','your-animated-story-show-3'),
 	('Well, you kinda look like a hooligan','Ừ, trông anh có vẻ giống một tên côn đồ đấy','00:08:39.880','00:08:41.860','your-animated-story-show-3'),
 	('Is that genuine joy I see on your face?','Có phải tôi đang thấy niềm vui thực sự trên mặt anh không?','00:08:42.200','00:08:45.140','your-animated-story-show-3'),

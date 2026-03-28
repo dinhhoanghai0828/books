@@ -1648,7 +1648,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME, VOLUME_SLUG) VALUES
 	('For the first time, many people came to eat','Vì thế, lần đầu tiên có rất nhiều người đến đây ăn uống','00:01:13.400','00:01:17.000','4000-essential-english-words-42'),
 	('The chef realized that the restaurant\'s problems were his fault','Người bếp trưởng đã nhận ra vấn đề của nhà hàng là do lỗi của mình','00:01:17.000','00:01:21.000','4000-essential-english-words-42'),
 	('The chef learned an important lesson','Ông đã học được một bài học quan trọng','00:01:21.000','00:01:24.000','4000-essential-english-words-42'),
-	('The new, generous chef insisted on giving the customers a free meal','Người bếp trưởng mới hào phóng quyết định cho khách một bữa ăn miễn phí','00:01:24.000','00:01:29.500','4000-essential-english-words-42'),
+	('The new, generous chef insisted on giving the customers a free meal','Người bếp trưởng mới kiên quyết cho khách một bữa ăn miễn phí','00:01:24.000','00:01:29.500','4000-essential-english-words-42'),
 
 
 	/* ('4000 Essential English Words - Volume 2: Lesson 13 - The Cat and the Fox','4000 Từ Tiếng Anh Quan Trọng - Tập 2: Bài 13 - Mèo và Cáo','00:00:00.000','00:01:37.000','4000-essential-english-words-43'), */
@@ -6171,7 +6171,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME, VOLUME_SLUG) VALUES
 	('He had a streak of blood on his shirt and some pebbles stuck in his skin','Cậu có một vết máu ở trên áo và một vài viên sỏi dính trên da','00:00:45.900','00:00:50.700','4000-essential-english-words-180'),
 	('Then a man appeared','Sau đó, một người đàn ông xuất hiện','00:00:50.700','00:00:52.400','4000-essential-english-words-180'),
 	('"I will take you home"','"Chú sẽ đưa cháu về nhà"','00:00:52.400','00:00:53.800','4000-essential-english-words-180'),
-	('"First, let\'s get you cleaned up," he said','"Trước tiên, chúng ta hãy tắm rửa cho cháu thật sạch sẽ," ông nói','00:00:53.800','00:00:56.700','4000-essential-english-words-180'),
+	('"First, let\'s get you cleaned up," he said','"Trước tiên, chúng ta hãy lau rửa sạch sẽ cho cháu đã," ông nói','00:00:53.800','00:00:56.700','4000-essential-english-words-180'),
 	('Lucas followed him','Lucas đi theo sau ông','00:00:56.700','00:00:58.100','4000-essential-english-words-180'),
 	('When they arrived at the cottage, he realized the man was the mad hatter','Khi họ đến ngôi nhà tranh, cậu bé nhận ra người đàn ông chính là thợ làm mũ điên','00:00:58.100','00:01:02.800','4000-essential-english-words-180'),
 	('He sat down inside','Ông ta ngồi xuống bên trong','00:01:02.800','00:01:04.300','4000-essential-english-words-180'),

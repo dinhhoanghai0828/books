@@ -55,7 +55,7 @@ public class ReadYoutubeStoryFile {
             //  Doc file tieng anh
 //            File myObj = new File("G:\\20_PROJECT\\2_books\\3_DATABASE\\1.srt");
 //            File myObj = new File("I:\\New folder\\1_english_project\\3_DATA\\1.srt");
-            File myObj = new File("E:\\2_books\\3_DATABASE\\1.srt");
+            File myObj = new File("D:\\20_PROJECT\\books\\3_DATABASE\\1.srt");
             Scanner myReader = new Scanner(myObj);
 
             //  Cau tieng anh
@@ -165,7 +165,8 @@ public class ReadYoutubeStoryFile {
             //  Cau Hinh sua khi doc file moi
 //            String volumeSlug = "'dhar-mann-studio-3'";
 //            String volumeSlug = "'life-diary-animated-45'";
-            String volumeSlug = "'voa-1'";
+//            String volumeSlug = "'tiger-club-learning-3'";
+            String volumeSlug = "'peppa-pig-2'";
             //  *************************************************************************
 
             if (listObject.size() > 0) {

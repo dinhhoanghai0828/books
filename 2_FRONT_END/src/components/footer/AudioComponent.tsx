@@ -83,6 +83,7 @@ const AudioComponent = ({
       // Đặt lại thời gian phát về `startTime`
       player.currentTime = start;
       player.playbackRate = playbackSpeed; // Áp dụng tốc độ phát
+      console.log(player.src);
       // Tự động phát âm thanh
       player.play();
       resetIsPlaying(); // Gọi hàm reset trạng thái

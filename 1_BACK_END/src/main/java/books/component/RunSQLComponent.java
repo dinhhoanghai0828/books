@@ -27,7 +27,7 @@ public class RunSQLComponent {
     // Autowire bean cụ thể
     //    @Autowired
     private DataSource dataSource;
-    String path = "G:\\20_PROJECT\\books\\3_DATABASE\\";
+    String path = "D:\\20_PROJECT\\books\\3_DATABASE\\";
     //    String path = "E:\\2_books\\3_DATABASE\\";
     private String url;
     private String username;
@@ -69,6 +69,8 @@ public class RunSQLComponent {
         List<String> scripts = new ArrayList<>();
         //	Doc SQL tu cac file
         scripts.add(path + "2_SQL_CREATE_DATA.sql");
+        scripts.add(path + "APP_BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING.sql");
+        scripts.add(path + "APP_BASIC_ENGLISH_BASIC_ENGLISH_02_PEPPA_PIG.sql");
         scripts.add(path + "APP_BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS.sql");
         scripts.add(path + "APP_BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY.sql");
         scripts.add(path + "APP_CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS.sql");
