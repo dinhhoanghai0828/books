@@ -54,7 +54,11 @@ INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,CHE
 	(UUID(),'tiger-club-learning-5','Moving Along','Tiếp tục di chuyển','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_005.mp3',NULL,'00:00:00.000','00:03:56.900','tiger-club-learning','YES',5),
 	(UUID(),'tiger-club-learning-6','Green, Yellow, Red. Stop!','Đèn xanh, đèn vàng, đèn đỏ. Dừng lại!','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_006.mp3',NULL,'00:00:00.000','00:03:56.900','tiger-club-learning','YES',6),
 	(UUID(),'tiger-club-learning-7','Toot! Toot! Mountain Ride!','Bíp bíp! Chuyến đi trên núi!','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_007.mp3',NULL,'00:00:00.000','00:03:56.900','tiger-club-learning','YES',7),
-	(UUID(),'tiger-club-learning-8','Look What I Do','Nhìn xem tôi làm gì','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_008.mp3',NULL,'00:00:00.000','00:03:56.900','tiger-club-learning','YES',8);
+	(UUID(),'tiger-club-learning-8','Look What I Do','Nhìn xem tôi làm gì','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_008.mp3',NULL,'00:00:00.000','00:03:56.900','tiger-club-learning','YES',8),
+	(UUID(),'tiger-club-learning-9','Look What I Do','Nhìn xem tôi làm gì','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_009.mp3',NULL,'00:00:00.000','00:03:56.900','tiger-club-learning','YES',9),
+	(UUID(),'tiger-club-learning-10','Look What I Do','Nhìn xem tôi làm gì','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_010.mp3',NULL,'00:00:00.000','00:03:56.900','tiger-club-learning','YES',10),
+	(UUID(),'tiger-club-learning-11','Look What I Do','Nhìn xem tôi làm gì','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_011.mp3',NULL,'00:00:00.000','00:03:56.900','tiger-club-learning','YES',11),
+	(UUID(),'tiger-club-learning-12','Look What I Do','Nhìn xem tôi làm gì','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_012.mp3',NULL,'00:00:00.000','00:03:56.900','tiger-club-learning','YES',12),
 
 INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,CHECKED,NUMBER) VALUES
 	(UUID(),'peppa-pig-1','Muddy Puddles','Vũng Bùn','BASIC_ENGLISH_BASIC_ENGLISH_02_PEPPA_PIG_001.mp3',NULL,'00:00:00.000','00:04:56.100','peppa-pig','YES',1),
