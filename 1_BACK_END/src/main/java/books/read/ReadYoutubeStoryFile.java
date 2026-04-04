@@ -55,7 +55,7 @@ public class ReadYoutubeStoryFile {
             //  Doc file tieng anh
 //            File myObj = new File("G:\\20_PROJECT\\2_books\\3_DATABASE\\1.srt");
 //            File myObj = new File("I:\\New folder\\1_english_project\\3_DATA\\1.srt");
-            File myObj = new File("D:\\20_PROJECT\\books\\3_DATABASE\\1.srt");
+            File myObj = new File("E:\\books\\3_DATABASE\\1.srt");
             Scanner myReader = new Scanner(myObj);
 
             //  Cau tieng anh
