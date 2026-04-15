@@ -47,11 +47,11 @@ INSERT INTO BOOKS(UUID,SLUG,ENG,VI,AUTHOR,DESCRIPTION,SUBCATEGORY_SLUG,IMG,NUMBE
 --	DU LIEU BANG VOLUMES
 TRUNCATE TABLE VOLUMES;
 INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,CHECKED,NUMBER) VALUES
-	(UUID(),'tiger-club-learning-1','Farm Fun','Niềm vui từ nông trại','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_001.mp3',NULL,'00:00:00.000','00:04:04.100','tiger-club-learning','YES',1),
+	(UUID(),'tiger-club-learning-1','Farm Fun','Niềm vui từ nông trại','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_001.mp3',NULL,'00:00:00.000','00:04:07.000','tiger-club-learning','YES',1),
 	(UUID(),'tiger-club-learning-2','Farm Play','Vui chơi cùng nông trại','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_002.mp3',NULL,'00:00:00.000','00:03:56.900','tiger-club-learning','YES',2),
-	(UUID(),'tiger-club-learning-3','Big And Little On The Farm','Lớn và nhỏ trong trang trại','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_003.mp3',NULL,'00:00:00.000','00:03:56.900','tiger-club-learning','YES',3),
-	(UUID(),'tiger-club-learning-4','Big And Little On The Farm','Lớn và nhỏ trong trang trại','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_004.mp3',NULL,'00:00:00.000','00:03:56.900','tiger-club-learning','YES',4),
-	(UUID(),'tiger-club-learning-5','Moving Along','Tiếp tục di chuyển','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_005.mp3',NULL,'00:00:00.000','00:03:56.900','tiger-club-learning','YES',5),
+	(UUID(),'tiger-club-learning-3','Big And Little On The Farm','Lớn và nhỏ trong trang trại','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_003.mp3',NULL,'00:00:00.000','00:04:26.000','tiger-club-learning','YES',3),
+	(UUID(),'tiger-club-learning-4','Hide \'N\' Seek On The Farm','Lớn và nhỏ trong trang trại','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_004.mp3',NULL,'00:00:00.000','00:03:56.900','tiger-club-learning','YES',4),
+	(UUID(),'tiger-club-learning-5','Moving Along','Tiếp tục di chuyển','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_005.mp3',NULL,'00:00:00.000','00:04:10.000','tiger-club-learning','YES',5),
 	(UUID(),'tiger-club-learning-6','Green, Yellow, Red. Stop!','Đèn xanh, đèn vàng, đèn đỏ. Dừng lại!','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_006.mp3',NULL,'00:00:00.000','00:03:56.900','tiger-club-learning','YES',6),
 	(UUID(),'tiger-club-learning-7','Toot! Toot! Mountain Ride!','Bíp bíp! Chuyến đi trên núi!','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_007.mp3',NULL,'00:00:00.000','00:03:56.900','tiger-club-learning','YES',7),
 	(UUID(),'tiger-club-learning-8','Look What I Do','Nhìn xem tôi làm gì','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_008.mp3',NULL,'00:00:00.000','00:03:56.900','tiger-club-learning','YES',8);
