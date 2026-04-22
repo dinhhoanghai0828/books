@@ -48,6 +48,39 @@ const items: CustomMenuItem[] = [
     ],
   },
   {
+    label: 'Eslfast',
+    key: 'tieng-anh-theo-cap-do',
+    icon: <ReadOutlined />,
+    href: '/tieng-anh-theo-cap-do',
+    children: [
+      {
+        label: 'Tiếng anh cơ bản cấp độ 1',
+        key: 'so-cap-1',
+        href: '/esl-fast/so-cap-1',
+      },
+      {
+        label: 'Tiếng anh cơ bản cấp độ 2',
+        key: 'so-cap-2',
+        href: '/esl-fast/so-cap-2',
+      },
+      {
+        label: 'Tiếng anh trung cấp',
+        key: 'trung-cap',
+        href: '/esl-fast/trung-cap',
+      },
+      {
+        label: 'Tiếng anh trung cao cấp',
+        key: 'trung-cao-cap',
+        href: '/tesl-fast/trung-cao-cap',
+      },
+      {
+        label: 'Tiếng anh nâng cao',
+        key: 'nang-cao',
+        href: '/esl-fast/nang-cao',
+      }
+    ],
+  },
+  {
     label: 'Truyện',
     key: 'truyen',
     icon: <ReadOutlined />,
