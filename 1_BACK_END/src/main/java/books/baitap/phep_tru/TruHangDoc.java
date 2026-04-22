@@ -13,45 +13,21 @@ import java.util.Random;
 public class TruHangDoc {
 
     public static void main(String[] args) throws IOException {
-        // Sinh tất cả 13 cấp độ
-        for (int level = 1; level <= 13; level++) {
-            String fileName = String.format("TruCapDo%d_HangDoc.docx", level);
-            String title = getTitle(level);
-            generate(level, fileName, title, 240);
-        }
-    }
-
-    private static String getTitle(int level) {
-        switch (level) {
-            case 1:
-                return "1 chữ số - 1 chữ số (không nhớ)";
-            case 2:
-                return "1 chữ số - 1 chữ số (có nhớ)";
-            case 3:
-                return "2 chữ số ≤ 20 - 1 chữ số (không nhớ)";
-            case 4:
-                return "2 chữ số ≤ 20 - 1 chữ số (có nhớ)";
-            case 5:
-                return "2 chữ số 20–30 - 1 chữ số (không nhớ)";
-            case 6:
-                return "2 chữ số 20–30 - 1 chữ số (có nhớ)";
-            case 7:
-                return "2 chữ số 31–50 - 2 chữ số (không nhớ)";
-            case 8:
-                return "2 chữ số 31–50 - 2 chữ số (có nhớ)";
-            case 9:
-                return "2 chữ số 51–70 - 2 chữ số (không nhớ)";
-            case 10:
-                return "2 chữ số 51–70 - 2 chữ số (có nhớ)";
-            case 11:
-                return "2 chữ số 71–90 - 2 chữ số (không nhớ)";
-            case 12:
-                return "2 chữ số 71–90 - 2 chữ số (có nhớ)";
-            case 13:
-                return "2 chữ số 91–100 - 2 chữ số (có nhớ)";
-            default:
-                return "Bài tập trừ";
-        }
+//        generate(1, "TruCapDo1_HangDoc.docx", "1 chữ số - 1 chữ số (không nhớ)", 240);
+//        generate(2, "TruCapDo2_HangDoc.docx", "1 chữ số - 1 chữ số (có nhớ)", 240);
+//        generate(3, "TruCapDo3_HangDoc.docx", "2 chữ số ≤ 20 - 1 chữ số (không nhớ)", 240);
+//        generate(4, "TruCapDo4_HangDoc.docx", "2 chữ số ≤ 20 - 1 chữ số (có nhớ)", 240);
+//        generate(5, "TruCapDo5_HangDoc.docx", "2 chữ số 20–30 - 1 chữ số (không nhớ)", 240);
+//        generate(6, "TruCapDo6_HangDoc.docx", "2 chữ số 20–30 - 1 chữ số (có nhớ)", 240);
+//        generate(7, "TruCapDo7_HangDoc.docx", "2 chữ số 31–50 - 2 chữ số (không nhớ)", 240);
+//        generate(8, "TruCapDo8_HangDoc.docx", "2 chữ số 31–50 - 2 chữ số (có nhớ)", 240);
+//        generate(9, "TruCapDo9_HangDoc.docx", "2 chữ số 51–70 - 2 chữ số (không nhớ)", 240);
+//        generate(10, "TruCapDo10_HangDoc.docx", "2 chữ số 51–70 - 2 chữ số (có nhớ)", 240);
+//        generate(11, "TruCapDo11_HangDoc.docx", "2 chữ số 71–90 - 2 chữ số (không nhớ)", 240);
+//        generate(12, "TruCapDo12_HangDoc.docx", "2 chữ số 71–90 - 2 chữ số (có nhớ)", 240);
+//        generate(13, "TruCapDo13_HangDoc.docx", "2 chữ số 91–100 - 2 chữ số (có nhớ)", 240);
+        // Tổng hợp
+        generate(14, "TruTongHop_HangDoc.docx", "Tổng hợp phép trừ ≤100 (có nhớ + không nhớ)", 240);
     }
 
     private static void generate(int level, String fileName, String title, int totalCount) throws IOException {
@@ -158,6 +134,27 @@ public class TruHangDoc {
                     b = rand.nextInt(20) + 10;
                     if (a < b || (a % 10) >= (b % 10)) continue;
                     break;
+//                case 14: // Tổng hợp ≤100 (có nhớ + không nhớ)
+//                    a = rand.nextInt(100) + 1; // 1–100
+//                    b = rand.nextInt(100);     // 0–99
+//
+//                    if (a < b) continue; // không âm
+//                    break;
+                case 14:
+                    a = rand.nextInt(100) + 1;
+                    b = rand.nextInt(100);
+
+                    if (a < b) continue;
+
+                    boolean wantBorrow = rand.nextBoolean(); // random 2 dạng
+
+                    if (wantBorrow) {
+                        if ((a % 10) >= (b % 10)) continue; // ép có nhớ
+                    } else {
+                        if ((a % 10) < (b % 10)) continue; // ép không nhớ
+                    }
+                    break;
+
             }
 
             problems.add(String.format("%3d  - %2d  =", a, b));

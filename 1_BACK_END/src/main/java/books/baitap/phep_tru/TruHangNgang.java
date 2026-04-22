@@ -6,25 +6,28 @@ import org.apache.poi.xwpf.usermodel.XWPFDocument;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 public class TruHangNgang {
 
     public static void main(String[] args) throws IOException {
-        // Tạo 13 cấp độ trừ ≤100
-        generate(1, "TruCapDo1.docx", "1 chữ số - 1 chữ số (không nhớ)", 240);
-        generate(2, "TruCapDo2.docx", "1 chữ số - 1 chữ số (có nhớ)", 240);
-        generate(3, "TruCapDo3.docx", "2 chữ số ≤ 20 - 1 chữ số (không nhớ)", 240);
-        generate(4, "TruCapDo4.docx", "2 chữ số ≤ 20 - 1 chữ số (có nhớ)", 240);
-        generate(5, "TruCapDo5.docx", "2 chữ số 20–30 - 1 chữ số (không nhớ)", 240);
-        generate(6, "TruCapDo6.docx", "2 chữ số 20–30 - 1 chữ số (có nhớ)", 240);
-        generate(7, "TruCapDo7.docx", "2 chữ số 31–50 - 2 chữ số (không nhớ)", 240);
-        generate(8, "TruCapDo8.docx", "2 chữ số 31–50 - 2 chữ số (có nhớ)", 240);
-        generate(9, "TruCapDo9.docx", "2 chữ số 51–70 - 2 chữ số (không nhớ)", 240);
-        generate(10, "TruCapDo10.docx", "2 chữ số 51–70 - 2 chữ số (có nhớ)", 240);
-        generate(11, "TruCapDo11.docx", "2 chữ số 71–90 - 2 chữ số (không nhớ)", 240);
-        generate(12, "TruCapDo12.docx", "2 chữ số 71–90 - 2 chữ số (có nhớ)", 240);
-        generate(13, "TruCapDo13.docx", "2 chữ số 91–100 - 2 chữ số (có nhớ)", 240);
+        // Tạo 14 cấp độ trừ ≤100
+//        generate(1, "TruCapDo1.docx", "1 chữ số - 1 chữ số (không nhớ)", 240);
+//        generate(2, "TruCapDo2.docx", "1 chữ số - 1 chữ số (có nhớ)", 240);
+//        generate(3, "TruCapDo3.docx", "2 chữ số ≤ 20 - 1 chữ số (không nhớ)", 240);
+//        generate(4, "TruCapDo4.docx", "2 chữ số ≤ 20 - 1 chữ số (có nhớ)", 240);
+//        generate(5, "TruCapDo5.docx", "2 chữ số 20–30 - 1 chữ số (không nhớ)", 240);
+//        generate(6, "TruCapDo6.docx", "2 chữ số 20–30 - 1 chữ số (có nhớ)", 240);
+//        generate(7, "TruCapDo7.docx", "2 chữ số 31–50 - 2 chữ số (không nhớ)", 240);
+//        generate(8, "TruCapDo8.docx", "2 chữ số 31–50 - 2 chữ số (có nhớ)", 240);
+//        generate(9, "TruCapDo9.docx", "2 chữ số 51–70 - 2 chữ số (không nhớ)", 240);
+//        generate(10, "TruCapDo10.docx", "2 chữ số 51–70 - 2 chữ số (có nhớ)", 240);
+//        generate(11, "TruCapDo11.docx", "2 chữ số 71–90 - 2 chữ số (không nhớ)", 240);
+//        generate(12, "TruCapDo12.docx", "2 chữ số 71–90 - 2 chữ số (có nhớ)", 240);
+//        generate(13, "TruCapDo13.docx", "2 chữ số 91–100 - 2 chữ số (có nhớ)", 240);
+        generate(14, "TruTongHop.docx", "Tổng hợp phép trừ ≤100 (có nhớ + không nhớ)", 240);
     }
 
     private static void generate(int level, String fileName, String title, int totalCount) throws IOException {
@@ -140,11 +143,32 @@ public class TruHangNgang {
                     b = rand.nextInt(20) + 10; // 10–29
                     if (a < b || (a % 10) >= (b % 10)) continue;
                     break;
-            }
+//                case 14: // Tổng hợp ≤100 (có nhớ + không nhớ)
+//                    a = rand.nextInt(100) + 1; // 1–100
+//                    b = rand.nextInt(100);     // 0–99
+//
+//                    if (a < b) continue; // đảm bảo không âm
+//
+//                    // Không cần check nhớ hay không → trộn tự nhiên
+//                    break;
+                //  50% co nho 50% khong nho
+                case 14:
+                    a = rand.nextInt(100) + 1;
+                    b = rand.nextInt(100);
 
+                    if (a < b) continue;
+
+                    boolean wantBorrow = rand.nextBoolean(); // random có nhớ hoặc không
+
+                    if (wantBorrow) {
+                        if ((a % 10) >= (b % 10)) continue; // ép có nhớ
+                    } else {
+                        if ((a % 10) < (b % 10)) continue; // ép không nhớ
+                    }
+                    break;
+            }
             problems.add(String.format("%3d  - %3d  =", a, b));
         }
-
         return problems;
     }
 }
