@@ -1,4 +1,4 @@
-dịch hay và sát nghĩa điền vào '' định dạng sql tương ứng như câu mẫu
+Là 1 phiên dịch viên chuyên nghiệp hãy dịch thật hay, sát nghĩa và điền vào '' định dạng sql tương ứng như câu mẫu
 ('Language is endlessly variable','Ngôn ngữ biến đổi không ngừng','00:00:06.800','00:00:09.300','tedtalks-1'),
 
 
