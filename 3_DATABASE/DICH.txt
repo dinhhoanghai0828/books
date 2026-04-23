@@ -1,6 +1,8 @@
 Là 1 phiên dịch viên chuyên nghiệp hãy dịch thật hay, sát nghĩa và điền vào '' định dạng sql tương ứng như câu mẫu
 ('Language is endlessly variable','Ngôn ngữ biến đổi không ngừng','00:00:06.800','00:00:09.300','tedtalks-1'),
 
+công giúp tôi các thời gian vị trí thứ 2 lên 200 đơn vị ví dụ 00:00:02.900 lên 00:00:03.100
+
 
 dịch hay và sát nghĩa điền vào '' tương ứng như câu mẫu
 (UUID(),'life-diary-animated-40','I\'m 7 But I Know Everything','Tôi 7 Tuổi Nhưng Biết Mọi Thứ','STORIES_TEEN_STORY_01_LIFE_DIARY_ANIMATED_040.mp3',NULL,'00:00:00.000','00:14:27.920','life-diary-animated','NO',40),
