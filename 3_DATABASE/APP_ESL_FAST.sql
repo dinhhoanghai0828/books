@@ -42,6 +42,44 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The nurse gives her a bandage','Y tá băng vết thương cho cô bé','00:00:26.180','00:00:28.900','esl-fast-beginner-1-3'),
 	('She is okay now','Giờ cô bé đã ổn rồi','00:00:28.900','00:00:31.200','esl-fast-beginner-1-3'),
 	('She walks back to class','Cô bé đi trở lại lớp học','00:00:31.820','00:00:33.800','esl-fast-beginner-1-3'),
+	
+	/* (UUID(),'esl-fast-elementary-2-4','Lemonade on a Hot Day','Nước chanh vào ngày nóng','ELEMENTARY_02_ESL_FAST_004.mp3',NULL,'00:00:00.000','00:00:00.000','elementary-2','YES',4) */
+	('The kids are in class','Bọn trẻ đang ở trong lớp học','00:00:00.580','00:00:02.740','esl-fast-beginner-1-4'),
+	('The teacher is teaching math','Giáo viên đang dạy môn toán','00:00:03.540','00:00:05.780','esl-fast-beginner-1-4'),
+	('The kids are tired','Bọn trẻ cảm thấy mệt mỏi','00:00:06.700','00:00:08.320','esl-fast-beginner-1-4'),
+	('They want to play','Chúng muốn được vui chơi','00:00:09.200','00:00:10.460','esl-fast-beginner-1-4'),
+	('They want to see the sun','Chúng muốn ra ngoài đón nắng','00:00:11.380','00:00:13.300','esl-fast-beginner-1-4'),
+	('They like slides','Chúng thích chơi cầu trượt','00:00:14.260','00:00:15.840','esl-fast-beginner-1-4'),
+	('They also like swings','Chúng cũng thích chơi xích đu','00:00:16.560','00:00:18.580','esl-fast-beginner-1-4'),
+	('They don''t like math','Chúng không thích môn toán','00:00:19.500','00:00:21.580','esl-fast-beginner-1-4'),
+	('They stare at the clock','Chúng nhìn chằm chằm vào đồng hồ','00:00:22.560','00:00:24.400','esl-fast-beginner-1-4'),
+	('The clock moves slowly','Kim đồng hồ trôi thật chậm','00:00:25.060','00:00:27.500','esl-fast-beginner-1-4'),
+	('The kids continue to wait','Bọn trẻ vẫn tiếp tục chờ đợi','00:00:27.500','00:00:30.820','esl-fast-beginner-1-4'),
+	
+	/* (UUID(),'esl-fast-elementary-2-5','Coffee on a Cold Night','Cà phê vào đêm lạnh','ELEMENTARY_02_ESL_FAST_005.mp3',NULL,'00:00:00.000','00:00:00.000','elementary-2','YES',5) */
+	('He is playing video games','Cậu bé đang chơi điện tử','00:00:00.650','00:00:03.110','esl-fast-beginner-1-5'),
+	('Mom gets mad','Mẹ rất tức giận','00:00:03.990','00:00:05.310','esl-fast-beginner-1-5'),
+	('She thinks he is lazy','Mẹ nghĩ cậu bé lười biếng','00:00:06.170','00:00:07.930','esl-fast-beginner-1-5'),
+	('She gives him a list of chores','Mẹ đưa cho cậu bé một danh sách việc nhà','00:00:08.950','00:00:11.330','esl-fast-beginner-1-5'),
+	('He frowns','Cậu bé cau mày','00:00:12.230','00:00:13.630','esl-fast-beginner-1-5'),
+	('He looks at the list','Cậu bé nhìn vào danh sách','00:00:14.390','00:00:15.690','esl-fast-beginner-1-5'),
+	('He has to clean the floors','Cậu bé phải lau sàn nhà','00:00:16.450','00:00:18.350','esl-fast-beginner-1-5'),
+	('Then, he has to wash the dishes','Sau đó, cậu bé phải rửa bát','00:00:19.250','00:00:22.130','esl-fast-beginner-1-5'),
+	('Finally, he has to feed the dog','Cuối cùng, cậu bé phải cho chó ăn','00:00:23.290','00:00:26.390','esl-fast-beginner-1-5'),
+	('He starts doing his chores','Cậu bé bắt đầu làm việc nhà','00:00:27.070','00:00:28.930','esl-fast-beginner-1-5'),
+	
+	/* (UUID(),'esl-fast-elementary-2-6','Jim Picks Up His Little Sister','Jim đón em gái','ELEMENTARY_02_ESL_FAST_006.mp3',NULL,'00:00:00.000','00:00:00.000','elementary-2','YES',6) */
+	('She sits in the car','Cô bé ngồi trong xe','00:00:00.390','00:00:02.670','esl-fast-beginner-1-6'),
+	('Her dad turns on the radio','Bố cô bé bật radio','00:00:03.550','00:00:05.510','esl-fast-beginner-1-6'),
+	('A song plays','Một bài hát vang lên','00:00:06.450','00:00:07.730','esl-fast-beginner-1-6'),
+	('She taps her feet','Cô bé gõ nhịp bằng chân','00:00:08.530','00:00:09.990','esl-fast-beginner-1-6'),
+	('She sways her head','Cô bé lắc lư cái đầu','00:00:10.790','00:00:12.450','esl-fast-beginner-1-6'),
+	('Her dad laughs at her','Bố cô bé bật cười nhìn con','00:00:13.430','00:00:15.309','esl-fast-beginner-1-6'),
+	('He likes the song, too','Ông ấy cũng thích bài hát này','00:00:16.030','00:00:17.770','esl-fast-beginner-1-6'),
+	('The song is over','Bài hát kết thúc','00:00:18.830','00:00:19.990','esl-fast-beginner-1-6'),
+	('The radio plays a different song','Radio phát một bài hát khác','00:00:20.990','00:00:23.390','esl-fast-beginner-1-6'),
+	('She does not like the new song','Cô bé không thích bài hát mới','00:00:24.250','00:00:26.270','esl-fast-beginner-1-6'),
+	('She sits quietly','Cô bé ngồi im lặng','00:00:27.010','00:00:28.370','esl-fast-beginner-1-6'),
 
 
 /* ============================================================================== ELEMENTARY =============================================================================== */
