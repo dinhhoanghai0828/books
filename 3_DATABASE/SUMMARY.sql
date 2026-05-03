@@ -1338,12 +1338,9 @@ INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,CHE
 	(UUID(),'esl-fast-intermediate-2-228','A Day at the Library','Một ngày ở thư viện','INTERMEDIATE_02_ESL_FAST_228.mp3',NULL,'00:00:00.000','00:00:00.000','intermediate-2','YES',228),
 	(UUID(),'esl-fast-intermediate-2-229','Playing Catch','Chơi ném bắt','INTERMEDIATE_02_ESL_FAST_229.mp3',NULL,'00:00:00.000','00:00:00.000','intermediate-2','YES',229),
 	(UUID(),'esl-fast-intermediate-2-230','The Humor in Life','Niềm vui hài hước trong cuộc sống','INTERMEDIATE_02_ESL_FAST_230.mp3',NULL,'00:00:00.000','00:00:00.000','intermediate-2','YES',230),
-	(UUID(),'esl-fast-intermediate-2-231','How Johnny Met His Wife','Johnny gặp vợ mình như thế nào','INTERMEDIATE_02_ESL_FAST_231.mp3',NULL,'00:00:00.000','00:00:00.000','intermediate-2','YES',231),
 	(UUID(),'esl-fast-intermediate-2-232','My Bike Club','Câu lạc bộ xe đạp của tôi','INTERMEDIATE_02_ESL_FAST_232.mp3',NULL,'00:00:00.000','00:00:00.000','intermediate-2','YES',232),
-	(UUID(),'esl-fast-intermediate-2-233','Helen the Gardener','Helen – người làm vườn','INTERMEDIATE_02_ESL_FAST_233.mp3',NULL,'00:00:00.000','00:00:00.000','intermediate-2','YES',233),
 	(UUID(),'esl-fast-intermediate-2-234','My Friend Diego','Bạn tôi Diego','INTERMEDIATE_02_ESL_FAST_234.mp3',NULL,'00:00:00.000','00:00:00.000','intermediate-2','YES',234),
 	(UUID(),'esl-fast-intermediate-2-235','Going Back to School','Quay lại trường học','INTERMEDIATE_02_ESL_FAST_235.mp3',NULL,'00:00:00.000','00:00:00.000','intermediate-2','YES',235),
-	(UUID(),'esl-fast-intermediate-2-236','Mario''s First Car','Chiếc xe đầu tiên của Mario','INTERMEDIATE_02_ESL_FAST_236.mp3',NULL,'00:00:00.000','00:00:00.000','intermediate-2','YES',236),
 	(UUID(),'esl-fast-intermediate-2-237','Joining the Marine Corp','Gia nhập lực lượng thủy quân lục chiến','INTERMEDIATE_02_ESL_FAST_237.mp3',NULL,'00:00:00.000','00:00:00.000','intermediate-2','YES',237),
 	(UUID(),'esl-fast-intermediate-2-238','A Workaholic Dad','Người cha nghiện công việc','INTERMEDIATE_02_ESL_FAST_238.mp3',NULL,'00:00:00.000','00:00:00.000','intermediate-2','YES',238),
 	(UUID(),'esl-fast-intermediate-2-239','The Carnival','Lễ hội hội chợ','INTERMEDIATE_02_ESL_FAST_239.mp3',NULL,'00:00:00.000','00:00:00.000','intermediate-2','YES',239),
@@ -1400,7 +1397,6 @@ INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,CHE
 	(UUID(),'esl-fast-intermediate-2-290','Getting Cable','Lắp truyền hình cáp','INTERMEDIATE_02_ESL_FAST_290.mp3',NULL,'00:00:00.000','00:00:00.000','intermediate-2','YES',290),
 	(UUID(),'esl-fast-intermediate-2-291','Trash Days','Ngày đổ rác','INTERMEDIATE_02_ESL_FAST_291.mp3',NULL,'00:00:00.000','00:00:00.000','intermediate-2','YES',291),
 	(UUID(),'esl-fast-intermediate-2-292','Seeing a Dermatologist','Khám bác sĩ da liễu','INTERMEDIATE_02_ESL_FAST_292.mp3',NULL,'00:00:00.000','00:00:00.000','intermediate-2','YES',292),
-	(UUID(),'esl-fast-intermediate-2-293','Happy Hour','Giờ khuyến mãi (happy hour)','INTERMEDIATE_02_ESL_FAST_293.mp3',NULL,'00:00:00.000','00:00:00.000','intermediate-2','YES',293),
 	(UUID(),'esl-fast-intermediate-2-294','Learning to Drive','Học lái xe','INTERMEDIATE_02_ESL_FAST_294.mp3',NULL,'00:00:00.000','00:00:00.000','intermediate-2','YES',294),
 	(UUID(),'esl-fast-intermediate-2-295','Playing Football','Chơi bóng đá','INTERMEDIATE_02_ESL_FAST_295.mp3',NULL,'00:00:00.000','00:00:00.000','intermediate-2','YES',295),
 	(UUID(),'esl-fast-intermediate-2-296','Food Trucks','Xe bán đồ ăn lưu động','INTERMEDIATE_02_ESL_FAST_296.mp3',NULL,'00:00:00.000','00:00:00.000','intermediate-2','YES',296),
@@ -1413,7 +1409,6 @@ INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,CHE
 	(UUID(),'esl-fast-intermediate-2-303','Martin Luther King Jr.: Civil Rights Leader','Martin Luther King Jr.: Nhà lãnh đạo phong trào dân quyền','INTERMEDIATE_02_ESL_FAST_303.mp3',NULL,'00:00:00.000','00:00:00.000','intermediate-2','YES',303),
 	(UUID(),'esl-fast-intermediate-2-304','Bill Gates: The Man behind Microsoft','Bill Gates: Người đứng sau Microsoft','INTERMEDIATE_02_ESL_FAST_304.mp3',NULL,'00:00:00.000','00:00:00.000','intermediate-2','YES',304),
 	(UUID(),'esl-fast-intermediate-2-305','Michael Jordan: A Famous Basketball Star','Michael Jordan: Ngôi sao bóng rổ nổi tiếng','INTERMEDIATE_02_ESL_FAST_305.mp3',NULL,'00:00:00.000','00:00:00.000','intermediate-2','YES',305),
-	(UUID(),'esl-fast-intermediate-2-306','Babe Ruth: The Greatest Baseball Player','Babe Ruth: Cầu thủ bóng chày vĩ đại nhất','INTERMEDIATE_02_ESL_FAST_306.mp3',NULL,'00:00:00.000','00:00:00.000','intermediate-2','YES',306),
 	(UUID(),'esl-fast-intermediate-2-307','Kobe Bryant: The Incredible Basketball Star','Kobe Bryant: Ngôi sao bóng rổ phi thường','INTERMEDIATE_02_ESL_FAST_307.mp3',NULL,'00:00:00.000','00:00:00.000','intermediate-2','YES',307),
 	(UUID(),'esl-fast-intermediate-2-308','Tiger Woods: A Great American Golf Champion','Tiger Woods: Nhà vô địch golf vĩ đại của Mỹ','INTERMEDIATE_02_ESL_FAST_308.mp3',NULL,'00:00:00.000','00:00:00.000','intermediate-2','YES',308),
 	(UUID(),'esl-fast-intermediate-2-309','Jesse Owens: The Man Who Defied Hitler','Jesse Owens: Người đàn ông thách thức Hitler','INTERMEDIATE_02_ESL_FAST_309.mp3',NULL,'00:00:00.000','00:00:00.000','intermediate-2','YES',309),
@@ -2156,7 +2151,6 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The nurse gives her a bandage','Y tá băng vết thương cho cô bé','00:00:26.180','00:00:28.900','esl-fast-beginner-1-3'),
 	('She is okay now','Giờ cô bé đã ổn rồi','00:00:28.900','00:00:31.200','esl-fast-beginner-1-3'),
 	('She walks back to class','Cô bé đi trở lại lớp học','00:00:31.820','00:00:33.800','esl-fast-beginner-1-3'),
-
 
 
 /* ============================================================================== ELEMENTARY =============================================================================== */
