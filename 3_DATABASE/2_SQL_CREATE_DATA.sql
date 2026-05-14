@@ -68,8 +68,8 @@ TRUNCATE TABLE VOLUMES;
 INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,CHECKED,NUMBER) VALUES
 	(UUID(),'esl-fast-beginner-1-1','Going to the Zoo','Đi tới sở thú','BEGINNER_01_ESL_FAST_CHILDREN_001.mp3',NULL,'00:00:00.000','00:00:37.000','children-1','YES',1),
 	(UUID(),'esl-fast-beginner-1-2','Christmas Time','Giáng sinh','BEGINNER_01_ESL_FAST_CHILDREN_002.mp3',NULL,'00:00:00.000','00:00:35.000','children-1','YES',2),
-	(UUID(),'esl-fast-beginner-1-3','She Goes to the Nurse','Cô ấy đến gặp y tá','BEGINNER_01_ESL_FAST_CHILDREN_003.mp3',NULL,'00:00:00.000','00:00:00.000','children-1','YES',3),
-	(UUID(),'esl-fast-beginner-1-4','Waiting','Chờ đợi','BEGINNER_01_ESL_FAST_CHILDREN_004.mp3',NULL,'00:00:00.000','00:00:00.000','children-1','YES',4),
+	(UUID(),'esl-fast-beginner-1-3','She Goes to the Nurse','Cô ấy đến gặp y tá','BEGINNER_01_ESL_FAST_CHILDREN_003.mp3',NULL,'00:00:00.000','00:00:35.000','children-1','YES',3),
+	(UUID(),'esl-fast-beginner-1-4','Waiting','Chờ đợi','BEGINNER_01_ESL_FAST_CHILDREN_004.mp3',NULL,'00:00:00.000','00:00:33.000','children-1','YES',4),
 	(UUID(),'esl-fast-beginner-1-5','Chores','Việc nhà','BEGINNER_01_ESL_FAST_CHILDREN_005.mp3',NULL,'00:00:00.000','00:00:00.000','children-1','YES',5),
 	(UUID(),'esl-fast-beginner-1-6','The First Song','Bài hát đầu tiên','BEGINNER_01_ESL_FAST_CHILDREN_006.mp3',NULL,'00:00:00.000','00:00:00.000','children-1','YES',6),
 	(UUID(),'esl-fast-beginner-1-7','Visiting the Doctor','Đi khám bác sĩ','BEGINNER_01_ESL_FAST_CHILDREN_007.mp3',NULL,'00:00:00.000','00:00:00.000','children-1','YES',7),
