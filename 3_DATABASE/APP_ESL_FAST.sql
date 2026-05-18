@@ -57,16 +57,16 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The kids continue to wait','Bọn trẻ vẫn tiếp tục chờ đợi','00:00:28.100','00:00:31.000','esl-fast-beginner-1-4'),
 	
 	/* (UUID(),'esl-fast-beginner-1-5','Chores','Việc nhà','BEGINNER_01_ESL_FAST_CHILDREN_005.mp3',NULL,'00:00:00.000','00:00:00.000','children-1','YES',5) */
-	('He is playing video games','Cậu bé đang chơi điện tử','00:00:00.650','00:00:03.300','esl-fast-beginner-1-5'),
-	('Mom gets mad','Mẹ rất tức giận','00:00:03.990','00:00:05.610','esl-fast-beginner-1-5'),
-	('She thinks he is lazy','Mẹ nghĩ cậu bé lười biếng','00:00:06.170','00:00:08.300','esl-fast-beginner-1-5'),
-	('She gives him a list of chores','Mẹ đưa cho cậu bé một danh sách việc nhà','00:00:08.950','00:00:11.630','esl-fast-beginner-1-5'),
-	('He frowns','Cậu bé cau mày','00:00:12.230','00:00:13.930','esl-fast-beginner-1-5'),
-	('He looks at the list','Cậu bé nhìn vào danh sách','00:00:14.390','00:00:15.990','esl-fast-beginner-1-5'),
-	('He has to clean the floors','Cậu bé phải lau sàn nhà','00:00:16.450','00:00:18.650','esl-fast-beginner-1-5'),
-	('Then, he has to wash the dishes','Sau đó, cậu bé phải rửa bát đĩa','00:00:19.250','00:00:22.430','esl-fast-beginner-1-5'),
-	('Finally, he has to feed the dog','Cuối cùng, cậu bé phải cho chó ăn','00:00:23.290','00:00:26.690','esl-fast-beginner-1-5'),
-	('He starts doing his chores','Cậu bé bắt đầu làm việc nhà','00:00:27.070','00:00:29.200','esl-fast-beginner-1-5'),
+	('He is playing video games','Cậu bé đang chơi điện tử','00:00:00.650','00:00:03.500','esl-fast-beginner-1-5'),
+	('Mom gets mad','Mẹ rất tức giận','00:00:03.990','00:00:05.810','esl-fast-beginner-1-5'),
+	('She thinks he is lazy','Mẹ nghĩ cậu bé lười biếng','00:00:06.170','00:00:08.600','esl-fast-beginner-1-5'),
+	('She gives him a list of chores','Mẹ đưa cho cậu bé một danh sách việc nhà','00:00:08.950','00:00:11.930','esl-fast-beginner-1-5'),
+	('He frowns','Cậu bé cau mày','00:00:12.230','00:00:14.130','esl-fast-beginner-1-5'),
+	('He looks at the list','Cậu bé nhìn vào danh sách','00:00:14.390','00:00:16.100','esl-fast-beginner-1-5'),
+	('He has to clean the floors','Cậu bé phải lau sàn nhà','00:00:16.450','00:00:18.950','esl-fast-beginner-1-5'),
+	('Then, he has to wash the dishes','Sau đó, cậu bé phải rửa bát đĩa','00:00:19.250','00:00:22.730','esl-fast-beginner-1-5'),
+	('Finally, he has to feed the dog','Cuối cùng, cậu bé phải cho chó ăn','00:00:23.190','00:00:26.890','esl-fast-beginner-1-5'),
+	('He starts doing his chores','Cậu bé bắt đầu làm việc nhà','00:00:27.070','00:00:29.400','esl-fast-beginner-1-5'),
 	
 	/* (UUID(),'esl-fast-beginner-1-6','The First Song','Bài hát đầu tiên','BEGINNER_01_ESL_FAST_CHILDREN_006.mp3',NULL,'00:00:00.000','00:00:00.000','children-1','YES',6) */
 	('She sits in the car','Cô bé ngồi trong xe','00:00:00.390','00:00:02.870','esl-fast-beginner-1-6'),
