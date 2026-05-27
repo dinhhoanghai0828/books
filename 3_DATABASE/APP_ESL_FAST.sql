@@ -98,15 +98,15 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	/* (UUID(),'esl-fast-beginner-1-8','Different Foods','Các loại thức ăn khác nhau','BEGINNER_01_ESL_FAST_CHILDREN_008.mp3',NULL,'00:00:00.000','00:00:00.000','children-1','YES',8) */
 	('Sarah is hungry','Sarah cảm thấy đói bụng','00:00:00.330','00:00:02.530','esl-fast-beginner-1-8'),
 	('She goes to the kitchen','Cô bé đi vào bếp','00:00:03.150','00:00:04.930','esl-fast-beginner-1-8'),
-	('She opens the cabinet','Cô bé mở tủ thức ăn','00:00:05.530','00:00:07.370','esl-fast-beginner-1-8'),
+	('She opens the cabinet','Cô bé mở tủ','00:00:05.530','00:00:07.370','esl-fast-beginner-1-8'),
 	('There are a lot of snacks','Trong đó có rất nhiều đồ ăn vặt','00:00:08.210','00:00:10.450','esl-fast-beginner-1-8'),
-	('The marshmallows are too sweet','Kẹo marshmallow ngọt quá','00:00:11.190','00:00:13.550','esl-fast-beginner-1-8'),
+	('The marshmallows are too sweet','Kẹo dẻo ngọt quá','00:00:11.190','00:00:13.550','esl-fast-beginner-1-8'),
 	('The potato chips are too salty','Khoai tây chiên mặn quá','00:00:13.950','00:00:16.630','esl-fast-beginner-1-8'),
 	('The ice cream is too watery','Kem thì quá loãng','00:00:17.210','00:00:19.890','esl-fast-beginner-1-8'),
 	('The kiwis are too sour','Kiwi chua quá','00:00:20.410','00:00:23.350','esl-fast-beginner-1-8'),
 	('The cereal is too bland','Ngũ cốc thì quá nhạt nhẽo','00:00:24.010','00:00:26.550','esl-fast-beginner-1-8'),
 	('Her dad comes home','Bố cô bé trở về nhà','00:00:27.230','00:00:28.810','esl-fast-beginner-1-8'),
-	('He gives her crackers','Ông ấy đưa cho cô bé ít bánh quy giòn','00:00:28.510','00:00:30.810','esl-fast-beginner-1-8'),
+	('He gives her crackers','Ông ấy đưa cho cô bé vài chiếc bánh quy','00:00:28.510','00:00:30.810','esl-fast-beginner-1-8'),
 	('The crackers are perfect','Những chiếc bánh quy ấy vừa ngon vừa hợp vị','00:00:31.350','00:00:33.330','esl-fast-beginner-1-8'),
 
 	/* (UUID(),'esl-fast-beginner-1-9','The Corner','Góc phố','BEGINNER_01_ESL_FAST_CHILDREN_009.mp3',NULL,'00:00:00.000','00:00:00.000','children-1','YES',9) */
@@ -117,11 +117,51 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The teacher is upset','Cô giáo cảm thấy không hài lòng','00:00:11.270','00:00:13.030','esl-fast-beginner-1-9'),
 	('She tells them to stand in the corner','Cô giáo bảo họ đứng vào góc lớp','00:00:13.510','00:00:15.930','esl-fast-beginner-1-9'),
 	('Jill goes to the corner','Jill bước vào góc lớp','00:00:16.690','00:00:18.230','esl-fast-beginner-1-9'),
-	('It is hard to be quiet','Thật khó để giữ im lặng','00:00:18.850','00:00:20.790','esl-fast-beginner-1-9'),
+	('It is hard to be quiet','Giữ im lặng thật khó','00:00:18.850','00:00:20.790','esl-fast-beginner-1-9'),
 	('She thinks about her family','Cô bé nghĩ về gia đình mình','00:00:21.590','00:00:23.470','esl-fast-beginner-1-9'),
 	('She thinks about her dog','Cô bé nghĩ về chú chó của mình','00:00:23.830','00:00:25.990','esl-fast-beginner-1-9'),
 	('Five minutes pass','Năm phút trôi qua','00:00:26.570','00:00:28.310','esl-fast-beginner-1-9'),
-	('The teacher lets her go','Cô giáo cho cô bé quay lại chỗ','00:00:28.010','00:00:30.650','esl-fast-beginner-1-9'),
+	('The teacher lets her go','Cô giáo cho cô bé quay lại chỗ','00:00:28.310','00:00:30.650','esl-fast-beginner-1-9'),
+	
+	
+	('It is Lily\'s birthday','','00:00:00.390','00:00:02.550','esl-fast-beginner-1-10'),
+	('She gets out of bed','','00:00:03.510','00:00:05.010','esl-fast-beginner-1-10'),
+	('Nobody says anything to her','','00:00:05.990','00:00:07.790','esl-fast-beginner-1-10'),
+	('Her mom takes her to school','','00:00:08.710','00:00:10.350','esl-fast-beginner-1-10'),
+	('Her friends do not say anything','','00:00:11.250','00:00:13.210','esl-fast-beginner-1-10'),
+	('The teacher does not say anything','','00:00:13.950','00:00:16.290','esl-fast-beginner-1-10'),
+	('Lily is sad','','00:00:17.430','00:00:18.490','esl-fast-beginner-1-10'),
+	('Lily walks home alone','','00:00:19.570','00:00:20.970','esl-fast-beginner-1-10'),
+	('She opens the door','','00:00:21.970','00:00:23.310','esl-fast-beginner-1-10'),
+	('Her friends and family are holding a cake','','00:00:24.330','00:00:26.950','esl-fast-beginner-1-10'),
+	('They say, surprise Lily','','00:00:26.950','00:00:29.890','esl-fast-beginner-1-10'),
+	
+	('Kate is walking','','00:00:00.650','00:00:02.290','esl-fast-beginner-1-11'),
+	('She sees a dog','','00:00:03.210','00:00:04.630','esl-fast-beginner-1-11'),
+	('The dog wags its tail','','00:00:05.250','00:00:07.350','esl-fast-beginner-1-11'),
+	('Kate likes the dog','','00:00:08.490','00:00:09.990','esl-fast-beginner-1-11'),
+	('It has no collar','','00:00:10.770','00:00:12.330','esl-fast-beginner-1-11'),
+	('Kate takes it home','','00:00:13.590','00:00:15.050','esl-fast-beginner-1-11'),
+	('She washes the dog','','00:00:16.150','00:00:17.690','esl-fast-beginner-1-11'),
+	('She names him Toby','','00:00:18.670','00:00:20.210','esl-fast-beginner-1-11'),
+	('She takes Toby to the vet','','00:00:21.270','00:00:23.750','esl-fast-beginner-1-11'),
+	('Toby is healthy','','00:00:24.870','00:00:26.510','esl-fast-beginner-1-11'),
+	('Kate walks Toby every day','','00:00:27.350','00:00:30.370','esl-fast-beginner-1-11'),
+	('They love each other','','00:00:31.390','00:00:32.430','esl-fast-beginner-1-11'),
+	
+	('Ms. Howard assigns a project','','00:00:00.260','00:00:03.280','esl-fast-beginner-1-12'),
+	('She wants the students to work in groups','','00:00:04.380','00:00:07.039','esl-fast-beginner-1-12'),
+	('Adam works with Joe and Bill','','00:00:08.160','00:00:10.400','esl-fast-beginner-1-12'),
+	('Adam is smart','','00:00:11.320','00:00:12.540','esl-fast-beginner-1-12'),
+	('Joe draws well','','00:00:13.560','00:00:14.860','esl-fast-beginner-1-12'),
+	('Bill is cooperative','','00:00:15.960','00:00:17.460','esl-fast-beginner-1-12'),
+	('They make a good group','','00:00:18.780','00:00:20.260','esl-fast-beginner-1-12'),
+	('They turn in their project','','00:00:21.200','00:00:22.920','esl-fast-beginner-1-12'),
+	('Ms. Howard likes it','','00:00:23.920','00:00:25.740','esl-fast-beginner-1-12'),
+	('She gives them a high grade','','00:00:26.460','00:00:28.620','esl-fast-beginner-1-12'),
+	('Adam, Joe, and Bill are joyful','','00:00:29.480','00:00:32.940','esl-fast-beginner-1-12'),
+		
+	
 
 /* ============================================================================== ELEMENTARY =============================================================================== */
 	/* (UUID(),'esl-fast-elementary-1-1','Morning','Buổi sáng','ELEMENTARY_01_ESL_FAST_001.mp3',NULL,'00:00:00.000','00:00:00.000','elementary-1','YES',1) */
