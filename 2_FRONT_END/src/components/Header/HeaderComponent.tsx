@@ -48,6 +48,44 @@ const items: CustomMenuItem[] = [
     ],
   },
   {
+    label: 'Eslfast',
+    key: 'tieng-anh-theo-cap-do',
+    icon: <ReadOutlined />,
+    href: '/tieng-anh-theo-cap-do',
+    children: [
+      {
+        label: 'Beginner (A1)',
+        key: 'so-cap-1',
+        href: '/esl-fast/so-cap-1',
+      },
+      {
+        label: 'Elementary (A2)',
+        key: 'so-cap-2',
+        href: '/esl-fast/so-cap-2',
+      },
+      {
+        label: 'Intermediate (B1)',
+        key: 'trung-cap',
+        href: '/esl-fast/trung-cap',
+      },
+      {
+        label: 'Upper Intermediate (B2)',
+        key: 'trung-cao-cap',
+        href: '/tesl-fast/trung-cao-cap',
+      },
+      {
+        label: 'Advanced (C1)',
+        key: 'nang-cao',
+        href: '/esl-fast/nang-cao',
+      },
+      {
+        label: 'Proficient (C2)',
+        key: 'ban-xu',
+        href: '/esl-fast/ban-xu',
+      }
+    ],
+  },
+  {
     label: 'Truyện',
     key: 'truyen',
     icon: <ReadOutlined />,
