@@ -2216,7 +2216,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The cereal is too bland','Ngũ cốc thì quá nhạt nhẽo','00:00:24.010','00:00:26.550','esl-fast-beginner-1-8'),
 	('Her dad comes home','Bố cô bé trở về nhà','00:00:27.230','00:00:28.810','esl-fast-beginner-1-8'),
 	('He gives her crackers','Ông ấy đưa cho cô bé vài chiếc bánh quy','00:00:28.510','00:00:30.810','esl-fast-beginner-1-8'),
-	('The crackers are perfect','Những chiếc bánh quy ấy vừa ngon vừa hợp vị','00:00:31.350','00:00:33.330','esl-fast-beginner-1-8'),
+	('The crackers are perfect','Những chiếc bánh quy ấy thật hoàn hảo','00:00:31.350','00:00:33.330','esl-fast-beginner-1-8'),
 
 	/* (UUID(),'esl-fast-beginner-1-9','The Corner','Góc phố','BEGINNER_01_ESL_FAST_CHILDREN_009.mp3',NULL,'00:00:00.000','00:00:00.000','children-1','YES',9) */
 	('Jill does not like math','Jill không thích môn toán','00:00:00.650','00:00:03.010','esl-fast-beginner-1-9'),
@@ -2232,7 +2232,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Five minutes pass','Năm phút trôi qua','00:00:26.570','00:00:28.310','esl-fast-beginner-1-9'),
 	('The teacher lets her go','Cô giáo cho cô bé quay lại chỗ','00:00:28.310','00:00:30.650','esl-fast-beginner-1-9'),
 	
-	
+	/* (UUID(),'esl-fast-beginner-1-10','A Surprise Party','Bữa tiệc bất ngờ','BEGINNER_01_ESL_FAST_CHILDREN_010.mp3',NULL,'00:00:00.000','00:00:31.000','children-1','YES',10) */
 	('It is Lily\'s birthday','Hôm nay là sinh nhật của Lily','00:00:00.390','00:00:02.850','esl-fast-beginner-1-10'),
 	('She gets out of bed','Cô bé bước xuống giường','00:00:03.510','00:00:05.310','esl-fast-beginner-1-10'),
 	('Nobody says anything to her','Không ai nói gì với cô bé cả','00:00:05.990','00:00:08.090','esl-fast-beginner-1-10'),
