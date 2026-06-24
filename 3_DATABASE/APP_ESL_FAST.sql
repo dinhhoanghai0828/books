@@ -136,6 +136,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Her friends and family are holding a cake','Bạn bè và gia đình đang cầm một chiếc bánh','00:00:24.330','00:00:27.250','esl-fast-beginner-1-10'),
 	('They say, "Surprise Lily!"','Mọi người đồng thanh nói, "Ngạc nhiên chưa, Lily!"','00:00:26.950','00:00:30.190','esl-fast-beginner-1-10'),
 	
+	/* (UUID(),'esl-fast-beginner-1-11','A New Pet','Thú cưng mới','BEGINNER_01_ESL_FAST_CHILDREN_011.mp3',NULL,'00:00:00.000','00:00:32.000','children-1','YES',11), */
 	('Kate is walking','Kate đang đi dạo','00:00:00.650','00:00:02.890','esl-fast-beginner-1-11'),
 	('She sees a dog','Cô bé nhìn thấy một chú chó','00:00:03.210','00:00:05.230','esl-fast-beginner-1-11'),
 	('The dog wags its tail','Chú chó vui vẻ vẫy đuôi','00:00:05.250','00:00:07.950','esl-fast-beginner-1-11'),
@@ -149,6 +150,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Kate walks Toby every day','Mỗi ngày Kate đều dắt Toby đi dạo','00:00:27.350','00:00:30.970','esl-fast-beginner-1-11'),
 	('They love each other','Họ yêu quý nhau như những người bạn thân','00:00:31.190','00:00:33.030','esl-fast-beginner-1-11'),
 	
+	/* (UUID(),'esl-fast-beginner-1-12','Group Project','Dự án nhóm','BEGINNER_01_ESL_FAST_CHILDREN_012.mp3',NULL,'00:00:00.000','00:00:00.000','children-1','YES',12), */
 	('Ms. Howard assigns a project','Cô Howard giao cho lớp một dự án','00:00:00.260','00:00:03.580','esl-fast-beginner-1-12'),
 	('She wants the students to work in groups','Cô muốn các học sinh làm việc theo nhóm','00:00:04.380','00:00:07.339','esl-fast-beginner-1-12'),
 	('Adam works with Joe and Bill','Adam làm cùng nhóm với Joe và Bill','00:00:08.160','00:00:10.700','esl-fast-beginner-1-12'),
