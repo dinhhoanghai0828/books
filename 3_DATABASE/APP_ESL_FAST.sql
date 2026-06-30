@@ -147,10 +147,10 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She names him "Toby"','Cô bé đặt tên cho nó là "Toby"','00:00:18.670','00:00:20.810','esl-fast-beginner-1-11'),
 	('She takes Toby to the vet','Cô bé đưa Toby đến bác sĩ thú y','00:00:21.270','00:00:24.350','esl-fast-beginner-1-11'),
 	('Toby is healthy','Toby rất khỏe mạnh','00:00:24.870','00:00:27.110','esl-fast-beginner-1-11'),
-	('Kate walks Toby every day','Mỗi ngày Kate đều dắt Toby đi dạo','00:00:27.350','00:00:30.970','esl-fast-beginner-1-11'),
-	('They love each other','Họ yêu quý nhau như những người bạn thân','00:00:31.190','00:00:33.030','esl-fast-beginner-1-11'),
+	('Kate walks Toby every day','Kate dắt Toby đi dạo mỗi ngày','00:00:27.350','00:00:30.970','esl-fast-beginner-1-11'),
+	('They love each other','Họ rất yêu quý nhau','00:00:31.190','00:00:33.030','esl-fast-beginner-1-11'),
 	
-	/* (UUID(),'esl-fast-beginner-1-12','Group Project','Dự án nhóm','BEGINNER_01_ESL_FAST_CHILDREN_012.mp3',NULL,'00:00:00.000','00:00:00.000','children-1','YES',12), */
+	/* (UUID(),'esl-fast-beginner-1-12','Group Project','Dự án nhóm','BEGINNER_01_ESL_FAST_CHILDREN_012.mp3',NULL,'00:00:00.000','00:00:34.000','children-1','YES',12), */
 	('Ms. Howard assigns a project','Cô Howard giao cho lớp một dự án','00:00:00.260','00:00:03.580','esl-fast-beginner-1-12'),
 	('She wants the students to work in groups','Cô muốn các học sinh làm việc theo nhóm','00:00:04.380','00:00:07.339','esl-fast-beginner-1-12'),
 	('Adam works with Joe and Bill','Adam làm cùng nhóm với Joe và Bill','00:00:08.160','00:00:10.700','esl-fast-beginner-1-12'),
@@ -162,8 +162,49 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Ms. Howard likes it','Cô Howard rất hài lòng với bài làm','00:00:23.920','00:00:26.040','esl-fast-beginner-1-12'),
 	('She gives them a high grade','Cô chấm cho họ điểm số rất cao','00:00:26.460','00:00:28.920','esl-fast-beginner-1-12'),
 	('Adam, Joe, and Bill are joyful','Adam, Joe và Bill vô cùng vui mừng','00:00:29.480','00:00:33.240','esl-fast-beginner-1-12'),
-		
 	
+	/* (UUID(),'esl-fast-beginner-1-13','A Cat and A Mouse','Một con mèo và một con chuột','BEGINNER_01_ESL_FAST_CHILDREN_013.mp3',NULL,'00:00:00.000','00:00:40.000','children-1','NO',13), */
+	('The cat is bored','','00:00:00.710','00:00:02.650','esl-fast-beginner-1-13'),
+	('He tries to have fun','','00:00:03.370','00:00:05.470','esl-fast-beginner-1-13'),
+	('He plays with yarn','','00:00:06.270','00:00:08.230','esl-fast-beginner-1-13'),
+	('He scratches his tummy','','00:00:09.330','00:00:11.410','esl-fast-beginner-1-13'),
+	('He takes a nap','','00:00:12.270','00:00:14.570','esl-fast-beginner-1-13'),
+	('He drinks milk','','00:00:15.530','00:00:17.130','esl-fast-beginner-1-13'),
+	('He is still bored','','00:00:18.230','00:00:19.810','esl-fast-beginner-1-13'),
+	('He sees a mouse','','00:00:20.890','00:00:22.590','esl-fast-beginner-1-13'),
+	('The mouse is eating cheese','','00:00:23.450','00:00:26.370','esl-fast-beginner-1-13'),
+	('The cat steals the cheese','','00:00:26.370','00:00:30.390','esl-fast-beginner-1-13'),
+	('The mouse is angry','','00:00:31.430','00:00:33.230','esl-fast-beginner-1-13'),
+	('The mouse chases the cat','','00:00:34.170','00:00:36.610','esl-fast-beginner-1-13'),
+	('The cat is having fun','','00:00:37.510','00:00:40.000','esl-fast-beginner-1-13'),
+	
+	/* (UUID(),'esl-fast-beginner-1-14','Lemonade Stand','Quầy nước chanh','BEGINNER_01_ESL_FAST_CHILDREN_014.mp3',NULL,'00:00:00.000','00:00:37.000','children-1','NO',14), */
+	('John wants to go to his school field trip','','00:00:00.580','00:00:04.360','esl-fast-beginner-1-14'),
+	('He needs $50','','00:00:05.240','00:00:06.400','esl-fast-beginner-1-14'),
+	('He wants to earn it himself','','00:00:07.460','00:00:09.880','esl-fast-beginner-1-14'),
+	('He plans to open up a lemonade stand','','00:00:10.940','00:00:14.240','esl-fast-beginner-1-14'),
+	('He goes to the market','','00:00:15.120','00:00:16.660','esl-fast-beginner-1-14'),
+	('The lemons are cheap','','00:00:17.760','00:00:19.260','esl-fast-beginner-1-14'),
+	('They are also ripe','','00:00:20.180','00:00:21.700','esl-fast-beginner-1-14'),
+	('He buys 50 lemons','','00:00:22.640','00:00:24.520','esl-fast-beginner-1-14'),
+	('He starts making lemonade','','00:00:25.320','00:00:27.140','esl-fast-beginner-1-14'),
+	('A lot of people are in line','','00:00:28.140','00:00:30.840','esl-fast-beginner-1-14'),
+	('His lemonade stand is a success','','00:00:31.759','00:00:34.340','esl-fast-beginner-1-14'),
+	('He makes enough money','','00:00:35.260','00:00:37.000','esl-fast-beginner-1-14'),
+		
+	/* (UUID(),'esl-fast-beginner-1-15','New and Old','Mới và cũ','BEGINNER_01_ESL_FAST_CHILDREN_015.mp3',NULL,'00:00:00.000','00:00:33.000','children-1','NO',15), */
+	('Tomorrow is the first day of school','','00:00:00.330','00:00:03.130','esl-fast-beginner-1-15'),
+	('Barbara looks at her backpack','','00:00:04.090','00:00:05.670','esl-fast-beginner-1-15'),
+	('It has holes','','00:00:06.750','00:00:07.910','esl-fast-beginner-1-15'),
+	('It is dirty','','00:00:08.730','00:00:09.630','esl-fast-beginner-1-15'),
+	('She needs a new one','','00:00:10.590','00:00:12.030','esl-fast-beginner-1-15'),
+	('Her mom takes her shopping','','00:00:13.070','00:00:14.910','esl-fast-beginner-1-15'),
+	('There are so many backpacks','','00:00:16.030','00:00:18.050','esl-fast-beginner-1-15'),
+	('One backpack has yellow stars','','00:00:18.970','00:00:21.690','esl-fast-beginner-1-15'),
+	('Another one has rainbow stripes','','00:00:22.630','00:00:25.510','esl-fast-beginner-1-15'),
+	('Another one has dogs','','00:00:26.350','00:00:28.290','esl-fast-beginner-1-15'),
+	('Barbara likes this one','','00:00:28.290','00:00:31.009','esl-fast-beginner-1-15'),
+	('She buys it','','00:00:31.670','00:00:33.000','esl-fast-beginner-1-15'),
 
 /* ============================================================================== ELEMENTARY =============================================================================== */
 	/* (UUID(),'esl-fast-elementary-1-1','Morning','Buổi sáng','ELEMENTARY_01_ESL_FAST_001.mp3',NULL,'00:00:00.000','00:00:00.000','elementary-1','YES',1) */
