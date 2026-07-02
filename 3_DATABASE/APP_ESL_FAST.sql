@@ -205,8 +205,87 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Another one has dogs','Một chiếc khác có hình những chú chó','00:00:26.350','00:00:28.590','esl-fast-beginner-1-15'),
 	('Barbara likes this one','Barbara thích chiếc này','00:00:28.290','00:00:31.309','esl-fast-beginner-1-15'),
 	('She buys it','Cô bé mua nó','00:00:31.670','00:00:33.000','esl-fast-beginner-1-15'),
+	
+	('Maria feels pain in her teeth','','00:00:00.460','00:00:04.140','esl-fast-beginner-1-16'),
+	('She tells her mom','','00:00:05.120','00:00:06.360','esl-fast-beginner-1-16'),
+	('Her mom takes her to the dentist','','00:00:07.340','00:00:09.480','esl-fast-beginner-1-16'),
+	('Maria is scared','','00:00:10.840','00:00:12.400','esl-fast-beginner-1-16'),
+	('She enters the waiting room','','00:00:13.500','00:00:15.440','esl-fast-beginner-1-16'),
+	('The secretary calls Maria\'s name','','00:00:16.480','00:00:19.160','esl-fast-beginner-1-16'),
+	('Maria goes in','','00:00:20.320','00:00:21.520','esl-fast-beginner-1-16'),
+	('Maria sits in a big chair','','00:00:22.640','00:00:25.080','esl-fast-beginner-1-16'),
+	('She waits for the dentist','','00:00:26.000','00:00:27.560','esl-fast-beginner-1-16'),
+	('The dentist arrives','','00:00:27.560','00:00:30.420','esl-fast-beginner-1-16'),
+	('He is careful with Maria\'s teeth','','00:00:31.439','00:00:33.820','esl-fast-beginner-1-16'),
+	('He gives her a new toothbrush','','00:00:34.720','00:00:36.860','esl-fast-beginner-1-16'),
+	('Maria feels good','','00:00:37.820','00:00:39.280','esl-fast-beginner-1-16'),
+	
+	('Mark needs a book','','00:00:00.200','00:00:02.180','esl-fast-beginner-1-17'),
+	('He does not have money','','00:00:02.960','00:00:04.920','esl-fast-beginner-1-17'),
+	('His mom takes him to the library','','00:00:05.920','00:00:08.060','esl-fast-beginner-1-17'),
+	('Mark can borrow books for free','','00:00:08.980','00:00:11.720','esl-fast-beginner-1-17'),
+	('Mark enters the library','','00:00:12.760','00:00:14.600','esl-fast-beginner-1-17'),
+	('There are so many books','','00:00:15.720','00:00:17.740','esl-fast-beginner-1-17'),
+	('There are books about animals','','00:00:18.560','00:00:20.380','esl-fast-beginner-1-17'),
+	('There are books about pirates','','00:00:21.340','00:00:23.100','esl-fast-beginner-1-17'),
+	('There are books about science','','00:00:24.020','00:00:26.220','esl-fast-beginner-1-17'),
+	('Mark borrows them all','','00:00:27.100','00:00:28.980','esl-fast-beginner-1-17'),
+	
+	
+	('She eats a slice of cake','','00:00:00.460','00:00:03.059','esl-fast-beginner-1-18'),
+	('She drops a crumb','','00:00:04.000','00:00:05.440','esl-fast-beginner-1-18'),
+	('The ants can smell it','','00:00:06.440','00:00:08.180','esl-fast-beginner-1-18'),
+	('They crawl towards the crumb','','00:00:09.100','00:00:11.060','esl-fast-beginner-1-18'),
+	('She notices the ants','','00:00:12.060','00:00:13.700','esl-fast-beginner-1-18'),
+	('She does not want to kill them','','00:00:14.640','00:00:16.620','esl-fast-beginner-1-18'),
+	('She gets a cup','','00:00:17.620','00:00:18.900','esl-fast-beginner-1-18'),
+	('She puts the ants inside','','00:00:20.000','00:00:21.840','esl-fast-beginner-1-18'),
+	('She opens the window','','00:00:22.860','00:00:24.460','esl-fast-beginner-1-18'),
+	('She lets the ants go','','00:00:25.560','00:00:27.220','esl-fast-beginner-1-18'),
+	
+	
+	('It is Halloween','','00:00:00.330','00:00:01.930','esl-fast-beginner-1-19'),
+	('Nancy is dressed as a princess','','00:00:03.290','00:00:05.230','esl-fast-beginner-1-19'),
+	('She goes trick-or-treating','','00:00:06.450','00:00:07.990','esl-fast-beginner-1-19'),
+	('She walks to one house','','00:00:09.290','00:00:11.010','esl-fast-beginner-1-19'),
+	('She rings the doorbell','','00:00:11.910','00:00:13.570','esl-fast-beginner-1-19'),
+	('A young couple opens the door','','00:00:14.750','00:00:17.190','esl-fast-beginner-1-19'),
+	('Nancy holds out her bag','','00:00:18.410','00:00:20.350','esl-fast-beginner-1-19'),
+	('She receives candy','','00:00:21.430','00:00:23.190','esl-fast-beginner-1-19'),
+	('She says, Thank you','','00:00:24.230','00:00:26.130','esl-fast-beginner-1-19'),
+	('The couple smiles','','00:00:26.890','00:00:28.550','esl-fast-beginner-1-19'),
+	('Nancy goes to the next house','','00:00:29.310','00:00:31.490','esl-fast-beginner-1-19'),
+	
+	
+	('He goes to the petting zoo','','00:00:00.390','00:00:02.810','esl-fast-beginner-1-20'),
+	('There are many different animals','','00:00:03.670','00:00:06.030','esl-fast-beginner-1-20'),
+	('He pets the turtles','','00:00:06.790','00:00:08.570','esl-fast-beginner-1-20'),
+	('The turtles feel rough','','00:00:09.470','00:00:11.690','esl-fast-beginner-1-20'),
+	('He pets the sheep','','00:00:12.610','00:00:14.590','esl-fast-beginner-1-20'),
+	('The sheep feel wooly','','00:00:15.050','00:00:17.590','esl-fast-beginner-1-20'),
+	('He pets the cows','','00:00:18.570','00:00:20.550','esl-fast-beginner-1-20'),
+	('The cows feel smooth','','00:00:21.510','00:00:23.830','esl-fast-beginner-1-20'),
+	('He pets the bunnies','','00:00:24.630','00:00:27.090','esl-fast-beginner-1-20'),
+	('The bunnies feel fluffy','','00:00:27.870','00:00:30.370','esl-fast-beginner-1-20'),
+	('He tells his mom he wants a pet','','00:00:31.770','00:00:34.530','esl-fast-beginner-1-20'),
+	('His mom says he can get one tomorrow','','00:00:35.510','00:00:38.810','esl-fast-beginner-1-20'),
+	
+	
+	('Robert\'s room is messy','','00:00:00.460','00:00:03.040','esl-fast-beginner-1-21'),
+	('There is pizza under his bed','','00:00:04.000','00:00:06.520','esl-fast-beginner-1-21'),
+	('There is glue on the wall','','00:00:07.340','00:00:09.740','esl-fast-beginner-1-21'),
+	('There is a pile of clothes','','00:00:10.460','00:00:12.780','esl-fast-beginner-1-21'),
+	('There are toys on the floor','','00:00:13.960','00:00:16.140','esl-fast-beginner-1-21'),
+	('Robert does not care','','00:00:17.420','00:00:19.120','esl-fast-beginner-1-21'),
+	('He watches a television show','','00:00:20.040','00:00:22.140','esl-fast-beginner-1-21'),
+	('His mom goes into his room','','00:00:23.040','00:00:25.440','esl-fast-beginner-1-21'),
+	('She turns off the television','','00:00:26.320','00:00:28.420','esl-fast-beginner-1-21'),
+	('She yells at him','','00:00:28.420','00:00:31.060','esl-fast-beginner-1-21'),
+	('He starts to clean his room','','00:00:31.880','00:00:34.240','esl-fast-beginner-1-21');
+
 
 /* ============================================================================== ELEMENTARY =============================================================================== */
+INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES 
 	/* (UUID(),'esl-fast-elementary-1-1','Morning','Buổi sáng','ELEMENTARY_01_ESL_FAST_001.mp3',NULL,'00:00:00.000','00:00:00.000','elementary-1','YES',1) */
 	('He wakes up','Anh ấy thức dậy','00:00:00.710','00:00:02.210','esl-fast-elementary-1-1'),
 	('He sees the sun rise','Anh ấy ngắm mặt trời mọc','00:00:02.810','00:00:04.630','esl-fast-elementary-1-1'),
