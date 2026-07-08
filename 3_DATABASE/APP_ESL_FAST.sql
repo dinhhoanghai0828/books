@@ -288,21 +288,21 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 
 /* ============================================================================== ELEMENTARY =============================================================================== */
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES 
-	/* (UUID(),'esl-fast-elementary-1-1','Morning','Buổi sáng','ELEMENTARY_01_ESL_FAST_001.mp3',NULL,'00:00:00.000','00:00:00.000','elementary-1','YES',1) */
-	('He wakes up','Anh ấy thức dậy','00:00:00.710','00:00:02.210','esl-fast-elementary-1-1'),
-	('He sees the sun rise','Anh ấy ngắm mặt trời mọc','00:00:02.810','00:00:04.630','esl-fast-elementary-1-1'),
-	('He brushes his teeth','Anh ấy đánh răng','00:00:04.990','00:00:06.670','esl-fast-elementary-1-1'),
-	('His teeth are white','Răng của anh ấy trắng sáng','00:00:07.189','00:00:08.730','esl-fast-elementary-1-1'),
-	('He puts on his clothes','Anh ấy mặc quần áo','00:00:09.290','00:00:11.590','esl-fast-elementary-1-1'),
-	('His shirt is blue','Áo của anh ấy màu xanh dương','00:00:12.170','00:00:13.970','esl-fast-elementary-1-1'),
-	('His shoes are yellow','Đôi giày của anh ấy màu vàng','00:00:14.630','00:00:16.670','esl-fast-elementary-1-1'),
-	('His pants are brown','Quần của anh ấy màu nâu','00:00:17.350','00:00:19.470','esl-fast-elementary-1-1'),
-	('He goes downstairs','Anh ấy đi xuống tầng dưới','00:00:20.270','00:00:21.970','esl-fast-elementary-1-1'),
-	('He gets a bowl','Anh ấy lấy một cái bát','00:00:21.670','00:00:24.090','esl-fast-elementary-1-1'),
-	('He pours milk and cereal','Anh ấy đổ sữa và ngũ cốc vào bát','00:00:24.710','00:00:27.710','esl-fast-elementary-1-1'),
-	('He eats','Anh ấy ăn sáng','00:00:28.450','00:00:29.490','esl-fast-elementary-1-1'),
-	('He gets the newspaper','Anh ấy lấy tờ báo','00:00:30.070','00:00:31.709','esl-fast-elementary-1-1'),
-	('He reads','Anh ấy đọc báo','00:00:32.430','00:00:33.430','esl-fast-elementary-1-1'),
+	/* (UUID(),'esl-fast-elementary-1-1','Morning','Buổi sáng','ELEMENTARY_01_ESL_FAST_001.mp3',NULL,'00:00:00.000','00:00:35.000','elementary-1','YES',1) */
+	('He wakes up','Cậu bé thức dậy','00:00:00.710','00:00:02.410','esl-fast-elementary-1-1'),
+	('He sees the sun rise','Cậu bé ngắm mặt trời mọc','00:00:02.810','00:00:04.830','esl-fast-elementary-1-1'),
+	('He brushes his teeth','Cậu bé đánh răng','00:00:04.990','00:00:06.870','esl-fast-elementary-1-1'),
+	('His teeth are white','Răng của Cậu bé trắng sáng','00:00:07.189','00:00:08.930','esl-fast-elementary-1-1'),
+	('He puts on his clothes','Cậu bé mặc quần áo','00:00:09.290','00:00:11.790','esl-fast-elementary-1-1'),
+	('His shirt is blue','Áo của cậu bé màu xanh dương','00:00:12.170','00:00:14.170','esl-fast-elementary-1-1'),
+	('His shoes are yellow','Đôi giày của Cậu bé màu vàng','00:00:14.630','00:00:16.870','esl-fast-elementary-1-1'),
+	('His pants are brown','Quần của cậu bé màu nâu','00:00:17.350','00:00:19.770','esl-fast-elementary-1-1'),
+	('He goes downstairs','Cậu bé đi xuống tầng dưới','00:00:20.270','00:00:22.270','esl-fast-elementary-1-1'),
+	('He gets a bowl','Cậu bé lấy một cái bát','00:00:22.270','00:00:24.290','esl-fast-elementary-1-1'),
+	('He pours milk and cereal','Cậu bé đổ sữa và ngũ cốc','00:00:24.710','00:00:27.910','esl-fast-elementary-1-1'),
+	('He eats','Cậu bé ăn sáng','00:00:28.450','00:00:29.790','esl-fast-elementary-1-1'),
+	('He gets the newspaper','Cậu bé lấy tờ báo','00:00:30.070','00:00:31.909','esl-fast-elementary-1-1'),
+	('He reads','Cậu bé đọc báo','00:00:32.430','00:00:33.730','esl-fast-elementary-1-1'),
 	
 	/* (UUID(),'esl-fast-elementary-1-2','First Day of School','Ngày đầu tiên đi học','ELEMENTARY_01_ESL_FAST_002.mp3',NULL,'00:00:00.000','00:00:00.000','elementary-1','YES',2) */
 	('He goes to class','Anh ấy đi đến lớp học','00:00:00.330','00:00:02.130','esl-fast-elementary-1-2'),
