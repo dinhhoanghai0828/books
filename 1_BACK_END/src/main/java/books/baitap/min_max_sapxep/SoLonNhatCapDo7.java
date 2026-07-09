@@ -8,17 +8,17 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.*;
 
-public class SoLonNhatCapDo6 {
+public class SoLonNhatCapDo7 {
     public static void main(String[] args) throws IOException {
         XWPFDocument document = new XWPFDocument();
-        FileOutputStream out = new FileOutputStream("SoLonNhat_CapDo6.docx");
+        FileOutputStream out = new FileOutputStream("SoLonNhat_CapDo7.docx");
 
-        addExercise(document, "Bài tập: Tìm số lớn nhất - Cấp độ 6", 7, 100, 1000);
+        addExercise(document, "Bài tập: Tìm số lớn nhất - Cấp độ 7", 7, 100, 1000);
 
         document.write(out);
         out.close();
         document.close();
-        System.out.println("✅ Đã tạo file SoLonNhat_CapDo6.docx");
+        System.out.println("✅ Đã tạo file SoLonNhat_CapDo7.docx");
     }
 
     private static void addExercise(XWPFDocument doc, String title, int doDai, int count, int seed) {
@@ -37,7 +37,7 @@ public class SoLonNhatCapDo6 {
         Random rand = new Random(seed);
         Set<String> generated = new LinkedHashSet<>();
         List<Integer> pool = new ArrayList<>();
-        for (int i = 0; i <= 9; i++) pool.add(i);
+        for (int i = 0; i < 20; i++) pool.add(i);
 
         while (generated.size() < count) {
             Collections.shuffle(pool, rand);
