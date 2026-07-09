@@ -34,12 +34,12 @@ public class ContentAdapterImpl implements ContentAdapter {
             con = DBUtils.getConnection(thisMethod, true, Connection.TRANSACTION_READ_COMMITTED);
 
             // Lấy danh sách skipWords
-            pstmt = DBUtils.prepareStatement(con, SQL_GET_MISSING_WORDS);
-            rs = DBUtils.executeQuery(pstmt, SQL_GET_MISSING_WORDS);
-            while (rs.next()) {
-                skipWords.add(rs.getString("ENG"));
-            }
-            DBUtils.closeAll(thisMethod, null, pstmt, rs);
+//            pstmt = DBUtils.prepareStatement(con, SQL_GET_MISSING_WORDS);
+//            rs = DBUtils.executeQuery(pstmt, SQL_GET_MISSING_WORDS);
+//            while (rs.next()) {
+//                skipWords.add(rs.getString("ENG"));
+//            }
+//            DBUtils.closeAll(thisMethod, null, pstmt, rs);
 
             // Lấy nội dung theo volumeSlug
             pstmt = DBUtils.prepareStatement(con, SQL_GET_CONTENTS_BY_VOLUME_SLUG);
