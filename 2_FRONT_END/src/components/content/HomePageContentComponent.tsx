@@ -500,14 +500,14 @@ const HomePageContentComponent = ({
               name="eng"
               rules={[{ required: true, message: 'Vui long nhap nghia tieng Anh' }]}
             >
-              <Input />
+              <Input.TextArea rows={4} maxLength={1000} showCount />
             </Form.Item>
             <Form.Item
               label="Nghia tieng Viet"
               name="vi"
               rules={[{ required: true, message: 'Vui long nhap nghia tieng Viet' }]}
             >
-              <Input />
+              <Input.TextArea rows={4} maxLength={1000} showCount />
             </Form.Item>
           </Form>
         )}
