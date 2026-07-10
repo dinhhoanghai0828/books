@@ -43,7 +43,6 @@ interface ContentComponentProps {
   handleToggleAudio: (itemId: string, startTime: string, endTime: string, isLoop: boolean) => void;
 }
 
-// Style cho tooltip tra nghia tu
 const TOOLTIP_STYLE: React.CSSProperties = {
   position: 'absolute',
   backgroundColor: '#108ee9',
@@ -59,7 +58,6 @@ const TOOLTIP_STYLE: React.CSSProperties = {
   transition: 'transform 0.2s ease-out',
 };
 
-// Style highlight khi cau dang duoc phat (audio hoac video)
 const ACTIVE_ITEM_STYLE: React.CSSProperties = {
   borderLeft: '4px solid #1677ff',
   paddingLeft: 10,
@@ -72,17 +70,12 @@ const ACTIVE_ITEM_STYLE: React.CSSProperties = {
 // HELPERS
 // ============================================================
 
-// Chuyen chuoi "hh:mm:ss" thanh so giay
 const parseTimeToSeconds = (time: string): number => {
   const [h, m, s] = time.split(':').map(Number);
   return h * 3600 + m * 60 + s;
 };
 
-// Tim item trong danh sach contents co startTime <= currentTime < endTime
-const findActiveItem = (
-  contents: ContentType[],
-  currentTime: number
-): ContentType | undefined =>
+const findActiveItem = (contents: ContentType[], currentTime: number): ContentType | undefined =>
   contents.find((item) => {
     const start = parseTimeToSeconds(item.startTime);
     const end = parseTimeToSeconds(item.endTime);
@@ -104,65 +97,93 @@ const ContentComponent = ({
   const router = useRouter();
   const { volumeEngName, volumeViName } = contents[0] || {};
 
-  // Lay duong dan video duy nhat cua tap (lay tu item dau tien co video)
   const sharedVideoPath = contents.find((item) => item.video)?.video;
-
-  // Ref tro den the <video> duy nhat dung chung cho toan tap
   const videoRef = useRef<HTMLVideoElement | null>(null);
-
-  // Luu startTime/endTime (so giay) cua doan video dang phat de xu ly trong timeupdate
   const videoEndRef = useRef<number>(0);
 
-  // Dung ref thay vi state de tranh re-render khong can thiet khi doi trang thai play/loop
   const playStatesRef = useRef<Record<string, boolean>>({});
   const loopStatesRef = useRef<Record<string, boolean>>({});
-
-  // forceRender dung de ep React ve lai UI sau khi thay doi ref
   const [, setRenderCount] = useState(0);
   const forceRender = () => setRenderCount((c) => c + 1);
 
-  // ID cau dang duoc highlight boi audio (set khi click play, clear khi dung)
-  const [activeAudioItemId, setActiveAudioItemId] = useState<string | null>(null);
+  // 1 state duy nhat cho highlight — chi 1 item duoc highlight tai 1 thoi diem
+  const [activeItemId, setActiveItemId] = useState<string | null>(null);
+  const activeItemIdRef = useRef<string | null>(null);
 
-  // ID cau dang duoc highlight boi video (tu dong detect theo currentTime)
-  const [activeVideoItemId, setActiveVideoItemId] = useState<string | null>(null);
+  // Phan biet item dang duoc phat boi audio hay video de hien icon dung
+  const [activeSource, setActiveSource] = useState<'audio' | 'video' | null>(null);
+  const activeSourceRef = useRef<'audio' | 'video' | null>(null);
 
-  // Track trang thai video dang phat hay dung de re-render icon dung luc
+  // Track trang thai video dang phat de re-render icon
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const isVideoPlayingRef = useRef(false);
 
-  // Flag: chi scroll khi nguoi dung bam audio, KHONG scroll khi bam video
-  const shouldScrollRef = useRef(false);
+  // Helper: set ca state lan ref cung luc de dam bao dong bo
+  const setActive = (id: string | null, source: 'audio' | 'video' | null) => {
+    activeItemIdRef.current = id;
+    activeSourceRef.current = source;
+    setActiveItemId(id);
+    setActiveSource(source);
+  };
+  const setVideoPlaying = (val: boolean) => {
+    isVideoPlayingRef.current = val;
+    setIsVideoPlaying(val);
+  };
 
-  // Ref den vung cuon doc lap ben phai (danh sach cau)
-  // Dung de scroll NOI BOI vung nay thay vi scroll window khi video dang chay
+  // Ref vung cuon danh sach (layout 2 cot)
   const listScrollRef = useRef<HTMLDivElement | null>(null);
-
-  // Ref tro den tung phan tu hang de tinh toa do scroll
+  // Ref tung hang item de tinh offset scroll
   const itemRefsRef = useRef<Record<string, HTMLDivElement | null>>({});
 
-  // Trang thai tooltip tra nghia tu
   const [meaningEnKeywords, setMeaningEnKeywords] = useState<string[]>([]);
   const [meaningViKeywords, setMeaningViKeywords] = useState<string[]>([]);
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
 
-  // An/hien van ban tieng Anh va tieng Viet
   const [showEnglish, setShowEnglish] = useState(true);
   const [showVietnamese, setShowVietnamese] = useState(true);
-
-  // Bat/tat highlight tu moi (missingWords) trong noi dung
   const [highlightMissingWords, setHighlightMissingWords] = useState(true);
 
-  // Trang thai modal them tu moi vao tu dien
   const [insertModalOpen, setInsertModalOpen] = useState(false);
   const [insertLoading, setInsertLoading] = useState(false);
   const [insertForm] = Form.useForm();
   const [notifApi, notifContextHolder] = notification.useNotification();
 
   // ============================================================
+  // SCROLL HELPERS
+  // ============================================================
+
+  // Scroll window den item (dung cho layout 1 cot, bu offset header)
+  const scrollToItem = (itemId: string) => {
+    const el = itemRefsRef.current[itemId];
+    if (!el) return;
+    const top = el.getBoundingClientRect().top + window.scrollY - 170;
+    window.scrollTo({ top, behavior: 'smooth' });
+  };
+
+  // Scroll noi bo vung danh sach, day item len ngang voi top vung cuon (= ngang video)
+  const scrollToItemInList = (itemId: string) => {
+    const container = listScrollRef.current;
+    const el = itemRefsRef.current[itemId];
+    if (!container || !el) return;
+    const containerTop = container.getBoundingClientRect().top;
+    const elTop = el.getBoundingClientRect().top;
+    const offset = elTop - containerTop + container.scrollTop;
+    container.scrollTo({ top: offset, behavior: 'smooth' });
+  };
+
+  // Scroll phu hop voi layout: neu co video (2 cot) thi scroll noi bo, nguoc lai scroll window
+  const scrollToActiveItem = (itemId: string) => {
+    if (sharedVideoPath) {
+      scrollToItemInList(itemId);
+    } else {
+      scrollToItem(itemId);
+    }
+  };
+
+  // ============================================================
   // EFFECTS
   // ============================================================
 
-  // Khoi tao trang thai play/loop cho tung item khi danh sach noi dung thay doi
   useEffect(() => {
     const playState: Record<string, boolean> = {};
     const loopState: Record<string, boolean> = {};
@@ -174,23 +195,20 @@ const ContentComponent = ({
     loopStatesRef.current = loopState;
   }, [contents]);
 
-  // Theo doi isPlaying tu parent:
-  // Khi audio ket thuc (isPlaying: true -> false), reset tat ca icon + xoa highlight audio
+  // Khi audio ket thuc tu nhien (isPlaying: true -> false): reset trang thai
   const prevIsPlayingRef = useRef(false);
   useEffect(() => {
     const wasPlaying = prevIsPlayingRef.current;
     if (wasPlaying && !isPlaying) {
       Object.keys(playStatesRef.current).forEach((k) => { playStatesRef.current[k] = false; });
       Object.keys(loopStatesRef.current).forEach((k) => { loopStatesRef.current[k] = false; });
-      setActiveAudioItemId(null);
+      setActive(null, null);
       forceRender();
     }
     prevIsPlayingRef.current = isPlaying;
   }, [isPlaying]);
 
-  // Dang ky timeupdate listener 1 lan duy nhat cho video dung chung.
-  // Moi frame: tim cau tuong ung voi currentTime, highlight + auto-scroll.
-  // Khi vuot videoEndRef: dung video va reset highlight.
+  // Listener timeupdate cho video: highlight cau dang chay, scroll noi bo
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
@@ -198,25 +216,25 @@ const ContentComponent = ({
     const handleTimeUpdate = () => {
       const currentTime = video.currentTime;
 
-      // Dung khi den endTime cua doan dang phat
       if (videoEndRef.current > 0 && currentTime >= videoEndRef.current) {
         video.pause();
         videoEndRef.current = 0;
-        setActiveVideoItemId(null);
-        setIsVideoPlaying(false);
+        setActive(null, null);
+        setVideoPlaying(false);
         return;
       }
 
-      // Tim cau dang chay theo currentTime va highlight
       const activeItem = findActiveItem(contents, currentTime);
       if (activeItem) {
-        setActiveVideoItemId((prev) => {
+        setActiveItemId((prev) => {
           if (prev !== activeItem.id) {
-            // Cau moi: day len ngang video bang cach scroll noi bo vung danh sach
             scrollToItemInList(activeItem.id);
           }
           return activeItem.id;
         });
+        activeItemIdRef.current = activeItem.id;
+        activeSourceRef.current = 'video';
+        setActiveSource('video');
       }
     };
 
@@ -224,124 +242,91 @@ const ContentComponent = ({
     return () => video.removeEventListener('timeupdate', handleTimeUpdate);
   }, [contents]);
 
-  // Scroll WINDOW den item (dung cho audio, bu offset header)
-  const scrollToItem = (itemId: string) => {
-    const el = itemRefsRef.current[itemId];
-    if (!el) return;
-    const top = el.getBoundingClientRect().top + window.scrollY - 170;
-    window.scrollTo({ top, behavior: 'smooth' });
-  };
-
-  // Scroll NOI BOI vung danh sach (dung cho video),
-  // day item len ngang voi top cua vung cuon = ngang voi video ben trai
-  const scrollToItemInList = (itemId: string) => {
-    const container = listScrollRef.current;
-    const el = itemRefsRef.current[itemId];
-    if (!container || !el) return;
-    // offsetTop cua el tinh tu container
-    const containerTop = container.getBoundingClientRect().top;
-    const elTop = el.getBoundingClientRect().top;
-    const offset = elTop - containerTop + container.scrollTop;
-    container.scrollTo({ top: offset, behavior: 'smooth' });
-  };
-
-  // Auto-scroll chi chay khi nguoi dung bam audio (shouldScrollRef = true)
-  useEffect(() => {
-    if (activeAudioItemId && shouldScrollRef.current) {
-      scrollToItem(activeAudioItemId);
-      shouldScrollRef.current = false;
-    }
-  }, [activeAudioItemId]);
-
   // ============================================================
   // VIDEO HANDLER
   // ============================================================
 
-  // Seek video dung chung den doan cua item duoc click.
-  // Neu item nay dang phat: dung lai.
-  // Neu item khac hoac video dang dung: seek den startTime va bat dau phat.
   const onPlayPauseVideo = useCallback(
     (itemId: string, startTime: string, endTime: string) => {
       const video = videoRef.current;
       if (!video) return;
 
-      if (activeVideoItemId === itemId && isVideoPlaying) {
-        // Dang phat item nay -> dung video lai
+      // Doc tu ref de tranh stale closure
+      const currentActiveId = activeItemIdRef.current;
+      const currentSource = activeSourceRef.current;
+      const currentVideoPlaying = isVideoPlayingRef.current;
+
+      if (currentActiveId === itemId && currentSource === 'video' && currentVideoPlaying) {
+        // Dang phat video item nay -> dung lai
         video.pause();
         videoEndRef.current = 0;
-        setActiveVideoItemId(null);
-        setIsVideoPlaying(false);
+        setActive(null, null);
+        setVideoPlaying(false);
         return;
       }
 
       // Bat dau phat video -> dung audio neu dang chay
-      if (activeAudioItemId) {
+      if (currentSource === 'audio') {
         Object.keys(playStatesRef.current).forEach((k) => { playStatesRef.current[k] = false; });
         Object.keys(loopStatesRef.current).forEach((k) => { loopStatesRef.current[k] = false; });
-        setActiveAudioItemId(null);
         handlePauseAudio(true);
         forceRender();
       }
 
-      // Seek video den doan can phat
+      // Seek va phat video
       videoEndRef.current = parseTimeToSeconds(endTime);
       video.currentTime = parseTimeToSeconds(startTime);
       video.play();
-      setActiveVideoItemId(itemId);
-      setIsVideoPlaying(true);
-      // Day cau nay len ngang video ngay khi bam
+      setActive(itemId, 'video');
+      setVideoPlaying(true);
       scrollToItemInList(itemId);
     },
-    [activeVideoItemId, isVideoPlaying, activeAudioItemId, handlePauseAudio]
+    [handlePauseAudio]
   );
 
   // ============================================================
-  // AUDIO HANDLERS
+  // AUDIO HANDLER
   // ============================================================
 
-  // Bat/dung audio cua 1 item:
-  // - Dang phat item nay: dung lai, xoa highlight
-  // - Phat item moi: goi handleToggleAudio voi itemId moi ->
-  //   AudioComponent nhan itemId thay doi, useEffect re-run, seek va phat dung doan
   const onPlayPauseAudio = useCallback(
     (itemId: string, startTime: string, endTime: string) => {
       const isCurrentlyPlaying = playStatesRef.current[itemId];
 
-      // Toggle item duoc click, tat tat ca item khac
+      // Doc tu ref de tranh stale closure
+      const currentSource = activeSourceRef.current;
+      const currentVideoPlaying = isVideoPlayingRef.current;
+
       Object.keys(playStatesRef.current).forEach((k) => {
         playStatesRef.current[k] = k === itemId ? !isCurrentlyPlaying : false;
       });
 
       if (isCurrentlyPlaying) {
-        // Dang phat item nay -> dung audio lai
+        // Dung audio
         loopStatesRef.current[itemId] = false;
-        setActiveAudioItemId(null);
+        setActive(null, null);
         handlePauseAudio(true);
       } else {
         // Bat dau phat audio -> dung video neu dang chay
         const video = videoRef.current;
-        if (isVideoPlaying && video) {
+        if (currentVideoPlaying && video) {
           video.pause();
           videoEndRef.current = 0;
-          setActiveVideoItemId(null);
-          setIsVideoPlaying(false);
+          setVideoPlaying(false);
         }
 
-        // Phat audio moi
         loopStatesRef.current[itemId] = false;
-        shouldScrollRef.current = true;
-        setActiveAudioItemId(itemId);
+        setActive(itemId, 'audio');
         handleToggleAudio(itemId, startTime, endTime, false);
         handlePlayAudio(startTime, endTime, Number(itemId));
-        scrollToItem(itemId);
+        // Doi 1 tick de DOM cap nhat xong roi moi scroll
+        setTimeout(() => scrollToActiveItem(itemId), 50);
       }
 
       forceRender();
     },
-    [handlePlayAudio, handlePauseAudio, handleToggleAudio, isVideoPlaying]
+    [handlePlayAudio, handlePauseAudio, handleToggleAudio]
   );
 
-  // Bat/tat che do lap lai cho 1 item
   const onToggleLoop = useCallback(
     (itemId: string, startTime: string, endTime: string) => {
       loopStatesRef.current[itemId] = !loopStatesRef.current[itemId];
@@ -352,23 +337,19 @@ const ContentComponent = ({
   );
 
   // ============================================================
-  // TOOLTIP - TRA NGHIA TU
+  // TOOLTIP
   // ============================================================
 
-  // Lay nghia cua tu nguoi dung boi chon (debounce 300ms)
   const handleGetMeaning = useCallback(
     debounce(async () => {
       try {
         const selection = window.getSelection();
         const searchValue = selection?.toString().trim();
-
         if (!searchValue) {
           setMeaningEnKeywords([]);
           setMeaningViKeywords([]);
           return;
         }
-
-        // Tranh goi API lai neu tu da duoc hien thi truoc do
         const alreadyShown =
           searchValue === meaningEnKeywords.join(' ') ||
           searchValue === meaningViKeywords.join(' ');
@@ -387,13 +368,9 @@ const ContentComponent = ({
           setMeaningViKeywords([]);
         }
 
-        // Dat toa do tooltip sat vi tri boi
         if (selection?.rangeCount) {
           const rect = selection.getRangeAt(0).getBoundingClientRect();
-          setTooltipPosition({
-            x: rect.left + window.scrollX,
-            y: rect.top + window.scrollY + 30,
-          });
+          setTooltipPosition({ x: rect.left + window.scrollX, y: rect.top + window.scrollY + 30 });
         }
       } catch (error) {
         console.error('Loi khi tra nghia tu:', error);
@@ -402,7 +379,6 @@ const ContentComponent = ({
     [meaningEnKeywords, meaningViKeywords]
   );
 
-  // Lang nghe su kien boi chu tren toan trang de hien tooltip
   useEffect(() => {
     document.addEventListener('selectionchange', handleGetMeaning);
     return () => document.removeEventListener('selectionchange', handleGetMeaning);
@@ -412,49 +388,32 @@ const ContentComponent = ({
   // MODAL THEM TU MOI
   // ============================================================
 
-  const handleOpenInsert = () => {
-    insertForm.resetFields();
-    setInsertModalOpen(true);
-  };
-
-  const handleCancelInsert = () => {
-    setInsertModalOpen(false);
-    insertForm.resetFields();
-  };
+  const handleOpenInsert = () => { insertForm.resetFields(); setInsertModalOpen(true); };
+  const handleCancelInsert = () => { setInsertModalOpen(false); insertForm.resetFields(); };
 
   const handleInsert = async () => {
     try {
       const values = await insertForm.validateFields();
-      const viList: string[] = values.viList
-        .map((item: { vi: string }) => item.vi?.trim())
-        .filter(Boolean);
-
+      const viList: string[] = values.viList.map((item: { vi: string }) => item.vi?.trim()).filter(Boolean);
       if (viList.length === 0) {
-        insertForm.setFields([
-          { name: ['viList', 0, 'vi'], errors: ['Vui long nhap it nhat 1 nghia tieng Viet'] },
-        ]);
+        insertForm.setFields([{ name: ['viList', 0, 'vi'], errors: ['Vui long nhap it nhat 1 nghia tieng Viet'] }]);
         return;
       }
-
       setInsertLoading(true);
       await insertWord(values.eng.trim(), viList);
-
       notifApi.success({
         message: 'Them tu thanh cong',
         description: `Da them tu "${values.eng.trim()}" vao tu dien.`,
-        placement: 'topRight',
-        duration: 3,
+        placement: 'topRight', duration: 3,
         style: { backgroundColor: '#f6ffed', border: '1px solid #b7eb8f' },
       });
-
       handleCancelInsert();
     } catch (error: any) {
       if (error?.errorFields) return;
       notifApi.error({
         message: 'Them tu that bai',
         description: error.message || 'Da xay ra loi, vui long thu lai.',
-        placement: 'topRight',
-        duration: 4,
+        placement: 'topRight', duration: 4,
         style: { backgroundColor: '#fff2f0', border: '1px solid #ffccc7' },
       });
     } finally {
@@ -463,18 +422,15 @@ const ContentComponent = ({
   };
 
   // ============================================================
-  // RENDER NOI DUNG TUNG CAU
-  // isActive: cau nay dang duoc phat (audio hoac video) -> highlight toan bo hang
+  // RENDER TUNG CAU
   // ============================================================
 
   const renderItemContent = (item: ContentType, isActive: boolean) => (
     <div>
-      {/* Dong tieng Anh + nut play audio + nut loop + nut play video */}
       <div className="eng-line">
         <div style={{ visibility: showEnglish ? 'visible' : 'hidden' }}>
           <Typography.Text
-            strong
-            className="engClass"
+            strong className="engClass"
             style={isActive ? { color: '#1677ff' } : {}}
             onMouseUp={(e) => { e.stopPropagation(); handleGetMeaning(); }}
             onTouchEnd={(e) => { e.stopPropagation(); handleGetMeaning(); }}
@@ -482,15 +438,9 @@ const ContentComponent = ({
           >
             {item.eng.split(/\s+/).map((word, idx) => {
               const cleanWord = word.replace(/[.,?!";']/g, '').toLowerCase();
-              const isMissing =
-                highlightMissingWords &&
-                item.missingWords?.map((w) => w.toLowerCase()).includes(cleanWord);
+              const isMissing = highlightMissingWords && item.missingWords?.map((w) => w.toLowerCase()).includes(cleanWord);
               return (
-                <span
-                  key={idx}
-                  className={isMissing ? 'highlight-missing' : ''}
-                  style={isMissing ? { backgroundColor: '#ffe58f' } : {}}
-                >
+                <span key={idx} className={isMissing ? 'highlight-missing' : ''} style={isMissing ? { backgroundColor: '#ffe58f' } : {}}>
                   {word + ' '}
                 </span>
               );
@@ -499,25 +449,25 @@ const ContentComponent = ({
         </div>
 
         <Space className="button-group">
-          {/* Nut Play / Pause video dung chung (chi hien khi item co video) — dat TRUOC audio */}
+          {/* Nut video (chi hien khi item co video) */}
           {item.video && (
             <Button
               type="link"
               icon={
-                activeVideoItemId === item.id && isVideoPlaying
+                activeItemId === item.id && activeSource === 'video' && isVideoPlaying
                   ? <PauseOutlined style={{ color: '#1677ff' }} />
                   : <VideoCameraOutlined />
               }
               onClick={(e) => { e.stopPropagation(); onPlayPauseVideo(item.id, item.startTime, item.endTime); }}
             />
           )}
-          {/* Nut Play / Pause audio */}
+          {/* Nut audio */}
           <Button
             type="link"
             icon={playStatesRef.current[item.id] ? <PauseOutlined /> : <PlayCircleOutlined />}
             onClick={(e) => { e.stopPropagation(); onPlayPauseAudio(item.id, item.startTime, item.endTime); }}
           />
-          {/* Nut bat/tat lap lai, chi hoat dong khi item dang phat audio */}
+          {/* Nut loop */}
           <Button
             type="link"
             icon={loopStatesRef.current[item.id] ? <RetweetOutlined /> : <RollbackOutlined />}
@@ -527,11 +477,9 @@ const ContentComponent = ({
         </Space>
       </div>
 
-      {/* Dong tieng Viet */}
       <div style={{ visibility: showVietnamese ? 'visible' : 'hidden' }}>
         <Typography.Text
-          strong
-          className="viClass"
+          strong className="viClass"
           style={isActive ? { color: '#1677ff' } : {}}
           onMouseUp={(e) => { e.stopPropagation(); handleGetMeaning(); }}
           onTouchEnd={(e) => { e.stopPropagation(); handleGetMeaning(); }}
@@ -543,64 +491,27 @@ const ContentComponent = ({
     </div>
   );
 
-  // Tong hop: cau duoc coi la active neu dang duoc phat boi audio HOAC video
-  const getIsActive = (itemId: string) =>
-    activeAudioItemId === itemId || activeVideoItemId === itemId;
-
-  // ============================================================
-  // CLICK VAO CAU: seek ca audio va video den doan do roi phat
-  // [DISABLED] - comment lai, mo ra khi can dung
-  // ============================================================
-
-  // const onClickItem = useCallback(
-  //   (item: ContentType) => {
-  //     const video = videoRef.current;
-  //     if (!video) return;
-  //     videoEndRef.current = parseTimeToSeconds(item.endTime);
-  //     video.currentTime = parseTimeToSeconds(item.startTime);
-  //     video.play();
-  //     setActiveVideoItemId(item.id);
-  //   },
-  //   []
-  // );
-
-  // ============================================================
-  // RENDER DANH SACH CAU (dung chung cho ca 2 layout)
-  // ============================================================
-
   const renderContentList = () =>
     contents.map((item) => {
-      const isActive = getIsActive(item.id);
+      const isActive = activeItemId === item.id;
       return (
         <div
           key={item.id}
           ref={(el) => { itemRefsRef.current[item.id] = el; }}
           className="content-item"
           style={isActive ? ACTIVE_ITEM_STYLE : {}}
-          // onClick={() => onClickItem(item)} // [DISABLED] click de seek video
         >
           {renderItemContent(item, isActive)}
         </div>
       );
     });
 
-  // ============================================================
-  // RENDER TOOLTIP
-  // ============================================================
-
   const renderTooltip = () =>
     meaningEnKeywords.length > 0 && meaningViKeywords.length > 0 ? (
-      <div
-        className="meaning-container"
-        style={{ ...TOOLTIP_STYLE, left: tooltipPosition.x, top: tooltipPosition.y }}
-      >
+      <div className="meaning-container" style={{ ...TOOLTIP_STYLE, left: tooltipPosition.x, top: tooltipPosition.y }}>
         {/^[a-zA-Z ]+$/.test(window.getSelection()?.toString().trim() || '')
-          ? meaningEnKeywords.map((word, i) => (
-              <div key={i}><strong>{word}</strong>: {meaningViKeywords[i]}</div>
-            ))
-          : meaningViKeywords.map((word, i) => (
-              <div key={i}><strong>{word}</strong>: {meaningEnKeywords[i]}</div>
-            ))}
+          ? meaningEnKeywords.map((word, i) => <div key={i}><strong>{word}</strong>: {meaningViKeywords[i]}</div>)
+          : meaningViKeywords.map((word, i) => <div key={i}><strong>{word}</strong>: {meaningEnKeywords[i]}</div>)}
       </div>
     ) : null;
 
@@ -612,77 +523,38 @@ const ContentComponent = ({
     <div className="content-container">
       {notifContextHolder}
 
-      {/* Thanh cong cu */}
       <Space>
-        <Button
-          icon={showEnglish ? <EyeInvisibleOutlined /> : <EyeOutlined />}
-          onClick={() => setShowEnglish((prev) => !prev)}
-          className="custom-button"
-        >
+        <Button icon={showEnglish ? <EyeInvisibleOutlined /> : <EyeOutlined />} onClick={() => setShowEnglish((p) => !p)} className="custom-button">
           {showEnglish ? 'Show Eng' : 'Hide Eng'}
         </Button>
-        <Button
-          icon={showVietnamese ? <EyeInvisibleOutlined /> : <EyeOutlined />}
-          onClick={() => setShowVietnamese((prev) => !prev)}
-          className="custom-button"
-        >
+        <Button icon={showVietnamese ? <EyeInvisibleOutlined /> : <EyeOutlined />} onClick={() => setShowVietnamese((p) => !p)} className="custom-button">
           {showVietnamese ? 'Show Vi' : 'Hide Vi'}
         </Button>
-        <Button
-          type="dashed"
-          onClick={() => setHighlightMissingWords((prev) => !prev)}
-          className="custom-button"
-        >
+        <Button type="dashed" onClick={() => setHighlightMissingWords((p) => !p)} className="custom-button">
           {highlightMissingWords ? 'An tu moi' : 'Tu moi'}
         </Button>
-        <Button
-          type="primary"
-          onClick={() => router.push(`/test?volumeSlug=${volumeSlug}`)}
-          className="custom-button"
-        >
+        <Button type="primary" onClick={() => router.push(`/test?volumeSlug=${volumeSlug}`)} className="custom-button">
           Kiem tra
         </Button>
-        <Button
-          type="primary"
-          icon={<PlusOutlined />}
-          onClick={handleOpenInsert}
-          className="custom-button"
-          style={{ backgroundColor: '#6366f1', borderColor: '#6366f1', color: '#fff' }}
-        >
+        <Button type="primary" icon={<PlusOutlined />} onClick={handleOpenInsert} className="custom-button" style={{ backgroundColor: '#6366f1', borderColor: '#6366f1', color: '#fff' }}>
           Them tu moi
         </Button>
       </Space>
 
       {contents && contents.length > 0 ? (
         sharedVideoPath ? (
-          // ── Layout 2 cot: tap co video ──────────────────────────────
           <Row gutter={24} align="top" style={{ marginTop: 16 }}>
-
-            {/* Cot trai: video sticky */}
             <Col xs={24} md={10}>
               <div style={{ position: 'sticky', top: 16 }}>
-                {/* 1 the <video> duy nhat dung chung cho ca tap */}
-                <video
-                  ref={videoRef}
-                  src={`/media/${sharedVideoPath}`}
-                  controls
-                  style={{ width: '100%', borderRadius: 8 }}
-                />
+                <video ref={videoRef} src={`/media/${sharedVideoPath}`} controls style={{ width: '100%', borderRadius: 8 }} />
               </div>
             </Col>
-
-            {/* Cot phai: tieu de + danh sach cau cuon doc lap */}
             <Col xs={24} md={14}>
-              <Typography.Title level={3} className="volume-title">
-                {volumeEngName}
-              </Typography.Title>
+              <Typography.Title level={3} className="volume-title">{volumeEngName}</Typography.Title>
               <Typography.Text className="volume-vi-name">{volumeViName}</Typography.Text>
               <Typography.Text className="volume-total-sentence" style={{ display: 'block', marginBottom: 8 }}>
-                Bai co tong cong:{' '}
-                <strong style={{ color: 'red' }}>{contents.length}</strong> cau can hoc
+                Bai co tong cong: <strong style={{ color: 'red' }}>{contents.length}</strong> cau can hoc
               </Typography.Text>
-
-              {/* Vung cuon doc lap de danh sach luon thay doi theo video */}
               <div ref={listScrollRef} style={{ maxHeight: '70vh', overflowY: 'auto', paddingRight: 4 }}>
                 {renderContentList()}
                 {renderTooltip()}
@@ -690,17 +562,12 @@ const ContentComponent = ({
             </Col>
           </Row>
         ) : (
-          // ── Layout 1 cot: tap khong co video ────────────────────────
           <div>
-            <Typography.Title level={3} className="volume-title">
-              {volumeEngName}
-            </Typography.Title>
+            <Typography.Title level={3} className="volume-title">{volumeEngName}</Typography.Title>
             <Typography.Text className="volume-vi-name">{volumeViName}</Typography.Text>
             <Typography.Text className="volume-total-sentence">
-              Bai co tong cong:{' '}
-              <strong style={{ color: 'red' }}>{contents.length}</strong> cau can hoc
+              Bai co tong cong: <strong style={{ color: 'red' }}>{contents.length}</strong> cau can hoc
             </Typography.Text>
-
             {renderContentList()}
             {renderTooltip()}
           </div>
@@ -709,66 +576,31 @@ const ContentComponent = ({
         <Empty description="Khong co du lieu" className="emptyClass" />
       )}
 
-      {/* Modal them tu moi vao tu dien */}
       <Modal
-        title="Them tu moi"
-        open={insertModalOpen}
-        onCancel={handleCancelInsert}
-        footer={
-          <div style={{ textAlign: 'center' }}>
-            <Space>
-              <Button onClick={handleCancelInsert}>Huy</Button>
-              <Button type="primary" loading={insertLoading} onClick={handleInsert}>
-                Them moi
-              </Button>
-            </Space>
-          </div>
-        }
+        title="Them tu moi" open={insertModalOpen} onCancel={handleCancelInsert}
+        footer={<div style={{ textAlign: 'center' }}><Space><Button onClick={handleCancelInsert}>Huy</Button><Button type="primary" loading={insertLoading} onClick={handleInsert}>Them moi</Button></Space></div>}
       >
         <Form form={insertForm} layout="vertical">
-          <Form.Item
-            label="Tu tieng Anh"
-            name="eng"
-            rules={[{ required: true, message: 'Vui long nhap tu tieng Anh' }]}
-          >
+          <Form.Item label="Tu tieng Anh" name="eng" rules={[{ required: true, message: 'Vui long nhap tu tieng Anh' }]}>
             <Input placeholder="Nhap tu tieng Anh..." />
           </Form.Item>
-
           <Form.List name="viList" initialValue={[{ vi: '' }]}>
             {(fields, { add, remove }) => (
               <>
                 {fields.map((field, index) => (
-                  <Form.Item
-                    key={field.key}
-                    label={index === 0 ? 'Nghia tieng Viet' : ''}
-                    required={index === 0}
-                  >
+                  <Form.Item key={field.key} label={index === 0 ? 'Nghia tieng Viet' : ''} required={index === 0}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                      <Form.Item
-                        key={field.key}
-                        name={[field.name, 'vi']}
-                        noStyle
-                        rules={
-                          index === 0
-                            ? [{ required: true, message: 'Vui long nhap nghia tieng Viet' }]
-                            : []
-                        }
-                      >
+                      <Form.Item key={field.key} name={[field.name, 'vi']} noStyle rules={index === 0 ? [{ required: true, message: 'Vui long nhap nghia tieng Viet' }] : []}>
                         <Input placeholder={`Nghia ${index + 1}...`} style={{ flex: 1 }} />
                       </Form.Item>
                       {fields.length > 1 && (
-                        <MinusCircleOutlined
-                          onClick={() => remove(field.name)}
-                          style={{ color: '#ff4d4f', fontSize: 18, cursor: 'pointer', flexShrink: 0 }}
-                        />
+                        <MinusCircleOutlined onClick={() => remove(field.name)} style={{ color: '#ff4d4f', fontSize: 18, cursor: 'pointer', flexShrink: 0 }} />
                       )}
                     </div>
                   </Form.Item>
                 ))}
                 <Form.Item>
-                  <Button type="dashed" onClick={() => add({ vi: '' })} icon={<PlusOutlined />} block>
-                    Them nghia
-                  </Button>
+                  <Button type="dashed" onClick={() => add({ vi: '' })} icon={<PlusOutlined />} block>Them nghia</Button>
                 </Form.Item>
               </>
             )}
