@@ -496,7 +496,7 @@ const ContentComponent = ({
                   >
                     <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                       <Form.Item
-                        {...field}
+                        key={field.key}
                         name={[field.name, 'vi']}
                         noStyle
                         rules={
