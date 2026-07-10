@@ -12,36 +12,63 @@ import {
   Form,
   Input,
   Layout,
-  Modal,
-  Row,
-  Typography,
   message,
+  Modal,
   notification,
+  Row,
   Space,
+  Typography,
 } from 'antd';
 import { useCallback, useEffect, useState } from 'react';
 import debounce from 'lodash.debounce';
 import { getMeaningWords, updateContent } from '@/utils/apiService';
+
 const { Content } = Layout;
 const { Text } = Typography;
+
+// ============================================================
+// TYPES
+// ============================================================
 
 interface HomePageContentComponentProps {
   contents: ContentType[];
   playbackSpeed: number;
   searchValueEn: string;
   searchValueVi: string;
-  highlightedEnKeywords: string[];
+  highlightedEnKeywords: string[];  // Tu can highlight (tu search highlight)
   highlightedViKeywords: string[];
 }
 
+// Style cho tooltip tra nghia tu
+const TOOLTIP_STYLE: React.CSSProperties = {
+  position: 'absolute',
+  backgroundColor: '#108ee9',
+  color: 'white',
+  padding: '12px 15px',
+  borderRadius: '8px',
+  boxShadow: '0 1px 8px rgba(0,0,0,0.1)',
+  zIndex: 10,
+  maxWidth: '400px',
+  wordWrap: 'break-word',
+  fontSize: '15px',
+  lineHeight: '1.9',
+  transition: 'transform 0.2s ease-out',
+};
+
+// ============================================================
+// HELPERS
+// ============================================================
+
+// Highlight cac tu khop voi keywords trong doan text
 const highlightText = (
   text: string,
   keywords: string[] | string
 ): React.ReactNode => {
-  if (!keywords || (Array.isArray(keywords) && keywords.length === 0))
-    return text;
-
   const keywordList = Array.isArray(keywords) ? keywords : [keywords];
+  if (!keywordList.length || (keywordList.length === 1 && !keywordList[0])) {
+    return text;
+  }
+
   const regex = new RegExp(`(${keywordList.join('|')})`, 'gi');
   const parts = text.split(regex);
 
@@ -56,6 +83,10 @@ const highlightText = (
   );
 };
 
+// ============================================================
+// COMPONENT
+// ============================================================
+
 const HomePageContentComponent = ({
   contents,
   playbackSpeed,
@@ -64,43 +95,67 @@ const HomePageContentComponent = ({
   highlightedEnKeywords,
   highlightedViKeywords,
 }: HomePageContentComponentProps) => {
+  // Du lieu hien thi (dong bo voi contents tu props)
   const [filteredData, setFilteredData] = useState<ContentType[]>(contents);
+
+  // Trang thai play/pause cho tung item (key: itemId, value: dang phat hay khong)
   const [playStates, setPlayStates] = useState<Record<string, boolean>>({});
-  const [currentAudio, setCurrentAudio] = useState<HTMLAudioElement | null>(
-    null
-  );
+
+  // Audio element dang phat hien tai
+  const [currentAudio, setCurrentAudio] = useState<HTMLAudioElement | null>(null);
   const [currentPlayingId, setCurrentPlayingId] = useState<string | null>(null);
+
+  // Trang thai tooltip tra nghia tu
   const [meaningEnKeywords, setMeaningEnKeywords] = useState<string[]>([]);
   const [meaningViKeywords, setMeaningViKeywords] = useState<string[]>([]);
-  const [tooltipPosition, setTooltipPosition] = useState<{
-    x: number;
-    y: number;
-  }>({
-    x: 0,
-    y: 0,
-  });
+  const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
 
-  // Edit modal state
+  // Trang thai modal chinh sua noi dung
   const [editModalOpen, setEditModalOpen] = useState(false);
   const [editingItem, setEditingItem] = useState<ContentType | null>(null);
   const [editLoading, setEditLoading] = useState(false);
-  const [form] = Form.useForm();
-  const [api, contextHolder] = notification.useNotification();
+  const [editForm] = Form.useForm();
+  const [notifApi, notifContextHolder] = notification.useNotification();
+
+  // ============================================================
+  // EFFECTS
+  // ============================================================
+
+  // Dong bo du lieu va khoi tao trang thai play khi contents thay doi
   useEffect(() => {
-    const initialState = contents.reduce((acc, item) => {
+    const initialPlayState = contents.reduce((acc, item) => {
       acc[item.id] = false;
       return acc;
     }, {} as Record<string, boolean>);
-    setPlayStates(initialState);
+
+    setPlayStates(initialPlayState);
     setFilteredData(contents);
   }, [contents]);
 
+  // Cap nhat toc do phat cua audio dang chay khi playbackSpeed thay doi
   useEffect(() => {
     if (currentAudio) {
       currentAudio.playbackRate = playbackSpeed;
     }
   }, [playbackSpeed, currentAudio]);
 
+  // Lang nghe su kien boi chu de hien tooltip tra nghia (ho tro ca mobile)
+  useEffect(() => {
+    document.addEventListener('selectionchange', handleGetMeaning);
+    return () => document.removeEventListener('selectionchange', handleGetMeaning);
+  }, [handleGetMeaning]);
+
+  // ============================================================
+  // AUDIO HANDLERS
+  // ============================================================
+
+  // Chuyen doi chuoi "hh:mm:ss" sang so giay
+  const parseTimeToSeconds = (time: string): number => {
+    const [hours, minutes, seconds] = time.split(':').map(Number);
+    return hours * 3600 + minutes * 60 + seconds;
+  };
+
+  // Dung audio dang phat va reset trang thai tat ca item ve false
   const stopAudio = () => {
     if (currentAudio) {
       currentAudio.pause();
@@ -114,6 +169,9 @@ const HomePageContentComponent = ({
     }
   };
 
+  // Bat/dung audio cua 1 item
+  // - Neu item dang phat: dung lai
+  // - Neu item chua phat: dung item hien tai, tao Audio moi va phat
   const toggleAudio = (
     itemId: string,
     audioPath: string,
@@ -121,7 +179,7 @@ const HomePageContentComponent = ({
     endTime: string
   ) => {
     if (!audioPath || !startTime || !endTime) {
-      message.error('Không có tệp âm thanh hoặc thời gian không hợp lệ.');
+      message.error('Khong co tep am thanh hoac thoi gian khong hop le.');
       return;
     }
 
@@ -129,107 +187,54 @@ const HomePageContentComponent = ({
     const end = parseTimeToSeconds(endTime);
 
     if (start >= end) {
-      message.error('Thời gian bắt đầu phải nhỏ hơn thời gian kết thúc.');
+      message.error('Thoi gian bat dau phai nho hon thoi gian ket thuc.');
       return;
     }
 
     if (currentPlayingId === itemId) {
-      // Nếu đang phát, tạm dừng
+      // Dang phat item nay -> dung lai
       stopAudio();
-    } else {
-      // Nếu không, phát âm thanh mới
-      stopAudio();
-
-      const audioURL = `/media/${audioPath}`;
-      const audio = new Audio(audioURL);
-
-      audio.currentTime = start;
-      audio.playbackRate = playbackSpeed;
-
-      audio.addEventListener('timeupdate', () => {
-        if (audio.currentTime >= end) {
-          audio.currentTime = start;
-          audio.pause();
-          stopAudio();
-        }
-      });
-
-      audio.addEventListener('ended', () => stopAudio());
-
-      setCurrentAudio(audio);
-      setCurrentPlayingId(itemId);
-
-      setPlayStates((prev) =>
-        Object.keys(prev).reduce((acc, key) => {
-          acc[key] = key === itemId;
-          return acc;
-        }, {} as Record<string, boolean>)
-      );
-
-      audio.play().catch(() => {
-        message.error('Không thể phát âm thanh.');
-      });
+      return;
     }
+
+    // Phat item moi: dung item cu truoc
+    stopAudio();
+
+    const audio = new Audio(`/media/${audioPath}`);
+    audio.currentTime = start;
+    audio.playbackRate = playbackSpeed;
+
+    // Tu dong dung khi den endTime
+    audio.addEventListener('timeupdate', () => {
+      if (audio.currentTime >= end) {
+        audio.currentTime = start;
+        audio.pause();
+        stopAudio();
+      }
+    });
+
+    // Xu ly truong hop audio ket thuc tu nhien
+    audio.addEventListener('ended', () => stopAudio());
+
+    setCurrentAudio(audio);
+    setCurrentPlayingId(itemId);
+    setPlayStates((prev) =>
+      Object.keys(prev).reduce((acc, key) => {
+        acc[key] = key === itemId;
+        return acc;
+      }, {} as Record<string, boolean>)
+    );
+
+    audio.play().catch(() => {
+      message.error('Khong the phat am thanh.');
+    });
   };
 
-  const parseTimeToSeconds = (time: string): number => {
-    const [hours, minutes, seconds] = time.split(':').map(Number);
-    return hours * 3600 + minutes * 60 + seconds;
-  };
+  // ============================================================
+  // TOOLTIP - TRA NGHIA TU
+  // ============================================================
 
-  const handleOpenEdit = (item: ContentType) => {
-    setEditingItem(item);
-    form.setFieldsValue({ eng: item.eng, vi: item.vi });
-    setEditModalOpen(true);
-  };
-
-  const handleCancelEdit = () => {
-    setEditModalOpen(false);
-    setEditingItem(null);
-    form.resetFields();
-  };
-
-  const handleUpdate = async () => {
-    if (!editingItem) return;
-    try {
-      const values = await form.validateFields();
-      setEditLoading(true);
-      await updateContent(editingItem.id, values.eng, values.vi);
-      api.success({
-        message: 'Cập nhật thành công',
-        description: 'Nội dung đã được lưu lại.',
-        placement: 'topRight',
-        duration: 3,
-        style: {
-          backgroundColor: '#f6ffed',
-          border: '1px solid #b7eb8f',
-        },
-      });
-      // Cập nhật lại dữ liệu local
-      setFilteredData((prev) =>
-        prev.map((it) =>
-          it.id === editingItem.id
-            ? { ...it, eng: values.eng, vi: values.vi }
-            : it
-        )
-      );
-      handleCancelEdit();
-    } catch (error: any) {
-      api.error({
-        message: 'Cập nhật thất bại',
-        description: error.message || 'Đã xảy ra lỗi, vui lòng thử lại.',
-        placement: 'topRight',
-        duration: 4,
-        style: {
-          backgroundColor: '#fff2f0',
-          border: '1px solid #ffccc7',
-        },
-      });
-    } finally {
-      setEditLoading(false);
-    }
-  };
-
+  // Lay nghia cua tu nguoi dung boi den (debounce 300ms)
   const handleGetMeaning = useCallback(
     debounce(async () => {
       try {
@@ -242,203 +247,209 @@ const HomePageContentComponent = ({
           return;
         }
 
-        if (
+        // Tranh goi API lai neu tu da duoc tra truoc do
+        const alreadyShown =
           searchValue === meaningEnKeywords.join(' ') ||
-          searchValue === meaningViKeywords.join(' ')
-        ) {
-          return;
-        }
+          searchValue === meaningViKeywords.join(' ');
+        if (alreadyShown) return;
 
-        let response = [];
-        if (/^[a-zA-Z ]+$/.test(searchValue)) {
-          response = await getMeaningWords(searchValue, null);
-        } else {
-          response = await getMeaningWords(null, searchValue);
-        }
+        const isEnglish = /^[a-zA-Z ]+$/.test(searchValue);
+        const response = isEnglish
+          ? await getMeaningWords(searchValue, null)
+          : await getMeaningWords(null, searchValue);
 
         if (response.length > 0) {
-          setMeaningEnKeywords(response.map((item) => item.eng));
-          setMeaningViKeywords(response.map((item) => item.vi));
+          setMeaningEnKeywords(response.map((w) => w.eng));
+          setMeaningViKeywords(response.map((w) => w.vi));
         } else {
           setMeaningEnKeywords([]);
           setMeaningViKeywords([]);
         }
 
+        // Dat toa do tooltip sat vi tri boi
         if (selection?.rangeCount) {
-          const range = selection.getRangeAt(0);
-          const rect = range.getBoundingClientRect();
+          const rect = selection.getRangeAt(0).getBoundingClientRect();
           setTooltipPosition({
             x: rect.left + window.scrollX,
             y: rect.top + window.scrollY + 30,
           });
         }
       } catch (error) {
-        console.error('Lỗi khi gọi API:', error);
+        console.error('Loi khi goi API tra nghia:', error);
       }
     }, 300),
     [meaningEnKeywords, meaningViKeywords]
   );
-  //  Su kien tren mobile khi click vao chu
-  useEffect(() => {
-    const handleSelectionChange = () => {
-      // Gọi hàm handleGetMeaning khi người dùng thay đổi văn bản đã chọn
-      handleGetMeaning();
-    };
 
-    // Lắng nghe sự kiện selectionchange khi người dùng thay đổi văn bản được chọn
-    document.addEventListener('selectionchange', handleSelectionChange);
+  // ============================================================
+  // EDIT MODAL HANDLERS
+  // ============================================================
 
-    // Cleanup khi component unmount để tránh rò rỉ bộ nhớ
-    return () => {
-      document.removeEventListener('selectionchange', handleSelectionChange);
-    };
-  }, [handleGetMeaning]);
+  const handleOpenEdit = (item: ContentType) => {
+    setEditingItem(item);
+    editForm.setFieldsValue({ eng: item.eng, vi: item.vi });
+    setEditModalOpen(true);
+  };
+
+  const handleCancelEdit = () => {
+    setEditModalOpen(false);
+    setEditingItem(null);
+    editForm.resetFields();
+  };
+
+  // Gui request cap nhat va cap nhat du lieu local neu thanh cong
+  const handleUpdate = async () => {
+    if (!editingItem) return;
+    try {
+      const values = await editForm.validateFields();
+      setEditLoading(true);
+      await updateContent(editingItem.id, values.eng, values.vi);
+
+      notifApi.success({
+        message: 'Cap nhat thanh cong',
+        description: 'Noi dung da duoc luu lai.',
+        placement: 'topRight',
+        duration: 3,
+        style: { backgroundColor: '#f6ffed', border: '1px solid #b7eb8f' },
+      });
+
+      // Cap nhat du lieu hien thi ngay ma khong can reload
+      setFilteredData((prev) =>
+        prev.map((it) =>
+          it.id === editingItem.id ? { ...it, eng: values.eng, vi: values.vi } : it
+        )
+      );
+
+      handleCancelEdit();
+    } catch (error: any) {
+      notifApi.error({
+        message: 'Cap nhat that bai',
+        description: error.message || 'Da xay ra loi, vui long thu lai.',
+        placement: 'topRight',
+        duration: 4,
+        style: { backgroundColor: '#fff2f0', border: '1px solid #ffccc7' },
+      });
+    } finally {
+      setEditLoading(false);
+    }
+  };
+
+  // ============================================================
+  // RENDER
+  // ============================================================
 
   return (
     <Content className="contentClass">
-      <>
-        {contextHolder}
-        {filteredData && filteredData.length > 0 ? (
-          <Row gutter={[16, 16]}>
-            {filteredData.map((item) => (
-              <Col
-                span={8}
-                xs={24}
-                sm={24}
-                md={12}
-                lg={12}
-                key={item.id}
-                className="colClass"
-              >
-                <div className="frameClass">
-                  <div className="audioClass">
-                    <Text strong className="engClass">
-                      {highlightText(
-                        item.eng,
-                        highlightedEnKeywords &&
-                          highlightedEnKeywords.length > 0
-                          ? highlightedEnKeywords
-                          : searchValueEn
-                      )}
-                    </Text>
-                    <Space>
-                      {/* Thêm icon check nếu checked = 'YES' */}
-                      {item.checked === 'YES' && (
-                        <CheckOutlined
-                          style={{ color: 'green', fontSize: '22px' }}
-                        />
-                      )}
-                      <Button
-                        type="link"
-                        icon={
-                          playStates[item.id] ? (
-                            <PauseOutlined />
-                          ) : (
-                            <PlayCircleOutlined />
-                          )
-                        }
-                        onClick={() =>
-                          toggleAudio(
-                            item.id,
-                            item.audio,
-                            item.startTime,
-                            item.endTime
-                          )
-                        }
-                      />
-                      <Button
-                        type="link"
-                        icon={<EditOutlined />}
-                        onClick={() => handleOpenEdit(item)}
-                      />
-                    </Space>
-                  </div>
-                  <Text className="viClass paddingBottom">
+      {notifContextHolder}
+
+      {filteredData && filteredData.length > 0 ? (
+        <Row gutter={[16, 16]}>
+          {filteredData.map((item) => (
+            <Col span={8} xs={24} sm={24} md={12} lg={12} key={item.id} className="colClass">
+              <div className="frameClass">
+
+                {/* Dong tieng Anh + icon check + nut play + nut edit */}
+                <div className="audioClass">
+                  <Text strong className="engClass">
                     {highlightText(
-                      item.vi,
-                      highlightedViKeywords && highlightedViKeywords.length > 0
-                        ? highlightedViKeywords
-                        : searchValueVi
+                      item.eng,
+                      highlightedEnKeywords.length > 0 ? highlightedEnKeywords : searchValueEn
                     )}
                   </Text>
-                  <div className="bookEngName">{item.bookEngName}</div>
+                  <Space>
+                    {/* Hien icon check neu item da duoc hoc */}
+                    {item.checked === 'YES' && (
+                      <CheckOutlined style={{ color: 'green', fontSize: '22px' }} />
+                    )}
+                    {/* Nut Play / Pause */}
+                    <Button
+                      type="link"
+                      icon={
+                        playStates[item.id] ? <PauseOutlined /> : <PlayCircleOutlined />
+                      }
+                      onClick={() =>
+                        toggleAudio(item.id, item.audio, item.startTime, item.endTime)
+                      }
+                    />
+                    {/* Nut mo modal chinh sua */}
+                    <Button
+                      type="link"
+                      icon={<EditOutlined />}
+                      onClick={() => handleOpenEdit(item)}
+                    />
+                  </Space>
                 </div>
-              </Col>
-            ))}
-            {/* Display meaning in a floating element */}
-            {meaningEnKeywords.length > 0 && meaningViKeywords.length > 0 && (
-              <div
-                className="meaning-container"
-                style={{
-                  position: 'absolute',
-                  left: `${tooltipPosition.x}px`,
-                  top: `${tooltipPosition.y}px`,
-                  backgroundColor: '#108ee9',
-                  color: 'white',
-                  padding: '12px 15px',
-                  borderRadius: '8px',
-                  boxShadow: '0 1px 8px rgba(0, 0, 0, 0.01)',
-                  zIndex: 10,
-                  maxWidth: '400px',
-                  wordWrap: 'break-word',
-                  fontSize: '15px',
-                  lineHeight: '1.9',
-                  transition: 'transform 0.2s ease-out',
-                }}
-              >
-                {/^[a-zA-Z ]+$/.test(
-                  window.getSelection()?.toString().trim() || ''
-                )
-                  ? meaningEnKeywords.map((word, index) => (
-                      <div key={index}>
-                        <strong>{word}</strong>: {meaningViKeywords[index]}
-                      </div>
-                    ))
-                  : meaningViKeywords.map((word, index) => (
-                      <div key={index}>
-                        <strong>{word}</strong>: {meaningEnKeywords[index]}
-                      </div>
-                    ))}
-              </div>
-            )}
-          </Row>
-        ) : (
-          <Empty description="Không có dữ liệu" className="emptyClass" />
-        )}
-      </>
 
-      {/* Edit Modal */}
+                {/* Dong tieng Viet */}
+                <Text className="viClass paddingBottom">
+                  {highlightText(
+                    item.vi,
+                    highlightedViKeywords.length > 0 ? highlightedViKeywords : searchValueVi
+                  )}
+                </Text>
+
+                {/* Ten sach */}
+                <div className="bookEngName">{item.bookEngName}</div>
+              </div>
+            </Col>
+          ))}
+
+          {/* Tooltip tra nghia tu khi nguoi dung boi */}
+          {meaningEnKeywords.length > 0 && meaningViKeywords.length > 0 && (
+            <div
+              className="meaning-container"
+              style={{
+                ...TOOLTIP_STYLE,
+                left: tooltipPosition.x,
+                top: tooltipPosition.y,
+              }}
+            >
+              {/^[a-zA-Z ]+$/.test(window.getSelection()?.toString().trim() || '')
+                ? meaningEnKeywords.map((word, i) => (
+                    <div key={i}><strong>{word}</strong>: {meaningViKeywords[i]}</div>
+                  ))
+                : meaningViKeywords.map((word, i) => (
+                    <div key={i}><strong>{word}</strong>: {meaningEnKeywords[i]}</div>
+                  ))}
+            </div>
+          )}
+        </Row>
+      ) : (
+        <Empty description="Khong co du lieu" className="emptyClass" />
+      )}
+
+      {/* Modal chinh sua noi dung */}
       <Modal
-        title="Chỉnh sửa nội dung"
+        title="Chinh sua noi dung"
         open={editModalOpen}
         onCancel={handleCancelEdit}
         footer={
           <div style={{ textAlign: 'center' }}>
             <Space>
-              <Button onClick={handleCancelEdit}>Hủy</Button>
+              <Button onClick={handleCancelEdit}>Huy</Button>
               <Button type="primary" loading={editLoading} onClick={handleUpdate}>
-                Cập nhật
+                Cap nhat
               </Button>
             </Space>
           </div>
         }
       >
         {editingItem && (
-          <Form form={form} layout="vertical">
+          <Form form={editForm} layout="vertical">
             <Form.Item label="ID">
               <Input value={editingItem.id} disabled />
             </Form.Item>
             <Form.Item
-              label="Nghĩa tiếng Anh"
+              label="Nghia tieng Anh"
               name="eng"
-              rules={[{ required: true, message: 'Vui lòng nhập nghĩa tiếng Anh' }]}
+              rules={[{ required: true, message: 'Vui long nhap nghia tieng Anh' }]}
             >
               <Input />
             </Form.Item>
             <Form.Item
-              label="Nghĩa tiếng Việt"
+              label="Nghia tieng Viet"
               name="vi"
-              rules={[{ required: true, message: 'Vui lòng nhập nghĩa tiếng Việt' }]}
+              rules={[{ required: true, message: 'Vui long nhap nghia tieng Viet' }]}
             >
               <Input />
             </Form.Item>

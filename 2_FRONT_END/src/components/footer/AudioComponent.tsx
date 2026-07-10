@@ -1,22 +1,42 @@
 import React, { useEffect, useRef, useState } from 'react';
-import AudioPlayer from 'react-h5-audio-player'; // Import React H5 Audio Player
-import 'react-h5-audio-player/lib/styles.css'; // Import CSS mặc định
-import '../../styles/audio.css'; // Nếu bạn cần thêm CSS tùy chỉnh
+import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
+import '../../styles/audio.css';
 import { Volume } from '@/interfaces/volume';
 import { Select } from 'antd';
 
+// ============================================================
+// TYPES
+// ============================================================
+
 interface AudioComponentProps {
-  startTime: string; // Thời gian bắt đầu phát âm thanh
-  endTime: string; // Thời gian kết thúc phát âm thanh
-  isPause: boolean; // Biến để kiểm tra xem có dừng âm thanh không
-  isPlaying: boolean;
-  isLoop: boolean; // Biến để kiểm tra xem có lặp âm thanh không
-  itemId: number;
-  volume: Volume | undefined; // Thông tin về volume chứa tệp âm thanh
-  resetIsPlaying: () => void;
-  //  stop audio
-  handlePauseAudio: (isPause: boolean) => void;
+  startTime: string;          // Thoi diem bat dau phat (format hh:mm:ss)
+  endTime: string;            // Thoi diem ket thuc phat (format hh:mm:ss)
+  isPause: boolean;           // Khi true: dung audio ngay lap tuc
+  isPlaying: boolean;         // Khi chuyen sang true: bat dau phat tu startTime
+  isLoop: boolean;            // Khi true: lap lai doan tu startTime den endTime
+  itemId: number;             // ID item dang phat (de re-trigger useEffect khi doi bai)
+  volume: Volume | undefined; // Thong tin tap chua file audio
+  resetIsPlaying: () => void; // Callback: bao parent biet audio da chay xong
+  handlePauseAudio: (isPause: boolean) => void; // Callback: yeu cau parent dung audio
 }
+
+// Danh sach toc do phat co the chon
+const PLAYBACK_SPEED_OPTIONS = [
+  { value: 0.5, label: '0.5x' },
+  { value: 0.7, label: '0.7x' },
+  { value: 0.8, label: '0.8x' },
+  { value: 0.9, label: '0.9x' },
+  { value: 1.0, label: '1.0x (Mac dinh)' },
+  { value: 1.2, label: '1.2x' },
+  { value: 1.5, label: '1.5x' },
+  { value: 1.7, label: '1.7x' },
+  { value: 2.0, label: '2.0x' },
+];
+
+// ============================================================
+// COMPONENT
+// ============================================================
 
 const AudioComponent = ({
   startTime,
@@ -29,10 +49,19 @@ const AudioComponent = ({
   resetIsPlaying,
   handlePauseAudio,
 }: AudioComponentProps) => {
-  const playerRef = useRef<AudioPlayer | null>(null); // Tham chiếu đến React H5 Audio Player
-  const [audioSrc, setAudioSrc] = useState<string>(''); // URL tệp âm thanh
-  const [playbackSpeed, setPlaybackSpeed] = useState<number>(1.0); // State quản lý tốc độ phát
-  // Hàm chuyển đổi chuỗi thời gian "hh:mm:ss" sang giây
+  const playerRef = useRef<AudioPlayer | null>(null);
+  const [audioSrc, setAudioSrc] = useState<string>('');
+  const [playbackSpeed, setPlaybackSpeed] = useState<number>(1.0);
+
+  // Dung ref de luon doc gia tri isLoop moi nhat ben trong closure cua listener
+  // Vi neu chi dung state, listener duoc tao khi isPlaying=true se "nho" isLoop=false
+  // va khong bao gio thay gia tri moi (stale closure problem)
+  const isLoopRef = useRef(isLoop);
+  useEffect(() => {
+    isLoopRef.current = isLoop;
+  }, [isLoop]);
+
+  // Chuyen doi chuoi "hh:mm:ss" sang so giay
   const timeStringToSeconds = (timeString: string): number => {
     const [hours, minutes, seconds] = timeString.split(':');
     return (
@@ -42,92 +71,73 @@ const AudioComponent = ({
     );
   };
 
+  // Cap nhat duong dan file audio khi volume thay doi
   useEffect(() => {
-    // Kiểm tra nếu có `volume` và có trường `audio` thì cập nhật đường dẫn tới tệp âm thanh
-    if (volume && volume.audio) {
-      // Đặt đường dẫn trực tiếp đến thư mục media
-      const audioPath = `/media/${volume.audio}`;
-      setAudioSrc(audioPath); // Cập nhật lại đường dẫn cho audioSrc
+    if (volume?.audio) {
+      setAudioSrc(`/media/${volume.audio}`);
     }
-  }, [volume]); // Chỉ chạy lại khi volume thay đổi
+  }, [volume]);
 
+  // Bat dau phat audio khi isPlaying = true.
+  // Khi currentTime vuot qua endTime:
+  //   - Neu dang loop (isLoopRef.current = true): khong dung, de useEffect loop xu ly
+  //   - Neu khong loop: dung audio va bao parent reset trang thai
   useEffect(() => {
-    if (playerRef.current && isPlaying) {
-      const start = timeStringToSeconds(startTime); // Thời gian bắt đầu (giây)
-      const end = timeStringToSeconds(endTime); // Thời gian bắt đầu (giây)
-      const player = playerRef.current.audio.current!; // Lấy thẻ audio bên trong React H5 Audio Player
-      // Đặt lại thời gian phát về `startTime`
-      player.currentTime = start;
-      player.playbackRate = playbackSpeed; // Áp dụng tốc độ phát
-      console.log(player.src);
-      // Tự động phát âm thanh
-      player.play();
-      // Hàm xử lý khi cập nhật thời gian phát
-      const handleTimeUpdate = () => {
-        if (player.currentTime >= end && !isLoop) {
-          player.pause(); // Dừng phát
-          player.currentTime = start; // Reset về thời gian bắt đầu
-          //  Truyen ra AudioComponent xu ly
-          handlePauseAudio(true);
-          resetIsPlaying(); // Gọi hàm reset trạng thái
-        }
-      };
+    if (!playerRef.current || !isPlaying) return;
 
-      // Lắng nghe sự kiện `timeupdate`
-      player.addEventListener('timeupdate', handleTimeUpdate);
+    const start = timeStringToSeconds(startTime);
+    const end = timeStringToSeconds(endTime);
+    const player = playerRef.current.audio.current!;
 
-      // Cleanup sự kiện khi unmount hoặc khi `isPlaying` thay đổi
-      return () => {
-        player.removeEventListener('timeupdate', handleTimeUpdate);
-      };
-    }
+    player.currentTime = start;
+    player.playbackRate = playbackSpeed;
+    player.play();
+
+    const handleTimeUpdate = () => {
+      // Doc tu ref de lay gia tri isLoop moi nhat, khong bi stale closure
+      if (player.currentTime >= end && !isLoopRef.current) {
+        player.pause();
+        player.currentTime = start;
+        handlePauseAudio(true);
+        resetIsPlaying();
+      }
+    };
+
+    player.addEventListener('timeupdate', handleTimeUpdate);
+    return () => player.removeEventListener('timeupdate', handleTimeUpdate);
   }, [isPlaying, playbackSpeed]);
 
-  // Khi chạy lặp lại 1 phần audio
+  // Xu ly lap lai doan audio khi isLoop = true:
+  // Moi khi currentTime cham endTime thi reset ve startTime
   useEffect(() => {
-    if (isLoop) {
-      if (startTime !== '' && endTime !== '' && playerRef.current) {
-        const start = timeStringToSeconds(startTime); // Thời gian bắt đầu (giây)
-        const end = timeStringToSeconds(endTime); // Thời gian kết thúc (giây)
-        const player = playerRef.current.audio.current!; // Lấy thẻ audio bên trong React H5 Audio Player
-        // player.currentTime = start;
-        const onTimeUpdate = () => {
-          if (player.currentTime >= end) {
-            player.currentTime = start; // Reset về `startTime`
-          }
-        };
+    if (!isLoop || !startTime || !endTime || !playerRef.current) return;
 
-        // Gắn sự kiện `timeupdate`
-        player.addEventListener('timeupdate', onTimeUpdate);
+    const start = timeStringToSeconds(startTime);
+    const end = timeStringToSeconds(endTime);
+    const player = playerRef.current.audio.current!;
 
-        // Cleanup sự kiện khi component unmount hoặc `startTime`, `endTime` thay đổi
-        return () => {
-          player.removeEventListener('timeupdate', onTimeUpdate);
-        };
+    const onTimeUpdate = () => {
+      if (player.currentTime >= end) {
+        player.currentTime = start;
       }
-    }
+    };
+
+    player.addEventListener('timeupdate', onTimeUpdate);
+    return () => player.removeEventListener('timeupdate', onTimeUpdate);
   }, [isLoop, itemId, startTime, endTime]);
 
+  // Dung audio ngay khi isPause = true
   useEffect(() => {
     if (playerRef.current && isPause) {
-      const player = playerRef.current.audio.current!; // Lấy thẻ audio bên trong React H5 Audio Player
-      player.pause();
+      playerRef.current.audio.current!.pause();
     }
   }, [isPause]);
 
-  const handlePlay = () => {};
-
-  const handlePause = () => {
-    if (playerRef.current) {
-      const player = playerRef.current.audio.current!;
-      player.pause();
-    }
-  };
+  // Cap nhat toc do phat khi nguoi dung thay doi
   const handleSpeedChange = (value: number) => {
-    setPlaybackSpeed(value); // Cập nhật tốc độ phát
+    setPlaybackSpeed(value);
     if (playerRef.current) {
-      const player = playerRef.current.audio.current!;
-      player.playbackRate = value;
+      playerRef.current.audio.current!.playbackRate = value;
     }
   };
 
@@ -137,37 +147,22 @@ const AudioComponent = ({
         <>
           <AudioPlayer
             ref={playerRef}
-            src={audioSrc} // Đường dẫn tới file âm thanh
-            onPlay={handlePlay} // Gọi khi âm thanh bắt đầu phát
-            onPause={handlePause} // Gọi khi âm thanh dừng phát
-            showJumpControls={false} // Tắt nút tua
-            autoPlay={false} // Không tự động phát
-            loop={isLoop} // Không lặp lại tự động
+            src={audioSrc}
+            onPlay={() => {}}
+            onPause={() => playerRef.current?.audio.current?.pause()}
+            showJumpControls={false}
+            autoPlay={false}
+            loop={isLoop}
           />
-          <div
-            style={{
-              marginTop: '16px',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '8px',
-            }}
-          >
-            <span style={{ fontWeight: 'bold' }}>Tốc độ phát:</span>
+
+          {/* Chon toc do phat */}
+          <div style={{ marginTop: 16, display: 'flex', alignItems: 'center', gap: 8 }}>
+            <span style={{ fontWeight: 'bold' }}>Toc do phat:</span>
             <Select
               value={playbackSpeed}
               onChange={handleSpeedChange}
               style={{ width: 200 }}
-              options={[
-                { value: 0.5, label: '0.5x' },
-                { value: 0.7, label: '0.7x' },
-                { value: 0.8, label: '0.8x' },
-                { value: 0.9, label: '0.9x' },
-                { value: 1.0, label: '1.0x (Mặc định)' },
-                { value: 1.2, label: '1.2x' },
-                { value: 1.5, label: '1.5x' },
-                { value: 1.7, label: '1.7x' },
-                { value: 2.0, label: '2.0x' },
-              ]}
+              options={PLAYBACK_SPEED_OPTIONS}
             />
           </div>
         </>
