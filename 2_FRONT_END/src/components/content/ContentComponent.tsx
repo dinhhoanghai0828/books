@@ -38,7 +38,7 @@ interface ContentComponentProps {
   loading: boolean;
   isPlaying: boolean;
   isParentPlaying: boolean;
-  handlePlayAudio: (startTime: string, endTime: string) => void;
+  handlePlayAudio: (startTime: string, endTime: string, itemId: number) => void;
   handlePauseAudio: (isStop: boolean) => void;
   handleToggleAudio: (itemId: string, startTime: string, endTime: string, isLoop: boolean) => void;
 }
@@ -127,6 +127,12 @@ const ContentComponent = ({
   // ID cau dang duoc highlight boi video (tu dong detect theo currentTime)
   const [activeVideoItemId, setActiveVideoItemId] = useState<string | null>(null);
 
+  // Track trang thai video dang phat hay dung de re-render icon dung luc
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+
+  // Flag: chi scroll khi nguoi dung bam audio, KHONG scroll khi bam video
+  const shouldScrollRef = useRef(false);
+
   // Ref tro den tung hang noi dung de auto-scroll khi cau thay doi
   const itemRefsRef = useRef<Record<string, HTMLDivElement | null>>({});
 
@@ -193,6 +199,7 @@ const ContentComponent = ({
         video.pause();
         videoEndRef.current = 0;
         setActiveVideoItemId(null);
+        setIsVideoPlaying(false);
         return;
       }
 
@@ -216,13 +223,19 @@ const ContentComponent = ({
     return () => video.removeEventListener('timeupdate', handleTimeUpdate);
   }, [contents]);
 
-  // Auto-scroll cau dang phat audio len dau view
+  // Scroll den phan tu voi offset bu header co dinh (~170px)
+  const scrollToItem = (itemId: string) => {
+    const el = itemRefsRef.current[itemId];
+    if (!el) return;
+    const top = el.getBoundingClientRect().top + window.scrollY - 170;
+    window.scrollTo({ top, behavior: 'smooth' });
+  };
+
+  // Auto-scroll chi chay khi nguoi dung bam audio (shouldScrollRef = true)
   useEffect(() => {
-    if (activeAudioItemId) {
-      itemRefsRef.current[activeAudioItemId]?.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      });
+    if (activeAudioItemId && shouldScrollRef.current) {
+      scrollToItem(activeAudioItemId);
+      shouldScrollRef.current = false;
     }
   }, [activeAudioItemId]);
 
@@ -238,11 +251,12 @@ const ContentComponent = ({
       const video = videoRef.current;
       if (!video) return;
 
-      if (activeVideoItemId === itemId && !video.paused) {
+      if (activeVideoItemId === itemId && isVideoPlaying) {
         // Dang phat item nay -> dung lai
         video.pause();
         videoEndRef.current = 0;
-        setActiveVideoItemId(null); // xoa highlight de icon cap nhat
+        setActiveVideoItemId(null);
+        setIsVideoPlaying(false);
         return;
       }
 
@@ -251,8 +265,9 @@ const ContentComponent = ({
       video.currentTime = parseTimeToSeconds(startTime);
       video.play();
       setActiveVideoItemId(itemId);
+      setIsVideoPlaying(true);
     },
-    [activeVideoItemId]
+    [activeVideoItemId, isVideoPlaying]
   );
 
   // ============================================================
@@ -273,18 +288,19 @@ const ContentComponent = ({
       });
 
       if (isCurrentlyPlaying) {
-        // Dang phat item nay -> dung lai
+        // Dang phat item nay -> dung audio lai
         loopStatesRef.current[itemId] = false;
         setActiveAudioItemId(null);
         handlePauseAudio(true);
       } else {
-        // Phat item moi:
-        // handleToggleAudio set itemId moi o parent -> AudioComponent re-run useEffect
-        // handlePlayAudio dam bao isPlaying=true
+        // Phat item moi
         loopStatesRef.current[itemId] = false;
+        shouldScrollRef.current = true;
         setActiveAudioItemId(itemId);
-        handleToggleAudio(itemId, startTime, endTime, false); // doi itemId truoc
-        handlePlayAudio(startTime, endTime);                  // isPlaying=true sau
+        handleToggleAudio(itemId, startTime, endTime, false);
+        handlePlayAudio(startTime, endTime, Number(itemId));
+        // Scroll den cau nay ngay lap tuc
+        scrollToItem(itemId);
       }
 
       forceRender();
@@ -455,7 +471,7 @@ const ContentComponent = ({
             <Button
               type="link"
               icon={
-                activeVideoItemId === item.id && videoRef.current && !videoRef.current.paused
+                activeVideoItemId === item.id && isVideoPlaying
                   ? <PauseOutlined style={{ color: '#1677ff' }} />
                   : <VideoCameraOutlined />
               }
