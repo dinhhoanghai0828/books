@@ -111,8 +111,11 @@ public class ChartAdapterImpl implements ChartAdapter {
                 }
 
                 if (investmentDataMap.containsKey("Nhẫn")) {
-                    double ringSalePrice = rs.getDouble("DOMESTIC_RING_SALE_PRICE");
+                    //  Gia ban vang nhan tai cua tiem thuong hieu nen phai tru bot 12 trieu chenh lech voi nhan tu nhan
+                    double ringSalePrice = rs.getDouble("DOMESTIC_RING_SALE_PRICE") - 12000000;
                     for (double[] data : investmentDataMap.get("Nhẫn")) {
+                        //  data[0]: gia luc mua
+                        //  data[1]: so luong mua
                         profitGoldRing += (ringSalePrice - data[0]) * data[1];
                         totalGoldRingInvestment += data[0] * data[1];
                         totalInvestment += data[0] * data[1];

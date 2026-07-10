@@ -17,7 +17,8 @@ const BookPage = () => {
   const { bookSlug } = params;
   const [volumes, setVolumes] = useState<Volume[]>([]);
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const [pageSize, setPageSize] = useState<number>(10);
+  // Phan trang
+  const [pageSize, setPageSize] = useState<number>(100);
   const [totalItems, setTotalItems] = useState<number>(0);
   const [loading, setLoading] = useState<boolean>(false);
 

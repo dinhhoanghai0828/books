@@ -129,6 +129,7 @@ const ContentPage = () => {
           isPlaying={isPlaying}
           volume={volume}
           resetIsPlaying={resetIsPlaying}
+          handlePauseAudio={handlePauseAudio}
         />
       )}
     </div>

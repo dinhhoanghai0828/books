@@ -1,7 +1,7 @@
-Là 1 phiên dịch viên chuyên nghiệp hãy dịch thật hay, đúng ý nghĩa và điền vào '' định dạng sql tương ứng như câu mẫu
+Là 1 phiên dịch viên chuyên nghiệp hãy dịch thật hay, đúng ý nghĩa và ngôn ngữ thân thuộc dân dã và điền vào '' định dạng sql tương ứng như câu mẫu và 
+cộng giúp tôi các thời gian vị trí thứ 2 lên 300 đơn vị ví dụ 00:00:09.300 lên 00:00:09.600
 ('Language is endlessly variable','Ngôn ngữ biến đổi không ngừng','00:00:06.800','00:00:09.300','tedtalks-1'),
 
-công giúp tôi các thời gian vị trí thứ 2 lên 200 đơn vị ví dụ 00:00:02.900 lên 00:00:03.100
 
 
 dịch hay và sát nghĩa điền vào '' tương ứng như câu mẫu
