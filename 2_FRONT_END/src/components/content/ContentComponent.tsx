@@ -172,6 +172,7 @@ const ContentComponent = ({
   // ============================================================
 
   const scrollToActiveItem = useCallback((itemId: string) => {
+    console.log("scroll", itemId, itemRefsRef.current[itemId]);
     const el = itemRefsRef.current[itemId];
     if (!el) return;
     // Ca 2 mode deu scroll toan trang, bu offset header + toolbar
@@ -221,12 +222,9 @@ const ContentComponent = ({
     if (!video) return;  // videoMounted dam bao re-run khi video element san sang
 
     const onTimeUpdate = () => {
-      if (activeSourceRef.current !== 'video') return;
-
+      // if (activeSourceRef.current !== 'video') return;
       const t = video.currentTime;
-
       const { start, end, itemId } = videoSegmentRef.current;
-
       // Xu ly loop / stop
       if (end > 0 && t >= end) {
         if (loopStatesRef.current[itemId]) {

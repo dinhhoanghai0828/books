@@ -66,7 +66,7 @@ const VideoLayout: React.FC<VideoLayoutProps> = ({
           left: '50%',
           transform: 'translateX(-50%)',
           width: '100%',
-          maxWidth: 640,
+          maxWidth: 600,
           zIndex: 1000,
           backgroundColor: '#000',
           borderRadius: '10px 10px 0 0',
