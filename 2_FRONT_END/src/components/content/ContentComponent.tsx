@@ -26,8 +26,14 @@ interface ContentComponentProps {
   handlePauseAudio: (isStop: boolean) => void;
   handleToggleAudio: (itemId: string, startTime: string, endTime: string, isLoop: boolean) => void;
   onViewModeChange?: (mode: ViewMode) => void;
-  // Props de render AudioComponent ben trong AudioLayout
-  audioPlayer?: React.ReactNode;
+  // Props audio de AudioLayout tu quan ly AudioPlayer ben trong
+  volume?: Volume;
+  startTime: string;
+  endTime: string;
+  isLoop: boolean;
+  isPause: boolean;
+  itemId: number;
+  resetIsPlaying: () => void;
 }
 
 const TOOLTIP_STYLE: React.CSSProperties = {
@@ -56,7 +62,13 @@ const ContentComponent = ({
   handlePauseAudio,
   handleToggleAudio,
   onViewModeChange,
-  audioPlayer,
+  volume,
+  startTime,
+  endTime,
+  isLoop,
+  isPause,
+  itemId,
+  resetIsPlaying,
 }: ContentComponentProps) => {
   const router = useRouter();
   const { volumeEngName = '', volumeViName = '' } = contents[0] || {};
@@ -171,17 +183,16 @@ const ContentComponent = ({
   const [notifApi, notifContextHolder] = notification.useNotification();
 
   // ============================================================
-  // SCROLL — duy nhat 1 ham, doc viewMode tu ref (tranh stale closure)
+  // SCROLL — cuon item active len dau vung nhin thay
+  // Bu offset 120px cho header + toolbar co dinh phia tren
   // ============================================================
 
   const scrollToActiveItem = useCallback((itemId: string) => {
-    console.log("scroll", itemId, itemRefsRef.current[itemId]);
     const el = itemRefsRef.current[itemId];
     if (!el) return;
-    // Ca 2 mode deu scroll toan trang, bu offset header + toolbar
-    const top = el.getBoundingClientRect().top + window.scrollY - 170;
+    const top = el.getBoundingClientRect().top + window.scrollY - 120;
     window.scrollTo({ top, behavior: 'smooth' });
-  }, []); // khong co dep -> khong bao gio stale
+  }, []);
 
 
   // ============================================================
@@ -504,7 +515,15 @@ const ContentComponent = ({
       loopStates={loopStates}
       onPlayPauseAudio={onPlayPauseAudio}
       onToggleLoop={onToggleLoop}
-      audioPlayer={audioPlayer}
+      volume={volume}
+      startTime={startTime}
+      endTime={endTime}
+      isLoop={isLoop}
+      isPause={isPause}
+      isPlaying={isPlaying}
+      itemId={itemId}
+      resetIsPlaying={resetIsPlaying}
+      handlePauseAudio={handlePauseAudio}
     />
   );
 
