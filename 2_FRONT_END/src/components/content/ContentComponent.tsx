@@ -11,6 +11,7 @@ import { findActiveItem, parseTimeToSeconds } from './contentHelpers';
 import ContentToolbar, { ViewMode } from './ContentToolbar';
 import VideoLayout from './VideoLayout';
 import AudioLayout from './AudioLayout';
+import { Volume } from '@/interfaces/volume';
 
 // ============================================================
 // TYPES
