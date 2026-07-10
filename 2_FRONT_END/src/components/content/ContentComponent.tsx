@@ -133,7 +133,11 @@ const ContentComponent = ({
   // Flag: chi scroll khi nguoi dung bam audio, KHONG scroll khi bam video
   const shouldScrollRef = useRef(false);
 
-  // Ref tro den tung hang noi dung de auto-scroll khi cau thay doi
+  // Ref den vung cuon doc lap ben phai (danh sach cau)
+  // Dung de scroll NOI BOI vung nay thay vi scroll window khi video dang chay
+  const listScrollRef = useRef<HTMLDivElement | null>(null);
+
+  // Ref tro den tung phan tu hang de tinh toa do scroll
   const itemRefsRef = useRef<Record<string, HTMLDivElement | null>>({});
 
   // Trang thai tooltip tra nghia tu
@@ -208,11 +212,8 @@ const ContentComponent = ({
       if (activeItem) {
         setActiveVideoItemId((prev) => {
           if (prev !== activeItem.id) {
-            // Cau moi: scroll no vao view trong vung cuon ben phai
-            itemRefsRef.current[activeItem.id]?.scrollIntoView({
-              behavior: 'smooth',
-              block: 'nearest',
-            });
+            // Cau moi: day len ngang video bang cach scroll noi bo vung danh sach
+            scrollToItemInList(activeItem.id);
           }
           return activeItem.id;
         });
@@ -223,12 +224,25 @@ const ContentComponent = ({
     return () => video.removeEventListener('timeupdate', handleTimeUpdate);
   }, [contents]);
 
-  // Scroll den phan tu voi offset bu header co dinh (~170px)
+  // Scroll WINDOW den item (dung cho audio, bu offset header)
   const scrollToItem = (itemId: string) => {
     const el = itemRefsRef.current[itemId];
     if (!el) return;
     const top = el.getBoundingClientRect().top + window.scrollY - 170;
     window.scrollTo({ top, behavior: 'smooth' });
+  };
+
+  // Scroll NOI BOI vung danh sach (dung cho video),
+  // day item len ngang voi top cua vung cuon = ngang voi video ben trai
+  const scrollToItemInList = (itemId: string) => {
+    const container = listScrollRef.current;
+    const el = itemRefsRef.current[itemId];
+    if (!container || !el) return;
+    // offsetTop cua el tinh tu container
+    const containerTop = container.getBoundingClientRect().top;
+    const elTop = el.getBoundingClientRect().top;
+    const offset = elTop - containerTop + container.scrollTop;
+    container.scrollTo({ top: offset, behavior: 'smooth' });
   };
 
   // Auto-scroll chi chay khi nguoi dung bam audio (shouldScrollRef = true)
@@ -275,6 +289,8 @@ const ContentComponent = ({
       video.play();
       setActiveVideoItemId(itemId);
       setIsVideoPlaying(true);
+      // Day cau nay len ngang video ngay khi bam
+      scrollToItemInList(itemId);
     },
     [activeVideoItemId, isVideoPlaying, activeAudioItemId, handlePauseAudio]
   );
@@ -667,7 +683,7 @@ const ContentComponent = ({
               </Typography.Text>
 
               {/* Vung cuon doc lap de danh sach luon thay doi theo video */}
-              <div style={{ maxHeight: '70vh', overflowY: 'auto', paddingRight: 4 }}>
+              <div ref={listScrollRef} style={{ maxHeight: '70vh', overflowY: 'auto', paddingRight: 4 }}>
                 {renderContentList()}
                 {renderTooltip()}
               </div>

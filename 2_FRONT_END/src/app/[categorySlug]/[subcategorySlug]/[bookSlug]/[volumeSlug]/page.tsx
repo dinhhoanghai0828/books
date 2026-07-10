@@ -8,7 +8,7 @@ import { getContents, getVolumeDetail } from '@/utils/apiService';
 import { useHasMounted } from '@/utils/customHook';
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { useParams, usePathname } from 'next/navigation';
 import '../../../../../styles/global.css';
 import '../../../../../styles/volume.css';
@@ -19,12 +19,20 @@ const ContentPage = () => {
   const pathname = usePathname();
   const { volumeSlug } = params;
 
-  // Du lieu noi dung va thong tin tap hien tai
   const [contents, setContents] = useState<ContentType[]>([]);
   const [volume, setVolume] = useState<Volume>();
   const [loading, setLoading] = useState(false);
 
-  // Trang thai dieu khien AudioComponent
+  // Dung ref cho audio state de tranh tao lai callback moi re-render
+  const audioStateRef = useRef({
+    startTime: '',
+    endTime: '',
+    isLoop: false,
+    isPause: false,
+    isPlaying: false,
+    itemId: 0,
+  });
+
   const [startTime, setStartTime] = useState('');
   const [endTime, setEndTime] = useState('');
   const [isLoop, setIsLoop] = useState(false);
@@ -36,7 +44,6 @@ const ContentPage = () => {
   // DATA FETCHING
   // ============================================================
 
-  // Lay toan bo noi dung (cac cau) cua tap theo volumeSlug
   const fetchContents = async () => {
     if (!volumeSlug || Array.isArray(volumeSlug)) return;
     NProgress.start();
@@ -52,7 +59,6 @@ const ContentPage = () => {
     }
   };
 
-  // Lay thong tin chi tiet cua tap (ten, duong dan audio, startTime, endTime...)
   const fetchVolumeDetail = async () => {
     if (!volumeSlug || Array.isArray(volumeSlug)) return;
     NProgress.start();
@@ -72,31 +78,33 @@ const ContentPage = () => {
   }, [volumeSlug]);
 
   // ============================================================
-  // AUDIO HANDLERS
+  // AUDIO HANDLERS - dung useCallback de giu ham on dinh, tranh ContentComponent re-render
   // ============================================================
 
-  // Bat dau phat: cap nhat thoi gian va danh dau trang thai dang phat
-  const handlePlayAudio = (start: string, end: string) => {
+  // Bat dau phat: set thoi gian moi + isPlaying=true
+  // Dung itemId lam "key" de AudioComponent phat lai dung khi doi bai
+  const handlePlayAudio = useCallback((start: string, end: string, id: number) => {
+    setIsPause(false);
+    setItemId(id);
     setStartTime(start);
     setEndTime(end);
-    setIsPause(false);
     setIsPlaying(true);
-  };
+  }, []);
 
-  // Dung phat: danh dau trang thai dung, reset loop
-  const handlePauseAudio = (pause: boolean) => {
+  // Dung phat
+  const handlePauseAudio = useCallback((pause: boolean) => {
     setIsPause(pause);
     setIsPlaying(false);
     setIsLoop(false);
-  };
+  }, []);
 
-  // AudioComponent goi khi audio tu dong ket thuc -> reset isPlaying
-  const resetIsPlaying = () => {
+  // AudioComponent goi khi audio tu ket thuc
+  const resetIsPlaying = useCallback(() => {
     setIsPlaying(false);
-  };
+  }, []);
 
-  // Cap nhat thong tin item dang phat va trang thai loop
-  const handleToggleAudio = (
+  // Bat/tat loop cho item dang phat
+  const handleToggleAudio = useCallback((
     id: string,
     start: string,
     end: string,
@@ -106,7 +114,7 @@ const ContentPage = () => {
     setStartTime(start);
     setEndTime(end);
     setIsLoop(loop);
-  };
+  }, []);
 
   // ============================================================
   // BREADCRUMB
@@ -137,7 +145,6 @@ const ContentPage = () => {
         handleToggleAudio={handleToggleAudio}
       />
 
-      {/* Thanh audio co dinh o cuoi man hinh, chi hien khi tap co file audio */}
       {volume?.audio && (
         <AudioComponent
           startTime={startTime}
