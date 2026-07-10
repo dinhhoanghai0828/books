@@ -322,7 +322,7 @@ const ContentComponent = ({
 
       forceRender();
     },
-    [handlePlayAudio, handlePauseAudio, handleToggleAudio]
+    [handlePlayAudio, handlePauseAudio, handleToggleAudio, isVideoPlaying]
   );
 
   // Bat/tat che do lap lai cho 1 item
