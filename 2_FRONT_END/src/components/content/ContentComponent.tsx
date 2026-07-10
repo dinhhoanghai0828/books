@@ -29,6 +29,8 @@ interface ContentComponentProps {
     isLoop: boolean
   ) => void;
   isParentPlaying: boolean;
+  onAudioEnded?: () => void;
+  isPlaying: boolean; // trạng thái audio đang phát từ page
 }
 
 const ContentComponent = ({
@@ -37,6 +39,8 @@ const ContentComponent = ({
   handlePlayAudio,
   handlePauseAudio,
   handleToggleAudio,
+  onAudioEnded,
+  isPlaying,
 }: ContentComponentProps) => {
   const router = useRouter();
   const { volumeEngName, volumeViName } = contents[0] || {};
@@ -121,6 +125,40 @@ const ContentComponent = ({
     playStatesRef.current = initialPlayState;
     loopStatesRef.current = initialLoopState;
   }, [contents]);
+
+  // Reset trạng thái play khi audio kết thúc tự nhiên (từ AudioComponent báo lên)
+  useEffect(() => {
+    if (onAudioEnded) {
+      // Wrap để ContentComponent có thể đăng ký callback reset UI
+      return;
+    }
+  }, [onAudioEnded]);
+
+  const resetAllPlayStates = useCallback(() => {
+    Object.keys(playStatesRef.current).forEach((key) => {
+      playStatesRef.current[key] = false;
+    });
+    Object.keys(loopStatesRef.current).forEach((key) => {
+      loopStatesRef.current[key] = false;
+    });
+    setRenderCount((prev) => prev + 1);
+  }, []);
+
+  // Khi isPlaying chuyển false (audio kết thúc hoặc bị dừng từ bên ngoài)
+  // → reset tất cả playStates để icon nút đồng bộ lại
+  const prevIsParentPlayingRef = useRef<boolean>(false);
+  useEffect(() => {
+    if (prevIsParentPlayingRef.current === true && isPlaying === false) {
+      Object.keys(playStatesRef.current).forEach((key) => {
+        playStatesRef.current[key] = false;
+      });
+      Object.keys(loopStatesRef.current).forEach((key) => {
+        loopStatesRef.current[key] = false;
+      });
+      setRenderCount((prev) => prev + 1);
+    }
+    prevIsParentPlayingRef.current = isPlaying;
+  }, [isPlaying]);
 
   const onPlayPauseAudio = useCallback(
     (itemId: string, startTime: string, endTime: string) => {

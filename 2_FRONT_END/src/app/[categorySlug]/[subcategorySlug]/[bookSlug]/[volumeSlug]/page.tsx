@@ -116,6 +116,7 @@ const ContentPage = () => {
         handlePauseAudio={handlePauseAudio}
         handleToggleAudio={handleToggleAudio}
         isParentPlaying={isParentPlaying}
+        isPlaying={isPlaying}
       />
 
       {/* Hiển thị thông tin volume và âm thanh */}
