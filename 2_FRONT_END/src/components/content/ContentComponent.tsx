@@ -214,6 +214,7 @@ const ContentComponent = ({
     if (!video) return;
 
     const handleTimeUpdate = () => {
+      if (activeSourceRef.current !== 'video') return;
       const currentTime = video.currentTime;
 
       if (videoEndRef.current > 0 && currentTime >= videoEndRef.current) {
@@ -319,7 +320,7 @@ const ContentComponent = ({
         handleToggleAudio(itemId, startTime, endTime, false);
         handlePlayAudio(startTime, endTime, Number(itemId));
         // Doi 1 tick de DOM cap nhat xong roi moi scroll
-        setTimeout(() => scrollToActiveItem(itemId), 50);
+        scrollToItemInList(itemId);
       }
 
       forceRender();
@@ -493,6 +494,13 @@ const ContentComponent = ({
 
   const renderContentList = () =>
     contents.map((item) => {
+      console.log(
+        "active",
+        activeItemId,
+        typeof activeItemId,
+        item.id,
+        typeof item.id
+      );
       const isActive = activeItemId === item.id;
       return (
         <div
