@@ -93,7 +93,6 @@ const ContentComponent = ({
   // ============================================================
 
   const videoRef = useRef<HTMLVideoElement | null>(null);
-  const videoEndRef = useRef<number>(0);
   // Ref callback de biet khi nao video element duoc mount/unmount
   const [videoMounted, setVideoMounted] = useState(false);
   const videoSegmentRef = useRef({
@@ -226,8 +225,9 @@ const ContentComponent = ({
       // Xu ly loop / stop
       if (end > 0 && t >= end) {
         if (loopStatesRef.current[itemId]) {
+          video.pause();
           video.currentTime = start;
-          video.play();
+          void video.play();
         } else {
           video.pause();
           videoEndRef.current = 0;
@@ -289,7 +289,6 @@ const ContentComponent = ({
       itemId,
     };
 
-    videoEndRef.current = end;
 
     video.currentTime = start;
     video.play();
@@ -316,7 +315,6 @@ const ContentComponent = ({
     const video = videoRef.current;
     if (isVideoPlayingRef.current && video) {
       video.pause();
-      videoEndRef.current = 0;
       setVideoPlaying(false);
     }
 
