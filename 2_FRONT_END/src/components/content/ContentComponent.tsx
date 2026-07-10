@@ -423,6 +423,7 @@ const ContentComponent = ({
             style={isActive ? { color: '#1677ff' } : {}}
             onMouseUp={(e) => { e.stopPropagation(); handleGetMeaning(); }}
             onTouchEnd={(e) => { e.stopPropagation(); handleGetMeaning(); }}
+            onClick={(e) => e.stopPropagation()}
           >
             {item.eng.split(/\s+/).map((word, idx) => {
               const cleanWord = word.replace(/[.,?!";']/g, '').toLowerCase();
@@ -447,14 +448,14 @@ const ContentComponent = ({
           <Button
             type="link"
             icon={playStatesRef.current[item.id] ? <PauseOutlined /> : <PlayCircleOutlined />}
-            onClick={() => onPlayPauseAudio(item.id, item.startTime, item.endTime)}
+            onClick={(e) => { e.stopPropagation(); onPlayPauseAudio(item.id, item.startTime, item.endTime); }}
           />
           {/* Nut bat/tat lap lai, chi hoat dong khi item dang phat audio */}
           <Button
             type="link"
             icon={loopStatesRef.current[item.id] ? <RetweetOutlined /> : <RollbackOutlined />}
             disabled={!playStatesRef.current[item.id]}
-            onClick={() => onToggleLoop(item.id, item.startTime, item.endTime)}
+            onClick={(e) => { e.stopPropagation(); onToggleLoop(item.id, item.startTime, item.endTime); }}
           />
           {/* Nut Play / Pause video dung chung (chi hien khi item co video) */}
           {item.video && (
@@ -465,7 +466,7 @@ const ContentComponent = ({
                   ? <PauseOutlined style={{ color: '#1677ff' }} />
                   : <VideoCameraOutlined />
               }
-              onClick={() => onPlayPauseVideo(item.id, item.startTime, item.endTime)}
+              onClick={(e) => { e.stopPropagation(); onPlayPauseVideo(item.id, item.startTime, item.endTime); }}
             />
           )}
         </Space>
@@ -479,6 +480,7 @@ const ContentComponent = ({
           style={isActive ? { color: '#1677ff' } : {}}
           onMouseUp={(e) => { e.stopPropagation(); handleGetMeaning(); }}
           onTouchEnd={(e) => { e.stopPropagation(); handleGetMeaning(); }}
+          onClick={(e) => e.stopPropagation()}
         >
           {item.vi}
         </Typography.Text>
@@ -489,6 +491,24 @@ const ContentComponent = ({
   // Tong hop: cau duoc coi la active neu dang duoc phat boi audio HOAC video
   const getIsActive = (itemId: string) =>
     activeAudioItemId === itemId || activeVideoItemId === itemId;
+
+  // ============================================================
+  // CLICK VAO CAU: seek ca audio va video den doan do roi phat
+  // ============================================================
+
+  // Xu ly khi nguoi dung click truc tiep vao vung noi dung cua 1 cau.
+  // Chi ap dung khi tap co video: seek video den startTime cua cau do va phat.
+  const onClickItem = useCallback(
+    (item: ContentType) => {
+      const video = videoRef.current;
+      if (!video) return;
+      videoEndRef.current = parseTimeToSeconds(item.endTime);
+      video.currentTime = parseTimeToSeconds(item.startTime);
+      video.play();
+      setActiveVideoItemId(item.id);
+    },
+    []
+  );
 
   // ============================================================
   // RENDER DANH SACH CAU (dung chung cho ca 2 layout)
@@ -502,7 +522,11 @@ const ContentComponent = ({
           key={item.id}
           ref={(el) => { itemRefsRef.current[item.id] = el; }}
           className="content-item"
-          style={isActive ? ACTIVE_ITEM_STYLE : {}}
+          style={{
+            ...(isActive ? ACTIVE_ITEM_STYLE : {}),
+            cursor: 'pointer',
+          }}
+          onClick={() => onClickItem(item)}
         >
           {renderItemContent(item, isActive)}
         </div>
