@@ -2,7 +2,7 @@ import { ContentType } from '@/interfaces/content';
 import { Volume } from '@/interfaces/volume';
 import { Select } from 'antd';
 import { Empty, Typography } from 'antd';
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 import '../../styles/audio.css';
@@ -26,22 +26,23 @@ export interface AudioLayoutProps {
   showVietnamese: boolean;
   highlightMissingWords: boolean;
   itemRefsRef: React.RefObject<Record<string, HTMLDivElement | null>>;
+  // Callback khi nguoi dung click nut play/pause tren item
   onPlayPauseAudio: (id: string, startTime: string, endTime: string) => void;
   onToggleLoop: (id: string, startTime: string, endTime: string) => void;
   onGetMeaning: () => void;
   renderTooltip: () => React.ReactNode;
-  // Props dieu khien AudioPlayer
+  // Thong tin volume de lay src audio
   volume?: Volume;
-  startTime: string;
-  endTime: string;
-  isLoop: boolean;
-  isPause: boolean;
-  isPlaying: boolean;
-  itemId: number;
-  resetIsPlaying: () => void;
-  handlePauseAudio: (isPause: boolean) => void;
   // Callback khi timeupdate phat hien cau dang chay (de ContentComponent highlight + scroll)
   onActiveItemChange: (itemId: string) => void;
+  // Callback khi audio tu dong dung (het segment hoac het file)
+  onAudioStop: () => void;
+  // Lenh phat tu ContentComponent: thay doi khi user click item
+  playCommand: { itemId: string; startTime: string; endTime: string; ts: number } | null;
+  // Lenh loop tu ContentComponent: thay doi khi user toggle loop
+  loopCommand: { itemId: string; startTime: string; endTime: string; isLoop: boolean; ts: number } | null;
+  // Lenh dung tu ContentComponent: thay doi khi user click pause
+  pauseCommand: number | null;
 }
 
 // Danh sach toc do phat
@@ -59,6 +60,10 @@ const PLAYBACK_SPEED_OPTIONS = [
 
 // ============================================================
 // COMPONENT
+// AudioLayout tu quan ly toan bo trang thai audio noi bo:
+// - Khong phu thuoc vao state trung gian tu page.tsx
+// - Nhan lenh play/pause/loop qua props dang {data, ts}:
+//   moi lan ts thay doi thi useEffect chay, tranh stale isPlaying
 // ============================================================
 
 const AudioLayout: React.FC<AudioLayoutProps> = ({
@@ -79,135 +84,38 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
   onGetMeaning,
   renderTooltip,
   volume,
-  startTime,
-  endTime,
-  isLoop,
-  isPause,
-  isPlaying,
-  itemId,
-  resetIsPlaying,
-  handlePauseAudio,
   onActiveItemChange,
+  onAudioStop,
+  playCommand,
+  loopCommand,
+  pauseCommand,
 }) => {
+  const playerRef = useRef<AudioPlayer | null>(null);
   const [audioSrc, setAudioSrc] = useState('');
   const [playbackSpeed, setPlaybackSpeed] = useState(1.0);
 
-  // Ref tro thang vao HTMLAudioElement (khong qua AudioPlayer wrapper)
-  const audioElRef = useRef<HTMLAudioElement | null>(null);
+  // Lay HTMLAudioElement tu AudioPlayer
+  const getAudio = (): HTMLAudioElement | null =>
+    playerRef.current?.audio?.current ?? null;
 
-  // Segment dang phat: start/end/itemId
-  // end = 0 nghia la khong gioi han (nguoi dung tu seek, chay den het file)
-  const segmentRef = useRef({ start: 0, end: 0, itemId: '' });
+  // Segment dang phat noi bo: { start, end } (end=0 = chay tu do)
+  const segmentRef = useRef({ start: 0, end: 0 });
+
+  // isLoop noi bo, doc tu loopCommand
+  const isLoopRef = useRef(false);
 
   // Flag phan biet seek tu code vs seek tu nguoi dung
   const isSeekingByCodeRef = useRef(false);
 
-  // Ref giu gia tri moi nhat cua cac callback de tranh stale closure
-  const isLoopRef = useRef(isLoop);
-  useEffect(() => { isLoopRef.current = isLoop; }, [isLoop]);
-
-  const contentsRef = useRef(contents);
-  useEffect(() => { contentsRef.current = contents; }, [contents]);
-
+  // Ref giu callbacks moi nhat, tranh stale closure trong listener
   const onActiveItemChangeRef = useRef(onActiveItemChange);
   useEffect(() => { onActiveItemChangeRef.current = onActiveItemChange; }, [onActiveItemChange]);
 
-  const handlePauseAudioRef = useRef(handlePauseAudio);
-  useEffect(() => { handlePauseAudioRef.current = handlePauseAudio; }, [handlePauseAudio]);
+  const onAudioStopRef = useRef(onAudioStop);
+  useEffect(() => { onAudioStopRef.current = onAudioStop; }, [onAudioStop]);
 
-  const resetIsPlayingRef = useRef(resetIsPlaying);
-  useEffect(() => { resetIsPlayingRef.current = resetIsPlaying; }, [resetIsPlaying]);
-
-  // ============================================================
-  // ATTACH LISTENERS KHI AUDIOSRC SAN SANG
-  // Dung ref callback cho AudioPlayer de lay HTMLAudioElement ngay khi mount.
-  // Dang ky seeking + timeupdate 1 lan duy nhat, cleanup dung khi src thay doi.
-  // ============================================================
-
-  const playerRefCallback = useCallback((player: AudioPlayer | null) => {
-    if (!player) return;
-    const audio = player.audio?.current;
-    if (!audio) return;
-    audioElRef.current = audio;
-  }, []);
-
-  useEffect(() => {
-    const audio = audioElRef.current;
-    if (!audio || !audioSrc) return;
-
-    const lastActiveId = { current: '' };
-
-    // Nguoi dung tu seek tren controls -> reset segment, chay tu do den het file
-    const onSeeking = () => {
-      if (isSeekingByCodeRef.current) return;
-      segmentRef.current = { start: 0, end: 0, itemId: '' };
-    };
-
-    // 1 listener duy nhat xu ly ca stop/loop/highlight
-    const onTimeUpdate = () => {
-      const t = audio.currentTime;
-      const { start, end } = segmentRef.current;
-
-      // Dung hoac loop khi den endTime (chi khi end > 0)
-      if (end > 0 && t >= end) {
-        if (isLoopRef.current) {
-          audio.currentTime = start;
-        } else {
-          audio.pause();
-          segmentRef.current = { start: 0, end: 0, itemId: '' };
-          handlePauseAudioRef.current(true);
-          resetIsPlayingRef.current();
-        }
-        return;
-      }
-
-      // Highlight + scroll cau dang chay theo currentTime
-      const found = findActiveItem(contentsRef.current, t);
-      if (found && String(found.id) !== lastActiveId.current) {
-        lastActiveId.current = String(found.id);
-        onActiveItemChangeRef.current(String(found.id));
-      }
-    };
-
-    audio.addEventListener('seeking', onSeeking);
-    audio.addEventListener('timeupdate', onTimeUpdate);
-
-    return () => {
-      audio.removeEventListener('seeking', onSeeking);
-      audio.removeEventListener('timeupdate', onTimeUpdate);
-    };
-  }, [audioSrc]); // re-attach khi src thay doi (sang tap moi)
-
-  // ============================================================
-  // PHAT / CHUYEN BAI KHI isPlaying HOAC itemId THAY DOI
-  // ============================================================
-
-  useEffect(() => {
-    const audio = audioElRef.current;
-    if (!audio || !isPlaying) return;
-
-    const start = parseTimeToSeconds(startTime);
-    const end   = parseTimeToSeconds(endTime);
-
-    segmentRef.current = { start, end, itemId: String(itemId) };
-
-    isSeekingByCodeRef.current = true;
-    audio.currentTime = start;
-    isSeekingByCodeRef.current = false;
-
-    audio.playbackRate = playbackSpeed;
-    audio.play();
-  }, [isPlaying, itemId]);
-
-  // ============================================================
-  // DUNG NGAY KHI isPause = true
-  // ============================================================
-
-  useEffect(() => {
-    if (isPause && audioElRef.current) {
-      audioElRef.current.pause();
-    }
-  }, [isPause]);
+  const contentsRef = useRef(contents);
+  useEffect(() => { contentsRef.current = contents; }, [contents]);
 
   // ============================================================
   // CAP NHAT AUDIO SRC
@@ -218,14 +126,131 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
   }, [volume]);
 
   // ============================================================
+  // ATTACH LISTENERS — dang ky 1 lan, cleanup dung
+  // useEffect chay lai khi audioSrc thay doi (sang tap moi)
+  // ============================================================
+
+  useEffect(() => {
+    // Cho den khi AudioPlayer render xong va audio element san sang
+    let audio = getAudio();
+    let retryCount = 0;
+    const maxRetry = 20;
+
+    const attach = () => {
+      audio = getAudio();
+      if (!audio) {
+        retryCount++;
+        if (retryCount < maxRetry) {
+          setTimeout(attach, 100);
+        }
+        return;
+      }
+
+      const lastActiveId = { current: '' };
+
+      const onSeeking = () => {
+        if (isSeekingByCodeRef.current) return;
+        // Nguoi dung tu seek: bo gioi han segment, chay tu do
+        segmentRef.current = { start: 0, end: 0 };
+      };
+
+      const onTimeUpdate = () => {
+        if (!audio) return;
+        const t = audio.currentTime;
+        const { start, end } = segmentRef.current;
+
+        // Xu ly stop/loop khi den endTime
+        if (end > 0 && t >= end) {
+          if (isLoopRef.current) {
+            isSeekingByCodeRef.current = true;
+            audio.currentTime = start;
+            isSeekingByCodeRef.current = false;
+          } else {
+            audio.pause();
+            segmentRef.current = { start: 0, end: 0 };
+            onAudioStopRef.current();
+          }
+          return;
+        }
+
+        // Highlight cau dang chay theo currentTime
+        const found = findActiveItem(contentsRef.current, t);
+        if (found && String(found.id) !== lastActiveId.current) {
+          lastActiveId.current = String(found.id);
+          onActiveItemChangeRef.current(String(found.id));
+        }
+      };
+
+      audio.addEventListener('seeking', onSeeking);
+      audio.addEventListener('timeupdate', onTimeUpdate);
+
+      // Cleanup khi effect re-run (audioSrc doi) hoac unmount
+      return () => {
+        audio!.removeEventListener('seeking', onSeeking);
+        audio!.removeEventListener('timeupdate', onTimeUpdate);
+      };
+    };
+
+    const cleanup = attach();
+    return () => { cleanup?.(); };
+  }, [audioSrc]);
+
+  // ============================================================
+  // LENH PHAT: playCommand thay doi -> seek va play
+  // ============================================================
+
+  useEffect(() => {
+    if (!playCommand) return;
+    const audio = getAudio();
+    if (!audio) return;
+
+    const start = parseTimeToSeconds(playCommand.startTime);
+    const end   = parseTimeToSeconds(playCommand.endTime);
+
+    segmentRef.current = { start, end };
+    isLoopRef.current = false; // reset loop khi phat bai moi
+
+    isSeekingByCodeRef.current = true;
+    audio.currentTime = start;
+    isSeekingByCodeRef.current = false;
+
+    audio.playbackRate = playbackSpeed;
+    audio.play();
+  }, [playCommand]);
+
+  // ============================================================
+  // LENH LOOP: loopCommand thay doi -> cap nhat isLoopRef
+  // ============================================================
+
+  useEffect(() => {
+    if (!loopCommand) return;
+    isLoopRef.current = loopCommand.isLoop;
+    // Neu bat loop trong khi dang phat: cap nhat segment moi (startTime/endTime co the khac)
+    const audio = getAudio();
+    if (!audio || audio.paused) return;
+    const start = parseTimeToSeconds(loopCommand.startTime);
+    const end   = parseTimeToSeconds(loopCommand.endTime);
+    segmentRef.current = { start, end };
+  }, [loopCommand]);
+
+  // ============================================================
+  // LENH DUNG: pauseCommand thay doi -> pause
+  // ============================================================
+
+  useEffect(() => {
+    if (pauseCommand === null || pauseCommand === undefined) return;
+    const audio = getAudio();
+    if (audio) audio.pause();
+  }, [pauseCommand]);
+
+  // ============================================================
   // CAP NHAT TOC DO PHAT
   // ============================================================
 
   const handleSpeedChange = (value: number) => {
     setPlaybackSpeed(value);
-    if (audioElRef.current) {
-      audioElRef.current.playbackRate = value;
-    }
+    const audio = getAudio();
+    if (audio) audio.playbackRate = value;
   };
 
   // ============================================================
@@ -275,7 +300,7 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
       {audioSrc && (
         <div className="audio-component-fixed">
           <AudioPlayer
-            ref={playerRefCallback}
+            ref={playerRef}
             src={audioSrc}
             showJumpControls={false}
             autoPlay={false}

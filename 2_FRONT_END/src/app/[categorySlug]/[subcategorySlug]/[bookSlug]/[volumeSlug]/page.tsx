@@ -7,7 +7,7 @@ import { getContents, getVolumeDetail } from '@/utils/apiService';
 import { useHasMounted } from '@/utils/customHook';
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams, usePathname } from 'next/navigation';
 import '../../../../../styles/global.css';
 import '../../../../../styles/volume.css';
@@ -19,16 +19,8 @@ const ContentPage = () => {
   const { volumeSlug } = params;
 
   const [contents, setContents] = useState<ContentType[]>([]);
-  const [volume, setVolume] = useState<Volume>();
-  const [loading, setLoading] = useState(false);
-
-  // Trang thai dieu khien AudioPlayer ben trong AudioLayout
-  const [startTime, setStartTime]   = useState('');
-  const [endTime, setEndTime]       = useState('');
-  const [isLoop, setIsLoop]         = useState(false);
-  const [isPause, setIsPause]       = useState(false);
-  const [isPlaying, setIsPlaying]   = useState(false);
-  const [itemId, setItemId]         = useState(0);
+  const [volume, setVolume]     = useState<Volume>();
+  const [loading, setLoading]   = useState(false);
 
   // ============================================================
   // DATA FETCHING
@@ -68,44 +60,6 @@ const ContentPage = () => {
   }, [volumeSlug]);
 
   // ============================================================
-  // AUDIO HANDLERS
-  // ============================================================
-
-  // Bat dau phat: set startTime/endTime/itemId va danh dau isPlaying
-  const handlePlayAudio = useCallback((start: string, end: string, id: number) => {
-    setIsPause(false);
-    setItemId(id);
-    setStartTime(start);
-    setEndTime(end);
-    setIsPlaying(true);
-  }, []);
-
-  // Dung phat va reset trang thai
-  const handlePauseAudio = useCallback((pause: boolean) => {
-    setIsPause(pause);
-    setIsPlaying(false);
-    setIsLoop(false);
-  }, []);
-
-  // AudioLayout goi khi audio tu dong ket thuc
-  const resetIsPlaying = useCallback(() => {
-    setIsPlaying(false);
-  }, []);
-
-  // Bat/tat loop cho item dang phat
-  const handleToggleAudio = useCallback((
-    id: string,
-    start: string,
-    end: string,
-    loop: boolean
-  ) => {
-    setItemId(Number(id));
-    setStartTime(start);
-    setEndTime(end);
-    setIsLoop(loop);
-  }, []);
-
-  // ============================================================
   // BREADCRUMB
   // ============================================================
 
@@ -122,25 +76,17 @@ const ContentPage = () => {
   return (
     <div>
       <BreadCrumbComponent items={breadcrumbItems} />
-
       <ContentComponent
         contents={contents}
         loading={loading}
         volumeSlug={volumeSlug}
-        isPlaying={isPlaying}
-        isParentPlaying={isPlaying}
-        handlePlayAudio={handlePlayAudio}
-        handlePauseAudio={handlePauseAudio}
-        handleToggleAudio={handleToggleAudio}
+        isPlaying={false}
+        isParentPlaying={false}
+        handlePlayAudio={() => {}}
+        handlePauseAudio={() => {}}
+        handleToggleAudio={() => {}}
         onViewModeChange={undefined}
-        // Props audio truyen thang xuong AudioLayout
         volume={volume}
-        startTime={startTime}
-        endTime={endTime}
-        isLoop={isLoop}
-        isPause={isPause}
-        itemId={itemId}
-        resetIsPlaying={resetIsPlaying}
       />
     </div>
   );

@@ -27,14 +27,8 @@ interface ContentComponentProps {
   handlePauseAudio: (isStop: boolean) => void;
   handleToggleAudio: (itemId: string, startTime: string, endTime: string, isLoop: boolean) => void;
   onViewModeChange?: (mode: ViewMode) => void;
-  // Props audio de AudioLayout tu quan ly AudioPlayer ben trong
+  // Thong tin volume de AudioLayout lay src audio
   volume?: Volume;
-  startTime: string;
-  endTime: string;
-  isLoop: boolean;
-  isPause: boolean;
-  itemId: number;
-  resetIsPlaying: () => void;
 }
 
 const TOOLTIP_STYLE: React.CSSProperties = {
@@ -64,12 +58,6 @@ const ContentComponent = ({
   handleToggleAudio,
   onViewModeChange,
   volume,
-  startTime,
-  endTime,
-  isLoop,
-  isPause,
-  itemId,
-  resetIsPlaying,
 }: ContentComponentProps) => {
   const router = useRouter();
   const { volumeEngName = '', volumeViName = '' } = contents[0] || {};
@@ -134,6 +122,16 @@ const ContentComponent = ({
 
   const [playStates, setPlayStates] = useState<Record<string, boolean>>({});
   const [loopStates, setLoopStates] = useState<Record<string, boolean>>({});
+
+  // Lenh gui xuong AudioLayout — dung {data, ts} pattern:
+  // moi lan ts thay doi thi AudioLayout phat lai, tranh stale isPlaying
+  const [playCommand, setPlayCommand] = useState<{
+    itemId: string; startTime: string; endTime: string; ts: number;
+  } | null>(null);
+  const [loopCommand, setLoopCommand] = useState<{
+    itemId: string; startTime: string; endTime: string; isLoop: boolean; ts: number;
+  } | null>(null);
+  const [pauseCommand, setPauseCommand] = useState<number | null>(null);
 
   // ============================================================
   // STATE — active item (1 item duy nhat duoc highlight)
@@ -220,17 +218,11 @@ const ContentComponent = ({
     setLoopStates(loop);
   }, [contents]);
 
-  // Reset khi audio ket thuc tu nhien (isPlaying: true -> false)
+  // Reset khi audio ket thuc (isPlaying tu parent - giu de tuong thich video flow)
   const prevIsPlayingRef = useRef(false);
   useEffect(() => {
-    const wasPlaying = prevIsPlayingRef.current;
-    if (wasPlaying && !isPlaying) {
-      setPlayStates((prev) => Object.fromEntries(Object.keys(prev).map((k) => [k, false])));
-      setLoopStates((prev) => Object.fromEntries(Object.keys(prev).map((k) => [k, false])));
-      setActive(null, null);
-    }
     prevIsPlayingRef.current = isPlaying;
-  }, [isPlaying, setActive]);
+  }, [isPlaying]);
 
   // Listener timeupdate cho video — attach sau khi VideoLayout mount
   // Attach timeupdate listener truc tiep vao videoRef khi co the
@@ -352,9 +344,10 @@ const ContentComponent = ({
     const isCurrentlyPlaying = playStates[itemId] ?? false;
 
     if (isCurrentlyPlaying) {
+      // Dang phat item nay -> dung lai
       setPlayStates((prev) => Object.fromEntries(Object.keys(prev).map((k) => [k, false])));
       setActive(null, null);
-      handlePauseAudio(true);
+      setPauseCommand(Date.now());
       return;
     }
 
@@ -365,21 +358,26 @@ const ContentComponent = ({
       setVideoPlaying(false);
     }
 
+    // Gui lenh phat xuong AudioLayout
     setPlayStates((prev) => Object.fromEntries(Object.keys(prev).map((k) => [k, k === itemId])));
     setLoopStates((prev) => ({ ...prev, [itemId]: false }));
     setActive(itemId, 'audio');
-    handleToggleAudio(itemId, startTime, endTime, false);
-    handlePlayAudio(startTime, endTime, Number(itemId));
+    setPlayCommand({ itemId, startTime, endTime, ts: Date.now() });
 
-    // Scroll sau 1 tick de dam bao DOM da render highlight xong
     requestAnimationFrame(() => scrollToActiveItem(itemId));
-  }, [playStates, handlePlayAudio, handlePauseAudio, handleToggleAudio, setActive, setVideoPlaying, scrollToActiveItem]);
+  }, [playStates, handlePauseAudio, handleToggleAudio, setActive, setVideoPlaying, scrollToActiveItem]);
 
-  // Callback tu AudioLayout: audio timeupdate detect ra cau moi -> highlight + scroll + cap nhat playStates
+  // Callback tu AudioLayout: audio het segment -> reset trang thai
+  const onAudioStop = useCallback(() => {
+    setPlayStates((prev) => Object.fromEntries(Object.keys(prev).map((k) => [k, false])));
+    setLoopStates((prev) => Object.fromEntries(Object.keys(prev).map((k) => [k, false])));
+    setActive(null, null);
+  }, [setActive]);
+
+  // Callback tu AudioLayout: timeupdate detect cau moi -> highlight + scroll + cap nhat playStates
   const onAudioActiveItemChange = useCallback((id: string) => {
     if (activeItemIdRef.current === id) return;
     setActive(id, 'audio');
-    // Cap nhat playStates: chi item dang phat la true, cac item khac false
     setPlayStates((prev) =>
       Object.fromEntries(Object.keys(prev).map((k) => [k, k === id]))
     );
@@ -393,8 +391,9 @@ const ContentComponent = ({
   const onToggleLoop = useCallback((itemId: string, startTime: string, endTime: string) => {
     const newVal = !loopStates[itemId];
     setLoopStates((prev) => ({ ...prev, [itemId]: newVal }));
-    handleToggleAudio(itemId, startTime, endTime, newVal);
-  }, [loopStates, handleToggleAudio]);
+    // Gui lenh loop xuong AudioLayout
+    setLoopCommand({ itemId, startTime, endTime, isLoop: newVal, ts: Date.now() });
+  }, [loopStates]);
 
   // ============================================================
   // TOOLTIP
@@ -558,15 +557,11 @@ const ContentComponent = ({
       onPlayPauseAudio={onPlayPauseAudio}
       onToggleLoop={onToggleLoop}
       onActiveItemChange={onAudioActiveItemChange}
+      onAudioStop={onAudioStop}
       volume={volume}
-      startTime={startTime}
-      endTime={endTime}
-      isLoop={isLoop}
-      isPause={isPause}
-      isPlaying={isPlaying}
-      itemId={itemId}
-      resetIsPlaying={resetIsPlaying}
-      handlePauseAudio={handlePauseAudio}
+      playCommand={playCommand}
+      loopCommand={loopCommand}
+      pauseCommand={pauseCommand}
     />
   );
 
