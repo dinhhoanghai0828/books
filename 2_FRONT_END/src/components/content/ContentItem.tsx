@@ -15,14 +15,15 @@ import React from 'react';
 
 export interface ContentItemProps {
   item: ContentType;
-  isActive: boolean;           // Cau nay dang duoc highlight
-  isAudioPlaying: boolean;     // Audio cua cau nay dang phat
-  isLooping: boolean;          // Loop cua cau nay dang bat
-  isVideoPlaying: boolean;     // Video cua cau nay dang phat
+  isActive: boolean;
+  isAudioPlaying: boolean;
+  isLooping: boolean;
+  isVideoPlaying: boolean;
   showEnglish: boolean;
   showVietnamese: boolean;
   highlightMissingWords: boolean;
-  showVideoButton: boolean;    // Video Mode moi hien nut video
+  showVideoButton: boolean;   // true o Video Mode
+  showAudioButton: boolean;   // false o Video Mode
   activeSource: 'audio' | 'video' | null;
   onPlayPauseAudio: (id: string, startTime: string, endTime: string) => void;
   onPlayPauseVideo: (id: string, startTime: string, endTime: string) => void;
@@ -31,7 +32,6 @@ export interface ContentItemProps {
   itemRef: (el: HTMLDivElement | null) => void;
 }
 
-// Style cho item dang active
 const ACTIVE_ITEM_STYLE: React.CSSProperties = {
   borderLeft: '4px solid #1677ff',
   paddingLeft: 10,
@@ -54,6 +54,7 @@ const ContentItem = React.memo(({
   showVietnamese,
   highlightMissingWords,
   showVideoButton,
+  showAudioButton,
   activeSource,
   onPlayPauseAudio,
   onPlayPauseVideo,
@@ -61,6 +62,13 @@ const ContentItem = React.memo(({
   onGetMeaning,
   itemRef,
 }: ContentItemProps) => {
+  // Nut loop duoc phep nhan khi:
+  // - Audio Mode: audio cua item dang phat
+  // - Video Mode: video cua item dang phat
+  const isLoopEnabled = showAudioButton
+    ? isAudioPlaying
+    : (isActive && isVideoPlaying);
+
   return (
     <div
       ref={itemRef}
@@ -96,7 +104,7 @@ const ContentItem = React.memo(({
         </div>
 
         <Space className="button-group">
-          {/* Nut video — chi hien o Video Mode va khi item co video */}
+          {/* Nut video — chi hien o Video Mode */}
           {showVideoButton && item.video && (
             <Button
               type="link"
@@ -112,21 +120,23 @@ const ContentItem = React.memo(({
             />
           )}
 
-          {/* Nut audio */}
-          <Button
-            type="link"
-            icon={isAudioPlaying ? <PauseOutlined /> : <PlayCircleOutlined />}
-            onClick={(e) => {
-              e.stopPropagation();
-              onPlayPauseAudio(item.id, item.startTime, item.endTime);
-            }}
-          />
+          {/* Nut audio — an o Video Mode */}
+          {showAudioButton && (
+            <Button
+              type="link"
+              icon={isAudioPlaying ? <PauseOutlined /> : <PlayCircleOutlined />}
+              onClick={(e) => {
+                e.stopPropagation();
+                onPlayPauseAudio(item.id, item.startTime, item.endTime);
+              }}
+            />
+          )}
 
-          {/* Nut loop — chi hoat dong khi audio dang phat */}
+          {/* Nut loop */}
           <Button
             type="link"
             icon={isLooping ? <RetweetOutlined /> : <RollbackOutlined />}
-            disabled={!isAudioPlaying}
+            disabled={!isLoopEnabled}
             onClick={(e) => {
               e.stopPropagation();
               onToggleLoop(item.id, item.startTime, item.endTime);

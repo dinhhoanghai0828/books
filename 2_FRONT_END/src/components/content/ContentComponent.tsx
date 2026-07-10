@@ -549,10 +549,24 @@ const ContentComponent = ({
         if (!sharedVideoPath) return renderAudioLayout();
         return (
           <VideoLayout
-            {...sharedLayoutProps}
+            contents={contents}
             videoPath={sharedVideoPath}
+            volumeEngName={volumeEngName}
+            volumeViName={volumeViName}
             videoRef={videoRef}
             listScrollRef={listScrollRef}
+            activeItemId={activeItemId}
+            activeSource={activeSource}
+            isVideoPlaying={isVideoPlaying}
+            loopStates={loopStates}
+            showEnglish={showEnglish}
+            showVietnamese={showVietnamese}
+            highlightMissingWords={highlightMissingWords}
+            itemRefsRef={itemRefsRef}
+            onPlayPauseVideo={onPlayPauseVideo}
+            onToggleLoop={onToggleLoop}
+            onGetMeaning={handleGetMeaning}
+            renderTooltip={renderTooltip}
           />
         );
 

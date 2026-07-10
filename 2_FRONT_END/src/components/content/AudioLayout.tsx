@@ -3,10 +3,6 @@ import { Empty, Typography } from 'antd';
 import React from 'react';
 import ContentItem from './ContentItem';
 
-// ============================================================
-// TYPES
-// ============================================================
-
 export interface AudioLayoutProps {
   contents: ContentType[];
   volumeEngName: string;
@@ -25,10 +21,6 @@ export interface AudioLayoutProps {
   onGetMeaning: () => void;
   renderTooltip: () => React.ReactNode;
 }
-
-// ============================================================
-// COMPONENT — chi render, khong chua logic media, khong co nut video
-// ============================================================
 
 const AudioLayout: React.FC<AudioLayoutProps> = ({
   contents,
@@ -72,9 +64,10 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
             showVietnamese={showVietnamese}
             highlightMissingWords={highlightMissingWords}
             showVideoButton={false}
+            showAudioButton={true}
             activeSource={activeSource}
             onPlayPauseAudio={onPlayPauseAudio}
-            onPlayPauseVideo={() => {}}  // Khong dung trong Audio Mode
+            onPlayPauseVideo={() => {}}
             onToggleLoop={onToggleLoop}
             onGetMeaning={onGetMeaning}
             itemRef={(el) => { itemRefsRef.current[item.id] = el; }}

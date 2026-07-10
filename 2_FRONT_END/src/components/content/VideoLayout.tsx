@@ -17,13 +17,11 @@ export interface VideoLayoutProps {
   activeItemId: string | null;
   activeSource: 'audio' | 'video' | null;
   isVideoPlaying: boolean;
-  playStates: Record<string, boolean>;
   loopStates: Record<string, boolean>;
   showEnglish: boolean;
   showVietnamese: boolean;
   highlightMissingWords: boolean;
   itemRefsRef: React.MutableRefObject<Record<string, HTMLDivElement | null>>;
-  onPlayPauseAudio: (id: string, startTime: string, endTime: string) => void;
   onPlayPauseVideo: (id: string, startTime: string, endTime: string) => void;
   onToggleLoop: (id: string, startTime: string, endTime: string) => void;
   onGetMeaning: () => void;
@@ -31,7 +29,11 @@ export interface VideoLayoutProps {
 }
 
 // ============================================================
-// COMPONENT — chi render, khong chua logic media
+// COMPONENT
+// Video Mode layout:
+// - Video co dinh o vi tri cua audio player (fixed bottom)
+// - Danh sach cau hien thi day du chieu rong, can giua giong Audio Mode
+// - Chi co nut video va nut loop, KHONG co nut audio
 // ============================================================
 
 const VideoLayout: React.FC<VideoLayoutProps> = ({
@@ -44,77 +46,81 @@ const VideoLayout: React.FC<VideoLayoutProps> = ({
   activeItemId,
   activeSource,
   isVideoPlaying,
-  playStates,
   loopStates,
   showEnglish,
   showVietnamese,
   highlightMissingWords,
   itemRefsRef,
-  onPlayPauseAudio,
   onPlayPauseVideo,
   onToggleLoop,
   onGetMeaning,
   renderTooltip,
 }) => {
   return (
-    <div style={{ display: 'flex', gap: 24, marginTop: 16, alignItems: 'flex-start' }}>
-      {/* Cot trai: video sticky */}
-      <div style={{ flex: '0 0 42%', position: 'sticky', top: 16 }}>
+    <>
+      {/* Video co dinh o cuoi man hinh — thay the vi tri audio player */}
+      <div
+        style={{
+          position: 'fixed',
+          bottom: 0,
+          left: '50%',
+          transform: 'translateX(-50%)',
+          width: '100%',
+          maxWidth: 640,
+          zIndex: 1000,
+          backgroundColor: '#000',
+          borderRadius: '10px 10px 0 0',
+          overflow: 'hidden',
+          boxShadow: '0 -2px 12px rgba(0,0,0,0.25)',
+        }}
+      >
         <video
           ref={videoRef}
           src={`/media/${videoPath}`}
           controls
-          style={{ width: '100%', borderRadius: 8 }}
+          style={{ width: '100%', display: 'block' }}
         />
       </div>
 
-      {/* Cot phai: tieu de + danh sach cau cuon doc lap */}
-      <div style={{ flex: 1, minWidth: 0 }}>
+      {/* Danh sach cau — can giua, co padding-bottom de khong bi che boi video */}
+      <div ref={listScrollRef}>
         <Typography.Title level={3} className="volume-title">
           {volumeEngName}
         </Typography.Title>
         <Typography.Text className="volume-vi-name">{volumeViName}</Typography.Text>
-        <Typography.Text
-          className="volume-total-sentence"
-          style={{ display: 'block', marginBottom: 8 }}
-        >
+        <Typography.Text className="volume-total-sentence">
           Bai co tong cong:{' '}
           <strong style={{ color: 'red' }}>{contents.length}</strong> cau can hoc
         </Typography.Text>
 
-        {/* Vung cuon doc lap — Story List */}
-        <div
-          ref={listScrollRef}
-          style={{ maxHeight: '70vh', overflowY: 'auto', paddingRight: 4 }}
-        >
-          {contents.length > 0 ? (
-            contents.map((item) => (
-              <ContentItem
-                key={item.id}
-                item={item}
-                isActive={activeItemId === item.id}
-                isAudioPlaying={playStates[item.id] ?? false}
-                isLooping={loopStates[item.id] ?? false}
-                isVideoPlaying={isVideoPlaying}
-                showEnglish={showEnglish}
-                showVietnamese={showVietnamese}
-                highlightMissingWords={highlightMissingWords}
-                showVideoButton={true}
-                activeSource={activeSource}
-                onPlayPauseAudio={onPlayPauseAudio}
-                onPlayPauseVideo={onPlayPauseVideo}
-                onToggleLoop={onToggleLoop}
-                onGetMeaning={onGetMeaning}
-                itemRef={(el) => { itemRefsRef.current[item.id] = el; }}
-              />
-            ))
-          ) : (
-            <Empty description="Khong co du lieu" className="emptyClass" />
-          )}
-          {renderTooltip()}
-        </div>
+        {contents.length > 0 ? (
+          contents.map((item) => (
+            <ContentItem
+              key={item.id}
+              item={item}
+              isActive={activeItemId === item.id}
+              isAudioPlaying={false}         // Video Mode: khong co audio
+              isLooping={loopStates[item.id] ?? false}
+              isVideoPlaying={isVideoPlaying}
+              showEnglish={showEnglish}
+              showVietnamese={showVietnamese}
+              highlightMissingWords={highlightMissingWords}
+              showVideoButton={true}
+              showAudioButton={false}        // An nut audio
+              activeSource={activeSource}
+              onPlayPauseAudio={() => {}}    // Khong dung trong Video Mode
+              onPlayPauseVideo={onPlayPauseVideo}
+              onToggleLoop={onToggleLoop}
+              onGetMeaning={onGetMeaning}
+              itemRef={(el) => { itemRefsRef.current[item.id] = el; }}
+            />
+          ))
+        ) : (
+          <Empty description="Khong co du lieu" className="emptyClass" />
+        )}
+        {renderTooltip()}
       </div>
-    </div>
+    </>
   );
 };
 
