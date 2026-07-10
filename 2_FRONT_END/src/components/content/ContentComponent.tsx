@@ -26,6 +26,8 @@ interface ContentComponentProps {
   handlePauseAudio: (isStop: boolean) => void;
   handleToggleAudio: (itemId: string, startTime: string, endTime: string, isLoop: boolean) => void;
   onViewModeChange?: (mode: ViewMode) => void;
+  // Props de render AudioComponent ben trong AudioLayout
+  audioPlayer?: React.ReactNode;
 }
 
 const TOOLTIP_STYLE: React.CSSProperties = {
@@ -54,6 +56,7 @@ const ContentComponent = ({
   handlePauseAudio,
   handleToggleAudio,
   onViewModeChange,
+  audioPlayer,
 }: ContentComponentProps) => {
   const router = useRouter();
   const { volumeEngName = '', volumeViName = '' } = contents[0] || {};
@@ -501,6 +504,7 @@ const ContentComponent = ({
       loopStates={loopStates}
       onPlayPauseAudio={onPlayPauseAudio}
       onToggleLoop={onToggleLoop}
+      audioPlayer={audioPlayer}
     />
   );
 

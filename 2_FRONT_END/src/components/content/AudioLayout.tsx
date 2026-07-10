@@ -15,11 +15,13 @@ export interface AudioLayoutProps {
   showEnglish: boolean;
   showVietnamese: boolean;
   highlightMissingWords: boolean;
-  itemRefsRef: React.MutableRefObject<Record<string, HTMLDivElement | null>>;
+  itemRefsRef: React.RefObject<Record<string, HTMLDivElement | null>>;
   onPlayPauseAudio: (id: string, startTime: string, endTime: string) => void;
   onToggleLoop: (id: string, startTime: string, endTime: string) => void;
   onGetMeaning: () => void;
   renderTooltip: () => React.ReactNode;
+  // AudioComponent duoc truyen vao de render ben trong layout
+  audioPlayer?: React.ReactNode;
 }
 
 const AudioLayout: React.FC<AudioLayoutProps> = ({
@@ -39,6 +41,7 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
   onToggleLoop,
   onGetMeaning,
   renderTooltip,
+  audioPlayer,
 }) => {
   return (
     <div>
@@ -76,7 +79,11 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
       ) : (
         <Empty description="Khong co du lieu" className="emptyClass" />
       )}
+
       {renderTooltip()}
+
+      {/* AudioComponent co dinh o cuoi — render ben trong layout */}
+      {audioPlayer}
     </div>
   );
 };

@@ -40,9 +40,6 @@ const ContentPage = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [itemId, setItemId] = useState(0);
 
-  // Theo doi viewMode tu ContentComponent de an/hien AudioComponent
-  const [viewMode, setViewMode] = useState<'video' | 'audio'>('video');
-
   // ============================================================
   // DATA FETCHING
   // ============================================================
@@ -146,23 +143,23 @@ const ContentPage = () => {
         handlePlayAudio={handlePlayAudio}
         handlePauseAudio={handlePauseAudio}
         handleToggleAudio={handleToggleAudio}
-        onViewModeChange={setViewMode}
+        onViewModeChange={undefined}
+        audioPlayer={
+          volume?.audio ? (
+            <AudioComponent
+              startTime={startTime}
+              endTime={endTime}
+              isLoop={isLoop}
+              itemId={itemId}
+              isPause={isPause}
+              isPlaying={isPlaying}
+              volume={volume}
+              resetIsPlaying={resetIsPlaying}
+              handlePauseAudio={handlePauseAudio}
+            />
+          ) : undefined
+        }
       />
-
-      {/* AudioComponent chi hien o Audio Mode */}
-      {viewMode === 'audio' && volume?.audio && (
-        <AudioComponent
-          startTime={startTime}
-          endTime={endTime}
-          isLoop={isLoop}
-          itemId={itemId}
-          isPause={isPause}
-          isPlaying={isPlaying}
-          volume={volume}
-          resetIsPlaying={resetIsPlaying}
-          handlePauseAudio={handlePauseAudio}
-        />
-      )}
     </div>
   );
 };
