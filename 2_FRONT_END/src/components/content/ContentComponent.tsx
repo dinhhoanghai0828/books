@@ -121,6 +121,10 @@ const ContentComponent = ({
     itemId: '',
   });
 
+  // Flag: true khi code dang seek (khong phai nguoi dung tu seek)
+  // De phan biet seek tu code (onPlayPauseVideo) va seek tu nguoi dung (click vao video)
+  const isSeekingByCodeRef = useRef(false);
+
   const itemRefsRef = useRef<Record<string, HTMLDivElement | null>>({});
   const listScrollRef = useRef<HTMLDivElement | null>(null);
 
@@ -234,13 +238,23 @@ const ContentComponent = ({
   useEffect(() => {
     if (viewMode !== 'video') return;
     const video = videoRef.current;
-    if (!video) return;  // videoMounted dam bao re-run khi video element san sang
+    if (!video) return;
+
+    // Khi nguoi dung tu seek tren video controls (khong qua onPlayPauseVideo):
+    // reset end = 0 va itemId = '' de timeupdate khong dung video nua,
+    // video se chay tu vi tri seek den het file
+    const onSeeking = () => {
+      if (isSeekingByCodeRef.current) return;
+      videoSegmentRef.current = { start: 0, end: 0, itemId: '' };
+      setActive(null, null);
+      setVideoPlaying(true);
+    };
 
     const onTimeUpdate = () => {
-      // if (activeSourceRef.current !== 'video') return;
       const t = video.currentTime;
       const { start, end, itemId } = videoSegmentRef.current;
-      // Xu ly loop / stop
+
+      // Dung / loop khi den endTime (chi khi end > 0, tuc la dang phat theo segment)
       if (end > 0 && t >= end) {
         if (loopStatesRef.current[itemId]) {
           video.pause();
@@ -251,21 +265,40 @@ const ContentComponent = ({
           setActive(null, null);
           setVideoPlaying(false);
         }
-
         return;
       }
 
-      // Highlight cau hien tai
+      // Highlight cau hien tai theo currentTime
       const found = findActiveItem(contents, t);
-
       if (found && activeItemIdRef.current !== String(found.id)) {
         setActive(String(found.id), 'video');
         scrollToActiveItem(String(found.id));
       }
     };
 
+    // Khi video tu play lai (vi du sau khi nguoi dung bam play tren controls)
+    const onPlay = () => {
+      if (!isSeekingByCodeRef.current) {
+        setVideoPlaying(true);
+      }
+    };
+
+    const onPause = () => {
+      if (!isSeekingByCodeRef.current) {
+        setVideoPlaying(false);
+      }
+    };
+
+    video.addEventListener('seeking', onSeeking);
     video.addEventListener('timeupdate', onTimeUpdate);
-    return () => video.removeEventListener('timeupdate', onTimeUpdate);
+    video.addEventListener('play', onPlay);
+    video.addEventListener('pause', onPause);
+    return () => {
+      video.removeEventListener('seeking', onSeeking);
+      video.removeEventListener('timeupdate', onTimeUpdate);
+      video.removeEventListener('play', onPlay);
+      video.removeEventListener('pause', onPause);
+    };
   }, [viewMode, videoMounted, contents, setActive, setVideoPlaying, scrollToActiveItem]);
 
   // ============================================================
@@ -295,18 +328,16 @@ const ContentComponent = ({
       handlePauseAudio(true);
     }
 
-    // Seek va phat
     const start = parseTimeToSeconds(startTime);
     const end = parseTimeToSeconds(endTime);
 
-    videoSegmentRef.current = {
-      start,
-      end,
-      itemId,
-    };
+    videoSegmentRef.current = { start, end, itemId };
 
-
+    // Danh dau dang seek tu code de onSeeking listener khong reset segment
+    isSeekingByCodeRef.current = true;
     video.currentTime = start;
+    isSeekingByCodeRef.current = false;
+
     video.play();
     setActive(itemId, 'video');
     setVideoPlaying(true);
