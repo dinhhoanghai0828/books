@@ -4,6 +4,8 @@ import {
   EditOutlined,
   PauseOutlined,
   PlayCircleOutlined,
+  RetweetOutlined,
+  RollbackOutlined,
 } from '@ant-design/icons';
 import {
   Button,
@@ -19,7 +21,7 @@ import {
   Space,
   Typography,
 } from 'antd';
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import debounce from 'lodash.debounce';
 import { getMeaningWords, updateContent } from '@/utils/apiService';
 
@@ -98,12 +100,15 @@ const HomePageContentComponent = ({
   // Du lieu hien thi (dong bo voi contents tu props)
   const [filteredData, setFilteredData] = useState<ContentType[]>(contents);
 
-  // Trang thai play/pause cho tung item (key: itemId, value: dang phat hay khong)
-  const [playStates, setPlayStates] = useState<Record<string, boolean>>({});
+  // Dung ref thay vi state de tranh stale closure va re-render khong can thiet
+  const playStatesRef = useRef<Record<string, boolean>>({});
+  const loopStatesRef = useRef<Record<string, boolean>>({});
+  const currentAudioRef = useRef<HTMLAudioElement | null>(null);
+  const currentPlayingIdRef = useRef<string | null>(null);
 
-  // Audio element dang phat hien tai
-  const [currentAudio, setCurrentAudio] = useState<HTMLAudioElement | null>(null);
-  const [currentPlayingId, setCurrentPlayingId] = useState<string | null>(null);
+  // renderCount chi dung de ep React re-render sau khi doi ref
+  const [renderCount, setRenderCount] = useState(0);
+  const forceRender = () => setRenderCount((c) => c + 1);
 
   // Trang thai tooltip tra nghia tu
   const [meaningEnKeywords, setMeaningEnKeywords] = useState<string[]>([]);
@@ -121,23 +126,25 @@ const HomePageContentComponent = ({
   // EFFECTS
   // ============================================================
 
-  // Dong bo du lieu va khoi tao trang thai play khi contents thay doi
+  // Dong bo du lieu va khoi tao trang thai play/loop khi contents thay doi
   useEffect(() => {
-    const initialPlayState = contents.reduce((acc, item) => {
-      acc[item.id] = false;
-      return acc;
-    }, {} as Record<string, boolean>);
-
-    setPlayStates(initialPlayState);
+    const playState: Record<string, boolean> = {};
+    const loopState: Record<string, boolean> = {};
+    contents.forEach((item) => {
+      playState[item.id] = false;
+      loopState[item.id] = false;
+    });
+    playStatesRef.current = playState;
+    loopStatesRef.current = loopState;
     setFilteredData(contents);
   }, [contents]);
 
   // Cap nhat toc do phat cua audio dang chay khi playbackSpeed thay doi
   useEffect(() => {
-    if (currentAudio) {
-      currentAudio.playbackRate = playbackSpeed;
+    if (currentAudioRef.current) {
+      currentAudioRef.current.playbackRate = playbackSpeed;
     }
-  }, [playbackSpeed, currentAudio]);
+  }, [playbackSpeed]);
 
   // ============================================================
   // AUDIO HANDLERS
@@ -150,79 +157,116 @@ const HomePageContentComponent = ({
   };
 
   // Dung audio dang phat va reset trang thai tat ca item ve false
-  const stopAudio = () => {
-    if (currentAudio) {
-      currentAudio.pause();
-      setCurrentPlayingId(null);
-      setPlayStates((prev) =>
-        Object.keys(prev).reduce((acc, key) => {
-          acc[key] = false;
-          return acc;
-        }, {} as Record<string, boolean>)
-      );
+  const stopAudio = useCallback(() => {
+    if (currentAudioRef.current) {
+      currentAudioRef.current.pause();
+      currentAudioRef.current = null;
     }
-  };
+    currentPlayingIdRef.current = null;
+    Object.keys(playStatesRef.current).forEach((key) => {
+      playStatesRef.current[key] = false;
+    });
+    Object.keys(loopStatesRef.current).forEach((key) => {
+      loopStatesRef.current[key] = false;
+    });
+    forceRender();
+  }, []);
 
   // Bat/dung audio cua 1 item
   // - Neu item dang phat: dung lai
   // - Neu item chua phat: dung item hien tai, tao Audio moi va phat
-  const toggleAudio = (
-    itemId: string,
-    audioPath: string,
-    startTime: string,
-    endTime: string
-  ) => {
-    if (!audioPath || !startTime || !endTime) {
-      message.error('Khong co tep am thanh hoac thoi gian khong hop le.');
-      return;
-    }
-
-    const start = parseTimeToSeconds(startTime);
-    const end = parseTimeToSeconds(endTime);
-
-    if (start >= end) {
-      message.error('Thoi gian bat dau phai nho hon thoi gian ket thuc.');
-      return;
-    }
-
-    if (currentPlayingId === itemId) {
-      // Dang phat item nay -> dung lai
-      stopAudio();
-      return;
-    }
-
-    // Phat item moi: dung item cu truoc
-    stopAudio();
-
-    const audio = new Audio(`/media/${audioPath}`);
-    audio.currentTime = start;
-    audio.playbackRate = playbackSpeed;
-
-    // Tu dong dung khi den endTime
-    audio.addEventListener('timeupdate', () => {
-      if (audio.currentTime >= end) {
-        audio.currentTime = start;
-        audio.pause();
-        stopAudio();
+  const toggleAudio = useCallback(
+    (
+      itemId: string,
+      audioPath: string,
+      startTime: string,
+      endTime: string
+    ) => {
+      if (!audioPath || !startTime || !endTime) {
+        message.error('Khong co tep am thanh hoac thoi gian khong hop le.');
+        return;
       }
-    });
 
-    // Xu ly truong hop audio ket thuc tu nhien
-    audio.addEventListener('ended', () => stopAudio());
+      const start = parseTimeToSeconds(startTime);
+      const end = parseTimeToSeconds(endTime);
 
-    setCurrentAudio(audio);
-    setCurrentPlayingId(itemId);
-    setPlayStates((prev) =>
-      Object.keys(prev).reduce((acc, key) => {
-        acc[key] = key === itemId;
-        return acc;
-      }, {} as Record<string, boolean>)
-    );
+      if (start >= end) {
+        message.error('Thoi gian bat dau phai nho hon thoi gian ket thuc.');
+        return;
+      }
 
-    audio.play().catch(() => {
-      message.error('Khong the phat am thanh.');
-    });
-  };
+      if (currentPlayingIdRef.current === itemId) {
+        // Dang phat item nay -> dung lai
+        stopAudio();
+        return;
+      }
+
+      // Dung item cu truoc khi phat item moi
+      if (currentAudioRef.current) {
+        currentAudioRef.current.pause();
+        currentAudioRef.current = null;
+      }
+
+      const audio = new Audio(`/media/${audioPath}`);
+      audio.currentTime = start;
+      audio.playbackRate = playbackSpeed;
+
+      // Tu dong dung hoac lap lai khi den endTime
+      audio.addEventListener('timeupdate', () => {
+        if (audio.currentTime >= end) {
+          if (loopStatesRef.current[itemId]) {
+            // Dang loop -> quay lai dau
+            audio.currentTime = start;
+          } else {
+            // Khong loop -> dung lai va reset trang thai
+            audio.pause();
+            currentAudioRef.current = null;
+            currentPlayingIdRef.current = null;
+            Object.keys(playStatesRef.current).forEach((key) => {
+              playStatesRef.current[key] = false;
+            });
+            Object.keys(loopStatesRef.current).forEach((key) => {
+              loopStatesRef.current[key] = false;
+            });
+            forceRender();
+          }
+        }
+      });
+
+      // Xu ly truong hop audio ket thuc tu nhien
+      audio.addEventListener('ended', () => {
+        currentAudioRef.current = null;
+        currentPlayingIdRef.current = null;
+        Object.keys(playStatesRef.current).forEach((key) => {
+          playStatesRef.current[key] = false;
+        });
+        forceRender();
+      });
+
+      currentAudioRef.current = audio;
+      currentPlayingIdRef.current = itemId;
+
+      // Cap nhat playStates: chi item dang click la true, cac item khac false
+      Object.keys(playStatesRef.current).forEach((key) => {
+        playStatesRef.current[key] = key === itemId;
+      });
+      loopStatesRef.current[itemId] = false;
+
+      forceRender();
+
+      audio.play().catch(() => {
+        message.error('Khong the phat am thanh.');
+        stopAudio();
+      });
+    },
+    [playbackSpeed, stopAudio]
+  );
+
+  // Bat/tat che do lap lai cho 1 item (chi hoat dong khi item dang phat)
+  const onToggleLoop = useCallback((itemId: string) => {
+    loopStatesRef.current[itemId] = !loopStatesRef.current[itemId];
+    forceRender();
+  }, []);
 
   // ============================================================
   // TOOLTIP - TRA NGHIA TU
@@ -349,7 +393,7 @@ const HomePageContentComponent = ({
             <Col span={8} xs={24} sm={24} md={12} lg={12} key={item.id} className="colClass">
               <div className="frameClass">
 
-                {/* Dong tieng Anh + icon check + nut play + nut edit */}
+                {/* Dong tieng Anh + icon check + nut play + nut loop + nut edit */}
                 <div className="audioClass">
                   <Text strong className="engClass">
                     {highlightText(
@@ -366,11 +410,22 @@ const HomePageContentComponent = ({
                     <Button
                       type="link"
                       icon={
-                        playStates[item.id] ? <PauseOutlined /> : <PlayCircleOutlined />
+                        playStatesRef.current[item.id] ? <PauseOutlined /> : <PlayCircleOutlined />
                       }
                       onClick={() =>
                         toggleAudio(item.id, item.audio, item.startTime, item.endTime)
                       }
+                    />
+                    {/* Nut bat/tat lap lai (chi hoat dong khi dang phat) */}
+                    <Button
+                      type="link"
+                      icon={
+                        loopStatesRef.current[item.id]
+                          ? <RetweetOutlined />
+                          : <RollbackOutlined />
+                      }
+                      disabled={!playStatesRef.current[item.id]}
+                      onClick={() => onToggleLoop(item.id)}
                     />
                     {/* Nut mo modal chinh sua */}
                     <Button
