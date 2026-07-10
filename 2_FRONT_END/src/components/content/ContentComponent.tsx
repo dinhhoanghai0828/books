@@ -9,6 +9,7 @@ import {
   PlusOutlined,
   RetweetOutlined,
   RollbackOutlined,
+  VideoCameraOutlined,
 } from '@ant-design/icons';
 import {
   Button,
@@ -405,8 +406,8 @@ const ContentComponent = ({
               type="link"
               icon={
                 activeVideoItemId === item.id
-                  ? <PauseOutlined style={{ color: '#f5222d' }} />
-                  : <PlayCircleOutlined style={{ color: '#f5222d' }} />
+                  ? <PauseOutlined style={{ color: '#1677ff' }} />
+                  : <VideoCameraOutlined />
               }
               onClick={() => onPlayPauseVideo(item.id, item.startTime, item.endTime)}
             />
@@ -486,57 +487,59 @@ const ContentComponent = ({
             {/* Cot trai: video duy nhat, sticky theo scroll */}
             <Col xs={24} md={10}>
               <div style={{ position: 'sticky', top: 16 }}>
-                <Typography.Title level={3} className="volume-title">
-                  {volumeEngName}
-                </Typography.Title>
-                <Typography.Text className="volume-vi-name">{volumeViName}</Typography.Text>
-
                 {/* The <video> duy nhat dung chung cho ca tap */}
                 <video
                   ref={videoRef}
                   src={`/media/${sharedVideoPath}`}
                   controls
-                  style={{ width: '100%', borderRadius: 8, marginTop: 12 }}
+                  style={{ width: '100%', borderRadius: 8 }}
                 />
-
-                <Typography.Text className="volume-total-sentence" style={{ display: 'block', marginTop: 8 }}>
-                  Bai co tong cong:{' '}
-                  <strong style={{ color: 'red' }}>{contents.length}</strong> cau can hoc
-                </Typography.Text>
               </div>
             </Col>
 
-            {/* Cot phai: danh sach cau co the cuon */}
+            {/* Cot phai: tieu de + danh sach cau cuon doc lap */}
             <Col xs={24} md={14}>
-              {contents.map((item) => (
-                <div
-                  key={item.id}
-                  className="content-item"
-                  style={
-                    activeVideoItemId === item.id
-                      ? { borderLeft: '3px solid #1677ff', paddingLeft: 8 }
-                      : {}
-                  }
-                >
-                  {renderItemContent(item)}
-                </div>
-              ))}
+              <Typography.Title level={3} className="volume-title">
+                {volumeEngName}
+              </Typography.Title>
+              <Typography.Text className="volume-vi-name">{volumeViName}</Typography.Text>
+              <Typography.Text className="volume-total-sentence" style={{ display: 'block', marginBottom: 8 }}>
+                Bai co tong cong:{' '}
+                <strong style={{ color: 'red' }}>{contents.length}</strong> cau can hoc
+              </Typography.Text>
 
-              {/* Tooltip tra nghia tu */}
-              {meaningEnKeywords.length > 0 && meaningViKeywords.length > 0 && (
-                <div
-                  className="meaning-container"
-                  style={{ ...TOOLTIP_STYLE, left: tooltipPosition.x, top: tooltipPosition.y }}
-                >
-                  {/^[a-zA-Z ]+$/.test(window.getSelection()?.toString().trim() || '')
-                    ? meaningEnKeywords.map((word, i) => (
-                        <div key={i}><strong>{word}</strong>: {meaningViKeywords[i]}</div>
-                      ))
-                    : meaningViKeywords.map((word, i) => (
-                        <div key={i}><strong>{word}</strong>: {meaningEnKeywords[i]}</div>
-                      ))}
-                </div>
-              )}
+              {/* Vung cuon doc lap, chieu cao bang video de 2 ben dong deu */}
+              <div style={{ maxHeight: '70vh', overflowY: 'auto', paddingRight: 4 }}>
+                {contents.map((item) => (
+                  <div
+                    key={item.id}
+                    className="content-item"
+                    style={
+                      activeVideoItemId === item.id
+                        ? { borderLeft: '3px solid #1677ff', paddingLeft: 8 }
+                        : {}
+                    }
+                  >
+                    {renderItemContent(item)}
+                  </div>
+                ))}
+
+                {/* Tooltip tra nghia tu */}
+                {meaningEnKeywords.length > 0 && meaningViKeywords.length > 0 && (
+                  <div
+                    className="meaning-container"
+                    style={{ ...TOOLTIP_STYLE, left: tooltipPosition.x, top: tooltipPosition.y }}
+                  >
+                    {/^[a-zA-Z ]+$/.test(window.getSelection()?.toString().trim() || '')
+                      ? meaningEnKeywords.map((word, i) => (
+                          <div key={i}><strong>{word}</strong>: {meaningViKeywords[i]}</div>
+                        ))
+                      : meaningViKeywords.map((word, i) => (
+                          <div key={i}><strong>{word}</strong>: {meaningEnKeywords[i]}</div>
+                        ))}
+                  </div>
+                )}
+              </div>
             </Col>
           </Row>
         ) : (
