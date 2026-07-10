@@ -1,19 +1,20 @@
 import { ContentType } from '@/interfaces/content';
-import { getMeaningWords } from '@/utils/apiService';
+import { getMeaningWords, insertWord } from '@/utils/apiService';
 import {
+  MinusCircleOutlined,
   PauseOutlined,
   PlayCircleOutlined,
+  PlusOutlined,
   RetweetOutlined,
   RollbackOutlined,
   EyeInvisibleOutlined,
   EyeOutlined,
 } from '@ant-design/icons';
-import { Button, Empty, Space, Typography } from 'antd';
+import { Button, Empty, Form, Input, Modal, notification, Space, Typography } from 'antd';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import '../../styles/content.css';
 import debounce from 'lodash.debounce';
 import { useRouter } from 'next/navigation';
-import { Color } from 'antd/es/color-picker';
 
 interface ContentComponentProps {
   contents: ContentType[];
@@ -55,6 +56,60 @@ const ContentComponent = ({
   const [showVietnamese, setShowVietnamese] = useState(true);
   //  Bat tat hightlight tu moi
   const [highlightMissingWords, setHighlightMissingWords] = useState(true);
+
+  // Thêm từ mới modal
+  const [insertModalOpen, setInsertModalOpen] = useState(false);
+  const [insertLoading, setInsertLoading] = useState(false);
+  const [insertForm] = Form.useForm();
+  const [api, contextHolder] = notification.useNotification();
+
+  const handleOpenInsert = () => {
+    insertForm.resetFields();
+    setInsertModalOpen(true);
+  };
+
+  const handleCancelInsert = () => {
+    setInsertModalOpen(false);
+    insertForm.resetFields();
+  };
+
+  const handleInsert = async () => {
+    try {
+      const values = await insertForm.validateFields();
+      const viList: string[] = values.viList
+        .map((item: { vi: string }) => item.vi?.trim())
+        .filter(Boolean);
+
+      if (viList.length === 0) {
+        insertForm.setFields([
+          { name: ['viList', 0, 'vi'], errors: ['Vui lòng nhập ít nhất 1 nghĩa tiếng Việt'] },
+        ]);
+        return;
+      }
+
+      setInsertLoading(true);
+      await insertWord(values.eng.trim(), viList);
+      api.success({
+        message: 'Thêm từ thành công',
+        description: `Đã thêm từ "${values.eng.trim()}" vào từ điển.`,
+        placement: 'topRight',
+        duration: 3,
+        style: { backgroundColor: '#f6ffed', border: '1px solid #b7eb8f' },
+      });
+      handleCancelInsert();
+    } catch (error: any) {
+      if (error?.errorFields) return; // validation error, antd tự hiển thị
+      api.error({
+        message: 'Thêm từ thất bại',
+        description: error.message || 'Đã xảy ra lỗi, vui lòng thử lại.',
+        placement: 'topRight',
+        duration: 4,
+        style: { backgroundColor: '#fff2f0', border: '1px solid #ffccc7' },
+      });
+    } finally {
+      setInsertLoading(false);
+    }
+  };
   useEffect(() => {
     const initialPlayState: Record<string, boolean> = {};
     const initialLoopState: Record<string, boolean> = {};
@@ -172,6 +227,7 @@ const ContentComponent = ({
 
   return (
     <div className="content-container">
+      {contextHolder}
       <Space>
         <Button
           icon={showEnglish ? <EyeInvisibleOutlined /> : <EyeOutlined />}
@@ -194,13 +250,21 @@ const ContentComponent = ({
         >
           {highlightMissingWords ? 'Ẩn từ mới' : 'Từ mới'}
         </Button>
-
         <Button
           type="primary"
           onClick={() => router.push(`/test?volumeSlug=${volumeSlug}`)}
           className="custom-button"
         >
           Kiểm tra
+        </Button>
+        <Button
+          type="primary"
+          icon={<PlusOutlined />}
+          onClick={handleOpenInsert}
+          className="custom-button"
+          style={{ backgroundColor: '#6366f1', borderColor: '#6366f1', color: '#fff' }}
+        >
+          Thêm từ mới
         </Button>
       </Space>
       {contents && contents.length > 0 ? (
@@ -352,6 +416,81 @@ const ContentComponent = ({
       ) : (
         <Empty description="Không có dữ liệu" className="emptyClass" />
       )}
+
+      {/* Modal thêm từ mới */}
+      <Modal
+        title="Thêm từ mới"
+        open={insertModalOpen}
+        onCancel={handleCancelInsert}
+        footer={
+          <div style={{ textAlign: 'center' }}>
+            <Space>
+              <Button onClick={handleCancelInsert}>Hủy</Button>
+              <Button type="primary" loading={insertLoading} onClick={handleInsert}>
+                Thêm mới
+              </Button>
+            </Space>
+          </div>
+        }
+      >
+        <Form form={insertForm} layout="vertical">
+          <Form.Item
+            label="Từ tiếng Anh"
+            name="eng"
+            rules={[{ required: true, message: 'Vui lòng nhập từ tiếng Anh' }]}
+          >
+            <Input placeholder="Nhập từ tiếng Anh..." />
+          </Form.Item>
+
+          <Form.List name="viList" initialValue={[{ vi: '' }]}>
+            {(fields, { add, remove }) => (
+              <>
+                {fields.map((field, index) => (
+                  <Form.Item
+                    key={field.key}
+                    label={index === 0 ? 'Nghĩa tiếng Việt' : ''}
+                    required={index === 0}
+                  >
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                      <Form.Item
+                        {...field}
+                        name={[field.name, 'vi']}
+                        noStyle
+                        rules={
+                          index === 0
+                            ? [{ required: true, message: 'Vui lòng nhập nghĩa tiếng Việt' }]
+                            : []
+                        }
+                      >
+                        <Input
+                          placeholder={`Nghĩa ${index + 1}...`}
+                          style={{ flex: 1, width: '100%' }}
+                        />
+                      </Form.Item>
+                      {fields.length > 1 && (
+                        <MinusCircleOutlined
+                          onClick={() => remove(field.name)}
+                          style={{ color: '#ff4d4f', fontSize: 18, cursor: 'pointer', flexShrink: 0 }}
+                        />
+                      )}
+                    </div>
+                  </Form.Item>
+                ))}
+                <Form.Item>
+                  <Button
+                    type="dashed"
+                    onClick={() => add({ vi: '' })}
+                    icon={<PlusOutlined />}
+                    block
+                  >
+                    Thêm nghĩa
+                  </Button>
+                </Form.Item>
+              </>
+            )}
+          </Form.List>
+        </Form>
+      </Modal>
     </div>
   );
 };

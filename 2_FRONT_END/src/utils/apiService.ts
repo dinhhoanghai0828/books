@@ -249,6 +249,20 @@ export const getChart = async (
   }
 };
 
+// API thêm từ mới
+export const insertWord = async (
+  eng: string,
+  viList: string[]
+): Promise<void> => {
+  try {
+    await apiClient.post('/word/insert', { eng, viList });
+  } catch (error: any) {
+    throw new Error(
+      error.response?.data?.message || error.message || 'Lỗi không xác định'
+    );
+  }
+};
+
 // API cập nhật nội dung
 export const updateContent = async (
   id: string,
