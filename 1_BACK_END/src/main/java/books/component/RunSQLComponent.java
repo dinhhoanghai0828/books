@@ -499,7 +499,12 @@ public class RunSQLComponent {
                         }
 
                         // Append row content
-                        sb.append(",\n");
+                        // Chỉ thêm dấu , nếu KHÔNG phải row đầu tiên sau comment
+                        if (!isNewVolume) {
+                            sb.append(",\n");
+                        } else {
+                            sb.append("\n");
+                        }
                         sb.append("\t('").append(eng).append("','").append(vi).append("','")
                           .append(startTime).append("','").append(endTime).append("','")
                           .append(volumeSlug).append("')");
