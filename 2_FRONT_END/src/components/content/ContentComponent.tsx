@@ -70,16 +70,16 @@ const ContentComponent = ({
 
   // Khi contents load xong va co video -> chuyen sang Video Mode
   useEffect(() => {
-    // if (sharedVideoPath && viewModeRef.current === 'audio') {
-    //   viewModeRef.current = 'video';
-    //   setViewMode('video');
-    //   onViewModeChange?.('video');
-    // } else {
-    //  Mac dinh luon la audio
-    viewModeRef.current = 'audio';
-    setViewMode('audio');
-    onViewModeChange?.('audio');
-    // }
+    if (sharedVideoPath && viewModeRef.current === 'audio') {
+      viewModeRef.current = 'video';
+      setViewMode('video');
+      onViewModeChange?.('video');
+    } else {
+      //  Mac dinh luon la audio
+      viewModeRef.current = 'audio';
+      setViewMode('audio');
+      onViewModeChange?.('audio');
+    }
   }, [sharedVideoPath, onViewModeChange]);
 
   const handleViewModeChange = (mode: ViewMode) => {
@@ -175,6 +175,7 @@ const ContentComponent = ({
     window.scrollTo({ top, behavior: 'smooth' });
   }, []); // khong co dep -> khong bao gio stale
 
+
   // ============================================================
   // EFFECTS
   // ============================================================
@@ -230,7 +231,6 @@ const ContentComponent = ({
           void video.play();
         } else {
           video.pause();
-          videoEndRef.current = 0;
           setActive(null, null);
           setVideoPlaying(false);
         }
