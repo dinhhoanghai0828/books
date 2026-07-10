@@ -1,7 +1,7 @@
 'use client';
 import { getSuggestions } from '@/utils/apiService';
 import { Word } from '@/interfaces/word';
-import { AutoComplete, Button, Col, Layout, Row, Select, Typography } from 'antd';
+import { AutoComplete, Button, Col, Input, Layout, Row, Select, Typography } from 'antd';
 import debounce from 'lodash.debounce';
 import throttle from 'lodash.throttle';
 import { useCallback, useState } from 'react';
@@ -102,10 +102,13 @@ const HomePageSearchComponent = ({
             onClear={() => setSearchValueEn('')}
             options={suggestionsEn.map((item) => ({ value: item }))}
             style={{ width: '100%' }}
-            placeholder="Nhap cau tieng Anh"
-            allowClear
-            onKeyDown={handleKeyDown}
-          />
+          >
+            <Input
+              placeholder="Nhap cau tieng Anh"
+              allowClear
+              onKeyDown={handleKeyDown}
+            />
+          </AutoComplete>
         </Col>
 
         {/* O AutoComplete tim kiem tieng Viet */}
@@ -117,10 +120,13 @@ const HomePageSearchComponent = ({
             onClear={() => setSearchValueVi('')}
             options={suggestionsVi.map((item) => ({ value: item }))}
             style={{ width: '100%' }}
-            placeholder="Nhap cau tieng Viet"
-            allowClear
-            onKeyDown={handleKeyDown}
-          />
+          >
+            <Input
+              placeholder="Nhap cau tieng Viet"
+              allowClear
+              onKeyDown={handleKeyDown}
+            />
+          </AutoComplete>
         </Col>
 
         {/* Nut tim kiem */}
