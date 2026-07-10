@@ -17,7 +17,7 @@ import java.util.*;
 @Repository
 public class ContentAdapterImpl implements ContentAdapter {
     private static final Logger logger = LoggerFactory.getLogger(ContentAdapterImpl.class);
-    private static final String SQL_GET_CONTENTS_BY_VOLUME_SLUG = "SELECT C.*, V.ENG AS VOLUME_ENG, V.VI AS VOLUME_VI, V.AUDIO AS AUDIO FROM CONTENTS C JOIN VOLUMES V ON C.VOLUME_SLUG = V.SLUG WHERE V.SLUG = ?";
+    private static final String SQL_GET_CONTENTS_BY_VOLUME_SLUG = "SELECT C.*, V.ENG AS VOLUME_ENG, V.VI AS VOLUME_VI, V.AUDIO AS AUDIO, V.VIDEO AS VIDEO FROM CONTENTS C JOIN VOLUMES V ON C.VOLUME_SLUG = V.SLUG WHERE V.SLUG = ?";
     private static final String SQL_GET_MISSING_WORDS = "SELECT * FROM MISSING_WORDS";
     private static final String SQL_COUNT_CONTENTS_SEARCH = "SELECT COUNT(*) FROM CONTENTS WHERE 1 = 1 ";
     private static final String SQL_GET_CONTENTS_SEARCH = "SELECT C.*, V.ENG AS VOLUME_ENG, V.VI AS VOLUME_VI, V.AUDIO AS AUDIO, V.CHECKED AS CHECKED, V.NUMBER AS NUMBER, B.ENG AS BOOK_ENG FROM CONTENTS C INNER JOIN VOLUMES V ON C.VOLUME_SLUG = V.SLUG  INNER JOIN BOOKS B ON B.SLUG = V.BOOK_SLUG WHERE 1 = 1 ";
@@ -58,6 +58,7 @@ public class ContentAdapterImpl implements ContentAdapter {
                 content.setVolumeViName(rs.getString("VOLUME_VI"));
                 content.setVolumeEngName(rs.getString("VOLUME_ENG"));
                 content.setAudio(rs.getString("AUDIO"));
+                content.setVideo(rs.getString("VIDEO"));
 
                 // Tách các từ trong nội dung và thêm vào danh sách allWords
                 String[] words = content.getEng().replaceAll("[^a-zA-Z ]", " ").toLowerCase().split("\\s+");
@@ -205,6 +206,7 @@ public class ContentAdapterImpl implements ContentAdapter {
                 content.setVolumeEngName(rs.getString("VOLUME_ENG"));
                 content.setBookEngName(rs.getString("BOOK_ENG") + " " + rs.getString("NUMBER"));
                 content.setAudio(rs.getString("AUDIO"));
+                content.setVideo(rs.getString("VIDEO"));
                 content.setChecked(rs.getString("CHECKED"));
                 contents.add(content);
             }

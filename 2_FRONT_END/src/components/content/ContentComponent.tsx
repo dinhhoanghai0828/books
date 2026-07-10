@@ -9,6 +9,7 @@ import {
   PlusOutlined,
   RetweetOutlined,
   RollbackOutlined,
+  VideoCameraOutlined,
 } from '@ant-design/icons';
 import {
   Button,
@@ -90,6 +91,10 @@ const ContentComponent = ({
 
   // Bat/tat highlight tu moi (missingWords) trong noi dung
   const [highlightMissingWords, setHighlightMissingWords] = useState(true);
+
+  // Trang thai modal xem video cua tung cau
+  const [videoModalOpen, setVideoModalOpen] = useState(false);
+  const [videoSrc, setVideoSrc] = useState('');
 
   // Trang thai modal them tu moi vao tu dien
   const [insertModalOpen, setInsertModalOpen] = useState(false);
@@ -222,6 +227,22 @@ const ContentComponent = ({
     document.addEventListener('selectionchange', handleGetMeaning);
     return () => document.removeEventListener('selectionchange', handleGetMeaning);
   }, [handleGetMeaning]);
+
+  // ============================================================
+  // MODAL VIDEO
+  // ============================================================
+
+  // Mo modal va dat duong dan video
+  const handleOpenVideo = (videoPath: string) => {
+    setVideoSrc(`/media/${videoPath}`);
+    setVideoModalOpen(true);
+  };
+
+  // Dong modal va xoa src de dung phat ngam khi dong
+  const handleCloseVideo = () => {
+    setVideoModalOpen(false);
+    setVideoSrc('');
+  };
 
   // ============================================================
   // MODAL THEM TU MOI
@@ -386,6 +407,14 @@ const ContentComponent = ({
                     disabled={!playStatesRef.current[item.id]}
                     onClick={() => onToggleLoop(item.id, item.startTime, item.endTime)}
                   />
+                  {/* Nut xem video (chi hien khi item co video) */}
+                  {item.video && (
+                    <Button
+                      type="link"
+                      icon={<VideoCameraOutlined />}
+                      onClick={() => handleOpenVideo(item.video!)}
+                    />
+                  )}
                 </Space>
               </div>
 
@@ -422,6 +451,24 @@ const ContentComponent = ({
       ) : (
         <Empty description="Khong co du lieu" className="emptyClass" />
       )}
+
+      {/* Modal xem video */}
+      <Modal
+        title="Xem video"
+        open={videoModalOpen}
+        onCancel={handleCloseVideo}
+        footer={null}
+        width={800}
+        centered
+        destroyOnClose
+      >
+        <video
+          src={videoSrc}
+          controls
+          autoPlay
+          style={{ width: '100%', borderRadius: 8 }}
+        />
+      </Modal>
 
       {/* Modal them tu moi vao tu dien */}
       <Modal

@@ -7,6 +7,7 @@ import {
   PlayCircleOutlined,
   RetweetOutlined,
   RollbackOutlined,
+  VideoCameraOutlined,
 } from '@ant-design/icons';
 import {
   Button,
@@ -114,6 +115,10 @@ const HomePageContentComponent = ({
   const [editLoading, setEditLoading] = useState(false);
   const [editForm] = Form.useForm();
   const [notifApi, notifContextHolder] = notification.useNotification();
+
+  // Trang thai modal xem video
+  const [videoModalOpen, setVideoModalOpen] = useState(false);
+  const [videoSrc, setVideoSrc] = useState('');
 
   // ============================================================
   // EFFECTS
@@ -311,6 +316,18 @@ const HomePageContentComponent = ({
   // EDIT MODAL HANDLERS
   // ============================================================
 
+  // Mo modal xem video cua item
+  const handleOpenVideo = (videoPath: string) => {
+    setVideoSrc(`/media/${videoPath}`);
+    setVideoModalOpen(true);
+  };
+
+  // Dong modal video va dung phat de tranh phat ngam khi dong
+  const handleCloseVideo = () => {
+    setVideoModalOpen(false);
+    setVideoSrc('');
+  };
+
   // Mo modal chinh sua voi du lieu cua item duoc chon
   const handleOpenEdit = (item: ContentType) => {
     setEditingItem(item);
@@ -401,6 +418,14 @@ const HomePageContentComponent = ({
                       disabled={!playStatesRef.current[item.id]}
                       onClick={() => onToggleLoop(item.id)}
                     />
+                    {/* Nut xem video (chi hien khi item co video) */}
+                    {item.video && (
+                      <Button
+                        type="link"
+                        icon={<VideoCameraOutlined />}
+                        onClick={() => handleOpenVideo(item.video!)}
+                      />
+                    )}
                     {/* Nut mo modal chinh sua */}
                     <Button
                       type="link"
@@ -443,6 +468,24 @@ const HomePageContentComponent = ({
       ) : (
         <Empty description="Khong co du lieu" className="emptyClass" />
       )}
+
+      {/* Modal xem video */}
+      <Modal
+        title="Xem video"
+        open={videoModalOpen}
+        onCancel={handleCloseVideo}
+        footer={null}
+        width={800}
+        centered
+        destroyOnClose
+      >
+        <video
+          src={videoSrc}
+          controls
+          autoPlay
+          style={{ width: '100%', borderRadius: 8 }}
+        />
+      </Modal>
 
       {/* Modal chinh sua noi dung */}
       <Modal
