@@ -11,9 +11,6 @@ import org.springframework.stereotype.Component;
 
 import javax.sql.DataSource;
 import java.io.*;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -66,26 +63,31 @@ public class RunSQLComponent {
     //    @PostConstruct
     public void insertContent() throws SQLException, IOException {
         dataSource = getDataSource();
+        // Lấy danh sách BOOK_SLUG có contents trong DB
+        String sqlGetBooks = "SELECT DISTINCT B.SLUG AS BOOK_SLUG FROM BOOKS B " +
+                "INNER JOIN VOLUMES V ON V.BOOK_SLUG = B.SLUG " +
+                "INNER JOIN CONTENTS C ON C.VOLUME_SLUG = V.SLUG " +
+                "ORDER BY B.SLUG";
+
         List<String> scripts = new ArrayList<>();
-        //	Doc SQL tu cac file
-        scripts.add(path + "2_SQL_CREATE_DATA.sql");
-        scripts.add(path + "APP_ESL_FAST.sql");
-        scripts.add(path + "APP_BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING.sql");
-        scripts.add(path + "APP_BASIC_ENGLISH_BASIC_ENGLISH_02_PEPPA_PIG.sql");
-        scripts.add(path + "APP_BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS.sql");
-        scripts.add(path + "APP_BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY.sql");
-        scripts.add(path + "APP_CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS.sql");
-        scripts.add(path + "APP_CONVERSATIONS_ACADEMIC_CONVERSATION_02_ALL_EARS_ENGLISH.sql");
-        scripts.add(path + "APP_CONVERSATIONS DAILY CONVERSATION 01 DHAR MANN STUDIO.sql");
-        scripts.add(path + "APP_NEWS_DAILY_NEW_01_ECONOMIST.sql");
-        scripts.add(path + "APP_NEWS_DAILY_NEW_02_VOA.sql");
-        scripts.add(path + "APP_STORIES_ADULT_STORY_01_ANIMATERS.sql");
-        scripts.add(path + "APP_STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE.sql");
-        scripts.add(path + "APP_STORIES_HORROR_STORY_01_NIGHTMARE_TALES.sql");
-        scripts.add(path + "APP_STORIES_INSPIRATIONAL_STORY_01_THE_FICTIONIST.sql");
-        scripts.add(path + "APP_STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE.sql");
-        scripts.add(path + "APP_STORIES_TEEN_STORY_01_LIFE_DIARY_ANIMATED.sql");
-        scripts.add(path + "APP_STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW.sql");
+        Connection conQuery = dataSource.getConnection();
+        try {
+            PreparedStatement pstmt = conQuery.prepareStatement(sqlGetBooks);
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                String bookSlug = rs.getString("BOOK_SLUG");
+                String fileNameKey = bookSlug.toUpperCase().replace("-", "_");
+                String filePath = path + "APP_" + fileNameKey + ".sql";
+                scripts.add(filePath);
+            }
+            DBUtils.closeAll("insertContentFromExport-query", null, pstmt, rs);
+        } finally {
+            DBUtils.closeAll("insertContentFromExport-query-con", conQuery, null, null);
+        }
+
+        if (scripts.isEmpty()) {
+            System.out.println("insertContentFromExport: no APP_*.sql files found from DB.");
+        };
 
         //  Tong hop ra file Z_SQL_RESULTS_SENTENCE.sql
         String outputFilePath = path + "SUMMARY.sql";
@@ -371,6 +373,38 @@ public class RunSQLComponent {
                 connection.close();
             }
         }
+    }
+
+    /**
+     * Wrapper của createWordTableTemp + generalWord, trả về thống kê số lượng từ trước/sau.
+     * Map keys: BEFORE, AFTER, ADDED
+     */
+    public Map<String, Integer> wordGeneralWithStats() throws SQLException {
+        dataSource = getDataSource();
+        JdbcTemplate jdbc = jdbcTemplate();
+
+        // Đếm trước
+        Integer before = jdbc.queryForObject("SELECT COUNT(*) FROM WORDS", Integer.class);
+        if (before == null) before = 0;
+
+        // Chạy nghiệp vụ
+        createWordTableTemp();
+        try {
+            generalWord();
+        } catch (Exception e) {
+            throw new SQLException("generalWord failed: " + e.getMessage(), e);
+        }
+
+        // Đếm sau
+        Integer after = jdbc.queryForObject("SELECT COUNT(*) FROM WORDS", Integer.class);
+        if (after == null) after = 0;
+
+        Map<String, Integer> stats = new LinkedHashMap<>();
+        stats.put("BEFORE", before);
+        stats.put("AFTER",  after);
+        stats.put("ADDED",  after - before);
+        System.out.println("wordGeneralWithStats: before=" + before + " after=" + after + " added=" + (after - before));
+        return stats;
     }
 
     /**

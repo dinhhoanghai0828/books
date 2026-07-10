@@ -1,7 +1,7 @@
 'use client';
-import { getSuggestions } from '@/utils/apiService';
+import { getSuggestions, runContentsExport, runWordGeneral } from '@/utils/apiService';
 import { Word } from '@/interfaces/word';
-import { AutoComplete, Button, Col, Input, Layout, Row, Select, Typography } from 'antd';
+import { App, AutoComplete, Button, Col, Input, Layout, Row, Select, Typography } from 'antd';
 import debounce from 'lodash.debounce';
 import throttle from 'lodash.throttle';
 import { useCallback, useState } from 'react';
@@ -28,11 +28,13 @@ const HomePageSearchComponent = ({
   onSearch,
   onSelectChange,
 }: HomePageSearchComponentProps) => {
+  const { message } = App.useApp();
   const [searchValueEn, setSearchValueEn] = useState('');
   const [searchValueVi, setSearchValueVi] = useState('');
   const [suggestionsEn, setSuggestionsEn] = useState<string[]>([]);
   const [suggestionsVi, setSuggestionsVi] = useState<string[]>([]);
   const [selectedSpeed, setSelectedSpeed] = useState('100%');
+  const [loadingTonghop, setLoadingTonghop] = useState(false);
 
   // Lay goi y tu tieng Anh (debounce 300ms)
   const debounceFetchEn = useCallback(
@@ -86,6 +88,21 @@ const HomePageSearchComponent = ({
   const handleSpeedChange = (value: string) => {
     setSelectedSpeed(value);
     onSelectChange(value);
+  };
+
+  // Goi lan luot 2 API: word-general roi contents-export
+  const handleTonghop = async () => {
+    setLoadingTonghop(true);
+    try {
+      const msgWord    = await runWordGeneral();
+      const msgExport  = await runContentsExport();
+      message.success(msgWord, 4);
+      message.success(msgExport, 4);
+    } catch (error: any) {
+      message.error('Tổng hợp thất bại: ' + error.message);
+    } finally {
+      setLoadingTonghop(false);
+    }
   };
 
   return (
@@ -145,6 +162,19 @@ const HomePageSearchComponent = ({
             style={{ width: '100%' }}
             options={SPEED_OPTIONS}
           />
+        </Col>
+
+        {/* Nut tong hop: goi word-general + contents-export */}
+        <Col span={4} xs={12} sm={4} md={4} lg={3}>
+          <Button
+            size="large"
+            onClick={handleTonghop}
+            loading={loadingTonghop}
+            style={{ backgroundColor: '#fa8c16', borderColor: '#fa8c16', color: '#fff' }}
+            block
+          >
+            Tổng hợp
+          </Button>
         </Col>
       </Row>
     </Content>

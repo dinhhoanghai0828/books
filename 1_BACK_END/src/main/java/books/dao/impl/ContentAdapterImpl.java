@@ -21,7 +21,7 @@ public class ContentAdapterImpl implements ContentAdapter {
     private static final String SQL_GET_MISSING_WORDS = "SELECT * FROM MISSING_WORDS";
     private static final String SQL_COUNT_CONTENTS_SEARCH = "SELECT COUNT(*) FROM CONTENTS WHERE 1 = 1 ";
     private static final String SQL_GET_CONTENTS_SEARCH = "SELECT C.*, V.ENG AS VOLUME_ENG, V.VI AS VOLUME_VI, V.AUDIO AS AUDIO, V.VIDEO AS VIDEO, V.CHECKED AS CHECKED, V.NUMBER AS NUMBER, B.ENG AS BOOK_ENG FROM CONTENTS C INNER JOIN VOLUMES V ON C.VOLUME_SLUG = V.SLUG  INNER JOIN BOOKS B ON B.SLUG = V.BOOK_SLUG WHERE 1 = 1 ";
-    private static final String SQL_UPDATE_CONTENT = "UPDATE CONTENTS SET ENG = ?, VI = ? WHERE ID = ?";
+    private static final String SQL_UPDATE_CONTENT = "UPDATE CONTENTS SET ENG = ?, VI = ?, START_TIME = ?, END_TIME = ? WHERE ID = ?";
 
     @Override
     public List<Content> getContentByVolumeSlug(String volumeSlug) throws Exception {
@@ -221,7 +221,7 @@ public class ContentAdapterImpl implements ContentAdapter {
     }
 
     @Override
-    public boolean updateContent(Long id, String eng, String vi) throws Exception {
+    public boolean updateContent(Long id, String eng, String vi, String startTime, String endTime) throws Exception {
         String thisMethod = "ContentAdapterImpl.updateContent";
         Connection con = null;
         PreparedStatement pstmt = null;
@@ -230,7 +230,9 @@ public class ContentAdapterImpl implements ContentAdapter {
             pstmt = DBUtils.prepareStatement(con, SQL_UPDATE_CONTENT);
             pstmt.setString(1, eng);
             pstmt.setString(2, vi);
-            pstmt.setLong(3, id);
+            pstmt.setString(3, startTime);
+            pstmt.setString(4, endTime);
+            pstmt.setLong(5, id);
             int rowsAffected = pstmt.executeUpdate();
             con.commit();
             return rowsAffected > 0;

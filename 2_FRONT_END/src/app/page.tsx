@@ -5,7 +5,7 @@ import PaginationComponent from '@/components/pagination/PaginationComponent';
 import { ContentType } from '@/interfaces/content';
 import { getContentSearch, getHighLightWords } from '@/utils/apiService';
 import { useHasMounted } from '@/utils/customHook';
-import { Layout } from 'antd';
+import { App, Layout } from 'antd';
 import { Content } from 'antd/es/layout/layout';
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
@@ -82,28 +82,30 @@ const HomePage = () => {
   if (!hasMounted) return null;
 
   return (
-    <Layout style={{ minHeight: '100vh' }}>
-      <Content className="contentClass">
-        <HomePageSearchComponent
-          onSearch={handleSearch}
-          onSelectChange={handleSelectChange}
-        />
-        <HomePageContentComponent
-          contents={contents}
-          playbackSpeed={selectedSpeed}
-          searchValueEn={searchValueEn}
-          searchValueVi={searchValueVi}
-          highlightedEnKeywords={highlightedEnKeywords}
-          highlightedViKeywords={highlightedViKeywords}
-        />
-        <PaginationComponent
-          currentPage={currentPage}
-          pageSize={pageSize}
-          total={totalItems}
-          onPageChange={handlePageChange}
-        />
-      </Content>
-    </Layout>
+    <App>
+      <Layout style={{ minHeight: '100vh' }}>
+        <Content className="contentClass">
+          <HomePageSearchComponent
+            onSearch={handleSearch}
+            onSelectChange={handleSelectChange}
+          />
+          <HomePageContentComponent
+            contents={contents}
+            playbackSpeed={selectedSpeed}
+            searchValueEn={searchValueEn}
+            searchValueVi={searchValueVi}
+            highlightedEnKeywords={highlightedEnKeywords}
+            highlightedViKeywords={highlightedViKeywords}
+          />
+          <PaginationComponent
+            currentPage={currentPage}
+            pageSize={pageSize}
+            total={totalItems}
+            onPageChange={handlePageChange}
+          />
+        </Content>
+      </Layout>
+    </App>
   );
 };
 

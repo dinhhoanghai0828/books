@@ -284,3 +284,27 @@ export const getTests = async (
     throw new Error(getErrorMessage(error));
   }
 };
+
+// ============================================================
+// RUN SQL
+// ============================================================
+
+// Tong hop bang WORDS, ghi ra file 3_SQL_ENG_WORDS.sql
+export const runWordGeneral = async (): Promise<string> => {
+  try {
+    const response = await apiClient.post('/run-sql/word-general');
+    return response.data?.message ?? 'word-general success';
+  } catch (error: any) {
+    throw new Error(getErrorMessage(error));
+  }
+};
+
+// Doc CONTENTS tu DB, ghi ra cac file APP_*.sql trong 3_DATABASE
+export const runContentsExport = async (): Promise<string> => {
+  try {
+    const response = await apiClient.post('/run-sql/contents-export');
+    return response.data?.message ?? 'contents-export success';
+  } catch (error: any) {
+    throw new Error(getErrorMessage(error));
+  }
+};

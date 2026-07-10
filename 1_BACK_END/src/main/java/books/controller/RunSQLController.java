@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @CrossOrigin("*")
@@ -27,13 +28,17 @@ public class RunSQLController {
     /**
      * API 1: Tương đương RunSQLWordGeneralService.main()
      * Tạo lại bảng WORDS2 từ WORDS, rồi tổng hợp ra file 3_SQL_ENG_WORDS.sql
+     * Trả về thống kê: số từ trước, sau, và số từ mới tăng thêm
      */
     @PostMapping("/word-general")
     public ResponseEntity<?> wordGeneral() {
         try {
-            runSQLComponent.createWordTableTemp();
-            runSQLComponent.generalWord();
-            return new ResponseEntity<>(new BaseResponse("00", "word-general success"), HttpStatus.OK);
+            Map<String, Integer> stats = runSQLComponent.wordGeneralWithStats();
+            int before = stats.get("BEFORE");
+            int after  = stats.get("AFTER");
+            int added  = stats.get("ADDED");
+            String message = "word-general success. Trước: " + before + " từ | Sau: " + after + " từ | Tăng thêm: " + added + " từ mới";
+            return new ResponseEntity<>(new BaseResponse("00", message), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(new BaseResponse("99", "word-general failed: " + e.getMessage()), HttpStatus.INTERNAL_SERVER_ERROR);
         }

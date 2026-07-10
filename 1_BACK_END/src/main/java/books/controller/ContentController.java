@@ -64,7 +64,10 @@ public class ContentController {
     @PutMapping("/update")
     public ResponseEntity<?> updateContent(@RequestBody UpdateContentRequest request) {
         try {
-            boolean success = contentService.updateContent(request.getId(), request.getEng(), request.getVi());
+            boolean success = contentService.updateContent(
+                    request.getId(), request.getEng(), request.getVi(),
+                    request.getStartTime(), request.getEndTime()
+            );
             if (success) {
                 return new ResponseEntity<>(new BaseResponse("00", "success"), HttpStatus.OK);
             } else {

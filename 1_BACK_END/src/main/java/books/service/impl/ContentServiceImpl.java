@@ -46,7 +46,7 @@ public class ContentServiceImpl implements ContentService {
     }
 
     @Override
-    public boolean updateContent(Long id, String eng, String vi) throws Exception {
-        return contentAdapter.updateContent(id, eng, vi);
+    public boolean updateContent(Long id, String eng, String vi, String startTime, String endTime) throws Exception {
+        return contentAdapter.updateContent(id, eng, vi, startTime, endTime);
     }
 }
