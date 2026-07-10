@@ -1,12 +1,10 @@
 package books.controller;
 
 import books.dto.ContentDTO;
-import books.dto.VolumeDTO;
-//import books.request.UpdateContentRequest;
-//import books.response.BaseResponse;
+import books.request.UpdateContentRequest;
+import books.response.BaseResponse;
 import books.response.ContentResponse;
 import books.response.PaginationResponse;
-import books.service.interfaces.BookService;
 import books.service.interfaces.ContentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
@@ -14,10 +12,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 @RestController
 @CrossOrigin("*")
@@ -65,17 +61,17 @@ public class ContentController {
         }
     }
 
-//    @PutMapping("/update")
-//    public ResponseEntity<?> updateContent(@RequestBody UpdateContentRequest request) {
-//        try {
-//            boolean success = contentService.updateContent(request.getId(), request.getEng(), request.getVi());
-//            if (success) {
-//                return new ResponseEntity<>(new BaseResponse("00", "success"), HttpStatus.OK);
-//            } else {
-//                return new ResponseEntity<>(new BaseResponse("99", "failed"), HttpStatus.OK);
-//            }
-//        } catch (Exception e) {
-//            return new ResponseEntity<>(new BaseResponse("99", "failed"), HttpStatus.OK);
-//        }
-//    }
+    @PutMapping("/update")
+    public ResponseEntity<?> updateContent(@RequestBody UpdateContentRequest request) {
+        try {
+            boolean success = contentService.updateContent(request.getId(), request.getEng(), request.getVi());
+            if (success) {
+                return new ResponseEntity<>(new BaseResponse("00", "success"), HttpStatus.OK);
+            } else {
+                return new ResponseEntity<>(new BaseResponse("99", "failed"), HttpStatus.OK);
+            }
+        } catch (Exception e) {
+            return new ResponseEntity<>(new BaseResponse("99", "failed"), HttpStatus.OK);
+        }
+    }
 }

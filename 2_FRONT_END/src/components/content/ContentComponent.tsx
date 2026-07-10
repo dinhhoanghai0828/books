@@ -216,12 +216,12 @@ const ContentComponent = ({
     return () => video.removeEventListener('timeupdate', handleTimeUpdate);
   }, [contents]);
 
-  // Auto-scroll cau dang phat audio vao view
+  // Auto-scroll cau dang phat audio len dau view
   useEffect(() => {
     if (activeAudioItemId) {
       itemRefsRef.current[activeAudioItemId]?.scrollIntoView({
         behavior: 'smooth',
-        block: 'nearest',
+        block: 'start',
       });
     }
   }, [activeAudioItemId]);
@@ -259,8 +259,9 @@ const ContentComponent = ({
   // ============================================================
 
   // Bat/dung audio cua 1 item:
-  // - Dang phat: dung lai, xoa highlight
-  // - Chua phat: dat highlight, phat audio moi
+  // - Dang phat item nay: dung lai, xoa highlight
+  // - Phat item moi: goi handleToggleAudio voi itemId moi ->
+  //   AudioComponent nhan itemId thay doi, useEffect re-run, seek va phat dung doan
   const onPlayPauseAudio = useCallback(
     (itemId: string, startTime: string, endTime: string) => {
       const isCurrentlyPlaying = playStatesRef.current[itemId];
@@ -271,14 +272,18 @@ const ContentComponent = ({
       });
 
       if (isCurrentlyPlaying) {
+        // Dang phat item nay -> dung lai
         loopStatesRef.current[itemId] = false;
         setActiveAudioItemId(null);
         handlePauseAudio(true);
       } else {
+        // Phat item moi:
+        // handleToggleAudio set itemId moi o parent -> AudioComponent re-run useEffect
+        // handlePlayAudio dam bao isPlaying=true
         loopStatesRef.current[itemId] = false;
         setActiveAudioItemId(itemId);
-        handlePlayAudio(startTime, endTime);
-        handleToggleAudio(itemId, startTime, endTime, false);
+        handleToggleAudio(itemId, startTime, endTime, false); // doi itemId truoc
+        handlePlayAudio(startTime, endTime);                  // isPlaying=true sau
       }
 
       forceRender();
