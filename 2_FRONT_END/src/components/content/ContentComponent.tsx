@@ -59,6 +59,15 @@ const TOOLTIP_STYLE: React.CSSProperties = {
   transition: 'transform 0.2s ease-out',
 };
 
+// Style highlight khi cau dang duoc phat (audio hoac video)
+const ACTIVE_ITEM_STYLE: React.CSSProperties = {
+  borderLeft: '4px solid #1677ff',
+  paddingLeft: 10,
+  backgroundColor: '#e6f4ff',
+  borderRadius: 6,
+  transition: 'background-color 0.3s ease',
+};
+
 // ============================================================
 // HELPERS
 // ============================================================
@@ -68,6 +77,17 @@ const parseTimeToSeconds = (time: string): number => {
   const [h, m, s] = time.split(':').map(Number);
   return h * 3600 + m * 60 + s;
 };
+
+// Tim item trong danh sach contents co startTime <= currentTime < endTime
+const findActiveItem = (
+  contents: ContentType[],
+  currentTime: number
+): ContentType | undefined =>
+  contents.find((item) => {
+    const start = parseTimeToSeconds(item.startTime);
+    const end = parseTimeToSeconds(item.endTime);
+    return currentTime >= start && currentTime < end;
+  });
 
 // ============================================================
 // COMPONENT
@@ -90,7 +110,7 @@ const ContentComponent = ({
   // Ref tro den the <video> duy nhat dung chung cho toan tap
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
-  // Luu endTime (so giay) cua doan dang phat de xu ly trong timeupdate listener
+  // Luu startTime/endTime (so giay) cua doan video dang phat de xu ly trong timeupdate
   const videoEndRef = useRef<number>(0);
 
   // Dung ref thay vi state de tranh re-render khong can thiet khi doi trang thai play/loop
@@ -101,8 +121,14 @@ const ContentComponent = ({
   const [, setRenderCount] = useState(0);
   const forceRender = () => setRenderCount((c) => c + 1);
 
-  // Trang thai item dang phat tren video (de highlight hang active)
+  // ID cau dang duoc highlight boi audio (set khi click play, clear khi dung)
+  const [activeAudioItemId, setActiveAudioItemId] = useState<string | null>(null);
+
+  // ID cau dang duoc highlight boi video (tu dong detect theo currentTime)
   const [activeVideoItemId, setActiveVideoItemId] = useState<string | null>(null);
+
+  // Ref tro den tung hang noi dung de auto-scroll khi cau thay doi
+  const itemRefsRef = useRef<Record<string, HTMLDivElement | null>>({});
 
   // Trang thai tooltip tra nghia tu
   const [meaningEnKeywords, setMeaningEnKeywords] = useState<string[]>([]);
@@ -138,36 +164,67 @@ const ContentComponent = ({
     loopStatesRef.current = loopState;
   }, [contents]);
 
-  // Dang ky timeupdate listener 1 lan duy nhat cho video dung chung.
-  // Khi currentTime vuot videoEndRef: dung video, reset trang thai active
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    const handleTimeUpdate = () => {
-      if (videoEndRef.current > 0 && video.currentTime >= videoEndRef.current) {
-        video.pause();
-        videoEndRef.current = 0;
-        setActiveVideoItemId(null);
-      }
-    };
-
-    video.addEventListener('timeupdate', handleTimeUpdate);
-    return () => video.removeEventListener('timeupdate', handleTimeUpdate);
-  }, []);
-
   // Theo doi isPlaying tu parent:
-  // Khi audio ket thuc (isPlaying: true -> false), reset tat ca icon ve trang thai dung
+  // Khi audio ket thuc (isPlaying: true -> false), reset tat ca icon + xoa highlight audio
   const prevIsPlayingRef = useRef(false);
   useEffect(() => {
     const wasPlaying = prevIsPlayingRef.current;
     if (wasPlaying && !isPlaying) {
       Object.keys(playStatesRef.current).forEach((k) => { playStatesRef.current[k] = false; });
       Object.keys(loopStatesRef.current).forEach((k) => { loopStatesRef.current[k] = false; });
+      setActiveAudioItemId(null);
       forceRender();
     }
     prevIsPlayingRef.current = isPlaying;
   }, [isPlaying]);
+
+  // Dang ky timeupdate listener 1 lan duy nhat cho video dung chung.
+  // Moi frame: tim cau tuong ung voi currentTime, highlight + auto-scroll.
+  // Khi vuot videoEndRef: dung video va reset highlight.
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const handleTimeUpdate = () => {
+      const currentTime = video.currentTime;
+
+      // Dung khi den endTime cua doan dang phat
+      if (videoEndRef.current > 0 && currentTime >= videoEndRef.current) {
+        video.pause();
+        videoEndRef.current = 0;
+        setActiveVideoItemId(null);
+        return;
+      }
+
+      // Tim cau dang chay theo currentTime va highlight
+      const activeItem = findActiveItem(contents, currentTime);
+      if (activeItem) {
+        setActiveVideoItemId((prev) => {
+          if (prev !== activeItem.id) {
+            // Cau moi: scroll no vao view trong vung cuon ben phai
+            itemRefsRef.current[activeItem.id]?.scrollIntoView({
+              behavior: 'smooth',
+              block: 'nearest',
+            });
+          }
+          return activeItem.id;
+        });
+      }
+    };
+
+    video.addEventListener('timeupdate', handleTimeUpdate);
+    return () => video.removeEventListener('timeupdate', handleTimeUpdate);
+  }, [contents]);
+
+  // Auto-scroll cau dang phat audio vao view
+  useEffect(() => {
+    if (activeAudioItemId) {
+      itemRefsRef.current[activeAudioItemId]?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'nearest',
+      });
+    }
+  }, [activeAudioItemId]);
 
   // ============================================================
   // VIDEO HANDLER
@@ -175,24 +232,22 @@ const ContentComponent = ({
 
   // Seek video dung chung den doan cua item duoc click.
   // Neu item nay dang phat: dung lai.
-  // Neu item khac: seek den startTime va bat dau phat.
+  // Neu item khac hoac video dang dung: seek den startTime va bat dau phat.
   const onPlayPauseVideo = useCallback(
     (itemId: string, startTime: string, endTime: string) => {
       const video = videoRef.current;
       if (!video) return;
 
       if (activeVideoItemId === itemId && !video.paused) {
-        // Dang phat item nay -> dung lai
+        // Dang phat item nay -> dung lai, giu highlight vi nguoi dung tu dung
         video.pause();
         videoEndRef.current = 0;
-        setActiveVideoItemId(null);
         return;
       }
 
       // Seek den startTime cua item moi va phat
-      const start = parseTimeToSeconds(startTime);
       videoEndRef.current = parseTimeToSeconds(endTime);
-      video.currentTime = start;
+      video.currentTime = parseTimeToSeconds(startTime);
       video.play();
       setActiveVideoItemId(itemId);
     },
@@ -204,8 +259,8 @@ const ContentComponent = ({
   // ============================================================
 
   // Bat/dung audio cua 1 item:
-  // - Dang phat: dung lai, reset loop
-  // - Chua phat: dung item khac (neu co), phat item moi
+  // - Dang phat: dung lai, xoa highlight
+  // - Chua phat: dat highlight, phat audio moi
   const onPlayPauseAudio = useCallback(
     (itemId: string, startTime: string, endTime: string) => {
       const isCurrentlyPlaying = playStatesRef.current[itemId];
@@ -217,9 +272,11 @@ const ContentComponent = ({
 
       if (isCurrentlyPlaying) {
         loopStatesRef.current[itemId] = false;
+        setActiveAudioItemId(null);
         handlePauseAudio(true);
       } else {
         loopStatesRef.current[itemId] = false;
+        setActiveAudioItemId(itemId);
         handlePlayAudio(startTime, endTime);
         handleToggleAudio(itemId, startTime, endTime, false);
       }
@@ -300,19 +357,16 @@ const ContentComponent = ({
   // MODAL THEM TU MOI
   // ============================================================
 
-  // Mo modal them tu, reset form truoc khi hien
   const handleOpenInsert = () => {
     insertForm.resetFields();
     setInsertModalOpen(true);
   };
 
-  // Dong modal va reset form
   const handleCancelInsert = () => {
     setInsertModalOpen(false);
     insertForm.resetFields();
   };
 
-  // Validate va gui yeu cau them tu moi vao tu dien
   const handleInsert = async () => {
     try {
       const values = await insertForm.validateFields();
@@ -354,17 +408,19 @@ const ContentComponent = ({
   };
 
   // ============================================================
-  // RENDER NOI DUNG TUNG CAU (cot phai hoac toan bo neu khong co video)
+  // RENDER NOI DUNG TUNG CAU
+  // isActive: cau nay dang duoc phat (audio hoac video) -> highlight toan bo hang
   // ============================================================
 
-  const renderItemContent = (item: ContentType) => (
+  const renderItemContent = (item: ContentType, isActive: boolean) => (
     <div>
-      {/* Dong tieng Anh + nut play audio + nut loop + (neu co video) nut play video */}
+      {/* Dong tieng Anh + nut play audio + nut loop + nut play video */}
       <div className="eng-line">
         <div style={{ visibility: showEnglish ? 'visible' : 'hidden' }}>
           <Typography.Text
             strong
             className="engClass"
+            style={isActive ? { color: '#1677ff' } : {}}
             onMouseUp={(e) => { e.stopPropagation(); handleGetMeaning(); }}
             onTouchEnd={(e) => { e.stopPropagation(); handleGetMeaning(); }}
           >
@@ -405,7 +461,7 @@ const ContentComponent = ({
             <Button
               type="link"
               icon={
-                activeVideoItemId === item.id
+                activeVideoItemId === item.id && videoRef.current && !videoRef.current.paused
                   ? <PauseOutlined style={{ color: '#1677ff' }} />
                   : <VideoCameraOutlined />
               }
@@ -420,6 +476,7 @@ const ContentComponent = ({
         <Typography.Text
           strong
           className="viClass"
+          style={isActive ? { color: '#1677ff' } : {}}
           onMouseUp={(e) => { e.stopPropagation(); handleGetMeaning(); }}
           onTouchEnd={(e) => { e.stopPropagation(); handleGetMeaning(); }}
         >
@@ -429,6 +486,49 @@ const ContentComponent = ({
     </div>
   );
 
+  // Tong hop: cau duoc coi la active neu dang duoc phat boi audio HOAC video
+  const getIsActive = (itemId: string) =>
+    activeAudioItemId === itemId || activeVideoItemId === itemId;
+
+  // ============================================================
+  // RENDER DANH SACH CAU (dung chung cho ca 2 layout)
+  // ============================================================
+
+  const renderContentList = () =>
+    contents.map((item) => {
+      const isActive = getIsActive(item.id);
+      return (
+        <div
+          key={item.id}
+          ref={(el) => { itemRefsRef.current[item.id] = el; }}
+          className="content-item"
+          style={isActive ? ACTIVE_ITEM_STYLE : {}}
+        >
+          {renderItemContent(item, isActive)}
+        </div>
+      );
+    });
+
+  // ============================================================
+  // RENDER TOOLTIP
+  // ============================================================
+
+  const renderTooltip = () =>
+    meaningEnKeywords.length > 0 && meaningViKeywords.length > 0 ? (
+      <div
+        className="meaning-container"
+        style={{ ...TOOLTIP_STYLE, left: tooltipPosition.x, top: tooltipPosition.y }}
+      >
+        {/^[a-zA-Z ]+$/.test(window.getSelection()?.toString().trim() || '')
+          ? meaningEnKeywords.map((word, i) => (
+              <div key={i}><strong>{word}</strong>: {meaningViKeywords[i]}</div>
+            ))
+          : meaningViKeywords.map((word, i) => (
+              <div key={i}><strong>{word}</strong>: {meaningEnKeywords[i]}</div>
+            ))}
+      </div>
+    ) : null;
+
   // ============================================================
   // RENDER
   // ============================================================
@@ -437,7 +537,7 @@ const ContentComponent = ({
     <div className="content-container">
       {notifContextHolder}
 
-      {/* Thanh cong cu: an/hien van ban, highlight tu moi, kiem tra, them tu */}
+      {/* Thanh cong cu */}
       <Space>
         <Button
           icon={showEnglish ? <EyeInvisibleOutlined /> : <EyeOutlined />}
@@ -479,15 +579,14 @@ const ContentComponent = ({
       </Space>
 
       {contents && contents.length > 0 ? (
-        // Layout chinh: neu tap co video thi chia 2 cot (video trai co dinh, noi dung phai)
-        // neu tap khong co video thi hien thi 1 cot binh thuong
         sharedVideoPath ? (
+          // ── Layout 2 cot: tap co video ──────────────────────────────
           <Row gutter={24} align="top" style={{ marginTop: 16 }}>
 
-            {/* Cot trai: video duy nhat, sticky theo scroll */}
+            {/* Cot trai: video sticky */}
             <Col xs={24} md={10}>
               <div style={{ position: 'sticky', top: 16 }}>
-                {/* The <video> duy nhat dung chung cho ca tap */}
+                {/* 1 the <video> duy nhat dung chung cho ca tap */}
                 <video
                   ref={videoRef}
                   src={`/media/${sharedVideoPath}`}
@@ -508,42 +607,15 @@ const ContentComponent = ({
                 <strong style={{ color: 'red' }}>{contents.length}</strong> cau can hoc
               </Typography.Text>
 
-              {/* Vung cuon doc lap, chieu cao bang video de 2 ben dong deu */}
+              {/* Vung cuon doc lap de danh sach luon thay doi theo video */}
               <div style={{ maxHeight: '70vh', overflowY: 'auto', paddingRight: 4 }}>
-                {contents.map((item) => (
-                  <div
-                    key={item.id}
-                    className="content-item"
-                    style={
-                      activeVideoItemId === item.id
-                        ? { borderLeft: '3px solid #1677ff', paddingLeft: 8 }
-                        : {}
-                    }
-                  >
-                    {renderItemContent(item)}
-                  </div>
-                ))}
-
-                {/* Tooltip tra nghia tu */}
-                {meaningEnKeywords.length > 0 && meaningViKeywords.length > 0 && (
-                  <div
-                    className="meaning-container"
-                    style={{ ...TOOLTIP_STYLE, left: tooltipPosition.x, top: tooltipPosition.y }}
-                  >
-                    {/^[a-zA-Z ]+$/.test(window.getSelection()?.toString().trim() || '')
-                      ? meaningEnKeywords.map((word, i) => (
-                          <div key={i}><strong>{word}</strong>: {meaningViKeywords[i]}</div>
-                        ))
-                      : meaningViKeywords.map((word, i) => (
-                          <div key={i}><strong>{word}</strong>: {meaningEnKeywords[i]}</div>
-                        ))}
-                  </div>
-                )}
+                {renderContentList()}
+                {renderTooltip()}
               </div>
             </Col>
           </Row>
         ) : (
-          // Tap khong co video: layout 1 cot giu nguyen nhu cu
+          // ── Layout 1 cot: tap khong co video ────────────────────────
           <div>
             <Typography.Title level={3} className="volume-title">
               {volumeEngName}
@@ -554,27 +626,8 @@ const ContentComponent = ({
               <strong style={{ color: 'red' }}>{contents.length}</strong> cau can hoc
             </Typography.Text>
 
-            {contents.map((item) => (
-              <div key={item.id} className="content-item">
-                {renderItemContent(item)}
-              </div>
-            ))}
-
-            {/* Tooltip tra nghia tu */}
-            {meaningEnKeywords.length > 0 && meaningViKeywords.length > 0 && (
-              <div
-                className="meaning-container"
-                style={{ ...TOOLTIP_STYLE, left: tooltipPosition.x, top: tooltipPosition.y }}
-              >
-                {/^[a-zA-Z ]+$/.test(window.getSelection()?.toString().trim() || '')
-                  ? meaningEnKeywords.map((word, i) => (
-                      <div key={i}><strong>{word}</strong>: {meaningViKeywords[i]}</div>
-                    ))
-                  : meaningViKeywords.map((word, i) => (
-                      <div key={i}><strong>{word}</strong>: {meaningEnKeywords[i]}</div>
-                    ))}
-              </div>
-            )}
+            {renderContentList()}
+            {renderTooltip()}
           </div>
         )
       ) : (
@@ -606,7 +659,6 @@ const ContentComponent = ({
             <Input placeholder="Nhap tu tieng Anh..." />
           </Form.Item>
 
-          {/* Danh sach nghia tieng Viet (co the them nhieu nghia) */}
           <Form.List name="viList" initialValue={[{ vi: '' }]}>
             {(fields, { add, remove }) => (
               <>
@@ -629,7 +681,6 @@ const ContentComponent = ({
                       >
                         <Input placeholder={`Nghia ${index + 1}...`} style={{ flex: 1 }} />
                       </Form.Item>
-                      {/* Nut xoa chi hien khi co nhieu hon 1 nghia */}
                       {fields.length > 1 && (
                         <MinusCircleOutlined
                           onClick={() => remove(field.name)}
