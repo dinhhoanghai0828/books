@@ -483,8 +483,9 @@ public class RunSQLComponent {
                             // Comment volume nằm trong VALUES, trước row đầu tiên của tập
                             String audioVal = (vAudio != null) ? "'" + vAudio + "'" : "NULL";
                             if (!firstRowInInsert) {
-                                sb.append(",\n");
+                                sb.append(",\n\n");
                             }
+
                             sb.append("\t/* (UUID(),'").append(vSlug).append("','")
                               .append(vEng).append("','").append(vVi).append("',")
                               .append(audioVal).append(",NULL,'")
