@@ -77,7 +77,7 @@ const AudioComponent = ({
     }
   }, [volume]);
 
-  // Bat dau phat khi isPlaying chuyen sang true.
+  // Bat dau phat khi isPlaying = true HOAC khi itemId thay doi (doi sang bai moi).
   // Khi currentTime vuot endTime:
   //   - Neu dang loop: bo qua (useEffect loop se xu ly)
   //   - Neu khong loop: dung audio va thong bao cho parent reset trang thai
@@ -103,7 +103,7 @@ const AudioComponent = ({
 
     player.addEventListener('timeupdate', handleTimeUpdate);
     return () => player.removeEventListener('timeupdate', handleTimeUpdate);
-  }, [isPlaying, playbackSpeed]);
+  }, [isPlaying, playbackSpeed, itemId]);
 
   // Xu ly lap lai: moi khi currentTime cham endTime thi reset ve startTime
   useEffect(() => {
