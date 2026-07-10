@@ -252,7 +252,7 @@ const ContentComponent = ({
       if (!video) return;
 
       if (activeVideoItemId === itemId && isVideoPlaying) {
-        // Dang phat item nay -> dung lai
+        // Dang phat item nay -> dung video lai
         video.pause();
         videoEndRef.current = 0;
         setActiveVideoItemId(null);
@@ -260,14 +260,23 @@ const ContentComponent = ({
         return;
       }
 
-      // Seek den startTime cua item moi va phat
+      // Bat dau phat video -> dung audio neu dang chay
+      if (activeAudioItemId) {
+        Object.keys(playStatesRef.current).forEach((k) => { playStatesRef.current[k] = false; });
+        Object.keys(loopStatesRef.current).forEach((k) => { loopStatesRef.current[k] = false; });
+        setActiveAudioItemId(null);
+        handlePauseAudio(true);
+        forceRender();
+      }
+
+      // Seek video den doan can phat
       videoEndRef.current = parseTimeToSeconds(endTime);
       video.currentTime = parseTimeToSeconds(startTime);
       video.play();
       setActiveVideoItemId(itemId);
       setIsVideoPlaying(true);
     },
-    [activeVideoItemId, isVideoPlaying]
+    [activeVideoItemId, isVideoPlaying, activeAudioItemId, handlePauseAudio]
   );
 
   // ============================================================
@@ -293,13 +302,21 @@ const ContentComponent = ({
         setActiveAudioItemId(null);
         handlePauseAudio(true);
       } else {
-        // Phat item moi
+        // Bat dau phat audio -> dung video neu dang chay
+        const video = videoRef.current;
+        if (isVideoPlaying && video) {
+          video.pause();
+          videoEndRef.current = 0;
+          setActiveVideoItemId(null);
+          setIsVideoPlaying(false);
+        }
+
+        // Phat audio moi
         loopStatesRef.current[itemId] = false;
         shouldScrollRef.current = true;
         setActiveAudioItemId(itemId);
         handleToggleAudio(itemId, startTime, endTime, false);
         handlePlayAudio(startTime, endTime, Number(itemId));
-        // Scroll den cau nay ngay lap tuc
         scrollToItem(itemId);
       }
 
