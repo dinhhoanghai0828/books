@@ -2,9 +2,10 @@ import { Breadcrumb } from 'antd';
 import Link from 'next/link';
 
 interface BreadCrumbComponentProps {
-  items: { name: string; path?: string }[]; // Made path optional for current item
+  items: { name: string; path?: string }[];
 }
 
+// Hien thi breadcrumb dieu huong: moi cap la 1 link, cap cuoi khong co link
 const BreadCrumbComponent = ({ items }: BreadCrumbComponentProps) => {
   const breadcrumbItems = items.map((item) => ({
     title: item.path ? (

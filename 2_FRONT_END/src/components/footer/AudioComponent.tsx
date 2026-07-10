@@ -1,27 +1,27 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { Volume } from '@/interfaces/volume';
+import { Select } from 'antd';
+import { useEffect, useRef, useState } from 'react';
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 import '../../styles/audio.css';
-import { Volume } from '@/interfaces/volume';
-import { Select } from 'antd';
 
 // ============================================================
 // TYPES
 // ============================================================
 
 interface AudioComponentProps {
-  startTime: string;          // Thoi diem bat dau phat (format hh:mm:ss)
-  endTime: string;            // Thoi diem ket thuc phat (format hh:mm:ss)
-  isPause: boolean;           // Khi true: dung audio ngay lap tuc
-  isPlaying: boolean;         // Khi chuyen sang true: bat dau phat tu startTime
-  isLoop: boolean;            // Khi true: lap lai doan tu startTime den endTime
-  itemId: number;             // ID item dang phat (de re-trigger useEffect khi doi bai)
-  volume: Volume | undefined; // Thong tin tap chua file audio
-  resetIsPlaying: () => void; // Callback: bao parent biet audio da chay xong
+  startTime: string;           // Thoi diem bat dau phat (dinh dang hh:mm:ss)
+  endTime: string;             // Thoi diem ket thuc phat (dinh dang hh:mm:ss)
+  isPause: boolean;            // True: dung audio ngay lap tuc
+  isPlaying: boolean;          // True: bat dau phat tu startTime
+  isLoop: boolean;             // True: lap lai doan tu startTime den endTime
+  itemId: number;              // ID item dang phat (de re-trigger useEffect khi doi bai)
+  volume: Volume | undefined;  // Thong tin tap chua duong dan file audio
+  resetIsPlaying: () => void;  // Callback: bao parent audio da chay xong
   handlePauseAudio: (isPause: boolean) => void; // Callback: yeu cau parent dung audio
 }
 
-// Danh sach toc do phat co the chon
+// Danh sach toc do phat ho tro
 const PLAYBACK_SPEED_OPTIONS = [
   { value: 0.5, label: '0.5x' },
   { value: 0.7, label: '0.7x' },
@@ -33,6 +33,16 @@ const PLAYBACK_SPEED_OPTIONS = [
   { value: 1.7, label: '1.7x' },
   { value: 2.0, label: '2.0x' },
 ];
+
+// ============================================================
+// HELPERS
+// ============================================================
+
+// Chuyen chuoi "hh:mm:ss" thanh so giay
+const timeStringToSeconds = (timeString: string): number => {
+  const [hours, minutes, seconds] = timeString.split(':');
+  return parseInt(hours, 10) * 3600 + parseInt(minutes, 10) * 60 + parseFloat(seconds);
+};
 
 // ============================================================
 // COMPONENT
@@ -50,26 +60,15 @@ const AudioComponent = ({
   handlePauseAudio,
 }: AudioComponentProps) => {
   const playerRef = useRef<AudioPlayer | null>(null);
-  const [audioSrc, setAudioSrc] = useState<string>('');
-  const [playbackSpeed, setPlaybackSpeed] = useState<number>(1.0);
+  const [audioSrc, setAudioSrc] = useState('');
+  const [playbackSpeed, setPlaybackSpeed] = useState(1.0);
 
-  // Dung ref de luon doc gia tri isLoop moi nhat ben trong closure cua listener
-  // Vi neu chi dung state, listener duoc tao khi isPlaying=true se "nho" isLoop=false
-  // va khong bao gio thay gia tri moi (stale closure problem)
+  // Dung ref de lay gia tri isLoop moi nhat ben trong closure cua event listener,
+  // tranh stale closure khi isLoop thay doi sau khi listener duoc dang ky
   const isLoopRef = useRef(isLoop);
   useEffect(() => {
     isLoopRef.current = isLoop;
   }, [isLoop]);
-
-  // Chuyen doi chuoi "hh:mm:ss" sang so giay
-  const timeStringToSeconds = (timeString: string): number => {
-    const [hours, minutes, seconds] = timeString.split(':');
-    return (
-      parseInt(hours, 10) * 3600 +
-      parseInt(minutes, 10) * 60 +
-      parseFloat(seconds)
-    );
-  };
 
   // Cap nhat duong dan file audio khi volume thay doi
   useEffect(() => {
@@ -78,10 +77,10 @@ const AudioComponent = ({
     }
   }, [volume]);
 
-  // Bat dau phat audio khi isPlaying = true.
-  // Khi currentTime vuot qua endTime:
-  //   - Neu dang loop (isLoopRef.current = true): khong dung, de useEffect loop xu ly
-  //   - Neu khong loop: dung audio va bao parent reset trang thai
+  // Bat dau phat khi isPlaying chuyen sang true.
+  // Khi currentTime vuot endTime:
+  //   - Neu dang loop: bo qua (useEffect loop se xu ly)
+  //   - Neu khong loop: dung audio va thong bao cho parent reset trang thai
   useEffect(() => {
     if (!playerRef.current || !isPlaying) return;
 
@@ -94,7 +93,6 @@ const AudioComponent = ({
     player.play();
 
     const handleTimeUpdate = () => {
-      // Doc tu ref de lay gia tri isLoop moi nhat, khong bi stale closure
       if (player.currentTime >= end && !isLoopRef.current) {
         player.pause();
         player.currentTime = start;
@@ -107,8 +105,7 @@ const AudioComponent = ({
     return () => player.removeEventListener('timeupdate', handleTimeUpdate);
   }, [isPlaying, playbackSpeed]);
 
-  // Xu ly lap lai doan audio khi isLoop = true:
-  // Moi khi currentTime cham endTime thi reset ve startTime
+  // Xu ly lap lai: moi khi currentTime cham endTime thi reset ve startTime
   useEffect(() => {
     if (!isLoop || !startTime || !endTime || !playerRef.current) return;
 
@@ -126,14 +123,14 @@ const AudioComponent = ({
     return () => player.removeEventListener('timeupdate', onTimeUpdate);
   }, [isLoop, itemId, startTime, endTime]);
 
-  // Dung audio ngay khi isPause = true
+  // Dung audio ngay khi isPause chuyen sang true
   useEffect(() => {
     if (playerRef.current && isPause) {
       playerRef.current.audio.current!.pause();
     }
   }, [isPause]);
 
-  // Cap nhat toc do phat khi nguoi dung thay doi
+  // Cap nhat toc do phat khi nguoi dung chon tu dropdown
   const handleSpeedChange = (value: number) => {
     setPlaybackSpeed(value);
     if (playerRef.current) {
@@ -141,32 +138,30 @@ const AudioComponent = ({
     }
   };
 
+  if (!audioSrc) return null;
+
   return (
     <div className="audio-component-fixed">
-      {audioSrc && (
-        <>
-          <AudioPlayer
-            ref={playerRef}
-            src={audioSrc}
-            onPlay={() => {}}
-            onPause={() => playerRef.current?.audio.current?.pause()}
-            showJumpControls={false}
-            autoPlay={false}
-            loop={isLoop}
-          />
+      <AudioPlayer
+        ref={playerRef}
+        src={audioSrc}
+        onPlay={() => {}}
+        onPause={() => playerRef.current?.audio.current?.pause()}
+        showJumpControls={false}
+        autoPlay={false}
+        loop={isLoop}
+      />
 
-          {/* Chon toc do phat */}
-          <div style={{ marginTop: 16, display: 'flex', alignItems: 'center', gap: 8 }}>
-            <span style={{ fontWeight: 'bold' }}>Toc do phat:</span>
-            <Select
-              value={playbackSpeed}
-              onChange={handleSpeedChange}
-              style={{ width: 200 }}
-              options={PLAYBACK_SPEED_OPTIONS}
-            />
-          </div>
-        </>
-      )}
+      {/* Chon toc do phat */}
+      <div style={{ marginTop: 16, display: 'flex', alignItems: 'center', gap: 8 }}>
+        <span style={{ fontWeight: 'bold' }}>Toc do phat:</span>
+        <Select
+          value={playbackSpeed}
+          onChange={handleSpeedChange}
+          style={{ width: 200 }}
+          options={PLAYBACK_SPEED_OPTIONS}
+        />
+      </div>
     </div>
   );
 };

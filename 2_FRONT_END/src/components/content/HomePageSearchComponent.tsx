@@ -1,184 +1,143 @@
 'use client';
-import {
-  Button,
-  Col,
-  Layout,
-  Row,
-  Select,
-  Typography,
-  AutoComplete,
-} from 'antd';
-import React, { useState, useCallback } from 'react';
-import debounce from 'lodash.debounce';
-import throttle from 'lodash.throttle';
 import { getSuggestions } from '@/utils/apiService';
 import { Word } from '@/interfaces/word';
+import { AutoComplete, Button, Col, Layout, Row, Select, Typography } from 'antd';
+import debounce from 'lodash.debounce';
+import throttle from 'lodash.throttle';
+import { useCallback, useState } from 'react';
 
 const { Content } = Layout;
 const { Title } = Typography;
+
+// Danh sach toc do phat co the chon
+const SPEED_OPTIONS = [
+  { value: '60%',  label: '60%' },
+  { value: '80%',  label: '80%' },
+  { value: '100%', label: '100%' },
+  { value: '120%', label: '120%' },
+  { value: '150%', label: '150%' },
+  { value: '200%', label: '200%' },
+];
 
 interface HomePageSearchComponentProps {
   onSearch: (searchEn: string, searchVi: string) => void;
   onSelectChange: (value: string) => void;
 }
 
-const HomePageSearchComponent: React.FC<HomePageSearchComponentProps> = ({
+const HomePageSearchComponent = ({
   onSearch,
   onSelectChange,
-}) => {
+}: HomePageSearchComponentProps) => {
   const [searchValueEn, setSearchValueEn] = useState('');
   const [searchValueVi, setSearchValueVi] = useState('');
   const [suggestionsEn, setSuggestionsEn] = useState<string[]>([]);
   const [suggestionsVi, setSuggestionsVi] = useState<string[]>([]);
-  const [selectedValue, setSelectedValue] = useState('100%'); // Giá trị mặc định
+  const [selectedSpeed, setSelectedSpeed] = useState('100%');
 
-  // Get the last word in a string
-  const getLastWord = (str: string): string => {
-    const words = str.trim().split(' ');
-    return words[words.length - 1];
-  };
-
-  // Fetch suggestions from the server
-  const fetchSuggestions = async (eng: string, vi: string): Promise<Word[]> => {
-    return await getSuggestions(eng, vi);
-  };
-
-  // Debounce function to limit API calls for English suggestions
-  const debounceFetchSuggestions = useCallback(
-    debounce(
-      async (
-        value: string,
-        setSuggestions: React.Dispatch<React.SetStateAction<string[]>>
-      ) => {
-        try {
-          const results = await fetchSuggestions(value, '');
-          const suggestions = results.map((item) => item.eng); // Extract English words
-          setSuggestions(suggestions);
-        } catch (error) {
-          console.error('Error fetching English suggestions:', error);
-        }
-      },
-      300
-    ),
+  // Lay goi y tu tieng Anh (debounce 300ms)
+  const debounceFetchEn = useCallback(
+    debounce(async (value: string) => {
+      try {
+        const results: Word[] = await getSuggestions(value, '');
+        setSuggestionsEn(results.map((item) => item.eng));
+      } catch (error) {
+        console.error('Loi khi lay goi y tieng Anh:', error);
+      }
+    }, 300),
     []
   );
 
-  // Throttle function to limit API calls for Vietnamese suggestions
-  const throttleFetchSuggestions = useCallback(
-    throttle(
-      async (
-        value: string,
-        setSuggestions: React.Dispatch<React.SetStateAction<string[]>>
-      ) => {
-        try {
-          const results = await fetchSuggestions('', value);
-          const suggestions = results.map((item) => item.vi); // Extract Vietnamese words
-          setSuggestions(suggestions);
-        } catch (error) {
-          console.error('Error fetching Vietnamese suggestions:', error);
-        }
-      },
-      300
-    ),
+  // Lay goi y tu tieng Viet (throttle 300ms)
+  const throttleFetchVi = useCallback(
+    throttle(async (value: string) => {
+      try {
+        const results: Word[] = await getSuggestions('', value);
+        setSuggestionsVi(results.map((item) => item.vi));
+      } catch (error) {
+        console.error('Loi khi lay goi y tieng Viet:', error);
+      }
+    }, 300),
     []
   );
 
-  // Handle English search input change
-  const handleSearchChangeEn = (value: string) => {
+  // Xu ly thay doi o nhap tieng Anh
+  const handleChangeEn = (value: string) => {
     setSearchValueEn(value);
-    debounceFetchSuggestions(value, setSuggestionsEn);
+    debounceFetchEn(value);
   };
 
-  // Handle Vietnamese search input change
-  const handleSearchChangeVi = (value: string) => {
+  // Xu ly thay doi o nhap tieng Viet
+  const handleChangeVi = (value: string) => {
     setSearchValueVi(value);
-    throttleFetchSuggestions(value, setSuggestionsVi);
+    throttleFetchVi(value);
   };
 
-  // Handle the selection of suggestions for English
-  const handleSelectEn = (value: string) => {
-    setSearchValueEn(value); // Set the search value to the selected suggestion
-  };
-
-  // Handle the selection of suggestions for Vietnamese
-  const handleSelectVi = (value: string) => {
-    setSearchValueVi(value); // Set the search value to the selected suggestion
-  };
-
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter') {
-      handleSearch();
-    }
-  };
-
+  // Thuc hien tim kiem voi gia tri hien tai
   const handleSearch = () => {
     onSearch(searchValueEn.trim(), searchValueVi.trim());
   };
 
-  const handleSelectChange = (value: string) => {
-    setSelectedValue(value);
+  // Xu ly phim Enter de tim kiem nhanh
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter') handleSearch();
+  };
+
+  // Cap nhat toc do phat va thong bao cho parent
+  const handleSpeedChange = (value: string) => {
+    setSelectedSpeed(value);
     onSelectChange(value);
   };
 
   return (
     <Content className="searchClass">
-      <Title level={4}>Tìm kiếm câu nói</Title>
+      <Title level={4}>Tim kiem cau noi</Title>
       <Row gutter={[16, 16]} justify="start" className="rowClass">
-        {/* AutoComplete for English */}
+
+        {/* O AutoComplete tim kiem tieng Anh */}
         <Col span={8} xs={24} sm={8} md={8} lg={7}>
           <AutoComplete
             value={searchValueEn}
-            onChange={handleSearchChangeEn}
-            onSelect={handleSelectEn} // Replace the last word with selected suggestion
-            onClear={() => setSearchValueEn('')} // Đảm bảo xóa hoàn toàn giá trị
-            options={
-              suggestionsEn.length > 0 &&
-              suggestionsEn.map((item) => ({ value: item }))
-            }
+            onChange={handleChangeEn}
+            onSelect={(value) => setSearchValueEn(value)}
+            onClear={() => setSearchValueEn('')}
+            options={suggestionsEn.map((item) => ({ value: item }))}
             style={{ width: '100%' }}
-            placeholder="Nhập câu tiếng Anh"
+            placeholder="Nhap cau tieng Anh"
             allowClear
+            onKeyDown={handleKeyDown}
           />
         </Col>
 
-        {/* AutoComplete for Vietnamese */}
+        {/* O AutoComplete tim kiem tieng Viet */}
         <Col span={8} xs={24} sm={8} md={8} lg={7}>
           <AutoComplete
             value={searchValueVi}
-            onChange={handleSearchChangeVi}
-            onSelect={handleSelectVi} // Replace the last word with selected suggestion
-            options={
-              suggestionsVi.length > 0 &&
-              suggestionsVi.map((item) => ({ value: item }))
-            }
+            onChange={handleChangeVi}
+            onSelect={(value) => setSearchValueVi(value)}
+            onClear={() => setSearchValueVi('')}
+            options={suggestionsVi.map((item) => ({ value: item }))}
             style={{ width: '100%' }}
-            placeholder="Nhập câu tiếng Việt"
+            placeholder="Nhap cau tieng Viet"
             allowClear
+            onKeyDown={handleKeyDown}
           />
         </Col>
 
-        {/* Search Button */}
+        {/* Nut tim kiem */}
         <Col span={4} xs={12} sm={4} md={4} lg={2}>
           <Button type="primary" size="large" onClick={handleSearch} block>
-            Tìm
+            Tim
           </Button>
         </Col>
 
-        {/* Select */}
+        {/* Chon toc do phat */}
         <Col span={4} xs={12} sm={4} md={4} lg={4}>
           <Select
-            value={selectedValue}
-            onChange={handleSelectChange}
+            value={selectedSpeed}
+            onChange={handleSpeedChange}
             size="large"
             style={{ width: '100%' }}
-            options={[
-              { value: '60%', label: '60%' },
-              { value: '80%', label: '80%' },
-              { value: '100%', label: '100%' },
-              { value: '120%', label: '120%' },
-              { value: '150%', label: '150%' },
-              { value: '200%', label: '200%' },
-            ]}
+            options={SPEED_OPTIONS}
           />
         </Col>
       </Row>

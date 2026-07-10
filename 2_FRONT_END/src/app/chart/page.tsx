@@ -1,8 +1,9 @@
 'use client';
 import { getChart } from '@/utils/apiService';
 import { Button, DatePicker, message, Space, Table } from 'antd';
-import dayjs from 'dayjs';
-import { useEffect, useState } from 'react';
+import { SortOrder } from 'antd/es/table/interface';
+import dayjs, { Dayjs } from 'dayjs';
+import { useState } from 'react';
 import {
   CartesianGrid,
   Legend,
@@ -14,20 +15,143 @@ import {
   YAxis,
 } from 'recharts';
 import '../../styles/chart.css';
-import { SortOrder } from 'antd/es/table/interface';
-const ChartPage = () => {
-  const [filteredData, setFilteredData] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [startDate, setStartDate] = useState<any>(dayjs().subtract(1, 'month'));
-  const [endDate, setEndDate] = useState<any>(dayjs());
-  const [extremeData, setExtremeData] = useState([]);
-  const [extremeWorldPriceData, setExtremeWorldPriceData] = useState([]);
 
+// ============================================================
+// TYPES
+// ============================================================
+
+// Du lieu da xu ly them 2 truong chenh lech tinh toan
+interface ChartRowData {
+  createdAt: string;
+  worldPrice: number;
+  worldPriceVND: number;
+  domesticPurchasePrice: number;
+  domesticSalePrice: number;
+  domesticRingPurchasePrice: number;
+  domesticRingSalePrice: number;
+  dollarPrice: number;
+  profitGoldBar: number;
+  profitGoldRing: number;
+  totalProfit: number;
+  totalInvestment: number;
+  totalInvestmentDiff: number;
+  ringWorldDiff: number;
+  domesticWorldDiff: number;
+}
+
+// ============================================================
+// CONSTANTS
+// ============================================================
+
+// Dinh nghia cau hinh cac cot dung chung cho ca 2 bang (bang chinh va bang extreme)
+const SHARED_COLUMNS = [
+  {
+    title: 'Ngay',
+    dataIndex: 'createdAt',
+    key: 'createdAt',
+    render: (text: string) => dayjs(text).format('YYYY-MM-DD'),
+    sorter: (a: ChartRowData, b: ChartRowData) =>
+      dayjs(a.createdAt).unix() - dayjs(b.createdAt).unix(),
+    defaultSortOrder: 'descend' as SortOrder,
+  },
+  {
+    title: 'Gia The Gioi',
+    dataIndex: 'worldPrice',
+    key: 'worldPrice',
+    render: (value: number) => value?.toLocaleString() || '-',
+  },
+  {
+    title: 'Ty gia',
+    dataIndex: 'dollarPrice',
+    key: 'dollarPrice',
+    render: (value: number) => value?.toLocaleString() || '-',
+  },
+  {
+    title: 'Quy doi VND',
+    dataIndex: 'worldPriceVND',
+    key: 'worldPriceVND',
+    render: (value: number) => value?.toLocaleString() || '-',
+  },
+  {
+    title: 'Gia M shop ban',
+    dataIndex: 'domesticPurchasePrice',
+    key: 'domesticPurchasePrice',
+    render: (value: number) => value?.toLocaleString() || '-',
+  },
+  {
+    title: 'Gia M shop mua',
+    dataIndex: 'domesticSalePrice',
+    key: 'domesticSalePrice',
+    render: (value: number) => value?.toLocaleString() || '-',
+  },
+  {
+    title: 'Gia N shop ban',
+    dataIndex: 'domesticRingPurchasePrice',
+    key: 'domesticRingPurchasePrice',
+    render: (value: number) => value?.toLocaleString() || '-',
+  },
+  {
+    title: 'Gia N shop mua',
+    dataIndex: 'domesticRingSalePrice',
+    key: 'domesticRingSalePrice',
+    render: (value: number) => value?.toLocaleString() || '-',
+  },
+  {
+    title: 'Chenh Lech N - The Gioi',
+    dataIndex: 'ringWorldDiff',
+    key: 'ringWorldDiff',
+    render: (value: number) => value?.toLocaleString() || '-',
+  },
+  {
+    title: 'Chenh Lech M - The Gioi',
+    dataIndex: 'domesticWorldDiff',
+    key: 'domesticWorldDiff',
+    render: (value: number) => value?.toLocaleString() || '-',
+  },
+  {
+    title: 'Loi nhuan M',
+    dataIndex: 'profitGoldBar',
+    key: 'profitGoldBar',
+    render: (value: number) => value?.toLocaleString() || '-',
+  },
+  {
+    title: 'Loi nhuan N',
+    dataIndex: 'profitGoldRing',
+    key: 'profitGoldRing',
+    render: (value: number) => value?.toLocaleString() || '-',
+  },
+  {
+    title: 'Tong loi nhuan',
+    dataIndex: 'totalProfit',
+    key: 'totalProfit',
+    render: (value: number) => value?.toLocaleString() || '-',
+  },
+  {
+    title: 'Tien lai / Tien von',
+    dataIndex: 'totalInvestment',
+    key: 'totalInvestment',
+    render: (value: number) => value?.toLocaleString() || '-',
+  },
+];
+
+// ============================================================
+// COMPONENT
+// ============================================================
+
+const ChartPage = () => {
+  const [filteredData, setFilteredData] = useState<ChartRowData[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [startDate, setStartDate] = useState<Dayjs>(dayjs().subtract(1, 'month'));
+  const [endDate, setEndDate] = useState<Dayjs>(dayjs());
+
+  // Gia tri min/max theo tong chenh lech dau tu va theo gia the gioi
+  const [extremeData, setExtremeData] = useState<ChartRowData[]>([]);
+  const [extremeWorldPriceData, setExtremeWorldPriceData] = useState<ChartRowData[]>([]);
+
+  // Lay du lieu bieu do tu API, xu ly them 2 truong chenh lech va tim min/max
   const fetchChartData = async () => {
     if (!startDate || !endDate) {
-      message.warning(
-        'Vui lòng chọn ngày bắt đầu và ngày kết thúc trước khi tìm kiếm!'
-      );
+      message.warning('Vui long chon ngay bat dau va ngay ket thuc truoc khi tim kiem!');
       return;
     }
 
@@ -37,282 +161,74 @@ const ChartPage = () => {
         startDate.format('YYYY-MM-DD'),
         endDate.format('YYYY-MM-DD')
       );
-      const processedData = data.map((item) => {
-        const domesticRingPurchasePrice = Number(
-          item.domesticRingPurchasePrice
-        );
-        const worldPrice = Number(item.worldPrice);
-        const worldPriceVND = Number(item.worldPriceVND);
-        const domesticPurchasePrice = Number(item.domesticPurchasePrice);
 
-        // Check for NaN after conversion.  This is crucial for handling invalid data.
-        if (
-          isNaN(domesticRingPurchasePrice) ||
-          isNaN(worldPrice) ||
-          isNaN(worldPriceVND) ||
-          isNaN(domesticPurchasePrice)
-        ) {
-          console.error('Invalid number found in data:', item);
-          return { ...item, ringWorldDiff: NaN, domesticWorldDiff: NaN }; // Or handle it differently
-        }
+      // Tinh toan 2 truong chenh lech bo sung cho moi dong du lieu
+      const processedData: ChartRowData[] = data.map((item) => {
+        const ringPrice = Number(item.domesticRingPurchasePrice);
+        const worldVND = Number(item.worldPriceVND);
+        const domesticPrice = Number(item.domesticPurchasePrice);
 
         return {
-          ...item,
-          ringWorldDiff: domesticRingPurchasePrice - worldPriceVND,
-          domesticWorldDiff: domesticPurchasePrice - worldPriceVND,
+          ...(item as any),
+          ringWorldDiff: ringPrice - worldVND,
+          domesticWorldDiff: domesticPrice - worldVND,
         };
       });
+
       setFilteredData(processedData);
-      console.log(processedData);
-      // if (processedData.length > 0) {
-      //   const minDiff = processedData.reduce((prev, curr) =>
-      //     parseFloat(curr.totalInvestmentDiff) <
-      //     parseFloat(prev.totalInvestmentDiff)
-      //       ? curr
-      //       : prev
-      //   );
-      //   const maxDiff = processedData.reduce((prev, curr) =>
-      //     parseFloat(curr.totalInvestmentDiff) >
-      //     parseFloat(prev.totalInvestmentDiff)
-      //       ? curr
-      //       : prev
-      //   );
-      //   setExtremeData([minDiff, maxDiff]);
-      // }
 
       if (processedData.length > 0) {
-        // Min / Max theo LỢI NHUẬN (giữ nguyên)
+        // Tim dong co tong chenh lech dau tu thap nhat va cao nhat
         const minDiff = processedData.reduce((prev, curr) =>
-          Number(curr.totalInvestmentDiff) < Number(prev.totalInvestmentDiff)
-            ? curr
-            : prev
+          Number(curr.totalInvestmentDiff) < Number(prev.totalInvestmentDiff) ? curr : prev
         );
-
         const maxDiff = processedData.reduce((prev, curr) =>
-          Number(curr.totalInvestmentDiff) > Number(prev.totalInvestmentDiff)
-            ? curr
-            : prev
+          Number(curr.totalInvestmentDiff) > Number(prev.totalInvestmentDiff) ? curr : prev
         );
-
         setExtremeData([minDiff, maxDiff]);
 
-        // ✅ Min / Max theo GIÁ THẾ GIỚI
+        // Tim dong co gia the gioi thap nhat va cao nhat
         const minWorldPrice = processedData.reduce((prev, curr) =>
           curr.worldPrice < prev.worldPrice ? curr : prev
         );
-
         const maxWorldPrice = processedData.reduce((prev, curr) =>
           curr.worldPrice > prev.worldPrice ? curr : prev
         );
-
         setExtremeWorldPriceData([minWorldPrice, maxWorldPrice]);
       }
-    } catch (error) {
-      message.error('Lỗi khi tải dữ liệu biểu đồ!');
+    } catch {
+      message.error('Loi khi tai du lieu bieu do!');
+    } finally {
+      setLoading(false);
     }
-    setLoading(false);
   };
-
-  const columns = [
-    {
-      title: 'Ngày',
-      dataIndex: 'createdAt',
-      key: 'createdAt',
-      render: (text: string) => dayjs(text).format('YYYY-MM-DD'),
-      sorter: (a: any, b: any) =>
-        dayjs(a.createdAt).unix() - dayjs(b.createdAt).unix(),
-      defaultSortOrder: 'descend' as SortOrder, // Fix lỗi kiểu dữ liệu
-    },
-    {
-      title: 'Giá Thế Giới',
-      dataIndex: 'worldPrice',
-      key: 'worldPrice',
-      render: (value: number) => value?.toLocaleString() || '-',
-    },
-    {
-      title: 'Tỷ giá',
-      dataIndex: 'dollarPrice',
-      key: 'dollarPrice',
-      render: (value: number) => value?.toLocaleString() || '-',
-    },
-    {
-      title: 'Quy đổi VND',
-      dataIndex: 'worldPriceVND',
-      key: 'worldPriceVND',
-      render: (value: number) => value?.toLocaleString() || '-',
-    },
-    {
-      title: 'Giá M shop bán',
-      dataIndex: 'domesticPurchasePrice',
-      key: 'domesticPurchasePrice',
-      render: (value: number) => value?.toLocaleString() || '-',
-    },
-    {
-      title: 'Giá M shop mua',
-      dataIndex: 'domesticSalePrice',
-      key: 'domesticPurchasePrice',
-      render: (value: number) => value?.toLocaleString() || '-',
-    },
-    {
-      title: 'Giá N shop bán',
-      dataIndex: 'domesticRingPurchasePrice',
-      key: 'domesticRingPurchasePrice',
-      render: (value: number) => value?.toLocaleString() || '-',
-    },
-    {
-      title: 'Giá N shop mua',
-      dataIndex: 'domesticRingSalePrice',
-      key: 'domesticRingPurchasePrice',
-      render: (value: number) => value?.toLocaleString() || '-',
-    },
-    {
-      title: 'Chênh Lệch N - Thế Giới',
-      dataIndex: 'ringWorldDiff',
-      key: 'ringWorldDiff',
-      render: (value: number) => value?.toLocaleString() || '-',
-    },
-    {
-      title: 'Chênh Lệch M - Thế Giới',
-      dataIndex: 'domesticWorldDiff',
-      key: 'domesticWorldDiff',
-      render: (value: number) => value?.toLocaleString() || '-',
-    },
-    {
-      title: 'Lợi nhuận M',
-      dataIndex: 'profitGoldBar',
-      key: 'profitGoldBar',
-      render: (value: number) => value?.toLocaleString() || '-',
-    },
-    {
-      title: 'Lợi nhuận N',
-      dataIndex: 'profitGoldRing',
-      key: 'profitGoldRing',
-      render: (value: number) => value?.toLocaleString() || '-',
-    },
-    {
-      title: 'Tổng lợi nhuận',
-      dataIndex: 'totalProfit',
-      key: 'totalProfit',
-      render: (value: number) => value?.toLocaleString() || '-',
-    },
-    {
-      title: 'Tiền lãi/Tiền vốn',
-      dataIndex: 'totalInvestment',
-      key: 'totalInvestment',
-      render: (value: number) => value?.toLocaleString() || '-',
-    },
-  ];
-
-  const extremeColumns = [
-    {
-      title: 'Ngày',
-      dataIndex: 'createdAt',
-      key: 'createdAt',
-      render: (text) => dayjs(text).format('YYYY-MM-DD'),
-    },
-    {
-      title: 'Giá Thế Giới',
-      dataIndex: 'worldPrice',
-      key: 'worldPrice',
-      render: (value: number) => value?.toLocaleString() || '-',
-    },
-    {
-      title: 'Tỷ giá',
-      dataIndex: 'dollarPrice',
-      key: 'dollarPrice',
-      render: (value: number) => value?.toLocaleString() || '-',
-    },
-    {
-      title: 'Quy đổi VND',
-      dataIndex: 'worldPriceVND',
-      key: 'worldPriceVND',
-      render: (value: number) => value?.toLocaleString() || '-',
-    },
-    {
-      title: 'Giá M shop bán',
-      dataIndex: 'domesticPurchasePrice',
-      key: 'domesticPurchasePrice',
-      render: (value: number) => value?.toLocaleString() || '-',
-    },
-    {
-      title: 'Giá M shop mua',
-      dataIndex: 'domesticSalePrice',
-      key: 'domesticPurchasePrice',
-      render: (value: number) => value?.toLocaleString() || '-',
-    },
-    {
-      title: 'Giá N shop bán',
-      dataIndex: 'domesticRingPurchasePrice',
-      key: 'domesticRingPurchasePrice',
-      render: (value: number) => value?.toLocaleString() || '-',
-    },
-    {
-      title: 'Giá N shop mua',
-      dataIndex: 'domesticRingSalePrice',
-      key: 'domesticRingPurchasePrice',
-      render: (value: number) => value?.toLocaleString() || '-',
-    },
-    {
-      title: 'Chênh Lệch N - Thế Giới',
-      dataIndex: 'ringWorldDiff',
-      key: 'ringWorldDiff',
-      render: (value) => value?.toLocaleString() || '-',
-    },
-    {
-      title: 'Chênh Lệch M - Thế Giới',
-      dataIndex: 'domesticWorldDiff',
-      key: 'domesticWorldDiff',
-      render: (value) => value?.toLocaleString() || '-',
-    },
-    {
-      title: 'Lợi nhuận M',
-      dataIndex: 'profitGoldBar',
-      key: 'profitGoldBar',
-      render: (value: number) => value?.toLocaleString() || '-',
-    },
-    {
-      title: 'Lợi nhuận N',
-      dataIndex: 'profitGoldRing',
-      key: 'profitGoldRing',
-      render: (value: number) => value?.toLocaleString() || '-',
-    },
-    {
-      title: 'Tổng lợi nhuận',
-      dataIndex: 'totalProfit',
-      key: 'totalProfit',
-      render: (value) => value?.toLocaleString() || '-',
-    },
-    {
-      title: 'Tiền lãi/Tiền vốn',
-      dataIndex: 'totalInvestment',
-      key: 'totalInvestment',
-      render: (value: number) => value?.toLocaleString() || '-',
-    },
-  ];
 
   return (
     <div className="container">
-      <h2 className="title">Biểu Đồ</h2>
+      <h2 className="title">Bieu Do</h2>
+
+      {/* Bo loc ngay */}
       <Space className="controls">
         <DatePicker
           value={startDate}
-          onChange={(date) => setStartDate(date)}
+          onChange={(date) => date && setStartDate(date)}
           format="DD-MM-YYYY"
           size="small"
-          placeholder="Chọn ngày bắt đầu"
+          placeholder="Chon ngay bat dau"
         />
         <DatePicker
           value={endDate}
-          onChange={(date) => setEndDate(date)}
+          onChange={(date) => date && setEndDate(date)}
           format="DD-MM-YYYY"
           size="small"
-          placeholder="Chọn ngày kết thúc"
+          placeholder="Chon ngay ket thuc"
         />
-
         <Button type="primary" onClick={fetchChartData} loading={loading}>
-          Tìm kiếm
+          Tim kiem
         </Button>
       </Space>
+
+      {/* Bieu do duong */}
       <div className="chartWrapper">
         <ResponsiveContainer width="100%" height={450}>
           <LineChart
@@ -325,9 +241,7 @@ const ChartPage = () => {
               tickFormatter={(tick) => dayjs(tick).format('YYYY-MM-DD')}
             />
             <YAxis tickFormatter={(value) => value?.toLocaleString() || '-'} />
-            <Tooltip
-              contentStyle={{ backgroundColor: 'white', borderRadius: 5 }}
-            />
+            <Tooltip contentStyle={{ backgroundColor: 'white', borderRadius: 5 }} />
             <Legend />
             <Line
               type="monotone"
@@ -335,7 +249,7 @@ const ChartPage = () => {
               stroke="#007bff"
               strokeWidth={2.5}
               dot={{ r: 3 }}
-              name="Thế giới"
+              name="The gioi"
             />
             <Line
               type="monotone"
@@ -343,7 +257,7 @@ const ChartPage = () => {
               stroke="#007bff"
               strokeWidth={2.5}
               dot={{ r: 3 }}
-              name="Thế giới VND"
+              name="The gioi VND"
             />
             <Line
               type="monotone"
@@ -356,7 +270,7 @@ const ChartPage = () => {
             <Line
               type="monotone"
               dataKey="domesticRingPurchasePrice"
-              stroke="gold" // Or stroke="#FFFF00"
+              stroke="gold"
               strokeWidth={2.5}
               dot={{ r: 3 }}
               name="N"
@@ -364,30 +278,35 @@ const ChartPage = () => {
           </LineChart>
         </ResponsiveContainer>
       </div>
+
+      {/* Bang gia the gioi min/max */}
       <div className="table-wrapper">
-        <h3 className="subtitle">Ngày có Giá Thế Giới thấp nhất và cao nhất</h3>
+        <h3 className="subtitle">Ngay co Gia The Gioi thap nhat va cao nhat</h3>
         <Table
           dataSource={extremeWorldPriceData}
-          columns={extremeColumns}
+          columns={SHARED_COLUMNS}
           rowKey="createdAt"
           pagination={false}
         />
       </div>
 
+      {/* Bang chenh lech dau tu min/max */}
       <div className="table-wrapper">
-        <h3 className="subtitle">Ngày có chênh lệch thấp nhất và cao nhất</h3>
+        <h3 className="subtitle">Ngay co chenh lech thap nhat va cao nhat</h3>
         <Table
           dataSource={extremeData}
-          columns={extremeColumns}
+          columns={SHARED_COLUMNS}
           rowKey="createdAt"
           pagination={false}
         />
       </div>
+
+      {/* Bang thong ke toan bo du lieu */}
       <div className="table-wrapper">
-        <h3 className="subtitle">Thống Kê Chi Tiết</h3>
+        <h3 className="subtitle">Thong Ke Chi Tiet</h3>
         <Table
           dataSource={filteredData}
-          columns={columns}
+          columns={SHARED_COLUMNS}
           rowKey="createdAt"
           pagination={{ pageSize: 10 }}
         />

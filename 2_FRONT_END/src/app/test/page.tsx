@@ -1,5 +1,4 @@
 'use client';
-
 import { ContentType } from '@/interfaces/content';
 import { getTests } from '@/utils/apiService';
 import {
@@ -11,58 +10,73 @@ import {
 } from '@ant-design/icons';
 import { Button, Modal, Spin, Typography, message } from 'antd';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { Suspense, useEffect, useState } from 'react';
+import { Suspense, useEffect, useRef, useState } from 'react';
 import '../../styles/global.css';
 
 const { Text } = Typography;
 
-const shuffleArray = (array: string[]) => array.sort(() => Math.random() - 0.5);
+// So cau hoi mac dinh moi lan kiem tra
+const DEFAULT_LIMIT = '20';
+
+// Xao tron mang tu (tao ngan hang tu cho moi cau)
+const shuffleArray = (arr: string[]): string[] => [...arr].sort(() => Math.random() - 0.5);
+
+// ============================================================
+// COMPONENT
+// ============================================================
 
 const TestPage = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const volumeSlug = searchParams?.get('volumeSlug') || '';
 
-  const [sentences, setSentences] = useState<ContentType[]>();
+  const [sentences, setSentences] = useState<ContentType[]>([]);
   const [wordBank, setWordBank] = useState<Record<string, string[]>>({});
-  const [selectedWords, setSelectedWords] = useState<Record<string, string[]>>(
-    {}
-  );
-  const [checkedResults, setCheckedResults] = useState<Record<string, boolean>>(
-    {}
-  );
+  const [selectedWords, setSelectedWords] = useState<Record<string, string[]>>({});
+  const [checkedResults, setCheckedResults] = useState<Record<string, boolean>>({});
   const [loading, setLoading] = useState(true);
   const [isChecked, setIsChecked] = useState(false);
   const [score, setScore] = useState(0);
-  const [open, setOpen] = useState(false);
+  const [openConfirmModal, setOpenConfirmModal] = useState(false);
   const [confirmLoading, setConfirmLoading] = useState(false);
-  const [currentAudio, setCurrentAudio] = useState<HTMLAudioElement | null>(
-    null
-  );
-  const [currentPlayingId, setCurrentPlayingId] = useState<string | null>(null);
-  const [playStates, setPlayStates] = useState<Record<string, boolean>>({});
-  const [limit, setLimit] = useState('20');
   const [openResultModal, setOpenResultModal] = useState(false);
+  const [limit] = useState(DEFAULT_LIMIT);
+
+  // Quan ly audio bang ref de tranh stale closure
+  const currentAudioRef = useRef<HTMLAudioElement | null>(null);
+  const [currentPlayingId, setCurrentPlayingId] = useState<string | null>(null);
+
+  // ============================================================
+  // DATA FETCHING
+  // ============================================================
+
+  // Lay danh sach cau hoi va khoi tao ngan hang tu xao tron cho moi cau
+  const fetchData = async (limitValue: string) => {
+    setLoading(true);
+    try {
+      const response = await getTests(volumeSlug, limitValue);
+      setSentences(response);
+      const shuffled = response.reduce((acc, sentence) => {
+        acc[sentence.id] = shuffleArray(sentence.eng.split(' '));
+        return acc;
+      }, {} as Record<string, string[]>);
+      setWordBank(shuffled);
+    } catch (error) {
+      console.error('Loi khi lay du lieu kiem tra:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await getTests(volumeSlug, '20');
-        setSentences(response);
-        const shuffledWords = response.reduce((acc, sentence) => {
-          acc[sentence.id] = shuffleArray(sentence.eng.split(' '));
-          return acc;
-        }, {} as Record<string, string[]>);
-        setWordBank(shuffledWords);
-      } catch (error) {
-        console.error('Lỗi khi lấy dữ liệu:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchData();
+    fetchData(DEFAULT_LIMIT);
   }, [volumeSlug]);
 
+  // ============================================================
+  // WORD SELECTION
+  // ============================================================
+
+  // Nguoi dung click tu trong ngan hang -> chuyen tu vao vung da chon
   const handleWordClick = (sentenceId: string, word: string) => {
     if (isChecked) return;
 
@@ -72,63 +86,57 @@ const TestPage = () => {
     }));
 
     setWordBank((prev) => {
-      const newWordBank = [...prev[sentenceId]];
-      const indexToRemove = newWordBank.findIndex((w) => w === word);
-      if (indexToRemove !== -1) newWordBank.splice(indexToRemove, 1);
-
-      return {
-        ...prev,
-        [sentenceId]: newWordBank,
-      };
+      const updated = [...prev[sentenceId]];
+      const idx = updated.findIndex((w) => w === word);
+      if (idx !== -1) updated.splice(idx, 1);
+      return { ...prev, [sentenceId]: updated };
     });
   };
 
+  // Nguoi dung click tu da chon -> tra lai tu ve ngan hang
   const handleSelectedWordClick = (sentenceId: string, word: string) => {
     if (isChecked) return;
-    setSelectedWords((prev) => {
-      const words = [...(prev[sentenceId] || [])];
-      const index = words.findIndex((w) => w === word);
-      if (index !== -1) words.splice(index, 1);
 
-      return {
-        ...prev,
-        [sentenceId]: words,
-      };
+    setSelectedWords((prev) => {
+      const updated = [...(prev[sentenceId] || [])];
+      const idx = updated.findIndex((w) => w === word);
+      if (idx !== -1) updated.splice(idx, 1);
+      return { ...prev, [sentenceId]: updated };
     });
+
     setWordBank((prev) => ({
       ...prev,
       [sentenceId]: [...prev[sentenceId], word],
     }));
   };
 
+  // ============================================================
+  // CHECK RESULTS
+  // ============================================================
+
+  // So sanh cau nguoi dung sap xep voi cau goc, tinh diem va hien modal ket qua
   const handleCheckResults = () => {
     setConfirmLoading(true);
     setTimeout(() => {
-      setOpen(false); // Đóng modal xác nhận trước khi hiển thị kết quả
+      setOpenConfirmModal(false);
       setConfirmLoading(false);
 
       const results = sentences.reduce((acc, sentence) => {
-        const userSentence = (selectedWords[sentence.id] || [])
-          .join(' ')
-          .trim();
-        acc[sentence.id] = userSentence === sentence.eng.trim();
+        const userAnswer = (selectedWords[sentence.id] || []).join(' ').trim();
+        acc[sentence.id] = userAnswer === sentence.eng.trim();
         return acc;
       }, {} as Record<string, boolean>);
 
       setCheckedResults(results);
       setIsChecked(true);
-      setScore(
-        Math.round(
-          (Object.values(results).filter(Boolean).length / sentences.length) *
-            sentences.length
-        )
-      );
-
-      setOpenResultModal(true); // Mở modal kết quả
+      setScore(Object.values(results).filter(Boolean).length);
+      setOpenResultModal(true);
     }, 100);
   };
 
+  // Reset toan bo trang thai va lay bo cau hoi moi
   const reloadTest = async () => {
+    stopAudio();
     setLoading(true);
     setSentences([]);
     setWordBank({});
@@ -136,22 +144,29 @@ const TestPage = () => {
     setCheckedResults({});
     setIsChecked(false);
     setScore(0);
-
-    try {
-      const response = await getTests(volumeSlug, limit);
-      setSentences(response);
-      const shuffledWords = response.reduce((acc, sentence) => {
-        acc[sentence.id] = shuffleArray(sentence.eng.split(' '));
-        return acc;
-      }, {} as Record<string, string[]>);
-      setWordBank(shuffledWords);
-    } catch (error) {
-      console.error('Lỗi khi lấy dữ liệu:', error);
-    } finally {
-      setLoading(false);
-    }
+    await fetchData(limit);
   };
 
+  // ============================================================
+  // AUDIO
+  // ============================================================
+
+  // Chuyen chuoi "hh:mm:ss" thanh so giay
+  const parseTimeToSeconds = (time: string): number => {
+    const [h, m, s] = time.split(':').map(Number);
+    return h * 3600 + m * 60 + s;
+  };
+
+  // Dung audio dang phat va reset trang thai
+  const stopAudio = () => {
+    if (currentAudioRef.current) {
+      currentAudioRef.current.pause();
+      currentAudioRef.current = null;
+    }
+    setCurrentPlayingId(null);
+  };
+
+  // Bat/dung audio cua 1 cau: neu dang phat thi dung, neu chua thi phat moi
   const toggleAudio = (
     itemId: string,
     audioPath: string,
@@ -159,7 +174,7 @@ const TestPage = () => {
     endTime: string
   ) => {
     if (!audioPath || !startTime || !endTime) {
-      message.error('Không có tệp âm thanh hoặc thời gian không hợp lệ.');
+      message.error('Khong co tep am thanh hoac thoi gian khong hop le.');
       return;
     }
 
@@ -167,110 +182,86 @@ const TestPage = () => {
     const end = parseTimeToSeconds(endTime);
 
     if (start >= end) {
-      message.error('Thời gian bắt đầu phải nhỏ hơn thời gian kết thúc.');
+      message.error('Thoi gian bat dau phai nho hon thoi gian ket thuc.');
       return;
     }
 
     if (currentPlayingId === itemId) {
-      // Nếu đang phát, tạm dừng
       stopAudio();
-    } else {
-      // Nếu không, phát âm thanh mới
-      stopAudio();
-
-      const audioURL = `/media/${audioPath}`;
-      const audio = new Audio(audioURL);
-
-      audio.currentTime = start;
-
-      audio.addEventListener('timeupdate', () => {
-        if (audio.currentTime >= end) {
-          audio.currentTime = start;
-          audio.pause();
-          stopAudio();
-        }
-      });
-
-      audio.addEventListener('ended', () => stopAudio());
-
-      setCurrentAudio(audio);
-      setCurrentPlayingId(itemId);
-
-      setPlayStates((prev) =>
-        Object.keys(prev).reduce((acc, key) => {
-          acc[key] = key === itemId;
-          return acc;
-        }, {} as Record<string, boolean>)
-      );
-
-      audio.play().catch(() => {
-        message.error('Không thể phát âm thanh.');
-      });
+      return;
     }
-  };
-  const stopAudio = () => {
-    if (currentAudio) {
-      currentAudio.pause();
+
+    stopAudio();
+
+    const audio = new Audio(`/media/${audioPath}`);
+    audio.currentTime = start;
+
+    // Tu dong dung khi den endTime
+    audio.addEventListener('timeupdate', () => {
+      if (audio.currentTime >= end) {
+        audio.pause();
+        currentAudioRef.current = null;
+        setCurrentPlayingId(null);
+      }
+    });
+
+    audio.addEventListener('ended', () => {
+      currentAudioRef.current = null;
       setCurrentPlayingId(null);
-      setPlayStates((prev) =>
-        Object.keys(prev).reduce((acc, key) => {
-          acc[key] = false;
-          return acc;
-        }, {} as Record<string, boolean>)
-      );
-    }
+    });
+
+    currentAudioRef.current = audio;
+    setCurrentPlayingId(itemId);
+
+    audio.play().catch(() => message.error('Khong the phat am thanh.'));
   };
-  const parseTimeToSeconds = (time: string): number => {
-    const [hours, minutes, seconds] = time.split(':').map(Number);
-    return hours * 3600 + minutes * 60 + seconds;
-  };
+
+  // ============================================================
+  // RENDER
+  // ============================================================
 
   return (
-    <div
-      className="test-container"
-      style={{ marginTop: '50px', marginBottom: '70px' }}
-    >
+    <div className="test-container" style={{ marginTop: 50, marginBottom: 70 }}>
       <Typography.Title level={3} className="test-title">
-        Bài kiểm tra - {volumeSlug}
+        Bai kiem tra - {volumeSlug}
       </Typography.Title>
+
       <div className="back-button-container">
         <Button onClick={() => router.back()} className="back-btn">
-          ⬅ Quay lại
+          ⬅ Quay lai
         </Button>
       </div>
+
       {loading ? (
         <Spin size="large" />
       ) : (
         sentences.map((sentence) => (
           <div key={sentence.id} className="sentence-container">
             <Text className="viClass">{sentence.vi}</Text>
+
+            {/* Nut phat audio cho cau hien tai */}
             <Button
               type="link"
               icon={
-                currentPlayingId === sentence.id ? (
-                  <PauseOutlined />
-                ) : (
-                  <PlayCircleOutlined />
-                )
+                currentPlayingId === sentence.id
+                  ? <PauseOutlined />
+                  : <PlayCircleOutlined />
               }
               onClick={() =>
-                toggleAudio(
-                  sentence.id,
-                  sentence.audio,
-                  sentence.startTime,
-                  sentence.endTime
-                )
+                toggleAudio(sentence.id, sentence.audio, sentence.startTime, sentence.endTime)
               }
             />
+
+            {/* Hien dap an dung sau khi da kiem tra */}
             {isChecked && (
-              <Text className="correct-answer">
-                Đáp án đúng: {sentence.eng}
-              </Text>
+              <Text className="correct-answer">Dap an dung: {sentence.eng}</Text>
             )}
+
+            {/* Ngan hang tu (chua chon) */}
             <div className="engClass">
-              {wordBank[sentence.id]?.map((word, index) => (
+              {wordBank[sentence.id]?.map((word, idx) => (
                 <Text
-                  key={index}
+                  key={idx}
                   className="word"
                   onClick={() => handleWordClick(sentence.id, word)}
                 >
@@ -278,11 +269,13 @@ const TestPage = () => {
                 </Text>
               ))}
             </div>
+
+            {/* Vung tu da chon + icon ket qua */}
             <div className="selected-container">
               <div className="selectedWords">
-                {selectedWords[sentence.id]?.map((word, index) => (
+                {selectedWords[sentence.id]?.map((word, idx) => (
                   <Text
-                    key={index}
+                    key={idx}
                     className="word selected-word"
                     onClick={() => handleSelectedWordClick(sentence.id, word)}
                   >
@@ -296,77 +289,70 @@ const TestPage = () => {
                 </Text>
               )}
             </div>
-            <div
-              className="testBookEngName"
-              style={{ textAlign: 'right', marginTop: '5px' }}
-            >
+
+            <div className="testBookEngName" style={{ textAlign: 'right', marginTop: 5 }}>
               {sentence.bookEngName}
             </div>
           </div>
         ))
       )}
+
+      {/* Nut kiem tra ket qua va lam lai */}
       <div className="button-container">
         <Button
           type="primary"
-          onClick={() => setOpen(true)}
+          onClick={() => setOpenConfirmModal(true)}
           className="check-btn"
           disabled={isChecked}
         >
-          Kết quả
+          Ket qua
         </Button>
         <Button onClick={reloadTest} className="reload-btn">
-          <ReloadOutlined /> Làm lại
+          <ReloadOutlined /> Lam lai
         </Button>
       </div>
+
+      {/* Modal xac nhan truoc khi kiem tra */}
       <Modal
-        title="Xác nhận"
-        open={open}
+        title="Xac nhan"
+        open={openConfirmModal}
         onOk={handleCheckResults}
         confirmLoading={confirmLoading}
-        onCancel={() => setOpen(false)}
-        centered // Căn giữa modal
+        onCancel={() => setOpenConfirmModal(false)}
+        centered
       >
-        <p>Bạn có chắc chắn muốn kiểm tra kết quả?</p>
+        <p>Ban co chac chan muon kiem tra ket qua?</p>
       </Modal>
+
+      {/* Modal hien thi diem sau khi kiem tra */}
       {isChecked && (
         <Modal
           title={
-            <div
-              style={{
-                textAlign: 'center',
-                fontSize: '28px',
-                fontWeight: 'bold',
-              }}
-            >
-              Kết quả
+            <div style={{ textAlign: 'center', fontSize: 28, fontWeight: 'bold' }}>
+              Ket qua
             </div>
           }
           open={openResultModal}
           onOk={() => setOpenResultModal(false)}
           onCancel={() => setOpenResultModal(false)}
-          width={600} // Làm modal rộng hơn
-          centered // Căn giữa modal
+          width={600}
+          centered
           footer={
             <div style={{ textAlign: 'center' }}>
               <Button type="primary" onClick={() => setOpenResultModal(false)}>
                 OK
               </Button>
-              <Button
-                onClick={() => setOpenResultModal(false)}
-                style={{ marginLeft: '10px' }}
-              >
-                Hủy
+              <Button onClick={() => setOpenResultModal(false)} style={{ marginLeft: 10 }}>
+                Huy
               </Button>
             </div>
           }
         >
-          <div style={{ textAlign: 'center', fontSize: '24px' }}>
+          <div style={{ textAlign: 'center', fontSize: 24 }}>
             {score === sentences.length ? (
-              <CheckCircleOutlined
-                style={{ color: 'green', fontSize: '64px' }}
-              />
+              <CheckCircleOutlined style={{ color: 'green', fontSize: 64 }} />
             ) : (
-              <CloseCircleOutlined style={{ color: 'red', fontSize: '64px' }} />
+              <CloseCircleOutlined style={{ color: 'red', fontSize: 64 }} />
             )}
           </div>
           <Text
@@ -374,12 +360,12 @@ const TestPage = () => {
             style={{
               display: 'block',
               textAlign: 'center',
-              marginTop: '10px',
-              fontSize: '20px',
+              marginTop: 10,
+              fontSize: 20,
               fontWeight: 'bold',
             }}
           >
-            Điểm: {score} / {limit}
+            Diem: {score} / {limit}
           </Text>
         </Modal>
       )}
@@ -387,10 +373,11 @@ const TestPage = () => {
   );
 };
 
-const SuspenseBoundary = () => (
+// Boc trong Suspense de dung useSearchParams an toan voi Next.js App Router
+const TestPageWrapper = () => (
   <Suspense fallback={<Spin size="large" />}>
     <TestPage />
   </Suspense>
 );
 
-export default SuspenseBoundary;
+export default TestPageWrapper;

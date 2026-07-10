@@ -1,4 +1,5 @@
 import { ContentType } from '@/interfaces/content';
+import { getMeaningWords, updateContent } from '@/utils/apiService';
 import {
   CheckOutlined,
   EditOutlined,
@@ -21,9 +22,8 @@ import {
   Space,
   Typography,
 } from 'antd';
-import { useCallback, useEffect, useRef, useState } from 'react';
 import debounce from 'lodash.debounce';
-import { getMeaningWords, updateContent } from '@/utils/apiService';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 const { Content } = Layout;
 const { Text } = Typography;
@@ -37,7 +37,7 @@ interface HomePageContentComponentProps {
   playbackSpeed: number;
   searchValueEn: string;
   searchValueVi: string;
-  highlightedEnKeywords: string[];  // Tu can highlight (tu search highlight)
+  highlightedEnKeywords: string[];
   highlightedViKeywords: string[];
 }
 
@@ -47,12 +47,12 @@ const TOOLTIP_STYLE: React.CSSProperties = {
   backgroundColor: '#108ee9',
   color: 'white',
   padding: '12px 15px',
-  borderRadius: '8px',
+  borderRadius: 8,
   boxShadow: '0 1px 8px rgba(0,0,0,0.1)',
   zIndex: 10,
-  maxWidth: '400px',
+  maxWidth: 400,
   wordWrap: 'break-word',
-  fontSize: '15px',
+  fontSize: 15,
   lineHeight: '1.9',
   transition: 'transform 0.2s ease-out',
 };
@@ -61,7 +61,7 @@ const TOOLTIP_STYLE: React.CSSProperties = {
 // HELPERS
 // ============================================================
 
-// Highlight cac tu khop voi keywords trong doan text
+// Highlight cac tu khop voi keywords trong doan van ban
 const highlightText = (
   text: string,
   keywords: string[] | string
@@ -70,18 +70,11 @@ const highlightText = (
   if (!keywordList.length || (keywordList.length === 1 && !keywordList[0])) {
     return text;
   }
-
   const regex = new RegExp(`(${keywordList.join('|')})`, 'gi');
-  const parts = text.split(regex);
-
-  return parts.map((part, index) =>
-    regex.test(part) ? (
-      <mark key={index} style={{ backgroundColor: 'yellow' }}>
-        {part}
-      </mark>
-    ) : (
-      part
-    )
+  return text.split(regex).map((part, index) =>
+    regex.test(part)
+      ? <mark key={index} style={{ backgroundColor: 'yellow' }}>{part}</mark>
+      : part
   );
 };
 
@@ -106,8 +99,8 @@ const HomePageContentComponent = ({
   const currentAudioRef = useRef<HTMLAudioElement | null>(null);
   const currentPlayingIdRef = useRef<string | null>(null);
 
-  // renderCount chi dung de ep React re-render sau khi doi ref
-  const [renderCount, setRenderCount] = useState(0);
+  // forceRender dung de ep React ve lai UI sau khi thay doi ref
+  const [, setRenderCount] = useState(0);
   const forceRender = () => setRenderCount((c) => c + 1);
 
   // Trang thai tooltip tra nghia tu
@@ -139,7 +132,7 @@ const HomePageContentComponent = ({
     setFilteredData(contents);
   }, [contents]);
 
-  // Cap nhat toc do phat cua audio dang chay khi playbackSpeed thay doi
+  // Cap nhat toc do phat khi playbackSpeed thay doi
   useEffect(() => {
     if (currentAudioRef.current) {
       currentAudioRef.current.playbackRate = playbackSpeed;
@@ -147,16 +140,16 @@ const HomePageContentComponent = ({
   }, [playbackSpeed]);
 
   // ============================================================
-  // AUDIO HANDLERS
+  // AUDIO HELPERS
   // ============================================================
 
-  // Chuyen doi chuoi "hh:mm:ss" sang so giay
+  // Chuyen chuoi "hh:mm:ss" thanh so giay
   const parseTimeToSeconds = (time: string): number => {
-    const [hours, minutes, seconds] = time.split(':').map(Number);
-    return hours * 3600 + minutes * 60 + seconds;
+    const [h, m, s] = time.split(':').map(Number);
+    return h * 3600 + m * 60 + s;
   };
 
-  // Dung audio dang phat va reset trang thai tat ca item ve false
+  // Dung audio dang phat va reset trang thai tat ca item
   const stopAudio = useCallback(() => {
     if (currentAudioRef.current) {
       currentAudioRef.current.pause();
@@ -172,16 +165,15 @@ const HomePageContentComponent = ({
     forceRender();
   }, []);
 
-  // Bat/dung audio cua 1 item
-  // - Neu item dang phat: dung lai
-  // - Neu item chua phat: dung item hien tai, tao Audio moi va phat
+  // ============================================================
+  // AUDIO HANDLERS
+  // ============================================================
+
+  // Bat/dung audio cua 1 item:
+  // - Neu dang phat item nay: dung lai
+  // - Neu chua phat: dung item cu, tao Audio moi va phat
   const toggleAudio = useCallback(
-    (
-      itemId: string,
-      audioPath: string,
-      startTime: string,
-      endTime: string
-    ) => {
+    (itemId: string, audioPath: string, startTime: string, endTime: string) => {
       if (!audioPath || !startTime || !endTime) {
         message.error('Khong co tep am thanh hoac thoi gian khong hop le.');
         return;
@@ -196,12 +188,11 @@ const HomePageContentComponent = ({
       }
 
       if (currentPlayingIdRef.current === itemId) {
-        // Dang phat item nay -> dung lai
         stopAudio();
         return;
       }
 
-      // Dung item cu truoc khi phat item moi
+      // Dung audio cu truoc khi phat moi
       if (currentAudioRef.current) {
         currentAudioRef.current.pause();
         currentAudioRef.current = null;
@@ -215,43 +206,34 @@ const HomePageContentComponent = ({
       audio.addEventListener('timeupdate', () => {
         if (audio.currentTime >= end) {
           if (loopStatesRef.current[itemId]) {
-            // Dang loop -> quay lai dau
+            // Dang loop: quay lai dau doan
             audio.currentTime = start;
           } else {
-            // Khong loop -> dung lai va reset trang thai
+            // Khong loop: dung va reset trang thai
             audio.pause();
             currentAudioRef.current = null;
             currentPlayingIdRef.current = null;
-            Object.keys(playStatesRef.current).forEach((key) => {
-              playStatesRef.current[key] = false;
-            });
-            Object.keys(loopStatesRef.current).forEach((key) => {
-              loopStatesRef.current[key] = false;
-            });
+            Object.keys(playStatesRef.current).forEach((k) => { playStatesRef.current[k] = false; });
+            Object.keys(loopStatesRef.current).forEach((k) => { loopStatesRef.current[k] = false; });
             forceRender();
           }
         }
       });
 
-      // Xu ly truong hop audio ket thuc tu nhien
+      // Reset trang thai khi audio ket thuc tu nhien
       audio.addEventListener('ended', () => {
         currentAudioRef.current = null;
         currentPlayingIdRef.current = null;
-        Object.keys(playStatesRef.current).forEach((key) => {
-          playStatesRef.current[key] = false;
-        });
+        Object.keys(playStatesRef.current).forEach((k) => { playStatesRef.current[k] = false; });
         forceRender();
       });
 
       currentAudioRef.current = audio;
       currentPlayingIdRef.current = itemId;
-
-      // Cap nhat playStates: chi item dang click la true, cac item khac false
-      Object.keys(playStatesRef.current).forEach((key) => {
-        playStatesRef.current[key] = key === itemId;
+      Object.keys(playStatesRef.current).forEach((k) => {
+        playStatesRef.current[k] = k === itemId;
       });
       loopStatesRef.current[itemId] = false;
-
       forceRender();
 
       audio.play().catch(() => {
@@ -272,7 +254,7 @@ const HomePageContentComponent = ({
   // TOOLTIP - TRA NGHIA TU
   // ============================================================
 
-  // Lay nghia cua tu nguoi dung boi den (debounce 300ms)
+  // Lay nghia cua tu nguoi dung boi chon (debounce 300ms)
   const handleGetMeaning = useCallback(
     debounce(async () => {
       try {
@@ -285,7 +267,7 @@ const HomePageContentComponent = ({
           return;
         }
 
-        // Tranh goi API lai neu tu da duoc tra truoc do
+        // Tranh goi API lai neu tu da duoc hien thi truoc do
         const alreadyShown =
           searchValue === meaningEnKeywords.join(' ') ||
           searchValue === meaningViKeywords.join(' ');
@@ -313,14 +295,13 @@ const HomePageContentComponent = ({
           });
         }
       } catch (error) {
-        console.error('Loi khi goi API tra nghia:', error);
+        console.error('Loi khi tra nghia tu:', error);
       }
     }, 300),
     [meaningEnKeywords, meaningViKeywords]
   );
 
-  // Lang nghe su kien boi chu de hien tooltip tra nghia
-  // (phai dat SAU handleGetMeaning de tranh loi "cannot access before initialization")
+  // Lang nghe su kien boi chu tren trang de hien tooltip
   useEffect(() => {
     document.addEventListener('selectionchange', handleGetMeaning);
     return () => document.removeEventListener('selectionchange', handleGetMeaning);
@@ -330,19 +311,21 @@ const HomePageContentComponent = ({
   // EDIT MODAL HANDLERS
   // ============================================================
 
+  // Mo modal chinh sua voi du lieu cua item duoc chon
   const handleOpenEdit = (item: ContentType) => {
     setEditingItem(item);
     editForm.setFieldsValue({ eng: item.eng, vi: item.vi });
     setEditModalOpen(true);
   };
 
+  // Dong modal va reset form
   const handleCancelEdit = () => {
     setEditModalOpen(false);
     setEditingItem(null);
     editForm.resetFields();
   };
 
-  // Gui request cap nhat va cap nhat du lieu local neu thanh cong
+  // Gui yeu cau cap nhat, cap nhat du lieu local neu thanh cong
   const handleUpdate = async () => {
     if (!editingItem) return;
     try {
@@ -358,15 +341,15 @@ const HomePageContentComponent = ({
         style: { backgroundColor: '#f6ffed', border: '1px solid #b7eb8f' },
       });
 
-      // Cap nhat du lieu hien thi ngay ma khong can reload
+      // Cap nhat du lieu hien thi truc tiep, khong can reload
       setFilteredData((prev) =>
         prev.map((it) =>
           it.id === editingItem.id ? { ...it, eng: values.eng, vi: values.vi } : it
         )
       );
-
       handleCancelEdit();
     } catch (error: any) {
+      if (error?.errorFields) return;
       notifApi.error({
         message: 'Cap nhat that bai',
         description: error.message || 'Da xay ra loi, vui long thu lai.',
@@ -393,7 +376,7 @@ const HomePageContentComponent = ({
             <Col span={8} xs={24} sm={24} md={12} lg={12} key={item.id} className="colClass">
               <div className="frameClass">
 
-                {/* Dong tieng Anh + icon check + nut play + nut loop + nut edit */}
+                {/* Dong tieng Anh + nut play + nut loop + nut chinh sua */}
                 <div className="audioClass">
                   <Text strong className="engClass">
                     {highlightText(
@@ -402,28 +385,19 @@ const HomePageContentComponent = ({
                     )}
                   </Text>
                   <Space>
-                    {/* Hien icon check neu item da duoc hoc */}
                     {item.checked === 'YES' && (
-                      <CheckOutlined style={{ color: 'green', fontSize: '22px' }} />
+                      <CheckOutlined style={{ color: 'green', fontSize: 22 }} />
                     )}
                     {/* Nut Play / Pause */}
                     <Button
                       type="link"
-                      icon={
-                        playStatesRef.current[item.id] ? <PauseOutlined /> : <PlayCircleOutlined />
-                      }
-                      onClick={() =>
-                        toggleAudio(item.id, item.audio, item.startTime, item.endTime)
-                      }
+                      icon={playStatesRef.current[item.id] ? <PauseOutlined /> : <PlayCircleOutlined />}
+                      onClick={() => toggleAudio(item.id, item.audio, item.startTime, item.endTime)}
                     />
-                    {/* Nut bat/tat lap lai (chi hoat dong khi dang phat) */}
+                    {/* Nut bat/tat lap lai, chi hoat dong khi item dang phat */}
                     <Button
                       type="link"
-                      icon={
-                        loopStatesRef.current[item.id]
-                          ? <RetweetOutlined />
-                          : <RollbackOutlined />
-                      }
+                      icon={loopStatesRef.current[item.id] ? <RetweetOutlined /> : <RollbackOutlined />}
                       disabled={!playStatesRef.current[item.id]}
                       onClick={() => onToggleLoop(item.id)}
                     />
@@ -450,15 +424,11 @@ const HomePageContentComponent = ({
             </Col>
           ))}
 
-          {/* Tooltip tra nghia tu khi nguoi dung boi */}
+          {/* Tooltip tra nghia tu khi nguoi dung boi chu */}
           {meaningEnKeywords.length > 0 && meaningViKeywords.length > 0 && (
             <div
               className="meaning-container"
-              style={{
-                ...TOOLTIP_STYLE,
-                left: tooltipPosition.x,
-                top: tooltipPosition.y,
-              }}
+              style={{ ...TOOLTIP_STYLE, left: tooltipPosition.x, top: tooltipPosition.y }}
             >
               {/^[a-zA-Z ]+$/.test(window.getSelection()?.toString().trim() || '')
                 ? meaningEnKeywords.map((word, i) => (

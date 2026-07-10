@@ -1,9 +1,9 @@
 import { Book } from '@/interfaces/book';
+import { Chart } from '@/interfaces/chart';
 import { ContentType } from '@/interfaces/content';
 import { PaginationResponse } from '@/interfaces/pagination';
 import { Volume } from '@/interfaces/volume';
 import { Word } from '@/interfaces/word';
-import { Chart } from '@/interfaces/chart';
 import { message } from 'antd';
 import apiClient from './apiClient';
 
@@ -11,7 +11,7 @@ import apiClient from './apiClient';
 // INTERCEPTORS
 // ============================================================
 
-// Gan token JWT vao header truoc moi request (tru login)
+// Gan token JWT vao header Authorization truoc moi request (tru request login)
 apiClient.interceptors.request.use(
   (config) => {
     if (config.url !== '/login') {
@@ -23,7 +23,9 @@ apiClient.interceptors.request.use(
   (error) => Promise.reject(error)
 );
 
-// Xu ly loi 401/403: xoa token va chuyen ve trang login
+// Xu ly loi phan hoi:
+// - 401: Phien dang nhap het han -> xoa token, chuyen ve /login
+// - 403: Khong co quyen truy cap -> xoa token, chuyen ve /login
 apiClient.interceptors.response.use(
   (response) => response,
   async (error) => {
@@ -40,7 +42,7 @@ apiClient.interceptors.response.use(
   }
 );
 
-// Helper: lay message loi tu response hoac fallback ve message mac dinh
+// Lay thong bao loi tu response hoac fallback ve message mac dinh
 const getErrorMessage = (error: any): string =>
   error.response?.data?.message || error.message || 'Loi khong xac dinh';
 
@@ -48,7 +50,7 @@ const getErrorMessage = (error: any): string =>
 // AUTH
 // ============================================================
 
-// Dang nhap, luu JWT vao localStorage va tra ve token
+// Dang nhap: gui username/password, luu JWT vao localStorage, tra ve token
 export const login = async (username: string, password: string): Promise<string> => {
   try {
     const response = await apiClient.post('/login', { username, password });
@@ -64,7 +66,7 @@ export const login = async (username: string, password: string): Promise<string>
 // CATEGORIES
 // ============================================================
 
-// Lay danh sach tat ca danh muc
+// Lay danh sach tat ca danh muc (dung cho menu header)
 export const getCategories = async () => {
   try {
     const response = await apiClient.get('/categories/list');
@@ -74,7 +76,7 @@ export const getCategories = async () => {
   }
 };
 
-// Lay danh sach sach theo danh muc lon (co phan trang)
+// Lay danh sach sach theo danh muc lon, co phan trang
 export const getBooksByCategory = async (
   categorySlug: string,
   page: number,
@@ -90,7 +92,7 @@ export const getBooksByCategory = async (
   }
 };
 
-// Lay danh sach sach theo danh muc con (co phan trang)
+// Lay danh sach sach theo danh muc con, co phan trang
 export const getBooksBySubCategory = async (
   subCategorySlug: string,
   page: number,
@@ -110,7 +112,7 @@ export const getBooksBySubCategory = async (
 // VOLUMES
 // ============================================================
 
-// Lay danh sach tap theo slug sach (co phan trang)
+// Lay danh sach tap theo slug sach, co phan trang
 export const getVolumes = async (
   slug: string,
   page: number,
@@ -126,7 +128,7 @@ export const getVolumes = async (
   }
 };
 
-// Lay chi tiet 1 tap theo slug
+// Lay chi tiet mot tap theo slug (ten, audio, startTime, endTime...)
 export const getVolumeDetail = async (slug: string): Promise<Volume> => {
   try {
     const response = await apiClient.get(`/volumes/${slug}`);
@@ -140,7 +142,7 @@ export const getVolumeDetail = async (slug: string): Promise<Volume> => {
 // CONTENTS
 // ============================================================
 
-// Lay danh sach noi dung theo ID tap
+// Lay toan bo noi dung (cac cau) cua mot tap theo volumeId
 export const getContents = async (
   volumeId: string
 ): Promise<PaginationResponse<ContentType>> => {
@@ -152,7 +154,7 @@ export const getContents = async (
   }
 };
 
-// Tim kiem noi dung theo tieng Anh hoac tieng Viet (co phan trang)
+// Tim kiem noi dung theo tieng Anh hoac tieng Viet, co phan trang
 export const getContentSearch = async (
   eng: string | null,
   vi: string | null,
@@ -173,7 +175,7 @@ export const getContentSearch = async (
   }
 };
 
-// Cap nhat noi dung (tieng Anh va tieng Viet) theo ID
+// Cap nhat noi dung (tieng Anh va tieng Viet) cua mot cau theo id
 export const updateContent = async (
   id: string,
   eng: string,
@@ -190,7 +192,7 @@ export const updateContent = async (
 // WORDS
 // ============================================================
 
-// Lay tu can highlight tren trang noi dung
+// Lay danh sach tu can highlight tren trang noi dung
 export const getHighLightWords = async (
   eng: string | null,
   vi: string | null
@@ -207,7 +209,7 @@ export const getHighLightWords = async (
   }
 };
 
-// Lay nghia cua tu khi nguoi dung boi den (tooltip)
+// Lay nghia cua tu/cum tu khi nguoi dung boi chon (dung cho tooltip tra nghia)
 export const getMeaningWords = async (
   eng: string | null,
   vi: string | null
@@ -224,7 +226,7 @@ export const getMeaningWords = async (
   }
 };
 
-// Lay goi y tu khi nguoi dung dang nhap vao o tim kiem
+// Lay goi y tu khi nguoi dung dang nhap vao o tim kiem (AutoComplete)
 export const getSuggestions = async (
   eng: string | null,
   vi: string | null
@@ -233,12 +235,12 @@ export const getSuggestions = async (
     const response = await apiClient.get(`/word/suggestion?eng=${eng}&vi=${vi}`);
     return response.data || [];
   } catch (error) {
-    console.error('Error fetching suggestions:', error);
+    console.error('Loi khi lay goi y tu:', error);
     return [];
   }
 };
 
-// Them tu moi vao tu dien (1 tu tieng Anh co the co nhieu nghia tieng Viet)
+// Them tu moi vao tu dien: 1 tu tieng Anh kem theo nhieu nghia tieng Viet
 export const insertWord = async (eng: string, viList: string[]): Promise<void> => {
   try {
     await apiClient.post('/word/insert', { eng, viList });
@@ -251,7 +253,7 @@ export const insertWord = async (eng: string, viList: string[]): Promise<void> =
 // CHART
 // ============================================================
 
-// Lay du lieu bieu do theo khoang ngay
+// Lay du lieu gia vang theo khoang ngay (dung cho bieu do va bang thong ke)
 export const getChart = async (
   startDate: string,
   endDate: string

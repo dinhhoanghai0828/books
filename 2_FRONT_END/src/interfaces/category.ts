@@ -1,9 +1,9 @@
-import { SubCategory } from "./subcategory";
+import { SubCategory } from './subcategory';
 
 export interface Category {
-    uuid: string;
-    eng: string;
-    vi: string;
-    number: number;
-    subcategories: SubCategory[];
+  uuid: string;
+  eng: string;
+  vi: string;
+  number: number;
+  subcategories: SubCategory[];
 }

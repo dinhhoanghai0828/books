@@ -6,16 +6,12 @@ import { ContentType } from '@/interfaces/content';
 import { Volume } from '@/interfaces/volume';
 import { getContents, getVolumeDetail } from '@/utils/apiService';
 import { useHasMounted } from '@/utils/customHook';
-import { useParams, usePathname } from 'next/navigation';
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
 import { useEffect, useState } from 'react';
+import { useParams, usePathname } from 'next/navigation';
 import '../../../../../styles/global.css';
 import '../../../../../styles/volume.css';
-
-// ============================================================
-// COMPONENT
-// ============================================================
 
 const ContentPage = () => {
   const hasMounted = useHasMounted();
@@ -23,24 +19,24 @@ const ContentPage = () => {
   const pathname = usePathname();
   const { volumeSlug } = params;
 
-  // Du lieu noi dung va thong tin tap
+  // Du lieu noi dung va thong tin tap hien tai
   const [contents, setContents] = useState<ContentType[]>([]);
   const [volume, setVolume] = useState<Volume>();
-  const [loading, setLoading] = useState<boolean>(false);
+  const [loading, setLoading] = useState(false);
 
-  // Trang thai dieu khien audio
-  const [startTime, setStartTime] = useState<string>();
-  const [endTime, setEndTime] = useState<string>();
-  const [isLoop, setIsLoop] = useState<boolean>(false);
-  const [isPause, setIsPause] = useState<boolean>(false);
-  const [isPlaying, setIsPlaying] = useState<boolean>(false);
-  const [itemId, setItemId] = useState<number>(0);
+  // Trang thai dieu khien AudioComponent
+  const [startTime, setStartTime] = useState('');
+  const [endTime, setEndTime] = useState('');
+  const [isLoop, setIsLoop] = useState(false);
+  const [isPause, setIsPause] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [itemId, setItemId] = useState(0);
 
   // ============================================================
   // DATA FETCHING
   // ============================================================
 
-  // Lay danh sach noi dung cua tap
+  // Lay toan bo noi dung (cac cau) cua tap theo volumeSlug
   const fetchContents = async () => {
     if (!volumeSlug || Array.isArray(volumeSlug)) return;
     NProgress.start();
@@ -56,7 +52,7 @@ const ContentPage = () => {
     }
   };
 
-  // Lay thong tin chi tiet cua tap (ten, duong dan audio...)
+  // Lay thong tin chi tiet cua tap (ten, duong dan audio, startTime, endTime...)
   const fetchVolumeDetail = async () => {
     if (!volumeSlug || Array.isArray(volumeSlug)) return;
     NProgress.start();
@@ -76,64 +72,60 @@ const ContentPage = () => {
   }, [volumeSlug]);
 
   // ============================================================
-  // AUDIO HANDLERS (truyen xuong ContentComponent va AudioComponent)
+  // AUDIO HANDLERS
   // ============================================================
 
-  // Bat dau phat audio: cap nhat startTime, endTime va danh dau isPlaying = true
-  const handlePlayAudio = (startTime: string, endTime: string) => {
-    setStartTime(startTime);
-    setEndTime(endTime);
+  // Bat dau phat: cap nhat thoi gian va danh dau trang thai dang phat
+  const handlePlayAudio = (start: string, end: string) => {
+    setStartTime(start);
+    setEndTime(end);
     setIsPause(false);
     setIsPlaying(true);
   };
 
-  // Dung audio: danh dau isPlaying = false, isLoop = false
-  const handlePauseAudio = (isPause: boolean) => {
-    setIsPause(isPause);
+  // Dung phat: danh dau trang thai dung, reset loop
+  const handlePauseAudio = (pause: boolean) => {
+    setIsPause(pause);
     setIsPlaying(false);
     setIsLoop(false);
   };
 
-  // AudioComponent goi khi audio chay xong tu nhien -> reset isPlaying
+  // AudioComponent goi khi audio tu dong ket thuc -> reset isPlaying
   const resetIsPlaying = () => {
     setIsPlaying(false);
   };
 
-  // Cap nhat thong tin audio khi nguoi dung chon item hoac bat/tat loop
+  // Cap nhat thong tin item dang phat va trang thai loop
   const handleToggleAudio = (
-    itemId: string,
-    startTime: string,
-    endTime: string,
-    isLoop: boolean
+    id: string,
+    start: string,
+    end: string,
+    loop: boolean
   ) => {
-    setItemId(Number(itemId));
-    setStartTime(startTime);
-    setEndTime(endTime);
-    setIsLoop(isLoop);
+    setItemId(Number(id));
+    setStartTime(start);
+    setEndTime(end);
+    setIsLoop(loop);
   };
 
   // ============================================================
   // BREADCRUMB
   // ============================================================
 
-  // Tao breadcrumb tu pathname, moi segment la 1 cap
   const breadcrumbItems = pathname
     .split('/')
-    .filter((segment) => segment)
+    .filter(Boolean)
     .map((segment, index, array) => ({
       name: segment.replace(/-/g, ' ').toUpperCase(),
       path: `/${array.slice(0, index + 1).join('/')}`,
     }));
 
-  // Tranh render phia client truoc khi component mount (Next.js hydration)
-  if (!hasMounted) return <></>;
+  if (!hasMounted) return null;
 
   return (
     <div>
-      {/* Breadcrumb hien thi duong dan hien tai */}
       <BreadCrumbComponent items={breadcrumbItems} />
 
-      {/* Danh sach noi dung cua tap */}
       <ContentComponent
         contents={contents}
         loading={loading}
@@ -145,11 +137,11 @@ const ContentPage = () => {
         handleToggleAudio={handleToggleAudio}
       />
 
-      {/* Thanh phat audio co dinh o cuoi man hinh (chi hien khi co file audio) */}
+      {/* Thanh audio co dinh o cuoi man hinh, chi hien khi tap co file audio */}
       {volume?.audio && (
         <AudioComponent
-          startTime={startTime || ''}
-          endTime={endTime || ''}
+          startTime={startTime}
+          endTime={endTime}
           isLoop={isLoop}
           itemId={itemId}
           isPause={isPause}

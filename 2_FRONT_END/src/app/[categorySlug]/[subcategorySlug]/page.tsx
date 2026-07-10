@@ -1,78 +1,73 @@
 'use client';
-import React, { useEffect, useState } from 'react';
-import { useParams, usePathname } from 'next/navigation';
+import BreadCrumbComponent from '@/components/breadcumb/BreadcrumbComponent';
 import BookContentComponent from '@/components/books/BookContentComponent';
 import PaginationComponent from '@/components/pagination/PaginationComponent';
-import BreadCrumbComponent from '@/components/breadcumb/BreadcrumbComponent';
 import { Book } from '@/interfaces/book';
 import { getBooksBySubCategory } from '@/utils/apiService';
 import { useHasMounted } from '@/utils/customHook';
+import NProgress from 'nprogress';
+import 'nprogress/nprogress.css';
+import { useEffect, useState } from 'react';
+import { useParams, usePathname } from 'next/navigation';
 import '../../../styles/global.css';
-import NProgress from 'nprogress'; // Import thư viện nprogress
-import 'nprogress/nprogress.css'; // Import CSS mặc định của nprogress
+
 const SubCategoryPage = () => {
   const hasMounted = useHasMounted();
   const params = useParams();
   const pathname = usePathname();
   const { subcategorySlug } = params;
-  const [books, setBooks] = useState<Book[]>([]);
-  const [currentPage, setCurrentPage] = useState<number>(1);
-  const [pageSize, setPageSize] = useState<number>(10);
-  const [totalItems, setTotalItems] = useState<number>(0);
-  const [loading, setLoading] = useState<boolean>(false);
 
-  // Gọi API lấy danh sách sách
+  const [books, setBooks] = useState<Book[]>([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [pageSize, setPageSize] = useState(10);
+  const [totalItems, setTotalItems] = useState(0);
+  const [loading, setLoading] = useState(false);
+
+  // Lay danh sach sach theo danh muc con, co phan trang
   const fetchBooks = async (page: number, size: number) => {
-    NProgress.start();
     if (!subcategorySlug || Array.isArray(subcategorySlug)) return;
+    NProgress.start();
     setLoading(true);
     try {
       const response = await getBooksBySubCategory(subcategorySlug, page, size);
       setBooks(response.data);
       setTotalItems(response.totalElements);
     } catch (error) {
-      console.error('Lỗi khi lấy sách:', error);
+      console.error('Loi khi lay danh sach sach:', error);
     } finally {
       setLoading(false);
       NProgress.done();
     }
   };
 
-  // Gọi API khi trang hoặc kích thước trang thay đổi
+  // Goi lai API khi trang hoac kich thuoc trang thay doi
   useEffect(() => {
     fetchBooks(currentPage, pageSize);
   }, [currentPage, pageSize]);
 
-  const handlePageChange = (page: number, size: number) => {
-    setCurrentPage(page);
-    setPageSize(size);
-  };
-
-  // Tạo dữ liệu Breadcrumb từ pathname
+  // Tao danh sach breadcrumb tu pathname hien tai
   const breadcrumbItems = pathname
     .split('/')
-    .filter((segment) => segment) // Loại bỏ các segment rỗng
+    .filter(Boolean)
     .map((segment, index, array) => ({
-      name: segment.replace(/-/g, ' ').toUpperCase(), // Tên hiển thị, đổi "-" thành " "
-      path: `/${array.slice(0, index + 1).join('/')}`, // Đường dẫn
+      name: segment.replace(/-/g, ' ').toUpperCase(),
+      path: `/${array.slice(0, index + 1).join('/')}`,
     }));
 
-  if (!hasMounted) return <></>;
+  if (!hasMounted) return null;
 
   return (
     <div>
-      {/* Breadcrumb */}
       <BreadCrumbComponent items={breadcrumbItems} />
-
-      {/* Nội dung danh sách sách */}
       <BookContentComponent books={books} loading={loading} />
-
-      {/* Phân trang */}
       <PaginationComponent
         currentPage={currentPage}
         pageSize={pageSize}
         total={totalItems}
-        onPageChange={handlePageChange}
+        onPageChange={(page, size) => {
+          setCurrentPage(page);
+          setPageSize(size);
+        }}
       />
     </div>
   );

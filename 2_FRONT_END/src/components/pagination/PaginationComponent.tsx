@@ -7,6 +7,7 @@ interface PaginationComponentProps {
   onPageChange: (page: number, pageSize: number) => void;
 }
 
+// Hien thi thanh phan trang can giua, ho tro thay doi so luong item moi trang
 const PaginationComponent = ({
   currentPage,
   pageSize,
@@ -21,8 +22,8 @@ const PaginationComponent = ({
             current={currentPage}
             pageSize={pageSize}
             total={total}
-            showSizeChanger={true} // Hiển thị size changer trên mọi chế độ
-            onChange={(page, size) => onPageChange(page, size)}
+            showSizeChanger
+            onChange={onPageChange}
           />
         </Col>
       </Row>

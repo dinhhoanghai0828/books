@@ -1,47 +1,43 @@
-"use client"
-import { useState } from 'react';
-import { useRouter } from 'next/navigation';
-import { login } from '@/utils/apiService'; // Đường dẫn đến file chứa hàm login
-import { Form, Input, Button, Typography, message } from 'antd';
+'use client';
+import { login } from '@/utils/apiService';
 import { useHasMounted } from '@/utils/customHook';
+import { Button, Form, Input, Typography, message } from 'antd';
+import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 
 const { Title } = Typography;
 
-const PageLogin = () => {
-  const [loading, setLoading] = useState(false);
+const LoginPage = () => {
   const router = useRouter();
- const hasMounted = useHasMounted();
+  const hasMounted = useHasMounted();
+  const [loading, setLoading] = useState(false);
+
+  // Xu ly dang nhap: goi API, luu token, chuyen huong ve trang chu
   const handleLogin = async (values: { username: string; password: string }) => {
     setLoading(true);
     try {
-      // Gọi API login
-      const token = await login(values.username, values.password);
-      
-      // Hiển thị thông báo thành công
+      await login(values.username, values.password);
       message.success('Login successful!');
-
-      // Sau khi đăng nhập thành công, chuyển hướng đến trang chỉ định
       router.push('/');
     } catch (err: any) {
       if (err.response?.status === 401) {
-        // Xử lý lỗi sai mật khẩu
         message.error('Incorrect username or password. Please try again.');
       } else {
-        // Hiển thị thông báo lỗi chung
         message.error(err.message || 'Login failed!');
       }
     } finally {
       setLoading(false);
     }
   };
-  if (!hasMounted) return <></>; // Chỉ render khi đã mount
+
+  if (!hasMounted) return null;
+
   return (
-    <div style={{ maxWidth: '400px', margin: '0 auto', padding: '2rem', backgroundColor: '#ffffff'}}>
-      <Title level={2} style={{ textAlign: 'center', marginBottom: '2rem' }}>Login</Title>
-      <Form
-        layout="vertical"
-        onFinish={handleLogin}
-      >
+    <div style={{ maxWidth: 400, margin: '0 auto', padding: '2rem', backgroundColor: '#fff' }}>
+      <Title level={2} style={{ textAlign: 'center', marginBottom: '2rem' }}>
+        Login
+      </Title>
+      <Form layout="vertical" onFinish={handleLogin}>
         <Form.Item
           label="Username"
           name="username"
@@ -49,7 +45,6 @@ const PageLogin = () => {
         >
           <Input placeholder="Enter your username" />
         </Form.Item>
-
         <Form.Item
           label="Password"
           name="password"
@@ -57,7 +52,6 @@ const PageLogin = () => {
         >
           <Input.Password placeholder="Enter your password" />
         </Form.Item>
-
         <Form.Item>
           <Button type="primary" htmlType="submit" block loading={loading}>
             Login
@@ -68,4 +62,4 @@ const PageLogin = () => {
   );
 };
 
-export default PageLogin;
+export default LoginPage;
