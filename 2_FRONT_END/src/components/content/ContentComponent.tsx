@@ -85,9 +85,9 @@ const ContentComponent = ({
       } else {
         handlePlayAudio(startTime, endTime);
         //  Lap vo han
-        handleToggleAudio(itemId, startTime, endTime, true);
+        // handleToggleAudio(itemId, startTime, endTime, true);
          //  Khong Lap vo han
-        // handleToggleAudio(itemId, startTime, endTime, false);
+        handleToggleAudio(itemId, startTime, endTime, false);
       }
 
       setRenderCount((prev) => prev + 1);

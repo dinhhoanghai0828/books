@@ -14,6 +14,8 @@ interface AudioComponentProps {
   itemId: number;
   volume: Volume | undefined; // Thông tin về volume chứa tệp âm thanh
   resetIsPlaying: () => void;
+  //  stop audio
+  handlePauseAudio: (isPause: boolean) => void;
 }
 
 const AudioComponent = ({
@@ -25,6 +27,7 @@ const AudioComponent = ({
   itemId,
   volume,
   resetIsPlaying,
+  handlePauseAudio,
 }: AudioComponentProps) => {
   const playerRef = useRef<AudioPlayer | null>(null); // Tham chiếu đến React H5 Audio Player
   const [audioSrc, setAudioSrc] = useState<string>(''); // URL tệp âm thanh
@@ -40,33 +43,6 @@ const AudioComponent = ({
   };
 
   useEffect(() => {
-    // Hàm lấy tệp âm thanh với Authorization header
-    //  const fetchAudioWithAuthorization = async () => {
-    //   if (volume) {
-    //     const token = localStorage.getItem('jwt'); // Lấy JWT từ localStorage
-    //     if (token) {
-    //       try {
-    //         const response = await fetch(
-    //           `${process.env.NEXT_PUBLIC_BACKEND_URL}/audio/${volume.audio}`,
-    //           {
-    //             headers: {
-    //               Authorization: `Bearer ${token}`,
-    //             },
-    //           }
-    //         );
-
-    //         if (response.ok) {
-    //           const blob = await response.blob(); // Lấy tệp âm thanh dưới dạng Blob
-    //           const audioURL = URL.createObjectURL(blob); // Tạo URL từ Blob
-    //           setAudioSrc(audioURL); // Lưu URL vào state
-    //         } else {
-    //           console.error('Không thể tải âm thanh:', response.statusText);
-    //         }
-    //       } catch (error) {
-    //         console.error('Lỗi khi tải âm thanh:', error);
-    //       }
-    //     }
-    //   }
     // Kiểm tra nếu có `volume` và có trường `audio` thì cập nhật đường dẫn tới tệp âm thanh
     if (volume && volume.audio) {
       // Đặt đường dẫn trực tiếp đến thư mục media
@@ -86,12 +62,14 @@ const AudioComponent = ({
       console.log(player.src);
       // Tự động phát âm thanh
       player.play();
-      resetIsPlaying(); // Gọi hàm reset trạng thái
       // Hàm xử lý khi cập nhật thời gian phát
       const handleTimeUpdate = () => {
         if (player.currentTime >= end && !isLoop) {
           player.pause(); // Dừng phát
           player.currentTime = start; // Reset về thời gian bắt đầu
+          //  Truyen ra AudioComponent xu ly
+          handlePauseAudio(true);
+          resetIsPlaying(); // Gọi hàm reset trạng thái
         }
       };
 
