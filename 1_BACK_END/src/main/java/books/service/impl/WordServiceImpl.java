@@ -58,4 +58,9 @@ public class WordServiceImpl implements WordService {
         return wordDTOS;
     }
 
+    @Override
+    public int insertWords(String eng, List<String> viList) throws Exception {
+        return wordAdapter.insertWords(eng, viList);
+    }
+
 }

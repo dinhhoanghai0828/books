@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,6 +22,7 @@ public class WordAdapterImpl implements WordAdapter {
     private static final String SQL_GET_VI_WORDS = "SELECT VI FROM WORDS WHERE BINARY VI LIKE ? GROUP BY VI";
     private static final String SQL_GET_HIGHLIGHT_WORDS = "SELECT ENG, VI FROM WORDS WHERE 1 = 1 ";
     private static final String SQL_GET_MEANING_WORDS = "SELECT ENG, VI FROM WORDS WHERE 1 = 1 ";
+    private static final String SQL_INSERT_WORD = "INSERT INTO WORDS (ENG, VI) VALUES (?, ?)";
 
     @Override
     public List<Word> getEngWords(String eng) throws Exception {
@@ -158,5 +160,36 @@ public class WordAdapterImpl implements WordAdapter {
             DBUtils.closeAll(thisMethod, con, pstmt, rs);
         }
         return words;
+    }
+
+    @Override
+    public int insertWords(String eng, List<String> viList) throws Exception {
+        String thisMethod = "WordAdapterImpl.insertWords";
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        int totalInserted = 0;
+        try {
+            con = DBUtils.getConnection(thisMethod, false, Connection.TRANSACTION_READ_COMMITTED);
+            pstmt = DBUtils.prepareStatement(con, SQL_INSERT_WORD);
+            for (String vi : viList) {
+                pstmt.setString(1, eng);
+                pstmt.setString(2, vi);
+                pstmt.addBatch();
+            }
+            int[] results = pstmt.executeBatch();
+            con.commit();
+            for (int r : results) {
+                if (r > 0) totalInserted += r;
+            }
+        } catch (Exception ex) {
+            if (con != null) {
+                try { con.rollback(); } catch (SQLException ignored) {}
+            }
+            logger.error(thisMethod, ex);
+            throw ex;
+        } finally {
+            DBUtils.closeAll(thisMethod, con, pstmt, null);
+        }
+        return totalInserted;
     }
 }

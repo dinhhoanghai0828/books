@@ -10,5 +10,8 @@ public interface WordAdapter {
     List<Word> getViWords(String vi) throws Exception;
 
     List<Word> getHighlight(String eng, String vi) throws Exception;
+
     List<Word> getMeaning(String eng, String vi) throws Exception;
+
+    int insertWords(String eng, List<String> viList) throws Exception;
 }

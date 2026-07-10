@@ -14,4 +14,6 @@ public interface WordService {
     List<WordDTO> getHighlight(String eng, String vi) throws Exception;
 
     List<WordDTO> getMeaning(String eng, String vi) throws Exception;
+
+    int insertWords(String eng, List<String> viList) throws Exception;
 }
