@@ -375,10 +375,14 @@ const ContentComponent = ({
     requestAnimationFrame(() => scrollToActiveItem(itemId));
   }, [playStates, handlePlayAudio, handlePauseAudio, handleToggleAudio, setActive, setVideoPlaying, scrollToActiveItem]);
 
-  // Callback tu AudioLayout: audio timeupdate detect ra cau moi -> highlight + scroll
+  // Callback tu AudioLayout: audio timeupdate detect ra cau moi -> highlight + scroll + cap nhat playStates
   const onAudioActiveItemChange = useCallback((id: string) => {
     if (activeItemIdRef.current === id) return;
     setActive(id, 'audio');
+    // Cap nhat playStates: chi item dang phat la true, cac item khac false
+    setPlayStates((prev) =>
+      Object.fromEntries(Object.keys(prev).map((k) => [k, k === id]))
+    );
     scrollToActiveItem(id);
   }, [setActive, scrollToActiveItem]);
 
