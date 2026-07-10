@@ -139,12 +139,6 @@ const HomePageContentComponent = ({
     }
   }, [playbackSpeed, currentAudio]);
 
-  // Lang nghe su kien boi chu de hien tooltip tra nghia (ho tro ca mobile)
-  useEffect(() => {
-    document.addEventListener('selectionchange', handleGetMeaning);
-    return () => document.removeEventListener('selectionchange', handleGetMeaning);
-  }, [handleGetMeaning]);
-
   // ============================================================
   // AUDIO HANDLERS
   // ============================================================
@@ -280,6 +274,13 @@ const HomePageContentComponent = ({
     }, 300),
     [meaningEnKeywords, meaningViKeywords]
   );
+
+  // Lang nghe su kien boi chu de hien tooltip tra nghia
+  // (phai dat SAU handleGetMeaning de tranh loi "cannot access before initialization")
+  useEffect(() => {
+    document.addEventListener('selectionchange', handleGetMeaning);
+    return () => document.removeEventListener('selectionchange', handleGetMeaning);
+  }, [handleGetMeaning]);
 
   // ============================================================
   // EDIT MODAL HANDLERS
