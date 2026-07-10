@@ -1,6 +1,7 @@
 import { ContentType } from '@/interfaces/content';
 import {
   CheckOutlined,
+  EditOutlined,
   PauseOutlined,
   PlayCircleOutlined,
 } from '@ant-design/icons';
@@ -8,15 +9,19 @@ import {
   Button,
   Col,
   Empty,
+  Form,
+  Input,
   Layout,
+  Modal,
   Row,
   Typography,
   message,
+  notification,
   Space,
 } from 'antd';
 import { useCallback, useEffect, useState } from 'react';
 import debounce from 'lodash.debounce';
-import { getMeaningWords } from '@/utils/apiService';
+import { getMeaningWords, updateContent } from '@/utils/apiService';
 const { Content } = Layout;
 const { Text } = Typography;
 
@@ -74,6 +79,13 @@ const HomePageContentComponent = ({
     x: 0,
     y: 0,
   });
+
+  // Edit modal state
+  const [editModalOpen, setEditModalOpen] = useState(false);
+  const [editingItem, setEditingItem] = useState<ContentType | null>(null);
+  const [editLoading, setEditLoading] = useState(false);
+  const [form] = Form.useForm();
+  const [api, contextHolder] = notification.useNotification();
   useEffect(() => {
     const initialState = contents.reduce((acc, item) => {
       acc[item.id] = false;
@@ -165,6 +177,59 @@ const HomePageContentComponent = ({
     return hours * 3600 + minutes * 60 + seconds;
   };
 
+  const handleOpenEdit = (item: ContentType) => {
+    setEditingItem(item);
+    form.setFieldsValue({ eng: item.eng, vi: item.vi });
+    setEditModalOpen(true);
+  };
+
+  const handleCancelEdit = () => {
+    setEditModalOpen(false);
+    setEditingItem(null);
+    form.resetFields();
+  };
+
+  const handleUpdate = async () => {
+    if (!editingItem) return;
+    try {
+      const values = await form.validateFields();
+      setEditLoading(true);
+      await updateContent(editingItem.id, values.eng, values.vi);
+      api.success({
+        message: 'Cập nhật thành công',
+        description: 'Nội dung đã được lưu lại.',
+        placement: 'topRight',
+        duration: 3,
+        style: {
+          backgroundColor: '#f6ffed',
+          border: '1px solid #b7eb8f',
+        },
+      });
+      // Cập nhật lại dữ liệu local
+      setFilteredData((prev) =>
+        prev.map((it) =>
+          it.id === editingItem.id
+            ? { ...it, eng: values.eng, vi: values.vi }
+            : it
+        )
+      );
+      handleCancelEdit();
+    } catch (error: any) {
+      api.error({
+        message: 'Cập nhật thất bại',
+        description: error.message || 'Đã xảy ra lỗi, vui lòng thử lại.',
+        placement: 'topRight',
+        duration: 4,
+        style: {
+          backgroundColor: '#fff2f0',
+          border: '1px solid #ffccc7',
+        },
+      });
+    } finally {
+      setEditLoading(false);
+    }
+  };
+
   const handleGetMeaning = useCallback(
     debounce(async () => {
       try {
@@ -232,6 +297,7 @@ const HomePageContentComponent = ({
   return (
     <Content className="contentClass">
       <>
+        {contextHolder}
         {filteredData && filteredData.length > 0 ? (
           <Row gutter={[16, 16]}>
             {filteredData.map((item) => (
@@ -279,6 +345,11 @@ const HomePageContentComponent = ({
                             item.endTime
                           )
                         }
+                      />
+                      <Button
+                        type="link"
+                        icon={<EditOutlined />}
+                        onClick={() => handleOpenEdit(item)}
                       />
                     </Space>
                   </div>
@@ -335,6 +406,45 @@ const HomePageContentComponent = ({
           <Empty description="Không có dữ liệu" className="emptyClass" />
         )}
       </>
+
+      {/* Edit Modal */}
+      <Modal
+        title="Chỉnh sửa nội dung"
+        open={editModalOpen}
+        onCancel={handleCancelEdit}
+        footer={
+          <div style={{ textAlign: 'center' }}>
+            <Space>
+              <Button onClick={handleCancelEdit}>Hủy</Button>
+              <Button type="primary" loading={editLoading} onClick={handleUpdate}>
+                Cập nhật
+              </Button>
+            </Space>
+          </div>
+        }
+      >
+        {editingItem && (
+          <Form form={form} layout="vertical">
+            <Form.Item label="ID">
+              <Input value={editingItem.id} disabled />
+            </Form.Item>
+            <Form.Item
+              label="Nghĩa tiếng Anh"
+              name="eng"
+              rules={[{ required: true, message: 'Vui lòng nhập nghĩa tiếng Anh' }]}
+            >
+              <Input />
+            </Form.Item>
+            <Form.Item
+              label="Nghĩa tiếng Việt"
+              name="vi"
+              rules={[{ required: true, message: 'Vui lòng nhập nghĩa tiếng Việt' }]}
+            >
+              <Input />
+            </Form.Item>
+          </Form>
+        )}
+      </Modal>
     </Content>
   );
 };

@@ -249,6 +249,21 @@ export const getChart = async (
   }
 };
 
+// API cập nhật nội dung
+export const updateContent = async (
+  id: string,
+  eng: string,
+  vi: string
+): Promise<void> => {
+  try {
+    await apiClient.put('/content/update', { id, eng, vi });
+  } catch (error: any) {
+    throw new Error(
+      error.response?.data?.message || error.message || 'Lỗi không xác định'
+    );
+  }
+};
+
 export const getTests = async (
   volumeSlug: string,
   limit: string
