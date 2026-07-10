@@ -119,6 +119,9 @@ const HomePageContentComponent = ({
   // Trang thai modal xem video
   const [videoModalOpen, setVideoModalOpen] = useState(false);
   const [videoSrc, setVideoSrc] = useState('');
+  const [videoStartTime, setVideoStartTime] = useState(0);
+  const [videoEndTime, setVideoEndTime] = useState(0);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
 
   // ============================================================
   // EFFECTS
@@ -316,16 +319,43 @@ const HomePageContentComponent = ({
   // EDIT MODAL HANDLERS
   // ============================================================
 
-  // Mo modal xem video cua item
-  const handleOpenVideo = (videoPath: string) => {
+  // Chuyen chuoi "hh:mm:ss" thanh so giay
+  const parseVideoTime = (time: string): number => {
+    const [h, m, s] = time.split(':').map(Number);
+    return h * 3600 + m * 60 + s;
+  };
+
+  // Mo modal va dat duong dan + khoang thoi gian can phat cua video
+  const handleOpenVideo = (videoPath: string, startTime: string, endTime: string) => {
     setVideoSrc(`/media/${videoPath}`);
+    setVideoStartTime(parseVideoTime(startTime));
+    setVideoEndTime(parseVideoTime(endTime));
     setVideoModalOpen(true);
   };
 
-  // Dong modal video va dung phat de tranh phat ngam khi dong
+  // Dong modal video va xoa src de dung phat ngam khi dong
   const handleCloseVideo = () => {
     setVideoModalOpen(false);
     setVideoSrc('');
+    setVideoStartTime(0);
+    setVideoEndTime(0);
+  };
+
+  // Khi video da load xong metadata: seek den startTime va bat dau phat
+  const handleVideoLoaded = () => {
+    const video = videoRef.current;
+    if (!video) return;
+    video.currentTime = videoStartTime;
+    video.play();
+  };
+
+  // Dung video khi den endTime
+  const handleVideoTimeUpdate = () => {
+    const video = videoRef.current;
+    if (!video) return;
+    if (video.currentTime >= videoEndTime) {
+      video.pause();
+    }
   };
 
   // Mo modal chinh sua voi du lieu cua item duoc chon
@@ -423,7 +453,7 @@ const HomePageContentComponent = ({
                       <Button
                         type="link"
                         icon={<VideoCameraOutlined />}
-                        onClick={() => handleOpenVideo(item.video!)}
+                        onClick={() => handleOpenVideo(item.video!, item.startTime, item.endTime)}
                       />
                     )}
                     {/* Nut mo modal chinh sua */}
@@ -480,9 +510,11 @@ const HomePageContentComponent = ({
         destroyOnClose
       >
         <video
+          ref={videoRef}
           src={videoSrc}
           controls
-          autoPlay
+          onLoadedMetadata={handleVideoLoaded}
+          onTimeUpdate={handleVideoTimeUpdate}
           style={{ width: '100%', borderRadius: 8 }}
         />
       </Modal>
