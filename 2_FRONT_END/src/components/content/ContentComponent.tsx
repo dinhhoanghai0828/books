@@ -344,6 +344,13 @@ const ContentComponent = ({
     requestAnimationFrame(() => scrollToActiveItem(itemId));
   }, [playStates, handlePlayAudio, handlePauseAudio, handleToggleAudio, setActive, setVideoPlaying, scrollToActiveItem]);
 
+  // Callback tu AudioLayout: audio timeupdate detect ra cau moi -> highlight + scroll
+  const onAudioActiveItemChange = useCallback((id: string) => {
+    if (activeItemIdRef.current === id) return;
+    setActive(id, 'audio');
+    scrollToActiveItem(id);
+  }, [setActive, scrollToActiveItem]);
+
   // ============================================================
   // LOOP HANDLER
   // ============================================================
@@ -351,7 +358,6 @@ const ContentComponent = ({
   const onToggleLoop = useCallback((itemId: string, startTime: string, endTime: string) => {
     const newVal = !loopStates[itemId];
     setLoopStates((prev) => ({ ...prev, [itemId]: newVal }));
-    // Goi handleToggleAudio ben ngoai setState de tranh side-effect trong setter
     handleToggleAudio(itemId, startTime, endTime, newVal);
   }, [loopStates, handleToggleAudio]);
 
@@ -516,6 +522,7 @@ const ContentComponent = ({
       loopStates={loopStates}
       onPlayPauseAudio={onPlayPauseAudio}
       onToggleLoop={onToggleLoop}
+      onActiveItemChange={onAudioActiveItemChange}
       volume={volume}
       startTime={startTime}
       endTime={endTime}

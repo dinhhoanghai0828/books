@@ -7,6 +7,7 @@ import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 import '../../styles/audio.css';
 import ContentItem from './ContentItem';
+import { findActiveItem } from './contentHelpers';
 
 // ============================================================
 // TYPES
@@ -39,6 +40,8 @@ export interface AudioLayoutProps {
   itemId: number;
   resetIsPlaying: () => void;
   handlePauseAudio: (isPause: boolean) => void;
+  // Callback khi audio timeupdate phat hien ra cau dang chay (de ContentComponent highlight + scroll)
+  onActiveItemChange: (itemId: string) => void;
 }
 
 // Danh sach toc do phat
@@ -90,6 +93,7 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
   itemId,
   resetIsPlaying,
   handlePauseAudio,
+  onActiveItemChange,
 }) => {
   const playerRef = useRef<AudioPlayer | null>(null);
   const [audioSrc, setAudioSrc] = useState('');
@@ -101,12 +105,54 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
     isLoopRef.current = isLoop;
   }, [isLoop]);
 
+  // Ref giu onActiveItemChange moi nhat, tranh stale closure trong listener
+  const onActiveItemChangeRef = useRef(onActiveItemChange);
+  useEffect(() => {
+    onActiveItemChangeRef.current = onActiveItemChange;
+  }, [onActiveItemChange]);
+
+  // Ref giu contents moi nhat
+  const contentsRef = useRef(contents);
+  useEffect(() => {
+    contentsRef.current = contents;
+  }, [contents]);
+
   // Cap nhat duong dan audio khi volume thay doi
   useEffect(() => {
     if (volume?.audio) {
       setAudioSrc(`/media/${volume.audio}`);
     }
   }, [volume]);
+
+  // Dang ky 1 timeupdate listener duy nhat de theo doi cau dang phat theo currentTime.
+  // Moi khi audio phat den cau moi (currentTime thay doi sang khoang startTime-endTime cua cau khac),
+  // goi onActiveItemChange de ContentComponent highlight + scroll cau do len dau.
+  useEffect(() => {
+    // Doi den khi playerRef.current san sang
+    const interval = setInterval(() => {
+      const player = playerRef.current?.audio?.current;
+      if (!player) return;
+      clearInterval(interval);
+
+      const lastActiveIdRef = { current: '' };
+
+      const onTimeUpdate = () => {
+        const found = findActiveItem(contentsRef.current, player.currentTime);
+        if (found && String(found.id) !== lastActiveIdRef.current) {
+          lastActiveIdRef.current = String(found.id);
+          onActiveItemChangeRef.current(String(found.id));
+        }
+      };
+
+      player.addEventListener('timeupdate', onTimeUpdate);
+      // Cleanup khi component unmount
+      playerRef.current!.audio.current!.addEventListener('emptied', () => {
+        player.removeEventListener('timeupdate', onTimeUpdate);
+      });
+    }, 200);
+
+    return () => clearInterval(interval);
+  }, [audioSrc]); // re-attach khi src thay doi (doi tap moi)
 
   // Bat dau phat hoac chuyen bai khi isPlaying = true hoac itemId thay doi.
   // Dung khi den endTime neu khong loop.
