@@ -98,7 +98,7 @@ const VideoLayout: React.FC<VideoLayoutProps> = ({
             <ContentItem
               key={item.id}
               item={item}
-              isActive={activeItemId === item.id}
+              isActive={String(activeItemId) === String(item.id)}
               isAudioPlaying={false}         // Video Mode: khong co audio
               isLooping={loopStates[item.id] ?? false}
               isVideoPlaying={isVideoPlaying}

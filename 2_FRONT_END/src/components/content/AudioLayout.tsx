@@ -56,9 +56,9 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
           <ContentItem
             key={item.id}
             item={item}
-            isActive={activeItemId === item.id}
-            isAudioPlaying={playStates[item.id] ?? false}
-            isLooping={loopStates[item.id] ?? false}
+            isActive={activeItemId === String(item.id)}
+            isAudioPlaying={playStates[String(item.id)] ?? false}
+            isLooping={loopStates[String(item.id)] ?? false}
             isVideoPlaying={isVideoPlaying}
             showEnglish={showEnglish}
             showVietnamese={showVietnamese}
@@ -70,7 +70,7 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
             onPlayPauseVideo={() => {}}
             onToggleLoop={onToggleLoop}
             onGetMeaning={onGetMeaning}
-            itemRef={(el) => { itemRefsRef.current[item.id] = el; }}
+            itemRef={(el) => { itemRefsRef.current[String(item.id)] = el; }}
           />
         ))
       ) : (
