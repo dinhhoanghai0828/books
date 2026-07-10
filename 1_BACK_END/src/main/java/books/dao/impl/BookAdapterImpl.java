@@ -64,6 +64,7 @@ public class BookAdapterImpl implements BookAdapter {
                 volume.setStartTime(rs.getString("START_TIME"));
                 volume.setEndTime(rs.getString("END_TIME"));
                 volume.setAudio(rs.getString("AUDIO"));
+                volume.setVideo(rs.getString("VIDEO"));
                 volume.setImg(rs.getString("IMG"));
                 volume.setBookSlug(rs.getString("BOOK_SLUG"));
                 volume.setNumber(rs.getInt("NUMBER"));

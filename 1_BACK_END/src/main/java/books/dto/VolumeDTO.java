@@ -8,6 +8,7 @@ public class VolumeDTO {
     private String eng;
     private String vi;
     private String audio;
+    private String video;
     private String img;
     private String startTime;
     private String endTime;
@@ -137,5 +138,13 @@ public class VolumeDTO {
 
     public void setNumber(Long number) {
         this.number = number;
+    }
+
+    public String getVideo() {
+        return video;
+    }
+
+    public void setVideo(String video) {
+        this.video = video;
     }
 }

@@ -37,6 +37,7 @@ public class VolumeAdapterImpl implements VolumeAdapter {
                 volume.setEng(rs.getString("ENG"));
                 volume.setVi(rs.getString("VI"));
                 volume.setAudio(rs.getString("AUDIO"));
+                volume.setVideo(rs.getString("VIDEO"));
                 volume.setImg(rs.getString("IMG"));
                 volume.setStartTime(rs.getString("START_TIME"));
                 volume.setEndTime(rs.getString("END_TIME"));
@@ -74,6 +75,7 @@ public class VolumeAdapterImpl implements VolumeAdapter {
                 volume.setEng(rs.getString("ENG"));
                 volume.setVi(rs.getString("VI"));
                 volume.setAudio(rs.getString("AUDIO"));
+                volume.setVideo(rs.getString("VIDEO"));
                 volume.setImg(rs.getString("IMG"));
                 volume.setStartTime(rs.getString("START_TIME"));
                 volume.setEndTime(rs.getString("END_TIME"));

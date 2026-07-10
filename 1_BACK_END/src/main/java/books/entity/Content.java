@@ -13,6 +13,7 @@ public class Content {
     private String volumeEngName;
     private String bookEngName;
     private String audio;
+    private String video;
     private String checked;
     private List<String> missingWords;
 
@@ -111,5 +112,13 @@ public class Content {
 
     public void setChecked(String checked) {
         this.checked = checked;
+    }
+
+    public String getVideo() {
+        return video;
+    }
+
+    public void setVideo(String video) {
+        this.video = video;
     }
 }

@@ -1,8 +1,8 @@
 package books.controller;
 
 import books.dto.WordDTO;
-import books.request.InsertWordsRequest;
-import books.response.BaseResponse;
+//import books.request.InsertWordsRequest;
+//import books.response.BaseResponse;
 import books.service.interfaces.WordService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -84,17 +84,17 @@ public class WordController {
         }
     }
 
-    @PostMapping("/insert")
-    public ResponseEntity<?> insertWords(@RequestBody InsertWordsRequest request) {
-        try {
-            int inserted = wordService.insertWords(request.getEng(), request.getViList());
-            return new ResponseEntity<>(
-                    new BaseResponse("00", "Đã insert được " + inserted + " bản ghi"),
-                    HttpStatus.OK);
-        } catch (Exception e) {
-            return new ResponseEntity<>(
-                    new BaseResponse("99", "failed"),
-                    HttpStatus.OK);
-        }
-    }
+//    @PostMapping("/insert")
+//    public ResponseEntity<?> insertWords(@RequestBody InsertWordsRequest request) {
+//        try {
+//            int inserted = wordService.insertWords(request.getEng(), request.getViList());
+//            return new ResponseEntity<>(
+//                    new BaseResponse("00", "Đã insert được " + inserted + " bản ghi"),
+//                    HttpStatus.OK);
+//        } catch (Exception e) {
+//            return new ResponseEntity<>(
+//                    new BaseResponse("99", "failed"),
+//                    HttpStatus.OK);
+//        }
+//    }
 }

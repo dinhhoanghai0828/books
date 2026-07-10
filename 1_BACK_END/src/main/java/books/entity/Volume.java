@@ -9,6 +9,7 @@ public class Volume {
     private String eng;
     private String vi;
     private String audio;
+    private String video;
     private String img;
     private String startTime;
     private String endTime;
@@ -146,5 +147,13 @@ public class Volume {
 
     public void setNumber(int number) {
         this.number = number;
+    }
+
+    public String getVideo() {
+        return video;
+    }
+
+    public void setVideo(String video) {
+        this.video = video;
     }
 }
