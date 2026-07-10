@@ -2,6 +2,8 @@ package books.controller;
 
 import books.dto.ContentDTO;
 import books.dto.VolumeDTO;
+import books.request.UpdateContentRequest;
+import books.response.BaseResponse;
 import books.response.ContentResponse;
 import books.response.PaginationResponse;
 import books.service.interfaces.BookService;
@@ -60,6 +62,20 @@ public class ContentController {
             return new ResponseEntity<>(response, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @PutMapping("/update")
+    public ResponseEntity<?> updateContent(@RequestBody UpdateContentRequest request) {
+        try {
+            boolean success = contentService.updateContent(request.getId(), request.getEng(), request.getVi());
+            if (success) {
+                return new ResponseEntity<>(new BaseResponse("00", "success"), HttpStatus.OK);
+            } else {
+                return new ResponseEntity<>(new BaseResponse("99", "failed"), HttpStatus.OK);
+            }
+        } catch (Exception e) {
+            return new ResponseEntity<>(new BaseResponse("99", "failed"), HttpStatus.OK);
         }
     }
 }

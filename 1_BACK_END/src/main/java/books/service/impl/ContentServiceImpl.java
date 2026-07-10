@@ -44,4 +44,9 @@ public class ContentServiceImpl implements ContentService {
         result.put("CONTENTS", contentDTOS);
         return result;
     }
+
+    @Override
+    public boolean updateContent(Long id, String eng, String vi) throws Exception {
+        return contentAdapter.updateContent(id, eng, vi);
+    }
 }
