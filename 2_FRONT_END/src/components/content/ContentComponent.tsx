@@ -38,6 +38,7 @@ interface ContentComponentProps {
     endTime: string,
     isLoop: boolean
   ) => void;
+  onViewModeChange?: (mode: ViewMode) => void; // Callback bao page biet mode hien tai
 }
 
 // Style tooltip tra nghia
@@ -67,6 +68,7 @@ const ContentComponent = ({
   handlePlayAudio,
   handlePauseAudio,
   handleToggleAudio,
+  onViewModeChange,
 }: ContentComponentProps) => {
   const router = useRouter();
   const { volumeEngName = '', volumeViName = '' } = contents[0] || {};
@@ -86,6 +88,7 @@ const ContentComponent = ({
   // Khi chuyen mode: chi doi layout, khong goi API, khong reset media
   const handleViewModeChange = (mode: ViewMode) => {
     setViewMode(mode);
+    onViewModeChange?.(mode); // Bao page de an/hien AudioComponent
   };
 
   // ============================================================
@@ -177,15 +180,12 @@ const ContentComponent = ({
       if (!el) return;
 
       if (viewMode === 'video') {
-        // Scroll noi bo Story List — day item len ngang video
-        const container = listScrollRef.current;
-        if (!container) return;
-        const containerTop = container.getBoundingClientRect().top;
-        const elTop = el.getBoundingClientRect().top;
-        const offset = elTop - containerTop + container.scrollTop;
-        container.scrollTo({ top: offset, behavior: 'smooth' });
+        // Video Mode: danh sach cau cuon toan trang
+        // Bu offset header (150px) va tranh bi che boi video fixed bottom
+        const top = el.getBoundingClientRect().top + window.scrollY - 170;
+        window.scrollTo({ top, behavior: 'smooth' });
       } else {
-        // Scroll toan trang — bu offset header co dinh
+        // Audio Mode: cuon toan trang, bu offset header
         const top = el.getBoundingClientRect().top + window.scrollY - 170;
         window.scrollTo({ top, behavior: 'smooth' });
       }
