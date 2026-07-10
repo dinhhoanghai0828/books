@@ -239,9 +239,10 @@ const ContentComponent = ({
       if (!video) return;
 
       if (activeVideoItemId === itemId && !video.paused) {
-        // Dang phat item nay -> dung lai, giu highlight vi nguoi dung tu dung
+        // Dang phat item nay -> dung lai
         video.pause();
         videoEndRef.current = 0;
+        setActiveVideoItemId(null); // xoa highlight de icon cap nhat
         return;
       }
 
@@ -449,6 +450,18 @@ const ContentComponent = ({
         </div>
 
         <Space className="button-group">
+          {/* Nut Play / Pause video dung chung (chi hien khi item co video) — dat TRUOC audio */}
+          {item.video && (
+            <Button
+              type="link"
+              icon={
+                activeVideoItemId === item.id && videoRef.current && !videoRef.current.paused
+                  ? <PauseOutlined style={{ color: '#1677ff' }} />
+                  : <VideoCameraOutlined />
+              }
+              onClick={(e) => { e.stopPropagation(); onPlayPauseVideo(item.id, item.startTime, item.endTime); }}
+            />
+          )}
           {/* Nut Play / Pause audio */}
           <Button
             type="link"
@@ -462,18 +475,6 @@ const ContentComponent = ({
             disabled={!playStatesRef.current[item.id]}
             onClick={(e) => { e.stopPropagation(); onToggleLoop(item.id, item.startTime, item.endTime); }}
           />
-          {/* Nut Play / Pause video dung chung (chi hien khi item co video) */}
-          {item.video && (
-            <Button
-              type="link"
-              icon={
-                activeVideoItemId === item.id && videoRef.current && !videoRef.current.paused
-                  ? <PauseOutlined style={{ color: '#1677ff' }} />
-                  : <VideoCameraOutlined />
-              }
-              onClick={(e) => { e.stopPropagation(); onPlayPauseVideo(item.id, item.startTime, item.endTime); }}
-            />
-          )}
         </Space>
       </div>
 
@@ -499,21 +500,20 @@ const ContentComponent = ({
 
   // ============================================================
   // CLICK VAO CAU: seek ca audio va video den doan do roi phat
+  // [DISABLED] - comment lai, mo ra khi can dung
   // ============================================================
 
-  // Xu ly khi nguoi dung click truc tiep vao vung noi dung cua 1 cau.
-  // Chi ap dung khi tap co video: seek video den startTime cua cau do va phat.
-  const onClickItem = useCallback(
-    (item: ContentType) => {
-      const video = videoRef.current;
-      if (!video) return;
-      videoEndRef.current = parseTimeToSeconds(item.endTime);
-      video.currentTime = parseTimeToSeconds(item.startTime);
-      video.play();
-      setActiveVideoItemId(item.id);
-    },
-    []
-  );
+  // const onClickItem = useCallback(
+  //   (item: ContentType) => {
+  //     const video = videoRef.current;
+  //     if (!video) return;
+  //     videoEndRef.current = parseTimeToSeconds(item.endTime);
+  //     video.currentTime = parseTimeToSeconds(item.startTime);
+  //     video.play();
+  //     setActiveVideoItemId(item.id);
+  //   },
+  //   []
+  // );
 
   // ============================================================
   // RENDER DANH SACH CAU (dung chung cho ca 2 layout)
@@ -527,11 +527,8 @@ const ContentComponent = ({
           key={item.id}
           ref={(el) => { itemRefsRef.current[item.id] = el; }}
           className="content-item"
-          style={{
-            ...(isActive ? ACTIVE_ITEM_STYLE : {}),
-            cursor: 'pointer',
-          }}
-          onClick={() => onClickItem(item)}
+          style={isActive ? ACTIVE_ITEM_STYLE : {}}
+          // onClick={() => onClickItem(item)} // [DISABLED] click de seek video
         >
           {renderItemContent(item, isActive)}
         </div>
