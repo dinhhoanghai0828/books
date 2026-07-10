@@ -265,12 +265,12 @@ const ContentComponent = ({
     video.play();
   };
 
-  // Dung video khi den endTime
+  // Tu dong dong modal khi video den endTime
   const handleVideoTimeUpdate = () => {
     const video = videoRef.current;
     if (!video) return;
     if (video.currentTime >= videoEndTime) {
-      video.pause();
+      handleCloseVideo();
     }
   };
 
