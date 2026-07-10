@@ -95,6 +95,10 @@ const ContentComponent = ({
   const videoRef = useRef<HTMLVideoElement | null>(null);
   // Ref callback de biet khi nao video element duoc mount/unmount
   const [videoMounted, setVideoMounted] = useState(false);
+  const videoRefCallback = useCallback((el: HTMLVideoElement | null) => {
+    videoRef.current = el;
+    setVideoMounted(!!el);
+  }, []);
   const videoSegmentRef = useRef({
     start: 0,
     end: 0,
@@ -266,7 +270,6 @@ const ContentComponent = ({
 
     if (alreadyPlaying) {
       video.pause();
-      videoEndRef.current = 0;
       setActive(null, null);
       setVideoPlaying(false);
       return;
@@ -477,7 +480,7 @@ const ContentComponent = ({
             videoPath={sharedVideoPath}
             volumeEngName={volumeEngName}
             volumeViName={volumeViName}
-            videoRef={videoRef}
+            videoRef={videoRefCallback}
             listScrollRef={listScrollRef}
             loopStates={loopStates}
             onPlayPauseVideo={onPlayPauseVideo}

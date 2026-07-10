@@ -12,7 +12,7 @@ export interface VideoLayoutProps {
   videoPath: string;
   volumeEngName: string;
   volumeViName: string;
-  videoRef: React.RefObject<HTMLVideoElement | null>;
+  videoRef: ((el: HTMLVideoElement | null) => void) | React.RefObject<HTMLVideoElement | null>;
   listScrollRef: React.RefObject<HTMLDivElement | null>;
   activeItemId: string | null;
   activeSource: 'audio' | 'video' | null;
