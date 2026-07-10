@@ -27,7 +27,7 @@ public class RunSQLComponent {
     // Autowire bean cụ thể
     //    @Autowired
     private DataSource dataSource;
-    String path = "E:\\books\\3_DATABASE\\";
+    String path = "D:\\20_PROJECT\\books\\3_DATABASE\\";
     //    String path = "E:\\2_books\\3_DATABASE\\";
     private String url;
     private String username;
@@ -371,6 +371,268 @@ public class RunSQLComponent {
                 connection.close();
             }
         }
+    }
+
+    /**
+     * Đọc toàn bộ CONTENTS từ DB, nhóm theo BOOK_SLUG,
+     * và ghi mỗi nhóm ra file APP_<BOOK_SLUG>.sql trong thư mục path.
+     */
+    public List<String> generalContents() throws SQLException, IOException {
+        dataSource = getDataSource();
+        List<String> generatedFiles = new ArrayList<>();
+
+        String sqlGetBooks = "SELECT DISTINCT B.SLUG AS BOOK_SLUG FROM BOOKS B " +
+                "INNER JOIN VOLUMES V ON V.BOOK_SLUG = B.SLUG " +
+                "INNER JOIN CONTENTS C ON C.VOLUME_SLUG = V.SLUG " +
+                "ORDER BY B.SLUG";
+
+        String sqlGetContents =
+                "SELECT C.ENG, C.VI, C.START_TIME, C.END_TIME, C.VOLUME_SLUG, " +
+                "V.SLUG AS V_SLUG, V.ENG AS V_ENG, V.VI AS V_VI, V.AUDIO AS V_AUDIO, " +
+                "V.START_TIME AS V_START, V.END_TIME AS V_END, V.BOOK_SLUG AS V_BOOK_SLUG, " +
+                "V.CHECKED AS V_CHECKED, V.NUMBER AS V_NUMBER " +
+                "FROM CONTENTS C " +
+                "INNER JOIN VOLUMES V ON C.VOLUME_SLUG = V.SLUG " +
+                "WHERE V.BOOK_SLUG = ? " +
+                "ORDER BY V.NUMBER, C.ID";
+
+        Connection connection = null;
+        PreparedStatement pstmtBooks = null;
+        ResultSet rsBooks = null;
+
+        try {
+            connection = dataSource.getConnection();
+            pstmtBooks = connection.prepareStatement(sqlGetBooks);
+            rsBooks = pstmtBooks.executeQuery();
+
+            List<String> bookSlugs = new ArrayList<>();
+            while (rsBooks.next()) {
+                bookSlugs.add(rsBooks.getString("BOOK_SLUG"));
+            }
+            DBUtils.closeAll("generalContents-books", null, pstmtBooks, rsBooks);
+
+            final int ROWS_PER_BATCH    = 1000; // tách INSERT nếu 1 tập quá dài
+            final int VOLUMES_PER_BATCH = 5;    // gom tối đa 5 tập vào 1 INSERT
+            final String SEPARATOR = "\n/*=====================================================================================================================================================================================================================================================*/\n\n";
+
+            for (String bookSlug : bookSlugs) {
+                String fileNameKey  = bookSlug.toUpperCase().replace("-", "_");
+                String outputFilePath = path + "APP_" + fileNameKey + ".sql";
+
+                PreparedStatement pstmtContents = null;
+                ResultSet rsContents = null;
+                try {
+                    pstmtContents = connection.prepareStatement(sqlGetContents);
+                    pstmtContents.setString(1, bookSlug);
+                    rsContents = pstmtContents.executeQuery();
+
+                    StringBuilder sb        = new StringBuilder();
+                    boolean hasRows         = false;
+                    int rowCountInBatch     = 0;  // số content-row trong INSERT hiện tại
+                    int volumeCountInBatch  = 0;  // số tập đã gom vào INSERT hiện tại
+                    boolean insertOpen      = false; // có INSERT đang mở không
+                    boolean firstRowInInsert = true; // row đầu tiên trong INSERT hiện tại
+                    String prevVolumeSlug   = null;
+
+                    while (rsContents.next()) {
+                        hasRows = true;
+                        String eng        = rsContents.getString("ENG");
+                        String vi         = rsContents.getString("VI");
+                        String startTime  = rsContents.getString("START_TIME");
+                        String endTime    = rsContents.getString("END_TIME");
+                        String volumeSlug = rsContents.getString("VOLUME_SLUG");
+
+                        String vSlug     = rsContents.getString("V_SLUG");
+                        String vEng      = rsContents.getString("V_ENG");
+                        String vVi       = rsContents.getString("V_VI");
+                        String vAudio    = rsContents.getString("V_AUDIO");
+                        String vStart    = rsContents.getString("V_START");
+                        String vEnd      = rsContents.getString("V_END");
+                        String vBookSlug = rsContents.getString("V_BOOK_SLUG");
+                        String vChecked  = rsContents.getString("V_CHECKED");
+                        int    vNumber   = rsContents.getInt("V_NUMBER");
+
+                        if (eng   != null) eng   = eng.replace("'", "\\'");
+                        if (vi    != null) vi    = vi.replace("'", "\\'");
+                        if (vEng  != null) vEng  = vEng.replace("'", "\\'");
+                        if (vVi   != null) vVi   = vVi.replace("'", "\\'");
+
+                        boolean isNewVolume = !volumeSlug.equals(prevVolumeSlug);
+
+                        if (isNewVolume) {
+                            if (insertOpen) {
+                                // Đủ 5 tập → đóng INSERT hiện tại + separator, mở INSERT mới
+                                if (volumeCountInBatch >= VOLUMES_PER_BATCH) {
+                                    sb.append(";\n");
+                                    sb.append(SEPARATOR);
+                                    insertOpen       = false;
+                                    firstRowInInsert = true;
+                                    rowCountInBatch  = 0;
+                                    volumeCountInBatch = 0;
+                                }
+                                // Ngược lại tiếp tục INSERT đang mở (thêm tập mới vào trong)
+                            }
+
+                            // Mở INSERT mới nếu chưa có
+                            if (!insertOpen) {
+                                sb.append("INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES\n");
+                                insertOpen       = true;
+                                firstRowInInsert = true;
+                            }
+
+                            // Comment volume nằm trong VALUES, trước row đầu tiên của tập
+                            String audioVal = (vAudio != null) ? "'" + vAudio + "'" : "NULL";
+                            if (!firstRowInInsert) {
+                                sb.append(",\n");
+                            }
+                            sb.append("\t/* (UUID(),'").append(vSlug).append("','")
+                              .append(vEng).append("','").append(vVi).append("',")
+                              .append(audioVal).append(",NULL,'")
+                              .append(vStart).append("','").append(vEnd).append("','")
+                              .append(vBookSlug).append("','").append(vChecked).append("',")
+                              .append(vNumber).append(") */");
+
+                            firstRowInInsert = false;
+                            volumeCountInBatch++;
+                            prevVolumeSlug = volumeSlug;
+                        }
+
+                        // Append row content
+                        sb.append(",\n");
+                        sb.append("\t('").append(eng).append("','").append(vi).append("','")
+                          .append(startTime).append("','").append(endTime).append("','")
+                          .append(volumeSlug).append("')");
+
+                        rowCountInBatch++;
+
+                        // Tập quá dài (>1000 dòng) → tách batch giữa chừng
+                        if (rowCountInBatch % ROWS_PER_BATCH == 0) {
+                            sb.append(";\n");
+                            sb.append(SEPARATOR);
+                            insertOpen         = false;
+                            firstRowInInsert   = true;
+                            rowCountInBatch    = 0;
+                            volumeCountInBatch = 0;
+                            prevVolumeSlug     = null; // buộc in lại comment volume ở batch tiếp theo
+                        }
+                    }
+
+                    // Đóng INSERT cuối
+                    if (hasRows && insertOpen) {
+                        sb.append(";\n");
+                    }
+
+                    if (hasRows) {
+                        try (FileWriter writer = new FileWriter(outputFilePath)) {
+                            writer.write(sb.toString());
+                            writer.flush();
+                        }
+                        generatedFiles.add(outputFilePath);
+                        System.out.println("Generated: " + outputFilePath);
+                    }
+                } finally {
+                    DBUtils.closeAll("generalContents-contents-" + bookSlug, null, pstmtContents, rsContents);
+                }
+            }
+        } finally {
+            DBUtils.closeAll("generalContents-final", connection, null, null);
+        }
+
+        System.out.println("generalContents completed. Files generated: " + generatedFiles.size());
+        return generatedFiles;
+    }
+
+    /**
+     * Tương đương RunSQLContentService nhưng thay scripts hardcode bằng
+     * danh sách file APP_<BOOK_SLUG>.sql được build động từ DB.
+     * Thực hiện: TRUNCATE CONTENTS → execute từng APP_*.sql → ghi SUMMARY.sql
+     */
+    public List<String> insertContentFromExport() throws SQLException, IOException {
+        dataSource = getDataSource();
+
+        // Lấy danh sách BOOK_SLUG có contents trong DB
+        String sqlGetBooks = "SELECT DISTINCT B.SLUG AS BOOK_SLUG FROM BOOKS B " +
+                "INNER JOIN VOLUMES V ON V.BOOK_SLUG = B.SLUG " +
+                "INNER JOIN CONTENTS C ON C.VOLUME_SLUG = V.SLUG " +
+                "ORDER BY B.SLUG";
+
+        List<String> scripts = new ArrayList<>();
+        Connection conQuery = dataSource.getConnection();
+        try {
+            PreparedStatement pstmt = conQuery.prepareStatement(sqlGetBooks);
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                String bookSlug = rs.getString("BOOK_SLUG");
+                String fileNameKey = bookSlug.toUpperCase().replace("-", "_");
+                String filePath = path + "APP_" + fileNameKey + ".sql";
+                scripts.add(filePath);
+            }
+            DBUtils.closeAll("insertContentFromExport-query", null, pstmt, rs);
+        } finally {
+            DBUtils.closeAll("insertContentFromExport-query-con", conQuery, null, null);
+        }
+
+        if (scripts.isEmpty()) {
+            System.out.println("insertContentFromExport: no APP_*.sql files found from DB.");
+            return scripts;
+        }
+
+        // Ghi SUMMARY.sql từ các file APP_*.sql
+        String summaryPath = path + "SUMMARY.sql";
+        try (FileWriter outputWriter = new FileWriter(summaryPath)) {
+            for (String filePath : scripts) {
+                File f = new File(filePath);
+                if (!f.exists()) {
+                    System.err.println("File not found, skipped: " + filePath);
+                    continue;
+                }
+                try (BufferedReader reader = new BufferedReader(new FileReader(f))) {
+                    String line;
+                    while ((line = reader.readLine()) != null) {
+                        outputWriter.write(line);
+                        outputWriter.write("\n");
+                    }
+                } catch (IOException e) {
+                    System.err.println("Error reading file: " + filePath + " - " + e.getMessage());
+                }
+            }
+        }
+        System.out.println("SUMMARY.sql written with " + scripts.size() + " APP files.");
+
+        // TRUNCATE CONTENTS rồi execute từng file
+        Connection conTruncate = dataSource.getConnection();
+        try {
+            conTruncate.prepareStatement("TRUNCATE TABLE CONTENTS").executeUpdate();
+            conTruncate.commit();
+        } catch (Exception e) {
+            // auto-commit datasource — ignore commit error
+        } finally {
+            DBUtils.closeAll("insertContentFromExport-truncate", conTruncate, null, null);
+        }
+
+        List<String> executedFiles = new ArrayList<>();
+        for (String scriptPath : scripts) {
+            File f = new File(scriptPath);
+            if (!f.exists()) {
+                System.err.println("File not found, skipped: " + scriptPath);
+                continue;
+            }
+            Connection con = dataSource.getConnection();
+            try {
+                Resource resource = new FileSystemResource(scriptPath);
+                ScriptUtils.executeSqlScript(con, resource);
+                executedFiles.add(scriptPath);
+                System.out.println("Executed: " + scriptPath);
+            } catch (Exception e) {
+                System.err.println("Error executing: " + scriptPath + " - " + e.getMessage());
+                throw e;
+            } finally {
+                DBUtils.closeAll("insertContentFromExport-exec", con, null, null);
+            }
+        }
+
+        System.out.println("insertContentFromExport completed. Executed: " + executedFiles.size() + " files.");
+        return executedFiles;
     }
 
     public void insertChart() throws SQLException, IOException {
