@@ -142,46 +142,51 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
     const lastActiveId = { current: '' };
 
     const onSeeking = () => {
-      //  Su kien khi click vao 1 diem tren audio hoac video
-      console.log(isSeekingByCodeRef);
-      if (isSeekingByCodeRef.current) return;
-      //  Cho nay gay ra hien tuong khong the dung audio o onTimeUpdate, khien khong the loop
-      // segmentRef.current = { start: 0, end: 0 };
-      // Con day la neu muon audio chay tieo tu diem click den cuoi
-      const duration = audio.duration;
-      segmentRef.current = {
-        start: audio.currentTime,
-        end: duration,
-      };
-      // console.log(segmentRef.current);
+      // //  Su kien khi click vao 1 diem tren audio hoac video
+      // console.log(isSeekingByCodeRef.current);
+      // if (isSeekingByCodeRef.current) {
+      //    console.log(segmentRef.current);
+      // } else {
+      //   //  Neu click tay vao audio thì start = hein tai -> end
+      //   const duration = audio.duration;
+      //   segmentRef.current = {
+      //     start: audio.currentTime,
+      //     end: duration,
+      //   };
+      // }
+      // //  Cho nay gay ra hien tuong khong the dung audio o onTimeUpdate, khien khong the loop
+      // // segmentRef.current = { start: 0, end: 0 };
+      // // Con day la neu muon audio chay tieo tu diem click den cuoi
+      // //  segmentRef.current.start = audio.currentTime;
+
+      // // console.log(segmentRef.current);
     };
 
     const onTimeUpdate = () => {
       //  Khi audio thay doi thoi gian se tu dong chay vao day
       //  Khi tung item play se chay vao day
-      const t = audio.currentTime;
+      const current = audio.currentTime;
       const { start, end } = segmentRef.current;
-
+      console.log(segmentRef.current);
+      console.log(current);
       // Dung hoac loop khi den endTime (chi khi end > 0)
-      console.log(end);
-      console.log(t);
-      if (end > 0 && t >= end) {
+      if (end > 0 && current >= end) {
+        //  Neu loop thi set ve trang thai bat dau item
         if (isLoopRef.current) {
-          console.log(isLoopRef.current)
           isSeekingByCodeRef.current = true;
           audio.currentTime = start;
-          isSeekingByCodeRef.current = false;
+          // isSeekingByCodeRef.current = false;
         } else {
-          console.log(isLoopRef.current)
           audio.pause();
-          segmentRef.current = { start: 0, end: 0 };
+          // segmentRef.current = { start: 0, end: 0 };
           onAudioStopRef.current();
         }
         return;
       }
 
       // Highlight cau dang chay theo currentTime
-      const found = findActiveItem(contentsRef.current, t);
+      const found = findActiveItem(contentsRef.current, current);
+
       if (found && String(found.id) !== lastActiveId.current) {
         lastActiveId.current = String(found.id);
         onActiveItemChangeRef.current(String(found.id));
@@ -214,6 +219,7 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
   // LENH PHAT: playCommand thay doi -> seek va play
   // Chi reset isLoop khi chuyen sang item KHAC, giu nguyen neu la cung item (dang loop)
   useEffect(() => {
+    // Bat tung item
     if (!playCommand) return;
     const audio = getAudio();
     if (!audio) return;
@@ -222,17 +228,17 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
     if (!listenerCleanupRef.current) {
       attachListeners(audio);
     }
-    console.log("playCommand", playCommand);
+    // console.log("playCommand", playCommand);
     const start = parseTimeToSeconds(playCommand.startTime);
     const end = parseTimeToSeconds(playCommand.endTime);
-    console.log("set segment", { start, end });
+    // console.log("set segment", { start, end });
 
     segmentRef.current = { start, end };
     isLoopRef.current = false; // reset loop khi click phat item moi
 
     isSeekingByCodeRef.current = true;
     audio.currentTime = start;
-    isSeekingByCodeRef.current = false;
+    // isSeekingByCodeRef.current = false;
 
     audio.playbackRate = playbackSpeed;
     audio.play();
@@ -243,7 +249,7 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
   // ============================================================
 
   useEffect(() => {
-    console.log(loopCommand);
+    //  Lap video
     if (!loopCommand) return;
     isLoopRef.current = loopCommand.isLoop;
     // Neu bat loop trong khi dang phat: cap nhat segment moi (startTime/endTime co the khac)
