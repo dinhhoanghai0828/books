@@ -1,7 +1,7 @@
 'use client';
 import { getSuggestions, runContentsExport, runWordGeneral } from '@/utils/apiService';
 import { Word } from '@/interfaces/word';
-import { App, AutoComplete, Button, Col, Input, Layout, Row, Select, Typography } from 'antd';
+import { App, AutoComplete, Button, Col, Input, Layout, notification, Row, Select, Typography } from 'antd';
 import debounce from 'lodash.debounce';
 import throttle from 'lodash.throttle';
 import { useCallback, useState } from 'react';
@@ -11,8 +11,8 @@ const { Title } = Typography;
 
 // Danh sach toc do phat co the chon
 const SPEED_OPTIONS = [
-  { value: '60%',  label: '60%' },
-  { value: '80%',  label: '80%' },
+  { value: '60%', label: '60%' },
+  { value: '80%', label: '80%' },
   { value: '100%', label: '100%' },
   { value: '120%', label: '120%' },
   { value: '150%', label: '150%' },
@@ -35,7 +35,7 @@ const HomePageSearchComponent = ({
   const [suggestionsVi, setSuggestionsVi] = useState<string[]>([]);
   const [selectedSpeed, setSelectedSpeed] = useState('100%');
   const [loadingTonghop, setLoadingTonghop] = useState(false);
-
+  const [notifApi, notifContextHolder] = notification.useNotification();
   // Lay goi y tu tieng Anh (debounce 300ms)
   const debounceFetchEn = useCallback(
     debounce(async (value: string) => {
@@ -94,12 +94,23 @@ const HomePageSearchComponent = ({
   const handleTonghop = async () => {
     setLoadingTonghop(true);
     try {
-      const msgWord    = await runWordGeneral();
-      const msgExport  = await runContentsExport();
-      message.success(msgWord, 4);
-      message.success(msgExport, 4);
+      const msgExport = await runContentsExport();
+      notifApi.success({
+        message: msgExport,
+        description: 'Noi dung da duoc luu lai.',
+        placement: 'topRight',
+        duration: 3,
+        style: { backgroundColor: '#f6ffed', border: '1px solid #b7eb8f' },
+      });
     } catch (error: any) {
-      message.error('Tổng hợp thất bại: ' + error.message);
+      // message.error('Tổng hợp thất bại: ' + error.message);
+      notifApi.error({
+        message: 'Cap nhat that bai',
+        description: error.message || 'Da xay ra loi, vui long thu lai.',
+        placement: 'topRight',
+        duration: 4,
+        style: { backgroundColor: '#fff2f0', border: '1px solid #ffccc7' },
+      });
     } finally {
       setLoadingTonghop(false);
     }
@@ -107,6 +118,7 @@ const HomePageSearchComponent = ({
 
   return (
     <Content className="searchClass">
+      {notifContextHolder}
       <Title level={4}>Tim kiem cau noi</Title>
       <Row gutter={[16, 16]} justify="start" className="rowClass">
 

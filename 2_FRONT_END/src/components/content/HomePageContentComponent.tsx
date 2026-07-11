@@ -494,11 +494,11 @@ const HomePageContentComponent = ({
             >
               {/^[a-zA-Z ]+$/.test(window.getSelection()?.toString().trim() || '')
                 ? meaningEnKeywords.map((word, i) => (
-                    <div key={i}><strong>{word}</strong>: {meaningViKeywords[i]}</div>
-                  ))
+                  <div key={i}><strong>{word}</strong>: {meaningViKeywords[i]}</div>
+                ))
                 : meaningViKeywords.map((word, i) => (
-                    <div key={i}><strong>{word}</strong>: {meaningEnKeywords[i]}</div>
-                  ))}
+                  <div key={i}><strong>{word}</strong>: {meaningEnKeywords[i]}</div>
+                ))}
             </div>
           )}
         </Row>

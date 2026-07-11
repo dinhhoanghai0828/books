@@ -38,7 +38,10 @@ public class RunSQLController {
             int after  = stats.get("AFTER");
             int added  = stats.get("ADDED");
             String message = String.format(
-                    "Cập nhật số lượng từ thành công. Trước cập nhật: %d từ | Sau cập nhật: %d từ | Đã thêm: %d từ mới.",
+                    "Cập nhật số lượng từ thành công.\n" +
+                            "Trước cập nhật: %d từ\n\n" +
+                            "Sau cập nhật: %d từ\n" +
+                            "Đã thêm: %d từ mới.",
                     before, after, added
             );
             return new ResponseEntity<>(new BaseResponse("00", message), HttpStatus.OK);
@@ -55,7 +58,7 @@ public class RunSQLController {
     public ResponseEntity<?> contentsExport() {
         try {
             List<String> generatedFiles = runSQLComponent.generalContents();
-            String message = "Tổng hợp lại danh sách các câu thành công" + generatedFiles.size();
+            String message = "Tổng hợp lại danh sách các câu thành công. Số lượng file tổng hợp: " + generatedFiles.size();
             return new ResponseEntity<>(new BaseResponse("00", message), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(new BaseResponse("99", "contents-export failed: " + e.getMessage()), HttpStatus.INTERNAL_SERVER_ERROR);
