@@ -96,8 +96,8 @@ public class WordController {
                     HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(
-                    new BaseResponse("99", "failed"),
-                    HttpStatus.OK);
+                    new BaseResponse("99", e.getMessage()),
+                    HttpStatus.BAD_REQUEST);
         }
     }
 

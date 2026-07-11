@@ -172,10 +172,32 @@ public class WordAdapterImpl implements WordAdapter {
     public int insertWords(String eng, List<String> viList) throws Exception {
         String thisMethod = "WordAdapterImpl.insertWords";
         Connection con = null;
+        PreparedStatement pstmtCheck = null;
         PreparedStatement pstmt = null;
         int totalInserted = 0;
         try {
             con = DBUtils.getConnection(thisMethod, false, Connection.TRANSACTION_READ_COMMITTED);
+
+            // Kiem tra tung cap (eng, vi) truoc khi insert
+            String sqlCheck = "SELECT COUNT(*) FROM WORDS WHERE LOWER(ENG) = LOWER(?) AND LOWER(VI) = LOWER(?)";
+            for (String vi : viList) {
+                pstmtCheck = DBUtils.prepareStatement(con, sqlCheck);
+                pstmtCheck.setString(1, eng.trim());
+                pstmtCheck.setString(2, vi.trim());
+                ResultSet rs = pstmtCheck.executeQuery();
+                if (rs.next() && rs.getInt(1) > 0) {
+                    rs.close();
+                    throw new Exception(
+                        "Từ \"" + eng.trim() + "\" có nghĩa tiếng Việt \"" + vi.trim()
+                        + "\" đã tồn tại. Vui lòng thêm nghĩa tiếng Việt khác."
+                    );
+                }
+                rs.close();
+                DBUtils.closeStatement(pstmtCheck);
+                pstmtCheck = null;
+            }
+
+            // Tat ca cac cap deu hop le, thuc hien insert
             pstmt = DBUtils.prepareStatement(con, SQL_INSERT_WORD);
             for (String vi : viList) {
                 pstmt.setString(1, eng);
@@ -194,6 +216,7 @@ public class WordAdapterImpl implements WordAdapter {
             logger.error(thisMethod, ex);
             throw ex;
         } finally {
+            DBUtils.closeStatement(pstmtCheck);
             DBUtils.closeAll(thisMethod, con, pstmt, null);
         }
         return totalInserted;
