@@ -128,10 +128,10 @@ public class WordController {
             if (success) {
                 return new ResponseEntity<>(new BaseResponse("00", "success"), HttpStatus.OK);
             } else {
-                return new ResponseEntity<>(new BaseResponse("99", "failed"), HttpStatus.OK);
+                return new ResponseEntity<>(new BaseResponse("99", "not found"), HttpStatus.OK);
             }
         } catch (Exception e) {
-            return new ResponseEntity<>(new BaseResponse("99", "failed: " + e.getMessage()), HttpStatus.OK);
+            return new ResponseEntity<>(new BaseResponse("99", e.getMessage()), HttpStatus.BAD_REQUEST);
         }
     }
 

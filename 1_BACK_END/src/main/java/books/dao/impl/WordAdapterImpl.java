@@ -299,9 +299,30 @@ public class WordAdapterImpl implements WordAdapter {
     public boolean updateWord(Long id, String eng, String vi) throws Exception {
         String thisMethod = "WordAdapterImpl.updateWord";
         Connection con = null;
+        PreparedStatement pstmtCheck = null;
         PreparedStatement pstmt = null;
         try {
             con = DBUtils.getConnection(thisMethod, false, Connection.TRANSACTION_READ_COMMITTED);
+
+            // Kiem tra cap (eng, vi) da ton tai chua, bo qua chinh record dang sua
+            String sqlCheck = "SELECT COUNT(*) FROM WORDS WHERE LOWER(ENG) = LOWER(?) AND LOWER(VI) = LOWER(?) AND ID != ?";
+            pstmtCheck = DBUtils.prepareStatement(con, sqlCheck);
+            pstmtCheck.setString(1, eng.trim());
+            pstmtCheck.setString(2, vi.trim());
+            pstmtCheck.setLong(3, id);
+            ResultSet rs = pstmtCheck.executeQuery();
+            if (rs.next() && rs.getInt(1) > 0) {
+                rs.close();
+                throw new Exception(
+                    "Từ \"" + eng.trim() + "\" có nghĩa tiếng Việt \"" + vi.trim()
+                    + "\" đã tồn tại. Vui lòng nhập nghĩa tiếng Việt khác."
+                );
+            }
+            rs.close();
+            DBUtils.closeStatement(pstmtCheck);
+            pstmtCheck = null;
+
+            // Thuc hien update
             pstmt = DBUtils.prepareStatement(con, SQL_UPDATE_WORD);
             pstmt.setString(1, eng);
             pstmt.setString(2, vi);
@@ -314,6 +335,7 @@ public class WordAdapterImpl implements WordAdapter {
             logger.error(thisMethod, ex);
             throw ex;
         } finally {
+            DBUtils.closeStatement(pstmtCheck);
             DBUtils.closeAll(thisMethod, con, pstmt, null);
         }
     }
