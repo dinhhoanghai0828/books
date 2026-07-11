@@ -588,7 +588,7 @@ const ContentComponent = ({
   // ============================================================
 
   const renderLayout = () => {
-    console.log('[ContentComponent] renderLayout viewMode=', viewMode, 'contents=', contents.length, 'sharedVideoPath=', sharedVideoPath);
+    // console.log('[ContentComponent] renderLayout viewMode=', viewMode, 'contents=', contents.length, 'sharedVideoPath=', sharedVideoPath);
     switch (viewMode) {
       case 'video':
         if (!sharedVideoPath) return renderAudioLayout();

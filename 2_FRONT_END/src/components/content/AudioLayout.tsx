@@ -47,15 +47,15 @@ export interface AudioLayoutProps {
 
 // Danh sach toc do phat
 const PLAYBACK_SPEED_OPTIONS = [
-  { value: 0.5,  label: '0.5x' },
-  { value: 0.7,  label: '0.7x' },
-  { value: 0.8,  label: '0.8x' },
-  { value: 0.9,  label: '0.9x' },
-  { value: 1.0,  label: '1.0x (Mac dinh)' },
-  { value: 1.2,  label: '1.2x' },
-  { value: 1.5,  label: '1.5x' },
-  { value: 1.7,  label: '1.7x' },
-  { value: 2.0,  label: '2.0x' },
+  { value: 0.5, label: '0.5x' },
+  { value: 0.7, label: '0.7x' },
+  { value: 0.8, label: '0.8x' },
+  { value: 0.9, label: '0.9x' },
+  { value: 1.0, label: '1.0x (Mac dinh)' },
+  { value: 1.2, label: '1.2x' },
+  { value: 1.5, label: '1.5x' },
+  { value: 1.7, label: '1.7x' },
+  { value: 2.0, label: '2.0x' },
 ];
 
 // ============================================================
@@ -126,73 +126,89 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
   }, [volume]);
 
   // ============================================================
-  // ATTACH LISTENERS — dang ky 1 lan, cleanup dung
-  // useEffect chay lai khi audioSrc thay doi (sang tap moi)
+  // ATTACH LISTENERS
+  // Dung ref de giu cleanup function, dam bao remove dung listener cu truoc khi attach moi.
+  // Attach ngay khi audio element san sang (khong dung setTimeout retry).
   // ============================================================
 
-  useEffect(() => {
-    // Cho den khi AudioPlayer render xong va audio element san sang
-    let audio = getAudio();
-    let retryCount = 0;
-    const maxRetry = 20;
+  // Ref giu ham cleanup listener hien tai
+  const listenerCleanupRef = useRef<(() => void) | null>(null);
 
-    const attach = () => {
-      audio = getAudio();
-      if (!audio) {
-        retryCount++;
-        if (retryCount < maxRetry) {
-          setTimeout(attach, 100);
+  // Goi cleanup cu truoc khi attach moi de tranh nhieu listener chay song song
+  const attachListeners = (audio: HTMLAudioElement) => {
+    // Remove listener cu neu co
+    listenerCleanupRef.current?.();
+
+    const lastActiveId = { current: '' };
+
+    const onSeeking = () => {
+      //  Su kien khi click vao 1 diem tren audio hoac video
+      console.log(isSeekingByCodeRef);
+      if (isSeekingByCodeRef.current) return;
+      //  Cho nay gay ra hien tuong khong the dung audio o onTimeUpdate, khien khong the loop
+      // segmentRef.current = { start: 0, end: 0 };
+      // Con day la neu muon audio chay tieo tu diem click den cuoi
+      const duration = audio.duration;
+      segmentRef.current = {
+        start: audio.currentTime,
+        end: duration,
+      };
+      // console.log(segmentRef.current);
+    };
+
+    const onTimeUpdate = () => {
+      //  Khi audio thay doi thoi gian se tu dong chay vao day
+      //  Khi tung item play se chay vao day
+      const t = audio.currentTime;
+      const { start, end } = segmentRef.current;
+
+      // Dung hoac loop khi den endTime (chi khi end > 0)
+      console.log(end);
+      console.log(t);
+      if (end > 0 && t >= end) {
+        if (isLoopRef.current) {
+          console.log(isLoopRef.current)
+          isSeekingByCodeRef.current = true;
+          audio.currentTime = start;
+          isSeekingByCodeRef.current = false;
+        } else {
+          console.log(isLoopRef.current)
+          audio.pause();
+          segmentRef.current = { start: 0, end: 0 };
+          onAudioStopRef.current();
         }
         return;
       }
 
-      const lastActiveId = { current: '' };
-
-      const onSeeking = () => {
-        if (isSeekingByCodeRef.current) return;
-        // Nguoi dung tu seek: bo gioi han segment, chay tu do
-        segmentRef.current = { start: 0, end: 0 };
-      };
-
-      const onTimeUpdate = () => {
-        if (!audio) return;
-        const t = audio.currentTime;
-        const { start, end } = segmentRef.current;
-
-        // Xu ly stop/loop khi den endTime
-        if (end > 0 && t >= end) {
-          if (isLoopRef.current) {
-            isSeekingByCodeRef.current = true;
-            audio.currentTime = start;
-            isSeekingByCodeRef.current = false;
-          } else {
-            audio.pause();
-            segmentRef.current = { start: 0, end: 0 };
-            onAudioStopRef.current();
-          }
-          return;
-        }
-
-        // Highlight cau dang chay theo currentTime
-        const found = findActiveItem(contentsRef.current, t);
-        if (found && String(found.id) !== lastActiveId.current) {
-          lastActiveId.current = String(found.id);
-          onActiveItemChangeRef.current(String(found.id));
-        }
-      };
-
-      audio.addEventListener('seeking', onSeeking);
-      audio.addEventListener('timeupdate', onTimeUpdate);
-
-      // Cleanup khi effect re-run (audioSrc doi) hoac unmount
-      return () => {
-        audio!.removeEventListener('seeking', onSeeking);
-        audio!.removeEventListener('timeupdate', onTimeUpdate);
-      };
+      // Highlight cau dang chay theo currentTime
+      const found = findActiveItem(contentsRef.current, t);
+      if (found && String(found.id) !== lastActiveId.current) {
+        lastActiveId.current = String(found.id);
+        onActiveItemChangeRef.current(String(found.id));
+      }
     };
 
-    const cleanup = attach();
-    return () => { cleanup?.(); };
+    audio.addEventListener('seeking', onSeeking);
+    audio.addEventListener('timeupdate', onTimeUpdate);
+
+    // Luu cleanup de goi khi audioSrc thay doi hoac unmount
+    listenerCleanupRef.current = () => {
+      audio.removeEventListener('seeking', onSeeking);
+      audio.removeEventListener('timeupdate', onTimeUpdate);
+    };
+  };
+
+  useEffect(() => {
+    // Thu attach ngay neu audio element da san sang
+    const audio = getAudio();
+    if (audio) {
+      attachListeners(audio);
+    }
+    // Neu chua san sang, cho AudioPlayer mount xong roi attach qua playCommand useEffect
+    return () => {
+      listenerCleanupRef.current?.();
+      listenerCleanupRef.current = null;
+    };
   }, [audioSrc]);
 
   // LENH PHAT: playCommand thay doi -> seek va play
@@ -202,8 +218,14 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
     const audio = getAudio();
     if (!audio) return;
 
+    // Dam bao listener da duoc attach (truong hop audio chua san sang khi audioSrc effect chay)
+    if (!listenerCleanupRef.current) {
+      attachListeners(audio);
+    }
+    console.log("playCommand", playCommand);
     const start = parseTimeToSeconds(playCommand.startTime);
-    const end   = parseTimeToSeconds(playCommand.endTime);
+    const end = parseTimeToSeconds(playCommand.endTime);
+    console.log("set segment", { start, end });
 
     segmentRef.current = { start, end };
     isLoopRef.current = false; // reset loop khi click phat item moi
@@ -221,13 +243,14 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
   // ============================================================
 
   useEffect(() => {
+    console.log(loopCommand);
     if (!loopCommand) return;
     isLoopRef.current = loopCommand.isLoop;
     // Neu bat loop trong khi dang phat: cap nhat segment moi (startTime/endTime co the khac)
     const audio = getAudio();
     if (!audio || audio.paused) return;
     const start = parseTimeToSeconds(loopCommand.startTime);
-    const end   = parseTimeToSeconds(loopCommand.endTime);
+    const end = parseTimeToSeconds(loopCommand.endTime);
     segmentRef.current = { start, end };
   }, [loopCommand]);
 
@@ -282,7 +305,7 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
             showAudioButton={true}
             activeSource={activeSource}
             onPlayPauseAudio={onPlayPauseAudio}
-            onPlayPauseVideo={() => {}}
+            onPlayPauseVideo={() => { }}
             onToggleLoop={onToggleLoop}
             onGetMeaning={onGetMeaning}
             itemRef={(el) => { itemRefsRef.current[String(item.id)] = el; }}
