@@ -196,6 +196,9 @@ const HomePageContentComponent = ({
   // - Neu chua phat: dung item cu, tao Audio moi va phat
   const toggleAudio = useCallback(
     (itemId: string, audioPath: string, startTime: string, endTime: string) => {
+      // Ep itemId ve string de tranh type mismatch
+      const normalizedId = String(itemId);
+
       if (!audioPath || !startTime || !endTime) {
         message.error('Khong co tep am thanh hoac thoi gian khong hop le.');
         return;
@@ -209,7 +212,7 @@ const HomePageContentComponent = ({
         return;
       }
 
-      if (currentPlayingIdRef.current === itemId) {
+      if (currentPlayingIdRef.current === normalizedId) {
         stopAudio();
         return;
       }
@@ -227,7 +230,7 @@ const HomePageContentComponent = ({
       // Tu dong dung hoac lap lai khi den endTime
       audio.addEventListener('timeupdate', () => {
         if (audio.currentTime >= end) {
-          if (loopStatesRef.current[itemId]) {
+          if (loopStatesRef.current[normalizedId]) {
             // Dang loop: quay lai dau doan
             audio.currentTime = start;
           } else {
@@ -251,11 +254,11 @@ const HomePageContentComponent = ({
       });
 
       currentAudioRef.current = audio;
-      currentPlayingIdRef.current = itemId;
+      currentPlayingIdRef.current = normalizedId;
       Object.keys(playStatesRef.current).forEach((k) => {
-        playStatesRef.current[k] = k === itemId;
+        playStatesRef.current[k] = k === normalizedId;
       });
-      loopStatesRef.current[itemId] = false;
+      loopStatesRef.current[normalizedId] = false;
       forceRender();
 
       audio.play().catch(() => {
@@ -268,7 +271,8 @@ const HomePageContentComponent = ({
 
   // Bat/tat che do lap lai cho 1 item (chi hoat dong khi item dang phat)
   const onToggleLoop = useCallback((itemId: string) => {
-    loopStatesRef.current[itemId] = !loopStatesRef.current[itemId];
+    const normalizedId = String(itemId);
+    loopStatesRef.current[normalizedId] = !loopStatesRef.current[normalizedId];
     forceRender();
   }, []);
 
