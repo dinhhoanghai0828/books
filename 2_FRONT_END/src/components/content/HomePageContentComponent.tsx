@@ -361,7 +361,12 @@ const HomePageContentComponent = ({
   // Mo modal chinh sua voi du lieu cua item duoc chon
   const handleOpenEdit = (item: ContentType) => {
     setEditingItem(item);
-    editForm.setFieldsValue({ eng: item.eng, vi: item.vi });
+    editForm.setFieldsValue({
+      eng: item.eng,
+      vi: item.vi,
+      startTime: item.startTime,
+      endTime: item.endTime,
+    });
     setEditModalOpen(true);
   };
 
@@ -378,7 +383,7 @@ const HomePageContentComponent = ({
     try {
       const values = await editForm.validateFields();
       setEditLoading(true);
-      await updateContent(editingItem.id, values.eng, values.vi);
+      await updateContent(editingItem.id, values.eng, values.vi, values.startTime, values.endTime);
 
       notifApi.success({
         message: 'Cap nhat thanh cong',
@@ -391,7 +396,9 @@ const HomePageContentComponent = ({
       // Cap nhat du lieu hien thi truc tiep, khong can reload
       setFilteredData((prev) =>
         prev.map((it) =>
-          it.id === editingItem.id ? { ...it, eng: values.eng, vi: values.vi } : it
+          it.id === editingItem.id
+            ? { ...it, eng: values.eng, vi: values.vi, startTime: values.startTime, endTime: values.endTime }
+            : it
         )
       );
       handleCancelEdit();
@@ -553,6 +560,20 @@ const HomePageContentComponent = ({
               rules={[{ required: true, message: 'Vui long nhap nghia tieng Viet' }]}
             >
               <Input.TextArea rows={4} maxLength={1000} showCount />
+            </Form.Item>
+            <Form.Item
+              label="Start Time"
+              name="startTime"
+              rules={[{ pattern: /^\d{2}:\d{2}:\d{2}\.\d{3}$/, message: 'Dinh dang: 00:00:00.000' }]}
+            >
+              <Input placeholder="00:00:00.000" />
+            </Form.Item>
+            <Form.Item
+              label="End Time"
+              name="endTime"
+              rules={[{ pattern: /^\d{2}:\d{2}:\d{2}\.\d{3}$/, message: 'Dinh dang: 00:00:00.000' }]}
+            >
+              <Input placeholder="00:00:00.000" />
             </Form.Item>
           </Form>
         )}

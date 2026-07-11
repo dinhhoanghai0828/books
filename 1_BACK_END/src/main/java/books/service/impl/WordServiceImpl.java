@@ -75,4 +75,9 @@ public class WordServiceImpl implements WordService {
         return result;
     }
 
+    @Override
+    public boolean updateWord(Long id, String eng, String vi) throws Exception {
+        return wordAdapter.updateWord(id, eng, vi);
+    }
+
 }

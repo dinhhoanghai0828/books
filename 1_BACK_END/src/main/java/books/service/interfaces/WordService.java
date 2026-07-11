@@ -19,4 +19,6 @@ public interface WordService {
     int insertWords(String eng, List<String> viList) throws Exception;
 
     Map<String, Object> getWords(String eng, String vi, String page, String size) throws Exception;
+
+    boolean updateWord(Long id, String eng, String vi) throws Exception;
 }

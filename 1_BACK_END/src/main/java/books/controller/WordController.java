@@ -2,6 +2,7 @@ package books.controller;
 
 import books.dto.WordDTO;
 import books.request.InsertWordsRequest;
+import books.request.UpdateWordRequest;
 import books.response.BaseResponse;
 import books.response.PaginationResponse;
 import books.service.interfaces.WordService;
@@ -117,6 +118,20 @@ public class WordController {
             return new ResponseEntity<>(response, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @PutMapping("/update")
+    public ResponseEntity<?> updateWord(@RequestBody UpdateWordRequest request) {
+        try {
+            boolean success = wordService.updateWord(request.getId(), request.getEng(), request.getVi());
+            if (success) {
+                return new ResponseEntity<>(new BaseResponse("00", "success"), HttpStatus.OK);
+            } else {
+                return new ResponseEntity<>(new BaseResponse("99", "failed"), HttpStatus.OK);
+            }
+        } catch (Exception e) {
+            return new ResponseEntity<>(new BaseResponse("99", "failed: " + e.getMessage()), HttpStatus.OK);
         }
     }
 }
