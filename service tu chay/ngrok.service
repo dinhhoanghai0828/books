@@ -1,0 +1,13 @@
+[Unit]
+Description=Ngrok Tunnel
+After=network.target
+
+[Service]
+Type=simple
+User=haidh8
+ExecStart=/usr/local/bin/ngrok http 80 --log=stdout
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
