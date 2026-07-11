@@ -30,15 +30,13 @@ export interface AudioLayoutProps {
   onPlayPauseAudio: (id: string, startTime: string, endTime: string) => void;
   onToggleLoop: (id: string, startTime: string, endTime: string) => void;
   onGetMeaning: () => void;
-  renderTooltip?: () => React.ReactNode;
+  renderTooltip: () => React.ReactNode;
   // Thong tin volume de lay src audio
   volume?: Volume;
   // Callback khi timeupdate phat hien cau dang chay (de ContentComponent highlight + scroll)
   onActiveItemChange: (itemId: string) => void;
   // Callback khi audio tu dong dung (het segment hoac het file)
   onAudioStop: () => void;
-  // Callback khi audio da pause xong (de reset pauseCommand)
-  onAudioPaused?: () => void;
   // Lenh phat tu ContentComponent: thay doi khi user click item
   playCommand: { itemId: string; startTime: string; endTime: string; ts: number } | null;
   // Lenh loop tu ContentComponent: thay doi khi user toggle loop
@@ -88,7 +86,6 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
   volume,
   onActiveItemChange,
   onAudioStop,
-  onAudioPaused,
   playCommand,
   loopCommand,
   pauseCommand,
@@ -117,9 +114,6 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
   const onAudioStopRef = useRef(onAudioStop);
   useEffect(() => { onAudioStopRef.current = onAudioStop; }, [onAudioStop]);
 
-  const onAudioPausedRef = useRef(onAudioPaused);
-  useEffect(() => { onAudioPausedRef.current = onAudioPaused; }, [onAudioPaused]);
-
   const contentsRef = useRef(contents);
   useEffect(() => { contentsRef.current = contents; }, [contents]);
 
@@ -128,10 +122,7 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
   // ============================================================
 
   useEffect(() => {
-    if (volume?.audio) {
-      console.log('[AudioLayout] Setting audioSrc:', `/media/${volume.audio}`);
-      setAudioSrc(`/media/${volume.audio}`);
-    }
+    if (volume?.audio) setAudioSrc(`/media/${volume.audio}`);
   }, [volume]);
 
   // ============================================================
@@ -155,8 +146,6 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
         return;
       }
 
-      console.log('[AudioLayout] Audio element attached, readyState:', audio.readyState, 'paused:', audio.paused);
-
       const lastActiveId = { current: '' };
 
       const onSeeking = () => {
@@ -172,7 +161,6 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
 
         // Xu ly stop/loop khi den endTime
         if (end > 0 && t >= end) {
-          console.log('[AudioLayout] onTimeUpdate: reached end time, pausing. t:', t, 'end:', end);
           if (isLoopRef.current) {
             isSeekingByCodeRef.current = true;
             audio.currentTime = start;
@@ -214,15 +202,10 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
   useEffect(() => {
     if (!playCommand) return;
     const audio = getAudio();
-    if (!audio) {
-      console.log('[AudioLayout] playCommand received but audio element not ready');
-      return;
-    }
+    if (!audio) return;
 
     const start = parseTimeToSeconds(playCommand.startTime);
     const end   = parseTimeToSeconds(playCommand.endTime);
-
-    console.log('[AudioLayout] playCommand:', playCommand, 'start:', start, 'end:', end);
 
     segmentRef.current = { start, end };
     isLoopRef.current = false; // reset loop khi phat bai moi
@@ -232,14 +215,7 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
     isSeekingByCodeRef.current = false;
 
     audio.playbackRate = playbackSpeed;
-    
-    audio.play().then(() => {
-      console.log('[AudioLayout] audio.play() succeeded');
-      // Callback de bao cho ContentComponent biet audio dang phat
-      onActiveItemChangeRef.current(playCommand.itemId);
-    }).catch((err) => {
-      console.error('[AudioLayout] audio.play() failed:', err);
-    });
+    audio.play();
   }, [playCommand]);
 
   // ============================================================
@@ -263,14 +239,8 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
 
   useEffect(() => {
     if (pauseCommand === null || pauseCommand === undefined) return;
-    console.log('[AudioLayout] pauseCommand received:', pauseCommand);
     const audio = getAudio();
-    if (audio) {
-      console.log('[AudioLayout] pausing audio, paused:', audio.paused);
-      audio.pause();
-      // Callback de reset pauseCommand sau khi da pause xong
-      onAudioPausedRef.current?.();
-    }
+    if (audio) audio.pause();
   }, [pauseCommand]);
 
   // ============================================================

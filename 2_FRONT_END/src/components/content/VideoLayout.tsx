@@ -25,7 +25,7 @@ export interface VideoLayoutProps {
   onPlayPauseVideo: (id: string, startTime: string, endTime: string) => void;
   onToggleLoop: (id: string, startTime: string, endTime: string) => void;
   onGetMeaning: () => void;
-  renderTooltip?: () => React.ReactNode;
+  renderTooltip: () => React.ReactNode;
 }
 
 // ============================================================
