@@ -25,6 +25,7 @@ import {
 } from 'antd';
 import debounce from 'lodash.debounce';
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 
 const { Content } = Layout;
 const { Text } = Typography;
@@ -42,20 +43,23 @@ interface HomePageContentComponentProps {
   highlightedViKeywords: string[];
 }
 
-// Style cho tooltip tra nghia tu
+// Style cho tooltip tra nghia tu — dung fixed thay vi absolute
+// de khong bi anh huong boi overflow hay transform cua parent
 const TOOLTIP_STYLE: React.CSSProperties = {
-  position: 'absolute',
-  backgroundColor: '#108ee9',
+  position: 'fixed',
+  backgroundColor: '#1d1d2e',
   color: 'white',
-  padding: '12px 15px',
-  borderRadius: 8,
-  boxShadow: '0 1px 8px rgba(0,0,0,0.1)',
-  zIndex: 10,
-  maxWidth: 400,
+  padding: '10px 14px',
+  borderRadius: 10,
+  boxShadow: '0 4px 16px rgba(0,0,0,0.22)',
+  zIndex: 9999,
+  maxWidth: 360,
   wordWrap: 'break-word',
-  fontSize: 15,
-  lineHeight: '1.9',
-  transition: 'transform 0.2s ease-out',
+  fontSize: 14,
+  lineHeight: '1.85',
+  pointerEvents: 'none',           // Khong can thiep vao mouse event
+  transition: 'opacity 0.15s ease',
+  borderLeft: '4px solid #108ee9',
 };
 
 // ============================================================
@@ -294,12 +298,12 @@ const HomePageContentComponent = ({
           setMeaningViKeywords([]);
         }
 
-        // Dat toa do tooltip sat vi tri boi
+        // Dat toa do tooltip sat vi tri boi — dung clientRect cho fixed positioning
         if (selection?.rangeCount) {
           const rect = selection.getRangeAt(0).getBoundingClientRect();
           setTooltipPosition({
-            x: rect.left + window.scrollX,
-            y: rect.top + window.scrollY + 30,
+            x: Math.min(rect.left, window.innerWidth - 380),  // tranh tran ben phai
+            y: rect.bottom + 8,                               // hien ngay duoi chu boi
           });
         }
       } catch (error) {
@@ -314,6 +318,18 @@ const HomePageContentComponent = ({
     document.addEventListener('selectionchange', handleGetMeaning);
     return () => document.removeEventListener('selectionchange', handleGetMeaning);
   }, [handleGetMeaning]);
+
+  // Dong tooltip khi nguoi dung click ra ngoai vung boi
+  useEffect(() => {
+    const handleClickOutside = () => {
+      if (window.getSelection()?.toString().trim() === '') {
+        setMeaningEnKeywords([]);
+        setMeaningViKeywords([]);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   // ============================================================
   // EDIT MODAL HANDLERS
@@ -486,21 +502,42 @@ const HomePageContentComponent = ({
             </Col>
           ))}
 
-          {/* Tooltip tra nghia tu khi nguoi dung boi chu */}
-          {meaningEnKeywords.length > 0 && meaningViKeywords.length > 0 && (
-            <div
-              className="meaning-container"
-              style={{ ...TOOLTIP_STYLE, left: tooltipPosition.x, top: tooltipPosition.y }}
-            >
-              {/^[a-zA-Z ]+$/.test(window.getSelection()?.toString().trim() || '')
-                ? meaningEnKeywords.map((word, i) => (
-                  <div key={i}><strong>{word}</strong>: {meaningViKeywords[i]}</div>
-                ))
-                : meaningViKeywords.map((word, i) => (
-                  <div key={i}><strong>{word}</strong>: {meaningEnKeywords[i]}</div>
-                ))}
-            </div>
-          )}
+          {/* Tooltip tra nghia tu — render qua portal len document.body
+              tranh bi cat boi overflow cua parent, dung fixed positioning */}
+          {meaningEnKeywords.length > 0 && meaningViKeywords.length > 0 &&
+            createPortal(
+              <div style={{ ...TOOLTIP_STYLE, left: tooltipPosition.x, top: tooltipPosition.y }}>
+                {/^[a-zA-Z ]+$/.test(window.getSelection()?.toString().trim() || '') ? (
+                  <>
+                    <div style={{ fontSize: 11, opacity: 0.65, marginBottom: 4, letterSpacing: 1 }}>
+                      EN → VI
+                    </div>
+                    {meaningEnKeywords.map((word, i) => (
+                      <div key={i}>
+                        <strong style={{ color: '#7dd3fc' }}>{word}</strong>
+                        <span style={{ opacity: 0.8 }}> : </span>
+                        {meaningViKeywords[i]}
+                      </div>
+                    ))}
+                  </>
+                ) : (
+                  <>
+                    <div style={{ fontSize: 11, opacity: 0.65, marginBottom: 4, letterSpacing: 1 }}>
+                      VI → EN
+                    </div>
+                    {meaningViKeywords.map((word, i) => (
+                      <div key={i}>
+                        <strong style={{ color: '#7dd3fc' }}>{word}</strong>
+                        <span style={{ opacity: 0.8 }}> : </span>
+                        {meaningEnKeywords[i]}
+                      </div>
+                    ))}
+                  </>
+                )}
+              </div>,
+              document.body
+            )
+          }
         </Row>
       ) : (
         <Empty description="Khong co du lieu" className="emptyClass" />
