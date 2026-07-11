@@ -3,6 +3,7 @@ package books.dao.interfaces;
 import books.entity.Word;
 
 import java.util.List;
+import java.util.Map;
 
 public interface WordAdapter {
     List<Word> getEngWords(String eng) throws Exception;
@@ -14,4 +15,6 @@ public interface WordAdapter {
     List<Word> getMeaning(String eng, String vi) throws Exception;
 
     int insertWords(String eng, List<String> viList) throws Exception;
+
+    Map<String, Object> getWords(String eng, String vi, String page, String size) throws Exception;
 }

@@ -175,14 +175,16 @@ export const getContentSearch = async (
   }
 };
 
-// Cap nhat noi dung (tieng Anh va tieng Viet) cua mot cau theo id
+// Cap nhat noi dung (tieng Anh, tieng Viet, startTime, endTime) cua mot cau theo id
 export const updateContent = async (
   id: string,
   eng: string,
-  vi: string
+  vi: string,
+  startTime: string,
+  endTime: string,
 ): Promise<void> => {
   try {
-    await apiClient.put('/content/update', { id, eng, vi });
+    await apiClient.put('/content/update', { id, eng, vi, startTime, endTime });
   } catch (error: any) {
     throw new Error(getErrorMessage(error));
   }

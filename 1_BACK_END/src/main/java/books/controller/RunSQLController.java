@@ -37,7 +37,10 @@ public class RunSQLController {
             int before = stats.get("BEFORE");
             int after  = stats.get("AFTER");
             int added  = stats.get("ADDED");
-            String message = "word-general success. Trước: " + before + " từ | Sau: " + after + " từ | Tăng thêm: " + added + " từ mới";
+            String message = String.format(
+                    "Cập nhật số lượng từ thành công. Trước cập nhật: %d từ | Sau cập nhật: %d từ | Đã thêm: %d từ mới.",
+                    before, after, added
+            );
             return new ResponseEntity<>(new BaseResponse("00", message), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(new BaseResponse("99", "word-general failed: " + e.getMessage()), HttpStatus.INTERNAL_SERVER_ERROR);

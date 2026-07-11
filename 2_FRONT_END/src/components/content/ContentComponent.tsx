@@ -193,7 +193,7 @@ const ContentComponent = ({
   const scrollToActiveItem = useCallback((itemId: string) => {
     const el = itemRefsRef.current[itemId];
     if (!el) return;
-    const top = el.getBoundingClientRect().top + window.scrollY - 120;
+    const top = el.getBoundingClientRect().top + window.scrollY - 250;
     window.scrollTo({ top, behavior: 'smooth' });
   }, []);
 

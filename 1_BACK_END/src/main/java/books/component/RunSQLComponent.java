@@ -377,15 +377,29 @@ public class RunSQLComponent {
 
     /**
      * Wrapper của createWordTableTemp + generalWord, trả về thống kê số lượng từ trước/sau.
+     * - BEFORE: đếm số từ trong file 3_SQL_ENG_WORDS.sql hiện tại (trước khi chạy)
+     * - AFTER:  đếm số từ trong DB sau khi chạy xong
      * Map keys: BEFORE, AFTER, ADDED
      */
     public Map<String, Integer> wordGeneralWithStats() throws SQLException {
         dataSource = getDataSource();
-        JdbcTemplate jdbc = jdbcTemplate();
 
-        // Đếm trước
-        Integer before = jdbc.queryForObject("SELECT COUNT(*) FROM WORDS", Integer.class);
-        if (before == null) before = 0;
+        // Đếm BEFORE: đọc file 3_SQL_ENG_WORDS.sql, đếm số dòng là data row (bắt đầu bằng tab + dấu ngoặc đơn)
+        int before = 0;
+        File wordsFile = new File(path + "3_SQL_ENG_WORDS.sql");
+        if (wordsFile.exists()) {
+            try (BufferedReader reader = new BufferedReader(new FileReader(wordsFile))) {
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    String trimmed = line.trim();
+                    if (trimmed.startsWith("('")) {
+                        before++;
+                    }
+                }
+            } catch (IOException e) {
+                System.err.println("wordGeneralWithStats: cannot read 3_SQL_ENG_WORDS.sql - " + e.getMessage());
+            }
+        }
 
         // Chạy nghiệp vụ
         createWordTableTemp();
@@ -395,7 +409,8 @@ public class RunSQLComponent {
             throw new SQLException("generalWord failed: " + e.getMessage(), e);
         }
 
-        // Đếm sau
+        // Đếm AFTER: đếm trong DB sau khi generalWord() ghi xong
+        JdbcTemplate jdbc = jdbcTemplate();
         Integer after = jdbc.queryForObject("SELECT COUNT(*) FROM WORDS", Integer.class);
         if (after == null) after = 0;
 

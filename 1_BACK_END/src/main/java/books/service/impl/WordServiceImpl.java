@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 @Service
@@ -61,6 +62,17 @@ public class WordServiceImpl implements WordService {
     @Override
     public int insertWords(String eng, List<String> viList) throws Exception {
         return wordAdapter.insertWords(eng, viList);
+    }
+
+    @Override
+    public Map<String, Object> getWords(String eng, String vi, String page, String size) throws Exception {
+        Map<String, Object> result = wordAdapter.getWords(eng, vi, page, size);
+        List<Word> words = (List<Word>) result.get("WORDS");
+        List<WordDTO> wordDTOs = words.stream()
+                .map(w -> modelMapper.map(w, WordDTO.class))
+                .collect(Collectors.toList());
+        result.put("WORDS", wordDTOs);
+        return result;
     }
 
 }

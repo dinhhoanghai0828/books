@@ -3,6 +3,7 @@ package books.controller;
 import books.dto.WordDTO;
 import books.request.InsertWordsRequest;
 import books.response.BaseResponse;
+import books.response.PaginationResponse;
 import books.service.interfaces.WordService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @CrossOrigin("*")
@@ -95,6 +97,26 @@ public class WordController {
             return new ResponseEntity<>(
                     new BaseResponse("99", "failed"),
                     HttpStatus.OK);
+        }
+    }
+
+    @GetMapping("/search")
+    public ResponseEntity<?> getWords(
+            @RequestParam(value = "eng",  required = false) String eng,
+            @RequestParam(value = "vi",   required = false) String vi,
+            @RequestParam(value = "page", defaultValue = "0")  String page,
+            @RequestParam(value = "size", defaultValue = "50") String size) {
+        try {
+            Map<String, Object> data = wordService.getWords(eng, vi, page, size);
+            PaginationResponse<WordDTO> response = new PaginationResponse<>();
+            response.setTotalElements((Integer) data.get("TOTAL_ELEMENTS"));
+            response.setTotalPages((Integer) data.get("TOTAL_PAGES"));
+            response.setSize((Integer) data.get("SIZE"));
+            response.setPage((Integer) data.get("PAGE"));
+            response.setData((List<WordDTO>) data.get("WORDS"));
+            return new ResponseEntity<>(response, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
     }
 }
