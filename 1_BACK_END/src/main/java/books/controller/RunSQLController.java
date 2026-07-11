@@ -55,7 +55,7 @@ public class RunSQLController {
     public ResponseEntity<?> contentsExport() {
         try {
             List<String> generatedFiles = runSQLComponent.generalContents();
-            String message = "contents-export success. Files generated: " + generatedFiles.size();
+            String message = "Tổng hợp lại danh sách các câu thành công" + generatedFiles.size();
             return new ResponseEntity<>(new BaseResponse("00", message), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(new BaseResponse("99", "contents-export failed: " + e.getMessage()), HttpStatus.INTERNAL_SERVER_ERROR);

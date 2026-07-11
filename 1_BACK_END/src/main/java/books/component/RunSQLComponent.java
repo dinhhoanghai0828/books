@@ -1,7 +1,7 @@
 package books.component;
 
 import books.utils.DBUtils;
-import org.springframework.boot.jdbc.DataSourceBuilder;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.Resource;
@@ -21,48 +21,20 @@ import java.util.regex.Pattern;
 
 @Component
 public class RunSQLComponent {
-    // Autowire bean cụ thể
-    //    @Autowired
+
+    // Inject DataSource cua Spring (HikariCP) thay vi tu tao moi
+    @Autowired
     private DataSource dataSource;
+
     String path = "D:\\20_PROJECT\\books\\3_DATABASE\\";
-    //    String path = "E:\\2_books\\3_DATABASE\\";
-    private String url;
-    private String username;
-    private String password;
-    private String driverClassName;
-
-    public DataSource getDataSource() {
-        try {
-            Properties prop = new Properties();
-            ClassLoader loader = Thread.currentThread().getContextClassLoader();
-            InputStream stream = loader.getResourceAsStream("application.properties");
-            prop.load(stream);
-            url = prop.getProperty("spring.datasource.url");
-            driverClassName = prop.getProperty("spring.datasource.driver-class-name");
-            username = prop.getProperty("spring.datasource.username");
-            password = prop.getProperty("spring.datasource.password");
-        } catch (Exception e) {
-            System.out.printf("123");
-        }
-
-        DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
-        dataSourceBuilder.driverClassName(driverClassName);
-        dataSourceBuilder.url(url);
-        dataSourceBuilder.username(username);
-        dataSourceBuilder.password(password);
-        return dataSourceBuilder.build();
-
-    }
 
     @Bean
     public JdbcTemplate jdbcTemplate() {
-        dataSource = getDataSource();
         return new JdbcTemplate(dataSource);
     }
 
     //    @PostConstruct
     public void insertContent() throws SQLException, IOException {
-        dataSource = getDataSource();
         // Lấy danh sách BOOK_SLUG có contents trong DB
         String sqlGetBooks = "SELECT DISTINCT B.SLUG AS BOOK_SLUG FROM BOOKS B " +
                 "INNER JOIN VOLUMES V ON V.BOOK_SLUG = B.SLUG " +
@@ -127,7 +99,6 @@ public class RunSQLComponent {
 
     public void extractAndInsertEngWords() {
         String thisMethod = "extractAndInsertEngWords";
-        dataSource = getDataSource();
         String selectSql = "SELECT ENG FROM CONTENTS";
         String insertSql = "INSERT IGNORE INTO ENG_WORDS (WORD) VALUES (?)";
 
@@ -176,7 +147,6 @@ public class RunSQLComponent {
 
     public void extractAndInsertViWords() {
         String thisMethod = "extractAndInsertEngWords";
-        dataSource = getDataSource();
         String selectSql = "SELECT VI FROM CONTENTS";  // Lấy cột VI
         String insertSql = "INSERT IGNORE INTO VI_WORDS (WORD) VALUES (?)";  // Chèn vào VI_WORDS
 
@@ -267,7 +237,6 @@ public class RunSQLComponent {
     }
 
     public void insertWord() throws SQLException {
-        dataSource = getDataSource();
         List<String> scripts = new ArrayList<>();
         scripts.add(path + "3_SQL_ENG_WORDS.sql");
         for (String scriptPath : scripts) {
@@ -284,7 +253,6 @@ public class RunSQLComponent {
     }
 
     public void insertMissingWord() throws SQLException {
-        dataSource = getDataSource();
         List<String> scripts = new ArrayList<>();
         scripts.add(path + "3_SQL_ENG_MISSING_WORDS.sql");
         for (String scriptPath : scripts) {
@@ -357,7 +325,6 @@ public class RunSQLComponent {
     }
 
     public void createWordTableTemp() throws SQLException {
-        dataSource = getDataSource();
         List<String> scripts = new ArrayList<>();
         //	Lay toan bo gia tri bang WORD va insert vao bang WORDS2
         //	Lay toan bo gia tri bang WORD2 va insert lai vao bang WORDS
@@ -382,7 +349,6 @@ public class RunSQLComponent {
      * Map keys: BEFORE, AFTER, ADDED
      */
     public Map<String, Integer> wordGeneralWithStats() throws SQLException {
-        dataSource = getDataSource();
 
         // Đếm BEFORE: đọc file 3_SQL_ENG_WORDS.sql, đếm số dòng là data row (bắt đầu bằng tab + dấu ngoặc đơn)
         int before = 0;
@@ -427,7 +393,6 @@ public class RunSQLComponent {
      * và ghi mỗi nhóm ra file APP_<BOOK_SLUG>.sql trong thư mục path.
      */
     public List<String> generalContents() throws SQLException, IOException {
-        dataSource = getDataSource();
         List<String> generatedFiles = new ArrayList<>();
 
         String sqlGetBooks = "SELECT DISTINCT B.SLUG AS BOOK_SLUG FROM BOOKS B " +
@@ -603,7 +568,6 @@ public class RunSQLComponent {
      * Thực hiện: TRUNCATE CONTENTS → execute từng APP_*.sql → ghi SUMMARY.sql
      */
     public List<String> insertContentFromExport() throws SQLException, IOException {
-        dataSource = getDataSource();
 
         // Lấy danh sách BOOK_SLUG có contents trong DB
         String sqlGetBooks = "SELECT DISTINCT B.SLUG AS BOOK_SLUG FROM BOOKS B " +
@@ -691,7 +655,6 @@ public class RunSQLComponent {
     }
 
     public void insertChart() throws SQLException, IOException {
-        dataSource = getDataSource();
         List<String> scripts = new ArrayList<>();
 
         //	Doc SQL tu cac file

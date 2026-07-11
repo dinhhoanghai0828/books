@@ -39,6 +39,12 @@ const MENU_ITEMS: MenuItem[] = [
     href: '/',
   },
   {
+    label: 'Từ mới',
+    key: 'words',
+    icon: <BookOutlined />,
+    href: '/words',
+  },
+  {
     label: 'Tieng anh co ban',
     key: 'tieng-anh-co-ban',
     icon: <ReadOutlined />,
