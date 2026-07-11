@@ -25,13 +25,50 @@ import java.util.regex.Pattern;
 public class RunSQLComponent {
 
     // Inject DataSource cua Spring (HikariCP) - su dung duy mot pool cho toan ung dung
-    @Autowired
+    @Autowired(required = false)
     private DataSource dataSource;
 
     String path = "D:\\20_PROJECT\\books\\3_DATABASE\\";
 
+    /** Pool nhe (1-2 connection) chi dung khi chay main() standalone, tranh khoi tao DBUtils pool lon. */
+    private static volatile DataSource standaloneDataSource;
+
     private DataSource resolveDataSource() {
-        return dataSource;
+        if (dataSource != null) {
+            return dataSource;
+        }
+        // Fallback cho standalone main() khi Spring context khong active
+        if (standaloneDataSource == null) {
+            synchronized (RunSQLComponent.class) {
+                if (standaloneDataSource == null) {
+                    standaloneDataSource = createStandaloneDataSource();
+                }
+            }
+        }
+        return standaloneDataSource;
+    }
+
+    private static DataSource createStandaloneDataSource() {
+        Properties props = new Properties();
+        try (InputStream in = RunSQLComponent.class.getClassLoader()
+                .getResourceAsStream("application.properties")) {
+            if (in == null) {
+                throw new RuntimeException("File application.properties not found");
+            }
+            props.load(in);
+        } catch (IOException e) {
+            throw new RuntimeException("Failed to load application.properties", e);
+        }
+
+        HikariConfig config = new HikariConfig();
+        config.setJdbcUrl(props.getProperty("spring.datasource.url"));
+        config.setUsername(props.getProperty("spring.datasource.username"));
+        config.setPassword(props.getProperty("spring.datasource.password"));
+        config.setDriverClassName(props.getProperty("spring.datasource.driver-class-name"));
+        config.setMaximumPoolSize(2);
+        config.setMinimumIdle(1);
+        config.setPoolName("RunSQL-Standalone");
+        return new HikariDataSource(config);
     }
 
     @Bean
@@ -48,6 +85,10 @@ public class RunSQLComponent {
 //                "ORDER BY B.SLUG";
 
         List<String> scripts = new ArrayList<>();
+        scripts.add(path + "1_SQL_CREATE_TABLES.sql");
+        scripts.add(path + "2_SQL_CREATE_DATA.sql");
+        scripts.add(path + "3_SQL_ENG_MISSING_WORDS.sql");
+        scripts.add(path + "3_SQL_ENG_WORDS.sql");
         scripts.add(path + "APP_4000_ESSENTIAL_ENGLISH_WORDS.sql");
         scripts.add(path + "APP_ALL_EARS_ENGLISH.sql");
         scripts.add(path + "APP_ANIMATTERS.sql");
