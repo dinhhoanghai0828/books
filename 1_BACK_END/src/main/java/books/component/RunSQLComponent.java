@@ -24,50 +24,14 @@ import java.util.regex.Pattern;
 @Component
 public class RunSQLComponent {
 
-    // Inject DataSource cua Spring (HikariCP); null khi chay standalone main()
-    @Autowired(required = false)
+    // Inject DataSource cua Spring (HikariCP) - su dung duy mot pool cho toan ung dung
+    @Autowired
     private DataSource dataSource;
 
     String path = "D:\\20_PROJECT\\books\\3_DATABASE\\";
 
-    /** Pool nhe (1-2 connection) chi dung khi chay main() standalone, tranh khoi tao DBUtils pool lon. */
-    private static volatile DataSource standaloneDataSource;
-
     private DataSource resolveDataSource() {
-        if (dataSource != null) {
-            return dataSource;
-        }
-        if (standaloneDataSource == null) {
-            synchronized (RunSQLComponent.class) {
-                if (standaloneDataSource == null) {
-                    standaloneDataSource = createStandaloneDataSource();
-                }
-            }
-        }
-        return standaloneDataSource;
-    }
-
-    private static DataSource createStandaloneDataSource() {
-        Properties props = new Properties();
-        try (InputStream in = RunSQLComponent.class.getClassLoader()
-                .getResourceAsStream("application.properties")) {
-            if (in == null) {
-                throw new RuntimeException("File application.properties not found");
-            }
-            props.load(in);
-        } catch (IOException e) {
-            throw new RuntimeException("Failed to load application.properties", e);
-        }
-
-        HikariConfig config = new HikariConfig();
-        config.setJdbcUrl(props.getProperty("spring.datasource.url"));
-        config.setUsername(props.getProperty("spring.datasource.username"));
-        config.setPassword(props.getProperty("spring.datasource.password"));
-        config.setDriverClassName(props.getProperty("spring.datasource.driver-class-name"));
-        config.setMaximumPoolSize(2);
-        config.setMinimumIdle(1);
-        config.setPoolName("RunSQL-Standalone");
-        return new HikariDataSource(config);
+        return dataSource;
     }
 
     @Bean
@@ -152,13 +116,16 @@ public class RunSQLComponent {
         PreparedStatement selectStmt = null;
         ResultSet resultSet = null;
 
-        // Sử dụng kết nối JDBC trực tiếp
+        // Sử dụng kết nối JDBC trực tiếp với pagination
         try {
             connection = resolveDataSource().getConnection();
-            selectStmt = connection.prepareStatement(selectSql);
+            selectStmt = connection.prepareStatement(selectSql, ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_READ_ONLY);
+            selectStmt.setFetchSize(1000); // Fetch size để giảm memory usage
             resultSet = selectStmt.executeQuery();
 
             Set<String> allWords = new HashSet<>();
+            int batchSize = 1000;
+            int wordCount = 0;
 
             // Duyệt qua tất cả các câu trong cột ENG
             while (resultSet.next()) {
@@ -166,20 +133,20 @@ public class RunSQLComponent {
                 if (sentence != null && !sentence.trim().isEmpty()) {
                     Set<String> validWords = getValidWords(sentence);
                     allWords.addAll(validWords);  // Thêm các từ hợp lệ vào set
+                    wordCount += validWords.size();
+                    
+                    // Batch insert định kỳ để tránh memory overflow
+                    if (wordCount >= batchSize) {
+                        insertWordsBatch(connection, insertSql, new ArrayList<>(allWords));
+                        allWords.clear();
+                        wordCount = 0;
+                    }
                 }
             }
 
-            // Chuyển Set sang List và sắp xếp theo thứ tự alphabet
-            List<String> sortedWords = new ArrayList<>(allWords);
-            Collections.sort(sortedWords);
-
-            // Chèn từ vào bảng ENG_WORDS (tránh trùng lặp bằng INSERT IGNORE)
-            try (PreparedStatement insertStmt = connection.prepareStatement(insertSql)) {
-                for (String word : sortedWords) {
-                    insertStmt.setString(1, word);
-                    insertStmt.addBatch();  // Thêm vào batch
-                }
-                insertStmt.executeBatch();  // Thực hiện batch insert
+            // Insert các từ còn lại
+            if (!allWords.isEmpty()) {
+                insertWordsBatch(connection, insertSql, new ArrayList<>(allWords));
             }
 
             System.out.println("Words inserted into ENG_WORDS table in alphabetical order.");
@@ -191,8 +158,21 @@ public class RunSQLComponent {
         }
     }
 
+    private void insertWordsBatch(Connection connection, String insertSql, List<String> words) throws SQLException {
+        if (words.isEmpty()) return;
+        
+        Collections.sort(words);
+        try (PreparedStatement insertStmt = connection.prepareStatement(insertSql)) {
+            for (String word : words) {
+                insertStmt.setString(1, word);
+                insertStmt.addBatch();
+            }
+            insertStmt.executeBatch();
+        }
+    }
+
     public void extractAndInsertViWords() {
-        String thisMethod = "extractAndInsertEngWords";
+        String thisMethod = "extractAndInsertViWords";
         String selectSql = "SELECT VI FROM CONTENTS";  // Lấy cột VI
         String insertSql = "INSERT IGNORE INTO VI_WORDS (WORD) VALUES (?)";  // Chèn vào VI_WORDS
 
@@ -200,13 +180,16 @@ public class RunSQLComponent {
         PreparedStatement selectStmt = null;
         ResultSet resultSet = null;
 
-        // Sử dụng kết nối JDBC trực tiếp
+        // Sử dụng kết nối JDBC trực tiếp với pagination
         try {
             connection = resolveDataSource().getConnection();
-            selectStmt = connection.prepareStatement(selectSql);
+            selectStmt = connection.prepareStatement(selectSql, ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_READ_ONLY);
+            selectStmt.setFetchSize(1000); // Fetch size để giảm memory usage
             resultSet = selectStmt.executeQuery();
 
             Set<String> allWords = new HashSet<>();
+            int batchSize = 1000;
+            int wordCount = 0;
 
             // Duyệt qua tất cả các câu trong cột VI
             while (resultSet.next()) {
@@ -214,20 +197,20 @@ public class RunSQLComponent {
                 if (sentence != null && !sentence.trim().isEmpty()) {
                     Set<String> validWords = getValidViWords(sentence);
                     allWords.addAll(validWords);  // Thêm các từ hợp lệ vào set
+                    wordCount += validWords.size();
+                    
+                    // Batch insert định kỳ để tránh memory overflow
+                    if (wordCount >= batchSize) {
+                        insertWordsBatch(connection, insertSql, new ArrayList<>(allWords));
+                        allWords.clear();
+                        wordCount = 0;
+                    }
                 }
             }
 
-            // Chuyển Set sang List và sắp xếp theo thứ tự alphabet
-            List<String> sortedWords = new ArrayList<>(allWords);
-            Collections.sort(sortedWords);
-
-            // Chèn từ vào bảng VI_WORDS (tránh trùng lặp bằng INSERT IGNORE)
-            try (PreparedStatement insertStmt = connection.prepareStatement(insertSql)) {
-                for (String word : sortedWords) {
-                    insertStmt.setString(1, word);
-                    insertStmt.addBatch();  // Thêm vào batch
-                }
-                insertStmt.executeBatch();  // Thực hiện batch insert
+            // Insert các từ còn lại
+            if (!allWords.isEmpty()) {
+                insertWordsBatch(connection, insertSql, new ArrayList<>(allWords));
             }
 
             System.out.println("Words inserted into VI_WORDS table in alphabetical order.");
@@ -315,10 +298,6 @@ public class RunSQLComponent {
     }
 
     public void generalWord() throws SQLException {
-        JdbcTemplate jdbcTemplate = jdbcTemplate();
-        List<Map<String, Object>> results = jdbcTemplate.queryForList(
-                "SELECT * FROM WORDS"  // Your SQL query
-        );
         //  Tao cau query
         StringBuffer sqls = new StringBuffer();
         String table = "DROP TABLE IF EXISTS `WORDS`;\n" +
@@ -334,40 +313,69 @@ public class RunSQLComponent {
                 "\n" +
                 "TRUNCATE TABLE `WORDS`;";
         String lastQuery = "INSERT INTO `WORDS` (`ENG`,`VI`) VALUES " + "\n";
-        int i = 0;
-        for (Map<String, java.lang.Object> row : results) {
-            try {
-                String eng = (String) row.get("eng");
-                eng = eng.trim();
-                if (eng.contains("\'")) {
-                    eng = eng.replace("\'", "\\'");
-                }
-                String vi = (String) row.get("vi");
-                vi = vi.trim();
-                String color = (String) row.get("color");
-                if (i == results.size() - 1) {
-                    String sql = "\t" + "('" + eng + "','" + vi + "');" + "\n";
-                    sqls.append(sql);
-                } else {
-                    String sql = "\t" + "('" + eng + "','" + vi + "')," + "\n";
-                    sqls.append(sql);
-                }
-            } catch (Exception e) {
-                System.out.println(row.get("eng"));
-                System.out.println(row.get("vi"));
-                throw e;
+        
+        Connection connection = null;
+        PreparedStatement selectStmt = null;
+        ResultSet resultSet = null;
+        
+        try {
+            connection = resolveDataSource().getConnection();
+            selectStmt = connection.prepareStatement("SELECT * FROM WORDS", ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_READ_ONLY);
+            selectStmt.setFetchSize(1000); // Fetch size để giảm memory usage
+            resultSet = selectStmt.executeQuery();
+            
+            int i = 0;
+            int totalRows = 0;
+            
+            // First pass: count total rows
+            while (resultSet.next()) {
+                totalRows++;
             }
-            i++;
+            resultSet.close();
+            selectStmt.close();
+            
+            // Second pass: process data
+            selectStmt = connection.prepareStatement("SELECT * FROM WORDS", ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_READ_ONLY);
+            selectStmt.setFetchSize(1000);
+            resultSet = selectStmt.executeQuery();
+            
+            while (resultSet.next()) {
+                try {
+                    String eng = resultSet.getString("eng");
+                    eng = eng.trim();
+                    if (eng.contains("\'")) {
+                        eng = eng.replace("\'", "\\'");
+                    }
+                    String vi = resultSet.getString("vi");
+                    vi = vi.trim();
+                    
+                    if (i == totalRows - 1) {
+                        String sql = "\t" + "('" + eng + "','" + vi + "');" + "\n";
+                        sqls.append(sql);
+                    } else {
+                        String sql = "\t" + "('" + eng + "','" + vi + "')," + "\n";
+                        sqls.append(sql);
+                    }
+                } catch (Exception e) {
+                    System.out.println(resultSet.getString("eng"));
+                    System.out.println(resultSet.getString("vi"));
+                    throw e;
+                }
+                i++;
+            }
+            
+            lastQuery = table + "\n\n\n" + lastQuery + sqls;
+            System.out.println("Generated SQL with " + i + " words");
+            
+            try (FileWriter writer = new FileWriter(path + "3_SQL_ENG_WORDS.sql")) {
+                writer.write(lastQuery);
+                writer.flush();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } finally {
+            DBUtils.closeAll("generalWord", connection, selectStmt, resultSet);
         }
-        lastQuery = table + "\n\n\n" + lastQuery + sqls;
-        System.out.println(lastQuery);
-        try (FileWriter writer = new FileWriter(path + "3_SQL_ENG_WORDS.sql")) {
-            writer.write(lastQuery);
-            writer.flush();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
     }
 
     public void createWordTableTemp() throws SQLException {

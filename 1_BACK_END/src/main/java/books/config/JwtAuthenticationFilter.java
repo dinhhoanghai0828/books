@@ -20,9 +20,16 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.TimeUnit;
 
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
     private static final Logger logger = LoggerFactory.getLogger(JwtAuthenticationFilter.class);
+    
+    // Cache user details to avoid repeated database queries (5-minute TTL)
+    private static final ConcurrentHashMap<String, CacheEntry> userCache = new ConcurrentHashMap<>();
+    private static final long CACHE_TTL_MS = TimeUnit.MINUTES.toMillis(5);
+    
     @Autowired
     private JwtTokenProvider tokenProvider;
 
@@ -48,8 +55,19 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
                 if (StringUtils.hasText(jwt) && tokenProvider.validateToken(jwt)) {
                     // Lấy id user từ chuỗi jwt
                     Long userId = tokenProvider.getUserIdFromJWT(jwt);
-                    // Lấy thông tin người dùng từ id
-                    UserDetails userDetails = userService.getUserById(String.valueOf(userId));
+                    String userIdStr = String.valueOf(userId);
+                    
+                    // Try to get from cache first
+                    UserDetails userDetails = getCachedUser(userIdStr);
+                    
+                    if (userDetails == null) {
+                        // Cache miss - fetch from database
+                        userDetails = userService.getUserById(userIdStr);
+                        if (userDetails != null) {
+                            cacheUser(userIdStr, userDetails);
+                        }
+                    }
+                    
                     if (userDetails != null) {
                         // Nếu người dùng hợp lệ, set thông tin cho Seturity Context
                         UsernamePasswordAuthenticationToken
@@ -79,5 +97,31 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             return bearerToken.substring(7);
         }
         return bearerToken;
+    }
+    
+    private UserDetails getCachedUser(String userId) {
+        CacheEntry entry = userCache.get(userId);
+        if (entry != null && System.currentTimeMillis() - entry.timestamp < CACHE_TTL_MS) {
+            return entry.userDetails;
+        }
+        // Remove expired entry
+        if (entry != null) {
+            userCache.remove(userId);
+        }
+        return null;
+    }
+    
+    private void cacheUser(String userId, UserDetails userDetails) {
+        userCache.put(userId, new CacheEntry(userDetails, System.currentTimeMillis()));
+    }
+    
+    private static class CacheEntry {
+        final UserDetails userDetails;
+        final long timestamp;
+        
+        CacheEntry(UserDetails userDetails, long timestamp) {
+            this.userDetails = userDetails;
+            this.timestamp = timestamp;
+        }
     }
 }
