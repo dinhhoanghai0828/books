@@ -3,7 +3,8 @@ import { getMeaningWords, insertWord } from '@/utils/apiService';
 import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons';
 import { Button, Empty, Form, Input, Modal, notification, Space } from 'antd';
 import debounce from 'lodash.debounce';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { useRouter } from 'next/navigation';
 import '../../styles/content.css';
 
@@ -31,18 +32,29 @@ interface ContentComponentProps {
   volume?: Volume;
 }
 
+// Style cho tooltip tra nghia tu — dung fixed thay vi absolute
+// de khong bi anh huong boi overflow hay transform cua parent
 const TOOLTIP_STYLE: React.CSSProperties = {
-  position: 'absolute',
-  backgroundColor: '#108ee9',
+  position: 'fixed',
+  backgroundColor: '#1d1d2e',
   color: 'white',
-  padding: '12px 15px',
-  borderRadius: 8,
-  boxShadow: '0 1px 8px rgba(0,0,0,0.1)',
-  zIndex: 10,
-  maxWidth: 400,
+  padding: '10px 14px',
+  borderRadius: 10,
+  boxShadow: '0 4px 16px rgba(0,0,0,0.22)',
+  zIndex: 9999,
+  maxWidth: 360,
   wordWrap: 'break-word',
-  fontSize: 15,
-  lineHeight: '1.9',
+  fontSize: 14,
+  lineHeight: '1.85',
+  pointerEvents: 'none',
+  borderLeft: '4px solid #108ee9',
+};
+
+const TOOLTIP_BODY_STYLE: React.CSSProperties = {
+  maxHeight: '60vh',
+  overflowY: 'auto',
+  overflowX: 'hidden',
+  pointerEvents: 'auto',
 };
 
 // ============================================================
@@ -175,6 +187,10 @@ const ContentComponent = ({
   const [meaningEnKeywords, setMeaningEnKeywords] = useState<string[]>([]);
   const [meaningViKeywords, setMeaningViKeywords] = useState<string[]>([]);
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
+  const meaningEnRef = useRef<string[]>([]);
+  const meaningViRef = useRef<string[]>([]);
+  meaningEnRef.current = meaningEnKeywords;
+  meaningViRef.current = meaningViKeywords;
 
   // ============================================================
   // STATE — insert word modal
@@ -399,61 +415,107 @@ const ContentComponent = ({
   // TOOLTIP
   // ============================================================
 
-  const handleGetMeaning = useCallback(
-    debounce(async () => {
-      try {
-        const selection = window.getSelection();
-        const searchValue = selection?.toString().trim();
-        if (!searchValue) {
-          setMeaningEnKeywords([]);
-          setMeaningViKeywords([]);
-          return;
+  const handleGetMeaning = useMemo(
+    () =>
+      debounce(async () => {
+        try {
+          const selection = window.getSelection();
+          const searchValue = selection?.toString().trim();
+          if (!searchValue) {
+            setMeaningEnKeywords([]);
+            setMeaningViKeywords([]);
+            return;
+          }
+
+          const alreadyShown =
+            searchValue === meaningEnRef.current.join(' ') ||
+            searchValue === meaningViRef.current.join(' ');
+          if (alreadyShown) return;
+
+          const isEng = /^[a-zA-Z ]+$/.test(searchValue);
+          const res = isEng
+            ? await getMeaningWords(searchValue, null)
+            : await getMeaningWords(null, searchValue);
+
+          if (res.length > 0) {
+            setMeaningEnKeywords(res.map((w) => w.eng));
+            setMeaningViKeywords(res.map((w) => w.vi));
+          } else {
+            setMeaningEnKeywords([]);
+            setMeaningViKeywords([]);
+          }
+
+          if (selection?.rangeCount) {
+            const rect = selection.getRangeAt(0).getBoundingClientRect();
+            setTooltipPosition({
+              x: Math.min(rect.left, window.innerWidth - 380),
+              y: rect.bottom + 8,
+            });
+          }
+        } catch (e) {
+          console.error(e);
         }
-
-        const alreadyShown =
-          searchValue === meaningEnKeywords.join(' ') ||
-          searchValue === meaningViKeywords.join(' ');
-        if (alreadyShown) return;
-
-        const isEng = /^[a-zA-Z ]+$/.test(searchValue);
-        const res = isEng
-          ? await getMeaningWords(searchValue, null)
-          : await getMeaningWords(null, searchValue);
-
-        if (res.length > 0) {
-          setMeaningEnKeywords(res.map((w) => w.eng));
-          setMeaningViKeywords(res.map((w) => w.vi));
-        } else {
-          setMeaningEnKeywords([]);
-          setMeaningViKeywords([]);
-        }
-
-        if (selection?.rangeCount) {
-          const rect = selection.getRangeAt(0).getBoundingClientRect();
-          setTooltipPosition({ x: rect.left + window.scrollX, y: rect.top + window.scrollY + 30 });
-        }
-      } catch (e) {
-        console.error(e);
-      }
-    }, 300),
-    [meaningEnKeywords, meaningViKeywords]
+      }, 300),
+    []
   );
 
   useEffect(() => {
     document.addEventListener('selectionchange', handleGetMeaning);
-    return () => document.removeEventListener('selectionchange', handleGetMeaning);
+    return () => {
+      document.removeEventListener('selectionchange', handleGetMeaning);
+      handleGetMeaning.cancel();
+    };
   }, [handleGetMeaning]);
+
+  // Dong tooltip khi nguoi dung click ra ngoai vung boi
+  useEffect(() => {
+    const handleClickOutside = () => {
+      if (window.getSelection()?.toString().trim() === '') {
+        setMeaningEnKeywords([]);
+        setMeaningViKeywords([]);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   const renderTooltip = useCallback((): React.ReactNode => {
     if (!meaningEnKeywords.length || !meaningViKeywords.length) return null;
     const sel = window.getSelection()?.toString().trim() || '';
     const isEng = /^[a-zA-Z ]+$/.test(sel);
-    return (
+    return createPortal(
       <div style={{ ...TOOLTIP_STYLE, left: tooltipPosition.x, top: tooltipPosition.y }}>
-        {isEng
-          ? meaningEnKeywords.map((w, i) => <div key={i}><strong>{w}</strong>: {meaningViKeywords[i]}</div>)
-          : meaningViKeywords.map((w, i) => <div key={i}><strong>{w}</strong>: {meaningEnKeywords[i]}</div>)}
-      </div>
+        <div style={TOOLTIP_BODY_STYLE}>
+          {isEng ? (
+            <>
+              <div style={{ fontSize: 11, opacity: 0.65, marginBottom: 4, letterSpacing: 1 }}>
+                EN → VI
+              </div>
+              {meaningEnKeywords.map((word, i) => (
+                <div key={i}>
+                  <strong style={{ color: '#7dd3fc' }}>{word}</strong>
+                  <span style={{ opacity: 0.8 }}> : </span>
+                  {meaningViKeywords[i]}
+                </div>
+              ))}
+            </>
+          ) : (
+            <>
+              <div style={{ fontSize: 11, opacity: 0.65, marginBottom: 4, letterSpacing: 1 }}>
+                VI → EN
+              </div>
+              {meaningViKeywords.map((word, i) => (
+                <div key={i}>
+                  <strong style={{ color: '#7dd3fc' }}>{word}</strong>
+                  <span style={{ opacity: 0.8 }}> : </span>
+                  {meaningEnKeywords[i]}
+                </div>
+              ))}
+            </>
+          )}
+        </div>
+      </div>,
+      document.body
     );
   }, [meaningEnKeywords, meaningViKeywords, tooltipPosition]);
 
@@ -493,7 +555,7 @@ const ContentComponent = ({
         message: 'Them tu that bai',
         description: e.message,
         placement: 'topRight',
-        duration: 8,
+        duration: 4,
         style: { backgroundColor: '#fff2f0', border: '1px solid #ffccc7' }
       });
     } finally {
@@ -522,7 +584,7 @@ const ContentComponent = ({
   // ============================================================
 
   const renderLayout = () => {
-
+    console.log('[ContentComponent] renderLayout viewMode=', viewMode, 'contents=', contents.length, 'sharedVideoPath=', sharedVideoPath);
     switch (viewMode) {
       case 'video':
         if (!sharedVideoPath) return renderAudioLayout();
