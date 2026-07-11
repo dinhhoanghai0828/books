@@ -19,4 +19,6 @@ public interface WordAdapter {
     Map<String, Object> getWords(String eng, String vi, String page, String size) throws Exception;
 
     boolean updateWord(Long id, String eng, String vi) throws Exception;
+
+    boolean deleteWord(Long id) throws Exception;
 }

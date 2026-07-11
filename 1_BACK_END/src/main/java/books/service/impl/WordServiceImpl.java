@@ -80,4 +80,8 @@ public class WordServiceImpl implements WordService {
         return wordAdapter.updateWord(id, eng, vi);
     }
 
+    @Override
+    public boolean deleteWord(Long id) throws Exception {
+        return wordAdapter.deleteWord(id);
+    }
 }

@@ -3,7 +3,7 @@ import { Chart } from '@/interfaces/chart';
 import { ContentType } from '@/interfaces/content';
 import { PaginationResponse } from '@/interfaces/pagination';
 import { Volume } from '@/interfaces/volume';
-import { Word } from '@/interfaces/word';
+import { Word, WordItem } from '@/interfaces/word';
 import { message } from 'antd';
 import apiClient from './apiClient';
 
@@ -246,6 +246,36 @@ export const getSuggestions = async (
 export const insertWord = async (eng: string, viList: string[]): Promise<void> => {
   try {
     await apiClient.post('/word/insert', { eng, viList });
+  } catch (error: any) {
+    throw new Error(getErrorMessage(error));
+  }
+};
+
+// Tim kiem tu trong bang WORDS co phan trang
+export const getWordSearch = async (
+  eng: string | null,
+  vi: string | null,
+  page: number,
+  size: number
+): Promise<{ data: WordItem[]; totalElements: number; totalPages: number; size: number; page: number }> => {
+  try {
+    const params = new URLSearchParams({
+      ...(eng ? { eng } : {}),
+      ...(vi ? { vi } : {}),
+      page: (page - 1).toString(),
+      size: size.toString(),
+    });
+    const response = await apiClient.get(`/word/search?${params}`);
+    return response.data;
+  } catch (error: any) {
+    throw new Error(getErrorMessage(error));
+  }
+};
+
+// Cap nhat tu trong bang WORDS
+export const updateWord = async (id: string, eng: string, vi: string): Promise<void> => {
+  try {
+    await apiClient.put('/word/update', { id, eng, vi });
   } catch (error: any) {
     throw new Error(getErrorMessage(error));
   }

@@ -134,4 +134,18 @@ public class WordController {
             return new ResponseEntity<>(new BaseResponse("99", "failed: " + e.getMessage()), HttpStatus.OK);
         }
     }
+
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<?> deleteWord(@PathVariable Long id) {
+        try {
+            boolean success = wordService.deleteWord(id);
+            if (success) {
+                return new ResponseEntity<>(new BaseResponse("00", "success"), HttpStatus.OK);
+            } else {
+                return new ResponseEntity<>(new BaseResponse("99", "not found"), HttpStatus.OK);
+            }
+        } catch (Exception e) {
+            return new ResponseEntity<>(new BaseResponse("99", "failed: " + e.getMessage()), HttpStatus.OK);
+        }
+    }
 }

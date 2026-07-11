@@ -28,6 +28,7 @@ public class WordAdapterImpl implements WordAdapter {
     private static final String SQL_COUNT_WORDS      = "SELECT COUNT(*) FROM WORDS WHERE 1 = 1 ";
     private static final String SQL_GET_WORDS        = "SELECT ID, ENG, VI FROM WORDS WHERE 1 = 1 ";
     private static final String SQL_UPDATE_WORD      = "UPDATE WORDS SET ENG = ?, VI = ? WHERE ID = ?";
+    private static final String SQL_DELETE_WORD      = "DELETE FROM WORDS WHERE ID = ?";
 
     @Override
     public List<Word> getEngWords(String eng) throws Exception {
@@ -282,6 +283,27 @@ public class WordAdapterImpl implements WordAdapter {
             pstmt.setString(1, eng);
             pstmt.setString(2, vi);
             pstmt.setLong(3, id);
+            int rows = pstmt.executeUpdate();
+            con.commit();
+            return rows > 0;
+        } catch (Exception ex) {
+            if (con != null) { try { con.rollback(); } catch (SQLException ignored) {} }
+            logger.error(thisMethod, ex);
+            throw ex;
+        } finally {
+            DBUtils.closeAll(thisMethod, con, pstmt, null);
+        }
+    }
+
+    @Override
+    public boolean deleteWord(Long id) throws Exception {
+        String thisMethod = "WordAdapterImpl.deleteWord";
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        try {
+            con = DBUtils.getConnection(thisMethod, false, Connection.TRANSACTION_READ_COMMITTED);
+            pstmt = DBUtils.prepareStatement(con, SQL_DELETE_WORD);
+            pstmt.setLong(1, id);
             int rows = pstmt.executeUpdate();
             con.commit();
             return rows > 0;
