@@ -1,10 +1,10 @@
 'use client';
-import HomePageContentComponent from '@/components/content/HomePageContentComponent';
-import HomePageSearchComponent from '@/components/content/HomePageSearchComponent';
-import PaginationComponent from '@/components/pagination/PaginationComponent';
+import HomeContent from '@/components/features/home/HomeContent';
+import HomeSearch from '@/components/features/home/HomeSearch';
+import Pagination from '@/components/common/Pagination/Pagination';
 import { ContentType } from '@/interfaces/content';
-import { getContentSearch, getHighLightWords } from '@/utils/apiService';
-import { useHasMounted } from '@/utils/customHook';
+import { getContentSearch, getHighLightWords } from '@/helpers/apiService';
+import { useHasMounted } from '@/hooks/useHasMounted';
 import { App, Layout } from 'antd';
 import { Content } from 'antd/es/layout/layout';
 import NProgress from 'nprogress';
@@ -12,6 +12,14 @@ import 'nprogress/nprogress.css';
 import { useEffect, useState } from 'react';
 import '../styles/global.css';
 import '../styles/home-page.css';
+
+// ============================================================
+// HOME PAGE
+// Trang chu cua ung dung voi cac chuc nang:
+// - Tim kiem cau noi theo tieng Anh/Viet
+// - Hien thi danh sach noi dung voi phat audio
+// - Phan trang
+// ============================================================
 
 const HomePage = () => {
   const hasMounted = useHasMounted();
@@ -85,11 +93,11 @@ const HomePage = () => {
     <App>
       <Layout style={{ minHeight: '100vh' }}>
         <Content className="contentClass">
-          <HomePageSearchComponent
+          <HomeSearch
             onSearch={handleSearch}
             onSelectChange={handleSelectChange}
           />
-          <HomePageContentComponent
+          <HomeContent
             contents={contents}
             playbackSpeed={selectedSpeed}
             searchValueEn={searchValueEn}
@@ -97,7 +105,7 @@ const HomePage = () => {
             highlightedEnKeywords={highlightedEnKeywords}
             highlightedViKeywords={highlightedViKeywords}
           />
-          <PaginationComponent
+          <Pagination
             currentPage={currentPage}
             pageSize={pageSize}
             total={totalItems}
