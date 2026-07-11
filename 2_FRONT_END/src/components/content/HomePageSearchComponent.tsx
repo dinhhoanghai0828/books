@@ -1,5 +1,5 @@
 'use client';
-import { getSuggestions, runContentsExport, runWordGeneral } from '@/utils/apiService';
+import { getSuggestions, runContentsExport } from '@/utils/apiService';
 import { Word } from '@/interfaces/word';
 import { App, AutoComplete, Button, Col, Input, Layout, notification, Row, Select, Typography } from 'antd';
 import debounce from 'lodash.debounce';

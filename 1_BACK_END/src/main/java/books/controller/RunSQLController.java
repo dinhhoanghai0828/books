@@ -34,16 +34,37 @@ public class RunSQLController {
     public ResponseEntity<?> wordGeneral() {
         try {
             Map<String, Integer> stats = runSQLComponent.wordGeneralWithStats();
+
             int before = stats.get("BEFORE");
             int after  = stats.get("AFTER");
             int added  = stats.get("ADDED");
-            String message = String.format(
-                    "Cập nhật số lượng từ thành công.\n" +
-                            "Trước cập nhật: %d từ\n\n" +
-                            "Sau cập nhật: %d từ\n" +
-                            "Đã thêm: %d từ mới.",
-                    before, after, added
-            );
+
+            String message;
+
+            if (after > before) {
+                message = String.format(
+                        "Cập nhật số lượng từ thành công.\n" +
+                                "Trước cập nhật: %d từ\n\n" +
+                                "Sau cập nhật: %d từ\n" +
+                                "Đã thêm: %d từ mới.",
+                        before, after, added
+                );
+            } else if (after == before) {
+                message = String.format(
+                        "Số lượng từ không thay đổi.\n" +
+                                "Hiện tại: %d từ.",
+                        after
+                );
+            } else {
+                message = String.format(
+                        "Số lượng từ đã giảm.\n" +
+                                "Trước cập nhật: %d từ\n\n" +
+                                "Sau cập nhật: %d từ\n" +
+                                "Đã giảm: %d từ.",
+                        before, after, before - after
+                );
+            }
+
             return new ResponseEntity<>(new BaseResponse("00", message), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(new BaseResponse("99", "word-general failed: " + e.getMessage()), HttpStatus.INTERNAL_SERVER_ERROR);
