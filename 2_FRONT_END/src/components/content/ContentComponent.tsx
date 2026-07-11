@@ -276,11 +276,11 @@ const ContentComponent = ({
         return;
       }
 
-      // Highlight cau hien tai theo currentTime
+      // Highlight cau hien tai theo currentTime — KHONG scroll tu dong
       const found = findActiveItem(contents, t);
       if (found && activeItemIdRef.current !== String(found.id)) {
         setActive(String(found.id), 'video');
-        scrollToActiveItem(String(found.id));
+        // scrollToActiveItem(String(found.id)); // Tat scroll tu dong khi video chuyen cau
       }
     };
 
@@ -349,8 +349,8 @@ const ContentComponent = ({
     video.play();
     setActive(itemId, 'video');
     setVideoPlaying(true);
-    requestAnimationFrame(() => scrollToActiveItem(itemId));
-  }, [handlePauseAudio, setActive, setVideoPlaying, scrollToActiveItem]);
+    // requestAnimationFrame(() => scrollToActiveItem(itemId)); // Tat scroll tu dong khi click item
+  }, [handlePauseAudio, setActive, setVideoPlaying]);
 
   // ============================================================
   // AUDIO HANDLER
@@ -379,9 +379,8 @@ const ContentComponent = ({
     setLoopStates((prev) => ({ ...prev, [itemId]: false }));
     setActive(itemId, 'audio');
     setPlayCommand({ itemId, startTime, endTime, ts: Date.now() });
-
-    requestAnimationFrame(() => scrollToActiveItem(itemId));
-  }, [playStates, handlePauseAudio, handleToggleAudio, setActive, setVideoPlaying, scrollToActiveItem]);
+    // requestAnimationFrame(() => scrollToActiveItem(itemId)); // Tat scroll tu dong khi click item
+  }, [playStates, setActive, setVideoPlaying]);
 
   // Callback tu AudioLayout: audio het segment -> reset trang thai
   const onAudioStop = useCallback(() => {
@@ -390,26 +389,31 @@ const ContentComponent = ({
     setActive(null, null);
   }, [setActive]);
 
-  // Callback tu AudioLayout: timeupdate detect cau moi -> highlight + scroll + cap nhat playStates
+  // Callback tu AudioLayout: timeupdate detect cau moi -> highlight + cap nhat playStates
+  // KHONG scroll de tranh giat khi audio tu dong chuyen cau
   const onAudioActiveItemChange = useCallback((id: string) => {
     if (activeItemIdRef.current === id) return;
     setActive(id, 'audio');
     setPlayStates((prev) =>
       Object.fromEntries(Object.keys(prev).map((k) => [k, k === id]))
     );
-    scrollToActiveItem(id);
-  }, [setActive, scrollToActiveItem]);
+    // scrollToActiveItem(id); // Tat scroll tu dong khi chuyen cau
+  }, [setActive]);
 
   // ============================================================
   // LOOP HANDLER
   // ============================================================
 
   const onToggleLoop = useCallback((itemId: string, startTime: string, endTime: string) => {
-    const newVal = !loopStates[itemId];
-    setLoopStates((prev) => ({ ...prev, [itemId]: newVal }));
-    // Gui lenh loop xuong AudioLayout
-    setLoopCommand({ itemId, startTime, endTime, isLoop: newVal, ts: Date.now() });
-  }, [loopStates]);
+    setLoopStates((prev) => {
+      const newVal = !prev[itemId];
+      // Cap nhat ref dong bo de video timeupdate listener doc duoc ngay
+      loopStatesRef.current = { ...prev, [itemId]: newVal };
+      // Gui lenh loop xuong AudioLayout (cho audio mode)
+      setLoopCommand({ itemId, startTime, endTime, isLoop: newVal, ts: Date.now() });
+      return { ...prev, [itemId]: newVal };
+    });
+  }, []);
 
   // ============================================================
   // TOOLTIP

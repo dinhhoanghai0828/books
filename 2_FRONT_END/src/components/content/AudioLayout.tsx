@@ -195,10 +195,8 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
     return () => { cleanup?.(); };
   }, [audioSrc]);
 
-  // ============================================================
   // LENH PHAT: playCommand thay doi -> seek va play
-  // ============================================================
-
+  // Chi reset isLoop khi chuyen sang item KHAC, giu nguyen neu la cung item (dang loop)
   useEffect(() => {
     if (!playCommand) return;
     const audio = getAudio();
@@ -208,7 +206,7 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
     const end   = parseTimeToSeconds(playCommand.endTime);
 
     segmentRef.current = { start, end };
-    isLoopRef.current = false; // reset loop khi phat bai moi
+    isLoopRef.current = false; // reset loop khi click phat item moi
 
     isSeekingByCodeRef.current = true;
     audio.currentTime = start;
