@@ -3,7 +3,7 @@ import { getMeaningWords, insertWord } from '@/utils/apiService';
 import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons';
 import { Button, Empty, Form, Input, Modal, notification, Space } from 'antd';
 import debounce from 'lodash.debounce';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import '../../styles/content.css';
 
@@ -43,6 +43,14 @@ const TOOLTIP_STYLE: React.CSSProperties = {
   wordWrap: 'break-word',
   fontSize: 15,
   lineHeight: '1.9',
+  pointerEvents: 'none',
+};
+
+const TOOLTIP_BODY_STYLE: React.CSSProperties = {
+  maxHeight: '60vh',
+  overflowY: 'auto',
+  overflowX: 'hidden',
+  pointerEvents: 'auto',
 };
 
 // ============================================================
@@ -175,6 +183,10 @@ const ContentComponent = ({
   const [meaningEnKeywords, setMeaningEnKeywords] = useState<string[]>([]);
   const [meaningViKeywords, setMeaningViKeywords] = useState<string[]>([]);
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
+  const meaningEnRef = useRef<string[]>([]);
+  const meaningViRef = useRef<string[]>([]);
+  meaningEnRef.current = meaningEnKeywords;
+  meaningViRef.current = meaningViKeywords;
 
   // ============================================================
   // STATE — insert word modal
@@ -399,49 +411,53 @@ const ContentComponent = ({
   // TOOLTIP
   // ============================================================
 
-  const handleGetMeaning = useCallback(
-    debounce(async () => {
-      try {
-        const selection = window.getSelection();
-        const searchValue = selection?.toString().trim();
-        if (!searchValue) {
-          setMeaningEnKeywords([]);
-          setMeaningViKeywords([]);
-          return;
+  const handleGetMeaning = useMemo(
+    () =>
+      debounce(async () => {
+        try {
+          const selection = window.getSelection();
+          const searchValue = selection?.toString().trim();
+          if (!searchValue) {
+            setMeaningEnKeywords([]);
+            setMeaningViKeywords([]);
+            return;
+          }
+
+          const alreadyShown =
+            searchValue === meaningEnRef.current.join(' ') ||
+            searchValue === meaningViRef.current.join(' ');
+          if (alreadyShown) return;
+
+          const isEng = /^[a-zA-Z ]+$/.test(searchValue);
+          const res = isEng
+            ? await getMeaningWords(searchValue, null)
+            : await getMeaningWords(null, searchValue);
+
+          if (res.length > 0) {
+            setMeaningEnKeywords(res.map((w) => w.eng));
+            setMeaningViKeywords(res.map((w) => w.vi));
+          } else {
+            setMeaningEnKeywords([]);
+            setMeaningViKeywords([]);
+          }
+
+          if (selection?.rangeCount) {
+            const rect = selection.getRangeAt(0).getBoundingClientRect();
+            setTooltipPosition({ x: rect.left + window.scrollX, y: rect.top + window.scrollY + 30 });
+          }
+        } catch (e) {
+          console.error(e);
         }
-
-        const alreadyShown =
-          searchValue === meaningEnKeywords.join(' ') ||
-          searchValue === meaningViKeywords.join(' ');
-        if (alreadyShown) return;
-
-        const isEng = /^[a-zA-Z ]+$/.test(searchValue);
-        const res = isEng
-          ? await getMeaningWords(searchValue, null)
-          : await getMeaningWords(null, searchValue);
-
-        if (res.length > 0) {
-          setMeaningEnKeywords(res.map((w) => w.eng));
-          setMeaningViKeywords(res.map((w) => w.vi));
-        } else {
-          setMeaningEnKeywords([]);
-          setMeaningViKeywords([]);
-        }
-
-        if (selection?.rangeCount) {
-          const rect = selection.getRangeAt(0).getBoundingClientRect();
-          setTooltipPosition({ x: rect.left + window.scrollX, y: rect.top + window.scrollY + 30 });
-        }
-      } catch (e) {
-        console.error(e);
-      }
-    }, 300),
-    [meaningEnKeywords, meaningViKeywords]
+      }, 300),
+    []
   );
 
   useEffect(() => {
     document.addEventListener('selectionchange', handleGetMeaning);
-    return () => document.removeEventListener('selectionchange', handleGetMeaning);
+    return () => {
+      document.removeEventListener('selectionchange', handleGetMeaning);
+      handleGetMeaning.cancel();
+    };
   }, [handleGetMeaning]);
 
   const renderTooltip = useCallback((): React.ReactNode => {
@@ -450,9 +466,11 @@ const ContentComponent = ({
     const isEng = /^[a-zA-Z ]+$/.test(sel);
     return (
       <div style={{ ...TOOLTIP_STYLE, left: tooltipPosition.x, top: tooltipPosition.y }}>
+        <div style={TOOLTIP_BODY_STYLE}>
         {isEng
           ? meaningEnKeywords.map((w, i) => <div key={i}><strong>{w}</strong>: {meaningViKeywords[i]}</div>)
           : meaningViKeywords.map((w, i) => <div key={i}><strong>{w}</strong>: {meaningEnKeywords[i]}</div>)}
+        </div>
       </div>
     );
   }, [meaningEnKeywords, meaningViKeywords, tooltipPosition]);

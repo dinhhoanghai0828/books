@@ -24,7 +24,7 @@ import {
   Typography,
 } from 'antd';
 import debounce from 'lodash.debounce';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 
 const { Content } = Layout;
@@ -57,9 +57,15 @@ const TOOLTIP_STYLE: React.CSSProperties = {
   wordWrap: 'break-word',
   fontSize: 14,
   lineHeight: '1.85',
-  pointerEvents: 'none',           // Khong can thiep vao mouse event
-  transition: 'opacity 0.15s ease',
+  pointerEvents: 'none',
   borderLeft: '4px solid #108ee9',
+};
+
+const TOOLTIP_BODY_STYLE: React.CSSProperties = {
+  maxHeight: '60vh',
+  overflowY: 'auto',
+  overflowX: 'hidden',
+  pointerEvents: 'auto',
 };
 
 // ============================================================
@@ -112,6 +118,10 @@ const HomePageContentComponent = ({
   const [meaningEnKeywords, setMeaningEnKeywords] = useState<string[]>([]);
   const [meaningViKeywords, setMeaningViKeywords] = useState<string[]>([]);
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
+  const meaningEnRef = useRef<string[]>([]);
+  const meaningViRef = useRef<string[]>([]);
+  meaningEnRef.current = meaningEnKeywords;
+  meaningViRef.current = meaningViKeywords;
 
   // Trang thai modal chinh sua noi dung
   const [editModalOpen, setEditModalOpen] = useState(false);
@@ -267,56 +277,57 @@ const HomePageContentComponent = ({
   // ============================================================
 
   // Lay nghia cua tu nguoi dung boi chon (debounce 300ms)
-  const handleGetMeaning = useCallback(
-    debounce(async () => {
-      try {
-        const selection = window.getSelection();
-        const searchValue = selection?.toString().trim();
+  const handleGetMeaning = useMemo(
+    () =>
+      debounce(async () => {
+        try {
+          const selection = window.getSelection();
+          const searchValue = selection?.toString().trim();
 
-        if (!searchValue) {
-          setMeaningEnKeywords([]);
-          setMeaningViKeywords([]);
-          return;
+          if (!searchValue) {
+            setMeaningEnKeywords([]);
+            setMeaningViKeywords([]);
+            return;
+          }
+
+          const alreadyShown =
+            searchValue === meaningEnRef.current.join(' ') ||
+            searchValue === meaningViRef.current.join(' ');
+          if (alreadyShown) return;
+
+          const isEnglish = /^[a-zA-Z ]+$/.test(searchValue);
+          const response = isEnglish
+            ? await getMeaningWords(searchValue, null)
+            : await getMeaningWords(null, searchValue);
+
+          if (response.length > 0) {
+            setMeaningEnKeywords(response.map((w) => w.eng));
+            setMeaningViKeywords(response.map((w) => w.vi));
+          } else {
+            setMeaningEnKeywords([]);
+            setMeaningViKeywords([]);
+          }
+
+          if (selection?.rangeCount) {
+            const rect = selection.getRangeAt(0).getBoundingClientRect();
+            setTooltipPosition({
+              x: Math.min(rect.left, window.innerWidth - 380),
+              y: rect.bottom + 8,
+            });
+          }
+        } catch (error) {
+          console.error('Loi khi tra nghia tu:', error);
         }
-
-        // Tranh goi API lai neu tu da duoc hien thi truoc do
-        const alreadyShown =
-          searchValue === meaningEnKeywords.join(' ') ||
-          searchValue === meaningViKeywords.join(' ');
-        if (alreadyShown) return;
-
-        const isEnglish = /^[a-zA-Z ]+$/.test(searchValue);
-        const response = isEnglish
-          ? await getMeaningWords(searchValue, null)
-          : await getMeaningWords(null, searchValue);
-
-        if (response.length > 0) {
-          setMeaningEnKeywords(response.map((w) => w.eng));
-          setMeaningViKeywords(response.map((w) => w.vi));
-        } else {
-          setMeaningEnKeywords([]);
-          setMeaningViKeywords([]);
-        }
-
-        // Dat toa do tooltip sat vi tri boi — dung clientRect cho fixed positioning
-        if (selection?.rangeCount) {
-          const rect = selection.getRangeAt(0).getBoundingClientRect();
-          setTooltipPosition({
-            x: Math.min(rect.left, window.innerWidth - 380),  // tranh tran ben phai
-            y: rect.bottom + 8,                               // hien ngay duoi chu boi
-          });
-        }
-      } catch (error) {
-        console.error('Loi khi tra nghia tu:', error);
-      }
-    }, 300),
-    [meaningEnKeywords, meaningViKeywords]
+      }, 300),
+    []
   );
 
-  // Lang nghe su kien boi chu tren trang de hien tooltip
   useEffect(() => {
     document.addEventListener('selectionchange', handleGetMeaning);
-    return () => document.removeEventListener('selectionchange', handleGetMeaning);
+    return () => {
+      document.removeEventListener('selectionchange', handleGetMeaning);
+      handleGetMeaning.cancel();
+    };
   }, [handleGetMeaning]);
 
   // Dong tooltip khi nguoi dung click ra ngoai vung boi
@@ -507,6 +518,7 @@ const HomePageContentComponent = ({
           {meaningEnKeywords.length > 0 && meaningViKeywords.length > 0 &&
             createPortal(
               <div style={{ ...TOOLTIP_STYLE, left: tooltipPosition.x, top: tooltipPosition.y }}>
+                <div style={TOOLTIP_BODY_STYLE}>
                 {/^[a-zA-Z ]+$/.test(window.getSelection()?.toString().trim() || '') ? (
                   <>
                     <div style={{ fontSize: 11, opacity: 0.65, marginBottom: 4, letterSpacing: 1 }}>
@@ -534,6 +546,7 @@ const HomePageContentComponent = ({
                     ))}
                   </>
                 )}
+                </div>
               </div>,
               document.body
             )

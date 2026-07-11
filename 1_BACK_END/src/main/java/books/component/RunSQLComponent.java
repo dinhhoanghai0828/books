@@ -1,5 +1,7 @@
 package books.component;
 
+import com.zaxxer.hikari.HikariConfig;
+import com.zaxxer.hikari.HikariDataSource;
 import books.utils.DBUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -22,40 +24,84 @@ import java.util.regex.Pattern;
 @Component
 public class RunSQLComponent {
 
-    // Inject DataSource cua Spring (HikariCP) thay vi tu tao moi
-    @Autowired
+    // Inject DataSource cua Spring (HikariCP); null khi chay standalone main()
+    @Autowired(required = false)
     private DataSource dataSource;
 
     String path = "D:\\20_PROJECT\\books\\3_DATABASE\\";
 
+    /** Pool nhe (1-2 connection) chi dung khi chay main() standalone, tranh khoi tao DBUtils pool lon. */
+    private static volatile DataSource standaloneDataSource;
+
+    private DataSource resolveDataSource() {
+        if (dataSource != null) {
+            return dataSource;
+        }
+        if (standaloneDataSource == null) {
+            synchronized (RunSQLComponent.class) {
+                if (standaloneDataSource == null) {
+                    standaloneDataSource = createStandaloneDataSource();
+                }
+            }
+        }
+        return standaloneDataSource;
+    }
+
+    private static DataSource createStandaloneDataSource() {
+        Properties props = new Properties();
+        try (InputStream in = RunSQLComponent.class.getClassLoader()
+                .getResourceAsStream("application.properties")) {
+            if (in == null) {
+                throw new RuntimeException("File application.properties not found");
+            }
+            props.load(in);
+        } catch (IOException e) {
+            throw new RuntimeException("Failed to load application.properties", e);
+        }
+
+        HikariConfig config = new HikariConfig();
+        config.setJdbcUrl(props.getProperty("spring.datasource.url"));
+        config.setUsername(props.getProperty("spring.datasource.username"));
+        config.setPassword(props.getProperty("spring.datasource.password"));
+        config.setDriverClassName(props.getProperty("spring.datasource.driver-class-name"));
+        config.setMaximumPoolSize(2);
+        config.setMinimumIdle(1);
+        config.setPoolName("RunSQL-Standalone");
+        return new HikariDataSource(config);
+    }
+
     @Bean
     public JdbcTemplate jdbcTemplate() {
-        return new JdbcTemplate(dataSource);
+        return new JdbcTemplate(resolveDataSource());
     }
 
     //    @PostConstruct
     public void insertContent() throws SQLException, IOException {
         // Lấy danh sách BOOK_SLUG có contents trong DB
-        String sqlGetBooks = "SELECT DISTINCT B.SLUG AS BOOK_SLUG FROM BOOKS B " +
-                "INNER JOIN VOLUMES V ON V.BOOK_SLUG = B.SLUG " +
-                "INNER JOIN CONTENTS C ON C.VOLUME_SLUG = V.SLUG " +
-                "ORDER BY B.SLUG";
+//        String sqlGetBooks = "SELECT DISTINCT B.SLUG AS BOOK_SLUG FROM BOOKS B " +
+//                "INNER JOIN VOLUMES V ON V.BOOK_SLUG = B.SLUG " +
+//                "INNER JOIN CONTENTS C ON C.VOLUME_SLUG = V.SLUG " +
+//                "ORDER BY B.SLUG";
 
         List<String> scripts = new ArrayList<>();
-        Connection conQuery = dataSource.getConnection();
-        try {
-            PreparedStatement pstmt = conQuery.prepareStatement(sqlGetBooks);
-            ResultSet rs = pstmt.executeQuery();
-            while (rs.next()) {
-                String bookSlug = rs.getString("BOOK_SLUG");
-                String fileNameKey = bookSlug.toUpperCase().replace("-", "_");
-                String filePath = path + "APP_" + fileNameKey + ".sql";
-                scripts.add(filePath);
-            }
-            DBUtils.closeAll("insertContentFromExport-query", null, pstmt, rs);
-        } finally {
-            DBUtils.closeAll("insertContentFromExport-query-con", conQuery, null, null);
-        }
+        scripts.add(path + "APP_4000_ESSENTIAL_ENGLISH_WORDS.sql");
+        scripts.add(path + "APP_ALL_EARS_ENGLISH.sql");
+        scripts.add(path + "APP_ANIMATTERS.sql");
+        scripts.add(path + "APP_CHILDREN_1.sql");
+        scripts.add(path + "APP_DHAR_MANN_STUDIO.sql");
+        scripts.add(path + "APP_ECONOMIST.sql");
+        scripts.add(path + "APP_ELEMENTARY_1.sql");
+        scripts.add(path + "APP_ENGLISH_FAIRY_TALES.sql");
+        scripts.add(path + "APP_GOD_OF_MOTIVE.sql");
+        scripts.add(path + "APP_I_AM_MARY.sql");
+        scripts.add(path + "APP_LIFE_DIARY_ANIMATED.sql");
+        scripts.add(path + "APP_NIGHTMARE_TALES.sql");
+        scripts.add(path + "APP_PEPPA_PIG.sql");
+        scripts.add(path + "APP_TEDTALKS.sql");
+        scripts.add(path + "APP_THE_FICTIONIST.sql");
+        scripts.add(path + "APP_TIGER_CLUB_LEARNING.sql");
+        scripts.add(path + "APP_VOA.sql");
+        scripts.add(path + "APP_YOUR_ANIMATED_STORY_SHOW.sql");
 
         if (scripts.isEmpty()) {
             System.out.println("insertContentFromExport: no APP_*.sql files found from DB.");
@@ -84,7 +130,7 @@ public class RunSQLComponent {
         System.out.println("File reading and writing completed successfully.");
         //  Insert du lieu vao db
         for (String scriptPath : scripts) {
-            Connection connection = dataSource.getConnection();
+            Connection connection = resolveDataSource().getConnection();
             try {
                 Resource resource = new FileSystemResource(scriptPath);
                 ScriptUtils.executeSqlScript(connection, resource);
@@ -108,7 +154,7 @@ public class RunSQLComponent {
 
         // Sử dụng kết nối JDBC trực tiếp
         try {
-            connection = dataSource.getConnection();
+            connection = resolveDataSource().getConnection();
             selectStmt = connection.prepareStatement(selectSql);
             resultSet = selectStmt.executeQuery();
 
@@ -156,7 +202,7 @@ public class RunSQLComponent {
 
         // Sử dụng kết nối JDBC trực tiếp
         try {
-            connection = dataSource.getConnection();
+            connection = resolveDataSource().getConnection();
             selectStmt = connection.prepareStatement(selectSql);
             resultSet = selectStmt.executeQuery();
 
@@ -240,7 +286,7 @@ public class RunSQLComponent {
         List<String> scripts = new ArrayList<>();
         scripts.add(path + "3_SQL_ENG_WORDS.sql");
         for (String scriptPath : scripts) {
-            Connection connection = dataSource.getConnection();
+            Connection connection = resolveDataSource().getConnection();
             try {
                 Resource resource = new FileSystemResource(scriptPath);
                 ScriptUtils.executeSqlScript(connection, resource);
@@ -256,7 +302,7 @@ public class RunSQLComponent {
         List<String> scripts = new ArrayList<>();
         scripts.add(path + "3_SQL_ENG_MISSING_WORDS.sql");
         for (String scriptPath : scripts) {
-            Connection connection = dataSource.getConnection();
+            Connection connection = resolveDataSource().getConnection();
             try {
                 Resource resource = new FileSystemResource(scriptPath);
                 ScriptUtils.executeSqlScript(connection, resource);
@@ -330,7 +376,7 @@ public class RunSQLComponent {
         //	Lay toan bo gia tri bang WORD2 va insert lai vao bang WORDS
         scripts.add(path + "4_SQL_CREATE_WORD2.sql");
         for (String scriptPath : scripts) {
-            Connection connection = dataSource.getConnection();
+            Connection connection = resolveDataSource().getConnection();
             try {
                 Resource resource = new FileSystemResource(scriptPath);
                 ScriptUtils.executeSqlScript(connection, resource);
@@ -415,7 +461,7 @@ public class RunSQLComponent {
         ResultSet rsBooks = null;
 
         try {
-            connection = dataSource.getConnection();
+            connection = resolveDataSource().getConnection();
             pstmtBooks = connection.prepareStatement(sqlGetBooks);
             rsBooks = pstmtBooks.executeQuery();
 
@@ -576,7 +622,7 @@ public class RunSQLComponent {
                 "ORDER BY B.SLUG";
 
         List<String> scripts = new ArrayList<>();
-        Connection conQuery = dataSource.getConnection();
+        Connection conQuery = resolveDataSource().getConnection();
         try {
             PreparedStatement pstmt = conQuery.prepareStatement(sqlGetBooks);
             ResultSet rs = pstmt.executeQuery();
@@ -619,7 +665,7 @@ public class RunSQLComponent {
         System.out.println("SUMMARY.sql written with " + scripts.size() + " APP files.");
 
         // TRUNCATE CONTENTS rồi execute từng file
-        Connection conTruncate = dataSource.getConnection();
+        Connection conTruncate = resolveDataSource().getConnection();
         try {
             conTruncate.prepareStatement("TRUNCATE TABLE CONTENTS").executeUpdate();
             conTruncate.commit();
@@ -636,7 +682,7 @@ public class RunSQLComponent {
                 System.err.println("File not found, skipped: " + scriptPath);
                 continue;
             }
-            Connection con = dataSource.getConnection();
+            Connection con = resolveDataSource().getConnection();
             try {
                 Resource resource = new FileSystemResource(scriptPath);
                 ScriptUtils.executeSqlScript(con, resource);
@@ -662,7 +708,7 @@ public class RunSQLComponent {
         System.out.println("File reading and writing completed successfully.");
         //  Insert du lieu vao db
         for (String scriptPath : scripts) {
-            Connection connection = dataSource.getConnection();
+            Connection connection = resolveDataSource().getConnection();
             try {
                 Resource resource = new FileSystemResource(scriptPath);
                 ScriptUtils.executeSqlScript(connection, resource);

@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
 import java.util.Properties;
+import javax.sql.DataSource;
 
 public class DBUtils {
     private static final Logger logger = LoggerFactory.getLogger(DBUtils.class);
@@ -79,6 +80,10 @@ public class DBUtils {
      * Lay connection tu HikariCP pool.
      * Luon phai close() connection sau khi dung de tra ve pool.
      */
+    public static DataSource getDataSource() {
+        return dataSource;
+    }
+
     public static Connection getConnection(String poolName, boolean autoCommit, int isolationLevel) throws SQLException {
         Connection con = dataSource.getConnection();
         con.setAutoCommit(autoCommit);
