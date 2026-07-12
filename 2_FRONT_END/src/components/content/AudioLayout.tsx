@@ -37,6 +37,7 @@ export interface AudioLayoutProps {
   playCommand: { itemId: string; startTime: string; endTime: string; ts: number } | null;
   loopCommand: { itemId: string; startTime: string; endTime: string; isLoop: boolean; ts: number } | null;
   pauseCommand: number | null;
+  onEdit: (item: ContentType) => void;
 }
 
 const PLAYBACK_SPEED_OPTIONS = [
@@ -81,6 +82,7 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
   playCommand,
   loopCommand,
   pauseCommand,
+  onEdit,
 }) => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [audioSrc, setAudioSrc] = useState('');
@@ -301,6 +303,7 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
             onPlayPauseVideo={() => { }}
             onToggleLoop={onToggleLoop}
             onGetMeaning={onGetMeaning}
+            onEdit={onEdit}
             itemRef={(el) => { itemRefsRef.current[String(item.id)] = el; }}
           />
         ))

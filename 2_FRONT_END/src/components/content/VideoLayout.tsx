@@ -30,12 +30,12 @@ export interface VideoLayoutProps {
   onGetMeaning: () => void;
   renderTooltip: () => React.ReactNode;
   volume?: Volume;
-  // Các handler & command đồng bộ kiến trúc với AudioLayout
   onActiveItemChange?: (itemId: string) => void;
   onVideoStop?: () => void;
   playCommand?: { itemId: string; startTime: string; endTime: string; ts: number } | null;
   loopCommand?: { itemId: string; startTime: string; endTime: string; isLoop: boolean; ts: number } | null;
   pauseCommand?: number | null;
+  onEdit: (item: ContentType) => void;
 }
 
 // ============================================================
@@ -67,6 +67,7 @@ const VideoLayout: React.FC<VideoLayoutProps> = ({
   playCommand,
   loopCommand,
   pauseCommand,
+  onEdit,
 }) => {
   const segmentRef = useRef({ start: 0, end: 0 });
   const isLoopRef = useRef(false);
@@ -230,6 +231,7 @@ const VideoLayout: React.FC<VideoLayoutProps> = ({
                 onPlayPauseVideo={onPlayPauseVideo}
                 onToggleLoop={onToggleLoop}
                 onGetMeaning={onGetMeaning}
+                onEdit={onEdit}
                 itemRef={(el) => {
                   if (itemRefsRef.current) {
                     itemRefsRef.current[itemIdStr] = el;

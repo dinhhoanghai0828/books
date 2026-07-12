@@ -1,5 +1,6 @@
 import { ContentType } from '@/interfaces/content';
 import {
+  EditOutlined,
   PauseOutlined,
   PlayCircleOutlined,
   RetweetOutlined,
@@ -22,13 +23,14 @@ export interface ContentItemProps {
   showEnglish: boolean;
   showVietnamese: boolean;
   highlightMissingWords: boolean;
-  showVideoButton: boolean;   // true o Video Mode
-  showAudioButton: boolean;   // false o Video Mode
+  showVideoButton: boolean;
+  showAudioButton: boolean;
   activeSource: 'audio' | 'video' | null;
   onPlayPauseAudio: (id: string, startTime: string, endTime: string) => void;
   onPlayPauseVideo: (id: string, startTime: string, endTime: string) => void;
   onToggleLoop: (id: string, startTime: string, endTime: string) => void;
   onGetMeaning: () => void;
+  onEdit: (item: ContentType) => void;
   itemRef: (el: HTMLDivElement | null) => void;
 }
 
@@ -60,6 +62,7 @@ const ContentItem = React.memo(({
   onPlayPauseVideo,
   onToggleLoop,
   onGetMeaning,
+  onEdit,
   itemRef,
 }: ContentItemProps) => {
   // Nut loop duoc phep nhan khi:
@@ -140,6 +143,16 @@ const ContentItem = React.memo(({
             onClick={(e) => {
               e.stopPropagation();
               onToggleLoop(item.id, item.startTime, item.endTime);
+            }}
+          />
+
+          {/* Nut chinh sua noi dung */}
+          <Button
+            type="link"
+            icon={<EditOutlined />}
+            onClick={(e) => {
+              e.stopPropagation();
+              onEdit(item);
             }}
           />
         </Space>

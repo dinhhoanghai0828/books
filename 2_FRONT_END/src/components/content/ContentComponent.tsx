@@ -1,6 +1,6 @@
 import { ContentType } from '@/interfaces/content';
 import { Volume } from '@/interfaces/volume';
-import { getMeaningWords, insertWord } from '@/utils/apiService';
+import { getMeaningWords, insertWord, updateContent } from '@/utils/apiService';
 import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons';
 import { Button, Form, Input, Modal, notification, Space } from 'antd';
 import debounce from 'lodash.debounce';
@@ -150,6 +150,15 @@ const ContentComponent = ({
   const [insertLoading, setInsertLoading] = useState(false);
   const [insertForm] = Form.useForm();
   const [notifApi, notifContextHolder] = notification.useNotification();
+
+  // ============================================================
+  // STATE — edit content modal
+  // ============================================================
+
+  const [editModalOpen, setEditModalOpen] = useState(false);
+  const [editingItem, setEditingItem] = useState<ContentType | null>(null);
+  const [editLoading, setEditLoading] = useState(false);
+  const [editForm] = Form.useForm();
 
   // Reset toàn bộ trạng thái chạy media khi đổi Tab
   const resetAllPlayStates = useCallback(() => {
@@ -417,7 +426,58 @@ const ContentComponent = ({
   }, [meaningEnKeywords, meaningViKeywords, tooltipPosition]);
 
   // ============================================================
-  // INSERT WORD MODAL
+  // EDIT CONTENT MODAL HANDLERS
+  // ============================================================
+
+  // Mo modal chinh sua voi du lieu cua item duoc chon
+  const handleOpenEdit = useCallback((item: ContentType) => {
+    setEditingItem(item);
+    editForm.setFieldsValue({
+      eng: item.eng,
+      vi: item.vi,
+      startTime: item.startTime,
+      endTime: item.endTime,
+    });
+    setEditModalOpen(true);
+  }, [editForm]);
+
+  const handleCancelEdit = useCallback(() => {
+    setEditModalOpen(false);
+    setEditingItem(null);
+    editForm.resetFields();
+  }, [editForm]);
+
+  // Gui yeu cau cap nhat, phan anh thay doi truc tiep tren UI khong can reload
+  const handleUpdate = async () => {
+    if (!editingItem) return;
+    try {
+      const values = await editForm.validateFields();
+      setEditLoading(true);
+      await updateContent(editingItem.id, values.eng, values.vi, values.startTime, values.endTime);
+      notifApi.success({
+        message: 'Cap nhat thanh cong',
+        description: 'Noi dung da duoc luu lai.',
+        placement: 'topRight',
+        duration: 3,
+        style: { backgroundColor: '#f6ffed', border: '1px solid #b7eb8f' },
+      });
+      handleCancelEdit();
+    } catch (error: any) {
+      if (error?.errorFields) return;
+      notifApi.error({
+        message: 'Cap nhat that bai',
+        description: error.message || 'Da xay ra loi, vui long thu lai.',
+        placement: 'topRight',
+        duration: 4,
+        style: { backgroundColor: '#fff2f0', border: '1px solid #ffccc7' },
+      });
+    } finally {
+      setEditLoading(false);
+    }
+  };
+
+  // ============================================================
+  // INSERT WORD MODAL HANDLERS
   // ============================================================
 
   const handleOpenInsert = () => {
@@ -474,6 +534,7 @@ const ContentComponent = ({
     itemRefsRef,
     onGetMeaning: handleGetMeaning,
     renderTooltip,
+    onEdit: handleOpenEdit,
   };
 
   // ============================================================
@@ -592,6 +653,57 @@ const ContentComponent = ({
             </>)}
           </Form.List>
         </Form>
+      </Modal>
+      <Modal
+        title="Chinh sua noi dung"
+        open={editModalOpen}
+        onCancel={handleCancelEdit}
+        footer={
+          <div style={{ textAlign: 'center' }}>
+            <Space>
+              <Button onClick={handleCancelEdit}>Huy</Button>
+              <Button type="primary" loading={editLoading} onClick={handleUpdate}>
+                Cap nhat
+              </Button>
+            </Space>
+          </div>
+        }
+      >
+        {editingItem && (
+          <Form form={editForm} layout="vertical">
+            <Form.Item label="ID">
+              <Input value={editingItem.id} disabled />
+            </Form.Item>
+            <Form.Item
+              label="Nghia tieng Anh"
+              name="eng"
+              rules={[{ required: true, message: 'Vui long nhap nghia tieng Anh' }]}
+            >
+              <Input.TextArea rows={4} maxLength={1000} showCount />
+            </Form.Item>
+            <Form.Item
+              label="Nghia tieng Viet"
+              name="vi"
+              rules={[{ required: true, message: 'Vui long nhap nghia tieng Viet' }]}
+            >
+              <Input.TextArea rows={4} maxLength={1000} showCount />
+            </Form.Item>
+            <Form.Item
+              label="Start Time"
+              name="startTime"
+              rules={[{ pattern: /^\d{2}:\d{2}:\d{2}\.\d{3}$/, message: 'Dinh dang: 00:00:00.000' }]}
+            >
+              <Input placeholder="00:00:00.000" />
+            </Form.Item>
+            <Form.Item
+              label="End Time"
+              name="endTime"
+              rules={[{ pattern: /^\d{2}:\d{2}:\d{2}\.\d{3}$/, message: 'Dinh dang: 00:00:00.000' }]}
+            >
+              <Input placeholder="00:00:00.000" />
+            </Form.Item>
+          </Form>
+        )}
       </Modal>
     </div>
   );
