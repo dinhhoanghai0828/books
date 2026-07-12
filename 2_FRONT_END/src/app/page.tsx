@@ -3,7 +3,7 @@ import HomeContent from '@/components/features/home/HomeContent';
 import HomeSearch from '@/components/features/home/HomeSearch';
 import Pagination from '@/components/common/Pagination/Pagination';
 import { ContentType } from '@/interfaces/content';
-import { getContentSearch, getHighLightWords } from '@/helpers/apiService';
+import { getContentSearch, getHighLightWords } from '@/utils/apiService';
 import { useHasMounted } from '@/hooks/useHasMounted';
 import { App, Layout } from 'antd';
 import { Content } from 'antd/es/layout/layout';

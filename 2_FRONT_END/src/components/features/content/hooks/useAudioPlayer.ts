@@ -1,6 +1,6 @@
 import { useCallback, useRef, useState } from 'react';
 import { message } from 'antd';
-import { getMediaPath } from '@/helpers/mediaPathHelper';
+import { getMediaPath } from '@/utils/mediaPathHelper';
 import { parseTimeToSeconds } from '../helpers/timeHelpers';
 
 // ============================================================

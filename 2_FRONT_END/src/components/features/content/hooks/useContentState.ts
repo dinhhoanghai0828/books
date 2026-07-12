@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 import debounce from 'lodash.debounce';
-import { getMeaningWords } from '@/helpers/apiService';
+import { getMeaningWords } from '@/utils/apiService';
 
 // ============================================================
 // USE CONTENT STATE HOOK

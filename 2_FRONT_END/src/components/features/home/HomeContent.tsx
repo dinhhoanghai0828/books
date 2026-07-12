@@ -1,6 +1,6 @@
 import { ContentType } from '@/interfaces/content';
-import { getMeaningWords, updateContent } from '@/helpers/apiService';
-import { getMediaPath } from '@/helpers/mediaPathHelper';
+import { getMeaningWords, updateContent } from '@/utils/apiService';
+import { getMediaPath } from '@/utils/mediaPathHelper';
 import {
   CheckOutlined,
   EditOutlined,
