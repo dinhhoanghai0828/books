@@ -1,6 +1,6 @@
 'use client';
-import HomeContent from '@/components/features/home/HomeContent';
-import HomeSearch from '@/components/features/home/HomeSearch';
+import HomeContent from "../components/home/HomeContent";
+import HomeSearch from "../components/home/HomeSearch";
 import Pagination from '@/components/common/Pagination/Pagination';
 import { ContentType } from '@/interfaces/content';
 import { getContentSearch, getHighLightWords } from '@/utils/apiService';
