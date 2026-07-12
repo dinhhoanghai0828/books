@@ -59,29 +59,29 @@ const formatTime = (seconds: number) => {
 };
 
 const AudioLayout: React.FC<AudioLayoutProps> = ({
-                                                   contents,
-                                                   volumeEngName,
-                                                   volumeViName,
-                                                   activeItemId,
-                                                   activeSource,
-                                                   isVideoPlaying,
-                                                   playStates,
-                                                   loopStates,
-                                                   showEnglish,
-                                                   showVietnamese,
-                                                   highlightMissingWords,
-                                                   itemRefsRef,
-                                                   onPlayPauseAudio,
-                                                   onToggleLoop,
-                                                   onGetMeaning,
-                                                   renderTooltip,
-                                                   volume,
-                                                   onActiveItemChange,
-                                                   onAudioStop,
-                                                   playCommand,
-                                                   loopCommand,
-                                                   pauseCommand,
-                                                 }) => {
+  contents,
+  volumeEngName,
+  volumeViName,
+  activeItemId,
+  activeSource,
+  isVideoPlaying,
+  playStates,
+  loopStates,
+  showEnglish,
+  showVietnamese,
+  highlightMissingWords,
+  itemRefsRef,
+  onPlayPauseAudio,
+  onToggleLoop,
+  onGetMeaning,
+  renderTooltip,
+  volume,
+  onActiveItemChange,
+  onAudioStop,
+  playCommand,
+  loopCommand,
+  pauseCommand,
+}) => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [audioSrc, setAudioSrc] = useState('');
   const [playbackSpeed, setPlaybackSpeed] = useState(1.0);
@@ -272,110 +272,110 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
   };
 
   return (
-      <div style={{ paddingBottom: '100px' }}>
-        <Typography.Title level={3} className="volume-title">
-          {volumeEngName}
-        </Typography.Title>
-        <Typography.Text className="volume-vi-name">{volumeViName}</Typography.Text>
-        <Typography.Text className="volume-total-sentence">
-          Bài có tổng cộng:{' '}
-          <strong style={{ color: 'red' }}>{contents.length}</strong> câu cần học
-        </Typography.Text>
+    <div style={{ paddingBottom: '100px' }}>
+      <Typography.Title level={3} className="volume-title">
+        {volumeEngName}
+      </Typography.Title>
+      <Typography.Text className="volume-vi-name">{volumeViName}</Typography.Text>
+      <Typography.Text className="volume-total-sentence">
+        Bài có tổng cộng:{' '}
+        <strong style={{ color: 'red' }}>{contents.length}</strong> câu cần học
+      </Typography.Text>
 
-        {contents.length > 0 ? (
-            contents.map((item) => (
-                <ContentItem
-                    key={item.id}
-                    item={item}
-                    isActive={activeItemId === String(item.id)}
-                    isAudioPlaying={playStates[String(item.id)] ?? false}
-                    isLooping={loopStates[String(item.id)] ?? false}
-                    isVideoPlaying={isVideoPlaying}
-                    showEnglish={showEnglish}
-                    showVietnamese={showVietnamese}
-                    highlightMissingWords={highlightMissingWords}
-                    showVideoButton={false}
-                    showAudioButton={true}
-                    activeSource={activeSource}
-                    onPlayPauseAudio={onPlayPauseAudio}
-                    onPlayPauseVideo={() => { }}
-                    onToggleLoop={onToggleLoop}
-                    onGetMeaning={onGetMeaning}
-                    itemRef={(el) => { itemRefsRef.current[String(item.id)] = el; }}
-                />
-            ))
-        ) : (
-            <Empty description="Không có dữ liệu" className="emptyClass" />
-        )}
+      {contents.length > 0 ? (
+        contents.map((item) => (
+          <ContentItem
+            key={item.id}
+            item={item}
+            isActive={activeItemId === String(item.id)}
+            isAudioPlaying={playStates[String(item.id)] ?? false}
+            isLooping={loopStates[String(item.id)] ?? false}
+            isVideoPlaying={isVideoPlaying}
+            showEnglish={showEnglish}
+            showVietnamese={showVietnamese}
+            highlightMissingWords={highlightMissingWords}
+            showVideoButton={false}
+            showAudioButton={true}
+            activeSource={activeSource}
+            onPlayPauseAudio={onPlayPauseAudio}
+            onPlayPauseVideo={() => { }}
+            onToggleLoop={onToggleLoop}
+            onGetMeaning={onGetMeaning}
+            itemRef={(el) => { itemRefsRef.current[String(item.id)] = el; }}
+          />
+        ))
+      ) : (
+        <Empty description="Không có dữ liệu" className="emptyClass" />
+      )}
 
-        {renderTooltip()}
+      {renderTooltip()}
 
-        {/* Audio Player UI Custom */}
-        {audioSrc && (
-            <div className="h5-clone-wrapper">
-              <audio ref={audioRef} src={audioSrc} style={{ display: 'none' }} />
+      {/* Audio Player UI Custom */}
+      {audioSrc && (
+        <div className="h5-clone-wrapper">
+          <audio ref={audioRef} src={audioSrc} style={{ display: 'none' }} />
 
-              <div className="h5-clone-container">
-                <div className="h5-play-btn" onClick={togglePlayPause}>
-                  {isPlaying ? (
-                      <PauseCircleFilled style={{ fontSize: 40, color: '#f60' }} />
-                  ) : (
-                      <PlayCircleFilled style={{ fontSize: 40, color: '#f60' }} />
-                  )}
-                </div>
-
-                <div className="h5-progress-container">
-                  <span className="h5-time">{formatTime(currentTime)}</span>
-                  <Slider
-                      min={0}
-                      max={duration || 100}
-                      step={0.1}
-                      value={currentTime}
-                      onChange={handleSliderSeek}
-                      tooltip={{ formatter: (val) => formatTime(val || 0) }}
-                      className="h5-slider"
-                  />
-                  <span className="h5-time">{formatTime(duration)}</span>
-                </div>
-
-                <div className="h5-controls-right">
-                  <div className="h5-volume-group">
-                    <Button
-                        type="text"
-                        icon={isMuted ? <MutedOutlined /> : <SoundOutlined />}
-                        onClick={toggleMute}
-                    />
-                    <Slider
-                        min={0}
-                        max={1}
-                        step={0.01}
-                        value={isMuted ? 0 : volumeLevel}
-                        onChange={handleVolumeChange}
-                        style={{ width: 60 }}
-                    />
-                  </div>
-
-                  <Tooltip title={isGlobalLoop ? "Tắt lặp đoạn" : "Bật lặp đoạn"}>
-                    <Button
-                        type={isGlobalLoop ? "primary" : "default"}
-                        shape="circle"
-                        icon={<ReloadOutlined />}
-                        onClick={toggleGlobalLoop}
-                        className={isGlobalLoop ? 'loop-active' : ''}
-                    />
-                  </Tooltip>
-
-                  <Select
-                      value={playbackSpeed}
-                      onChange={handleSpeedChange}
-                      style={{ width: 90 }}
-                      options={PLAYBACK_SPEED_OPTIONS}
-                  />
-                </div>
-              </div>
+          <div className="h5-clone-container">
+            <div className="h5-play-btn" onClick={togglePlayPause}>
+              {isPlaying ? (
+                <PauseCircleFilled style={{ fontSize: 40, color: '#f60' }} />
+              ) : (
+                <PlayCircleFilled style={{ fontSize: 40, color: '#f60' }} />
+              )}
             </div>
-        )}
-      </div>
+
+            <div className="h5-progress-container">
+              <span className="h5-time">{formatTime(currentTime)}</span>
+              <Slider
+                min={0}
+                max={duration || 100}
+                step={0.1}
+                value={currentTime}
+                onChange={handleSliderSeek}
+                tooltip={{ formatter: (val) => formatTime(val || 0) }}
+                className="h5-slider"
+              />
+              <span className="h5-time">{formatTime(duration)}</span>
+            </div>
+
+            <div className="h5-controls-right">
+              <div className="h5-volume-group">
+                <Button
+                  type="text"
+                  icon={isMuted ? <MutedOutlined /> : <SoundOutlined />}
+                  onClick={toggleMute}
+                />
+                <Slider
+                  min={0}
+                  max={1}
+                  step={0.01}
+                  value={isMuted ? 0 : volumeLevel}
+                  onChange={handleVolumeChange}
+                  style={{ width: 60 }}
+                />
+              </div>
+
+              <Tooltip title={isGlobalLoop ? "Tắt lặp đoạn" : "Bật lặp đoạn"}>
+                <Button
+                  type={isGlobalLoop ? "primary" : "default"}
+                  shape="circle"
+                  icon={<ReloadOutlined />}
+                  onClick={toggleGlobalLoop}
+                  className={isGlobalLoop ? 'loop-active' : ''}
+                />
+              </Tooltip>
+
+              <Select
+                value={playbackSpeed}
+                onChange={handleSpeedChange}
+                style={{ width: 90 }}
+                options={PLAYBACK_SPEED_OPTIONS}
+              />
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
   );
 };
 

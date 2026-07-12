@@ -78,24 +78,6 @@ const ContentComponent = ({
   const [viewMode, setViewMode] = useState<ViewMode>('audio');
   const viewModeRef = useRef<ViewMode>('audio');
 
-  useEffect(() => {
-    if (sharedVideoPath && viewModeRef.current === 'audio') {
-      viewModeRef.current = 'video';
-      setViewMode('video');
-      onViewModeChange?.('video');
-    } else {
-      viewModeRef.current = 'audio';
-      setViewMode('audio');
-      onViewModeChange?.('audio');
-    }
-  }, [sharedVideoPath, onViewModeChange]);
-
-  const handleViewModeChange = (mode: ViewMode) => {
-    viewModeRef.current = mode;
-    setViewMode(mode);
-    onViewModeChange?.(mode);
-  };
-
   // ============================================================
   // REFS
   // ============================================================
@@ -169,6 +151,43 @@ const ContentComponent = ({
   const [insertForm] = Form.useForm();
   const [notifApi, notifContextHolder] = notification.useNotification();
 
+  // Reset toàn bộ trạng thái chạy media khi đổi Tab
+  const resetAllPlayStates = useCallback(() => {
+    setPauseCommand(Date.now());
+    if (activeSourceRef.current === 'audio') {
+      handlePauseAudio(true);
+    }
+    setPlayStates((prev) => Object.fromEntries(Object.keys(prev).map((k) => [k, false])));
+    setLoopStates((prev) => Object.fromEntries(Object.keys(prev).map((k) => [k, false])));
+    setActive(null, null);
+    setIsVideoPlaying(false);
+    setPlayCommand(null);
+    setLoopCommand(null);
+  }, [handlePauseAudio, setActive]);
+
+  useEffect(() => {
+    if (sharedVideoPath && viewModeRef.current === 'audio') {
+      viewModeRef.current = 'video';
+      setViewMode('video');
+      onViewModeChange?.('video');
+    } else {
+      viewModeRef.current = 'audio';
+      setViewMode('audio');
+      onViewModeChange?.('audio');
+    }
+  }, [sharedVideoPath, onViewModeChange]);
+
+  const handleViewModeChange = (mode: ViewMode) => {
+    if (viewMode === mode) return;
+
+    // Reset media & trạng thái item khi chuyển Tab
+    resetAllPlayStates();
+
+    viewModeRef.current = mode;
+    setViewMode(mode);
+    onViewModeChange?.(mode);
+  };
+
   // ============================================================
   // EFFECTS
   // ============================================================
@@ -185,6 +204,14 @@ const ContentComponent = ({
     setPlayStates(play);
     setLoopStates(loop);
   }, [contents]);
+
+  // Đồng bộ trạng thái từ Audio Player bên dưới
+  const onAudioPlayStateChange = useCallback((isPlayingAudio: boolean, currentActiveId: string | null) => {
+    if (!currentActiveId) return;
+    setPlayStates((prev) =>
+      Object.fromEntries(Object.keys(prev).map((k) => [k, k === currentActiveId ? isPlayingAudio : false]))
+    );
+  }, []);
 
   // ============================================================
   // HANDLERS (Audio & Video đồng bộ)
@@ -499,6 +526,7 @@ const ContentComponent = ({
       playCommand={playCommand}
       loopCommand={loopCommand}
       pauseCommand={pauseCommand}
+      onAudioPlayStateChange={onAudioPlayStateChange}
     />
   );
 

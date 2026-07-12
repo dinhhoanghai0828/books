@@ -136,7 +136,7 @@ const WordsList = React.memo(({
     // ============================================================
 
     return (
-        <div style={{ padding: '150px 35px 80px 35px' }}>
+        <div style={{ padding: '250px 35px 80px 35px' }}>
 
             {words.length > 0 ? (
                 <Row gutter={[16, 16]}>
