@@ -68,10 +68,10 @@ const ContentComponent = ({
   onContentUpdate,
 }: ContentComponentProps) => {
   const router = useRouter();
-  const { volumeEngName = '', volumeViName = '' } = contents[0] || {};
+  const { volumeEngName = '', volumeViName = '' } = contents?.[0] || {};
 
   // Đường dẫn video dùng chung
-  const sharedVideoPath = contents.find((item) => item.video)?.video ?? null;
+  const sharedVideoPath = contents?.find((item) => item.video)?.video ?? null;
 
   // ============================================================
   // VIEW MODE
@@ -207,7 +207,7 @@ const ContentComponent = ({
   useEffect(() => {
     const play: Record<string, boolean> = {};
     const loop: Record<string, boolean> = {};
-    contents.forEach((item) => {
+    contents?.forEach((item) => {
       const idStr = String(item.id);
       play[idStr] = false;
       loop[idStr] = false;

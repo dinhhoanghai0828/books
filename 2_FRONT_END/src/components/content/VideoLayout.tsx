@@ -203,10 +203,10 @@ const VideoLayout: React.FC<VideoLayoutProps> = ({
         <Typography.Text className="volume-vi-name">{volumeViName}</Typography.Text>
         <Typography.Text className="volume-total-sentence">
           Bài có tổng cộng:{' '}
-          <strong style={{ color: 'red' }}>{contents.length}</strong> câu cần học
+          <strong style={{ color: 'red' }}>{contents?.length || 0}</strong> câu cần học
         </Typography.Text>
 
-        {contents.length > 0 ? (
+        {contents?.length > 0 ? (
           contents.map((item) => {
             const itemIdStr = String(item.id);
             const isActive = activeItemId === itemIdStr;
