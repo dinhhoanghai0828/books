@@ -92,11 +92,10 @@ public class RunSQLComponent {
         scripts.add(path + "APP_4000_ESSENTIAL_ENGLISH_WORDS.sql");
         scripts.add(path + "APP_ALL_EARS_ENGLISH.sql");
         scripts.add(path + "APP_ANIMATTERS.sql");
-        scripts.add(path + "APP_CHILDREN_1.sql");
         scripts.add(path + "APP_DHAR_MANN_STUDIO.sql");
         scripts.add(path + "APP_ECONOMIST.sql");
-        scripts.add(path + "APP_ELEMENTARY_1.sql");
         scripts.add(path + "APP_ENGLISH_FAIRY_TALES.sql");
+        scripts.add(path + "APP_ESLFAST.sql");
         scripts.add(path + "APP_GOD_OF_MOTIVE.sql");
         scripts.add(path + "APP_I_AM_MARY.sql");
         scripts.add(path + "APP_LIFE_DIARY_ANIMATED.sql");
@@ -499,11 +498,11 @@ public class RunSQLComponent {
                 "SELECT C.ENG, C.VI, C.START_TIME, C.END_TIME, C.VOLUME_SLUG, " +
                 "V.SLUG AS V_SLUG, V.ENG AS V_ENG, V.VI AS V_VI, V.AUDIO AS V_AUDIO, " +
                 "V.START_TIME AS V_START, V.END_TIME AS V_END, V.BOOK_SLUG AS V_BOOK_SLUG, " +
-                "V.CHECKED AS V_CHECKED, V.NUMBER AS V_NUMBER " +
+                "V.CHECKED AS V_CHECKED, V.NUMBER AS V_NUMBER, V.ID AS V_ID " +
                 "FROM CONTENTS C " +
                 "INNER JOIN VOLUMES V ON C.VOLUME_SLUG = V.SLUG " +
                 "WHERE V.BOOK_SLUG = ? " +
-                "ORDER BY V.NUMBER, C.ID";
+                "ORDER BY V.ID, C.ID";
 
         Connection connection = null;
         PreparedStatement pstmtBooks = null;
