@@ -190,7 +190,7 @@ const WordsSearch = React.memo(({ onSearch, onWordAdded }: WordsSearchProps) => 
                             style={{ backgroundColor: '#fa8c16', borderColor: '#fa8c16', color: '#fff' }}
                             block
                         >
-                            Tong hop
+                            Tổng hợp Từ
                         </Button>
                     </Col>
 

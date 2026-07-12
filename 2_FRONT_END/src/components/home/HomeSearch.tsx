@@ -196,7 +196,7 @@ const HomeSearch = React.memo(({
             style={{ backgroundColor: '#fa8c16', borderColor: '#fa8c16', color: '#fff' }}
             block
           >
-            Tổng hợp
+            Tổng hợp Câu
           </Button>
         </Col>
       </Row>

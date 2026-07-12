@@ -87,6 +87,7 @@ const ContentPage = () => {
         handleToggleAudio={() => {}}
         onViewModeChange={undefined}
         volume={volume}
+        onContentUpdate={fetchContents}
       />
     </div>
   );

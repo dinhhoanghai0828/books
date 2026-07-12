@@ -38,6 +38,7 @@ export interface AudioLayoutProps {
   loopCommand: { itemId: string; startTime: string; endTime: string; isLoop: boolean; ts: number } | null;
   pauseCommand: number | null;
   onEdit: (item: ContentType) => void;
+  onAudioPlayStateChange?: (isPlayingAudio: boolean, currentActiveId: string | null) => void;
 }
 
 const PLAYBACK_SPEED_OPTIONS = [
@@ -83,6 +84,7 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
   loopCommand,
   pauseCommand,
   onEdit,
+  onAudioPlayStateChange,
 }) => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [audioSrc, setAudioSrc] = useState('');
