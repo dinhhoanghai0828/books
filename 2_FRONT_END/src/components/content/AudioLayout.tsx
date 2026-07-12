@@ -1,17 +1,18 @@
 import { ContentType } from '@/interfaces/content';
 import { Volume } from '@/interfaces/volume';
-import { Select } from 'antd';
+import { Select, Button, Tooltip, Slider } from 'antd';
 import { Empty, Typography } from 'antd';
+import {
+  PlayCircleFilled,
+  PauseCircleFilled,
+  ReloadOutlined,
+  SoundOutlined,
+  MutedOutlined
+} from '@ant-design/icons';
 import React, { useEffect, useRef, useState } from 'react';
-import AudioPlayer from 'react-h5-audio-player';
-import 'react-h5-audio-player/lib/styles.css';
 import '../../styles/audio.css';
 import ContentItem from './ContentItem';
 import { findActiveItem, parseTimeToSeconds } from './contentHelpers';
-
-// ============================================================
-// TYPES
-// ============================================================
 
 export interface AudioLayoutProps {
   contents: ContentType[];
@@ -26,88 +27,76 @@ export interface AudioLayoutProps {
   showVietnamese: boolean;
   highlightMissingWords: boolean;
   itemRefsRef: React.RefObject<Record<string, HTMLDivElement | null>>;
-  // Callback khi nguoi dung click nut play/pause tren item
   onPlayPauseAudio: (id: string, startTime: string, endTime: string) => void;
   onToggleLoop: (id: string, startTime: string, endTime: string) => void;
   onGetMeaning: () => void;
   renderTooltip: () => React.ReactNode;
-  // Thong tin volume de lay src audio
   volume?: Volume;
-  // Callback khi timeupdate phat hien cau dang chay (de ContentComponent highlight + scroll)
   onActiveItemChange: (itemId: string) => void;
-  // Callback khi audio tu dong dung (het segment hoac het file)
   onAudioStop: () => void;
-  // Lenh phat tu ContentComponent: thay doi khi user click item
   playCommand: { itemId: string; startTime: string; endTime: string; ts: number } | null;
-  // Lenh loop tu ContentComponent: thay doi khi user toggle loop
   loopCommand: { itemId: string; startTime: string; endTime: string; isLoop: boolean; ts: number } | null;
-  // Lenh dung tu ContentComponent: thay doi khi user click pause
   pauseCommand: number | null;
 }
 
-// Danh sach toc do phat
 const PLAYBACK_SPEED_OPTIONS = [
   { value: 0.5, label: '0.5x' },
   { value: 0.7, label: '0.7x' },
   { value: 0.8, label: '0.8x' },
   { value: 0.9, label: '0.9x' },
-  { value: 1.0, label: '1.0x (Mac dinh)' },
+  { value: 1.0, label: '1.0x (Mặc định)' },
   { value: 1.2, label: '1.2x' },
   { value: 1.5, label: '1.5x' },
   { value: 1.7, label: '1.7x' },
   { value: 2.0, label: '2.0x' },
 ];
 
-// ============================================================
-// COMPONENT
-// AudioLayout tu quan ly toan bo trang thai audio noi bo:
-// - Khong phu thuoc vao state trung gian tu page.tsx
-// - Nhan lenh play/pause/loop qua props dang {data, ts}:
-//   moi lan ts thay doi thi useEffect chay, tranh stale isPlaying
-// ============================================================
+const formatTime = (seconds: number) => {
+  if (isNaN(seconds)) return '00:00';
+  const mins = Math.floor(seconds / 60);
+  const secs = Math.floor(seconds % 60);
+  return `${mins < 10 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`;
+};
 
 const AudioLayout: React.FC<AudioLayoutProps> = ({
-  contents,
-  volumeEngName,
-  volumeViName,
-  activeItemId,
-  activeSource,
-  isVideoPlaying,
-  playStates,
-  loopStates,
-  showEnglish,
-  showVietnamese,
-  highlightMissingWords,
-  itemRefsRef,
-  onPlayPauseAudio,
-  onToggleLoop,
-  onGetMeaning,
-  renderTooltip,
-  volume,
-  onActiveItemChange,
-  onAudioStop,
-  playCommand,
-  loopCommand,
-  pauseCommand,
-}) => {
-  const playerRef = useRef<AudioPlayer | null>(null);
+                                                   contents,
+                                                   volumeEngName,
+                                                   volumeViName,
+                                                   activeItemId,
+                                                   activeSource,
+                                                   isVideoPlaying,
+                                                   playStates,
+                                                   loopStates,
+                                                   showEnglish,
+                                                   showVietnamese,
+                                                   highlightMissingWords,
+                                                   itemRefsRef,
+                                                   onPlayPauseAudio,
+                                                   onToggleLoop,
+                                                   onGetMeaning,
+                                                   renderTooltip,
+                                                   volume,
+                                                   onActiveItemChange,
+                                                   onAudioStop,
+                                                   playCommand,
+                                                   loopCommand,
+                                                   pauseCommand,
+                                                 }) => {
+  const audioRef = useRef<HTMLAudioElement | null>(null);
   const [audioSrc, setAudioSrc] = useState('');
   const [playbackSpeed, setPlaybackSpeed] = useState(1.0);
+  const [isGlobalLoop, setIsGlobalLoop] = useState(false);
 
-  // Lay HTMLAudioElement tu AudioPlayer
-  const getAudio = (): HTMLAudioElement | null =>
-    playerRef.current?.audio?.current ?? null;
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
+  const [volumeLevel, setVolumeLevel] = useState(1);
+  const [isMuted, setIsMuted] = useState(false);
 
-  // Segment dang phat noi bo: { start, end } (end=0 = chay tu do)
+  const getAudio = (): HTMLAudioElement | null => audioRef.current;
   const segmentRef = useRef({ start: 0, end: 0 });
-
-  // isLoop noi bo, doc tu loopCommand
   const isLoopRef = useRef(false);
 
-  // Flag phan biet seek tu code vs seek tu nguoi dung
-  const isSeekingByCodeRef = useRef(false);
-
-  // Ref giu callbacks moi nhat, tranh stale closure trong listener
   const onActiveItemChangeRef = useRef(onActiveItemChange);
   useEffect(() => { onActiveItemChangeRef.current = onActiveItemChange; }, [onActiveItemChange]);
 
@@ -117,142 +106,97 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
   const contentsRef = useRef(contents);
   useEffect(() => { contentsRef.current = contents; }, [contents]);
 
-  // ============================================================
-  // CAP NHAT AUDIO SRC
-  // ============================================================
-
   useEffect(() => {
     if (volume?.audio) setAudioSrc(`/media/${volume.audio}`);
   }, [volume]);
 
-  // ============================================================
-  // ATTACH LISTENERS
-  // Dung ref de giu cleanup function, dam bao remove dung listener cu truoc khi attach moi.
-  // Attach ngay khi audio element san sang (khong dung setTimeout retry).
-  // ============================================================
-
-  // Ref giu ham cleanup listener hien tai
   const listenerCleanupRef = useRef<(() => void) | null>(null);
 
-  // Goi cleanup cu truoc khi attach moi de tranh nhieu listener chay song song
   const attachListeners = (audio: HTMLAudioElement) => {
-    // Remove listener cu neu co
     listenerCleanupRef.current?.();
-
     const lastActiveId = { current: '' };
 
-    const onSeeking = () => {
-      // //  Su kien khi click vao 1 diem tren audio hoac video
-      // console.log(isSeekingByCodeRef.current);
-      // if (isSeekingByCodeRef.current) {
-      //    console.log(segmentRef.current);
-      // } else {
-      //   //  Neu click tay vao audio thì start = hein tai -> end
-      //   const duration = audio.duration;
-      //   segmentRef.current = {
-      //     start: audio.currentTime,
-      //     end: duration,
-      //   };
-      // }
-      // //  Cho nay gay ra hien tuong khong the dung audio o onTimeUpdate, khien khong the loop
-      // // segmentRef.current = { start: 0, end: 0 };
-      // // Con day la neu muon audio chay tieo tu diem click den cuoi
-      // //  segmentRef.current.start = audio.currentTime;
-
-      // // console.log(segmentRef.current);
-    };
+    const onPlay = () => setIsPlaying(true);
+    const onPause = () => setIsPlaying(false);
+    const onLoadedMetadata = () => setDuration(audio.duration);
 
     const onTimeUpdate = () => {
-      //  Khi audio thay doi thoi gian se tu dong chay vao day
-      //  Khi tung item play se chay vao day
       const current = audio.currentTime;
+      setCurrentTime(current);
+
       const { start, end } = segmentRef.current;
-      console.log(segmentRef.current);
-      console.log(current);
-      // Dung hoac loop khi den endTime (chi khi end > 0)
+
+      // Nếu đang chạy trong đoạn Segment (End > 0) và đã chạy đến/vượt quá End
       if (end > 0 && current >= end) {
-        //  Neu loop thi set ve trang thai bat dau item
         if (isLoopRef.current) {
-          isSeekingByCodeRef.current = true;
           audio.currentTime = start;
-          // isSeekingByCodeRef.current = false;
         } else {
+          // QUAN TRỌNG: Reset segment về 0 khi hết câu để cho phép bấm nút Play thủ công ở Player bên dưới
+          segmentRef.current = { start: 0, end: 0 };
           audio.pause();
-          // segmentRef.current = { start: 0, end: 0 };
           onAudioStopRef.current();
         }
         return;
       }
 
-      // Highlight cau dang chay theo currentTime
       const found = findActiveItem(contentsRef.current, current);
-
       if (found && String(found.id) !== lastActiveId.current) {
         lastActiveId.current = String(found.id);
         onActiveItemChangeRef.current(String(found.id));
       }
     };
 
-    audio.addEventListener('seeking', onSeeking);
+    audio.addEventListener('play', onPlay);
+    audio.addEventListener('pause', onPause);
+    audio.addEventListener('loadedmetadata', onLoadedMetadata);
     audio.addEventListener('timeupdate', onTimeUpdate);
 
-    // Luu cleanup de goi khi audioSrc thay doi hoac unmount
     listenerCleanupRef.current = () => {
-      audio.removeEventListener('seeking', onSeeking);
+      audio.removeEventListener('play', onPlay);
+      audio.removeEventListener('pause', onPause);
+      audio.removeEventListener('loadedmetadata', onLoadedMetadata);
       audio.removeEventListener('timeupdate', onTimeUpdate);
     };
   };
 
   useEffect(() => {
-    // Thu attach ngay neu audio element da san sang
     const audio = getAudio();
     if (audio) {
       attachListeners(audio);
     }
-    // Neu chua san sang, cho AudioPlayer mount xong roi attach qua playCommand useEffect
     return () => {
       listenerCleanupRef.current?.();
       listenerCleanupRef.current = null;
     };
   }, [audioSrc]);
 
-  // LENH PHAT: playCommand thay doi -> seek va play
-  // Chi reset isLoop khi chuyen sang item KHAC, giu nguyen neu la cung item (dang loop)
+  // LỆNH PHÁT TỪ ITEM
   useEffect(() => {
-    // Bat tung item
     if (!playCommand) return;
     const audio = getAudio();
     if (!audio) return;
 
-    // Dam bao listener da duoc attach (truong hop audio chua san sang khi audioSrc effect chay)
     if (!listenerCleanupRef.current) {
       attachListeners(audio);
     }
-    // console.log("playCommand", playCommand);
+
     const start = parseTimeToSeconds(playCommand.startTime);
     const end = parseTimeToSeconds(playCommand.endTime);
-    // console.log("set segment", { start, end });
 
     segmentRef.current = { start, end };
-    isLoopRef.current = false; // reset loop khi click phat item moi
+    isLoopRef.current = isGlobalLoop;
 
-    isSeekingByCodeRef.current = true;
     audio.currentTime = start;
-    // isSeekingByCodeRef.current = false;
-
     audio.playbackRate = playbackSpeed;
-    audio.play();
+
+    // Đảm bảo bắt được lỗi Promise Play
+    audio.play().catch((err) => console.log('Audio play error:', err));
   }, [playCommand]);
 
-  // ============================================================
-  // LENH LOOP: loopCommand thay doi -> cap nhat isLoopRef
-  // ============================================================
-
   useEffect(() => {
-    //  Lap video
     if (!loopCommand) return;
     isLoopRef.current = loopCommand.isLoop;
-    // Neu bat loop trong khi dang phat: cap nhat segment moi (startTime/endTime co the khac)
+    setIsGlobalLoop(loopCommand.isLoop);
     const audio = getAudio();
     if (!audio || audio.paused) return;
     const start = parseTimeToSeconds(loopCommand.startTime);
@@ -260,19 +204,43 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
     segmentRef.current = { start, end };
   }, [loopCommand]);
 
-  // ============================================================
-  // LENH DUNG: pauseCommand thay doi -> pause
-  // ============================================================
-
   useEffect(() => {
     if (pauseCommand === null || pauseCommand === undefined) return;
     const audio = getAudio();
     if (audio) audio.pause();
   }, [pauseCommand]);
 
-  // ============================================================
-  // CAP NHAT TOC DO PHAT
-  // ============================================================
+  // BẤM NÚT PLAY / PAUSE TRỰC TIẾP TRÊN PLAYER DƯỚI CÙNG
+  const togglePlayPause = () => {
+    const audio = getAudio();
+    if (!audio) return;
+
+    if (isPlaying) {
+      audio.pause();
+    } else {
+      // Nếu audio đang đứng ở cuối segment cũ, xóa segment để cho phép chạy tự do tiếp
+      if (segmentRef.current.end > 0 && audio.currentTime >= segmentRef.current.end) {
+        segmentRef.current = { start: 0, end: 0 };
+      }
+      audio.play().catch((err) => console.log('Audio play error:', err));
+    }
+  };
+
+  // KÉO HOẶC BẤM VÀO THANH SLIDER
+  const handleSliderSeek = (value: number) => {
+    const audio = getAudio();
+    if (audio) {
+      // Xóa giới hạn segment để phát tự do từ vị trí bấm
+      segmentRef.current = { start: 0, end: 0 };
+      audio.currentTime = value;
+      setCurrentTime(value);
+
+      // Phát nhạc tiếp nếu đang dừng
+      if (audio.paused) {
+        audio.play().catch((err) => console.log('Audio play error:', err));
+      }
+    }
+  };
 
   const handleSpeedChange = (value: number) => {
     setPlaybackSpeed(value);
@@ -280,71 +248,134 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
     if (audio) audio.playbackRate = value;
   };
 
-  // ============================================================
-  // RENDER
-  // ============================================================
+  const toggleGlobalLoop = () => {
+    const nextState = !isGlobalLoop;
+    setIsGlobalLoop(nextState);
+    isLoopRef.current = nextState;
+  };
+
+  const toggleMute = () => {
+    const audio = getAudio();
+    if (audio) {
+      audio.muted = !isMuted;
+      setIsMuted(!isMuted);
+    }
+  };
+
+  const handleVolumeChange = (val: number) => {
+    const audio = getAudio();
+    if (audio) {
+      audio.volume = val;
+      setVolumeLevel(val);
+      setIsMuted(val === 0);
+    }
+  };
 
   return (
-    <div>
-      <Typography.Title level={3} className="volume-title">
-        {volumeEngName}
-      </Typography.Title>
-      <Typography.Text className="volume-vi-name">{volumeViName}</Typography.Text>
-      <Typography.Text className="volume-total-sentence">
-        Bai co tong cong:{' '}
-        <strong style={{ color: 'red' }}>{contents.length}</strong> cau can hoc
-      </Typography.Text>
+      <div style={{ paddingBottom: '100px' }}>
+        <Typography.Title level={3} className="volume-title">
+          {volumeEngName}
+        </Typography.Title>
+        <Typography.Text className="volume-vi-name">{volumeViName}</Typography.Text>
+        <Typography.Text className="volume-total-sentence">
+          Bài có tổng cộng:{' '}
+          <strong style={{ color: 'red' }}>{contents.length}</strong> câu cần học
+        </Typography.Text>
 
-      {contents.length > 0 ? (
-        contents.map((item) => (
-          <ContentItem
-            key={item.id}
-            item={item}
-            isActive={activeItemId === String(item.id)}
-            isAudioPlaying={playStates[String(item.id)] ?? false}
-            isLooping={loopStates[String(item.id)] ?? false}
-            isVideoPlaying={isVideoPlaying}
-            showEnglish={showEnglish}
-            showVietnamese={showVietnamese}
-            highlightMissingWords={highlightMissingWords}
-            showVideoButton={false}
-            showAudioButton={true}
-            activeSource={activeSource}
-            onPlayPauseAudio={onPlayPauseAudio}
-            onPlayPauseVideo={() => { }}
-            onToggleLoop={onToggleLoop}
-            onGetMeaning={onGetMeaning}
-            itemRef={(el) => { itemRefsRef.current[String(item.id)] = el; }}
-          />
-        ))
-      ) : (
-        <Empty description="Khong co du lieu" className="emptyClass" />
-      )}
+        {contents.length > 0 ? (
+            contents.map((item) => (
+                <ContentItem
+                    key={item.id}
+                    item={item}
+                    isActive={activeItemId === String(item.id)}
+                    isAudioPlaying={playStates[String(item.id)] ?? false}
+                    isLooping={loopStates[String(item.id)] ?? false}
+                    isVideoPlaying={isVideoPlaying}
+                    showEnglish={showEnglish}
+                    showVietnamese={showVietnamese}
+                    highlightMissingWords={highlightMissingWords}
+                    showVideoButton={false}
+                    showAudioButton={true}
+                    activeSource={activeSource}
+                    onPlayPauseAudio={onPlayPauseAudio}
+                    onPlayPauseVideo={() => { }}
+                    onToggleLoop={onToggleLoop}
+                    onGetMeaning={onGetMeaning}
+                    itemRef={(el) => { itemRefsRef.current[String(item.id)] = el; }}
+                />
+            ))
+        ) : (
+            <Empty description="Không có dữ liệu" className="emptyClass" />
+        )}
 
-      {renderTooltip()}
+        {renderTooltip()}
 
-      {/* AudioPlayer co dinh o cuoi man hinh */}
-      {audioSrc && (
-        <div className="audio-component-fixed">
-          <AudioPlayer
-            ref={playerRef}
-            src={audioSrc}
-            showJumpControls={false}
-            autoPlay={false}
-            loop={false}
-          />
-          <div style={{ marginTop: 16, display: 'flex', alignItems: 'center', gap: 8 }}>
-            <span style={{ fontWeight: 'bold' }}>Toc do phat:</span>
-            <Select
-              value={playbackSpeed}
-              onChange={handleSpeedChange}
-              style={{ width: 200 }}
-              options={PLAYBACK_SPEED_OPTIONS}
-            />
-          </div>
-        </div>
-      )}
-    </div>
+        {/* Audio Player UI Custom */}
+        {audioSrc && (
+            <div className="h5-clone-wrapper">
+              <audio ref={audioRef} src={audioSrc} style={{ display: 'none' }} />
+
+              <div className="h5-clone-container">
+                <div className="h5-play-btn" onClick={togglePlayPause}>
+                  {isPlaying ? (
+                      <PauseCircleFilled style={{ fontSize: 40, color: '#f60' }} />
+                  ) : (
+                      <PlayCircleFilled style={{ fontSize: 40, color: '#f60' }} />
+                  )}
+                </div>
+
+                <div className="h5-progress-container">
+                  <span className="h5-time">{formatTime(currentTime)}</span>
+                  <Slider
+                      min={0}
+                      max={duration || 100}
+                      step={0.1}
+                      value={currentTime}
+                      onChange={handleSliderSeek}
+                      tooltip={{ formatter: (val) => formatTime(val || 0) }}
+                      className="h5-slider"
+                  />
+                  <span className="h5-time">{formatTime(duration)}</span>
+                </div>
+
+                <div className="h5-controls-right">
+                  <div className="h5-volume-group">
+                    <Button
+                        type="text"
+                        icon={isMuted ? <MutedOutlined /> : <SoundOutlined />}
+                        onClick={toggleMute}
+                    />
+                    <Slider
+                        min={0}
+                        max={1}
+                        step={0.01}
+                        value={isMuted ? 0 : volumeLevel}
+                        onChange={handleVolumeChange}
+                        style={{ width: 60 }}
+                    />
+                  </div>
+
+                  <Tooltip title={isGlobalLoop ? "Tắt lặp đoạn" : "Bật lặp đoạn"}>
+                    <Button
+                        type={isGlobalLoop ? "primary" : "default"}
+                        shape="circle"
+                        icon={<ReloadOutlined />}
+                        onClick={toggleGlobalLoop}
+                        className={isGlobalLoop ? 'loop-active' : ''}
+                    />
+                  </Tooltip>
+
+                  <Select
+                      value={playbackSpeed}
+                      onChange={handleSpeedChange}
+                      style={{ width: 90 }}
+                      options={PLAYBACK_SPEED_OPTIONS}
+                  />
+                </div>
+              </div>
+            </div>
+        )}
+      </div>
   );
 };
 
