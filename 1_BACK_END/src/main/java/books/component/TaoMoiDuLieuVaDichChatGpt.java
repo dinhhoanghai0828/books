@@ -8,7 +8,7 @@ import java.util.*;
 
 public class TaoMoiDuLieuVaDichChatGpt {
 
-    private static final String API_KEY = "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";
+    private static final String API_KEY = "";
     private static final String API_URL = "https://api.openai.com/v1/chat/completions";
 
     public static void main(String args[]) {
