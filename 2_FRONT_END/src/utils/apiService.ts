@@ -5,7 +5,7 @@ import { PaginationResponse } from '@/interfaces/pagination';
 import { Volume } from '@/interfaces/volume';
 import { Word, WordItem } from '@/interfaces/word';
 import { message } from 'antd';
-import apiClient from './apiClient';
+import apiClient from '@/utils/apiClient';
 
 // ============================================================
 // INTERCEPTORS
@@ -13,38 +13,38 @@ import apiClient from './apiClient';
 
 // Gan token JWT vao header Authorization truoc moi request (tru request login)
 apiClient.interceptors.request.use(
-  (config) => {
-    if (config.url !== '/login') {
-      const token = localStorage.getItem('jwt');
-      config.headers.Authorization = `Bearer ${token}`;
-    }
-    return config;
-  },
-  (error) => Promise.reject(error)
+    (config) => {
+      if (config.url !== '/login') {
+        const token = localStorage.getItem('jwt');
+        config.headers.Authorization = `Bearer ${token}`;
+      }
+      return config;
+    },
+    (error) => Promise.reject(error)
 );
 
 // Xu ly loi phan hoi:
 // - 401: Phien dang nhap het han -> xoa token, chuyen ve /login
 // - 403: Khong co quyen truy cap -> xoa token, chuyen ve /login
 apiClient.interceptors.response.use(
-  (response) => response,
-  async (error) => {
-    const status = error.response?.status;
-    if (status === 403) {
-      localStorage.removeItem('jwt');
-      window.location.href = '/login';
-    } else if (status === 401) {
-      message.error('Session expired. Please log in again.');
-      localStorage.removeItem('jwt');
-      window.location.href = '/login';
+    (response) => response,
+    async (error) => {
+      const status = error.response?.status;
+      if (status === 403) {
+        localStorage.removeItem('jwt');
+        window.location.href = '/login';
+      } else if (status === 401) {
+        message.error('Session expired. Please log in again.');
+        localStorage.removeItem('jwt');
+        window.location.href = '/login';
+      }
+      return Promise.reject(error);
     }
-    return Promise.reject(error);
-  }
 );
 
 // Lay thong bao loi tu response hoac fallback ve message mac dinh
 const getErrorMessage = (error: any): string =>
-  error.response?.data?.message || error.message || 'Loi khong xac dinh';
+    error.response?.data?.message || error.message || 'Loi khong xac dinh';
 
 // ============================================================
 // AUTH
@@ -78,13 +78,13 @@ export const getCategories = async () => {
 
 // Lay danh sach sach theo danh muc lon, co phan trang
 export const getBooksByCategory = async (
-  categorySlug: string,
-  page: number,
-  size: number
+    categorySlug: string,
+    page: number,
+    size: number
 ): Promise<PaginationResponse<Book>> => {
   try {
     const response = await apiClient.get(
-      `/categories/${categorySlug}?page=${page - 1}&size=${size}`
+        `/categories/${categorySlug}?page=${page - 1}&size=${size}`
     );
     return response.data;
   } catch (error: any) {
@@ -94,13 +94,13 @@ export const getBooksByCategory = async (
 
 // Lay danh sach sach theo danh muc con, co phan trang
 export const getBooksBySubCategory = async (
-  subCategorySlug: string,
-  page: number,
-  size: number
+    subCategorySlug: string,
+    page: number,
+    size: number
 ): Promise<PaginationResponse<Book>> => {
   try {
     const response = await apiClient.get(
-      `/sub-categories/${subCategorySlug}?page=${page - 1}&size=${size}`
+        `/sub-categories/${subCategorySlug}?page=${page - 1}&size=${size}`
     );
     return response.data;
   } catch (error: any) {
@@ -114,13 +114,13 @@ export const getBooksBySubCategory = async (
 
 // Lay danh sach tap theo slug sach, co phan trang
 export const getVolumes = async (
-  slug: string,
-  page: number,
-  size: number
+    slug: string,
+    page: number,
+    size: number
 ): Promise<PaginationResponse<Volume>> => {
   try {
     const response = await apiClient.get(
-      `/books/${slug}?page=${page - 1}&size=${size}`
+        `/books/${slug}?page=${page - 1}&size=${size}`
     );
     return response.data;
   } catch (error: any) {
@@ -144,7 +144,7 @@ export const getVolumeDetail = async (slug: string): Promise<Volume> => {
 
 // Lay toan bo noi dung (cac cau) cua mot tap theo volumeId
 export const getContents = async (
-  volumeId: string
+    volumeId: string
 ): Promise<PaginationResponse<ContentType>> => {
   try {
     const response = await apiClient.get(`/content/${volumeId}`);
@@ -156,10 +156,10 @@ export const getContents = async (
 
 // Tim kiem noi dung theo tieng Anh hoac tieng Viet, co phan trang
 export const getContentSearch = async (
-  eng: string | null,
-  vi: string | null,
-  page: number,
-  size: number
+    eng: string | null,
+    vi: string | null,
+    page: number,
+    size: number
 ): Promise<PaginationResponse<ContentType>> => {
   try {
     const params = new URLSearchParams({
@@ -177,11 +177,11 @@ export const getContentSearch = async (
 
 // Cap nhat noi dung (tieng Anh, tieng Viet, startTime, endTime) cua mot cau theo id
 export const updateContent = async (
-  id: string,
-  eng: string,
-  vi: string,
-  startTime: string,
-  endTime: string,
+    id: string,
+    eng: string,
+    vi: string,
+    startTime: string,
+    endTime: string,
 ): Promise<void> => {
   try {
     await apiClient.put('/content/update', { id, eng, vi, startTime, endTime });
@@ -196,8 +196,8 @@ export const updateContent = async (
 
 // Lay danh sach tu can highlight tren trang noi dung
 export const getHighLightWords = async (
-  eng: string | null,
-  vi: string | null
+    eng: string | null,
+    vi: string | null
 ): Promise<Word[]> => {
   try {
     const params = new URLSearchParams({
@@ -213,8 +213,8 @@ export const getHighLightWords = async (
 
 // Lay nghia cua tu/cum tu khi nguoi dung boi chon (dung cho tooltip tra nghia)
 export const getMeaningWords = async (
-  eng: string | null,
-  vi: string | null
+    eng: string | null,
+    vi: string | null
 ): Promise<Word[]> => {
   try {
     const params = new URLSearchParams({
@@ -230,8 +230,8 @@ export const getMeaningWords = async (
 
 // Lay goi y tu khi nguoi dung dang nhap vao o tim kiem (AutoComplete)
 export const getSuggestions = async (
-  eng: string | null,
-  vi: string | null
+    eng: string | null,
+    vi: string | null
 ): Promise<Word[]> => {
   try {
     const response = await apiClient.get(`/word/suggestion?eng=${eng}&vi=${vi}`);
@@ -253,10 +253,10 @@ export const insertWord = async (eng: string, viList: string[]): Promise<void> =
 
 // Tim kiem tu trong bang WORDS co phan trang
 export const getWordSearch = async (
-  eng: string | null,
-  vi: string | null,
-  page: number,
-  size: number
+    eng: string | null,
+    vi: string | null,
+    page: number,
+    size: number
 ): Promise<{ data: WordItem[]; totalElements: number; totalPages: number; size: number; page: number }> => {
   try {
     const params = new URLSearchParams({
@@ -287,8 +287,8 @@ export const updateWord = async (id: string, eng: string, vi: string): Promise<v
 
 // Lay du lieu gia vang theo khoang ngay (dung cho bieu do va bang thong ke)
 export const getChart = async (
-  startDate: string,
-  endDate: string
+    startDate: string,
+    endDate: string
 ): Promise<Chart[]> => {
   try {
     const params = new URLSearchParams({ startDate, endDate });
@@ -305,8 +305,8 @@ export const getChart = async (
 
 // Lay danh sach cau hoi kiem tra theo tap va so luong gioi han
 export const getTests = async (
-  volumeSlug: string,
-  limit: string
+    volumeSlug: string,
+    limit: string
 ): Promise<ContentType[]> => {
   try {
     const params = new URLSearchParams({ volumeSlug, limit });
