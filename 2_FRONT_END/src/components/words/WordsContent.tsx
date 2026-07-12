@@ -1,6 +1,6 @@
 'use client';
 import { WordItem } from '@/interfaces/word';
-import { updateWord } from '@/helpers/apiService';
+import { updateWord } from '@/utils/apiService';
 import { DeleteOutlined, EditOutlined } from '@ant-design/icons';
 import {
     App,

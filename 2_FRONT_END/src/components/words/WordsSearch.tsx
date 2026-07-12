@@ -1,5 +1,5 @@
 'use client';
-import { insertWord, runWordGeneral } from '@/helpers/apiService';
+import { insertWord, runWordGeneral } from '@/utils/apiService';
 import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons';
 import { App, Button, Col, Form, Input, Modal, Row, Space } from 'antd';
 import { useState } from 'react';
