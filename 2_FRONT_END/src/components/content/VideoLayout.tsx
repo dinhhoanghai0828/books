@@ -1,7 +1,9 @@
 import { ContentType } from '@/interfaces/content';
+import { Volume } from '@/interfaces/volume';
 import { Empty, Typography } from 'antd';
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import ContentItem from './ContentItem';
+import { findActiveItem, parseTimeToSeconds } from './contentHelpers';
 
 // ============================================================
 // TYPES
@@ -12,28 +14,32 @@ export interface VideoLayoutProps {
   videoPath: string;
   volumeEngName: string;
   volumeViName: string;
-  videoRef: ((el: HTMLVideoElement | null) => void) | React.RefObject<HTMLVideoElement | null>;
+  videoRef: React.RefObject<HTMLVideoElement | null>;
   listScrollRef: React.RefObject<HTMLDivElement | null>;
   activeItemId: string | null;
   activeSource: 'audio' | 'video' | null;
   isVideoPlaying: boolean;
+  playStates?: Record<string, boolean>; // Đồng bộ state phát của từng item như Audio
   loopStates: Record<string, boolean>;
   showEnglish: boolean;
   showVietnamese: boolean;
   highlightMissingWords: boolean;
-  itemRefsRef: React.MutableRefObject<Record<string, HTMLDivElement | null>>;
+  itemRefsRef: React.RefObject<Record<string, HTMLDivElement | null>>;
   onPlayPauseVideo: (id: string, startTime: string, endTime: string) => void;
   onToggleLoop: (id: string, startTime: string, endTime: string) => void;
   onGetMeaning: () => void;
   renderTooltip: () => React.ReactNode;
+  volume?: Volume;
+  // Các handler & command đồng bộ kiến trúc với AudioLayout
+  onActiveItemChange?: (itemId: string) => void;
+  onVideoStop?: () => void;
+  playCommand?: { itemId: string; startTime: string; endTime: string; ts: number } | null;
+  loopCommand?: { itemId: string; startTime: string; endTime: string; isLoop: boolean; ts: number } | null;
+  pauseCommand?: number | null;
 }
 
 // ============================================================
 // COMPONENT
-// Video Mode layout:
-// - Video co dinh o vi tri cua audio player (fixed bottom)
-// - Danh sach cau hien thi day du chieu rong, can giua giong Audio Mode
-// - Chi co nut video va nut loop, KHONG co nut audio
 // ============================================================
 
 const VideoLayout: React.FC<VideoLayoutProps> = ({
@@ -46,6 +52,7 @@ const VideoLayout: React.FC<VideoLayoutProps> = ({
   activeItemId,
   activeSource,
   isVideoPlaying,
+  playStates = {},
   loopStates,
   showEnglish,
   showVietnamese,
@@ -55,10 +62,115 @@ const VideoLayout: React.FC<VideoLayoutProps> = ({
   onToggleLoop,
   onGetMeaning,
   renderTooltip,
+  onActiveItemChange,
+  onVideoStop,
+  playCommand,
+  loopCommand,
+  pauseCommand,
 }) => {
+  const segmentRef = useRef({ start: 0, end: 0 });
+  const isLoopRef = useRef(false);
+
+  // Synchronize Refs
+  const onActiveItemChangeRef = useRef(onActiveItemChange);
+  useEffect(() => { onActiveItemChangeRef.current = onActiveItemChange; }, [onActiveItemChange]);
+
+  const onVideoStopRef = useRef(onVideoStop);
+  useEffect(() => { onVideoStopRef.current = onVideoStop; }, [onVideoStop]);
+
+  const contentsRef = useRef(contents);
+  useEffect(() => { contentsRef.current = contents; }, [contents]);
+
+  const listenerCleanupRef = useRef<(() => void) | null>(null);
+
+  // 1. GẮN EVENT LISTENERS CHO VIDEO (GIỐNG AUDIOLAYOUT)
+  const attachListeners = (video: HTMLVideoElement) => {
+    listenerCleanupRef.current?.();
+    const lastActiveId = { current: '' };
+
+    const onTimeUpdate = () => {
+      const current = video.currentTime;
+      const { start, end } = segmentRef.current;
+
+      // Xử lý giới hạn khoảng Segment
+      if (end > 0 && current >= end) {
+        if (isLoopRef.current) {
+          video.currentTime = start;
+        } else {
+          segmentRef.current = { start: 0, end: 0 };
+          video.pause();
+          onVideoStopRef.current?.();
+        }
+        return;
+      }
+
+      // Tìm câu đang active trong khoảng thời gian
+      const found = findActiveItem(contentsRef.current, current);
+      if (found && String(found.id) !== lastActiveId.current) {
+        lastActiveId.current = String(found.id);
+        onActiveItemChangeRef.current?.(String(found.id));
+      }
+    };
+
+    video.addEventListener('timeupdate', onTimeUpdate);
+
+    listenerCleanupRef.current = () => {
+      video.removeEventListener('timeupdate', onTimeUpdate);
+    };
+  };
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      attachListeners(video);
+    }
+    return () => {
+      listenerCleanupRef.current?.();
+      listenerCleanupRef.current = null;
+    };
+  }, [videoPath]);
+
+  // 2. LỆNH PHÁT TỪ ITEM (PLAY COMMAND)
+  useEffect(() => {
+    if (!playCommand) return;
+    const video = videoRef.current;
+    if (!video) return;
+
+    if (!listenerCleanupRef.current) {
+      attachListeners(video);
+    }
+
+    const start = parseTimeToSeconds(playCommand.startTime);
+    const end = parseTimeToSeconds(playCommand.endTime);
+
+    segmentRef.current = { start, end };
+
+    video.currentTime = start;
+    video.play().catch((err) => console.log('Video play error:', err));
+  }, [playCommand]);
+
+  // 3. LỆNH LẶP TỪ ITEM (LOOP COMMAND)
+  useEffect(() => {
+    if (!loopCommand) return;
+    isLoopRef.current = loopCommand.isLoop;
+    const video = videoRef.current;
+    if (!video || video.paused) return;
+
+    const start = parseTimeToSeconds(loopCommand.startTime);
+    const end = parseTimeToSeconds(loopCommand.endTime);
+    segmentRef.current = { start, end };
+  }, [loopCommand]);
+
+  // 4. LỆNH PAUSE (PAUSE COMMAND)
+  useEffect(() => {
+    if (pauseCommand === null || pauseCommand === undefined) return;
+    const video = videoRef.current;
+    if (video) video.pause();
+  }, [pauseCommand]);
+
   return (
-    <>
-      {/* Video co dinh o cuoi man hinh — thay the vi tri audio player */}
+    <div style={{ paddingBottom: '220px' }}>
+      {/* Video cố định ở cuối màn hình */}
       <div
         style={{
           position: 'fixed',
@@ -82,45 +194,57 @@ const VideoLayout: React.FC<VideoLayoutProps> = ({
         />
       </div>
 
-      {/* Danh sach cau — can giua, co padding-bottom de khong bi che boi video */}
+      {/* Danh sách câu */}
       <div ref={listScrollRef}>
         <Typography.Title level={3} className="volume-title">
           {volumeEngName}
         </Typography.Title>
         <Typography.Text className="volume-vi-name">{volumeViName}</Typography.Text>
         <Typography.Text className="volume-total-sentence">
-          Bai co tong cong:{' '}
-          <strong style={{ color: 'red' }}>{contents.length}</strong> cau can hoc
+          Bài có tổng cộng:{' '}
+          <strong style={{ color: 'red' }}>{contents.length}</strong> câu cần học
         </Typography.Text>
 
         {contents.length > 0 ? (
-          contents.map((item) => (
-            <ContentItem
-              key={item.id}
-              item={item}
-              isActive={String(activeItemId) === String(item.id)}
-              isAudioPlaying={false}         // Video Mode: khong co audio
-              isLooping={loopStates[item.id] ?? false}
-              isVideoPlaying={isVideoPlaying}
-              showEnglish={showEnglish}
-              showVietnamese={showVietnamese}
-              highlightMissingWords={highlightMissingWords}
-              showVideoButton={true}
-              showAudioButton={false}        // An nut audio
-              activeSource={activeSource}
-              onPlayPauseAudio={() => {}}    // Khong dung trong Video Mode
-              onPlayPauseVideo={onPlayPauseVideo}
-              onToggleLoop={onToggleLoop}
-              onGetMeaning={onGetMeaning}
-              itemRef={(el) => { itemRefsRef.current[item.id] = el; }}
-            />
-          ))
+          contents.map((item) => {
+            const itemIdStr = String(item.id);
+            const isActive = activeItemId === itemIdStr;
+            // Xử lý trạng thái isVideoPlaying giống logic isAudioPlaying của AudioLayout
+            const itemIsVideoPlaying = playStates[itemIdStr] ?? (isActive && isVideoPlaying);
+
+            return (
+              <ContentItem
+                key={item.id}
+                item={item}
+                isActive={isActive}
+                isAudioPlaying={false}
+                isLooping={loopStates[itemIdStr] ?? false}
+                isVideoPlaying={itemIsVideoPlaying}
+                showEnglish={showEnglish}
+                showVietnamese={showVietnamese}
+                highlightMissingWords={highlightMissingWords}
+                showVideoButton={true}
+                showAudioButton={false}
+                activeSource={activeSource}
+                onPlayPauseAudio={() => {}}
+                onPlayPauseVideo={onPlayPauseVideo}
+                onToggleLoop={onToggleLoop}
+                onGetMeaning={onGetMeaning}
+                itemRef={(el) => {
+                  if (itemRefsRef.current) {
+                    itemRefsRef.current[itemIdStr] = el;
+                  }
+                }}
+              />
+            );
+          })
         ) : (
-          <Empty description="Khong co du lieu" className="emptyClass" />
+          <Empty description="Không có dữ liệu" className="emptyClass" />
         )}
+
         {renderTooltip()}
       </div>
-    </>
+    </div>
   );
 };
 

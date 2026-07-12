@@ -1,18 +1,17 @@
 import { ContentType } from '@/interfaces/content';
+import { Volume } from '@/interfaces/volume';
 import { getMeaningWords, insertWord } from '@/utils/apiService';
 import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons';
-import { Button, Empty, Form, Input, Modal, notification, Space } from 'antd';
+import { Button, Form, Input, Modal, notification, Space } from 'antd';
 import debounce from 'lodash.debounce';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { useRouter } from 'next/navigation';
 import '../../styles/content.css';
 
-import { findActiveItem, parseTimeToSeconds } from './contentHelpers';
 import ContentToolbar, { ViewMode } from './ContentToolbar';
 import VideoLayout from './VideoLayout';
 import AudioLayout from './AudioLayout';
-import { Volume } from '@/interfaces/volume';
 
 // ============================================================
 // TYPES
@@ -28,12 +27,9 @@ interface ContentComponentProps {
   handlePauseAudio: (isStop: boolean) => void;
   handleToggleAudio: (itemId: string, startTime: string, endTime: string, isLoop: boolean) => void;
   onViewModeChange?: (mode: ViewMode) => void;
-  // Thong tin volume de AudioLayout lay src audio
   volume?: Volume;
 }
 
-// Style cho tooltip tra nghia tu — dung fixed thay vi absolute
-// de khong bi anh huong boi overflow hay transform cua parent
 const TOOLTIP_STYLE: React.CSSProperties = {
   position: 'fixed',
   backgroundColor: '#1d1d2e',
@@ -65,33 +61,29 @@ const ContentComponent = ({
   contents,
   volumeSlug,
   isPlaying,
-  handlePlayAudio,
   handlePauseAudio,
-  handleToggleAudio,
   onViewModeChange,
   volume,
 }: ContentComponentProps) => {
   const router = useRouter();
   const { volumeEngName = '', volumeViName = '' } = contents[0] || {};
 
-  // Lay video path tu contents (null neu khong co)
+  // Đường dẫn video dùng chung
   const sharedVideoPath = contents.find((item) => item.video)?.video ?? null;
 
   // ============================================================
-  // VIEW MODE — default audio, chuyen video khi contents co video
+  // VIEW MODE
   // ============================================================
 
   const [viewMode, setViewMode] = useState<ViewMode>('audio');
   const viewModeRef = useRef<ViewMode>('audio');
 
-  // Khi contents load xong va co video -> chuyen sang Video Mode
   useEffect(() => {
     if (sharedVideoPath && viewModeRef.current === 'audio') {
       viewModeRef.current = 'video';
       setViewMode('video');
       onViewModeChange?.('video');
     } else {
-      //  Mac dinh luon la audio
       viewModeRef.current = 'audio';
       setViewMode('audio');
       onViewModeChange?.('audio');
@@ -109,34 +101,17 @@ const ContentComponent = ({
   // ============================================================
 
   const videoRef = useRef<HTMLVideoElement | null>(null);
-  // Ref callback de biet khi nao video element duoc mount/unmount
-  const [videoMounted, setVideoMounted] = useState(false);
-  const videoRefCallback = useCallback((el: HTMLVideoElement | null) => {
-    videoRef.current = el;
-    setVideoMounted(!!el);
-  }, []);
-  const videoSegmentRef = useRef({
-    start: 0,
-    end: 0,
-    itemId: '',
-  });
-
-  // Flag: true khi code dang seek (khong phai nguoi dung tu seek)
-  // De phan biet seek tu code (onPlayPauseVideo) va seek tu nguoi dung (click vao video)
-  const isSeekingByCodeRef = useRef(false);
-
   const itemRefsRef = useRef<Record<string, HTMLDivElement | null>>({});
   const listScrollRef = useRef<HTMLDivElement | null>(null);
 
   // ============================================================
-  // STATE — play / loop
+  // STATE — play / loop & Commands (Dùng chung cho cả Audio và Video)
   // ============================================================
 
   const [playStates, setPlayStates] = useState<Record<string, boolean>>({});
   const [loopStates, setLoopStates] = useState<Record<string, boolean>>({});
 
-  // Lenh gui xuong AudioLayout — dung {data, ts} pattern:
-  // moi lan ts thay doi thi AudioLayout phat lai, tranh stale isPlaying
+  // Lệnh điều khiển dạng {data, ts} truyền xuống AudioLayout / VideoLayout
   const [playCommand, setPlayCommand] = useState<{
     itemId: string; startTime: string; endTime: string; ts: number;
   } | null>(null);
@@ -146,7 +121,7 @@ const ContentComponent = ({
   const [pauseCommand, setPauseCommand] = useState<number | null>(null);
 
   // ============================================================
-  // STATE — active item (1 item duy nhat duoc highlight)
+  // STATE — active item
   // ============================================================
 
   const [activeItemId, setActiveItemId] = useState<string | null>(null);
@@ -156,20 +131,13 @@ const ContentComponent = ({
   const activeSourceRef = useRef<'audio' | 'video' | null>(null);
 
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
-  const isVideoPlayingRef = useRef(false);
 
   const setActive = useCallback((id: string | null, source: 'audio' | 'video' | null) => {
-    // Ep String de tranh type mismatch khi API tra ve number thay vi string
     const normalizedId = id !== null ? String(id) : null;
     activeItemIdRef.current = normalizedId;
     activeSourceRef.current = source;
     setActiveItemId(normalizedId);
     setActiveSource(source);
-  }, []);
-
-  const setVideoPlaying = useCallback((val: boolean) => {
-    isVideoPlayingRef.current = val;
-    setIsVideoPlaying(val);
   }, []);
 
   // ============================================================
@@ -202,216 +170,115 @@ const ContentComponent = ({
   const [notifApi, notifContextHolder] = notification.useNotification();
 
   // ============================================================
-  // SCROLL — cuon item active len dau vung nhin thay
-  // Bu offset 120px cho header + toolbar co dinh phia tren
-  // ============================================================
-
-  const scrollToActiveItem = useCallback((itemId: string) => {
-    const el = itemRefsRef.current[itemId];
-    if (!el) return;
-    const top = el.getBoundingClientRect().top + window.scrollY - 250;
-    window.scrollTo({ top, behavior: 'smooth' });
-  }, []);
-
-
-  // ============================================================
   // EFFECTS
   // ============================================================
-  const loopStatesRef = useRef(loopStates);
 
-  useEffect(() => {
-    loopStatesRef.current = loopStates;
-  }, [loopStates]);
-  // Khoi tao play/loop state khi contents thay doi
+  // Khởi tạo play/loop state khi contents thay đổi
   useEffect(() => {
     const play: Record<string, boolean> = {};
     const loop: Record<string, boolean> = {};
     contents.forEach((item) => {
-      play[item.id] = false;
-      loop[item.id] = false;
+      const idStr = String(item.id);
+      play[idStr] = false;
+      loop[idStr] = false;
     });
     setPlayStates(play);
     setLoopStates(loop);
   }, [contents]);
 
-  // Reset khi audio ket thuc (isPlaying tu parent - giu de tuong thich video flow)
-  const prevIsPlayingRef = useRef(false);
-  useEffect(() => {
-    prevIsPlayingRef.current = isPlaying;
-  }, [isPlaying]);
-
-  // Listener timeupdate cho video — attach sau khi VideoLayout mount
-  // Attach timeupdate listener truc tiep vao videoRef khi co the
-  // Dung useEffect don gian, khong can setTimeout
-  useEffect(() => {
-    if (viewMode !== 'video') return;
-    const video = videoRef.current;
-    if (!video) return;
-
-    // Khi nguoi dung tu seek tren video controls (khong qua onPlayPauseVideo):
-    // reset end = 0 va itemId = '' de timeupdate khong dung video nua,
-    // video se chay tu vi tri seek den het file
-    const onSeeking = () => {
-      if (isSeekingByCodeRef.current) return;
-      videoSegmentRef.current = { start: 0, end: 0, itemId: '' };
-      setActive(null, null);
-      setVideoPlaying(true);
-    };
-
-    const onTimeUpdate = () => {
-      const t = video.currentTime;
-      const { start, end, itemId } = videoSegmentRef.current;
-
-      // Dung / loop khi den endTime (chi khi end > 0, tuc la dang phat theo segment)
-      if (end > 0 && t >= end) {
-        if (loopStatesRef.current[itemId]) {
-          video.pause();
-          video.currentTime = start;
-          void video.play();
-        } else {
-          video.pause();
-          setActive(null, null);
-          setVideoPlaying(false);
-        }
-        return;
-      }
-
-      // Highlight cau hien tai theo currentTime — KHONG scroll tu dong
-      const found = findActiveItem(contents, t);
-      if (found && activeItemIdRef.current !== String(found.id)) {
-        setActive(String(found.id), 'video');
-        // scrollToActiveItem(String(found.id)); // Tat scroll tu dong khi video chuyen cau
-      }
-    };
-
-    // Khi video tu play lai (vi du sau khi nguoi dung bam play tren controls)
-    const onPlay = () => {
-      if (!isSeekingByCodeRef.current) {
-        setVideoPlaying(true);
-      }
-    };
-
-    const onPause = () => {
-      if (!isSeekingByCodeRef.current) {
-        setVideoPlaying(false);
-      }
-    };
-
-    video.addEventListener('seeking', onSeeking);
-    video.addEventListener('timeupdate', onTimeUpdate);
-    video.addEventListener('play', onPlay);
-    video.addEventListener('pause', onPause);
-    return () => {
-      video.removeEventListener('seeking', onSeeking);
-      video.removeEventListener('timeupdate', onTimeUpdate);
-      video.removeEventListener('play', onPlay);
-      video.removeEventListener('pause', onPause);
-    };
-  }, [viewMode, videoMounted, contents, setActive, setVideoPlaying, scrollToActiveItem]);
-
   // ============================================================
-  // VIDEO HANDLER
+  // HANDLERS (Audio & Video đồng bộ)
   // ============================================================
 
+  // 1. VIDEO PLAY/PAUSE HANDLER (Đồng bộ giống Audio)
   const onPlayPauseVideo = useCallback((itemId: string, startTime: string, endTime: string) => {
-    const video = videoRef.current;
-    if (!video) return;
+    const itemIdStr = String(itemId);
+    const isCurrentlyPlaying = playStates[itemIdStr] ?? false;
 
-    const alreadyPlaying =
-      activeItemIdRef.current === itemId &&
-      activeSourceRef.current === 'video' &&
-      isVideoPlayingRef.current;
-
-    if (alreadyPlaying) {
-      video.pause();
+    if (isCurrentlyPlaying) {
+      // Đang phát item này -> tạm dừng
+      setPlayStates((prev) => Object.fromEntries(Object.keys(prev).map((k) => [k, false])));
       setActive(null, null);
-      setVideoPlaying(false);
+      setIsVideoPlaying(false);
+      setPauseCommand(Date.now());
       return;
     }
 
-    // Dung audio neu dang chay
+    // Nếu audio đang chạy -> Dừng audio
     if (activeSourceRef.current === 'audio') {
-      setPlayStates((prev) => Object.fromEntries(Object.keys(prev).map((k) => [k, false])));
-      setLoopStates((prev) => Object.fromEntries(Object.keys(prev).map((k) => [k, false])));
       handlePauseAudio(true);
     }
 
-    const start = parseTimeToSeconds(startTime);
-    const end = parseTimeToSeconds(endTime);
+    // Cập nhật state & phát command cho Video
+    setPlayStates((prev) => Object.fromEntries(Object.keys(prev).map((k) => [k, k === itemIdStr])));
+    setLoopStates((prev) => ({ ...prev, [itemIdStr]: false }));
+    setActive(itemIdStr, 'video');
+    setIsVideoPlaying(true);
+    setPlayCommand({ itemId: itemIdStr, startTime, endTime, ts: Date.now() });
+  }, [playStates, setActive, handlePauseAudio]);
 
-    videoSegmentRef.current = { start, end, itemId };
+  // Callback từ VideoLayout khi video dừng/hết đoạn
+  const onVideoStop = useCallback(() => {
+    setPlayStates((prev) => Object.fromEntries(Object.keys(prev).map((k) => [k, false])));
+    setLoopStates((prev) => Object.fromEntries(Object.keys(prev).map((k) => [k, false])));
+    setActive(null, null);
+    setIsVideoPlaying(false);
+  }, [setActive]);
 
-    // Danh dau dang seek tu code de onSeeking listener khong reset segment
-    isSeekingByCodeRef.current = true;
-    video.currentTime = start;
-    isSeekingByCodeRef.current = false;
+  // Callback từ VideoLayout khi timeupdate phát hiện câu mới
+  const onVideoActiveItemChange = useCallback((id: string) => {
+    if (activeItemIdRef.current === id) return;
+    setActive(id, 'video');
+    setPlayStates((prev) =>
+      Object.fromEntries(Object.keys(prev).map((k) => [k, k === id]))
+    );
+  }, [setActive]);
 
-    video.play();
-    setActive(itemId, 'video');
-    setVideoPlaying(true);
-    // requestAnimationFrame(() => scrollToActiveItem(itemId)); // Tat scroll tu dong khi click item
-  }, [handlePauseAudio, setActive, setVideoPlaying]);
-
-  // ============================================================
-  // AUDIO HANDLER
-  // ============================================================
-
+  // 2. AUDIO PLAY/PAUSE HANDLER
   const onPlayPauseAudio = useCallback((itemId: string, startTime: string, endTime: string) => {
-    const isCurrentlyPlaying = playStates[itemId] ?? false;
+    const itemIdStr = String(itemId);
+    const isCurrentlyPlaying = playStates[itemIdStr] ?? false;
 
     if (isCurrentlyPlaying) {
-      // Dang phat item nay -> dung lai
       setPlayStates((prev) => Object.fromEntries(Object.keys(prev).map((k) => [k, false])));
       setActive(null, null);
       setPauseCommand(Date.now());
       return;
     }
 
-    // Dung video neu dang chay
-    const video = videoRef.current;
-    if (isVideoPlayingRef.current && video) {
-      video.pause();
-      setVideoPlaying(false);
+    // Dừng video nếu đang chạy
+    if (activeSourceRef.current === 'video') {
+      setIsVideoPlaying(false);
+      setPauseCommand(Date.now());
     }
 
-    // Gui lenh phat xuong AudioLayout
-    setPlayStates((prev) => Object.fromEntries(Object.keys(prev).map((k) => [k, k === itemId])));
-    setLoopStates((prev) => ({ ...prev, [itemId]: false }));
-    setActive(itemId, 'audio');
-    setPlayCommand({ itemId, startTime, endTime, ts: Date.now() });
-    // requestAnimationFrame(() => scrollToActiveItem(itemId)); // Tat scroll tu dong khi click item
-  }, [playStates, setActive, setVideoPlaying]);
+    setPlayStates((prev) => Object.fromEntries(Object.keys(prev).map((k) => [k, k === itemIdStr])));
+    setLoopStates((prev) => ({ ...prev, [itemIdStr]: false }));
+    setActive(itemIdStr, 'audio');
+    setPlayCommand({ itemId: itemIdStr, startTime, endTime, ts: Date.now() });
+  }, [playStates, setActive]);
 
-  // Callback tu AudioLayout: audio het segment -> reset trang thai
   const onAudioStop = useCallback(() => {
     setPlayStates((prev) => Object.fromEntries(Object.keys(prev).map((k) => [k, false])));
     setLoopStates((prev) => Object.fromEntries(Object.keys(prev).map((k) => [k, false])));
     setActive(null, null);
   }, [setActive]);
 
-  // Callback tu AudioLayout: timeupdate detect cau moi -> highlight + cap nhat playStates
-  // KHONG scroll de tranh giat khi audio tu dong chuyen cau
   const onAudioActiveItemChange = useCallback((id: string) => {
     if (activeItemIdRef.current === id) return;
     setActive(id, 'audio');
     setPlayStates((prev) =>
       Object.fromEntries(Object.keys(prev).map((k) => [k, k === id]))
     );
-    // scrollToActiveItem(id); // Tat scroll tu dong khi chuyen cau
   }, [setActive]);
 
-  // ============================================================
-  // LOOP HANDLER
-  // ============================================================
-
+  // 3. LOOP HANDLER (Chung cho cả Audio & Video)
   const onToggleLoop = useCallback((itemId: string, startTime: string, endTime: string) => {
+    const itemIdStr = String(itemId);
     setLoopStates((prev) => {
-      const newVal = !prev[itemId];
-      // Cap nhat ref dong bo de video timeupdate listener doc duoc ngay
-      loopStatesRef.current = { ...prev, [itemId]: newVal };
-      // Gui lenh loop xuong AudioLayout (cho audio mode)
-      setLoopCommand({ itemId, startTime, endTime, isLoop: newVal, ts: Date.now() });
-      return { ...prev, [itemId]: newVal };
+      const newVal = !prev[itemIdStr];
+      setLoopCommand({ itemId: itemIdStr, startTime, endTime, isLoop: newVal, ts: Date.now() });
+      return { ...prev, [itemIdStr]: newVal };
     });
   }, []);
 
@@ -471,7 +338,6 @@ const ContentComponent = ({
     };
   }, [handleGetMeaning]);
 
-  // Dong tooltip khi nguoi dung click ra ngoai vung boi
   useEffect(() => {
     const handleClickOutside = () => {
       if (window.getSelection()?.toString().trim() === '') {
@@ -541,13 +407,13 @@ const ContentComponent = ({
       const values = await insertForm.validateFields();
       const viList = values.viList.map((it: { vi: string }) => it.vi?.trim()).filter(Boolean);
       if (!viList.length) {
-        insertForm.setFields([{ name: ['viList', 0, 'vi'], errors: ['Vui long nhap it nhat 1 nghia'] }]);
+        insertForm.setFields([{ name: ['viList', 0, 'vi'], errors: ['Vui lòng nhập ít nhất 1 nghĩa'] }]);
         return;
       }
       setInsertLoading(true);
       await insertWord(values.eng.trim(), viList);
       notifApi.success({
-        message: 'Them tu thanh cong',
+        message: 'Thêm từ thành công',
         placement: 'topRight',
         duration: 3,
         style: { backgroundColor: '#f6ffed', border: '1px solid #b7eb8f' }
@@ -556,7 +422,7 @@ const ContentComponent = ({
     } catch (e: any) {
       if (e?.errorFields) return;
       notifApi.error({
-        message: 'Them tu that bai',
+        message: 'Thêm từ thất bại',
         description: e.message,
         placement: 'topRight',
         duration: 4,
@@ -568,7 +434,7 @@ const ContentComponent = ({
   };
 
   // ============================================================
-  // SHARED PROPS CHO LAYOUT COMPONENTS
+  // SHARED PROPS
   // ============================================================
 
   const commonItemProps = {
@@ -588,7 +454,6 @@ const ContentComponent = ({
   // ============================================================
 
   const renderLayout = () => {
-    // console.log('[ContentComponent] renderLayout viewMode=', viewMode, 'contents=', contents.length, 'sharedVideoPath=', sharedVideoPath);
     switch (viewMode) {
       case 'video':
         if (!sharedVideoPath) return renderAudioLayout();
@@ -599,11 +464,17 @@ const ContentComponent = ({
             videoPath={sharedVideoPath}
             volumeEngName={volumeEngName}
             volumeViName={volumeViName}
-            videoRef={videoRefCallback}
+            videoRef={videoRef}
             listScrollRef={listScrollRef}
+            playStates={playStates}
             loopStates={loopStates}
             onPlayPauseVideo={onPlayPauseVideo}
             onToggleLoop={onToggleLoop}
+            onActiveItemChange={onVideoActiveItemChange}
+            onVideoStop={onVideoStop}
+            playCommand={playCommand}
+            loopCommand={loopCommand}
+            pauseCommand={pauseCommand}
           />
         );
       case 'audio':
@@ -656,29 +527,29 @@ const ContentComponent = ({
       {renderLayout()}
 
       <Modal
-        title="Them tu moi" open={insertModalOpen} onCancel={handleCancelInsert}
+        title="Thêm từ mới" open={insertModalOpen} onCancel={handleCancelInsert}
         footer={<div style={{ textAlign: 'center' }}><Space><Button
-          onClick={handleCancelInsert}>Huy</Button><Button type="primary" loading={insertLoading}
-            onClick={handleInsert}>Them moi</Button></Space>
+          onClick={handleCancelInsert}>Hủy</Button><Button type="primary" loading={insertLoading}
+            onClick={handleInsert}>Thêm mới</Button></Space>
         </div>}
       >
         <Form form={insertForm} layout="vertical">
-          <Form.Item label="Tu tieng Anh" name="eng"
-            rules={[{ required: true, message: 'Vui long nhap tu tieng Anh' }]}>
-            <Input placeholder="Nhap tu tieng Anh..." />
+          <Form.Item label="Từ tiếng Anh" name="eng"
+            rules={[{ required: true, message: 'Vui lòng nhập từ tiếng Anh' }]}>
+            <Input placeholder="Nhập từ tiếng Anh..." />
           </Form.Item>
           <Form.List name="viList" initialValue={[{ vi: '' }]}>
             {(fields, { add, remove }) => (<>
               {fields.map((field, index) => (
-                <Form.Item key={field.key} label={index === 0 ? 'Nghia tieng Viet' : ''}
+                <Form.Item key={field.key} label={index === 0 ? 'Nghĩa tiếng Việt' : ''}
                   required={index === 0}>
                   <div style={{ display: 'flex', gap: 8 }}>
                     <Form.Item key={field.key} name={[field.name, 'vi']} noStyle
                       rules={index === 0 ? [{
                         required: true,
-                        message: 'Vui long nhap nghia'
+                        message: 'Vui lòng nhập nghĩa'
                       }] : []}>
-                      <Input placeholder={`Nghia ${index + 1}...`} style={{ flex: 1 }} />
+                      <Input placeholder={`Nghĩa ${index + 1}...`} style={{ flex: 1 }} />
                     </Form.Item>
                     {fields.length > 1 && <MinusCircleOutlined onClick={() => remove(field.name)}
                       style={{
@@ -689,8 +560,7 @@ const ContentComponent = ({
                   </div>
                 </Form.Item>
               ))}
-              <Form.Item><Button type="dashed" onClick={() => add({ vi: '' })} icon={<PlusOutlined />} block>Them
-                nghia</Button></Form.Item>
+              <Form.Item><Button type="dashed" onClick={() => add({ vi: '' })} icon={<PlusOutlined />} block>Thêm nghĩa</Button></Form.Item>
             </>)}
           </Form.List>
         </Form>

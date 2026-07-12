@@ -105,13 +105,13 @@ const ContentItem = React.memo(({
 
         <Space className="button-group">
           {/* Nut video — chi hien o Video Mode */}
-          {showVideoButton && item.video && (
+          {showVideoButton && (
             <Button
               type="link"
               icon={
-                isActive && activeSource === 'video' && isVideoPlaying
+                isVideoPlaying
                   ? <PauseOutlined style={{ color: '#1677ff' }} />
-                  : <VideoCameraOutlined />
+                  : <PlayCircleOutlined />
               }
               onClick={(e) => {
                 e.stopPropagation();
