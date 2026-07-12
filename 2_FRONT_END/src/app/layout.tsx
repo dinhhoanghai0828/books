@@ -1,7 +1,12 @@
 'use client';
-import HeaderComponent from '@/components/Header/HeaderComponent';
+import Header from '@/components/common/Header/Header';
 import { usePathname } from 'next/navigation';
 import './globals.css';
+
+// ============================================================
+// ROOT LAYOUT
+// Layout chinh cua ung dung, quan ly header va cac trang con
+// ============================================================
 
 export default function RootLayout({
   children,
@@ -14,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {showHeader && <HeaderComponent />}
+        {showHeader && <Header />}
         {children}
       </body>
     </html>
