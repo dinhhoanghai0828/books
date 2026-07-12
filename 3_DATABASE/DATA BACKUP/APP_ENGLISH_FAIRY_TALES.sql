@@ -1,7 +1,7 @@
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	/* (UUID(),'english-fairy-tales-1','An Eternal Winter','Mùa đông vĩnh cửu','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_001.mp3',NULL,'00:00:05.300','00:15:11.000','english-fairy-tales','YES',1) */
 	('Once upon a time, far away at the foot of a hill, in a humble farming village, there lived a jovial young girl by the name of Elsa','Ngày xửa ngày xưa, xa xa dưới chân núi nọ, ở một ngôi làng thuần nông bình thường, có một cô gái trẻ vui tính tên là Elsa','00:00:10.000','00:00:20.560','english-fairy-tales-1'),
-	('She lived with her foster family, but Elsa didn\'t know that','Cô sống cùng cha mẹ nuôi, nhưng Elsa không hề hay biết','00:00:20.560','00:00:24.970','english-fairy-tales-1'),
+	('She lived with her foster family, but Elsa didn\'t know that','Cô sống cùng cha mẹ nuôi, nhưng Elsa không hề hay biết','00:00:20.560','00:00:24.971','english-fairy-tales-1'),
 	('Father, look at our mustaches','Cha ơi, nhìn râu của bọn con này','00:00:30.100','00:00:34.000','english-fairy-tales-1'),
 	('Thick, curly, and grand','Rậm, xoăn và hoành tráng','00:00:34.480','00:00:38.000','english-fairy-tales-1'),
 	('Alright, you two, now go','Được rồi, hai đứa, giờ thì đi thôi','00:00:45.120','00:00:48.000','english-fairy-tales-1'),

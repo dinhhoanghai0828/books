@@ -240,7 +240,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Surrounding me was every round of applause, every boisterous cheer of the entire audience below','Vây quanh tôi là từng tràng vỗ tay, từng tiếng reo hò náo nhiệt của toàn bộ khán giả bên dưới','00:00:12.100','00:00:18.820','life-diary-animated-2'),
 	('In the crowd, I could still see my father\'s proud eyes and radiant face','Lẫn trong đám đông, tôi vẫn có thể nhìn ra được ánh mắt đầy tự hào và gương mặt rạng rỡ của bố tôi','00:00:19.000','00:00:23.600','life-diary-animated-2'),
 	('I raised the trophy in my hand and waved to my father','Tôi giơ cao chiếc cúp trong tay vẫy chào bố','00:00:23.700','00:00:27.200','life-diary-animated-2'),
-	('I\'m Lisa, 15 years old','Tôi là Lisa, 15 tuổi','00:00:27.500','00:00:29.950','life-diary-animated-2'),
+	('I\'m Lisa, 15 years old','Tôi là Lisa, 15 tuổi','00:00:27.500','00:00:29.500','life-diary-animated-2'),
 	('I just won the Miss City Volunteer Award','Tôi vừa giành được giải hoa khôi thiện nguyện toàn thành phố','00:00:30.000','00:00:32.400','life-diary-animated-2'),
 	('Please like, subscribe to this channel and congratulate me','Hãy thích, đăng ký kênh này và cùng chúc mừng tôi nhé','00:00:32.500','00:00:36.500','life-diary-animated-2'),
 	('I want to thank my father','Tôi muốn cảm ơn bố mình','00:00:36.650','00:00:38.900','life-diary-animated-2'),
