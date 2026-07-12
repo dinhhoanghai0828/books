@@ -69,10 +69,36 @@ const HomePage = () => {
   }, [searchValueEn, searchValueVi, currentPage, pageSize]);
 
   // Cap nhat tu khoa tim kiem va reset ve trang dau
-  const handleSearch = (searchEn: string, searchVi: string) => {
-    setSearchValueEn(searchEn.trim());
-    setSearchValueVi(searchVi.trim());
+  const handleSearch = async (searchEn: string, searchVi: string) => {
+    const trimmedEn = searchEn.trim();
+    const trimmedVi = searchVi.trim();
+    setSearchValueEn(trimmedEn);
+    setSearchValueVi(trimmedVi);
     setCurrentPage(1);
+
+    // Gọi API ngay lập tức để tìm kiếm lại ngay cả khi từ khóa không đổi
+    NProgress.start();
+    try {
+      const response = await getContentSearch(trimmedEn, trimmedVi, 1, pageSize);
+      setContents(response.data || []);
+      setTotalItems(response.totalElements || 0);
+    } catch (error) {
+      console.error('Loi khi lay noi dung:', error);
+    } finally {
+      NProgress.done();
+    }
+
+    // Cập nhật highlight words
+    NProgress.start();
+    try {
+      const response = await getHighLightWords(trimmedEn, trimmedVi);
+      setHighlightedEnKeywords(response.map((item) => item.eng));
+      setHighlightedViKeywords(response.map((item) => item.vi));
+    } catch (error) {
+      console.error('Loi khi lay tu highlight:', error);
+    } finally {
+      NProgress.done();
+    }
   };
 
   // Cap nhat trang va kich thuoc trang khi nguoi dung thay doi phan trang
