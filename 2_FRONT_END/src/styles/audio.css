@@ -33,21 +33,27 @@
     transform: translateX(-50%);
   }
 }
-/* Khung bọc fixed dưới chân trang giống hệt react-h5-audio-player */
+/* Khung bọc fixed dưới chân trang (Đã thu gọn chiều ngang) */
 .h5-clone-wrapper {
   position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  bottom: 16px; /* Cách đáy màn hình một chút cho đẹp */
+  left: 50%;
+  transform: translateX(-50%); /* Căn giữa màn hình */
   z-index: 1000;
   background-color: #fff;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15);
-  padding: 10px 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 12px 20px;
+  border-radius: 16px; /* Bo góc xung quanh */
+  border: 1px solid #f0f0f0;
+
+  /* ĐIỀU CHỈNH CHIỀU NGANG Ở ĐÂY */
+  width: 90%;          /* Mặc định chiếm 90% màn hình */
+  max-width: 650px;    /* Giới hạn tối đa 650px trên màn hình máy tính (có thể chỉnh xuống 550px nếu muốn nhỏ nữa) */
+  box-sizing: border-box;
 }
 
 .h5-clone-container {
-  max-width: 1100px;
-  margin: 0 auto;
+  width: 100%;
   display: flex;
   align-items: center;
   gap: 16px;
@@ -71,14 +77,14 @@
   flex: 1;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .h5-time {
   font-size: 13px;
   color: #666;
   font-weight: 500;
-  min-width: 40px;
+  min-width: 38px;
 }
 
 /* Slider giả lập màu da cam chuẩn của react-h5-audio-player */
@@ -99,7 +105,7 @@
 .h5-controls-right {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .h5-volume-group {
@@ -115,13 +121,20 @@
   color: #fff !important;
 }
 
-/* Responsive màn hình nhỏ */
-@media (max-width: 768px) {
-  .h5-clone-container {
-    flex-wrap: wrap;
-  }
-  .h5-progress-container {
+/* Responsive cho Mobile: Tràn viền và sát đáy hơn */
+@media (max-width: 576px) {
+  .h5-clone-wrapper {
     width: 100%;
-    order: 3;
+    bottom: 0;
+    border-radius: 16px 16px 0 0; /* Chỉ bo góc trên */
+    padding: 10px 14px;
+  }
+
+  .h5-clone-container {
+    gap: 8px;
+  }
+
+  .h5-volume-group .ant-slider {
+    display: none; /* Ẩn bớt slider volume trên điện thoại nhỏ để tránh tràn */
   }
 }
