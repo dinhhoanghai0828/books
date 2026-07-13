@@ -3,6 +3,7 @@ import {
   EditOutlined,
   PauseOutlined,
   PlayCircleOutlined,
+  PlusOutlined,
   RetweetOutlined,
   RollbackOutlined,
   VideoCameraOutlined,
@@ -31,6 +32,7 @@ export interface ContentItemProps {
   onToggleLoop: (id: string, startTime: string, endTime: string) => void;
   onGetMeaning: () => void;
   onEdit: (item: ContentType) => void;
+  onInsertWord: () => void;
   itemRef: (el: HTMLDivElement | null) => void;
 }
 
@@ -63,6 +65,7 @@ const ContentItem = React.memo(({
   onToggleLoop,
   onGetMeaning,
   onEdit,
+  onInsertWord,
   itemRef,
 }: ContentItemProps) => {
   // Nut loop duoc phep nhan khi:
@@ -153,6 +156,16 @@ const ContentItem = React.memo(({
             onClick={(e) => {
               e.stopPropagation();
               onEdit(item);
+            }}
+          />
+
+          {/* Nut them tu moi */}
+          <Button
+            type="link"
+            icon={<PlusOutlined />}
+            onClick={(e) => {
+              e.stopPropagation();
+              onInsertWord();
             }}
           />
         </Space>

@@ -538,6 +538,7 @@ const ContentComponent = ({
     onGetMeaning: handleGetMeaning,
     renderTooltip,
     onEdit: handleOpenEdit,
+    onInsertWord: handleOpenInsert,
   };
 
   // ============================================================

@@ -38,6 +38,7 @@ export interface AudioLayoutProps {
   loopCommand: { itemId: string; startTime: string; endTime: string; isLoop: boolean; ts: number } | null;
   pauseCommand: number | null;
   onEdit: (item: ContentType) => void;
+  onInsertWord: () => void;
   onAudioPlayStateChange?: (isPlayingAudio: boolean, currentActiveId: string | null) => void;
 }
 
@@ -84,6 +85,7 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
   loopCommand,
   pauseCommand,
   onEdit,
+  onInsertWord,
   onAudioPlayStateChange,
 }) => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -306,6 +308,7 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
             onToggleLoop={onToggleLoop}
             onGetMeaning={onGetMeaning}
             onEdit={onEdit}
+            onInsertWord={onInsertWord}
             itemRef={(el) => { itemRefsRef.current[String(item.id)] = el; }}
           />
         ))
