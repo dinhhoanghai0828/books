@@ -18,6 +18,7 @@ public class VolumeAdapterImpl implements VolumeAdapter {
     private static final Logger logger = LoggerFactory.getLogger(VolumeAdapterImpl.class);
     private static final String SQL_GET_VOLUMES = "SELECT * FROM VOLUMES";
     private static final String SQL_GET_VOLUME_DETAIL_BY_SLUG = "SELECT * FROM VOLUMES WHERE SLUG = ?";
+    private static final String SQL_UPDATE_VOLUME = "UPDATE VOLUMES SET ENG = ?, VI = ?, START_TIME = ?, END_TIME = ?, CHECKED = ? WHERE ID = ?";
 
     @Override
     public List<Volume> getVolumes() throws Exception {
@@ -91,6 +92,30 @@ public class VolumeAdapterImpl implements VolumeAdapter {
             DBUtils.closeAll(thisMethod, con, pstmt, rs);
         }
         return volume;
+    }
+
+    @Override
+    public boolean updateVolume(Volume volume) throws Exception {
+        String thisMethod = "VolumeAdapterImpl.updateVolume";
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        try {
+            con = DBUtils.getConnection(thisMethod, true, Connection.TRANSACTION_READ_COMMITTED);
+            pstmt = DBUtils.prepareStatement(con, SQL_UPDATE_VOLUME);
+            pstmt.setString(1, volume.getEng());
+            pstmt.setString(2, volume.getVi());
+            pstmt.setString(3, volume.getStartTime());
+            pstmt.setString(4, volume.getEndTime());
+            pstmt.setString(5, volume.getChecked());
+            pstmt.setString(6, volume.getId());
+            int result = pstmt.executeUpdate();
+            return result > 0;
+        } catch (Exception ex) {
+            logger.error(ex.getMessage());
+            throw ex;
+        } finally {
+            DBUtils.closeAll(thisMethod, con, pstmt, null);
+        }
     }
 
 }

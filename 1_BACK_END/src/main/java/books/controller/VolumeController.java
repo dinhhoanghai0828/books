@@ -45,4 +45,18 @@ public class VolumeController {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
     }
+
+    @PostMapping("/update")
+    public ResponseEntity<?> updateVolume(@RequestBody VolumeDTO volumeDTO) {
+        try {
+            boolean success = volumeService.updateVolume(volumeDTO);
+            if (success) {
+                return new ResponseEntity<>(HttpStatus.OK);
+            } else {
+                return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+            }
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+    }
 }

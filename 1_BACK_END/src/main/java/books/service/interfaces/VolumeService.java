@@ -11,4 +11,6 @@ public interface VolumeService {
     List<VolumeDTO> getVolumes() throws Exception;
 
     VolumeDTO getVolumeDetailBySlug(String slug) throws Exception;
+
+    boolean updateVolume(VolumeDTO volumeDTO) throws Exception;
 }

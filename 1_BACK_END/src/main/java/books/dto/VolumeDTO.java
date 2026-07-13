@@ -3,6 +3,7 @@ package books.dto;
 import java.util.Date;
 
 public class VolumeDTO {
+    private String id;
     private String uuid;
     private String slug;
     private String eng;
@@ -19,6 +20,14 @@ public class VolumeDTO {
     private String createBy;
     private String updatedBy;
     private Long number;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getUuid() {
         return uuid;

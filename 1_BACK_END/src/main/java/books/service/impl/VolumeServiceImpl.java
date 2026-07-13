@@ -35,4 +35,10 @@ public class VolumeServiceImpl implements VolumeService {
         Volume volume = volumeAdapter.getVolumeDetailBySlug(slug);
         return modelMapper.map(volume, VolumeDTO.class);
     }
+
+    @Override
+    public boolean updateVolume(VolumeDTO volumeDTO) throws Exception {
+        Volume volume = modelMapper.map(volumeDTO, Volume.class);
+        return volumeAdapter.updateVolume(volume);
+    }
 }
