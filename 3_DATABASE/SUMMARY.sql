@@ -432,11 +432,11 @@ INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,CHE
 	(UUID(),'english-fairy-tales-2','The Two Princesses','Hai nàng công chúa','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_002.mp3','null','00:00:04.830','00:13:07.900','english-fairy-tales','YES',2),
 	(UUID(),'english-fairy-tales-3','Rosanella and the fickle Prince','Rosanella và hoàng tử hay thay đổi','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_003.mp3','null','00:00:04.830','00:13:07.820','english-fairy-tales','YES',3),
 	(UUID(),'english-fairy-tales-4','The gardener','Người làm vườn','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_004.mp3','null','00:00:05.600','00:15:51.170','english-fairy-tales','NO',4),
-	(UUID(),'english-fairy-tales-5','Sisterhood','Tình chị em','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_005.mp3','null','00:00:05.240','00:10:20.750','english-fairy-tales','YES',5),
-	(UUID(),'english-fairy-tales-6','Touch Wood','Chạm gỗ - May mẵn','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_006','null','null','null','english-fairy-tales','NO',6),
-	(UUID(),'english-fairy-tales-7','Mellidora','Mellidora','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_007','null','null','null','english-fairy-tales','NO',7),
-	(UUID(),'english-fairy-tales-8','Anansi and the Pot of Beans','Anansi và nồi đậu','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_008','null','null','null','english-fairy-tales','NO',8),
-	(UUID(),'english-fairy-tales-9','The shrew farmer','Người nông dân thông minh','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_009','null','null','null','english-fairy-tales','NO',9),
+	(UUID(),'english-fairy-tales-5','Sisterhood','Tình chị em','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_005.mp3','null','00:00:00.000','00:10:20.750','english-fairy-tales','YES',5),
+	(UUID(),'english-fairy-tales-6','Touch Wood','Chạm vào gỗ - May mắn','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_006.mp3','null','00:00:00.000','00:14:36.000','english-fairy-tales','NO',6),
+	(UUID(),'english-fairy-tales-7','Mellidora','Mellidora','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_007.mp3','null','null','null','english-fairy-tales','NO',7),
+	(UUID(),'english-fairy-tales-8','Anansi and the Pot of Beans','Anansi và nồi đậu','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_008.mp3','null','null','null','english-fairy-tales','NO',8),
+	(UUID(),'english-fairy-tales-9','The shrew farmer','Người nông dân thông minh','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_009.mp3','null','null','null','english-fairy-tales','NO',9),
 	(UUID(),'english-fairy-tales-10','Princess Rosette','Nàng công chúa Rosette','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_010.mp3','null','00:00:04.000','00:13:34.910','english-fairy-tales','NO',10),
 	(UUID(),'english-fairy-tales-11','The Sibling Menace','Mối Nguy Hiểm Của Anh Chị Em','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_011.mp3','null','00:00:04.000','00:13:34.910','english-fairy-tales','NO',11),
 	(UUID(),'english-fairy-tales-12','The Grateful Prince','Chàng hoàng tử luôn biết ơn','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_012.mp3','null','00:00:06.270.mp3','null','english-fairy-tales','NO',12),
@@ -515,9 +515,9 @@ INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,CHE
 	(UUID(),'esl-fast-beginner-1-18','A Lot of Ants','Rất nhiều con kiến','BEGINNER_01_ESL_FAST_CHILDREN_018.mp3','null','00:00:00.000','00:00:28.000','esl-fast-children-1','YES',18),
 	(UUID(),'esl-fast-beginner-1-19','Picking a Costume','Chọn trang phục','BEGINNER_01_ESL_FAST_CHILDREN_019.mp3','null','00:00:00.000','00:00:32.500','esl-fast-children-1','YES',19),
 	(UUID(),'esl-fast-beginner-1-20','Petting Zoo','Vườn thú cưng','BEGINNER_01_ESL_FAST_CHILDREN_020.mp3','null','00:00:00.000','00:00:40.000','esl-fast-children-1','YES',20),
-	(UUID(),'esl-fast-beginner-1-21','Mom is Mad','Mẹ đang tức giận','BEGINNER_01_ESL_FAST_CHILDREN_021.mp3','null','00:00:00.000','00:00:35.500','esl-fast-children-1','NO',21),
-	(UUID(),'esl-fast-beginner-1-22','Father\'s Day','Ngày của cha','BEGINNER_01_ESL_FAST_CHILDREN_022.mp3','null','00:00:00.000','00:00:00.000','esl-fast-children-1','NO',22),
-	(UUID(),'esl-fast-beginner-1-23','The Baby Sister','Em bé gái','BEGINNER_01_ESL_FAST_CHILDREN_023.mp3','null','00:00:00.000','00:00:00.000','esl-fast-children-1','NO',23),
+	(UUID(),'esl-fast-beginner-1-21','Mom is Mad','Mẹ đang tức giận','BEGINNER_01_ESL_FAST_CHILDREN_021.mp3','null','00:00:00.000','00:00:35.500','esl-fast-children-1','YES',21),
+	(UUID(),'esl-fast-beginner-1-22','Father\'s Day','Ngày của cha','BEGINNER_01_ESL_FAST_CHILDREN_022.mp3','null','00:00:00.000','00:00:39.000','esl-fast-children-1','YES',22),
+	(UUID(),'esl-fast-beginner-1-23','The Baby Sister','Em bé gái','BEGINNER_01_ESL_FAST_CHILDREN_023.mp3','null','00:00:00.000','00:00:37.000','esl-fast-children-1','YES',23),
 	(UUID(),'esl-fast-beginner-1-24','Sometimes You Lose','Đôi khi bạn thua','BEGINNER_01_ESL_FAST_CHILDREN_024.mp3','null','00:00:00.000','00:00:00.000','esl-fast-children-1','NO',24),
 	(UUID(),'esl-fast-beginner-1-25','A New Home','Ngôi nhà mới','BEGINNER_01_ESL_FAST_CHILDREN_025.mp3','null','00:00:00.000','00:00:00.000','esl-fast-children-1','NO',25),
 	(UUID(),'esl-fast-beginner-1-26','Chris and His Fish','Chris và những chú cá của cậu ấy','BEGINNER_01_ESL_FAST_CHILDREN_026.mp3','null','00:00:00.000','00:00:00.000','esl-fast-children-1','NO',26),
@@ -3457,11 +3457,14 @@ INSERT INTO `WORDS` (`ENG`,`VI`) VALUES
 	('awoke with a start','giật mình tỉnh giấc'),
 	('awoken','đánh thức'),
 	('babe','cưng'),
+	('babies','em bé'),
+	('babies','đứa trẻ'),
 	('baby','cưng'),
 	('baby','nhỏ'),
 	('baby','đứa bé'),
 	('baby','đứa trẻ'),
 	('baby sister','em gái bé bỏng'),
+	('baby sister','em gái nhỏ'),
 	('babysit','giữ'),
 	('babysit','trông'),
 	('bachelor','độc thân'),
@@ -3512,6 +3515,7 @@ INSERT INTO `WORDS` (`ENG`,`VI`) VALUES
 	('bags','hành lý'),
 	('bags','túi'),
 	('baker','thợ làm bánh'),
+	('bakes','nướng'),
 	('balance','cân bằng'),
 	('balance','cân đối'),
 	('balance','sự cân bằng'),
@@ -5663,6 +5667,7 @@ INSERT INTO `WORDS` (`ENG`,`VI`) VALUES
 	('diagnoses','chẩn đoán'),
 	('diamond','kim cương'),
 	('diamonds','kim cương'),
+	('diaper','tã'),
 	('diary','nhật ký'),
 	('dictionary','từ điển'),
 	('did','làm'),
@@ -6812,9 +6817,14 @@ INSERT INTO `WORDS` (`ENG`,`VI`) VALUES
 	('feeble','yếu ớt'),
 	('feeble','yếu đi'),
 	('feeble','yếu đuối'),
+	('feed','ăn'),
+	('feed','cho'),
 	('feed','cho ăn'),
 	('feeding','ăn'),
 	('feeding','cho'),
+	('feeds','ăn'),
+	('feeds','cho'),
+	('feeds','cho ăn'),
 	('feel','cảm giác'),
 	('feel','cảm nhận'),
 	('feel','cảm thấy'),
@@ -11831,6 +11841,8 @@ INSERT INTO `WORDS` (`ENG`,`VI`) VALUES
 	('peasant','nông dân'),
 	('pebble','viên sỏi'),
 	('pebble','viên đá'),
+	('peek-a-boo','ú òa'),
+	('peekaboo','ú òa'),
 	('peeking','nhìn trộm'),
 	('pen','bút'),
 	('pen','cây bút'),
@@ -16951,6 +16963,10 @@ INSERT INTO `WORDS` (`ENG`,`VI`) VALUES
 	('wins office','đắc cử'),
 	('winter','mùa đông'),
 	('winter break','kỳ nghỉ đông'),
+	('wipe','lau'),
+	('wipe','lau sạch'),
+	('wipes','lau'),
+	('wipes','lau sạch'),
 	('wisdom','khôn ngoan'),
 	('wisdom','sự khôn ngoan'),
 	('wisdom','sự thông thái'),
@@ -25799,7 +25815,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And that is how it shall be known all over the country','Và đó là cách để khu vườn sẽ được biết đến trên toàn vương quốc','00:15:41.150','00:15:45.010','english-fairy-tales-4'),
 	('Finally, Larsen got the appreciation he deserved','Cuối cùng, Larsen cũng nhận được sự trân trọng mà anh xứng đáng được hưởng','00:15:46.650','00:15:51.170','english-fairy-tales-4'),
 
-	/* (UUID(),'english-fairy-tales-5','Sisterhood','Tình chị em','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_005.mp3',NULL,'00:00:05.240','00:10:20.750','english-fairy-tales','YES',5) */
+	/* (UUID(),'english-fairy-tales-5','Sisterhood','Tình chị em','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_005.mp3',NULL,'00:00:00.000','00:10:20.750','english-fairy-tales','YES',5) */
 	('Sisterhood','Tình chị em','00:00:05.240','00:00:06.600','english-fairy-tales-5'),
 	('Once upon a time, in a kingdom not so far away, there lived a widowed king with his beautiful young daughter, Princess Anne','Ngày xửa ngày xưa, trong một vương quốc không xa lắm, có một vị vua góa vợ sống cùng với cô con gái nhỏ xinh đẹp của mình, Công chúa Anne','00:00:06.700','00:00:15.260','english-fairy-tales-5'),
 	('The king\'s heart was lonely, and he decided it was time to marry again','Trái tim của nhà vua luôn cô đơn, và ông quyết định đã đến lúc kết hôn lần nữa','00:00:15.680','00:00:20.480','english-fairy-tales-5'),
@@ -25939,7 +25955,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'english-fairy-tales-6','Touch Wood','Chạm gỗ - May mẵn','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_006',NULL,'null','null','english-fairy-tales','NO',6) */
+	/* (UUID(),'english-fairy-tales-6','Touch Wood','Chạm vào gỗ - May mắn','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_006',NULL,'00:00:00.000','00:14:36.000','english-fairy-tales','NO',6) */
 	('So so glad that the gloomy days are behind us. Touch Wood','Thật là mừng vì những ngày u ám đã đi qua. Chạm gỗ','null','null','english-fairy-tales-6'),
 	('Daddy, why did you do that?','Bố ơi, sao bố lại làm thế?','null','null','english-fairy-tales-6'),
 	('Do what little fella?','Làm gì cơ anh bạn nhỏ?','null','null','english-fairy-tales-6'),
@@ -39485,43 +39501,43 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'esl-fast-beginner-1-21','Mom is Mad','Mẹ đang tức giận','BEGINNER_01_ESL_FAST_CHILDREN_021.mp3',NULL,'00:00:00.000','00:00:35.500','esl-fast-children-1','NO',21) */
-	('Robert\'s room is messy','Phòng của Robert rất bừa bộn','00:00:00.460','00:00:03.340','esl-fast-beginner-1-21'),
-	('There is pizza under his bed','Có bánh pizza ở dưới gầm giường của cậu ấy','00:00:04.000','00:00:06.820','esl-fast-beginner-1-21'),
-	('There is glue on the wall','Có keo dính trên tường','00:00:07.340','00:00:10.040','esl-fast-beginner-1-21'),
-	('There is a pile of clothes','Có một đống quần áo chất thành đống','00:00:10.460','00:00:13.080','esl-fast-beginner-1-21'),
-	('There are toys on the floor','Đồ chơi nằm khắp sàn nhà','00:00:13.960','00:00:16.440','esl-fast-beginner-1-21'),
+	/* (UUID(),'esl-fast-beginner-1-21','Mom is Mad','Mẹ đang tức giận','BEGINNER_01_ESL_FAST_CHILDREN_021.mp3',NULL,'00:00:00.000','00:00:35.500','esl-fast-children-1','YES',21) */
+	('Robert\'s room is messy','Phòng của Robert rất bừa bộn','00:00:00.200','00:00:03.340','esl-fast-beginner-1-21'),
+	('There is pizza under his bed','Bánh pizza ở dưới gầm giường của cậu bé','00:00:03.600','00:00:06.820','esl-fast-beginner-1-21'),
+	('There is glue on the wall','Keo thì dính trên tường','00:00:07.340','00:00:10.040','esl-fast-beginner-1-21'),
+	('There is a pile of clothes','Có một đống quần áo','00:00:10.460','00:00:13.180','esl-fast-beginner-1-21'),
+	('There are toys on the floor','Đồ chơi nằm trên sàn nhà','00:00:13.960','00:00:16.440','esl-fast-beginner-1-21'),
 	('Robert does not care','Robert chẳng bận tâm','00:00:17.420','00:00:19.420','esl-fast-beginner-1-21'),
 	('He watches a television show','Cậu bé xem một chương trình truyền hình trên tivi','00:00:20.040','00:00:22.440','esl-fast-beginner-1-21'),
 	('His mom goes into his room','Mẹ cậu bé bước vào phòng','00:00:23.040','00:00:25.740','esl-fast-beginner-1-21'),
-	('She turns off the television','Bà tắt tivi đi','00:00:26.320','00:00:28.720','esl-fast-beginner-1-21'),
-	('She yells at him','Bà la mắng cậu bé','00:00:28.900','00:00:31.360','esl-fast-beginner-1-21'),
+	('She turns off the television','Bà ấy tắt tivi','00:00:26.320','00:00:28.720','esl-fast-beginner-1-21'),
+	('She yells at him','Bà ấy la mắng cậu bé','00:00:28.900','00:00:31.360','esl-fast-beginner-1-21'),
 	('He starts to clean his room','Cậu bé bắt đầu dọn dẹp phòng của mình','00:00:31.880','00:00:34.540','esl-fast-beginner-1-21'),
 
-	/* (UUID(),'esl-fast-beginner-1-22','Father\'s Day','Ngày của cha','BEGINNER_01_ESL_FAST_CHILDREN_022.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',22) */
+	/* (UUID(),'esl-fast-beginner-1-22','Father\'s Day','Ngày của cha','BEGINNER_01_ESL_FAST_CHILDREN_022.mp3',NULL,'00:00:00.000','00:00:39.000','esl-fast-children-1','YES',22) */
 	('Today is Father\'s Day','Hôm nay là Ngày của Cha','00:00:00.260','00:00:02.780','esl-fast-beginner-1-22'),
-	('Daniel surprises his father','Daniel tạo bất ngờ cho bố','00:00:03.000','00:00:05.680','esl-fast-beginner-1-22'),
+	('Daniel surprises his father','Daniel tạo bất ngờ cho bố mình','00:00:03.000','00:00:05.680','esl-fast-beginner-1-22'),
 	('He serves him breakfast','Cậu ấy mang bữa sáng đến cho bố','00:00:06.200','00:00:08.780','esl-fast-beginner-1-22'),
 	('There are eggs, bacon, and orange juice on the tray','Trên khay có trứng, thịt xông khói và nước cam','00:00:08.900','00:00:15.000','esl-fast-beginner-1-22'),
 	('Daniel\'s father is happy','Bố của Daniel rất vui','00:00:15.500','00:00:17.980','esl-fast-beginner-1-22'),
 	('Later, they go play tennis','Sau đó, hai bố con đi chơi quần vợt','00:00:18.500','00:00:21.900','esl-fast-beginner-1-22'),
 	('Daniel stands on one side','Daniel đứng một bên','00:00:22.800','00:00:25.400','esl-fast-beginner-1-22'),
-	('He swings the ball','Cậu ấy đánh bóng','00:00:25.900','00:00:27.520','esl-fast-beginner-1-22'),
-	('Daniel\'s father hits the ball back','Bố của Daniel đánh bóng lại','00:00:28.380','00:00:31.640','esl-fast-beginner-1-22'),
+	('He swings the ball','Cậu bé đánh bóng','00:00:25.900','00:00:27.520','esl-fast-beginner-1-22'),
+	('Daniel\'s father hits the ball back','Bố của Daniel đánh trả bóng lại','00:00:28.380','00:00:31.640','esl-fast-beginner-1-22'),
 	('Finally, they watch the sunset','Cuối cùng, họ ngắm hoàng hôn','00:00:32.100','00:00:35.220','esl-fast-beginner-1-22'),
-	('What a great day','Đúng là một ngày tuyệt vời','00:00:35.480','00:00:37.500','esl-fast-beginner-1-22'),
+	('What a great day!','Thật là một ngày tuyệt vời','00:00:35.480','00:00:37.500','esl-fast-beginner-1-22'),
 
-	/* (UUID(),'esl-fast-beginner-1-23','The Baby Sister','Em bé gái','BEGINNER_01_ESL_FAST_CHILDREN_023.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',23) */
-	('Betty loves her baby sister','Betty rất yêu em gái bé bỏng của mình','00:00:00.900','00:00:03.640','esl-fast-beginner-1-23'),
-	('Betty takes care of her','Betty chăm sóc em bé','00:00:04.740','00:00:06.800','esl-fast-beginner-1-23'),
-	('She changes her diaper','Cô bé thay tã cho em','00:00:07.580','00:00:09.440','esl-fast-beginner-1-23'),
-	('She feeds her','Cô bé cho em ăn','00:00:10.220','00:00:11.740','esl-fast-beginner-1-23'),
-	('She teaches her how to walk','Cô bé tập cho em biết đi','00:00:12.480','00:00:14.980','esl-fast-beginner-1-23'),
-	('She teaches her new words','Cô bé dạy em những từ mới','00:00:15.660','00:00:18.100','esl-fast-beginner-1-23'),
-	('It is not easy to take care of babies','Chăm em bé không hề dễ','00:00:19.020','00:00:22.020','esl-fast-beginner-1-23'),
+	/* (UUID(),'esl-fast-beginner-1-23','The Baby Sister','Em bé gái','BEGINNER_01_ESL_FAST_CHILDREN_023.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-children-1','YES',23) */
+	('Betty loves her baby sister','Betty rất yêu quý cô em gái bé bỏng của mình','00:00:00.900','00:00:03.640','esl-fast-beginner-1-23'),
+	('Betty takes care of her','Betty trông em','00:00:04.300','00:00:06.800','esl-fast-beginner-1-23'),
+	('She changes her diaper','Cô bé thay tã cho em','00:00:07.200','00:00:09.440','esl-fast-beginner-1-23'),
+	('She feeds her','Cô bé cho em ăn','00:00:10.000','00:00:11.740','esl-fast-beginner-1-23'),
+	('She teaches her how to walk','Cô bé dạy em tập đi','00:00:12.200','00:00:14.980','esl-fast-beginner-1-23'),
+	('She teaches her new words','Cô bé dạy em những từ mới','00:00:15.200','00:00:18.100','esl-fast-beginner-1-23'),
+	('It is not easy to take care of babies','Chăm sóc em bé không hề dễ','00:00:19.020','00:00:22.020','esl-fast-beginner-1-23'),
 	('Betty\'s baby sister cries sometimes','Đôi khi em gái bé bỏng của Betty khóc','00:00:22.900','00:00:25.880','esl-fast-beginner-1-23'),
-	('Betty plays peek-a-boo with her','Betty chơi ú òa với em','00:00:26.900','00:00:29.860','esl-fast-beginner-1-23'),
-	('She covers her eyes, then opens them','Cô bé che mắt rồi lại mở ra','00:00:29.560','00:00:33.960','esl-fast-beginner-1-23'),
+	('Betty plays peek-a-boo with her','Betty chơi ú òa với em','00:00:26.900','00:00:29.800','esl-fast-beginner-1-23'),
+	('She covers her eyes, then opens them','Cô bé che mắt rồi lại mở ra','00:00:30.100','00:00:33.960','esl-fast-beginner-1-23'),
 	('The baby laughs','Em bé bật cười','00:00:34.540','00:00:36.240','esl-fast-beginner-1-23'),
 
 	/* (UUID(),'esl-fast-beginner-1-24','Sometimes You Lose','Đôi khi bạn thua','BEGINNER_01_ESL_FAST_CHILDREN_024.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',24) */
@@ -39530,9 +39546,9 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She walks home sadly','Cô bé buồn bã đi bộ về nhà','00:00:06.960','00:00:09.320','esl-fast-beginner-1-24'),
 	('She sits down on the couch','Cô bé ngồi xuống ghế sofa','00:00:09.840','00:00:12.540','esl-fast-beginner-1-24'),
 	('She starts crying','Cô bé bật khóc','00:00:13.080','00:00:14.860','esl-fast-beginner-1-24'),
-	('Her mom sees her','Mẹ cô bé nhìn thấy','00:00:15.700','00:00:17.380','esl-fast-beginner-1-24'),
+	('Her mom sees her','Mẹ cô bé nhìn thấy cô bé','00:00:15.700','00:00:17.380','esl-fast-beginner-1-24'),
 	('She gives her a hug','Mẹ ôm cô bé vào lòng','00:00:17.940','00:00:19.700','esl-fast-beginner-1-24'),
-	('Then, she bakes Sarah\'s favorite cookies','Sau đó mẹ làm món bánh quy Sarah thích nhất','00:00:20.200','00:00:24.360','esl-fast-beginner-1-24'),
+	('Then, she bakes Sarah\'s favorite cookies','Sau đó mẹ nướng món bánh quy Sarah thích nhất','00:00:20.200','00:00:24.360','esl-fast-beginner-1-24'),
 	('The warm cookies make Sarah smile','Những chiếc bánh nóng hổi khiến Sarah mỉm cười','00:00:24.680','00:00:28.120','esl-fast-beginner-1-24'),
 	('Sarah wipes her tears away','Sarah lau nước mắt','00:00:28.760','00:00:31.459','esl-fast-beginner-1-24'),
 	('She realizes that sometimes you win and sometimes you lose','Cô bé hiểu rằng có lúc thắng thì cũng có lúc thua','00:00:32.220','00:00:37.560','esl-fast-beginner-1-24'),
@@ -40346,7 +40362,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'god-of-motive-11','Accepting the good in every moment','Chấp nhận điều tốt trong mỗi khoảnh khắc',NULL,NULL,'00:00:00.000','00:05:33.040','god-of-motive','NO',11) */
+	/* (UUID(),'god-of-motive-11','Accepting the good in every moment','Chấp nhận điều tốt trong mỗi khoảnh khắc','null',NULL,'00:00:00.000','00:05:33.040','god-of-motive','NO',11) */
 	('Once upon a time, in a quaint village nestled between rolling hills and whispering streams, there lived a wise Zen master known for his deep understanding of life\'s mysteries','Ngày xửa ngày xưa, trong một ngôi làng nhỏ nằm giữa những ngọn đồi xanh và dòng suối thì thầm, có một thầy Thiền khôn ngoan nổi tiếng với sự hiểu biết sâu sắc về những bí ẩn của cuộc sống','00:00:02.180','00:00:13.040','god-of-motive-11'),
 	('His name was Master Koji, and his reputation extended far and wide, drawing seekers from distant lands who yearned for his teachings','Tên ông là Thầy Koji, và danh tiếng của ông đã vang xa, thu hút những người tìm kiếm từ những vùng đất xa xôi, những người khao khát học hỏi những bài học của ông','00:00:13.740','00:00:22.540','god-of-motive-11'),
 	('One summer day, as Master Koji sat under the shade of a blossoming cherry tree, contemplating the dance of sunlight on the leaves, a young boy named Takeshi approached him','Vào một ngày hè, khi Thầy Koji ngồi dưới bóng mát của cây anh đào đang nở hoa, chiêm nghiệm về vũ điệu của ánh sáng mặt trời trên lá cây, một cậu bé tên Takeshi tiếp cận ông','00:00:23.520','00:00:34.420','god-of-motive-11'),
@@ -50993,7 +51009,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Thank you, Anna','Cảm ơn bạn, Anna','00:16:08.440','00:16:09.080','life-diary-animated-15'),
 	('Thank you for waiting for me','Cảm ơn bạn đã chờ tôi','00:16:09.500','00:16:10.820','life-diary-animated-15'),
 
-	/* (UUID(),'life-diary-animated-16','Everyone Wanna Join My Divorce Party Everyone Wanna Join My Divorce Party ','Mở Tiệc Ăn Mừng Chia Tay','STORIES_TEEN_STORY_01_LIFE_DIARY_ANIMATED_016.mp3',NULL,'00:00:00.450','00:16:52.590','life-diary-animated','NO',16) */
+	/* (UUID(),'life-diary-animated-16','Everyone Wanna Join My Divorce Party Everyone Wanna Join My Divorce Party','Mở Tiệc Ăn Mừng Chia Tay','STORIES_TEEN_STORY_01_LIFE_DIARY_ANIMATED_016.mp3',NULL,'00:00:00.450','00:16:52.590','life-diary-animated','NO',16) */
 	('Hi everyone, my name is Selena','Chào mọi người, tên tôi là Selena','00:00:00.450','00:00:02.230','life-diary-animated-16'),
 	('I grew up in a broken family, so I always yearned to meet someone who loved me unconditional','Tôi lớn lên trong một gia đình tan vỡ, vì vậy tôi luôn khao khát gặp ai đó yêu tôi vô điều kiện','00:00:02.670','00:00:08.810','life-diary-animated-16'),
 	('However, life isn\'t as smooth as I thought','Tuy nhiên, cuộc sống không suôn sẻ như tôi nghĩ','00:00:09.530','00:00:12.670','life-diary-animated-16'),
