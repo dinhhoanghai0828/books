@@ -869,7 +869,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'english-fairy-tales-6','Touch Wood','Chạm vào gỗ - May mắn','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_006',NULL,'00:00:00.000','00:14:36.000','english-fairy-tales','NO',6) */
+	/* (UUID(),'english-fairy-tales-6','Touch Wood','Chạm vào gỗ - May mắn','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_006.mp3',NULL,'00:00:00.000','00:14:36.000','english-fairy-tales','NO',6) */
 	('So so glad that the gloomy days are behind us. Touch Wood','Thật là mừng vì những ngày u ám đã đi qua. Chạm gỗ','null','null','english-fairy-tales-6'),
 	('Daddy, why did you do that?','Bố ơi, sao bố lại làm thế?','null','null','english-fairy-tales-6'),
 	('Do what little fella?','Làm gì cơ anh bạn nhỏ?','null','null','english-fairy-tales-6'),
@@ -887,16 +887,16 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Alright, alright','Được rồi, được rồi','null','null','english-fairy-tales-6'),
 	('Once upon a time, when the fairies of humanity lived amongst us, there were two little fairies who were yet to understand the world and its rules','Ngày xửa ngày xưa, khi loài tiên của nhân loại vẫn còn sống chung với chúng ta, có hai nàng tiên nhỏ chưa hiểu về thế giới và luật lệ của nó','null','null','english-fairy-tales-6'),
 	('These were the fire fairy and the wood fairy','Đó là nàng tiên lửa và nàng tiên gỗ','null','null','english-fairy-tales-6'),
-	('Two little wonders wandering around the earth, constantly learning and constantly evolving','Hai nàng tiên đó đi lang thang khắp thế giới luôn luôn học hỏi và luôn luôn tiến lên','null','null','english-fairy-tales-6'),
+	('Two little wonders wandering around the earth, constantly learning and constantly evolving','Hai nàng tiên đó đi lang thang khắp thế giới luôn luôn học hỏi và không ngừng trưởng thành','00:00:00.000','00:00:00.000','english-fairy-tales-6'),
 	('There you go little one','Lên đây nào anh bạn nhỏ','null','null','english-fairy-tales-6'),
-	('Now it so happened one day, that fire fairy while traversing a vast savanna, came upon a mango grove','Và rồi đến một hôm nàng tiên lửa khi đang đi ngang qua một đồng cỏ lớn thì tình cờ bắt gặp một cây xoài','null','null','english-fairy-tales-6'),
+	('Now it so happened one day, that fire fairy while traversing a vast savanna, came upon a mango grove','Và rồi đến một hôm nàng tiên lửa khi đang đi ngang qua một đồng cỏ lớn thì tình cờ bắt gặp một vườn xoài','00:00:00.000','00:00:00.000','english-fairy-tales-6'),
 	('What are those?','Kia là gì vậy?','null','null','english-fairy-tales-6'),
 	('He was fascinated by the orange-yellow color of the mangoes that resembled his fire','Anh ta bị thu hút bởi màu vàng cam của những quả xoài. nó giống như màu của lửa','null','null','english-fairy-tales-6'),
-	('I am so hungry suddenly, I must eat those fire fruits','Mình bỗng nhiên thấy đói quá, mình phải ăn những quả lửa này','null','null','english-fairy-tales-6'),
+	('I am so hungry suddenly, I must eat those fire fruits','Mình bỗng nhiên thấy đói quá, mình phải ăn những trái cây rực lửa này','00:00:00.000','00:00:00.000','english-fairy-tales-6'),
 	('But as soon as he touched the trunk of the tree, he burnt that part of the bark','Nhưng ngay khi anh ta chạm vào thân cây, anh ta đã thiêu đốt ngay phần vỏ cây đó','null','null','english-fairy-tales-6'),
 	('Dejected, the little fire fairy began to walk away when','Chán nản, nàng tiên lửa đành đi chỗ khác và','null','null','english-fairy-tales-6'),
 	('Over here, over here','Đằng này, đằng này','null','null','english-fairy-tales-6'),
-	('My name is Wood. And you are?','Tên tôi là gỗ. Còn anh là?','null','null','english-fairy-tales-6'),
+	('My name is Wood. And you are?','Tôi là gỗ. Còn anh là?','00:00:00.000','00:00:00.000','english-fairy-tales-6'),
 	('Nice to meet you, fire','Rất vui được gặp anh, lửa','null','null','english-fairy-tales-6'),
 	('Oh, so, so sorry','Ôi, thật sự xin lỗi','null','null','english-fairy-tales-6'),
 	('It\'s fine, I will grow it back. Hey, you wanna play?','Không sao đâu, nó sẽ mọc lại thôi. Nè, anh muốn cùng chơi không?','null','null','english-fairy-tales-6'),
@@ -923,10 +923,10 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('They inched closer towards each other and Fire found his innate nature of touching Wood overpower him','Họ nhích dần đến gần nhau và Lửa tìm thấy bản năng chạm vào Gỗ đang xâm chiếm mình','null','null','english-fairy-tales-6'),
 	('As he let his inhibitions down, he touched Wood\'s face','Khi anh ta buông bỏ sự e dè xuống, anh ta chạm vào mặt của Gỗ','null','null','english-fairy-tales-6'),
 	('Oh, no. I am, I\'m so sorry','Ôi không,anh, anh thật sự xin lỗi','null','null','english-fairy-tales-6'),
-	('Tears rolled out of Wood\'s eyes as she looked at him or even she loved Fire but was aware that their love would never be possible','Nước mắt lăn dài trên đôi mát của Gỗ khi cô nhìn anh dù cô rất yêu Lửa nhưng cô biết tình yêu của họ không bao giờ có thể thành','null','null','english-fairy-tales-6'),
+	('Tears rolled out of Wood\'s eyes as she looked at him or even she loved Fire but was aware that their love would never be possible','Nước mắt lăn dài trên đôi mắt của Gỗ khi cô nhìn anh dù cô rất yêu Lửa nhưng cô biết tình yêu của họ là không thể','00:00:00.000','00:00:00.000','english-fairy-tales-6'),
 	('It\'s fine. I\'m ready to burn in your flames, Fire','Không sao đâu, em sẵn sàng bị thiêu trong ngọn lửa của anh rồi, Lửa à','null','null','english-fairy-tales-6'),
 	('Never. I will never do that to you','Không bao giờ. Anh sẽ không bao giờ làm thế với em','null','null','english-fairy-tales-6'),
-	('We cannot be together Wood. I will, I will consume you. No, no','Chúng ta không thể ở bên nhau, Gỗ à. Anh sẽ nuốt chửng em. Không. Không','null','null','english-fairy-tales-6'),
+	('We cannot be together Wood. I will, I will consume you. No, no','Chúng ta không thể ở bên nhau, Gỗ à. Anh sẽ thiêu rụi em. Không. Không','00:00:00.000','00:00:00.000','english-fairy-tales-6'),
 	('Goodbye, my love. Keep me in your dreams','Tạm biệt tình yêu của anh. Hãy giữ anh trong giấc mơ nhé','null','null','english-fairy-tales-6'),
 	('And with that, Fire turned and left into the air, turning into a fireball','Và cứ thế, Lửa quay lại và biến mất trong không khí, biến thành một quả cầu lửa','null','null','english-fairy-tales-6'),
 	('Fire. No. Wait. Fire. Fire','Lửa ơi. Không. Chờ đã Lửa ơi, Lửa ơi','null','null','english-fairy-tales-6'),
@@ -962,7 +962,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Little by little, the belief was pushing him towards insanity','Dần dần niềm tin đó khiến anh dần mất trí','null','null','english-fairy-tales-6'),
 	('All he wanted was to reconcile with his love','Những gì anh muốn là tìm được người anh yêu','null','null','english-fairy-tales-6'),
 	('Many more days passed and Fire began to grow wild and fierce','Thêm nhiều ngày trôi qua, Lửa ngày càng hoang dại và hung dữ','null','null','english-fairy-tales-6'),
-	('And then one day it happened. Fire search for Wood brought him to the same mango grove where he had first seen her','Rồi đến một hôm, chuyện đó đã đến. Khi Lửa đi tìm Gỗ, đã đưa anh đến chỗ cây xoài quen thuộc nơi lần đầu anh gặp cô','null','null','english-fairy-tales-6'),
+	('And then one day it happened. Fire\'s search for Wood brought him to the same mango grove where he had first seen her','Rồi đến một hôm, chuyện đó đã đến. Khi Lửa đi tìm Gỗ, đã đưa anh đến chỗ vườn xoài quen thuộc nơi lần đầu anh gặp cô','00:00:00.000','00:00:00.000','english-fairy-tales-6'),
 	('Events from that day flashed before his eyes like they were only yesterday','Những sự việc của ngày hôm đó bất chợt hiện ra trước mắt anh ngỡ như chỉ mới hôm qua','null','null','english-fairy-tales-6'),
 	('Suddenly','Bỗng nhiên','null','null','english-fairy-tales-6'),
 	('Over here. Over here','Đằng này. Đằng này','null','null','english-fairy-tales-6'),
@@ -986,7 +986,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Wood. No','Gỗ ơi. Không','null','null','english-fairy-tales-6'),
 	('This life without you is without meaning','Cuộc sống này không có em sẽ không có ý nghĩa gì hết','null','null','english-fairy-tales-6'),
 	('Fire burns Wood that is the rule of nature but when there is no more Wood to burn Fire perishes too, that is also the rule of nature','Lửa thiêu đốt Gỗ, đó là quy tắc của tự nhiên nhưng khi không còn Gỗ để đốt nữa Lửa cũng sẽ lụi tàn, đó cũng là quy luật tự nhiên','null','null','english-fairy-tales-6'),
-	('The savannah went quiet again as the dying embers slowly diminished and merged with the darkness, leaving behind only the smoke as a remnant of the love of Wood and Fire. Now merged together as one','Đồng cỏ lại rơi vào im lặng khi đống than hồng dần tắt, hòa vào bóng đêm, chỉ còn lại phía sau làn khói tro tàn dư của tình yêu của Lửa và Gỗ. Giờ họ đã hòa vào làm một','null','null','english-fairy-tales-6'),
+	('The savannah went quiet again as the dying embers slowly diminished and merged with the darkness, leaving behind only the smoke as a remnant of the love of Wood and Fire. Now merged together as one','Đồng cỏ lại rơi vào im lặng khi đống than hồng dần tắt, hòa vào bóng đêm, bỏ lại phía sau làn khói tro tàn dư của tình yêu của Lửa và Gỗ. Giờ họ đã hòa vào làm một','00:00:00.000','00:00:00.000','english-fairy-tales-6'),
 	('But don\'t worry','Thế nhưng đừng lo','null','null','english-fairy-tales-6'),
 	('Fire and Wood are still present in the world as nature intends them to','Lửa và Gỗ vẫn tồn tại trên thế giới này vì tự nhiên duy trì điều đó','null','null','english-fairy-tales-6'),
 	('And, it is said that there is Fire in all our hearts','Và người ta nói rằng có lửa ở trong tim','null','null','english-fairy-tales-6'),
@@ -994,7 +994,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And that\'s why we say touch Wood, instinctively so as to not ruin the moment','Thế nên người ta nói chạm gỗ, theo tự nhiên để không phá hỏng giây phút đó','null','null','english-fairy-tales-6'),
 	('The end','Hết chuyện','null','null','english-fairy-tales-6'),
 
-	/* (UUID(),'english-fairy-tales-7','Mellidora','Mellidora','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_007',NULL,'null','null','english-fairy-tales','NO',7) */
+	/* (UUID(),'english-fairy-tales-7','Mellidora','Mellidora','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_007.mp3',NULL,'00:00:00.000','00:00:00.000','english-fairy-tales','NO',7) */
 	('Once upon a time, when... I need something different here','Ngày xửa ngày xưa, khi mà... Tôi cần một chút gì đó khác biệt ở đây','null','null','english-fairy-tales-7'),
 	('When an apple was just a fruit?','Khi táo chỉ là một loại quả được không?','null','null','english-fairy-tales-7'),
 	('When war raged upon all over the..','khi chiến tranh reo rắc khắp.','null','null','english-fairy-tales-7'),
@@ -1113,7 +1113,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And thus, the story of prince Tyler and princess Mellidora ends on a happy note','Và rồi, câu chuyện về hoàng tử Tyler và công chúa Mellidora kết thúc viên mãn','null','null','english-fairy-tales-7'),
 	('Teaching us a very important lesson, too, that in life, always surround yourself with people who laugh through their own miseries and cry at other\'s pain','Dạy cho chúng ta một bài học rất quan trọng, rằng trong cuộc sống này, xung quanh mình luôn có những người lạc quan trong khó khăn và biết cảm thông với nỗi đau của người khác','null','null','english-fairy-tales-7'),
 
-	/* (UUID(),'english-fairy-tales-8','Anansi and the Pot of Beans','Anansi và nồi đậu','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_008',NULL,'null','null','english-fairy-tales','NO',8) */
+	/* (UUID(),'english-fairy-tales-8','Anansi and the Pot of Beans','Anansi và nồi đậu','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_008.mp3',NULL,'null','null','english-fairy-tales','NO',8) */
 	('You must have heard of Anansi the spider. He is a mischief maker, a trickster, and the king of stories','Bạn hẳn đã nghe nói về nhện Anansi. Anh ta là một kẻ chuyên gây rối, một kẻ lừa bịp và là vua của những câu chuyện','null','null','english-fairy-tales-8'),
 	('And today, I will tell you about one such story which will make you laugh a little, smile a little, and tell you a little bit more about the strong folklore character from the magnificent land of Afri','Và hôm nay, tôi sẽ kể cho các bạn nghe về một câu chuyện sẽ khiến bạn bật cười, hay mỉm cười và kể thêm một chút về nhân vật văn hóa dân gian mạnh mẽ đến từ vùng đất tráng lệ của Châu Phi','null','null','english-fairy-tales-8'),
 	('It was a hot day and as all days had been for the last couple of months. Anansi was in his house, sitting by the window, bored out of his mind','Vào một ngày nắng nóng và như những ngày khác trong các tháng qua. Anasi ngồi buồn chán cạnh cửa sổ, trong ngôi nhà của anh ta','null','null','english-fairy-tales-8'),
@@ -1210,7 +1210,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And if you look carefully you might still see him hiding there today','Và nếu bạn nhìn kỹ bà có thể vẫn thấy anh ấy trốn ở đó hôm nay','null','null','english-fairy-tales-8'),
 	('But you will never see him crazy about beans anymore','Nhưng bạn sẽ không bao giờ thấy anh ấy phát cuồng vì đậu nữa','null','null','english-fairy-tales-8'),
 
-	/* (UUID(),'english-fairy-tales-9','The shrew farmer','Người nông dân thông minh','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_009',NULL,'null','null','english-fairy-tales','NO',9) */
+	/* (UUID(),'english-fairy-tales-9','The shrew farmer','Người nông dân thông minh','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_009.mp3',NULL,'null','null','english-fairy-tales','NO',9) */
 	('Once upon a time, there lived a farmer who worked far from his home in the fields of a rich baron','Ngày xửa ngày có một anh nông dân phải làm việc xa nhà ngoài các cánh đồng của một nam tước giàu có','null','null','english-fairy-tales-9'),
 	('In the past, gangs of bandits hid in the mountains rising behind the plains but the emperor has sent his soldiers to find and kill the thieves and now the area was safe and quite','Vào thời xa xưa, các toán cướp thường lẩn trốn trong các dãy núi nhô lên ở phía sau các vùng đồng bằng nhưng hoàng đế đã đưa quân đi tìm và giết bọn cướp, và giờ đây cả vùng đã an toàn và bình yên','null','null','english-fairy-tales-9'),
 	('Oh my another weapon','Ôi trời ơi, lại một loại vũ khí khác nữa nè','null','null','english-fairy-tales-9'),
