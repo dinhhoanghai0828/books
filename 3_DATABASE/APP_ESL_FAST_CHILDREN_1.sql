@@ -283,43 +283,43 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'esl-fast-beginner-1-21','Mom is Mad','Mẹ đang tức giận','BEGINNER_01_ESL_FAST_CHILDREN_021.mp3',NULL,'00:00:00.000','00:00:35.500','esl-fast-children-1','NO',21) */
+	/* (UUID(),'esl-fast-beginner-1-21','Mom is Mad','Mẹ đang tức giận','BEGINNER_01_ESL_FAST_CHILDREN_021.mp3',NULL,'00:00:00.000','00:00:35.500','esl-fast-children-1','YES',21) */
 	('Robert\'s room is messy','Phòng của Robert rất bừa bộn','00:00:00.200','00:00:03.340','esl-fast-beginner-1-21'),
 	('There is pizza under his bed','Bánh pizza ở dưới gầm giường của cậu bé','00:00:03.600','00:00:06.820','esl-fast-beginner-1-21'),
 	('There is glue on the wall','Keo thì dính trên tường','00:00:07.340','00:00:10.040','esl-fast-beginner-1-21'),
 	('There is a pile of clothes','Có một đống quần áo','00:00:10.460','00:00:13.180','esl-fast-beginner-1-21'),
-	('There are toys on the floor','Đồ chơi nằm khắp sàn nhà','00:00:13.960','00:00:16.440','esl-fast-beginner-1-21'),
+	('There are toys on the floor','Đồ chơi nằm trên sàn nhà','00:00:13.960','00:00:16.440','esl-fast-beginner-1-21'),
 	('Robert does not care','Robert chẳng bận tâm','00:00:17.420','00:00:19.420','esl-fast-beginner-1-21'),
 	('He watches a television show','Cậu bé xem một chương trình truyền hình trên tivi','00:00:20.040','00:00:22.440','esl-fast-beginner-1-21'),
 	('His mom goes into his room','Mẹ cậu bé bước vào phòng','00:00:23.040','00:00:25.740','esl-fast-beginner-1-21'),
-	('She turns off the television','Bà tắt tivi đi','00:00:26.320','00:00:28.720','esl-fast-beginner-1-21'),
-	('She yells at him','Bà la mắng cậu bé','00:00:28.900','00:00:31.360','esl-fast-beginner-1-21'),
+	('She turns off the television','Bà ấy tắt tivi','00:00:26.320','00:00:28.720','esl-fast-beginner-1-21'),
+	('She yells at him','Bà ấy la mắng cậu bé','00:00:28.900','00:00:31.360','esl-fast-beginner-1-21'),
 	('He starts to clean his room','Cậu bé bắt đầu dọn dẹp phòng của mình','00:00:31.880','00:00:34.540','esl-fast-beginner-1-21'),
 
-	/* (UUID(),'esl-fast-beginner-1-22','Father\'s Day','Ngày của cha','BEGINNER_01_ESL_FAST_CHILDREN_022.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',22) */
+	/* (UUID(),'esl-fast-beginner-1-22','Father\'s Day','Ngày của cha','BEGINNER_01_ESL_FAST_CHILDREN_022.mp3',NULL,'00:00:00.000','00:00:39.000','esl-fast-children-1','YES',22) */
 	('Today is Father\'s Day','Hôm nay là Ngày của Cha','00:00:00.260','00:00:02.780','esl-fast-beginner-1-22'),
-	('Daniel surprises his father','Daniel tạo bất ngờ cho bố','00:00:03.000','00:00:05.680','esl-fast-beginner-1-22'),
+	('Daniel surprises his father','Daniel tạo bất ngờ cho bố mình','00:00:03.000','00:00:05.680','esl-fast-beginner-1-22'),
 	('He serves him breakfast','Cậu ấy mang bữa sáng đến cho bố','00:00:06.200','00:00:08.780','esl-fast-beginner-1-22'),
 	('There are eggs, bacon, and orange juice on the tray','Trên khay có trứng, thịt xông khói và nước cam','00:00:08.900','00:00:15.000','esl-fast-beginner-1-22'),
 	('Daniel\'s father is happy','Bố của Daniel rất vui','00:00:15.500','00:00:17.980','esl-fast-beginner-1-22'),
 	('Later, they go play tennis','Sau đó, hai bố con đi chơi quần vợt','00:00:18.500','00:00:21.900','esl-fast-beginner-1-22'),
 	('Daniel stands on one side','Daniel đứng một bên','00:00:22.800','00:00:25.400','esl-fast-beginner-1-22'),
 	('He swings the ball','Cậu bé đánh bóng','00:00:25.900','00:00:27.520','esl-fast-beginner-1-22'),
-	('Daniel\'s father hits the ball back','Bố của Daniel đánh bóng lại','00:00:28.380','00:00:31.640','esl-fast-beginner-1-22'),
+	('Daniel\'s father hits the ball back','Bố của Daniel đánh trả bóng lại','00:00:28.380','00:00:31.640','esl-fast-beginner-1-22'),
 	('Finally, they watch the sunset','Cuối cùng, họ ngắm hoàng hôn','00:00:32.100','00:00:35.220','esl-fast-beginner-1-22'),
-	('What a great day','Đúng là một ngày tuyệt vời','00:00:35.480','00:00:37.500','esl-fast-beginner-1-22'),
+	('What a great day!','Thật là một ngày tuyệt vời','00:00:35.480','00:00:37.500','esl-fast-beginner-1-22'),
 
-	/* (UUID(),'esl-fast-beginner-1-23','The Baby Sister','Em bé gái','BEGINNER_01_ESL_FAST_CHILDREN_023.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',23) */
+	/* (UUID(),'esl-fast-beginner-1-23','The Baby Sister','Em bé gái','BEGINNER_01_ESL_FAST_CHILDREN_023.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-children-1','YES',23) */
 	('Betty loves her baby sister','Betty rất yêu quý cô em gái bé bỏng của mình','00:00:00.900','00:00:03.640','esl-fast-beginner-1-23'),
 	('Betty takes care of her','Betty trông em','00:00:04.300','00:00:06.800','esl-fast-beginner-1-23'),
 	('She changes her diaper','Cô bé thay tã cho em','00:00:07.200','00:00:09.440','esl-fast-beginner-1-23'),
 	('She feeds her','Cô bé cho em ăn','00:00:10.000','00:00:11.740','esl-fast-beginner-1-23'),
-	('She teaches her how to walk','Cô bé tập cho em biết đi','00:00:12.200','00:00:14.980','esl-fast-beginner-1-23'),
+	('She teaches her how to walk','Cô bé dạy em tập đi','00:00:12.200','00:00:14.980','esl-fast-beginner-1-23'),
 	('She teaches her new words','Cô bé dạy em những từ mới','00:00:15.200','00:00:18.100','esl-fast-beginner-1-23'),
-	('It is not easy to take care of babies','Chăm em bé không hề dễ','00:00:19.020','00:00:22.020','esl-fast-beginner-1-23'),
+	('It is not easy to take care of babies','Chăm sóc em bé không hề dễ','00:00:19.020','00:00:22.020','esl-fast-beginner-1-23'),
 	('Betty\'s baby sister cries sometimes','Đôi khi em gái bé bỏng của Betty khóc','00:00:22.900','00:00:25.880','esl-fast-beginner-1-23'),
-	('Betty plays peek-a-boo with her','Betty chơi ú òa với em','00:00:26.900','00:00:29.860','esl-fast-beginner-1-23'),
-	('She covers her eyes, then opens them','Cô bé che mắt rồi lại mở ra','00:00:29.560','00:00:33.960','esl-fast-beginner-1-23'),
+	('Betty plays peek-a-boo with her','Betty chơi ú òa với em','00:00:26.900','00:00:29.800','esl-fast-beginner-1-23'),
+	('She covers her eyes, then opens them','Cô bé che mắt rồi lại mở ra','00:00:30.100','00:00:33.960','esl-fast-beginner-1-23'),
 	('The baby laughs','Em bé bật cười','00:00:34.540','00:00:36.240','esl-fast-beginner-1-23'),
 
 	/* (UUID(),'esl-fast-beginner-1-24','Sometimes You Lose','Đôi khi bạn thua','BEGINNER_01_ESL_FAST_CHILDREN_024.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',24) */
@@ -328,9 +328,9 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She walks home sadly','Cô bé buồn bã đi bộ về nhà','00:00:06.960','00:00:09.320','esl-fast-beginner-1-24'),
 	('She sits down on the couch','Cô bé ngồi xuống ghế sofa','00:00:09.840','00:00:12.540','esl-fast-beginner-1-24'),
 	('She starts crying','Cô bé bật khóc','00:00:13.080','00:00:14.860','esl-fast-beginner-1-24'),
-	('Her mom sees her','Mẹ cô bé nhìn thấy','00:00:15.700','00:00:17.380','esl-fast-beginner-1-24'),
+	('Her mom sees her','Mẹ cô bé nhìn thấy cô bé','00:00:15.700','00:00:17.380','esl-fast-beginner-1-24'),
 	('She gives her a hug','Mẹ ôm cô bé vào lòng','00:00:17.940','00:00:19.700','esl-fast-beginner-1-24'),
-	('Then, she bakes Sarah\'s favorite cookies','Sau đó mẹ làm món bánh quy Sarah thích nhất','00:00:20.200','00:00:24.360','esl-fast-beginner-1-24'),
+	('Then, she bakes Sarah\'s favorite cookies','Sau đó mẹ nướng món bánh quy Sarah thích nhất','00:00:20.200','00:00:24.360','esl-fast-beginner-1-24'),
 	('The warm cookies make Sarah smile','Những chiếc bánh nóng hổi khiến Sarah mỉm cười','00:00:24.680','00:00:28.120','esl-fast-beginner-1-24'),
 	('Sarah wipes her tears away','Sarah lau nước mắt','00:00:28.760','00:00:31.459','esl-fast-beginner-1-24'),
 	('She realizes that sometimes you win and sometimes you lose','Cô bé hiểu rằng có lúc thắng thì cũng có lúc thua','00:00:32.220','00:00:37.560','esl-fast-beginner-1-24'),

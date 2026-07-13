@@ -729,7 +729,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And that is how it shall be known all over the country','Và đó là cách để khu vườn sẽ được biết đến trên toàn vương quốc','00:15:41.150','00:15:45.010','english-fairy-tales-4'),
 	('Finally, Larsen got the appreciation he deserved','Cuối cùng, Larsen cũng nhận được sự trân trọng mà anh xứng đáng được hưởng','00:15:46.650','00:15:51.170','english-fairy-tales-4'),
 
-	/* (UUID(),'english-fairy-tales-5','Sisterhood','Tình chị em','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_005.mp3',NULL,'00:00:05.240','00:10:20.750','english-fairy-tales','YES',5) */
+	/* (UUID(),'english-fairy-tales-5','Sisterhood','Tình chị em','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_005.mp3',NULL,'00:00:00.000','00:10:20.750','english-fairy-tales','YES',5) */
 	('Sisterhood','Tình chị em','00:00:05.240','00:00:06.600','english-fairy-tales-5'),
 	('Once upon a time, in a kingdom not so far away, there lived a widowed king with his beautiful young daughter, Princess Anne','Ngày xửa ngày xưa, trong một vương quốc không xa lắm, có một vị vua góa vợ sống cùng với cô con gái nhỏ xinh đẹp của mình, Công chúa Anne','00:00:06.700','00:00:15.260','english-fairy-tales-5'),
 	('The king\'s heart was lonely, and he decided it was time to marry again','Trái tim của nhà vua luôn cô đơn, và ông quyết định đã đến lúc kết hôn lần nữa','00:00:15.680','00:00:20.480','english-fairy-tales-5'),
@@ -869,7 +869,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'english-fairy-tales-6','Touch Wood','Chạm gỗ - May mẵn','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_006',NULL,'null','null','english-fairy-tales','NO',6) */
+	/* (UUID(),'english-fairy-tales-6','Touch Wood','Chạm vào gỗ - May mắn','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_006',NULL,'00:00:00.000','00:14:36.000','english-fairy-tales','NO',6) */
 	('So so glad that the gloomy days are behind us. Touch Wood','Thật là mừng vì những ngày u ám đã đi qua. Chạm gỗ','null','null','english-fairy-tales-6'),
 	('Daddy, why did you do that?','Bố ơi, sao bố lại làm thế?','null','null','english-fairy-tales-6'),
 	('Do what little fella?','Làm gì cơ anh bạn nhỏ?','null','null','english-fairy-tales-6'),
