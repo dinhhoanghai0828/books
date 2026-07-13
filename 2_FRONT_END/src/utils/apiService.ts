@@ -138,6 +138,22 @@ export const getVolumeDetail = async (slug: string): Promise<Volume> => {
   }
 };
 
+// Cap nhat tap (tieng Anh, tieng Viet, startTime, endTime, checked) theo id
+export const updateVolume = async (
+  id: string,
+  eng: string,
+  vi: string,
+  startTime: string,
+  endTime: string,
+  checked: string
+): Promise<void> => {
+  try {
+    await apiClient.post('/volumes/update', { id, eng, vi, startTime, endTime, checked });
+  } catch (error: any) {
+    throw new Error(getErrorMessage(error));
+  }
+};
+
 // ============================================================
 // CONTENTS
 // ============================================================
@@ -336,6 +352,16 @@ export const runContentsExport = async (): Promise<string> => {
   try {
     const response = await apiClient.post('/run-sql/contents-export');
     return response.data?.message ?? 'contents-export success';
+  } catch (error: any) {
+    throw new Error(getErrorMessage(error));
+  }
+};
+
+// Cap nhat du lieu bang VOLUMES vao file 2_SQL_CREATE_DATA.sql
+export const runVolumesExport = async (): Promise<string> => {
+  try {
+    const response = await apiClient.post('/run-sql/volumes-export');
+    return response.data?.message ?? 'volumes-export success';
   } catch (error: any) {
     throw new Error(getErrorMessage(error));
   }

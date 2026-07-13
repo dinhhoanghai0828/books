@@ -101,4 +101,19 @@ public class RunSQLController {
             return new ResponseEntity<>(new BaseResponse("99", "contents-insert failed: " + e.getMessage()), HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+
+    /**
+     * API 4: Cập nhật dữ liệu bảng VOLUMES vào file 2_SQL_CREATE_DATA.sql
+     * Ghi đè phần -- DU LIEU BANG VOLUMES, giữ nguyên phần header
+     */
+    @PostMapping("/volumes-export")
+    public ResponseEntity<?> volumesExport() {
+        try {
+            runSQLComponent.generalVolume();
+            String message = "Cập nhật dữ liệu VOLUMES thành công vào file 2_SQL_CREATE_DATA.sql";
+            return new ResponseEntity<>(new BaseResponse("00", message), HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(new BaseResponse("99", "volumes-export failed: " + e.getMessage()), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
 }

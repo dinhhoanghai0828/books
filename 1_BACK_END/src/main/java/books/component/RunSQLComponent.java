@@ -355,32 +355,32 @@ public class RunSQLComponent {
                 "\n" +
                 "TRUNCATE TABLE `WORDS`;";
         String lastQuery = "INSERT INTO `WORDS` (`ENG`,`VI`) VALUES " + "\n";
-        
+
         Connection connection = null;
         PreparedStatement selectStmt = null;
         ResultSet resultSet = null;
-        
+
         try {
             connection = resolveDataSource().getConnection();
             selectStmt = connection.prepareStatement("SELECT * FROM WORDS ORDER BY ENG ASC, VI ASC;", ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_READ_ONLY);
             selectStmt.setFetchSize(1000); // Fetch size để giảm memory usage
             resultSet = selectStmt.executeQuery();
-            
+
             int i = 0;
             int totalRows = 0;
-            
+
             // First pass: count total rows
             while (resultSet.next()) {
                 totalRows++;
             }
             resultSet.close();
             selectStmt.close();
-            
+
             // Second pass: process data
             selectStmt = connection.prepareStatement("SELECT * FROM WORDS ORDER BY ENG ASC, VI ASC;", ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_READ_ONLY);
             selectStmt.setFetchSize(1000);
             resultSet = selectStmt.executeQuery();
-            
+
             while (resultSet.next()) {
                 try {
                     String eng = resultSet.getString("eng");
@@ -390,7 +390,7 @@ public class RunSQLComponent {
                     }
                     String vi = resultSet.getString("vi");
                     vi = vi.trim();
-                    
+
                     if (i == totalRows - 1) {
                         String sql = "\t" + "('" + eng + "','" + vi + "');" + "\n";
                         sqls.append(sql);
@@ -405,10 +405,10 @@ public class RunSQLComponent {
                 }
                 i++;
             }
-            
+
             lastQuery = table + "\n\n\n" + lastQuery + sqls;
             System.out.println("Generated SQL with " + i + " words");
-            
+
             try (OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(path + "3_SQL_ENG_WORDS.sql"), StandardCharsets.UTF_8)) {
                 writer.write(lastQuery);
                 writer.flush();
@@ -417,6 +417,144 @@ public class RunSQLComponent {
             }
         } finally {
             DBUtils.closeAll("generalWord", connection, selectStmt, resultSet);
+        }
+    }
+
+    public void generalVolume() throws SQLException, IOException {
+        Connection connection = null;
+        PreparedStatement selectStmt = null;
+        ResultSet resultSet = null;
+
+        try {
+            connection = resolveDataSource().getConnection();
+            selectStmt = connection.prepareStatement("SELECT * FROM VOLUMES ORDER BY BOOK_SLUG ASC, NUMBER ASC;", ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_READ_ONLY);
+            selectStmt.setFetchSize(1000);
+            resultSet = selectStmt.executeQuery();
+
+            // Read existing file up to -- DU LIEU BANG VOLUMES
+            String filePath = path + "2_SQL_CREATE_DATA.sql";
+            StringBuilder headerContent = new StringBuilder();
+            boolean foundVolumeSection = false;
+
+            try (BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(filePath), StandardCharsets.UTF_8))) {
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    if (line.contains("DU LIEU BANG VOLUMES")) {
+                        foundVolumeSection = true;
+                        break;
+                    }
+                    headerContent.append(line).append("\n");
+                }
+            }
+
+            if (!foundVolumeSection) {
+                throw new IOException("Could not find '-- DU LIEU BANG VOLUMES' section in file");
+            }
+
+            // Generate new VOLUMES INSERT statements
+            StringBuilder volumeSql = new StringBuilder();
+            volumeSql.append("-- DU LIEU BANG VOLUMES\n");
+            volumeSql.append("TRUNCATE TABLE VOLUMES;\n");
+
+            int i = 0;
+            int totalRows = 0;
+
+            // First pass: count total rows
+            while (resultSet.next()) {
+                totalRows++;
+            }
+            resultSet.close();
+            selectStmt.close();
+
+            // Second pass: process data
+            selectStmt = connection.prepareStatement("SELECT * FROM VOLUMES ORDER BY BOOK_SLUG ASC, NUMBER ASC;", ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_READ_ONLY);
+            selectStmt.setFetchSize(1000);
+            resultSet = selectStmt.executeQuery();
+
+            String currentBookSlug = null;
+            List<String> currentGroupValues = new ArrayList<>();
+
+            while (resultSet.next()) {
+                try {
+                    String slug = resultSet.getString("SLUG");
+                    String eng = resultSet.getString("ENG");
+                    eng = eng.trim();
+                    if (eng.contains("\'")) {
+                        eng = eng.replace("\'", "\\'");
+                    }
+                    String vi = resultSet.getString("VI");
+                    vi = vi.trim();
+                    if (vi.contains("\'")) {
+                        vi = vi.replace("\'", "\\'");
+                    }
+                    String audio = resultSet.getString("AUDIO");
+                    if (audio != null && audio.contains("\'")) {
+                        audio = audio.replace("\'", "\\'");
+                    }
+                    String img = resultSet.getString("IMG");
+                    if (img != null && img.contains("\'")) {
+                        img = img.replace("\'", "\\'");
+                    }
+                    String startTime = resultSet.getString("START_TIME");
+                    String endTime = resultSet.getString("END_TIME");
+                    String bookSlug = resultSet.getString("BOOK_SLUG");
+                    if (bookSlug != null && bookSlug.contains("\'")) {
+                        bookSlug = bookSlug.replace("\'", "\\'");
+                    }
+                    String checked = resultSet.getString("CHECKED");
+                    int number = resultSet.getInt("NUMBER");
+
+                    // Check if book_slug changed
+                    if (currentBookSlug == null || !currentBookSlug.equals(bookSlug)) {
+                        // Flush previous group if exists
+                        if (currentBookSlug != null && !currentGroupValues.isEmpty()) {
+                            volumeSql.append("INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,CHECKED,NUMBER) VALUES\n");
+                            for (int j = 0; j < currentGroupValues.size(); j++) {
+                                String value = currentGroupValues.get(j);
+                                if (j == currentGroupValues.size() - 1) {
+                                    volumeSql.append(value).append(";\n\n");
+                                } else {
+                                    volumeSql.append(value).append(",\n");
+                                }
+                            }
+                        }
+                        // Start new group
+                        currentBookSlug = bookSlug;
+                        currentGroupValues.clear();
+                    }
+
+                    String value = "\t(UUID(),'" + slug + "','" + eng + "','" + vi + "','" + audio + "','" + img + "','" + startTime + "','" + endTime + "','" + bookSlug + "','" + checked + "'," + number + ")";
+                    currentGroupValues.add(value);
+                } catch (Exception e) {
+                    System.out.println(resultSet.getString("SLUG"));
+                    throw e;
+                }
+                i++;
+            }
+
+            // Flush the last group
+            if (!currentGroupValues.isEmpty()) {
+                volumeSql.append("INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,CHECKED,NUMBER) VALUES\n");
+                for (int j = 0; j < currentGroupValues.size(); j++) {
+                    String value = currentGroupValues.get(j);
+                    if (j == currentGroupValues.size() - 1) {
+                        volumeSql.append(value).append(";\n\n");
+                    } else {
+                        volumeSql.append(value).append(",\n");
+                    }
+                }
+            }
+
+            // Write back to file
+            String fullContent = headerContent.toString() + volumeSql.toString();
+            try (OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(filePath), StandardCharsets.UTF_8)) {
+                writer.write(fullContent);
+                writer.flush();
+            }
+            System.out.println("Generated VOLUMES SQL with " + i + " volumes");
+
+        } finally {
+            DBUtils.closeAll("generalVolume", connection, selectStmt, resultSet);
         }
     }
 

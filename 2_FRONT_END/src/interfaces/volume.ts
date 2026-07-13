@@ -4,6 +4,7 @@
 // ============================================================
 
 export interface Volume {
+  id: string;              // ID cua tap
   uuid: string;            // UUID cua tap
   slug: string;            // Slug duong dan URL
   eng: string;             // Ten tieng Anh

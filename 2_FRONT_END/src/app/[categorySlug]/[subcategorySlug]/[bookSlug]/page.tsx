@@ -45,6 +45,11 @@ const BookPage = () => {
     fetchVolumes(currentPage, pageSize);
   }, [currentPage, pageSize]);
 
+  // Refresh volumes sau khi cap nhat
+  const handleVolumeUpdate = () => {
+    fetchVolumes(currentPage, pageSize);
+  };
+
   // Tao danh sach breadcrumb tu pathname hien tai
   const breadcrumbItems = pathname
     .split('/')
@@ -59,7 +64,7 @@ const BookPage = () => {
   return (
     <div>
       <BreadCrumbComponent items={breadcrumbItems} />
-      <VolumeContentComponent volumes={volumes} loading={loading} />
+      <VolumeContentComponent volumes={volumes} loading={loading} onVolumeUpdate={handleVolumeUpdate} />
       <PaginationComponent
         currentPage={currentPage}
         pageSize={pageSize}
