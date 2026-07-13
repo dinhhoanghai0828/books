@@ -13,6 +13,7 @@ import org.springframework.stereotype.Component;
 
 import javax.sql.DataSource;
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -114,9 +115,9 @@ public class RunSQLComponent {
 
         //  Tong hop ra file Z_SQL_RESULTS_SENTENCE.sql
         String outputFilePath = path + "SUMMARY.sql";
-        try (FileWriter outputWriter = new FileWriter(outputFilePath)) {
+        try (OutputStreamWriter outputWriter = new OutputStreamWriter(new FileOutputStream(outputFilePath), StandardCharsets.UTF_8)) {
             for (String filePath : scripts) {
-                try (FileReader fileReader = new FileReader(filePath);
+                try (InputStreamReader fileReader = new InputStreamReader(new FileInputStream(filePath), StandardCharsets.UTF_8);
                      BufferedReader reader = new BufferedReader(fileReader)) {
                     String line;
 
@@ -361,7 +362,7 @@ public class RunSQLComponent {
         
         try {
             connection = resolveDataSource().getConnection();
-            selectStmt = connection.prepareStatement("SELECT * FROM WORDS", ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_READ_ONLY);
+            selectStmt = connection.prepareStatement("SELECT * FROM WORDS ORDER BY ID ASC;", ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_READ_ONLY);
             selectStmt.setFetchSize(1000); // Fetch size để giảm memory usage
             resultSet = selectStmt.executeQuery();
             
@@ -376,7 +377,7 @@ public class RunSQLComponent {
             selectStmt.close();
             
             // Second pass: process data
-            selectStmt = connection.prepareStatement("SELECT * FROM WORDS", ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_READ_ONLY);
+            selectStmt = connection.prepareStatement("SELECT * FROM WORDS ORDER BY ID ASC;", ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_READ_ONLY);
             selectStmt.setFetchSize(1000);
             resultSet = selectStmt.executeQuery();
             
@@ -408,7 +409,7 @@ public class RunSQLComponent {
             lastQuery = table + "\n\n\n" + lastQuery + sqls;
             System.out.println("Generated SQL with " + i + " words");
             
-            try (FileWriter writer = new FileWriter(path + "3_SQL_ENG_WORDS.sql")) {
+            try (OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(path + "3_SQL_ENG_WORDS.sql"), StandardCharsets.UTF_8)) {
                 writer.write(lastQuery);
                 writer.flush();
             } catch (IOException e) {
@@ -449,7 +450,7 @@ public class RunSQLComponent {
         int before = 0;
         File wordsFile = new File(path + "3_SQL_ENG_WORDS.sql");
         if (wordsFile.exists()) {
-            try (BufferedReader reader = new BufferedReader(new FileReader(wordsFile))) {
+            try (BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(wordsFile), StandardCharsets.UTF_8))) {
                 String line;
                 while ((line = reader.readLine()) != null) {
                     String trimmed = line.trim();
@@ -465,6 +466,7 @@ public class RunSQLComponent {
         // Chạy nghiệp vụ
         createWordTableTemp();
         try {
+            //  Tao file Word
             generalWord();
         } catch (Exception e) {
             throw new SQLException("generalWord failed: " + e.getMessage(), e);
@@ -638,7 +640,7 @@ public class RunSQLComponent {
                     }
 
                     if (hasRows) {
-                        try (FileWriter writer = new FileWriter(outputFilePath)) {
+                        try (OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(outputFilePath), StandardCharsets.UTF_8)) {
                             writer.write(sb.toString());
                             writer.flush();
                         }
@@ -693,14 +695,14 @@ public class RunSQLComponent {
 
         // Ghi SUMMARY.sql từ các file APP_*.sql
         String summaryPath = path + "SUMMARY.sql";
-        try (FileWriter outputWriter = new FileWriter(summaryPath)) {
+        try (OutputStreamWriter outputWriter = new OutputStreamWriter(new FileOutputStream(summaryPath), StandardCharsets.UTF_8)) {
             for (String filePath : scripts) {
                 File f = new File(filePath);
                 if (!f.exists()) {
                     System.err.println("File not found, skipped: " + filePath);
                     continue;
                 }
-                try (BufferedReader reader = new BufferedReader(new FileReader(f))) {
+                try (BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(f), StandardCharsets.UTF_8))) {
                     String line;
                     while ((line = reader.readLine()) != null) {
                         outputWriter.write(line);

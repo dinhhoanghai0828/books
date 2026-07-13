@@ -4319,7 +4319,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Just an observation','Chỉ là một nhận xét thôi','00:06:24.640','00:06:25.680','english-fairy-tales-24'),
 	('You look as radiant as ever, my dear','Con trông vẫn rạng rỡ như mọi khi, con yêu','00:06:26.640','00:06:29.240','english-fairy-tales-24'),
 	('I\'m curious, though','Tuy nhiên, mẹ vẫn tò mò','00:06:29.700','00:06:31.080','english-fairy-tales-24'),
-	('After the captain leaves, the thought of their appearances starts to intrigue them','Sau khi thuyền trưởng rời đi, suy nghĩ về vẻ bề ngoài bắt đầu gợi lên sự tò mò trong họ','00:06:31.600','00:06:36.180','english-fairy-tales-24'),
+	('After the captain leaves, the thought of their appearances starts to intrigue them','Sau khi thuyền trưởng rời đi, suy nghĩ về vẻ bề ngoài bắt đầu gợi lên sự tò mò trong họ','00:06:31.300','00:06:36.180','english-fairy-tales-24'),
 	('Why shouldn\'t we take a peek in the glass mountains, just once, to see how far we\'ve come?','Tại sao chúng ta không nhìn vào núi kính một lần, để xem mình đã thay đổi ra sao?','00:06:36.740','00:06:42.320','english-fairy-tales-24'),
 	('Don\'t even think about it, Goldina','Đừng nghĩ đến điều đó, Goldina','00:06:42.880','00:06:44.580','english-fairy-tales-24'),
 	('A little look wouldn\'t hurt','Nhìn một chút cũng không sao','00:06:45.060','00:06:47.000','english-fairy-tales-24'),
