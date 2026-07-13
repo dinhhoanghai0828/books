@@ -362,7 +362,7 @@ public class RunSQLComponent {
         
         try {
             connection = resolveDataSource().getConnection();
-            selectStmt = connection.prepareStatement("SELECT * FROM WORDS ORDER BY ID ASC;", ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_READ_ONLY);
+            selectStmt = connection.prepareStatement("SELECT * FROM WORDS ORDER BY ENG ASC, VI ASC;", ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_READ_ONLY);
             selectStmt.setFetchSize(1000); // Fetch size để giảm memory usage
             resultSet = selectStmt.executeQuery();
             
@@ -377,7 +377,7 @@ public class RunSQLComponent {
             selectStmt.close();
             
             // Second pass: process data
-            selectStmt = connection.prepareStatement("SELECT * FROM WORDS ORDER BY ID ASC;", ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_READ_ONLY);
+            selectStmt = connection.prepareStatement("SELECT * FROM WORDS ORDER BY ENG ASC, VI ASC;", ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_READ_ONLY);
             selectStmt.setFetchSize(1000);
             resultSet = selectStmt.executeQuery();
             
