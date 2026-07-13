@@ -119,10 +119,12 @@ const HomePage = () => {
     <App>
       <Layout style={{ minHeight: '100vh' }}>
         <Content className="contentClass">
-          <HomeSearch
-            onSearch={handleSearch}
-            onSelectChange={handleSelectChange}
-          />
+          <div style={{ marginBottom: 24 }}>
+            <HomeSearch
+              onSearch={handleSearch}
+              onSelectChange={handleSelectChange}
+            />
+          </div>
           <HomeContent
             contents={contents}
             playbackSpeed={selectedSpeed}
