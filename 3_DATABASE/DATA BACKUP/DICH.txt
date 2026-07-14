@@ -22,3 +22,18 @@ Peppa Pig (Series 1) - Muddy Puddles (with subtitles)
 
 https://www.youtube.com/watch?v=bmR08GMho5s&list=PL9H5wl7jyq4RwVmeT12DY06PHwACABzod
 https://www.youtube.com/@peppapigsubtitled8981
+
+
+
+
+https://turboscribe.com/dashboard
+
+
+Đối chiếu đoạn SQL INSERT với văn bản gốc.
+
+Thực hiện 2 việc:
+
+Kiểm tra tiếng Anh: So sánh từng câu trong SQL với văn bản gốc. Chỉ báo những câu khác, thiếu, thừa hoặc sai. Nếu tất cả đều khớp thì kết luận: "Tiếng Anh khớp 100% với văn bản gốc."
+Kiểm tra bản dịch tiếng Việt: Đánh giá từng câu dịch có đúng nghĩa và tự nhiên không. Chỉ nêu những câu nên sửa, kèm bản dịch đề xuất. Nếu tất cả đều ổn thì kết luận: "Bản dịch tiếng Việt ổn, không cần sửa."
+
+Không sửa những câu đã đúng. Trả lời ngắn gọn, chỉ liệt kê các lỗi nếu có.
