@@ -8515,6 +8515,7 @@ INSERT INTO `WORDS` (`ENG`,`VI`) VALUES
 	('months-long','kéo dài nhiều tháng'),
 	('moon','mặt trăng'),
 	('moon','trăng'),
+	('mop','cây lau nhà'),
 	('mops','cây lau nhà'),
 	('mops','lau'),
 	('moral of','bài học'),
