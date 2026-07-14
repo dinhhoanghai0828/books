@@ -153,22 +153,55 @@ public class TaoMoiDuLieu {
 
                 StringBuilder sqls = new StringBuilder();
 
-                if (listObject.size() > 0) {
-                    for (int i = 0; i < listObject.size(); i++) {
-                        books.read.Object obj = listObject.get(i);
+                // Clean up sentences - remove TurboScribe messages, leading ), and merge split sentences
+                List<books.read.Object> cleanedListObject = new ArrayList<>();
+                for (int i = 0; i < listObject.size(); i++) {
+                    books.read.Object obj = listObject.get(i);
+                    String currentSentence = obj.getSentence().trim();
 
-                        String engSentence = "";
-                        if (obj.getSentence().contains("\'") || obj.getSentence().contains("'") || obj.getSentence().contains("'") || obj.getSentence().contains("\"") || obj.getSentence().contains("\"") || obj.getSentence().contains("\"")) {
-                            engSentence = obj.getSentence().replace("'", "\\'");
-                            engSentence = engSentence.replace("'", "\\'");
-                            engSentence = engSentence.replace("\"", "\"");
-                            engSentence = engSentence.replace("\"", "\"");
-                        } else {
-                            engSentence = obj.getSentence();
+                    // Skip sentences containing TurboScribe message
+                    if (currentSentence.contains("Transcribed by TurboScribe") || currentSentence.contains("Go Unlimited to remove this message")) {
+                        continue;
+                    }
+
+                    // Remove leading ) if present
+                    if (currentSentence.startsWith(")")) {
+                        currentSentence = currentSentence.substring(1).trim();
+                    }
+
+                    // Check if this sentence should be merged with previous one
+                    if (!cleanedListObject.isEmpty()) {
+                        books.read.Object lastObj = cleanedListObject.get(cleanedListObject.size() - 1);
+                        String lastSentence = lastObj.getSentence().trim();
+
+                        // Merge if previous sentence doesn't end with punctuation and current sentence is short
+                        if (!lastSentence.endsWith(".") && !lastSentence.endsWith("?") && !lastSentence.endsWith("!")
+                                && currentSentence.length() < 50 && currentSentence.matches("^[a-z].*")) {
+                            String mergedSentence = lastSentence + " " + currentSentence;
+                            lastObj.setSentence(mergedSentence);
+                            lastObj.setEndDate(obj.getEndDate());
+                            continue;
                         }
-                        if (engSentence.trim().endsWith(".")) {
-                            engSentence = engSentence.trim();
-                            engSentence = engSentence.trim().substring(0, engSentence.length() - 1);
+                    }
+
+                    obj.setSentence(currentSentence);
+                    cleanedListObject.add(obj);
+                }
+
+                if (cleanedListObject.size() > 0) {
+                    for (int i = 0; i < cleanedListObject.size(); i++) {
+                        books.read.Object obj = cleanedListObject.get(i);
+
+                        String engSentence = obj.getSentence().trim();
+
+                        // Handle quotes - escape single quotes for SQL
+                        if (engSentence.contains("'")) {
+                            engSentence = engSentence.replace("'", "''");
+                        }
+
+                        // Remove trailing period if present
+                        if (engSentence.endsWith(".")) {
+                            engSentence = engSentence.substring(0, engSentence.length() - 1);
                         }
                         engSentence = engSentence.trim();
 
