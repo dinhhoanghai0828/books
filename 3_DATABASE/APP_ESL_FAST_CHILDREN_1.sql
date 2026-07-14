@@ -511,4 +511,45 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He rests','Cậu ấy nghỉ ngơi','00:00:19.720','00:00:21.200','esl-fast-beginner-1-39'),
 	('He drinks chicken soup and eats vegetables','Cậu ấy uống súp gà và ăn rau','00:00:21.600','00:00:25.460','esl-fast-beginner-1-39'),
 	('He is still sick','Cậu ấy vẫn bị ốm','00:00:26.140','00:00:28.160','esl-fast-beginner-1-39'),
-	('No one likes the flu','Chẳng ai thích bị cúm cả','00:00:27.860','00:00:30.580','esl-fast-beginner-1-39');
+	('No one likes the flu','Chẳng ai thích bị cúm cả','00:00:27.860','00:00:30.580','esl-fast-beginner-1-39'),
+
+	/* (UUID(),'esl-fast-beginner-1-40','The Circus','Rạp xiếc','BEGINNER_01_ESL_FAST_CHILDREN_040.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',40) */
+	('She goes to the circus','Cô bé đi xem xiếc','00:00:00.650','00:00:02.870','esl-fast-beginner-1-40'),
+	('She sees a clown','Cô bé nhìn thấy một chú hề','00:00:03.670','00:00:05.310','esl-fast-beginner-1-40'),
+	('He is very colorful','Chú hề mặc đồ rất sặc sỡ','00:00:05.970','00:00:07.690','esl-fast-beginner-1-40'),
+	('She sees magicians','Cô bé nhìn thấy các ảo thuật gia','00:00:08.790','00:00:10.610','esl-fast-beginner-1-40'),
+	('They take rabbits out of hats','Họ lấy những chú thỏ từ trong chiếc mũ ra','00:00:11.030','00:00:13.670','esl-fast-beginner-1-40'),
+	('She sees people walking on rope up in the air','Cô bé thấy những người đi trên dây ở trên cao','00:00:14.490','00:00:18.910','esl-fast-beginner-1-40'),
+	('She sees people juggling balls','Cô bé thấy mọi người tung hứng những quả bóng','00:00:19.730','00:00:22.590','esl-fast-beginner-1-40'),
+	('She sees a lot of animals, too','Cô bé còn nhìn thấy rất nhiều con vật','00:00:23.310','00:00:26.030','esl-fast-beginner-1-40'),
+	('There are lions that jump through hoops of fire','Có những con sư tử nhảy qua những vòng lửa','00:00:26.810','00:00:30.270','esl-fast-beginner-1-40'),
+	('There are elephants that dance','Có những chú voi biết nhảy múa','00:00:30.650','00:00:33.210','esl-fast-beginner-1-40'),
+	('She never wants to leave the circus','Cô bé chẳng muốn rời rạp xiếc chút nào','00:00:33.870','00:00:36.490','esl-fast-beginner-1-40');
+
+/*=====================================================================================================================================================================================================================================================*/
+
+INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
+	/* (UUID(),'esl-fast-beginner-1-41','An Unhealthy Boy','Một cậu bé không khỏe mạnh','BEGINNER_01_ESL_FAST_CHILDREN_041.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',41) */
+	('He is fat','Cậu ấy bị thừa cân','00:00:00.390','00:00:02.270','esl-fast-beginner-1-41'),
+	('He only eats red meat, chips, and candy','Cậu ấy chỉ ăn thịt đỏ, khoai tây chiên và kẹo','00:00:02.750','00:00:07.050','esl-fast-beginner-1-41'),
+	('His parents worry about him','Bố mẹ cậu ấy rất lo cho cậu','00:00:07.710','00:00:10.030','esl-fast-beginner-1-41'),
+	('They ban him from eating fattening foods','Họ không cho cậu ấy ăn những món dễ tăng cân nữa','00:00:10.670','00:00:13.710','esl-fast-beginner-1-41'),
+	('They cook healthy meals only from now on','Từ bây giờ họ chỉ nấu những bữa ăn lành mạnh','00:00:14.410','00:00:17.990','esl-fast-beginner-1-41'),
+	('They eat oatmeal for breakfast','Họ ăn cháo yến mạch vào bữa sáng','00:00:18.710','00:00:20.950','esl-fast-beginner-1-41'),
+	('They eat fish, carrots, and vegetables for lunch','Họ ăn cá, cà rốt và rau vào bữa trưa','00:00:21.450','00:00:25.490','esl-fast-beginner-1-41'),
+	('They eat chicken and salad for dinner','Họ ăn thịt gà và salad vào bữa tối','00:00:25.850','00:00:28.830','esl-fast-beginner-1-41'),
+
+	/* (UUID(),'esl-fast-beginner-1-42','Ferris Wheel','Vòng đu quay','BEGINNER_01_ESL_FAST_CHILDREN_042.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',42) */
+	('A Ferris wheel is a huge rotating wheel','Vòng đu quay là một bánh xe khổng lồ quay tròn','00:00:00.330','00:00:04.370','esl-fast-beginner-1-42'),
+	('It has many seats','Nó có rất nhiều chỗ ngồi','00:00:05.030','00:00:06.890','esl-fast-beginner-1-42'),
+	('He sits on one of them','Cậu ấy ngồi vào một trong những chỗ đó','00:00:07.510','00:00:09.370','esl-fast-beginner-1-42'),
+	('His seat is yellow','Chỗ ngồi của cậu ấy có màu vàng','00:00:09.910','00:00:11.450','esl-fast-beginner-1-42'),
+	('He is excited','Cậu ấy rất háo hức','00:00:12.010','00:00:13.470','esl-fast-beginner-1-42'),
+	('He puts his seat belt on','Cậu ấy thắt dây an toàn','00:00:14.070','00:00:16.550','esl-fast-beginner-1-42'),
+	('He holds on to the metal bar','Cậu ấy bám chặt vào thanh kim loại','00:00:16.890','00:00:19.370','esl-fast-beginner-1-42'),
+	('He wants to be safe','Cậu ấy muốn được an toàn','00:00:19.950','00:00:21.870','esl-fast-beginner-1-42'),
+	('The wheel moves','Vòng đu quay bắt đầu chuyển động','00:00:22.290','00:00:24.290','esl-fast-beginner-1-42'),
+	('He starts to go up, higher and higher','Cậu ấy bắt đầu lên cao, càng lúc càng cao','00:00:24.730','00:00:28.930','esl-fast-beginner-1-42'),
+	('He looks down','Cậu ấy nhìn xuống dưới','00:00:28.630','00:00:31.030','esl-fast-beginner-1-42'),
+	('The people are so small','Mọi người trông nhỏ xíu','00:00:31.549','00:00:34.130','esl-fast-beginner-1-42'),
+	('The view is so nice','Khung cảnh thật đẹp','00:00:34.750','00:00:37.270','esl-fast-beginner-1-42');
