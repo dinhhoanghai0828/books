@@ -994,7 +994,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And that\'s why we say touch Wood, instinctively so as to not ruin the moment','Thế nên người ta nói chạm gỗ, theo tự nhiên để không phá hỏng giây phút đó','00:00:00.000','00:00:00.000','english-fairy-tales-6'),
 	('The end','Hết chuyện','00:00:00.000','00:00:00.000','english-fairy-tales-6'),
 
-	/* (UUID(),'english-fairy-tales-7','Mellidora','Mellidora','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_007.mp3',NULL,'00:00:00.000','00:00:00.000','english-fairy-tales','NO',7) */
+	/* (UUID(),'english-fairy-tales-7','Mellidora','Mellidora','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_007.mp3',NULL,'null','null','english-fairy-tales','NO',7) */
 	('Once upon a time, when... I need something different here','Ngày xửa ngày xưa, khi mà... Tôi cần một chút gì đó khác biệt ở đây','00:00:00.000','00:00:00.000','english-fairy-tales-7'),
 	('When an apple was just a fruit?','Khi táo chỉ là một loại quả được không?','00:00:00.000','00:00:00.000','english-fairy-tales-7'),
 	('When war raged upon all over the..','khi chiến tranh reo rắc khắp.','00:00:00.000','00:00:00.000','english-fairy-tales-7'),
@@ -1113,7 +1113,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And thus, the story of prince Tyler and princess Mellidora ends on a happy note','Và rồi, câu chuyện về hoàng tử Tyler và công chúa Mellidora kết thúc viên mãn','00:00:00.000','00:00:00.000','english-fairy-tales-7'),
 	('Teaching us a very important lesson, too, that in life, always surround yourself with people who laugh through their own miseries and cry at other\'s pain','Dạy cho chúng ta một bài học rất quan trọng, rằng trong cuộc sống này, xung quanh mình luôn có những người lạc quan trong khó khăn và biết cảm thông với nỗi đau của người khác','00:00:00.000','00:00:00.000','english-fairy-tales-7'),
 
-	/* (UUID(),'english-fairy-tales-8','Anansi and the Pot of Beans','Anansi và nồi đậu','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_008.mp3',NULL,'00:00:00.000','00:00:00.000','english-fairy-tales','NO',8) */
+	/* (UUID(),'english-fairy-tales-8','Anansi and the Pot of Beans','Anansi và nồi đậu','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_008.mp3',NULL,'null','null','english-fairy-tales','NO',8) */
 	('You must have heard of Anansi the spider. He is a mischief maker, a trickster, and the king of stories','Bạn hẳn đã nghe nói về nhện Anansi. Anh ta là một kẻ chuyên gây rối, một kẻ lừa bịp và là vua của những câu chuyện','00:00:00.000','00:00:00.000','english-fairy-tales-8'),
 	('And today, I will tell you about one such story which will make you laugh a little, smile a little, and tell you a little bit more about the strong folklore character from the magnificent land of Afri','Và hôm nay, tôi sẽ kể cho các bạn nghe về một câu chuyện sẽ khiến bạn bật cười, hay mỉm cười và kể thêm một chút về nhân vật văn hóa dân gian mạnh mẽ đến từ vùng đất tráng lệ của Châu Phi','00:00:00.000','00:00:00.000','english-fairy-tales-8'),
 	('It was a hot day and as all days had been for the last couple of months. Anansi was in his house, sitting by the window, bored out of his mind','Vào một ngày nắng nóng và như những ngày khác trong các tháng qua. Anasi ngồi buồn chán cạnh cửa sổ, trong ngôi nhà của anh ta','00:00:00.000','00:00:00.000','english-fairy-tales-8'),
@@ -1210,7 +1210,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And if you look carefully you might still see him hiding there today','Và nếu bạn nhìn kỹ bà có thể vẫn thấy anh ấy trốn ở đó hôm nay','00:00:00.000','00:00:00.000','english-fairy-tales-8'),
 	('But you will never see him crazy about beans anymore','Nhưng bạn sẽ không bao giờ thấy anh ấy phát cuồng vì đậu nữa','00:00:00.000','00:00:00.000','english-fairy-tales-8'),
 
-	/* (UUID(),'english-fairy-tales-9','The shrew farmer','Người nông dân thông minh','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_009.mp3',NULL,'00:00:00.000','00:00:00.000','english-fairy-tales','NO',9) */
+	/* (UUID(),'english-fairy-tales-9','The shrew farmer','Người nông dân thông minh','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_009.mp3',NULL,'null','null','english-fairy-tales','NO',9) */
 	('Once upon a time, there lived a farmer who worked far from his home in the fields of a rich baron','Ngày xửa ngày có một anh nông dân phải làm việc xa nhà ngoài các cánh đồng của một nam tước giàu có','00:00:00.000','00:00:00.000','english-fairy-tales-9'),
 	('In the past, gangs of bandits hid in the mountains rising behind the plains but the emperor has sent his soldiers to find and kill the thieves and now the area was safe and quite','Vào thời xa xưa, các toán cướp thường lẩn trốn trong các dãy núi nhô lên ở phía sau các vùng đồng bằng nhưng hoàng đế đã đưa quân đi tìm và giết bọn cướp, và giờ đây cả vùng đã an toàn và bình yên','00:00:00.000','00:00:00.000','english-fairy-tales-9'),
 	('Oh my another weapon','Ôi trời ơi, lại một loại vũ khí khác nữa nè','00:00:00.000','00:00:00.000','english-fairy-tales-9'),

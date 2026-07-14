@@ -5132,7 +5132,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('If you still want to kick me out now, you\'ll have nothing to eat','Nếu bây giờ bạn vẫn muốn đuổi tôi đi, bạn sẽ không có gì để ăn đâu','00:04:17.170','00:04:19.730','your-animated-story-show-17'),
 	('After that incident, Joseph seemed more at ease','Sau sự việc đó, Joseph có vẻ thoải mái hơn','00:04:19.730','00:04:22.610','your-animated-story-show-17'),
 	('He stopped threatening me with his rules and just let me ramble on','Anh ta ngừng đe dọa tôi bằng các quy tắc của mình và để tôi nói linh tinh','00:04:22.970','00:04:25.870','your-animated-story-show-17'),
-	('One time, when I was napping on the couch after cleaning, he even put a blanket on me','Một lần, khi tôi đang chợp mắt trên ghế sau khi dọn dẹp, anh ta thậm chí còn đắp chăn cho tôi','00:04:26.270','00:04:30.770','your-animated-story-show-17'),
+	('One time, when I was napping on the couch after cleaning, he even put a blanket on me','Một lần, khi tôi đang chợp mắt trên ghế sofa sau khi dọn dẹp, anh ta thậm chí còn đắp chăn cho tôi','00:04:26.270','00:04:30.770','your-animated-story-show-17'),
 	('I haven\'t slept yet, dear master','Tôi vẫn chưa ngủ đâu, thưa chủ nhân','00:04:31.050','00:04:33.530','your-animated-story-show-17'),
 	('Then one day, a middle-aged woman appeared at the gate','Rồi một ngày, một người phụ nữ trung niên xuất hiện ở cổng','00:04:33.850','00:04:36.790','your-animated-story-show-17'),
 	('She introduced herself as Joseph\'s mom and gifted him a beautiful bird','Bà ấy tự giới thiệu là mẹ của Joseph và tặng anh ta một con chim đẹp','00:04:37.090','00:04:40.890','your-animated-story-show-17'),
