@@ -322,7 +322,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She covers her eyes, then opens them','Cô bé che mắt rồi lại mở ra','00:00:30.100','00:00:33.960','esl-fast-beginner-1-23'),
 	('The baby laughs','Em bé bật cười','00:00:34.540','00:00:36.240','esl-fast-beginner-1-23'),
 
-	/* (UUID(),'esl-fast-beginner-1-24','Sometimes You Lose','Đôi khi bạn thua','BEGINNER_01_ESL_FAST_CHILDREN_024.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',24) */
+	/* (UUID(),'esl-fast-beginner-1-24','Sometimes You Lose','Đôi khi bạn thua','BEGINNER_01_ESL_FAST_CHILDREN_024.mp3',NULL,'00:00:00.000','00:00:39.000','esl-fast-children-1','YES',24) */
 	('Sarah\'s basketball team lost today','Đội bóng rổ của Sarah hôm nay đã thua','00:00:00.520','00:00:04.040','esl-fast-beginner-1-24'),
 	('She is upset','Cô bé rất buồn','00:00:04.460','00:00:06.380','esl-fast-beginner-1-24'),
 	('She walks home sadly','Cô bé buồn bã đi bộ về nhà','00:00:06.960','00:00:09.320','esl-fast-beginner-1-24'),
@@ -335,16 +335,16 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Sarah wipes her tears away','Sarah lau nước mắt đi','00:00:28.760','00:00:31.459','esl-fast-beginner-1-24'),
 	('She realizes that sometimes you win and sometimes you lose','Cô bé nhận ra rằng có lúc thắng thì cũng có lúc thua','00:00:31.800','00:00:37.560','esl-fast-beginner-1-24'),
 
-	/* (UUID(),'esl-fast-beginner-1-25','A New Home','Ngôi nhà mới','BEGINNER_01_ESL_FAST_CHILDREN_025.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',25) */
-	('He moves to a new city','Cậu ấy chuyển đến một thành phố mới','00:00:00.200','00:00:02.800','esl-fast-beginner-1-25'),
+	/* (UUID(),'esl-fast-beginner-1-25','A New Home','Ngôi nhà mới','BEGINNER_01_ESL_FAST_CHILDREN_025.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1','YES',25) */
+	('He moves to a new city','Cậu bé chuyển đến một thành phố mới','00:00:00.200','00:00:02.800','esl-fast-beginner-1-25'),
 	('There are many buildings','Có rất nhiều tòa nhà','00:00:03.000','00:00:05.410','esl-fast-beginner-1-25'),
 	('There are a lot of people walking','Có rất nhiều người đang đi lại','00:00:06.000','00:00:08.610','esl-fast-beginner-1-25'),
 	('There are many taxis','Có rất nhiều xe taxi','00:00:09.000','00:00:11.690','esl-fast-beginner-1-25'),
-	('He feels lonely','Cậu ấy cảm thấy cô đơn','00:00:12.000','00:00:14.090','esl-fast-beginner-1-25'),
+	('He feels lonely','Cậu bé cảm thấy cô đơn','00:00:12.000','00:00:14.090','esl-fast-beginner-1-25'),
 	('Everyone acts so different here','Mọi người ở đây cư xử rất khác','00:00:14.800','00:00:18.030','esl-fast-beginner-1-25'),
-	('He goes to his new school','Cậu ấy đến ngôi trường mới','00:00:18.730','00:00:20.970','esl-fast-beginner-1-25'),
-	('He sees a friendly-looking person','Cậu ấy gặp một người trông rất thân thiện','00:00:21.300','00:00:24.510','esl-fast-beginner-1-25'),
-	('He asks him to show him around','Cậu ấy nhờ người đó dẫn mình đi tham quan','00:00:25.370','00:00:28.190','esl-fast-beginner-1-25');
+	('He goes to his new school','Cậu bé đến ngôi trường mới của mình','00:00:18.730','00:00:20.970','esl-fast-beginner-1-25'),
+	('He sees a friendly-looking person','Cậu bé gặp một người trông rất thân thiện','00:00:21.300','00:00:24.510','esl-fast-beginner-1-25'),
+	('He asks him to show him around','Cậu bé nhờ người đó dẫn mình đi tham quan','00:00:25.370','00:00:28.190','esl-fast-beginner-1-25');
 
 /*=====================================================================================================================================================================================================================================================*/
 

@@ -367,7 +367,7 @@ INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,CHE
 	(UUID(),'esl-fast-beginner-1-22','Father\'s Day','Ngày của cha','BEGINNER_01_ESL_FAST_CHILDREN_022.mp3','null','00:00:00.000','00:00:39.000','esl-fast-children-1','YES',22),
 	(UUID(),'esl-fast-beginner-1-23','The Baby Sister','Em bé gái','BEGINNER_01_ESL_FAST_CHILDREN_023.mp3','null','00:00:00.000','00:00:37.000','esl-fast-children-1','YES',23),
 	(UUID(),'esl-fast-beginner-1-24','Sometimes You Lose','Đôi khi bạn thua','BEGINNER_01_ESL_FAST_CHILDREN_024.mp3','null','00:00:00.000','00:00:39.000','esl-fast-children-1','YES',24),
-	(UUID(),'esl-fast-beginner-1-25','A New Home','Ngôi nhà mới','BEGINNER_01_ESL_FAST_CHILDREN_025.mp3','null','00:00:00.000','00:00:00.000','esl-fast-children-1','NO',25),
+	(UUID(),'esl-fast-beginner-1-25','A New Home','Ngôi nhà mới','BEGINNER_01_ESL_FAST_CHILDREN_025.mp3','null','00:00:00.000','00:00:30.000','esl-fast-children-1','YES',25),
 	(UUID(),'esl-fast-beginner-1-26','Chris and His Fish','Chris và những chú cá của cậu ấy','BEGINNER_01_ESL_FAST_CHILDREN_026.mp3','null','00:00:00.000','00:00:32.000','esl-fast-children-1','NO',26),
 	(UUID(),'esl-fast-beginner-1-27','The Oldest Brother','Người anh cả lớn tuổi nhất','BEGINNER_01_ESL_FAST_CHILDREN_027.mp3','null','00:00:00.000','00:00:32.000','esl-fast-children-1','NO',27),
 	(UUID(),'esl-fast-beginner-1-28','A Successful Trade','Một thương vụ trao đổi thành công','BEGINNER_01_ESL_FAST_CHILDREN_028.mp3','null','00:00:00.000','00:00:00.000','esl-fast-children-1','NO',28),
