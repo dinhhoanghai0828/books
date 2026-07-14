@@ -5162,6 +5162,7 @@ INSERT INTO `WORDS` (`ENG`,`VI`) VALUES
 	('cottage','căn nhà'),
 	('cottage','ngôi nhà'),
 	('cottage','ngôi nhà tranh'),
+	('couch','ghế sofa'),
 	('cough','ho'),
 	('could','có lẽ'),
 	('could','có thể'),
@@ -6798,6 +6799,7 @@ INSERT INTO `WORDS` (`ENG`,`VI`) VALUES
 	('favor','ơn'),
 	('favor','ủng hộ'),
 	('favorite','sở thích'),
+	('favorite','thích nhất'),
 	('favorite','yêu thích'),
 	('fear','hãi'),
 	('fear','lo'),
@@ -10942,6 +10944,8 @@ INSERT INTO `WORDS` (`ENG`,`VI`) VALUES
 	('moved to','di chuyển đến'),
 	('moved to','di cư'),
 	('moves','động tác'),
+	('moves to','chuyển tới'),
+	('moves to','chuyển đến'),
 	('movie','phim'),
 	('movie','điện ảnh'),
 	('movie theater','rạp chiếu phim'),
@@ -12786,6 +12790,9 @@ INSERT INTO `WORDS` (`ENG`,`VI`) VALUES
 	('realized that','nhận ra'),
 	('realized that','nhận thấy'),
 	('realized that','phát hiện ra'),
+	('realizes','nhận ra'),
+	('realizes that','nhận ra là'),
+	('realizes that','nhận ra rằng'),
 	('realizing','nhận ra'),
 	('realizing','thấy'),
 	('really','rất'),
@@ -13626,6 +13633,7 @@ INSERT INTO `WORDS` (`ENG`,`VI`) VALUES
 	('seen','thấy'),
 	('seen','xem'),
 	('sees','gặp'),
+	('sees','nhìn thấy'),
 	('sees','thấy'),
 	('sees','xem'),
 	('seize','bắt'),
@@ -15173,6 +15181,8 @@ INSERT INTO `WORDS` (`ENG`,`VI`) VALUES
 	('taunting','chế giễu'),
 	('taunting','chọc ghẹo'),
 	('taunting','trêu trọc'),
+	('taxis','taxi'),
+	('taxis','xe taxi'),
 	('tea','trà'),
 	('teach','dạy'),
 	('teacher','giáo viên'),
@@ -26089,7 +26099,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And that\'s why we say touch Wood, instinctively so as to not ruin the moment','Thế nên người ta nói chạm gỗ, theo tự nhiên để không phá hỏng giây phút đó','00:00:00.000','00:00:00.000','english-fairy-tales-6'),
 	('The end','Hết chuyện','00:00:00.000','00:00:00.000','english-fairy-tales-6'),
 
-	/* (UUID(),'english-fairy-tales-7','Mellidora','Mellidora','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_007.mp3',NULL,'00:00:00.000','00:00:00.000','english-fairy-tales','NO',7) */
+	/* (UUID(),'english-fairy-tales-7','Mellidora','Mellidora','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_007.mp3',NULL,'null','null','english-fairy-tales','NO',7) */
 	('Once upon a time, when... I need something different here','Ngày xửa ngày xưa, khi mà... Tôi cần một chút gì đó khác biệt ở đây','00:00:00.000','00:00:00.000','english-fairy-tales-7'),
 	('When an apple was just a fruit?','Khi táo chỉ là một loại quả được không?','00:00:00.000','00:00:00.000','english-fairy-tales-7'),
 	('When war raged upon all over the..','khi chiến tranh reo rắc khắp.','00:00:00.000','00:00:00.000','english-fairy-tales-7'),
@@ -26208,7 +26218,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And thus, the story of prince Tyler and princess Mellidora ends on a happy note','Và rồi, câu chuyện về hoàng tử Tyler và công chúa Mellidora kết thúc viên mãn','00:00:00.000','00:00:00.000','english-fairy-tales-7'),
 	('Teaching us a very important lesson, too, that in life, always surround yourself with people who laugh through their own miseries and cry at other\'s pain','Dạy cho chúng ta một bài học rất quan trọng, rằng trong cuộc sống này, xung quanh mình luôn có những người lạc quan trong khó khăn và biết cảm thông với nỗi đau của người khác','00:00:00.000','00:00:00.000','english-fairy-tales-7'),
 
-	/* (UUID(),'english-fairy-tales-8','Anansi and the Pot of Beans','Anansi và nồi đậu','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_008.mp3',NULL,'00:00:00.000','00:00:00.000','english-fairy-tales','NO',8) */
+	/* (UUID(),'english-fairy-tales-8','Anansi and the Pot of Beans','Anansi và nồi đậu','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_008.mp3',NULL,'null','null','english-fairy-tales','NO',8) */
 	('You must have heard of Anansi the spider. He is a mischief maker, a trickster, and the king of stories','Bạn hẳn đã nghe nói về nhện Anansi. Anh ta là một kẻ chuyên gây rối, một kẻ lừa bịp và là vua của những câu chuyện','00:00:00.000','00:00:00.000','english-fairy-tales-8'),
 	('And today, I will tell you about one such story which will make you laugh a little, smile a little, and tell you a little bit more about the strong folklore character from the magnificent land of Afri','Và hôm nay, tôi sẽ kể cho các bạn nghe về một câu chuyện sẽ khiến bạn bật cười, hay mỉm cười và kể thêm một chút về nhân vật văn hóa dân gian mạnh mẽ đến từ vùng đất tráng lệ của Châu Phi','00:00:00.000','00:00:00.000','english-fairy-tales-8'),
 	('It was a hot day and as all days had been for the last couple of months. Anansi was in his house, sitting by the window, bored out of his mind','Vào một ngày nắng nóng và như những ngày khác trong các tháng qua. Anasi ngồi buồn chán cạnh cửa sổ, trong ngôi nhà của anh ta','00:00:00.000','00:00:00.000','english-fairy-tales-8'),
@@ -26305,7 +26315,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And if you look carefully you might still see him hiding there today','Và nếu bạn nhìn kỹ bà có thể vẫn thấy anh ấy trốn ở đó hôm nay','00:00:00.000','00:00:00.000','english-fairy-tales-8'),
 	('But you will never see him crazy about beans anymore','Nhưng bạn sẽ không bao giờ thấy anh ấy phát cuồng vì đậu nữa','00:00:00.000','00:00:00.000','english-fairy-tales-8'),
 
-	/* (UUID(),'english-fairy-tales-9','The shrew farmer','Người nông dân thông minh','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_009.mp3',NULL,'00:00:00.000','00:00:00.000','english-fairy-tales','NO',9) */
+	/* (UUID(),'english-fairy-tales-9','The shrew farmer','Người nông dân thông minh','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_009.mp3',NULL,'null','null','english-fairy-tales','NO',9) */
 	('Once upon a time, there lived a farmer who worked far from his home in the fields of a rich baron','Ngày xửa ngày có một anh nông dân phải làm việc xa nhà ngoài các cánh đồng của một nam tước giàu có','00:00:00.000','00:00:00.000','english-fairy-tales-9'),
 	('In the past, gangs of bandits hid in the mountains rising behind the plains but the emperor has sent his soldiers to find and kill the thieves and now the area was safe and quite','Vào thời xa xưa, các toán cướp thường lẩn trốn trong các dãy núi nhô lên ở phía sau các vùng đồng bằng nhưng hoàng đế đã đưa quân đi tìm và giết bọn cướp, và giờ đây cả vùng đã an toàn và bình yên','00:00:00.000','00:00:00.000','english-fairy-tales-9'),
 	('Oh my another weapon','Ôi trời ơi, lại một loại vũ khí khác nữa nè','00:00:00.000','00:00:00.000','english-fairy-tales-9'),
@@ -39450,10 +39460,10 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Maria goes in','Maria bước vào','00:00:20.100','00:00:21.820','esl-fast-beginner-1-16'),
 	('Maria sits in a big chair','Maria ngồi lên chiếc ghế lớn','00:00:22.500','00:00:25.380','esl-fast-beginner-1-16'),
 	('She waits for the dentist','Cô bé chờ nha sĩ','00:00:26.000','00:00:27.860','esl-fast-beginner-1-16'),
-	('The dentist arrives','Nha sĩ bước vào','00:00:27.900','00:00:30.720','esl-fast-beginner-1-16'),
+	('The dentist arrives','Nha sĩ bước vào','00:00:27.950','00:00:30.720','esl-fast-beginner-1-16'),
 	('He is careful with Maria\'s teeth','Ông ấy khám răng cho Maria rất cẩn thận','00:00:31.439','00:00:34.400','esl-fast-beginner-1-16'),
 	('He gives her a new toothbrush','Ông tặng cô bé một chiếc bàn chải đánh răng mới','00:00:34.600','00:00:37.160','esl-fast-beginner-1-16'),
-	('Maria feels good','Maria cảm thấy dễ chịu hơn','00:00:37.600','00:00:39.580','esl-fast-beginner-1-16'),
+	('Maria feels good','Maria cảm thấy dễ chịu hơn','00:00:37.600','00:00:39.500','esl-fast-beginner-1-16'),
 
 	/* (UUID(),'esl-fast-beginner-1-17','A Trip to the Library','Chuyến đi đến thư viện','BEGINNER_01_ESL_FAST_CHILDREN_017.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1','YES',17) */
 	('Mark needs a book','Mark cần một quyển sách','00:00:00.200','00:00:02.480','esl-fast-beginner-1-17'),
@@ -39548,26 +39558,26 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She covers her eyes, then opens them','Cô bé che mắt rồi lại mở ra','00:00:30.100','00:00:33.960','esl-fast-beginner-1-23'),
 	('The baby laughs','Em bé bật cười','00:00:34.540','00:00:36.240','esl-fast-beginner-1-23'),
 
-	/* (UUID(),'esl-fast-beginner-1-24','Sometimes You Lose','Đôi khi bạn thua','BEGINNER_01_ESL_FAST_CHILDREN_024.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',24) */
+	/* (UUID(),'esl-fast-beginner-1-24','Sometimes You Lose','Đôi khi bạn thua','BEGINNER_01_ESL_FAST_CHILDREN_024.mp3',NULL,'00:00:00.000','00:00:39.000','esl-fast-children-1','NO',24) */
 	('Sarah\'s basketball team lost today','Đội bóng rổ của Sarah hôm nay đã thua','00:00:00.520','00:00:04.040','esl-fast-beginner-1-24'),
 	('She is upset','Cô bé rất buồn','00:00:04.460','00:00:06.380','esl-fast-beginner-1-24'),
 	('She walks home sadly','Cô bé buồn bã đi bộ về nhà','00:00:06.960','00:00:09.320','esl-fast-beginner-1-24'),
 	('She sits down on the couch','Cô bé ngồi xuống ghế sofa','00:00:09.840','00:00:12.540','esl-fast-beginner-1-24'),
-	('She starts crying','Cô bé bật khóc','00:00:13.080','00:00:14.860','esl-fast-beginner-1-24'),
+	('She starts crying','Cô bắt đầu bật khóc','00:00:13.080','00:00:14.860','esl-fast-beginner-1-24'),
 	('Her mom sees her','Mẹ cô bé nhìn thấy cô bé','00:00:15.700','00:00:17.380','esl-fast-beginner-1-24'),
-	('She gives her a hug','Mẹ ôm cô bé vào lòng','00:00:17.940','00:00:19.700','esl-fast-beginner-1-24'),
-	('Then, she bakes Sarah\'s favorite cookies','Sau đó mẹ nướng món bánh quy Sarah thích nhất','00:00:20.200','00:00:24.360','esl-fast-beginner-1-24'),
+	('She gives her a hug','Mẹ ôm cô bé vào lòng','00:00:17.600','00:00:19.700','esl-fast-beginner-1-24'),
+	('Then, she bakes Sarah\'s favorite cookies','Sau đó, mẹ nướng món bánh quy Sarah thích nhất','00:00:20.200','00:00:24.360','esl-fast-beginner-1-24'),
 	('The warm cookies make Sarah smile','Những chiếc bánh nóng hổi khiến Sarah mỉm cười','00:00:24.680','00:00:28.120','esl-fast-beginner-1-24'),
-	('Sarah wipes her tears away','Sarah lau nước mắt','00:00:28.760','00:00:31.459','esl-fast-beginner-1-24'),
-	('She realizes that sometimes you win and sometimes you lose','Cô bé hiểu rằng có lúc thắng thì cũng có lúc thua','00:00:32.220','00:00:37.560','esl-fast-beginner-1-24'),
+	('Sarah wipes her tears away','Sarah lau nước mắt đi','00:00:28.760','00:00:31.459','esl-fast-beginner-1-24'),
+	('She realizes that sometimes you win and sometimes you lose','Cô bé nhận ra rằng có lúc thắng thì cũng có lúc thua','00:00:31.800','00:00:37.560','esl-fast-beginner-1-24'),
 
-	/* (UUID(),'esl-fast-beginner-1-25','A New Home','Ngôi nhà mới','BEGINNER_01_ESL_FAST_CHILDREN_025.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',25) */
+	/* (UUID(),'esl-fast-beginner-1-25','A New Home','Ngôi nhà mới','BEGINNER_01_ESL_FAST_CHILDREN_025.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1','NO',25) */
 	('He moves to a new city','Cậu ấy chuyển đến một thành phố mới','00:00:00.330','00:00:03.070','esl-fast-beginner-1-25'),
-	('There are many buildings','Ở đó có rất nhiều tòa nhà','00:00:03.830','00:00:05.410','esl-fast-beginner-1-25'),
-	('There are a lot of people walking','Có rất nhiều người đi lại trên đường','00:00:06.270','00:00:08.610','esl-fast-beginner-1-25'),
+	('There are many buildings','Có rất nhiều tòa nhà','00:00:03.400','00:00:05.410','esl-fast-beginner-1-25'),
+	('There are a lot of people walking','Có rất nhiều người đi lại trên đường','00:00:06.000','00:00:08.610','esl-fast-beginner-1-25'),
 	('There are many taxis','Có rất nhiều xe taxi','00:00:09.230','00:00:11.690','esl-fast-beginner-1-25'),
-	('He feels lonely','Cậu ấy cảm thấy cô đơn','00:00:12.330','00:00:14.090','esl-fast-beginner-1-25'),
-	('Everyone acts so different here','Mọi người ở đây cư xử rất khác','00:00:15.170','00:00:18.030','esl-fast-beginner-1-25'),
+	('He feels lonely','Cậu ấy cảm thấy cô đơn','00:00:12.000','00:00:14.090','esl-fast-beginner-1-25'),
+	('Everyone acts so different here','Mọi người ở đây cư xử rất khác','00:00:14.800','00:00:18.030','esl-fast-beginner-1-25'),
 	('He goes to his new school','Cậu ấy đến ngôi trường mới','00:00:18.730','00:00:20.970','esl-fast-beginner-1-25'),
 	('He sees a friendly-looking person','Cậu ấy gặp một người trông rất thân thiện','00:00:21.890','00:00:24.510','esl-fast-beginner-1-25'),
 	('He asks him to show him around','Cậu ấy nhờ người đó dẫn mình đi tham quan','00:00:25.370','00:00:28.190','esl-fast-beginner-1-25');
@@ -74254,7 +74264,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('If you still want to kick me out now, you\'ll have nothing to eat','Nếu bây giờ bạn vẫn muốn đuổi tôi đi, bạn sẽ không có gì để ăn đâu','00:04:17.170','00:04:19.730','your-animated-story-show-17'),
 	('After that incident, Joseph seemed more at ease','Sau sự việc đó, Joseph có vẻ thoải mái hơn','00:04:19.730','00:04:22.610','your-animated-story-show-17'),
 	('He stopped threatening me with his rules and just let me ramble on','Anh ta ngừng đe dọa tôi bằng các quy tắc của mình và để tôi nói linh tinh','00:04:22.970','00:04:25.870','your-animated-story-show-17'),
-	('One time, when I was napping on the couch after cleaning, he even put a blanket on me','Một lần, khi tôi đang chợp mắt trên ghế sau khi dọn dẹp, anh ta thậm chí còn đắp chăn cho tôi','00:04:26.270','00:04:30.770','your-animated-story-show-17'),
+	('One time, when I was napping on the couch after cleaning, he even put a blanket on me','Một lần, khi tôi đang chợp mắt trên ghế sofa sau khi dọn dẹp, anh ta thậm chí còn đắp chăn cho tôi','00:04:26.270','00:04:30.770','your-animated-story-show-17'),
 	('I haven\'t slept yet, dear master','Tôi vẫn chưa ngủ đâu, thưa chủ nhân','00:04:31.050','00:04:33.530','your-animated-story-show-17'),
 	('Then one day, a middle-aged woman appeared at the gate','Rồi một ngày, một người phụ nữ trung niên xuất hiện ở cổng','00:04:33.850','00:04:36.790','your-animated-story-show-17'),
 	('She introduced herself as Joseph\'s mom and gifted him a beautiful bird','Bà ấy tự giới thiệu là mẹ của Joseph và tặng anh ta một con chim đẹp','00:04:37.090','00:04:40.890','your-animated-story-show-17'),
