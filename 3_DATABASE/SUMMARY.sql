@@ -213,9 +213,9 @@ INSERT INTO BOOKS(UUID,SLUG,ENG,VI,AUTHOR,DESCRIPTION,SUBCATEGORY_SLUG,IMG,NUMBE
 	(UUID(),'esl-fast-elementary-1','Elementary 1','Elementary 1','Nhiều tác giả','Học các câu tiếng anh đơn giản','so-cap-2','ESLFAST.png',1),
 	(UUID(),'esl-fast-elementary-2','Elementary 2','Elementary 2','Nhiều tác giả','Học các câu tiếng anh đơn giản','so-cap-2','ESLFAST.png',2),
 	(UUID(),'esl-fast-elementary-3','Elementary 3','Elementary 3','Nhiều tác giả','Học các câu tiếng anh đơn giản','so-cap-2','ESLFAST.png',3),
-	(UUID(),'esl-fast-elementary-4','Elementary 4','Elementary 3','Nhiều tác giả','Học các câu tiếng anh đơn giản','so-cap-2','ESLFAST.png',4),
-	(UUID(),'esl-fast-elementary-5','Elementary 5','Elementary 3','Nhiều tác giả','Học các câu tiếng anh đơn giản','so-cap-2','ESLFAST.png',5),
-	(UUID(),'esl-fast-elementary-6','Elementary 6','Elementary 3','Nhiều tác giả','Học các câu tiếng anh đơn giản','so-cap-2','ESLFAST.png',6),
+	(UUID(),'esl-fast-elementary-4','Elementary 4','Elementary 4','Nhiều tác giả','Học các câu tiếng anh đơn giản','so-cap-2','ESLFAST.png',4),
+	(UUID(),'esl-fast-elementary-5','Elementary 5','Elementary 5','Nhiều tác giả','Học các câu tiếng anh đơn giản','so-cap-2','ESLFAST.png',5),
+	(UUID(),'esl-fast-elementary-6','Elementary 6','Elementary 6','Nhiều tác giả','Học các câu tiếng anh đơn giản','so-cap-2','ESLFAST.png',6),
 	(UUID(),'esl-fast-intermediate-1','Intermediate 1','Intermediate 1','Nhiều tác giả','Học các câu tiếng anh phức tạp','trung-cap','ESLFAST.png',1),
 	(UUID(),'esl-fast-intermediate-2','Intermediate 2','Intermediate 2','Nhiều tác giả','Học các câu tiếng anh phức tạp','trung-cao-cap','ESLFAST.png',1);
 	
