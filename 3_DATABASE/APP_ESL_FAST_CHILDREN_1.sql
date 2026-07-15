@@ -389,23 +389,23 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 
 	/* (UUID(),'esl-fast-beginner-1-29','Making a Snowman','Đắp người tuyết','BEGINNER_01_ESL_FAST_CHILDREN_029.mp3',NULL,'00:00:00.000','00:00:38.000','esl-fast-children-1','NO',29) */
 	('She wants to make a snowman','Cô bé muốn nặn một người tuyết','00:00:00.390','00:00:03.290','esl-fast-beginner-1-29'),
-	('First, she rolls a large ball of snow','Đầu tiên, cô bé lăn một quả cầu tuyết thật to','00:00:03.990','00:00:07.690','esl-fast-beginner-1-29'),
-	('Second, she rolls a medium ball of snow','Tiếp theo, cô bé lăn một quả cầu tuyết cỡ vừa','00:00:08.270','00:00:12.310','esl-fast-beginner-1-29'),
-	('Finally, she rolls a small ball of snow for the snowman\'s head','Cuối cùng, cô bé lăn một quả cầu tuyết nhỏ để làm đầu người tuyết','00:00:12.870','00:00:19.050','esl-fast-beginner-1-29'),
-	('She stacks them up','Cô bé chồng chúng lên nhau','00:00:19.730','00:00:21.350','esl-fast-beginner-1-29'),
-	('The largest ball is on the bottom','Quả cầu lớn nhất ở dưới cùng','00:00:21.770','00:00:24.790','esl-fast-beginner-1-29'),
-	('She puts a carrot for the nose','Cô bé dùng một củ cà rốt làm mũi','00:00:25.370','00:00:27.850','esl-fast-beginner-1-29'),
-	('She uses buttons for the eyes and mouth','Cô bé dùng cúc áo để làm mắt và miệng','00:00:28.320','00:00:32.610','esl-fast-beginner-1-29'),
-	('The last thing she adds is a scarf','Thứ cuối cùng cô bé thêm vào là một chiếc khăn quàng cổ','00:00:33.410','00:00:36.590','esl-fast-beginner-1-29'),
+	('First, she rolls a large ball of snow','Đầu tiên, cô bé lăn một quả cầu tuyết thật to','00:00:03.690','00:00:07.690','esl-fast-beginner-1-29'),
+	('Second, she rolls a medium ball of snow','Tiếp theo, cô bé lăn một quả cầu tuyết cỡ vừa','00:00:08.000','00:00:12.310','esl-fast-beginner-1-29'),
+	('Finally, she rolls a small ball of snow for the snowman\'s head','Cuối cùng, cô bé lăn một quả cầu tuyết nhỏ để làm đầu người tuyết','00:00:12.500','00:00:19.050','esl-fast-beginner-1-29'),
+	('She stacks them up','Cô bé chồng chúng lên nhau','00:00:19.430','00:00:21.300','esl-fast-beginner-1-29'),
+	('The largest ball is on the bottom','Quả cầu lớn nhất ở dưới cùng','00:00:21.500','00:00:24.790','esl-fast-beginner-1-29'),
+	('She puts a carrot for the nose','Cô bé dùng một củ cà rốt làm mũi','00:00:25.000','00:00:27.800','esl-fast-beginner-1-29'),
+	('She uses buttons for the eyes and mouth','Cô bé dùng nút bấm để làm mắt và miệng','00:00:28.000','00:00:32.610','esl-fast-beginner-1-29'),
+	('The last thing she adds is a scarf','Thứ cuối cùng cô bé thêm vào là một chiếc khăn quàng cổ','00:00:33.000','00:00:36.590','esl-fast-beginner-1-29'),
 
 	/* (UUID(),'esl-fast-beginner-1-30','English Skills','Kỹ năng tiếng Anh','BEGINNER_01_ESL_FAST_CHILDREN_030.mp3',NULL,'00:00:00.000','00:00:26.000','esl-fast-children-1','NO',30) */
-	('Donald is in the second grade','Donald đang học lớp hai','00:00:00.260','00:00:03.000','esl-fast-beginner-1-30'),
-	('His reading level is not as good as the other students','Khả năng đọc của cậu ấy chưa tốt bằng các bạn trong lớp','00:00:03.340','00:00:07.419','esl-fast-beginner-1-30'),
-	('He wants to improve his English skills','Cậu ấy muốn cải thiện kỹ năng tiếng Anh của mình','00:00:07.800','00:00:10.780','esl-fast-beginner-1-30'),
-	('He starts to read more','Cậu ấy bắt đầu đọc nhiều sách hơn','00:00:10.300','00:00:13.060','esl-fast-beginner-1-30'),
-	('He looks up words he does not know in the dictionary','Cậu ấy tra từ điển những từ mình không biết','00:00:13.620','00:00:17.280','esl-fast-beginner-1-30'),
+	('Donald is in the second grade','Donald đang học lớp hai','00:00:00.200','00:00:03.000','esl-fast-beginner-1-30'),
+	('His reading level is not as good as the other students','Trình độ đọc của cậu ấy chưa tốt bằng các bạn trong lớp','00:00:03.200','00:00:07.419','esl-fast-beginner-1-30'),
+	('He wants to improve his English skills','Cậu ấy muốn cải thiện kỹ năng tiếng Anh của mình','00:00:07.700','00:00:10.700','esl-fast-beginner-1-30'),
+	('He starts to read more','Cậu ấy bắt đầu đọc nhiều sách hơn','00:00:10.900','00:00:13.060','esl-fast-beginner-1-30'),
+	('He looks up words he does not know in the dictionary','Cậu ấy tra từ điển những từ mình không biết','00:00:13.320','00:00:17.280','esl-fast-beginner-1-30'),
 	('He writes down what the words mean','Cậu ấy ghi lại nghĩa của các từ','00:00:18.180','00:00:20.960','esl-fast-beginner-1-30'),
-	('Afterwards, he reads the book again','Sau đó, cậu ấy đọc lại cuốn sách một lần nữa','00:00:21.780','00:00:24.800','esl-fast-beginner-1-30');
+	('Afterwards, he reads the book again','Sau đó, cậu ấy đọc lại cuốn sách một lần nữa','00:00:21.380','00:00:24.800','esl-fast-beginner-1-30');
 
 /*=====================================================================================================================================================================================================================================================*/
 
@@ -493,7 +493,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 
 	/* (UUID(),'esl-fast-beginner-1-38','The Teacher Takes Away His Phone','Giáo viên tịch thu điện thoại của cậu ấy','BEGINNER_01_ESL_FAST_CHILDREN_038.mp3',NULL,'00:00:00.000','00:00:29.000','esl-fast-children-1','NO',38) */
 	('Mr Brown\'s lectures are boring','Những bài giảng của thầy Brown rất nhàm chán','00:00:00.070','00:00:03.210','esl-fast-beginner-1-38'),
-	('A student looks up at Mr Brown to check what he is doing','Một học sinh ngước lên xem thầy Brown đang làm gì','00:00:03.790','00:00:07.790','esl-fast-beginner-1-38'),
+	('A student looks up at Mr. Brown to check what he is doing','Một học sinh ngước lên xem thầy Brown đang làm gì','00:00:03.790','00:00:07.790','esl-fast-beginner-1-38'),
 	('Mr Brown is writing something on the board','Thầy Brown đang viết gì đó lên bảng','00:00:08.650','00:00:12.090','esl-fast-beginner-1-38'),
 	('The student takes out his phone','Cậu học sinh lấy điện thoại ra','00:00:12.790','00:00:15.210','esl-fast-beginner-1-38'),
 	('He starts playing games','Cậu ấy bắt đầu chơi game','00:00:15.950','00:00:18.150','esl-fast-beginner-1-38'),
