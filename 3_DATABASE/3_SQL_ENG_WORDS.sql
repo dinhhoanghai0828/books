@@ -14550,6 +14550,8 @@ INSERT INTO `WORDS` (`ENG`,`VI`) VALUES
 	('what was it','chuyện gì'),
 	('what was it','điều gì'),
 	('what would it take','cần gì'),
+	('What\'s going on','chuyện gì đang diễn ra'),
+	('What\'s going on','chuyện gì đang xảy ra'),
 	('what\'s that','cái gì vậy'),
 	('what\'s that','nghĩa là sao'),
 	('what\'s the matter','có chuyện gì vậy'),
