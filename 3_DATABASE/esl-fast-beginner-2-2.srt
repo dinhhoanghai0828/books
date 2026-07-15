@@ -1,43 +1,35 @@
 1
-00:00:00,740 --> 00:00:01,780
-(Được chép bởi TurboScribe. Nâng cấp lên Không giới hạn để gỡ bỏ thông báo này.) Cô ấy là một giáo viên.
+00:00:00,720 --> 00:00:01,920
+(Được chép bởi TurboScribe. Nâng cấp lên Không giới hạn để gỡ bỏ thông báo này.) She is a teacher.
 
 2
-00:00:02,620 --> 00:00:04,220
-Cô ấy giáo dịch cho học sinh thứ
+00:00:03,080 --> 00:00:04,920
+She teaches third graders.
 
 3
-00:00:04,220 --> 00:00:04,460
-ba.
+00:00:06,360 --> 00:00:09,800
+She says, Good morning every day.
 
 4
-00:00:05,720 --> 00:00:09,740
-Cô ấy nói chào buổi sáng mỗi ngày.
+00:00:10,700 --> 00:00:13,680
+She asks her students how they are doing.
 
 5
-00:00:10,680 --> 00:00:12,600
-Cô ấy hỏi học sinh của cô ấy
+00:00:14,940 --> 00:00:16,900
+The students love her.
 
 6
-00:00:12,600 --> 00:00:13,160
-làm thế nào.
+00:00:18,440 --> 00:00:20,480
+She is good at her job.
 
 7
-00:00:14,860 --> 00:00:16,880
-Họ yêu cô ấy.
+00:00:21,900 --> 00:00:24,120
+She does not get a lot of money.
 
 8
-00:00:18,140 --> 00:00:20,240
-Cô ấy tốt với việc của cô ấy.
+00:00:25,800 --> 00:00:27,840
+Teachers should get more money.
 
 9
-00:00:21,480 --> 00:00:23,940
-Cô ấy không có nhiều tiền.
-
-10
-00:00:25,300 --> 00:00:27,780
-Giáo viên nên có nhiều tiền.
-
-11
-00:00:28,780 --> 00:00:31,140
-Họ làm việc rất khó khăn.
+00:00:27,840 --> 00:00:31,119
+They work so hard.

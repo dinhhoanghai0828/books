@@ -1,47 +1,47 @@
 1
-00:00:00,330 --> 00:00:03,010
-(Được chép bởi TurboScribe. Nâng cấp lên Không giới hạn để gỡ bỏ thông báo này.) Ông ăn sáng sáng của ông.
+00:00:00,330 --> 00:00:02,850
+(Được chép bởi TurboScribe. Nâng cấp lên Không giới hạn để gỡ bỏ thông báo này.) He eats his breakfast.
 
 2
-00:00:03,590 --> 00:00:05,990
-Ông rời khỏi nhà của ông.
+00:00:03,810 --> 00:00:06,190
+He leaves his house.
 
 3
-00:00:06,850 --> 00:00:09,350
-Ông đi đến đoàn tàu.
+00:00:07,310 --> 00:00:09,930
+He walks to the bus stop.
 
 4
-00:00:10,670 --> 00:00:13,170
-Ông đợi 5 phút.
+00:00:10,890 --> 00:00:13,330
+He waits five minutes.
 
 5
-00:00:14,050 --> 00:00:16,330
-Ông lên đoàn tàu.
+00:00:14,410 --> 00:00:16,350
+He gets on the bus.
 
 6
-00:00:17,190 --> 00:00:19,670
-Ông đưa vào một phòng.
+00:00:17,410 --> 00:00:19,810
+He puts in a quarter.
 
 7
-00:00:20,830 --> 00:00:22,930
-Ông ngồi xuống.
+00:00:21,410 --> 00:00:22,970
+He sits down.
 
 8
-00:00:23,830 --> 00:00:26,070
-Ông nhìn ra ngoài cửa.
+00:00:24,090 --> 00:00:26,470
+He looks outside the window.
 
 9
-00:00:27,430 --> 00:00:29,670
-Ông thấy trường hợp của ông.
+00:00:26,470 --> 00:00:29,910
+He sees his school.
 
 10
-00:00:30,990 --> 00:00:33,830
-Ông đi đến cửa hàng.
+00:00:30,990 --> 00:00:33,850
+He walks to the bus door.
 
 11
-00:00:34,690 --> 00:00:36,730
-Ông cảm ơn xe tàu.
+00:00:34,850 --> 00:00:37,190
+He thanks the bus driver.
 
 12
-00:00:38,310 --> 00:00:40,690
-Ông ra khỏi xe tàu.
+00:00:38,390 --> 00:00:40,690
+He exits the bus.
