@@ -364,13 +364,13 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 
 	/* (UUID(),'esl-fast-beginner-1-27','The Oldest Brother','Người anh cả lớn tuổi nhất','BEGINNER_01_ESL_FAST_CHILDREN_027.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1','YES',27) */
 	('Brian is the oldest brother','Brian là anh cả','00:00:00.200','00:00:02.850','esl-fast-beginner-1-27'),
-	('He has two younger brothers','Cậu ấy có hai em trai','00:00:03.100','00:00:05.570','esl-fast-beginner-1-27'),
+	('He has two younger brothers','Cậu bé có hai em trai','00:00:03.100','00:00:05.570','esl-fast-beginner-1-27'),
 	('Brian helps his parents around the house','Brian phụ giúp bố mẹ làm việc nhà','00:00:06.000','00:00:09.350','esl-fast-beginner-1-27'),
-	('He washes the dishes','Cậu ấy rửa bát đĩa','00:00:09.600','00:00:11.590','esl-fast-beginner-1-27'),
+	('He washes the dishes','Cậu bé rửa bát đĩa','00:00:09.600','00:00:11.590','esl-fast-beginner-1-27'),
 	('He mops the floor','Cậu ấy lau nhà','00:00:12.000','00:00:13.770','esl-fast-beginner-1-27'),
-	('He picks up his younger brothers from school','Cậu ấy đón các em trai tan học','00:00:14.330','00:00:17.430','esl-fast-beginner-1-27'),
+	('He picks up his younger brothers from school','Cậu bé đến trường đón các em trai','00:00:14.330','00:00:17.430','esl-fast-beginner-1-27'),
 	('Brian also teaches his brothers to do the right thing','Brian còn dạy các em làm điều đúng đắn','00:00:17.900','00:00:22.370','esl-fast-beginner-1-27'),
-	('He tells them to be honest, kind, and friendly','Cậu ấy dặn các em phải sống thật thà, tốt bụng và thân thiện','00:00:22.900','00:00:27.470','esl-fast-beginner-1-27'),
+	('He tells them to be honest, kind, and friendly','Cậu bé dặn các em phải sống thật thà, tốt bụng và thân thiện','00:00:22.900','00:00:27.470','esl-fast-beginner-1-27'),
 	('Brian loves his family','Brian rất yêu gia đình mình','00:00:27.770','00:00:30.430','esl-fast-beginner-1-27'),
 
 	/* (UUID(),'esl-fast-beginner-1-28','A Successful Trade','Một thương vụ trao đổi thành công','BEGINNER_01_ESL_FAST_CHILDREN_028.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-children-1','YES',28) */
