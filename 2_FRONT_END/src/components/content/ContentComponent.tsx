@@ -1,6 +1,6 @@
 import { ContentType } from '@/interfaces/content';
 import { Volume } from '@/interfaces/volume';
-import { getMeaningWords, insertWord, updateContent } from '@/utils/apiService';
+import { deleteContent, getMeaningWords, insertWord, updateContent } from '@/utils/apiService';
 import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons';
 import { Button, Form, Input, Modal, notification, Space } from 'antd';
 import debounce from 'lodash.debounce';
@@ -161,6 +161,14 @@ const ContentComponent = ({
   const [editingItem, setEditingItem] = useState<ContentType | null>(null);
   const [editLoading, setEditLoading] = useState(false);
   const [editForm] = Form.useForm();
+
+  // ============================================================
+  // STATE — delete content modal
+  // ============================================================
+
+  const [deleteModalOpen, setDeleteModalOpen] = useState(false);
+  const [deletingItem, setDeletingItem] = useState<ContentType | null>(null);
+  const [deleteLoading, setDeleteLoading] = useState(false);
 
   // Reset toàn bộ trạng thái chạy media khi đổi Tab
   const resetAllPlayStates = useCallback(() => {
@@ -480,6 +488,49 @@ const ContentComponent = ({
   };
 
   // ============================================================
+  // DELETE CONTENT MODAL HANDLERS
+  // ============================================================
+
+  // Mo modal xoa voi du lieu cua item duoc chon
+  const handleOpenDelete = useCallback((item: ContentType) => {
+    setDeletingItem(item);
+    setDeleteModalOpen(true);
+  }, []);
+
+  const handleCancelDelete = useCallback(() => {
+    setDeleteModalOpen(false);
+    setDeletingItem(null);
+  }, []);
+
+  // Gui yeu cau xoa, phan anh thay doi truc tiep tren UI khong can reload
+  const handleDelete = async () => {
+    if (!deletingItem) return;
+    try {
+      setDeleteLoading(true);
+      await deleteContent(deletingItem.id);
+      notifApi.success({
+        message: 'Xóa thành công',
+        description: 'Câu đã được xóa.',
+        placement: 'topRight',
+        duration: 3,
+        style: { backgroundColor: '#f6ffed', border: '1px solid #b7eb8f' },
+      });
+      handleCancelDelete();
+      onContentUpdate?.();
+    } catch (error: any) {
+      notifApi.error({
+        message: 'Xóa thất bại',
+        description: error.message || 'Đã xảy ra lỗi, vui lòng thử lại.',
+        placement: 'topRight',
+        duration: 4,
+        style: { backgroundColor: '#fff2f0', border: '1px solid #ffccc7' },
+      });
+    } finally {
+      setDeleteLoading(false);
+    }
+  };
+
+  // ============================================================
   // INSERT WORD MODAL HANDLERS
   // ============================================================
 
@@ -539,6 +590,7 @@ const ContentComponent = ({
     renderTooltip,
     onEdit: handleOpenEdit,
     onInsertWord: handleOpenInsert,
+    onDelete: handleOpenDelete,
   };
 
   // ============================================================
@@ -707,6 +759,29 @@ const ContentComponent = ({
               <Input placeholder="00:00:00.000" />
             </Form.Item>
           </Form>
+        )}
+      </Modal>
+      <Modal
+        title="Xác nhận xóa"
+        open={deleteModalOpen}
+        onCancel={handleCancelDelete}
+        footer={
+          <div style={{ textAlign: 'center' }}>
+            <Space>
+              <Button onClick={handleCancelDelete}>Hủy</Button>
+              <Button type="primary" danger loading={deleteLoading} onClick={handleDelete}>
+                Xóa
+              </Button>
+            </Space>
+          </div>
+        }
+      >
+        {deletingItem && (
+          <div>
+            <p>Bạn có chắc chắn muốn xóa câu này?</p>
+            <p style={{ fontWeight: 'bold', color: '#1677ff' }}>{deletingItem.eng}</p>
+            <p style={{ fontWeight: 'bold', color: '#1677ff' }}>{deletingItem.vi}</p>
+          </div>
         )}
       </Modal>
     </div>

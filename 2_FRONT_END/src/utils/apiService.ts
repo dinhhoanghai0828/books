@@ -206,6 +206,15 @@ export const updateContent = async (
   }
 };
 
+// Xoa mot cau theo id
+export const deleteContent = async (id: string): Promise<void> => {
+  try {
+    await apiClient.delete(`/content/delete/${id}`);
+  } catch (error: any) {
+    throw new Error(getErrorMessage(error));
+  }
+};
+
 // ============================================================
 // WORDS
 // ============================================================

@@ -11,4 +11,6 @@ public interface ContentAdapter {
     Map<String, Object> getContents(String eng, String vi, String page, String size) throws Exception;
 
     boolean updateContent(Long id, String eng, String vi, String startTime, String endTime) throws Exception;
+
+    boolean deleteContent(Long id) throws Exception;
 }

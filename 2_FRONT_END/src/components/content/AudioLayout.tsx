@@ -39,6 +39,7 @@ export interface AudioLayoutProps {
   pauseCommand: number | null;
   onEdit: (item: ContentType) => void;
   onInsertWord: () => void;
+  onDelete: (item: ContentType) => void;
   onAudioPlayStateChange?: (isPlayingAudio: boolean, currentActiveId: string | null) => void;
 }
 
@@ -86,6 +87,7 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
   pauseCommand,
   onEdit,
   onInsertWord,
+  onDelete,
   onAudioPlayStateChange,
 }) => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -309,6 +311,7 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
             onGetMeaning={onGetMeaning}
             onEdit={onEdit}
             onInsertWord={onInsertWord}
+            onDelete={onDelete}
             itemRef={(el) => { itemRefsRef.current[String(item.id)] = el; }}
           />
         ))

@@ -1,5 +1,6 @@
 import { ContentType } from '@/interfaces/content';
 import {
+  DeleteOutlined,
   EditOutlined,
   PauseOutlined,
   PlayCircleOutlined,
@@ -33,6 +34,7 @@ export interface ContentItemProps {
   onGetMeaning: () => void;
   onEdit: (item: ContentType) => void;
   onInsertWord: () => void;
+  onDelete: (item: ContentType) => void;
   itemRef: (el: HTMLDivElement | null) => void;
 }
 
@@ -66,6 +68,7 @@ const ContentItem = React.memo(({
   onGetMeaning,
   onEdit,
   onInsertWord,
+  onDelete,
   itemRef,
 }: ContentItemProps) => {
   // Nut loop duoc phep nhan khi:
@@ -166,6 +169,17 @@ const ContentItem = React.memo(({
             onClick={(e) => {
               e.stopPropagation();
               onInsertWord();
+            }}
+          />
+
+          {/* Nut xoa cau */}
+          <Button
+            type="link"
+            icon={<DeleteOutlined />}
+            danger
+            onClick={(e) => {
+              e.stopPropagation();
+              onDelete(item);
             }}
           />
         </Space>

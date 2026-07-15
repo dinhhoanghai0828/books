@@ -37,6 +37,7 @@ export interface VideoLayoutProps {
   pauseCommand?: number | null;
   onEdit: (item: ContentType) => void;
   onInsertWord: () => void;
+  onDelete: (item: ContentType) => void;
 }
 
 // ============================================================
@@ -70,6 +71,7 @@ const VideoLayout: React.FC<VideoLayoutProps> = ({
   pauseCommand,
   onEdit,
   onInsertWord,
+  onDelete,
 }) => {
   const segmentRef = useRef({ start: 0, end: 0 });
   const isLoopRef = useRef(false);
@@ -235,6 +237,7 @@ const VideoLayout: React.FC<VideoLayoutProps> = ({
                 onGetMeaning={onGetMeaning}
                 onEdit={onEdit}
                 onInsertWord={onInsertWord}
+                onDelete={onDelete}
                 itemRef={(el) => {
                   if (itemRefsRef.current) {
                     itemRefsRef.current[itemIdStr] = el;

@@ -22,6 +22,7 @@ public class ContentAdapterImpl implements ContentAdapter {
     private static final String SQL_COUNT_CONTENTS_SEARCH = "SELECT COUNT(*) FROM CONTENTS WHERE 1 = 1 ";
     private static final String SQL_GET_CONTENTS_SEARCH = "SELECT C.*, V.ENG AS VOLUME_ENG, V.VI AS VOLUME_VI, V.AUDIO AS AUDIO, V.VIDEO AS VIDEO, V.CHECKED AS CHECKED, V.NUMBER AS NUMBER, B.ENG AS BOOK_ENG FROM CONTENTS C INNER JOIN VOLUMES V ON C.VOLUME_SLUG = V.SLUG  INNER JOIN BOOKS B ON B.SLUG = V.BOOK_SLUG WHERE 1 = 1 ";
     private static final String SQL_UPDATE_CONTENT = "UPDATE CONTENTS SET ENG = ?, VI = ?, START_TIME = ?, END_TIME = ? WHERE ID = ?";
+    private static final String SQL_DELETE_CONTENT = "DELETE FROM CONTENTS WHERE ID = ?";
 
     @Override
     public List<Content> getContentByVolumeSlug(String volumeSlug) throws Exception {
@@ -233,6 +234,29 @@ public class ContentAdapterImpl implements ContentAdapter {
             pstmt.setString(3, startTime);
             pstmt.setString(4, endTime);
             pstmt.setLong(5, id);
+            int rowsAffected = pstmt.executeUpdate();
+            con.commit();
+            return rowsAffected > 0;
+        } catch (Exception ex) {
+            if (con != null) {
+                try { con.rollback(); } catch (SQLException ignored) {}
+            }
+            logger.error(thisMethod, ex);
+            throw ex;
+        } finally {
+            DBUtils.closeAll(thisMethod, con, pstmt, null);
+        }
+    }
+
+    @Override
+    public boolean deleteContent(Long id) throws Exception {
+        String thisMethod = "ContentAdapterImpl.deleteContent";
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        try {
+            con = DBUtils.getConnection(thisMethod, false, Connection.TRANSACTION_READ_COMMITTED);
+            pstmt = DBUtils.prepareStatement(con, SQL_DELETE_CONTENT);
+            pstmt.setLong(1, id);
             int rowsAffected = pstmt.executeUpdate();
             con.commit();
             return rowsAffected > 0;

@@ -77,4 +77,18 @@ public class ContentController {
             return new ResponseEntity<>(new BaseResponse("99", "failed"), HttpStatus.OK);
         }
     }
+
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<?> deleteContent(@PathVariable("id") Long id) {
+        try {
+            boolean success = contentService.deleteContent(id);
+            if (success) {
+                return new ResponseEntity<>(new BaseResponse("00", "success"), HttpStatus.OK);
+            } else {
+                return new ResponseEntity<>(new BaseResponse("99", "failed"), HttpStatus.OK);
+            }
+        } catch (Exception e) {
+            return new ResponseEntity<>(new BaseResponse("99", "failed"), HttpStatus.OK);
+        }
+    }
 }
