@@ -1,0 +1,35 @@
+1
+00:00:00,010 --> 00:00:03,910
+(Được chép bởi TurboScribe. Nâng cấp lên Không giới hạn để gỡ bỏ thông báo này.) He gets ready to study at the library.
+
+2
+00:00:04,630 --> 00:00:08,970
+He puts his science textbook in his backpack.
+
+3
+00:00:10,550 --> 00:00:14,550
+He puts his pencils and pens in his
+
+4
+00:00:14,550 --> 00:00:14,990
+backpack.
+
+5
+00:00:16,770 --> 00:00:19,910
+He puts an eraser in his backpack.
+
+6
+00:00:21,510 --> 00:00:24,530
+He puts a snack in his backpack.
+
+7
+00:00:25,590 --> 00:00:27,530
+He might get hungry.
+
+8
+00:00:27,530 --> 00:00:32,190
+He puts a notebook in his backpack.
+
+9
+00:00:33,190 --> 00:00:35,910
+He is ready to study.

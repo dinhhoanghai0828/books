@@ -1,0 +1,51 @@
+1
+00:00:00,070 --> 00:00:02,670
+(Được chép bởi TurboScribe. Nâng cấp lên Không giới hạn để gỡ bỏ thông báo này.) She goes to the library.
+
+2
+00:00:03,530 --> 00:00:05,850
+She looks at the shelves.
+
+3
+00:00:06,630 --> 00:00:09,010
+She pulls out a book.
+
+4
+00:00:09,950 --> 00:00:12,090
+She opens the book.
+
+5
+00:00:13,310 --> 00:00:16,090
+She reads the first page.
+
+6
+00:00:17,190 --> 00:00:18,650
+She laughs.
+
+7
+00:00:19,810 --> 00:00:21,350
+The book is funny.
+
+8
+00:00:22,670 --> 00:00:25,150
+She goes to the checkout desk.
+
+9
+00:00:25,150 --> 00:00:29,390
+She gives the book to the librarian.
+
+10
+00:00:30,590 --> 00:00:33,690
+She takes out her library card.
+
+11
+00:00:35,050 --> 00:00:37,810
+She gives it to the librarian.
+
+12
+00:00:39,070 --> 00:00:43,970
+The librarian gives her back the card and
+
+13
+00:00:43,970 --> 00:00:44,710
+the book.
