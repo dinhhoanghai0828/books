@@ -76,6 +76,10 @@ public class TaoMoiDuLieu {
                     data = data.trim().replace("\u00a0", "");
                     data = data.replace("\n", "").replace("\r", "");
 
+                    // Remove TurboScribe messages from the line
+                    data = data.replaceAll("\\(Transcribed by TurboScribe\\. Go Unlimited to remove this message\\.\\) ", "");
+                    data = data.replaceAll("\\(Được chép bởi TurboScribe\\. Nâng cấp lên Không giới hạn để gỡ bỏ thông báo này\\.\\) ", "");
+
                     if (!data.contains("00:") && data.contains(".")
                             || (data.contains("?") && !data.contains("?\"") && !data.contains("?\""))
                             || (data.contains("!") && !data.contains("!\"") && !data.contains("!\""))) {
