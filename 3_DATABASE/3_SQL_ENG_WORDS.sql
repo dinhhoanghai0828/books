@@ -11591,6 +11591,7 @@ INSERT INTO `WORDS` (`ENG`,`VI`) VALUES
 	('show','xem'),
 	('show her around','dẫn mình đi tham quan'),
 	('show him around','dẫn mình đi tham quan'),
+	('show him around','giới thiệu xung quanh'),
 	('show off','khoe'),
 	('show off','thể hiện'),
 	('show that','chỉ ra'),
