@@ -1,0 +1,39 @@
+1
+00:00:00,010 --> 00:00:02,490
+(Được chép bởi TurboScribe. Nâng cấp lên Không giới hạn để gỡ bỏ thông báo này.) He takes out his notebook.
+
+2
+00:00:02,890 --> 00:00:05,310
+He reads his textbook.
+
+3
+00:00:06,570 --> 00:00:10,390
+He copies the chapter title on top of
+
+4
+00:00:10,390 --> 00:00:11,090
+the page.
+
+5
+00:00:12,010 --> 00:00:15,550
+He writes down the important information.
+
+6
+00:00:16,570 --> 00:00:19,830
+He highlights words he should remember.
+
+7
+00:00:20,550 --> 00:00:23,090
+He turns the page.
+
+8
+00:00:24,350 --> 00:00:26,630
+He takes more notes.
+
+9
+00:00:26,630 --> 00:00:31,470
+He writes a summary on the chapter at
+
+10
+00:00:31,470 --> 00:00:32,150
+the end.

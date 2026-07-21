@@ -1,0 +1,39 @@
+1
+00:00:00,520 --> 00:00:02,360
+(Được chép bởi TurboScribe. Nâng cấp lên Không giới hạn để gỡ bỏ thông báo này.) He is at the library.
+
+2
+00:00:03,100 --> 00:00:05,640
+There are a lot of people.
+
+3
+00:00:07,220 --> 00:00:10,640
+Everyone is studying for their final exams.
+
+4
+00:00:11,700 --> 00:00:14,500
+He finally finds a seat.
+
+5
+00:00:15,860 --> 00:00:17,280
+He sits down.
+
+6
+00:00:18,500 --> 00:00:20,340
+He takes out his book.
+
+7
+00:00:21,460 --> 00:00:23,800
+He takes out a pen.
+
+8
+00:00:24,780 --> 00:00:27,640
+He takes out a highlighter.
+
+9
+00:00:28,680 --> 00:00:32,200
+He highlights the important parts.
+
+10
+00:00:33,040 --> 00:00:35,960
+Then, he takes a study break.

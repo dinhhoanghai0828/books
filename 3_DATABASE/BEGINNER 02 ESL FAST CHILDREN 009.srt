@@ -1,0 +1,31 @@
+1
+00:00:00,070 --> 00:00:03,170
+(Được chép bởi TurboScribe. Nâng cấp lên Không giới hạn để gỡ bỏ thông báo này.) She is taking an English class.
+
+2
+00:00:03,710 --> 00:00:06,030
+She has to write an essay.
+
+3
+00:00:07,490 --> 00:00:09,570
+The essay is on penguins.
+
+4
+00:00:10,550 --> 00:00:15,070
+She finds information on penguins from the Internet.
+
+5
+00:00:16,270 --> 00:00:20,790
+She finds information on penguins from books.
+
+6
+00:00:21,790 --> 00:00:26,090
+Her first sentence is a riddle about penguins.
+
+7
+00:00:26,090 --> 00:00:31,250
+Her last sentence is the answer to the
+
+8
+00:00:31,250 --> 00:00:31,650
+riddle.
