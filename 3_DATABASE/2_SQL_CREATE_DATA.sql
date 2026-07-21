@@ -370,7 +370,7 @@ INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,CHE
 	(UUID(),'esl-fast-beginner-1-25','A New Home','Ngôi nhà mới','BEGINNER_01_ESL_FAST_CHILDREN_025.mp3','null','00:00:00.000','00:00:30.000','esl-fast-children-1','YES',25),
 	(UUID(),'esl-fast-beginner-1-26','Chris and His Fish','Chris và những chú cá của cậu ấy','BEGINNER_01_ESL_FAST_CHILDREN_026.mp3','null','00:00:00.000','00:00:32.000','esl-fast-children-1','YES',26),
 	(UUID(),'esl-fast-beginner-1-27','The Oldest Brother','Người anh cả lớn tuổi nhất','BEGINNER_01_ESL_FAST_CHILDREN_027.mp3','null','00:00:00.000','00:00:32.000','esl-fast-children-1','YES',27),
-	(UUID(),'esl-fast-beginner-1-28','A Successful Trade','Một thương vụ trao đổi thành công','BEGINNER_01_ESL_FAST_CHILDREN_028.mp3','null','00:00:00.000','00:00:00.000','esl-fast-children-1','NO',28),
+	(UUID(),'esl-fast-beginner-1-28','A Successful Trade','Một thương vụ trao đổi thành công','BEGINNER_01_ESL_FAST_CHILDREN_028.mp3','null','00:00:00.000','00:00:37.000','esl-fast-children-1','YES',28),
 	(UUID(),'esl-fast-beginner-1-29','Making a Snowman','Đắp người tuyết','BEGINNER_01_ESL_FAST_CHILDREN_029.mp3','null','00:00:00.000','00:00:00.000','esl-fast-children-1','NO',29),
 	(UUID(),'esl-fast-beginner-1-30','English Skills','Kỹ năng tiếng Anh','BEGINNER_01_ESL_FAST_CHILDREN_030.mp3','null','00:00:00.000','00:00:00.000','esl-fast-children-1','NO',30),
 	(UUID(),'esl-fast-beginner-1-31','Practicing Drawing','Luyện tập vẽ','BEGINNER_01_ESL_FAST_CHILDREN_031.mp3','null','00:00:00.000','00:00:00.000','esl-fast-children-1','NO',31),

@@ -373,7 +373,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He tells them to be honest, kind, and friendly','Cậu bé dặn các em phải sống thật thà, tốt bụng và thân thiện','00:00:22.900','00:00:27.470','esl-fast-beginner-1-27'),
 	('Brian loves his family','Brian rất yêu gia đình mình','00:00:27.770','00:00:30.430','esl-fast-beginner-1-27'),
 
-	/* (UUID(),'esl-fast-beginner-1-28','A Successful Trade','Một thương vụ trao đổi thành công','BEGINNER_01_ESL_FAST_CHILDREN_028.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',28) */
+	/* (UUID(),'esl-fast-beginner-1-28','A Successful Trade','Một thương vụ trao đổi thành công','BEGINNER_01_ESL_FAST_CHILDREN_028.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-children-1','YES',28) */
 	('It is lunchtime','Đến giờ ăn trưa rồi','00:00:00.200','00:00:02.200','esl-fast-beginner-1-28'),
 	('The kids go out to eat','Bọn trẻ ra ngoài ăn','00:00:02.500','00:00:04.760','esl-fast-beginner-1-28'),
 	('They are excited and hungry','Chúng rất háo hức và đói bụng','00:00:04.950','00:00:08.180','esl-fast-beginner-1-28'),
