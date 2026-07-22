@@ -419,7 +419,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('My parents always tell me that I am a good artist','Bố mẹ lúc nào cũng bảo tôi rằng tôi là một họa sĩ giỏi','00:00:22.200','00:00:26.880','esl-fast-beginner-1-31'),
 	('They think I can do it as a job','Họ nghĩ tôi có thể làm nghề này','00:00:27.100','00:00:30.540','esl-fast-beginner-1-31'),
 
-	/* (UUID(),'esl-fast-beginner-1-32','A Day for Ice Cream','Một ngày dành cho kem','BEGINNER_01_ESL_FAST_CHILDREN_032.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',32) */
+	/* (UUID(),'esl-fast-beginner-1-32','A Day for Ice Cream','Một ngày dành cho kem','BEGINNER_01_ESL_FAST_CHILDREN_032.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-children-1','YES',32) */
 	('It is a sunny day','Hôm nay trời nắng đẹp','00:00:00.390','00:00:02.650','esl-fast-beginner-1-32'),
 	('She feels hot','Cô bé thấy nóng bừng','00:00:02.900','00:00:04.800','esl-fast-beginner-1-32'),
 	('She fans herself with a book','Cô bé dùng quyển sách để tự quạt','00:00:05.200','00:00:07.830','esl-fast-beginner-1-32'),
@@ -427,9 +427,9 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She turns on the air conditioner','Cô bé bật điều hòa','00:00:10.400','00:00:13.210','esl-fast-beginner-1-32'),
 	('It is still hot','Vẫn nóng quá','00:00:13.830','00:00:15.870','esl-fast-beginner-1-32'),
 	('She jumps into a pool','Cô bé nhảy xuống hồ bơi','00:00:16.390','00:00:18.830','esl-fast-beginner-1-32'),
-	('It is still hot','Vẫn chưa thấy mát hơn','00:00:19.300','00:00:21.400','esl-fast-beginner-1-32'),
+	('It is still hot','Vẫn nóng quá','00:00:19.300','00:00:21.400','esl-fast-beginner-1-32'),
 	('Her dad has an idea','Bố cô bé chợt nảy ra một ý','00:00:21.600','00:00:24.470','esl-fast-beginner-1-32'),
-	('He takes her to the ice cream shop','Ông đưa cô bé đến tiệm kem','00:00:24.810','00:00:27.490','esl-fast-beginner-1-32'),
+	('He takes her to the ice cream shop','Bố đưa cô bé đến tiệm kem','00:00:24.810','00:00:27.490','esl-fast-beginner-1-32'),
 	('They share a banana split','Họ chia nhau một phần kem chuối bổ đôi','00:00:27.700','00:00:30.450','esl-fast-beginner-1-32'),
 	('She does not feel hot anymore','Cô bé không còn thấy nóng nữa','00:00:30.800','00:00:33.190','esl-fast-beginner-1-32'),
 

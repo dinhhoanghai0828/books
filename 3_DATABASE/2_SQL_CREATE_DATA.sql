@@ -374,7 +374,7 @@ INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,CHE
 	(UUID(),'esl-fast-beginner-1-29','Making a Snowman','Đắp người tuyết','BEGINNER_01_ESL_FAST_CHILDREN_029.mp3','null','00:00:00.000','00:00:38.000','esl-fast-children-1','YES',29),
 	(UUID(),'esl-fast-beginner-1-30','English Skills','Kỹ năng tiếng Anh','BEGINNER_01_ESL_FAST_CHILDREN_030.mp3','null','00:00:00.000','00:00:26.000','esl-fast-children-1','YES',30),
 	(UUID(),'esl-fast-beginner-1-31','Practicing Drawing','Luyện tập vẽ','BEGINNER_01_ESL_FAST_CHILDREN_031.mp3','null','00:00:00.000','00:00:32.000','esl-fast-children-1','YES',31),
-	(UUID(),'esl-fast-beginner-1-32','A Day for Ice Cream','Một ngày dành cho kem','BEGINNER_01_ESL_FAST_CHILDREN_032.mp3','null','00:00:00.000','00:00:00.000','esl-fast-children-1','NO',32),
+	(UUID(),'esl-fast-beginner-1-32','A Day for Ice Cream','Một ngày dành cho kem','BEGINNER_01_ESL_FAST_CHILDREN_032.mp3','null','00:00:00.000','00:00:35.000','esl-fast-children-1','YES',32),
 	(UUID(),'esl-fast-beginner-1-33','Taking Tests','Làm bài kiểm tra','BEGINNER_01_ESL_FAST_CHILDREN_033.mp3','null','00:00:00.000','00:00:00.000','esl-fast-children-1','NO',33),
 	(UUID(),'esl-fast-beginner-1-34','Helen is Busy','Helen đang bận rộn','BEGINNER_01_ESL_FAST_CHILDREN_034.mp3','null','00:00:00.000','00:00:00.000','esl-fast-children-1','NO',34),
 	(UUID(),'esl-fast-beginner-1-35','Messing Up','Làm hỏng việc','BEGINNER_01_ESL_FAST_CHILDREN_035.mp3','null','00:00:00.000','00:00:00.000','esl-fast-children-1','NO',35),
