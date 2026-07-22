@@ -387,7 +387,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('They trade their sandwiches','Hai bạn đổi bánh mì cho nhau','00:00:30.520','00:00:32.700','esl-fast-beginner-1-28'),
 	('They get what they want','Cả hai đều có được thứ mình muốn','00:00:33.420','00:00:35.400','esl-fast-beginner-1-28'),
 
-	/* (UUID(),'esl-fast-beginner-1-29','Making a Snowman','Đắp người tuyết','BEGINNER_01_ESL_FAST_CHILDREN_029.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',29) */
+	/* (UUID(),'esl-fast-beginner-1-29','Making a Snowman','Đắp người tuyết','BEGINNER_01_ESL_FAST_CHILDREN_029.mp3',NULL,'00:00:00.000','00:00:38.000','esl-fast-children-1','YES',29) */
 	('She wants to make a snowman','Cô bé muốn nặn một người tuyết','00:00:00.390','00:00:03.290','esl-fast-beginner-1-29'),
 	('First, she rolls a large ball of snow','Đầu tiên, cô bé lăn một quả cầu tuyết thật to','00:00:03.690','00:00:07.690','esl-fast-beginner-1-29'),
 	('Second, she rolls a medium ball of snow','Tiếp theo, cô bé lăn một quả cầu tuyết cỡ vừa','00:00:08.000','00:00:12.310','esl-fast-beginner-1-29'),
@@ -395,10 +395,10 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She stacks them up','Cô bé chồng chúng lên nhau','00:00:19.430','00:00:21.300','esl-fast-beginner-1-29'),
 	('The largest ball is on the bottom','Quả cầu lớn nhất ở dưới cùng','00:00:21.500','00:00:24.790','esl-fast-beginner-1-29'),
 	('She puts a carrot for the nose','Cô bé dùng một củ cà rốt làm mũi','00:00:25.000','00:00:27.800','esl-fast-beginner-1-29'),
-	('She uses buttons for the eyes and mouth','Cô bé dùng nút bấm để làm mắt và miệng','00:00:28.000','00:00:32.610','esl-fast-beginner-1-29'),
+	('She uses buttons for the eyes and mouth','Cô bé dùng những chiếc cúc áo để làm mắt và miệng','00:00:28.000','00:00:32.610','esl-fast-beginner-1-29'),
 	('The last thing she adds is a scarf','Thứ cuối cùng cô bé thêm vào là một chiếc khăn quàng cổ','00:00:33.000','00:00:36.590','esl-fast-beginner-1-29'),
 
-	/* (UUID(),'esl-fast-beginner-1-30','English Skills','Kỹ năng tiếng Anh','BEGINNER_01_ESL_FAST_CHILDREN_030.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',30) */
+	/* (UUID(),'esl-fast-beginner-1-30','English Skills','Kỹ năng tiếng Anh','BEGINNER_01_ESL_FAST_CHILDREN_030.mp3',NULL,'00:00:00.000','00:00:26.000','esl-fast-children-1','YES',30) */
 	('Donald is in the second grade','Donald đang học lớp hai','00:00:00.200','00:00:03.000','esl-fast-beginner-1-30'),
 	('His reading level is not as good as the other students','Trình độ đọc của cậu ấy chưa tốt bằng các bạn trong lớp','00:00:03.200','00:00:07.419','esl-fast-beginner-1-30'),
 	('He wants to improve his English skills','Cậu ấy muốn cải thiện kỹ năng tiếng Anh của mình','00:00:07.700','00:00:10.700','esl-fast-beginner-1-30'),
@@ -410,14 +410,14 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'esl-fast-beginner-1-31','Practicing Drawing','Luyện tập vẽ','BEGINNER_01_ESL_FAST_CHILDREN_031.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',31) */
+	/* (UUID(),'esl-fast-beginner-1-31','Practicing Drawing','Luyện tập vẽ','BEGINNER_01_ESL_FAST_CHILDREN_031.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1','YES',31) */
 	('I am practicing drawing','Tôi đang luyện vẽ','00:00:00.140','00:00:02.900','esl-fast-beginner-1-31'),
-	('I practice drawing every Saturday and Sunday','Cuối tuần nào tôi cũng luyện vẽ','00:00:03.200','00:00:07.419','esl-fast-beginner-1-31'),
-	('My teacher shows me new things','Thầy cô dạy tôi nhiều điều mới','00:00:07.700','00:00:10.860','esl-fast-beginner-1-31'),
+	('I practice drawing every Saturday and Sunday','Tôi luyện vẽ mỗi thứ bảy và chủ nhật','00:00:03.200','00:00:07.419','esl-fast-beginner-1-31'),
+	('My teacher shows me new things','Thầy cô chỉ cho tôi nhiều điều mới','00:00:07.700','00:00:10.860','esl-fast-beginner-1-31'),
 	('I know how to draw people, animals, and objects now','Giờ tôi đã biết vẽ người, động vật và nhiều đồ vật','00:00:11.300','00:00:16.460','esl-fast-beginner-1-31'),
-	('I always want to get better, so I practice every day','Tôi luôn muốn vẽ giỏi hơn nên ngày nào cũng luyện tập','00:00:16.900','00:00:21.820','esl-fast-beginner-1-31'),
+	('I always want to get better, so I practice every day','Tôi luôn muốn giỏi hơn, nên ngày nào cũng luyện tập','00:00:16.900','00:00:21.820','esl-fast-beginner-1-31'),
 	('My parents always tell me that I am a good artist','Bố mẹ lúc nào cũng bảo tôi rằng tôi là một họa sĩ giỏi','00:00:22.200','00:00:26.880','esl-fast-beginner-1-31'),
-	('They think I can do it as a job','Họ nghĩ sau này tôi có thể làm nghề này','00:00:27.100','00:00:30.540','esl-fast-beginner-1-31'),
+	('They think I can do it as a job','Họ nghĩ tôi có thể làm nghề này','00:00:27.100','00:00:30.540','esl-fast-beginner-1-31'),
 
 	/* (UUID(),'esl-fast-beginner-1-32','A Day for Ice Cream','Một ngày dành cho kem','BEGINNER_01_ESL_FAST_CHILDREN_032.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',32) */
 	('It is a sunny day','Hôm nay trời nắng đẹp','00:00:00.390','00:00:02.650','esl-fast-beginner-1-32'),
