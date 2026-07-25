@@ -1,0 +1,47 @@
+1
+00:00:00,650 --> 00:00:02,290
+(Được chép bởi TurboScribe. Nâng cấp lên Không giới hạn để gỡ bỏ thông báo này.) Kate is walking.
+
+2
+00:00:03,210 --> 00:00:04,630
+She sees a dog.
+
+3
+00:00:05,250 --> 00:00:07,350
+The dog wags its tail.
+
+4
+00:00:08,490 --> 00:00:09,990
+Kate likes the dog.
+
+5
+00:00:10,770 --> 00:00:12,330
+It has no collar.
+
+6
+00:00:13,590 --> 00:00:15,050
+Kate takes it home.
+
+7
+00:00:16,150 --> 00:00:17,690
+She washes the dog.
+
+8
+00:00:18,670 --> 00:00:20,210
+She names him Toby.
+
+9
+00:00:21,270 --> 00:00:23,750
+She takes Toby to the vet.
+
+10
+00:00:24,870 --> 00:00:26,510
+Toby is healthy.
+
+11
+00:00:27,350 --> 00:00:30,370
+Kate walks Toby every day.
+
+12
+00:00:31,390 --> 00:00:32,430
+They love each other.
