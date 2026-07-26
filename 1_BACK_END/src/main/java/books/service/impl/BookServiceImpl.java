@@ -30,7 +30,11 @@ public class BookServiceImpl implements BookService {
         Map<String, Object> result = bookAdapter.getVolumeByBookSlug(slug, page, size);
         List<Volume> volumes = (List<Volume>) result.get("VOLUMES");
         List<VolumeDTO> volumeDTOS = volumes.stream()
-                .map(volume -> modelMapper.map(volume, VolumeDTO.class))
+                .map(volume -> {
+                    VolumeDTO dto = modelMapper.map(volume, VolumeDTO.class);
+                    dto.setIsRead(volume.getIsRead());
+                    return dto;
+                })
                 .collect(Collectors.toList());
         result.put("VOLUMES", volumeDTOS);
         return result;

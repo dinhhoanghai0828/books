@@ -175,14 +175,16 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
                         onClick={(e) => handleOpenEdit(volume, e)}
                         style={{ padding: 0 }}
                       />
-                      <Button
-                        type="link"
-                        icon={<BookOutlined />}
-                        onClick={(e) => handleMarkAsRead(volume, e)}
-                        loading={markReadLoading === volume.slug}
-                        style={{ padding: 0 }}
-                        title="Danh dau da doc xong"
-                      />
+                      {volume.isRead !== 1 && (
+                        <Button
+                          type="link"
+                          icon={<BookOutlined />}
+                          onClick={(e) => handleMarkAsRead(volume, e)}
+                          loading={markReadLoading === volume.slug}
+                          style={{ padding: 0 }}
+                          title="Danh dau da doc xong"
+                        />
+                      )}
                     </div>
                   </div>
 

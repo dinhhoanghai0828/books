@@ -69,6 +69,7 @@ public class BookAdapterImpl implements BookAdapter {
                 volume.setBookSlug(rs.getString("BOOK_SLUG"));
                 volume.setNumber(rs.getInt("NUMBER"));
                 volume.setChecked(rs.getString("CHECKED"));
+                volume.setIsRead(rs.getInt("IS_READ"));
                 volumes.add(volume);
             }
             // Đưa danh sách sách vào Map

@@ -26,14 +26,20 @@ public class VolumeServiceImpl implements VolumeService {
     @Override
     public List<VolumeDTO> getVolumes() throws Exception {
         List<Volume> volumes = volumeAdapter.getVolumes();
-        List<VolumeDTO> volumeDTOS = volumes.stream().map(book -> modelMapper.map(book, VolumeDTO.class)).collect(Collectors.toList());
+        List<VolumeDTO> volumeDTOS = volumes.stream().map(volume -> {
+            VolumeDTO dto = modelMapper.map(volume, VolumeDTO.class);
+            dto.setIsRead(volume.getIsRead());
+            return dto;
+        }).collect(Collectors.toList());
         return volumeDTOS;
     }
 
     @Override
     public VolumeDTO getVolumeDetailBySlug(String slug) throws Exception {
         Volume volume = volumeAdapter.getVolumeDetailBySlug(slug);
-        return modelMapper.map(volume, VolumeDTO.class);
+        VolumeDTO dto = modelMapper.map(volume, VolumeDTO.class);
+        dto.setIsRead(volume.getIsRead());
+        return dto;
     }
 
     @Override
