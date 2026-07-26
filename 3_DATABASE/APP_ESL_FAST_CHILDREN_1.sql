@@ -433,38 +433,38 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('They share a banana split','Họ chia nhau một phần kem chuối bổ đôi','00:00:27.700','00:00:30.450','esl-fast-beginner-1-32'),
 	('She does not feel hot anymore','Cô bé không còn thấy nóng nữa','00:00:30.800','00:00:33.190','esl-fast-beginner-1-32'),
 
-	/* (UUID(),'esl-fast-beginner-1-33','Taking Tests','Làm bài kiểm tra','BEGINNER_01_ESL_FAST_CHILDREN_033.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',33) */
+	/* (UUID(),'esl-fast-beginner-1-33','Taking Tests','Làm bài kiểm tra','BEGINNER_01_ESL_FAST_CHILDREN_033.mp3',NULL,'00:00:00.000','00:00:25.000','esl-fast-children-1','YES',33) */
 	('He has a test tomorrow','Ngày mai cậu bé có một bài kiểm tra','00:00:00.330','00:00:02.670','esl-fast-beginner-1-33'),
 	('He does not want to study','Cậu bé không muốn học bài','00:00:03.000','00:00:05.010','esl-fast-beginner-1-33'),
-	('Instead, he plays video games','Thay vào đó, cậu ấy chơi điện tử','00:00:05.400','00:00:08.630','esl-fast-beginner-1-33'),
-	('The next day, he takes the test','Hôm sau, cậu ấy làm bài kiểm tra','00:00:09.000','00:00:11.800','esl-fast-beginner-1-33'),
-	('It is very hard','Nó rất khó','00:00:12.000','00:00:13.830','esl-fast-beginner-1-33'),
+	('Instead, he plays video games','Thay vào đó, cậu bé chơi điện tử','00:00:05.400','00:00:08.630','esl-fast-beginner-1-33'),
+	('The next day, he takes the test','Hôm sau, cậu bé làm bài kiểm tra','00:00:09.000','00:00:11.800','esl-fast-beginner-1-33'),
+	('It is very hard','Bài kiểm tra rất khó','00:00:12.000','00:00:13.830','esl-fast-beginner-1-33'),
 	('He does not know anything','Cậu bé chẳng biết gì cả','00:00:14.100','00:00:15.930','esl-fast-beginner-1-33'),
-	('He turns in his test blank','Cậu ấy nộp bài kiểm tra bỏ trắng','00:00:16.300','00:00:19.590','esl-fast-beginner-1-33'),
-	('The teacher scolds him and gives him an F','Thầy cô mắng cậu ấy và cho điểm F','00:00:20.000','00:00:23.670','esl-fast-beginner-1-33'),
+	('He turns in his test blank','Cậu bé nộp bài kiểm tra bị bỏ trắng','00:00:16.300','00:00:19.590','esl-fast-beginner-1-33'),
+	('The teacher scolds him and gives him an "F"','Thầy cô mắng cậu bé và cho cậu bé điểm "F"','00:00:20.000','00:00:23.670','esl-fast-beginner-1-33'),
 
-	/* (UUID(),'esl-fast-beginner-1-34','Helen is Busy','Helen đang bận rộn','BEGINNER_01_ESL_FAST_CHILDREN_034.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',34) */
+	/* (UUID(),'esl-fast-beginner-1-34','Helen is Busy','Helen đang bận rộn','BEGINNER_01_ESL_FAST_CHILDREN_034.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1','YES',34) */
 	('Helen wants to do well on the math test tomorrow','Helen muốn làm thật tốt bài kiểm tra Toán ngày mai','00:00:00.200','00:00:04.200','esl-fast-beginner-1-34'),
 	('She takes out her book and studies','Cô bé lấy sách ra và học','00:00:04.500','00:00:07.500','esl-fast-beginner-1-34'),
-	('Her brother then comes into her room','Rồi em trai bước vào phòng','00:00:07.800','00:00:10.420','esl-fast-beginner-1-34'),
+	('Her brother then comes into her room','Rồi em trai của cô bé bước vào phòng','00:00:07.800','00:00:10.420','esl-fast-beginner-1-34'),
 	('He starts making loud noises','Cậu em bắt đầu làm ồn','00:00:10.800','00:00:13.440','esl-fast-beginner-1-34'),
 	('Helen yells at him','Helen quát cậu bé','00:00:14.000','00:00:16.100','esl-fast-beginner-1-34'),
-	('Her mother then comes into her room','Sau đó mẹ cô bé cũng vào phòng','00:00:16.400','00:00:18.920','esl-fast-beginner-1-34'),
+	('Her mother then comes into her room','Sau đó mẹ cô bé cũng đi vào phòng của cô','00:00:16.400','00:00:18.920','esl-fast-beginner-1-34'),
 	('She asks Helen to cook dinner','Mẹ nhờ Helen nấu bữa tối','00:00:19.300','00:00:22.400','esl-fast-beginner-1-34'),
 	('Helen yells at her','Helen lớn tiếng với mẹ','00:00:22.900','00:00:24.500','esl-fast-beginner-1-34'),
 	('Helen finally tells her family that she is busy','Cuối cùng Helen nói với cả nhà rằng mình đang bận','00:00:25.000','00:00:28.820','esl-fast-beginner-1-34'),
 
 	/* (UUID(),'esl-fast-beginner-1-35','Messing Up','Làm hỏng việc','BEGINNER_01_ESL_FAST_CHILDREN_035.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',35) */
 	('He pours a glass of soda for himself','Cậu bé rót một cốc nước ngọt cho mình','00:00:00.200','00:00:03.400','esl-fast-beginner-1-35'),
-	('He accidentally spills some on his shirt','Cậu ấy lỡ làm đổ nước ngọt lên áo','00:00:03.450','00:00:07.380','esl-fast-beginner-1-35'),
-	('Oh no','Ôi chết rồi','00:00:07.780','00:00:08.640','esl-fast-beginner-1-35'),
+	('He accidentally spills some on his shirt','Cậu ấy vô tình làm đổ một ít lên áo','00:00:03.600','00:00:07.380','esl-fast-beginner-1-35'),
+	('Oh no','Ôi chết rồi','00:00:07.680','00:00:08.640','esl-fast-beginner-1-35'),
 	('His mom will get mad','Mẹ cậu ấy sẽ nổi giận mất','00:00:09.120','00:00:11.060','esl-fast-beginner-1-35'),
-	('His shirt is very expensive','Chiếc áo này rất đắt tiền','00:00:11.580','00:00:13.760','esl-fast-beginner-1-35'),
-	('He tries to clean it up','Cậu ấy cố làm sạch nó','00:00:14.320','00:00:16.220','esl-fast-beginner-1-35'),
+	('His shirt is very expensive','Chiếc áo của cậu bé rất đắt tiền','00:00:11.580','00:00:13.760','esl-fast-beginner-1-35'),
+	('He tries to clean it up','Cậu bé cố làm sạch nó','00:00:14.320','00:00:16.220','esl-fast-beginner-1-35'),
 	('He pours water on it','Cậu ấy đổ nước lên áo','00:00:16.420','00:00:18.660','esl-fast-beginner-1-35'),
-	('He uses a stain remover','Cậu ấy dùng thuốc tẩy vết bẩn','00:00:19.100','00:00:21.580','esl-fast-beginner-1-35'),
-	('He takes the shirt to a dry cleaner\'s','Cậu ấy mang chiếc áo đến tiệm giặt khô','00:00:22.220','00:00:25.060','esl-fast-beginner-1-35'),
-	('Nothing works','Nhưng chẳng cách nào hiệu quả cả','00:00:25.480','00:00:26.800','esl-fast-beginner-1-35');
+	('He uses a stain remover','Cậu bé dùng chất tẩy vết bẩn','00:00:19.100','00:00:21.580','esl-fast-beginner-1-35'),
+	('He takes the shirt to a dry cleaner\'s','Cậu bé mang chiếc áo đến tiệm giặt khô','00:00:22.220','00:00:25.060','esl-fast-beginner-1-35'),
+	('Nothing works','Nhưng chẳng hiệu quả','00:00:25.480','00:00:26.800','esl-fast-beginner-1-35');
 
 /*=====================================================================================================================================================================================================================================================*/
 
