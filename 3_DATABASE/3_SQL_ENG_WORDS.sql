@@ -11192,6 +11192,7 @@ INSERT INTO `WORDS` (`ENG`,`VI`) VALUES
 	('saw','nhìn'),
 	('saw','thấy'),
 	('saw','xem'),
+	('saxophone','kèn saxophone'),
 	('say','bảo'),
 	('say','cho biết'),
 	('say','diễn tả'),

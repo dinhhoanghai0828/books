@@ -441,7 +441,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('It is very hard','Bài kiểm tra rất khó','00:00:12.000','00:00:13.830','esl-fast-beginner-1-33'),
 	('He does not know anything','Cậu bé chẳng biết gì cả','00:00:14.100','00:00:15.930','esl-fast-beginner-1-33'),
 	('He turns in his test blank','Cậu bé nộp bài kiểm tra bị bỏ trắng','00:00:16.300','00:00:19.590','esl-fast-beginner-1-33'),
-	('The teacher scolds him and gives him an "F"','Thầy cô mắng cậu bé và cho cậu bé điểm "F"','00:00:20.000','00:00:23.670','esl-fast-beginner-1-33'),
+	('The teacher scolds him and gives him an "F"','Giáo viên mắng cậu bé và cho cậu bé điểm "F"','00:00:20.000','00:00:23.670','esl-fast-beginner-1-33'),
 
 	/* (UUID(),'esl-fast-beginner-1-34','Helen is Busy','Helen đang bận rộn','BEGINNER_01_ESL_FAST_CHILDREN_034.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1','YES',34) */
 	('Helen wants to do well on the math test tomorrow','Helen muốn làm thật tốt bài kiểm tra Toán ngày mai','00:00:00.200','00:00:04.200','esl-fast-beginner-1-34'),
@@ -454,7 +454,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Helen yells at her','Helen lớn tiếng với mẹ','00:00:22.900','00:00:24.500','esl-fast-beginner-1-34'),
 	('Helen finally tells her family that she is busy','Cuối cùng Helen nói với cả nhà rằng mình đang bận','00:00:25.000','00:00:28.820','esl-fast-beginner-1-34'),
 
-	/* (UUID(),'esl-fast-beginner-1-35','Messing Up','Làm hỏng việc','BEGINNER_01_ESL_FAST_CHILDREN_035.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',35) */
+	/* (UUID(),'esl-fast-beginner-1-35','Messing Up','Làm hỏng việc','BEGINNER_01_ESL_FAST_CHILDREN_035.mp3',NULL,'00:00:00.000','00:00:28.000','esl-fast-children-1','YES',35) */
 	('He pours a glass of soda for himself','Cậu bé rót một cốc nước ngọt cho mình','00:00:00.200','00:00:03.400','esl-fast-beginner-1-35'),
 	('He accidentally spills some on his shirt','Cậu ấy vô tình làm đổ một ít lên áo','00:00:03.600','00:00:07.380','esl-fast-beginner-1-35'),
 	('Oh no','Ôi chết rồi','00:00:07.680','00:00:08.640','esl-fast-beginner-1-35'),
@@ -469,16 +469,16 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'esl-fast-beginner-1-36','Introducing Myself','Giới thiệu bản thân','BEGINNER_01_ESL_FAST_CHILDREN_036.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',36) */
+	/* (UUID(),'esl-fast-beginner-1-36','Introducing Myself','Giới thiệu bản thân','BEGINNER_01_ESL_FAST_CHILDREN_036.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1','YES',36) */
 	('I am a new student in school','Tôi là học sinh mới của trường','00:00:00.460','00:00:03.500','esl-fast-beginner-1-36'),
-	('I tell the class about myself','Tôi giới thiệu về bản thân trước lớp','00:00:04.140','00:00:06.360','esl-fast-beginner-1-36'),
-	('I am from Canada, but now I live in Nevada','Tôi đến từ Canada nhưng bây giờ sống ở Nevada','00:00:07.039','00:00:10.880','esl-fast-beginner-1-36'),
-	('I live with my mom, dad, and brother','Tôi sống cùng bố, mẹ và em trai','00:00:11.600','00:00:15.300','esl-fast-beginner-1-36'),
-	('My brother is five years younger than me','Em trai tôi nhỏ hơn tôi năm tuổi','00:00:16.040','00:00:18.940','esl-fast-beginner-1-36'),
-	('Music is very important to me','Âm nhạc rất quan trọng với tôi','00:00:19.720','00:00:22.040','esl-fast-beginner-1-36'),
-	('I like to sing and dance','Tôi thích ca hát và nhảy múa','00:00:22.540','00:00:24.520','esl-fast-beginner-1-36'),
-	('I also play the saxophone','Tôi còn biết chơi kèn saxophone','00:00:24.840','00:00:27.140','esl-fast-beginner-1-36'),
-	('One day, I hope to be a music teacher','Hy vọng một ngày nào đó tôi sẽ trở thành giáo viên dạy nhạc','00:00:26.840','00:00:31.180','esl-fast-beginner-1-36'),
+	('I tell the class about myself','Tôi kể với cả lớp về bản thân mình','00:00:04.000','00:00:06.360','esl-fast-beginner-1-36'),
+	('I am from Canada, but now I live in Nevada','Tôi đến từ Canada nhưng hiện tại tôi sống ở Nevada','00:00:06.800','00:00:10.880','esl-fast-beginner-1-36'),
+	('I live with my mom, dad, and brother','Tôi sống cùng bố, mẹ và em trai','00:00:11.400','00:00:15.300','esl-fast-beginner-1-36'),
+	('My brother is five years younger than me','Em trai tôi nhỏ hơn tôi năm tuổi','00:00:15.800','00:00:18.940','esl-fast-beginner-1-36'),
+	('Music is very important to me','Âm nhạc rất quan trọng với tôi','00:00:19.400','00:00:22.040','esl-fast-beginner-1-36'),
+	('I like to sing and dance','Tôi thích ca hát và nhảy múa','00:00:22.400','00:00:24.520','esl-fast-beginner-1-36'),
+	('I also play the saxophone','Tôi còn biết chơi kèn saxophone','00:00:24.800','00:00:27.000','esl-fast-beginner-1-36'),
+	('One day, I hope to be a music teacher','Một ngày nào đó, tôi hy vọng sẽ trở thành giáo viên dạy nhạc','00:00:27.200','00:00:31.180','esl-fast-beginner-1-36'),
 
 	/* (UUID(),'esl-fast-beginner-1-37','A Long Wait','Một khoảng thời gian chờ đợi dài','BEGINNER_01_ESL_FAST_CHILDREN_037.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',37) */
 	('The rollercoaster ride is fun and fast','Chuyến tàu lượn siêu tốc vừa vui vừa nhanh','00:00:00.330','00:00:04.390','esl-fast-beginner-1-37'),

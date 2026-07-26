@@ -378,7 +378,7 @@ INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,CHE
 	(UUID(),'esl-fast-beginner-1-33','Taking Tests','Làm bài kiểm tra','BEGINNER_01_ESL_FAST_CHILDREN_033.mp3','null','00:00:00.000','00:00:25.000','esl-fast-children-1','YES',33),
 	(UUID(),'esl-fast-beginner-1-34','Helen is Busy','Helen đang bận rộn','BEGINNER_01_ESL_FAST_CHILDREN_034.mp3','null','00:00:00.000','00:00:30.000','esl-fast-children-1','YES',34),
 	(UUID(),'esl-fast-beginner-1-35','Messing Up','Làm hỏng việc','BEGINNER_01_ESL_FAST_CHILDREN_035.mp3','null','00:00:00.000','00:00:28.000','esl-fast-children-1','YES',35),
-	(UUID(),'esl-fast-beginner-1-36','Introducing Myself','Giới thiệu bản thân','BEGINNER_01_ESL_FAST_CHILDREN_036.mp3','null','00:00:00.000','00:00:00.000','esl-fast-children-1','NO',36),
+	(UUID(),'esl-fast-beginner-1-36','Introducing Myself','Giới thiệu bản thân','BEGINNER_01_ESL_FAST_CHILDREN_036.mp3','null','00:00:00.000','00:00:33.000','esl-fast-children-1','YES',36),
 	(UUID(),'esl-fast-beginner-1-37','A Long Wait','Một khoảng thời gian chờ đợi dài','BEGINNER_01_ESL_FAST_CHILDREN_037.mp3','null','00:00:00.000','00:00:00.000','esl-fast-children-1','NO',37),
 	(UUID(),'esl-fast-beginner-1-38','The Teacher Takes Away His Phone','Giáo viên tịch thu điện thoại của cậu ấy','BEGINNER_01_ESL_FAST_CHILDREN_038.mp3','null','00:00:00.000','00:00:00.000','esl-fast-children-1','NO',38),
 	(UUID(),'esl-fast-beginner-1-39','No One Likes the Flu','Không ai thích bị cúm','BEGINNER_01_ESL_FAST_CHILDREN_039.mp3','null','00:00:00.000','00:00:00.000','esl-fast-children-1','NO',39),
