@@ -1,11 +1,11 @@
 import { Volume } from '@/interfaces/volume';
-import { CheckOutlined, EditOutlined, DownloadOutlined } from '@ant-design/icons';
+import { CheckOutlined, EditOutlined, DownloadOutlined, BookOutlined } from '@ant-design/icons';
 import { Button, Col, Empty, Form, Input, Modal, Row, Select, Typography, notification } from 'antd';
 import { Content } from 'antd/es/layout/layout';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { useState } from 'react';
-import { updateVolume, runVolumesExport } from '@/utils/apiService';
+import { updateVolume, runVolumesExport, markAsRead } from '@/utils/apiService';
 
 interface VolumeContentComponentProps {
   volumes: Volume[];
@@ -24,6 +24,7 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
   const [editForm] = Form.useForm();
   const [notifApi, notifContextHolder] = notification.useNotification();
   const [exportLoading, setExportLoading] = useState(false);
+  const [markReadLoading, setMarkReadLoading] = useState<string | null>(null);
 
   const handleOpenEdit = (volume: Volume, e: React.MouseEvent) => {
     e.preventDefault();
@@ -99,6 +100,33 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
     }
   };
 
+  const handleMarkAsRead = async (volume: Volume, e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    try {
+      setMarkReadLoading(volume.slug);
+      await markAsRead(volume.slug);
+      notifApi.success({
+        message: 'Danh dau thanh cong',
+        description: 'Tap da duoc danh dau la da doc xong.',
+        placement: 'topRight',
+        duration: 3,
+        style: { backgroundColor: '#f6ffed', border: '1px solid #b7eb8f' },
+      });
+      onVolumeUpdate?.();
+    } catch (error: any) {
+      notifApi.error({
+        message: 'Danh dau that bai',
+        description: error.message || 'Da xay ra loi, vui long thu lai.',
+        placement: 'topRight',
+        duration: 4,
+        style: { backgroundColor: '#fff2f0', border: '1px solid #ffccc7' },
+      });
+    } finally {
+      setMarkReadLoading(null);
+    }
+  };
+
   return (
     <Content className="volumeClass">
       {notifContextHolder}
@@ -117,7 +145,14 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
         <Row gutter={[16, 16]}>
           {volumes.map((volume) => (
             <Col span={8} xs={24} sm={24} md={12} lg={12} key={volume.uuid} className="colClass">
-              <div className="frameClass">
+              <div
+                className="frameClass"
+                style={{
+                  backgroundColor: volume.isRead === 1 ? '#e6f7ff' : '#ffffff',
+                  border: volume.isRead === 1 ? '2px solid #1890ff' : '1px solid #d9d9d9',
+                  opacity: volume.isRead === 1 ? 0.9 : 1
+                }}
+              >
                 <Link
                   href={`/${categorySlug}/${subcategorySlug}/${bookSlug}/${volume.slug}`}
                   className="volume-link"
@@ -131,11 +166,22 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
                       {volume.checked === 'YES' && (
                         <CheckOutlined style={{ color: 'green' }} />
                       )}
+                      {volume.isRead === 1 && (
+                        <BookOutlined style={{ color: '#1890ff' }} title="Da doc xong" />
+                      )}
                       <Button
                         type="link"
                         icon={<EditOutlined />}
                         onClick={(e) => handleOpenEdit(volume, e)}
                         style={{ padding: 0 }}
+                      />
+                      <Button
+                        type="link"
+                        icon={<BookOutlined />}
+                        onClick={(e) => handleMarkAsRead(volume, e)}
+                        loading={markReadLoading === volume.slug}
+                        style={{ padding: 0 }}
+                        title="Danh dau da doc xong"
                       />
                     </div>
                   </div>

@@ -17,4 +17,5 @@ export interface Volume {
   checked: string;         // Trang thai da hoan thanh
   img: string;             // Ten file anh
   number: number;          // So thu tu
+  isRead: number;          // Trang thai da doc xong (0: chua doc, 1: da doc)
 }

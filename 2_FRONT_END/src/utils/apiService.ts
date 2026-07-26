@@ -154,6 +154,15 @@ export const updateVolume = async (
   }
 };
 
+// Danh dau tap da doc xong theo slug
+export const markAsRead = async (slug: string): Promise<void> => {
+  try {
+    await apiClient.post(`/volumes/mark-as-read/${slug}`);
+  } catch (error: any) {
+    throw new Error(getErrorMessage(error));
+  }
+};
+
 // ============================================================
 // CONTENTS
 // ============================================================
