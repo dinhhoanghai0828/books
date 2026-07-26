@@ -19,6 +19,7 @@ public class VolumeAdapterImpl implements VolumeAdapter {
     private static final String SQL_GET_VOLUMES = "SELECT * FROM VOLUMES";
     private static final String SQL_GET_VOLUME_DETAIL_BY_SLUG = "SELECT * FROM VOLUMES WHERE SLUG = ?";
     private static final String SQL_UPDATE_VOLUME = "UPDATE VOLUMES SET ENG = ?, VI = ?, START_TIME = ?, END_TIME = ?, CHECKED = ? WHERE ID = ?";
+    private static final String SQL_MARK_AS_READ = "UPDATE VOLUMES SET IS_READ = 1 WHERE SLUG = ?";
 
     @Override
     public List<Volume> getVolumes() throws Exception {
@@ -45,6 +46,7 @@ public class VolumeAdapterImpl implements VolumeAdapter {
                 volume.setBookSlug(rs.getString("BOOK_SLUG"));
                 volume.setNumber(rs.getInt("NUMBER"));
                 volume.setChecked(rs.getString("CHECKED"));
+                volume.setIsRead(rs.getInt("IS_READ"));
                 volumes.add(volume);
             }
 
@@ -83,6 +85,7 @@ public class VolumeAdapterImpl implements VolumeAdapter {
                 volume.setBookSlug(rs.getString("BOOK_SLUG"));
                 volume.setNumber(rs.getInt("NUMBER"));
                 volume.setChecked(rs.getString("CHECKED"));
+                volume.setIsRead(rs.getInt("IS_READ"));
             }
 
         } catch (Exception ex) {
@@ -108,6 +111,25 @@ public class VolumeAdapterImpl implements VolumeAdapter {
             pstmt.setString(4, volume.getEndTime());
             pstmt.setString(5, volume.getChecked());
             pstmt.setString(6, volume.getId());
+            int result = pstmt.executeUpdate();
+            return result > 0;
+        } catch (Exception ex) {
+            logger.error(ex.getMessage());
+            throw ex;
+        } finally {
+            DBUtils.closeAll(thisMethod, con, pstmt, null);
+        }
+    }
+
+    @Override
+    public boolean markAsRead(String slug) throws Exception {
+        String thisMethod = "VolumeAdapterImpl.markAsRead";
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        try {
+            con = DBUtils.getConnection(thisMethod, true, Connection.TRANSACTION_READ_COMMITTED);
+            pstmt = DBUtils.prepareStatement(con, SQL_MARK_AS_READ);
+            pstmt.setString(1, slug);
             int result = pstmt.executeUpdate();
             return result > 0;
         } catch (Exception ex) {

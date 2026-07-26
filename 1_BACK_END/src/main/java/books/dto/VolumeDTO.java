@@ -15,6 +15,7 @@ public class VolumeDTO {
     private String endTime;
     private String bookSlug;
     private String checked;
+    private int isRead;
     private Date createdAt;
     private Date updatedAt;
     private String createBy;
@@ -107,6 +108,14 @@ public class VolumeDTO {
 
     public void setChecked(String checked) {
         this.checked = checked;
+    }
+
+    public int getIsRead() {
+        return isRead;
+    }
+
+    public void setIsRead(int isRead) {
+        this.isRead = isRead;
     }
 
     public Date getCreatedAt() {

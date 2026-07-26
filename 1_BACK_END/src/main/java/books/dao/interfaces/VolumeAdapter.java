@@ -8,4 +8,5 @@ public interface VolumeAdapter {
     List<Volume> getVolumes() throws Exception;
     Volume getVolumeDetailBySlug(String slug) throws Exception;
     boolean updateVolume(Volume volume) throws Exception;
+    boolean markAsRead(String slug) throws Exception;
 }
