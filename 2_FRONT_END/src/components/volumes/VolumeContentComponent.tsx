@@ -166,16 +166,15 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
                       {volume.checked === 'YES' && (
                         <CheckOutlined style={{ color: 'green' }} />
                       )}
-                      {volume.isRead === 1 && (
-                        <BookOutlined style={{ color: '#1890ff' }} title="Da doc xong" />
-                      )}
                       <Button
                         type="link"
                         icon={<EditOutlined />}
                         onClick={(e) => handleOpenEdit(volume, e)}
                         style={{ padding: 0 }}
                       />
-                      {volume.isRead !== 1 && (
+                      {volume.isRead === 1 ? (
+                        <BookOutlined style={{ color: '#1890ff' }} title="Da doc xong" />
+                      ) : (
                         <Button
                           type="link"
                           icon={<BookOutlined />}
