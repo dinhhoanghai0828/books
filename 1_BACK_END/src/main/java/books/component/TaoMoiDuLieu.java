@@ -164,8 +164,6 @@ public class TaoMoiDuLieu {
                         String engSentence = "";
                         if (obj.getSentence().contains("\'") || obj.getSentence().contains("'") || obj.getSentence().contains("'") || obj.getSentence().contains("\"") || obj.getSentence().contains("\"") || obj.getSentence().contains("\"")) {
                             engSentence = obj.getSentence().replace("'", "\\'");
-                            engSentence = engSentence.replace("'", "\\'");
-                            engSentence = engSentence.replace("\"", "\"");
                             engSentence = engSentence.replace("\"", "\"");
                         } else {
                             engSentence = obj.getSentence();
