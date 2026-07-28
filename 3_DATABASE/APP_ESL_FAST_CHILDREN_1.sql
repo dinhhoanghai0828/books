@@ -455,7 +455,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Helen finally tells her family that she is busy','Cuối cùng Helen nói với cả nhà rằng mình đang bận','00:00:25.000','00:00:28.820','esl-fast-beginner-1-34'),
 
 	/* (UUID(),'esl-fast-beginner-1-35','Messing Up','Làm hỏng việc','BEGINNER_01_ESL_FAST_CHILDREN_035.mp3',NULL,'00:00:00.000','00:00:28.000','esl-fast-children-1','YES',35) */
-	('He pours a glass of soda for himself','Cậu bé rót một cốc nước ngọt cho mình','00:00:00.200','00:00:03.400','esl-fast-beginner-1-35'),
+	('He pours a glass of soda for himself','Cậu bé rót một cốc nước ngọt cho mình','00:00:00.200','00:00:03.300','esl-fast-beginner-1-35'),
 	('He accidentally spills some on his shirt','Cậu ấy vô tình làm đổ một ít lên áo','00:00:03.600','00:00:07.380','esl-fast-beginner-1-35'),
 	('Oh no','Ôi chết rồi','00:00:07.680','00:00:08.640','esl-fast-beginner-1-35'),
 	('His mom will get mad','Mẹ cậu ấy sẽ nổi giận mất','00:00:09.120','00:00:11.060','esl-fast-beginner-1-35'),
@@ -480,16 +480,16 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('I also play the saxophone','Tôi còn biết chơi kèn saxophone','00:00:24.800','00:00:27.000','esl-fast-beginner-1-36'),
 	('One day, I hope to be a music teacher','Một ngày nào đó, tôi hy vọng sẽ trở thành giáo viên dạy nhạc','00:00:27.200','00:00:31.180','esl-fast-beginner-1-36'),
 
-	/* (UUID(),'esl-fast-beginner-1-37','A Long Wait','Một khoảng thời gian chờ đợi dài','BEGINNER_01_ESL_FAST_CHILDREN_037.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',37) */
+	/* (UUID(),'esl-fast-beginner-1-37','A Long Wait','Một khoảng thời gian chờ đợi dài','BEGINNER_01_ESL_FAST_CHILDREN_037.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1','YES',37) */
 	('The rollercoaster ride is fun and fast','Chuyến tàu lượn siêu tốc vừa vui vừa nhanh','00:00:00.330','00:00:04.390','esl-fast-beginner-1-37'),
-	('The line is so long','Hàng người xếp dài quá','00:00:04.890','00:00:07.010','esl-fast-beginner-1-37'),
-	('John and his friends decide to wait','John và các bạn quyết định chờ','00:00:07.690','00:00:10.830','esl-fast-beginner-1-37'),
-	('John tried to find ways to pass time','John cố tìm cách giết thời gian','00:00:11.790','00:00:15.090','esl-fast-beginner-1-37'),
-	('He taps his foot for ten minutes','Cậu ấy gõ chân suốt mười phút','00:00:15.710','00:00:18.230','esl-fast-beginner-1-37'),
-	('Then, he plays games on his phone','Sau đó cậu ấy chơi game trên điện thoại','00:00:18.870','00:00:21.950','esl-fast-beginner-1-37'),
-	('Later, he tells his friends jokes','Sau đó nữa cậu ấy kể chuyện cười cho các bạn nghe','00:00:22.830','00:00:25.930','esl-fast-beginner-1-37'),
-	('Two hours pass','Hai tiếng đồng hồ trôi qua','00:00:26.430','00:00:28.490','esl-fast-beginner-1-37'),
-	('The boys are still in line','Mấy cậu bé vẫn đang xếp hàng','00:00:28.830','00:00:30.770','esl-fast-beginner-1-37'),
+	('The line is so long','Hàng người xếp dài quá','00:00:04.700','00:00:07.010','esl-fast-beginner-1-37'),
+	('John and his friends decide to wait','John và các bạn quyết định chờ','00:00:07.400','00:00:10.830','esl-fast-beginner-1-37'),
+	('John tried to find ways to pass time','John cố tìm cách giết thời gian','00:00:11.400','00:00:15.090','esl-fast-beginner-1-37'),
+	('He taps his foot for ten minutes','Cậu bé gõ chân suốt mười phút','00:00:15.500','00:00:18.230','esl-fast-beginner-1-37'),
+	('Then, he plays games on his phone','Sau đó, cậu bé chơi game trên điện thoại','00:00:18.600','00:00:21.950','esl-fast-beginner-1-37'),
+	('Later, he tells his friends jokes','Một lát sau, cậu bé kể chuyện cười cho các bạn nghe','00:00:22.400','00:00:25.930','esl-fast-beginner-1-37'),
+	('Two hours pass','Hai tiếng đồng hồ trôi qua','00:00:26.300','00:00:28.490','esl-fast-beginner-1-37'),
+	('The boys are still in line','Mấy cậu bé vẫn đang xếp hàng','00:00:28.800','00:00:30.770','esl-fast-beginner-1-37'),
 
 	/* (UUID(),'esl-fast-beginner-1-38','The Teacher Takes Away His Phone','Giáo viên tịch thu điện thoại của cậu ấy','BEGINNER_01_ESL_FAST_CHILDREN_038.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',38) */
 	('Mr Brown\'s lectures are boring','Những bài giảng của thầy Brown rất nhàm chán','00:00:00.070','00:00:03.210','esl-fast-beginner-1-38'),
