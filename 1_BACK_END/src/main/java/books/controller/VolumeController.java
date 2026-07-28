@@ -73,4 +73,18 @@ public class VolumeController {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
     }
+
+    @PostMapping("/mark-as-unread/{slug}")
+    public ResponseEntity<?> markAsUnread(@PathVariable("slug") String slug) {
+        try {
+            boolean success = volumeService.markAsUnread(slug);
+            if (success) {
+                return new ResponseEntity<>(HttpStatus.OK);
+            } else {
+                return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+            }
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+    }
 }

@@ -52,4 +52,9 @@ public class VolumeServiceImpl implements VolumeService {
     public boolean markAsRead(String slug) throws Exception {
         return volumeAdapter.markAsRead(slug);
     }
+
+    @Override
+    public boolean markAsUnread(String slug) throws Exception {
+        return volumeAdapter.markAsUnread(slug);
+    }
 }

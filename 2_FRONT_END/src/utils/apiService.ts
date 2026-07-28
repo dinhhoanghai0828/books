@@ -163,6 +163,15 @@ export const markAsRead = async (slug: string): Promise<void> => {
   }
 };
 
+// Danh dau tap chua doc theo slug
+export const markAsUnread = async (slug: string): Promise<void> => {
+  try {
+    await apiClient.post(`/volumes/mark-as-unread/${slug}`);
+  } catch (error: any) {
+    throw new Error(getErrorMessage(error));
+  }
+};
+
 // ============================================================
 // CONTENTS
 // ============================================================

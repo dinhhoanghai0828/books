@@ -9,4 +9,5 @@ public interface VolumeAdapter {
     Volume getVolumeDetailBySlug(String slug) throws Exception;
     boolean updateVolume(Volume volume) throws Exception;
     boolean markAsRead(String slug) throws Exception;
+    boolean markAsUnread(String slug) throws Exception;
 }

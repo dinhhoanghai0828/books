@@ -5,7 +5,7 @@ import { Content } from 'antd/es/layout/layout';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { useState } from 'react';
-import { updateVolume, runVolumesExport, markAsRead } from '@/utils/apiService';
+import { updateVolume, runVolumesExport, markAsRead, markAsUnread } from '@/utils/apiService';
 
 interface VolumeContentComponentProps {
   volumes: Volume[];
@@ -127,6 +127,33 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
     }
   };
 
+  const handleMarkAsUnread = async (volume: Volume, e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    try {
+      setMarkReadLoading(volume.slug);
+      await markAsUnread(volume.slug);
+      notifApi.success({
+        message: 'Danh dau thanh cong',
+        description: 'Tap da duoc danh dau la chua doc.',
+        placement: 'topRight',
+        duration: 3,
+        style: { backgroundColor: '#f6ffed', border: '1px solid #b7eb8f' },
+      });
+      onVolumeUpdate?.();
+    } catch (error: any) {
+      notifApi.error({
+        message: 'Danh dau that bai',
+        description: error.message || 'Da xay ra loi, vui long thu lai.',
+        placement: 'topRight',
+        duration: 4,
+        style: { backgroundColor: '#fff2f0', border: '1px solid #ffccc7' },
+      });
+    } finally {
+      setMarkReadLoading(null);
+    }
+  };
+
   return (
     <Content className="volumeClass">
       {notifContextHolder}
@@ -173,7 +200,14 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
                         style={{ padding: 0 }}
                       />
                       {volume.isRead === 1 ? (
-                        <BookOutlined style={{ color: '#1890ff' }} title="Da doc xong" />
+                        <Button
+                          type="link"
+                          icon={<BookOutlined />}
+                          onClick={(e) => handleMarkAsUnread(volume, e)}
+                          loading={markReadLoading === volume.slug}
+                          style={{ padding: 0, color: '#1890ff' }}
+                          title="Danh dau chua doc"
+                        />
                       ) : (
                         <Button
                           type="link"

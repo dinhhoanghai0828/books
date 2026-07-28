@@ -15,4 +15,6 @@ public interface VolumeService {
     boolean updateVolume(VolumeDTO volumeDTO) throws Exception;
 
     boolean markAsRead(String slug) throws Exception;
+
+    boolean markAsUnread(String slug) throws Exception;
 }

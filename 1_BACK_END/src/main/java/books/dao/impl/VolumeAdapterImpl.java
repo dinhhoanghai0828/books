@@ -20,6 +20,7 @@ public class VolumeAdapterImpl implements VolumeAdapter {
     private static final String SQL_GET_VOLUME_DETAIL_BY_SLUG = "SELECT * FROM VOLUMES WHERE SLUG = ?";
     private static final String SQL_UPDATE_VOLUME = "UPDATE VOLUMES SET ENG = ?, VI = ?, START_TIME = ?, END_TIME = ?, CHECKED = ? WHERE ID = ?";
     private static final String SQL_MARK_AS_READ = "UPDATE VOLUMES SET IS_READ = 1 WHERE SLUG = ?";
+    private static final String SQL_MARK_AS_UNREAD = "UPDATE VOLUMES SET IS_READ = 0 WHERE SLUG = ?";
 
     @Override
     public List<Volume> getVolumes() throws Exception {
@@ -129,6 +130,25 @@ public class VolumeAdapterImpl implements VolumeAdapter {
         try {
             con = DBUtils.getConnection(thisMethod, true, Connection.TRANSACTION_READ_COMMITTED);
             pstmt = DBUtils.prepareStatement(con, SQL_MARK_AS_READ);
+            pstmt.setString(1, slug);
+            int result = pstmt.executeUpdate();
+            return result > 0;
+        } catch (Exception ex) {
+            logger.error(ex.getMessage());
+            throw ex;
+        } finally {
+            DBUtils.closeAll(thisMethod, con, pstmt, null);
+        }
+    }
+
+    @Override
+    public boolean markAsUnread(String slug) throws Exception {
+        String thisMethod = "VolumeAdapterImpl.markAsUnread";
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        try {
+            con = DBUtils.getConnection(thisMethod, true, Connection.TRANSACTION_READ_COMMITTED);
+            pstmt = DBUtils.prepareStatement(con, SQL_MARK_AS_UNREAD);
             pstmt.setString(1, slug);
             int result = pstmt.executeUpdate();
             return result > 0;
