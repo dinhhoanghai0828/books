@@ -329,7 +329,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Long time no see','Lâu rồi không gặp','00:02:53.470','00:02:54.250','your-animated-story-show-2'),
 	('So he does remember me?','Vậy là cậu ấy vẫn nhớ tôi sao?','00:02:54.530','00:02:56.110','your-animated-story-show-2'),
 	('During the lesson, I couldn\'t focus and my body was heating up','Trong giờ học, tôi không thể tập trung và cơ thể thì nóng bừng','00:02:56.370','00:02:59.590','your-animated-story-show-2'),
-	('I kept my mouth shut while he was immersed in his lecture','Tôi im lặng trong khi cậu ấy đang mải mê giảng bài','00:02:59.790','00:03:02.490','your-animated-story-show-2'),
+	('I kept my mouth shut while he was immersed in his lecture','Tôi im lặng trong khi cậu ấy đang mải mê với những bài giảng của mình','00:02:59.790','00:03:02.490','your-animated-story-show-2'),
 	('If there\'s anything you don\'t understand, feel free to ask','Nếu có gì không hiểu, cứ thoải mái hỏi nhé','00:03:02.770','00:03:05.130','your-animated-story-show-2'),
 	('I plucked up my courage and said, Why didn\'t you like me when we were kids?','Tôi lấy hết can đảm và hỏi, Tại sao hồi nhỏ cậu không thích tôi?','00:03:05.330','00:03:08.830','your-animated-story-show-2'),
 	('You\'re still acting like before','Cậu vẫn cư xử như hồi trước','00:03:09.130','00:03:10.850','your-animated-story-show-2'),
