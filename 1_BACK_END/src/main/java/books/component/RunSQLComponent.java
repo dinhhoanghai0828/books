@@ -503,13 +503,14 @@ public class RunSQLComponent {
                         bookSlug = bookSlug.replace("\'", "\\'");
                     }
                     String checked = resultSet.getString("CHECKED");
+                    int isRead = resultSet.getInt("IS_READ");
                     int number = resultSet.getInt("NUMBER");
 
                     // Check if book_slug changed
                     if (currentBookSlug == null || !currentBookSlug.equals(bookSlug)) {
                         // Flush previous group if exists
                         if (currentBookSlug != null && !currentGroupValues.isEmpty()) {
-                            volumeSql.append("INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,CHECKED,NUMBER) VALUES\n");
+                            volumeSql.append("INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,CHECKED,IS_READ,NUMBER) VALUES\n");
                             for (int j = 0; j < currentGroupValues.size(); j++) {
                                 String value = currentGroupValues.get(j);
                                 if (j == currentGroupValues.size() - 1) {
@@ -524,7 +525,7 @@ public class RunSQLComponent {
                         currentGroupValues.clear();
                     }
 
-                    String value = "\t(UUID(),'" + slug + "','" + eng + "','" + vi + "','" + audio + "','" + img + "','" + startTime + "','" + endTime + "','" + bookSlug + "','" + checked + "'," + number + ")";
+                    String value = "\t(UUID(),'" + slug + "','" + eng + "','" + vi + "','" + audio + "','" + img + "','" + startTime + "','" + endTime + "','" + bookSlug + "','" + checked + "'," + isRead + "," + number + ")";
                     currentGroupValues.add(value);
                 } catch (Exception e) {
                     System.out.println(resultSet.getString("SLUG"));
@@ -535,7 +536,7 @@ public class RunSQLComponent {
 
             // Flush the last group
             if (!currentGroupValues.isEmpty()) {
-                volumeSql.append("INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,CHECKED,NUMBER) VALUES\n");
+                volumeSql.append("INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,CHECKED,IS_READ,NUMBER) VALUES\n");
                 for (int j = 0; j < currentGroupValues.size(); j++) {
                     String value = currentGroupValues.get(j);
                     if (j == currentGroupValues.size() - 1) {
