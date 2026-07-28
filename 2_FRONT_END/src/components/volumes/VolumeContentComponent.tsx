@@ -171,7 +171,7 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
       {volumes && volumes.length > 0 ? (
         <Row gutter={[16, 16]}>
           {volumes.map((volume) => (
-            <Col span={8} xs={24} sm={24} md={12} lg={12} key={volume.uuid} className="colClass">
+            <Col span={6} xs={24} sm={24} md={6} lg={6} key={volume.uuid} className="colClass">
               <div
                 className="frameClass"
                 style={{
