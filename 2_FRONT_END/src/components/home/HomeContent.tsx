@@ -552,6 +552,16 @@ const HomeContent = React.memo(({
             createPortal(
               <div style={{ ...TOOLTIP_STYLE, left: tooltipPosition.x, top: tooltipPosition.y }}>
                 <div style={TOOLTIP_BODY_STYLE}>
+                <div style={{ marginBottom: 12, paddingBottom: 8, borderBottom: '1px solid rgba(255,255,255,0.2)' }}>
+                  <Button
+                    type="link"
+                    icon={<SoundOutlined />}
+                    onClick={() => speakText(selectedText)}
+                    style={{ color: '#7dd3fc', padding: 0, height: 'auto' }}
+                  >
+                    Đọc từ đã chọn
+                  </Button>
+                </div>
                 {/^[a-zA-Z ]+$/.test(window.getSelection()?.toString().trim() || '') ? (
                   <>
                     <div style={{ fontSize: 11, opacity: 0.65, marginBottom: 4, letterSpacing: 1 }}>
@@ -579,16 +589,6 @@ const HomeContent = React.memo(({
                     ))}
                   </>
                 )}
-                <div style={{ marginTop: 12, paddingTop: 8, borderTop: '1px solid rgba(255,255,255,0.2)' }}>
-                  <Button
-                    type="link"
-                    icon={<SoundOutlined />}
-                    onClick={() => speakText(selectedText)}
-                    style={{ color: '#7dd3fc', padding: 0, height: 'auto' }}
-                  >
-                    Đọc từ đã chọn
-                  </Button>
-                </div>
                 </div>
               </div>,
               document.body
