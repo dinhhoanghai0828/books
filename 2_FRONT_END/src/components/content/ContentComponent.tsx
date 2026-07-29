@@ -2,7 +2,7 @@ import { ContentType } from '@/interfaces/content';
 import { Volume } from '@/interfaces/volume';
 import { getMeaningWords, insertWord, updateContent } from '@/utils/apiService';
 import { MinusCircleOutlined, PlusOutlined, SoundOutlined } from '@ant-design/icons';
-import { Button, Form, Input, Modal, notification, Space } from 'antd';
+import { Button, Form, Input, Modal, notification, Space, Select } from 'antd';
 import debounce from 'lodash.debounce';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
@@ -474,6 +474,21 @@ const ContentComponent = ({
       <div style={{ ...TOOLTIP_STYLE, left: tooltipPosition.x, top: tooltipPosition.y }}>
         <div style={TOOLTIP_BODY_STYLE}>
           <div style={{ marginBottom: 12, paddingBottom: 8, borderBottom: '1px solid rgba(255,255,255,0.2)' }}>
+            <div style={{ marginBottom: 8 }}>
+              <Select
+                value={selectedVoice}
+                onChange={setSelectedVoice}
+                style={{ width: '100%' }}
+                placeholder="Chon giọng đọc"
+                size="small"
+                getPopupContainer={(triggerNode) => triggerNode.parentElement as HTMLElement}
+                dropdownStyle={{ zIndex: 10001 }}
+                options={availableVoices.map(voice => ({
+                  value: voice.name,
+                  label: `${voice.name} (${voice.lang})`
+                }))}
+              />
+            </div>
             <Button
               type="link"
               icon={<SoundOutlined />}
@@ -518,7 +533,7 @@ const ContentComponent = ({
       </div>,
       document.body
     );
-  }, [selectedText, meaningEnKeywords, meaningViKeywords, tooltipPosition]);
+  }, [selectedText, selectedVoice, availableVoices, meaningEnKeywords, meaningViKeywords, tooltipPosition]);
 
   // ============================================================
   // EDIT CONTENT MODAL HANDLERS
