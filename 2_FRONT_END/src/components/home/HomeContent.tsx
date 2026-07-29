@@ -400,14 +400,41 @@ const HomeContent = React.memo(({
         return;
       }
 
+      // Only close if clicking outside and no text is selected
       if (window.getSelection()?.toString().trim() === '') {
         setMeaningEnKeywords([]);
         setMeaningViKeywords([]);
         setSelectedText('');
       }
     };
+
+    // Also prevent closing when selection is lost but dropdown is still open
+    const handleSelectionChange = () => {
+      const dropdowns = document.querySelectorAll('.ant-select-dropdown');
+      const isDropdownOpen = Array.from(dropdowns).some(dropdown => {
+        const htmlDropdown = dropdown as HTMLElement;
+        return htmlDropdown.style.display !== 'none' && htmlDropdown.style.visibility !== 'hidden';
+      });
+
+      // Don't close if dropdown is open, even if selection is lost
+      if (isDropdownOpen) {
+        return;
+      }
+
+      if (window.getSelection()?.toString().trim() === '') {
+        setMeaningEnKeywords([]);
+        setMeaningViKeywords([]);
+        setSelectedText('');
+      }
+    };
+
     document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener('selectionchange', handleSelectionChange);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('selectionchange', handleSelectionChange);
+    };
   }, []);
 
   // Text-to-speech function

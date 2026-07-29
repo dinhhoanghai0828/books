@@ -418,15 +418,55 @@ const ContentComponent = ({
   }, [handleGetMeaning]);
 
   useEffect(() => {
-    const handleClickOutside = () => {
+    const handleClickOutside = (event: MouseEvent) => {
+      // Check if click is inside the tooltip or any dropdown
+      const target = event.target as HTMLElement;
+      const tooltip = document.querySelector('[style*="position: fixed"][style*="z-index: 10000"]');
+
+      // Check all possible dropdown containers
+      const dropdowns = document.querySelectorAll('.ant-select-dropdown');
+      const isInDropdown = Array.from(dropdowns).some(dropdown => dropdown.contains(target));
+
+      // Don't close if clicking inside tooltip or any dropdown
+      if (tooltip?.contains(target) || isInDropdown) {
+        return;
+      }
+
+      // Only close if clicking outside and no text is selected
       if (window.getSelection()?.toString().trim() === '') {
         setMeaningEnKeywords([]);
         setMeaningViKeywords([]);
         setSelectedText('');
       }
     };
+
+    // Also prevent closing when selection is lost but dropdown is still open
+    const handleSelectionChange = () => {
+      const dropdowns = document.querySelectorAll('.ant-select-dropdown');
+      const isDropdownOpen = Array.from(dropdowns).some(dropdown => {
+        const htmlDropdown = dropdown as HTMLElement;
+        return htmlDropdown.style.display !== 'none' && htmlDropdown.style.visibility !== 'hidden';
+      });
+
+      // Don't close if dropdown is open, even if selection is lost
+      if (isDropdownOpen) {
+        return;
+      }
+
+      if (window.getSelection()?.toString().trim() === '') {
+        setMeaningEnKeywords([]);
+        setMeaningViKeywords([]);
+        setSelectedText('');
+      }
+    };
+
     document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener('selectionchange', handleSelectionChange);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('selectionchange', handleSelectionChange);
+    };
   }, []);
 
   // Text-to-speech function
