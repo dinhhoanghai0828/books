@@ -9,6 +9,7 @@ import {
   RetweetOutlined,
   RollbackOutlined,
   VideoCameraOutlined,
+  SoundOutlined,
 } from '@ant-design/icons';
 import {
   Button,
@@ -126,6 +127,7 @@ const HomeContent = React.memo(({
   const [meaningEnKeywords, setMeaningEnKeywords] = useState<string[]>([]);
   const [meaningViKeywords, setMeaningViKeywords] = useState<string[]>([]);
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
+  const [selectedText, setSelectedText] = useState('');
   const meaningEnRef = useRef<string[]>([]);
   const meaningViRef = useRef<string[]>([]);
   meaningEnRef.current = meaningEnKeywords;
@@ -299,8 +301,11 @@ const HomeContent = React.memo(({
           if (!searchValue) {
             setMeaningEnKeywords([]);
             setMeaningViKeywords([]);
+            setSelectedText('');
             return;
           }
+
+          setSelectedText(searchValue);
 
           const alreadyShown =
             searchValue === meaningEnRef.current.join(' ') ||
@@ -348,11 +353,27 @@ const HomeContent = React.memo(({
       if (window.getSelection()?.toString().trim() === '') {
         setMeaningEnKeywords([]);
         setMeaningViKeywords([]);
+        setSelectedText('');
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
+
+  // Text-to-speech function
+  const speakText = (text: string) => {
+    if ('speechSynthesis' in window) {
+      // Cancel any ongoing speech
+      window.speechSynthesis.cancel();
+
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.rate = playbackSpeed;
+      utterance.lang = /^[a-zA-Z ]+$/.test(text) ? 'en-US' : 'vi-VN';
+      window.speechSynthesis.speak(utterance);
+    } else {
+      message.error('Trinh duyet khong ho tro text-to-speech.');
+    }
+  };
 
   // ============================================================
   // EDIT MODAL HANDLERS
@@ -558,6 +579,16 @@ const HomeContent = React.memo(({
                     ))}
                   </>
                 )}
+                <div style={{ marginTop: 12, paddingTop: 8, borderTop: '1px solid rgba(255,255,255,0.2)' }}>
+                  <Button
+                    type="link"
+                    icon={<SoundOutlined />}
+                    onClick={() => speakText(selectedText)}
+                    style={{ color: '#7dd3fc', padding: 0, height: 'auto' }}
+                  >
+                    Đọc từ đã chọn
+                  </Button>
+                </div>
                 </div>
               </div>,
               document.body
