@@ -1,13 +1,10 @@
 .searchClass {
-  position: fixed; /* Cố định phần tìm kiếm */
-  top: 60px; /* Đặt phần tìm kiếm bắt đầu từ dưới header (giả sử header cao 60px, bạn có thể điều chỉnh tùy ý) */
-  left: 0;
-  right: 0;
+  position: relative; /* Đổi thành relative để không che nội dung */
   background-color: #ffffff;
-  z-index: 1000; /* Đảm bảo nó nằm trên các phần tử khác */
   padding: 10px 35px;
   width: 100%; /* Đảm bảo phần tìm kiếm chiếm toàn bộ chiều ngang */
-  height: 80px; /* Chiều cao cố định cho phần tìm kiếm */
+  margin-bottom: 16px;
+  padding-top: 80px; /* Tạo khoảng cách để không bị header che */
 }
 
 .rowClass {
@@ -63,7 +60,6 @@
     padding: 16px;
     background-color: #ffffff;
     padding-bottom: 40px;
-    padding-top: 100px;
   }
 }
 
@@ -72,6 +68,5 @@
     padding: 16px;
     background-color: #ffffff;
     padding-bottom: 40px;
-    padding-top: 150px;
   }
 }
