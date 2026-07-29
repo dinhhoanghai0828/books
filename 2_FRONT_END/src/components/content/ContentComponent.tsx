@@ -2,7 +2,7 @@ import { ContentType } from '@/interfaces/content';
 import { Volume } from '@/interfaces/volume';
 import { getMeaningWords, insertWord, updateContent } from '@/utils/apiService';
 import { MinusCircleOutlined, PlusOutlined, SoundOutlined } from '@ant-design/icons';
-import { Button, Form, Input, Modal, notification, Space, Select } from 'antd';
+import { Button, Form, Input, Modal, notification, Space, Select, Switch } from 'antd';
 import debounce from 'lodash.debounce';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
@@ -142,6 +142,7 @@ const ContentComponent = ({
   const [selectedText, setSelectedText] = useState('');
   const [availableVoices, setAvailableVoices] = useState<SpeechSynthesisVoice[]>([]);
   const [selectedVoice, setSelectedVoice] = useState('');
+  const [autoRead, setAutoRead] = useState(false);
   const meaningEnRef = useRef<string[]>([]);
   const meaningViRef = useRef<string[]>([]);
   meaningEnRef.current = meaningEnKeywords;
@@ -402,11 +403,16 @@ const ContentComponent = ({
               y: rect.bottom + 8,
             });
           }
+
+          // Auto-read if enabled
+          if (autoRead) {
+            speakText(searchValue);
+          }
         } catch (e) {
           console.error(e);
         }
       }, 300),
-    []
+    [autoRead]
   );
 
   useEffect(() => {
@@ -529,14 +535,24 @@ const ContentComponent = ({
                 }))}
               />
             </div>
-            <Button
-              type="link"
-              icon={<SoundOutlined />}
-              onClick={() => speakText(selectedText)}
-              style={{ color: '#7dd3fc', padding: 0, height: 'auto' }}
-            >
-              Đọc từ đã chọn
-            </Button>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
+              <Button
+                type="link"
+                icon={<SoundOutlined />}
+                onClick={() => speakText(selectedText)}
+                style={{ color: '#7dd3fc', padding: 0, height: 'auto' }}
+              >
+                Đọc từ đã chọn
+              </Button>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                <span style={{ fontSize: 12, opacity: 0.8 }}>Tự động đọc</span>
+                <Switch
+                  size="small"
+                  checked={autoRead}
+                  onChange={setAutoRead}
+                />
+              </div>
+            </div>
           </div>
           {meaningEnKeywords.length > 0 && meaningViKeywords.length > 0 && (
             <>
@@ -573,7 +589,7 @@ const ContentComponent = ({
       </div>,
       document.body
     );
-  }, [selectedText, selectedVoice, availableVoices, meaningEnKeywords, meaningViKeywords, tooltipPosition]);
+  }, [selectedText, selectedVoice, availableVoices, autoRead, meaningEnKeywords, meaningViKeywords, tooltipPosition]);
 
   // ============================================================
   // EDIT CONTENT MODAL HANDLERS

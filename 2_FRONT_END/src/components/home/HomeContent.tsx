@@ -24,6 +24,7 @@ import {
   Row,
   Select,
   Space,
+  Switch,
   Typography,
 } from 'antd';
 import debounce from 'lodash.debounce';
@@ -131,6 +132,7 @@ const HomeContent = React.memo(({
   const [selectedText, setSelectedText] = useState('');
   const [availableVoices, setAvailableVoices] = useState<SpeechSynthesisVoice[]>([]);
   const [selectedVoice, setSelectedVoice] = useState('');
+  const [autoRead, setAutoRead] = useState(false);
   const meaningEnRef = useRef<string[]>([]);
   const meaningViRef = useRef<string[]>([]);
   meaningEnRef.current = meaningEnKeywords;
@@ -366,6 +368,11 @@ const HomeContent = React.memo(({
               y: rect.bottom + 8,
             });
           }
+
+          // Auto-read if enabled
+          if (autoRead) {
+            speakText(searchValue);
+          }
         } catch (error) {
           console.error('Loi khi tra nghia tu:', error);
           // Still show tooltip even if API fails
@@ -373,7 +380,7 @@ const HomeContent = React.memo(({
           setMeaningViKeywords([]);
         }
       }, 300),
-    []
+    [autoRead]
   );
 
   useEffect(() => {
@@ -679,14 +686,24 @@ const HomeContent = React.memo(({
                       }))}
                     />
                   </div>
-                  <Button
-                    type="link"
-                    icon={<SoundOutlined />}
-                    onClick={() => speakText(selectedText)}
-                    style={{ color: '#7dd3fc', padding: 0, height: 'auto' }}
-                  >
-                    Đọc từ đã chọn
-                  </Button>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
+                    <Button
+                      type="link"
+                      icon={<SoundOutlined />}
+                      onClick={() => speakText(selectedText)}
+                      style={{ color: '#7dd3fc', padding: 0, height: 'auto' }}
+                    >
+                      Đọc từ đã chọn
+                    </Button>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                      <span style={{ fontSize: 12, opacity: 0.8 }}>Tự động đọc</span>
+                      <Switch
+                        size="small"
+                        checked={autoRead}
+                        onChange={setAutoRead}
+                      />
+                    </div>
+                  </div>
                 </div>
                 {meaningEnKeywords.length > 0 && meaningViKeywords.length > 0 && (
                   <>
