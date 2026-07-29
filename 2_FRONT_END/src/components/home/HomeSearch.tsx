@@ -33,15 +33,11 @@ const SPEED_OPTIONS = [
 interface HomeSearchProps {
   onSearch: (searchEn: string, searchVi: string) => void;
   onSelectChange: (value: string) => void;
-  selectedVoice: string;
-  onVoiceChange: (voice: string) => void;
 }
 
 const HomeSearch = React.memo(({
   onSearch,
   onSelectChange,
-  selectedVoice,
-  onVoiceChange,
 }: HomeSearchProps) => {
   const { message } = App.useApp();
   const [searchValueEn, setSearchValueEn] = useState('');
@@ -51,59 +47,11 @@ const HomeSearch = React.memo(({
   const [selectedSpeed, setSelectedSpeed] = useState('100%');
   const [loadingTonghop, setLoadingTonghop] = useState(false);
   const [notifApi, notifContextHolder] = notification.useNotification();
-  const [availableVoices, setAvailableVoices] = useState<SpeechSynthesisVoice[]>([]);
 
   // State cho modal them tu moi
   const [addOpen, setAddOpen] = useState(false);
   const [addLoading, setAddLoading] = useState(false);
   const [addForm] = Form.useForm();
-
-  // Load available voices for text-to-speech
-  useEffect(() => {
-    if ('speechSynthesis' in window) {
-      const loadVoices = () => {
-        const voices = window.speechSynthesis.getVoices();
-        console.log('Available voices:', voices);
-        console.log('Number of voices:', voices.length);
-        setAvailableVoices(voices);
-
-        // Select default voice if none selected
-        if (!selectedVoice && voices.length > 0) {
-          const defaultVoice = voices.find(voice => voice.lang.startsWith('en'));
-          if (defaultVoice) {
-            console.log('Setting default voice:', defaultVoice.name);
-            onVoiceChange(defaultVoice.name);
-          } else {
-            // Fallback to first available voice
-            console.log('Setting fallback voice:', voices[0].name);
-            onVoiceChange(voices[0].name);
-          }
-        }
-      };
-
-      // Try to load voices immediately
-      loadVoices();
-
-      // Some browsers load voices asynchronously
-      window.speechSynthesis.onvoiceschanged = loadVoices;
-
-      // Retry after a delay if voices are not loaded (some browsers need time)
-      const timeoutId = setTimeout(() => {
-        const voices = window.speechSynthesis.getVoices();
-        if (voices.length === 0) {
-          console.log('Retrying voice load...');
-          loadVoices();
-        }
-      }, 1000);
-
-      return () => {
-        window.speechSynthesis.onvoiceschanged = null;
-        clearTimeout(timeoutId);
-      };
-    } else {
-      console.error('Speech synthesis not supported in this browser');
-    }
-  }, [selectedVoice, onVoiceChange]);
 
   // Lay goi y tu tieng Anh (debounce 300ms)
   const debounceFetchEn = useCallback(
@@ -313,21 +261,6 @@ const HomeSearch = React.memo(({
           >
             Tổng hợp Câu
           </Button>
-        </Col>
-
-        {/* Chon giọng đọc */}
-        <Col span={4} xs={12} sm={4} md={4} lg={4}>
-          <Select
-            value={selectedVoice}
-            onChange={onVoiceChange}
-            size="large"
-            style={{ width: '100%' }}
-            placeholder="Chon giọng đọc"
-            options={availableVoices.map(voice => ({
-              value: voice.name,
-              label: `${voice.name} (${voice.lang})`
-            }))}
-          />
         </Col>
       </Row>
 

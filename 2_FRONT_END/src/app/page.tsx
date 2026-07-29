@@ -33,7 +33,6 @@ const HomePage = () => {
   const [selectedSpeed, setSelectedSpeed] = useState(1);
   const [highlightedEnKeywords, setHighlightedEnKeywords] = useState<string[]>([]);
   const [highlightedViKeywords, setHighlightedViKeywords] = useState<string[]>([]);
-  const [selectedVoice, setSelectedVoice] = useState('');
 
   // Lay danh sach noi dung theo tu khoa tim kiem va phan trang
   const fetchContents = async () => {
@@ -124,8 +123,6 @@ const HomePage = () => {
             <HomeSearch
               onSearch={handleSearch}
               onSelectChange={handleSelectChange}
-              selectedVoice={selectedVoice}
-              onVoiceChange={setSelectedVoice}
             />
           </div>
           <HomeContent
@@ -135,8 +132,6 @@ const HomePage = () => {
             searchValueVi={searchValueVi}
             highlightedEnKeywords={highlightedEnKeywords}
             highlightedViKeywords={highlightedViKeywords}
-            selectedVoice={selectedVoice}
-            onVoiceChange={setSelectedVoice}
           />
           <Pagination
             currentPage={currentPage}
