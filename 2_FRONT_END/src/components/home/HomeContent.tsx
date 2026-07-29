@@ -62,12 +62,12 @@ const TOOLTIP_STYLE: React.CSSProperties = {
   padding: '10px 14px',
   borderRadius: 10,
   boxShadow: '0 4px 16px rgba(0,0,0,0.22)',
-  zIndex: 9999,
+  zIndex: 10000,
   maxWidth: 360,
   wordWrap: 'break-word',
   fontSize: 14,
   lineHeight: '1.85',
-  pointerEvents: 'none',
+  pointerEvents: 'auto',
   borderLeft: '4px solid #108ee9',
 };
 
@@ -381,7 +381,17 @@ const HomeContent = React.memo(({
 
   // Dong tooltip khi nguoi dung click ra ngoai vung boi
   useEffect(() => {
-    const handleClickOutside = () => {
+    const handleClickOutside = (event: MouseEvent) => {
+      // Check if click is inside the tooltip
+      const target = event.target as HTMLElement;
+      const tooltip = document.querySelector('[style*="position: fixed"][style*="z-index: 10000"]');
+      const dropdown = document.querySelector('.ant-select-dropdown');
+
+      // Don't close if clicking inside tooltip or dropdown
+      if (tooltip?.contains(target) || dropdown?.contains(target)) {
+        return;
+      }
+
       if (window.getSelection()?.toString().trim() === '') {
         setMeaningEnKeywords([]);
         setMeaningViKeywords([]);
@@ -626,6 +636,8 @@ const HomeContent = React.memo(({
                       style={{ width: '100%' }}
                       placeholder="Chon giọng đọc"
                       size="small"
+                      getPopupContainer={(triggerNode) => triggerNode.parentElement as HTMLElement}
+                      dropdownStyle={{ zIndex: 10001 }}
                       options={availableVoices.map(voice => ({
                         value: voice.name,
                         label: `${voice.name} (${voice.lang})`
