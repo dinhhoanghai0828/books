@@ -51,6 +51,8 @@ interface HomeContentProps {
   searchValueVi: string;
   highlightedEnKeywords: string[];
   highlightedViKeywords: string[];
+  selectedVoice: string;
+  onVoiceChange: (voice: string) => void;
 }
 
 // Style cho tooltip tra nghia tu — dung fixed thay vi absolute
@@ -110,6 +112,8 @@ const HomeContent = React.memo(({
   searchValueVi,
   highlightedEnKeywords,
   highlightedViKeywords,
+  selectedVoice,
+  onVoiceChange,
 }: HomeContentProps) => {
   // Du lieu hien thi (dong bo voi contents tu props)
   const [filteredData, setFilteredData] = useState<ContentType[]>(contents);
@@ -130,7 +134,6 @@ const HomeContent = React.memo(({
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
   const [selectedText, setSelectedText] = useState('');
   const [availableVoices, setAvailableVoices] = useState<SpeechSynthesisVoice[]>([]);
-  const [selectedVoice, setSelectedVoice] = useState<string>('');
   const meaningEnRef = useRef<string[]>([]);
   const meaningViRef = useRef<string[]>([]);
   meaningEnRef.current = meaningEnKeywords;
@@ -181,13 +184,15 @@ const HomeContent = React.memo(({
         const voices = window.speechSynthesis.getVoices();
         setAvailableVoices(voices);
 
-        // Select default voice based on language
-        const isEnglish = /^[a-zA-Z ]+$/.test(selectedText);
-        const defaultVoice = voices.find(voice =>
-          isEnglish ? voice.lang.startsWith('en') : voice.lang.startsWith('vi')
-        );
-        if (defaultVoice && !selectedVoice) {
-          setSelectedVoice(defaultVoice.name);
+        // Select default voice based on language if no voice is selected
+        if (!selectedVoice) {
+          const isEnglish = /^[a-zA-Z ]+$/.test(selectedText);
+          const defaultVoice = voices.find(voice =>
+            isEnglish ? voice.lang.startsWith('en') : voice.lang.startsWith('vi')
+          );
+          if (defaultVoice) {
+            onVoiceChange(defaultVoice.name);
+          }
         }
       };
 
@@ -201,7 +206,7 @@ const HomeContent = React.memo(({
         window.speechSynthesis.onvoiceschanged = null;
       };
     }
-  }, [selectedText, selectedVoice]);
+  }, [selectedText, selectedVoice, onVoiceChange]);
 
   // ============================================================
   // AUDIO HELPERS
@@ -629,21 +634,6 @@ const HomeContent = React.memo(({
               <div style={{ ...TOOLTIP_STYLE, left: tooltipPosition.x, top: tooltipPosition.y }}>
                 <div style={TOOLTIP_BODY_STYLE}>
                 <div style={{ marginBottom: 12, paddingBottom: 8, borderBottom: '1px solid rgba(255,255,255,0.2)' }}>
-                  <div style={{ marginBottom: 8 }}>
-                    <Select
-                      value={selectedVoice}
-                      onChange={setSelectedVoice}
-                      style={{ width: '100%' }}
-                      placeholder="Chon giọng đọc"
-                      size="small"
-                      getPopupContainer={(triggerNode) => triggerNode.parentElement as HTMLElement}
-                      dropdownStyle={{ zIndex: 10001 }}
-                      options={availableVoices.map(voice => ({
-                        value: voice.name,
-                        label: `${voice.name} (${voice.lang})`
-                      }))}
-                    />
-                  </div>
                   <Button
                     type="link"
                     icon={<SoundOutlined />}
