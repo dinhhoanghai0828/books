@@ -362,14 +362,40 @@ const HomeContent = React.memo(({
 
   // Text-to-speech function
   const speakText = (text: string) => {
+    if (!text || text.trim().length === 0) {
+      message.error('Vui long chon text de doc.');
+      return;
+    }
+
     if ('speechSynthesis' in window) {
       // Cancel any ongoing speech
       window.speechSynthesis.cancel();
 
-      const utterance = new SpeechSynthesisUtterance(text);
-      utterance.rate = playbackSpeed;
-      utterance.lang = /^[a-zA-Z ]+$/.test(text) ? 'en-US' : 'vi-VN';
-      window.speechSynthesis.speak(utterance);
+      // Clean text - remove extra whitespace and special characters that might cause issues
+      const cleanedText = text
+        .replace(/\s+/g, ' ')  // Replace multiple spaces with single space
+        .replace(/[\u200B-\u200D\uFEFF]/g, '')  // Remove zero-width characters
+        .trim();
+
+      try {
+        const utterance = new SpeechSynthesisUtterance(cleanedText);
+        utterance.rate = playbackSpeed;
+        utterance.lang = /^[a-zA-Z ]+$/.test(cleanedText) ? 'en-US' : 'vi-VN';
+
+        utterance.onerror = (event) => {
+          console.error('TTS Error:', event.error, event);
+          message.error(`Loi khi doc text: ${event.error}`);
+        };
+
+        utterance.onend = () => {
+          console.log('TTS finished successfully');
+        };
+
+        window.speechSynthesis.speak(utterance);
+      } catch (error) {
+        console.error('TTS Exception:', error);
+        message.error('Loi khi khoi tao text-to-speech.');
+      }
     } else {
       message.error('Trinh duyet khong ho tro text-to-speech.');
     }
