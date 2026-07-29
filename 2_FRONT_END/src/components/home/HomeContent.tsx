@@ -371,6 +371,9 @@ const HomeContent = React.memo(({
           }
         } catch (error) {
           console.error('Loi khi tra nghia tu:', error);
+          // Still show tooltip even if API fails
+          setMeaningEnKeywords([]);
+          setMeaningViKeywords([]);
         }
       }, 300),
     []
@@ -629,7 +632,7 @@ const HomeContent = React.memo(({
 
           {/* Tooltip tra nghia tu — render qua portal len document.body
               tranh bi cat boi overflow cua parent, dung fixed positioning */}
-          {meaningEnKeywords.length > 0 && meaningViKeywords.length > 0 &&
+          {selectedText &&
             createPortal(
               <div style={{ ...TOOLTIP_STYLE, left: tooltipPosition.x, top: tooltipPosition.y }}>
                 <div style={TOOLTIP_BODY_STYLE}>
@@ -643,31 +646,35 @@ const HomeContent = React.memo(({
                     Đọc từ đã chọn
                   </Button>
                 </div>
-                {/^[a-zA-Z ]+$/.test(window.getSelection()?.toString().trim() || '') ? (
+                {meaningEnKeywords.length > 0 && meaningViKeywords.length > 0 && (
                   <>
-                    <div style={{ fontSize: 11, opacity: 0.65, marginBottom: 4, letterSpacing: 1 }}>
-                      EN → VI
-                    </div>
-                    {meaningEnKeywords.map((word, i) => (
-                      <div key={i}>
-                        <strong style={{ color: '#7dd3fc' }}>{word}</strong>
-                        <span style={{ opacity: 0.8 }}> : </span>
-                        {meaningViKeywords[i]}
-                      </div>
-                    ))}
-                  </>
-                ) : (
-                  <>
-                    <div style={{ fontSize: 11, opacity: 0.65, marginBottom: 4, letterSpacing: 1 }}>
-                      VI → EN
-                    </div>
-                    {meaningViKeywords.map((word, i) => (
-                      <div key={i}>
-                        <strong style={{ color: '#7dd3fc' }}>{word}</strong>
-                        <span style={{ opacity: 0.8 }}> : </span>
-                        {meaningEnKeywords[i]}
-                      </div>
-                    ))}
+                    {/^[a-zA-Z ]+$/.test(window.getSelection()?.toString().trim() || '') ? (
+                      <>
+                        <div style={{ fontSize: 11, opacity: 0.65, marginBottom: 4, letterSpacing: 1 }}>
+                          EN → VI
+                        </div>
+                        {meaningEnKeywords.map((word, i) => (
+                          <div key={i}>
+                            <strong style={{ color: '#7dd3fc' }}>{word}</strong>
+                            <span style={{ opacity: 0.8 }}> : </span>
+                            {meaningViKeywords[i]}
+                          </div>
+                        ))}
+                      </>
+                    ) : (
+                      <>
+                        <div style={{ fontSize: 11, opacity: 0.65, marginBottom: 4, letterSpacing: 1 }}>
+                          VI → EN
+                        </div>
+                        {meaningViKeywords.map((word, i) => (
+                          <div key={i}>
+                            <strong style={{ color: '#7dd3fc' }}>{word}</strong>
+                            <span style={{ opacity: 0.8 }}> : </span>
+                            {meaningEnKeywords[i]}
+                          </div>
+                        ))}
+                      </>
+                    )}
                   </>
                 )}
                 </div>

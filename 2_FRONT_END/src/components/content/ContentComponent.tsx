@@ -1,7 +1,7 @@
 import { ContentType } from '@/interfaces/content';
 import { Volume } from '@/interfaces/volume';
 import { getMeaningWords, insertWord, updateContent } from '@/utils/apiService';
-import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons';
+import { MinusCircleOutlined, PlusOutlined, SoundOutlined } from '@ant-design/icons';
 import { Button, Form, Input, Modal, notification, Space } from 'antd';
 import debounce from 'lodash.debounce';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
@@ -38,12 +38,12 @@ const TOOLTIP_STYLE: React.CSSProperties = {
   padding: '10px 14px',
   borderRadius: 10,
   boxShadow: '0 4px 16px rgba(0,0,0,0.22)',
-  zIndex: 9999,
+  zIndex: 10000,
   maxWidth: 360,
   wordWrap: 'break-word',
   fontSize: 14,
   lineHeight: '1.85',
-  pointerEvents: 'none',
+  pointerEvents: 'auto',
   borderLeft: '4px solid #108ee9',
 };
 
@@ -139,6 +139,9 @@ const ContentComponent = ({
   const [meaningEnKeywords, setMeaningEnKeywords] = useState<string[]>([]);
   const [meaningViKeywords, setMeaningViKeywords] = useState<string[]>([]);
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
+  const [selectedText, setSelectedText] = useState('');
+  const [availableVoices, setAvailableVoices] = useState<SpeechSynthesisVoice[]>([]);
+  const [selectedVoice, setSelectedVoice] = useState('');
   const meaningEnRef = useRef<string[]>([]);
   const meaningViRef = useRef<string[]>([]);
   meaningEnRef.current = meaningEnKeywords;
@@ -215,6 +218,41 @@ const ContentComponent = ({
     setPlayStates(play);
     setLoopStates(loop);
   }, [contents]);
+
+  // Load available voices for text-to-speech
+  useEffect(() => {
+    if ('speechSynthesis' in window) {
+      const loadVoices = () => {
+        const voices = window.speechSynthesis.getVoices();
+        setAvailableVoices(voices);
+
+        // Select default voice if none selected
+        if (!selectedVoice && voices.length > 0) {
+          const defaultVoice = voices.find(voice => voice.lang.startsWith('en'));
+          if (defaultVoice) {
+            setSelectedVoice(defaultVoice.name);
+          } else {
+            setSelectedVoice(voices[0].name);
+          }
+        }
+      };
+
+      loadVoices();
+      window.speechSynthesis.onvoiceschanged = loadVoices;
+
+      const timeoutId = setTimeout(() => {
+        const voices = window.speechSynthesis.getVoices();
+        if (voices.length === 0) {
+          loadVoices();
+        }
+      }, 1000);
+
+      return () => {
+        window.speechSynthesis.onvoiceschanged = null;
+        clearTimeout(timeoutId);
+      };
+    }
+  }, [selectedVoice]);
 
   // Đồng bộ trạng thái từ Audio Player bên dưới
   const onAudioPlayStateChange = useCallback((isPlayingAudio: boolean, currentActiveId: string | null) => {
@@ -333,8 +371,11 @@ const ContentComponent = ({
           if (!searchValue) {
             setMeaningEnKeywords([]);
             setMeaningViKeywords([]);
+            setSelectedText('');
             return;
           }
+
+          setSelectedText(searchValue);
 
           const alreadyShown =
             searchValue === meaningEnRef.current.join(' ') ||
@@ -381,51 +422,103 @@ const ContentComponent = ({
       if (window.getSelection()?.toString().trim() === '') {
         setMeaningEnKeywords([]);
         setMeaningViKeywords([]);
+        setSelectedText('');
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  // Text-to-speech function
+  const speakText = (text: string) => {
+    if (!text || text.trim().length === 0) {
+      return;
+    }
+
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+
+      const cleanedText = text
+        .replace(/\s+/g, ' ')
+        .replace(/[\u200B-\u200D\uFEFF]/g, '')
+        .trim();
+
+      try {
+        const utterance = new SpeechSynthesisUtterance(cleanedText);
+        utterance.rate = 1.0;
+        utterance.lang = /^[a-zA-Z ]+$/.test(cleanedText) ? 'en-US' : 'vi-VN';
+
+        if (selectedVoice) {
+          const voice = availableVoices.find(v => v.name === selectedVoice);
+          if (voice) {
+            utterance.voice = voice;
+          }
+        }
+
+        utterance.onerror = (event) => {
+          console.error('TTS Error:', event.error);
+        };
+
+        window.speechSynthesis.speak(utterance);
+      } catch (error) {
+        console.error('TTS Exception:', error);
+      }
+    }
+  };
+
   const renderTooltip = useCallback((): React.ReactNode => {
-    if (!meaningEnKeywords.length || !meaningViKeywords.length) return null;
+    if (!selectedText) return null;
     const sel = window.getSelection()?.toString().trim() || '';
     const isEng = /^[a-zA-Z ]+$/.test(sel);
     return createPortal(
       <div style={{ ...TOOLTIP_STYLE, left: tooltipPosition.x, top: tooltipPosition.y }}>
         <div style={TOOLTIP_BODY_STYLE}>
-          {isEng ? (
+          <div style={{ marginBottom: 12, paddingBottom: 8, borderBottom: '1px solid rgba(255,255,255,0.2)' }}>
+            <Button
+              type="link"
+              icon={<SoundOutlined />}
+              onClick={() => speakText(selectedText)}
+              style={{ color: '#7dd3fc', padding: 0, height: 'auto' }}
+            >
+              Đọc từ đã chọn
+            </Button>
+          </div>
+          {meaningEnKeywords.length > 0 && meaningViKeywords.length > 0 && (
             <>
-              <div style={{ fontSize: 11, opacity: 0.65, marginBottom: 4, letterSpacing: 1 }}>
-                EN → VI
-              </div>
-              {meaningEnKeywords.map((word, i) => (
-                <div key={i}>
-                  <strong style={{ color: '#7dd3fc' }}>{word}</strong>
-                  <span style={{ opacity: 0.8 }}> : </span>
-                  {meaningViKeywords[i]}
-                </div>
-              ))}
-            </>
-          ) : (
-            <>
-              <div style={{ fontSize: 11, opacity: 0.65, marginBottom: 4, letterSpacing: 1 }}>
-                VI → EN
-              </div>
-              {meaningViKeywords.map((word, i) => (
-                <div key={i}>
-                  <strong style={{ color: '#7dd3fc' }}>{word}</strong>
-                  <span style={{ opacity: 0.8 }}> : </span>
-                  {meaningEnKeywords[i]}
-                </div>
-              ))}
+              {isEng ? (
+                <>
+                  <div style={{ fontSize: 11, opacity: 0.65, marginBottom: 4, letterSpacing: 1 }}>
+                    EN → VI
+                  </div>
+                  {meaningEnKeywords.map((word, i) => (
+                    <div key={i}>
+                      <strong style={{ color: '#7dd3fc' }}>{word}</strong>
+                      <span style={{ opacity: 0.8 }}> : </span>
+                      {meaningViKeywords[i]}
+                    </div>
+                  ))}
+                </>
+              ) : (
+                <>
+                  <div style={{ fontSize: 11, opacity: 0.65, marginBottom: 4, letterSpacing: 1 }}>
+                    VI → EN
+                  </div>
+                  {meaningViKeywords.map((word, i) => (
+                    <div key={i}>
+                      <strong style={{ color: '#7dd3fc' }}>{word}</strong>
+                      <span style={{ opacity: 0.8 }}> : </span>
+                      {meaningEnKeywords[i]}
+                    </div>
+                  ))}
+                </>
+              )}
             </>
           )}
         </div>
       </div>,
       document.body
     );
-  }, [meaningEnKeywords, meaningViKeywords, tooltipPosition]);
+  }, [selectedText, meaningEnKeywords, meaningViKeywords, tooltipPosition]);
 
   // ============================================================
   // EDIT CONTENT MODAL HANDLERS
@@ -592,6 +685,8 @@ const ContentComponent = ({
       loopCommand={loopCommand}
       pauseCommand={pauseCommand}
       onAudioPlayStateChange={onAudioPlayStateChange}
+      selectedVoice={selectedVoice}
+      onVoiceChange={setSelectedVoice}
     />
   );
 

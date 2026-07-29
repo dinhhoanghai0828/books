@@ -40,6 +40,8 @@ export interface AudioLayoutProps {
   onEdit: (item: ContentType) => void;
   onInsertWord: () => void;
   onAudioPlayStateChange?: (isPlayingAudio: boolean, currentActiveId: string | null) => void;
+  selectedVoice: string;
+  onVoiceChange: (voice: string) => void;
 }
 
 const PLAYBACK_SPEED_OPTIONS = [
@@ -87,6 +89,8 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
   onEdit,
   onInsertWord,
   onAudioPlayStateChange,
+  selectedVoice,
+  onVoiceChange,
 }) => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [audioSrc, setAudioSrc] = useState('');
