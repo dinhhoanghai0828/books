@@ -22,6 +22,7 @@ import {
   Modal,
   notification,
   Row,
+  Select,
   Space,
   Typography,
 } from 'antd';
@@ -128,6 +129,8 @@ const HomeContent = React.memo(({
   const [meaningViKeywords, setMeaningViKeywords] = useState<string[]>([]);
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
   const [selectedText, setSelectedText] = useState('');
+  const [availableVoices, setAvailableVoices] = useState<SpeechSynthesisVoice[]>([]);
+  const [selectedVoice, setSelectedVoice] = useState<string>('');
   const meaningEnRef = useRef<string[]>([]);
   const meaningViRef = useRef<string[]>([]);
   meaningEnRef.current = meaningEnKeywords;
@@ -170,6 +173,35 @@ const HomeContent = React.memo(({
       currentAudioRef.current.playbackRate = playbackSpeed;
     }
   }, [playbackSpeed]);
+
+  // Load available voices for text-to-speech
+  useEffect(() => {
+    if ('speechSynthesis' in window) {
+      const loadVoices = () => {
+        const voices = window.speechSynthesis.getVoices();
+        setAvailableVoices(voices);
+
+        // Select default voice based on language
+        const isEnglish = /^[a-zA-Z ]+$/.test(selectedText);
+        const defaultVoice = voices.find(voice =>
+          isEnglish ? voice.lang.startsWith('en') : voice.lang.startsWith('vi')
+        );
+        if (defaultVoice && !selectedVoice) {
+          setSelectedVoice(defaultVoice.name);
+        }
+      };
+
+      // Load voices immediately
+      loadVoices();
+
+      // Some browsers load voices asynchronously
+      window.speechSynthesis.onvoiceschanged = loadVoices;
+
+      return () => {
+        window.speechSynthesis.onvoiceschanged = null;
+      };
+    }
+  }, [selectedText, selectedVoice]);
 
   // ============================================================
   // AUDIO HELPERS
@@ -382,6 +414,14 @@ const HomeContent = React.memo(({
         utterance.rate = playbackSpeed;
         utterance.lang = /^[a-zA-Z ]+$/.test(cleanedText) ? 'en-US' : 'vi-VN';
 
+        // Set selected voice if available
+        if (selectedVoice) {
+          const voice = availableVoices.find(v => v.name === selectedVoice);
+          if (voice) {
+            utterance.voice = voice;
+          }
+        }
+
         utterance.onerror = (event) => {
           console.error('TTS Error:', event.error, event);
           message.error(`Loi khi doc text: ${event.error}`);
@@ -579,6 +619,19 @@ const HomeContent = React.memo(({
               <div style={{ ...TOOLTIP_STYLE, left: tooltipPosition.x, top: tooltipPosition.y }}>
                 <div style={TOOLTIP_BODY_STYLE}>
                 <div style={{ marginBottom: 12, paddingBottom: 8, borderBottom: '1px solid rgba(255,255,255,0.2)' }}>
+                  <div style={{ marginBottom: 8 }}>
+                    <Select
+                      value={selectedVoice}
+                      onChange={setSelectedVoice}
+                      style={{ width: '100%' }}
+                      placeholder="Chon giọng đọc"
+                      size="small"
+                      options={availableVoices.map(voice => ({
+                        value: voice.name,
+                        label: `${voice.name} (${voice.lang})`
+                      }))}
+                    />
+                  </div>
                   <Button
                     type="link"
                     icon={<SoundOutlined />}
