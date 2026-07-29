@@ -73,7 +73,7 @@
   }
   .volumeClass {
     padding-left: 35px;
-    padding-top: 145px;
+    padding-top: 180px;
     padding-right: 35px;
     padding-bottom: 70px;
     background-color: #ffffff;
@@ -86,6 +86,13 @@
     object-fit: contain; /* Đảm bảo hiển thị đầy đủ hình ảnh */
     border-radius: '8px';
   }
+  .volumeClass {
+    padding-left: 35px;
+    padding-top: 160px;
+    padding-right: 35px;
+    padding-bottom: 70px;
+    background-color: #ffffff;
+  }
 }
 
 @media (max-width: 480px) {
@@ -95,7 +102,7 @@
   }
   .volumeClass {
     padding-left: 35px;
-    padding-top: 160px;
+    padding-top: 220px;
     padding-right: 35px;
     padding-bottom: 70px;
     background-color: #ffffff;
