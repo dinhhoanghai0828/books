@@ -673,6 +673,8 @@ const ContentComponent = ({
         style: { backgroundColor: '#f6ffed', border: '1px solid #b7eb8f' }
       });
       handleCancelInsert();
+      // Trigger content update to refresh highlights
+      onContentUpdate?.();
     } catch (e: any) {
       if (e?.errorFields) return;
       notifApi.error({
