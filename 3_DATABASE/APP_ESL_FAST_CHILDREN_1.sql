@@ -501,7 +501,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Mr. Brown takes the student\'s phone away','Thầy Brown thu điện thoại của cậu học sinh','00:00:22.700','00:00:26.050','esl-fast-beginner-1-38'),
 	('He is in trouble','Cậu ấy gặp rắc rối rồi','00:00:26.500','00:00:28.190','esl-fast-beginner-1-38'),
 
-	/* (UUID(),'esl-fast-beginner-1-39','No One Likes the Flu','Không ai thích bị cúm','BEGINNER_01_ESL_FAST_CHILDREN_039.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',39) */
+	/* (UUID(),'esl-fast-beginner-1-39','No One Likes the Flu','Không ai thích bị cúm','BEGINNER_01_ESL_FAST_CHILDREN_039.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1','YES',39) */
 	('He is sick','Cậu ấy bị ốm','00:00:00.580','00:00:02.400','esl-fast-beginner-1-39'),
 	('He goes to the doctor','Cậu ấy đến gặp bác sĩ','00:00:02.700','00:00:04.520','esl-fast-beginner-1-39'),
 	('The doctor gives him some medicine','Bác sĩ đưa cho cậu ấy một ít thuốc','00:00:05.120','00:00:07.840','esl-fast-beginner-1-39'),
@@ -510,21 +510,21 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He lies in bed all day','Cậu ấy nằm trên giường cả ngày','00:00:15.920','00:00:18.980','esl-fast-beginner-1-39'),
 	('He rests','Cậu ấy nghỉ ngơi','00:00:19.720','00:00:21.200','esl-fast-beginner-1-39'),
 	('He drinks chicken soup and eats vegetables','Cậu ấy uống súp gà và ăn rau','00:00:21.600','00:00:25.460','esl-fast-beginner-1-39'),
-	('He is still sick','Cậu ấy vẫn bị ốm','00:00:26.140','00:00:28.160','esl-fast-beginner-1-39'),
-	('No one likes the flu','Chẳng ai thích bị cúm cả','00:00:27.860','00:00:30.580','esl-fast-beginner-1-39'),
+	('He is still sick','Cậu ấy vẫn bị ốm','00:00:26.140','00:00:28.000','esl-fast-beginner-1-39'),
+	('No one likes the flu','Chẳng ai thích bị cúm cả','00:00:28.300','00:00:30.580','esl-fast-beginner-1-39'),
 
-	/* (UUID(),'esl-fast-beginner-1-40','The Circus','Rạp xiếc','BEGINNER_01_ESL_FAST_CHILDREN_040.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',40) */
+	/* (UUID(),'esl-fast-beginner-1-40','The Circus','Rạp xiếc','BEGINNER_01_ESL_FAST_CHILDREN_040.mp3',NULL,'00:00:00.000','00:00:38.000','esl-fast-children-1','YES',40) */
 	('She goes to the circus','Cô bé đi xem xiếc','00:00:00.650','00:00:02.870','esl-fast-beginner-1-40'),
-	('She sees a clown','Cô bé nhìn thấy một chú hề','00:00:03.670','00:00:05.310','esl-fast-beginner-1-40'),
-	('He is very colorful','Chú hề mặc đồ rất sặc sỡ','00:00:05.970','00:00:07.690','esl-fast-beginner-1-40'),
-	('She sees magicians','Cô bé nhìn thấy các ảo thuật gia','00:00:08.790','00:00:10.610','esl-fast-beginner-1-40'),
-	('They take rabbits out of hats','Họ lấy những chú thỏ từ trong chiếc mũ ra','00:00:11.030','00:00:13.670','esl-fast-beginner-1-40'),
-	('She sees people walking on rope up in the air','Cô bé thấy những người đi trên dây ở trên cao','00:00:14.490','00:00:18.910','esl-fast-beginner-1-40'),
-	('She sees people juggling balls','Cô bé thấy mọi người tung hứng những quả bóng','00:00:19.730','00:00:22.590','esl-fast-beginner-1-40'),
-	('She sees a lot of animals, too','Cô bé còn nhìn thấy rất nhiều con vật','00:00:23.310','00:00:26.030','esl-fast-beginner-1-40'),
-	('There are lions that jump through hoops of fire','Có những con sư tử nhảy qua những vòng lửa','00:00:26.810','00:00:30.270','esl-fast-beginner-1-40'),
-	('There are elephants that dance','Có những chú voi biết nhảy múa','00:00:30.650','00:00:33.210','esl-fast-beginner-1-40'),
-	('She never wants to leave the circus','Cô bé chẳng muốn rời rạp xiếc chút nào','00:00:33.870','00:00:36.490','esl-fast-beginner-1-40');
+	('She sees a clown','Cô bé nhìn thấy một chú hề','00:00:03.300','00:00:05.310','esl-fast-beginner-1-40'),
+	('He is very colorful','Chú hề trông rất sặc sỡ','00:00:05.600','00:00:07.690','esl-fast-beginner-1-40'),
+	('She sees magicians','Cô bé nhìn thấy các ảo thuật gia','00:00:08.300','00:00:10.610','esl-fast-beginner-1-40'),
+	('They take rabbits out of hats','Họ lấy những chú thỏ từ trong chiếc mũ ra','00:00:10.900','00:00:13.670','esl-fast-beginner-1-40'),
+	('She sees people walking on rope up in the air','Cô bé thấy những người đi trên dây ở trên không trung','00:00:14.100','00:00:18.910','esl-fast-beginner-1-40'),
+	('She sees people juggling balls','Cô bé thấy mọi người tung hứng những quả bóng','00:00:19.300','00:00:22.590','esl-fast-beginner-1-40'),
+	('She sees a lot of animals, too','Cô bé còn nhìn thấy rất nhiều con vật','00:00:23.000','00:00:26.030','esl-fast-beginner-1-40'),
+	('There are lions that jump through hoops of fire','Có những con sư tử nhảy qua những vòng lửa','00:00:26.500','00:00:30.270','esl-fast-beginner-1-40'),
+	('There are elephants that dance','Có những chú voi biết nhảy múa','00:00:30.500','00:00:33.210','esl-fast-beginner-1-40'),
+	('She never wants to leave the circus','Cô bé chẳng muốn rời rạp xiếc chút nào','00:00:33.600','00:00:36.490','esl-fast-beginner-1-40');
 
 /*=====================================================================================================================================================================================================================================================*/
 

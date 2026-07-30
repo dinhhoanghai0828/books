@@ -380,7 +380,7 @@ const HomeContent = React.memo(({
           setMeaningViKeywords([]);
         }
       }, 300),
-    [autoRead]
+    [autoRead, selectedVoice]
   );
 
   useEffect(() => {

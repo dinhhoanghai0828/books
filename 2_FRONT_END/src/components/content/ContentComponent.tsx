@@ -412,7 +412,7 @@ const ContentComponent = ({
           console.error(e);
         }
       }, 300),
-    [autoRead]
+    [autoRead, selectedVoice]
   );
 
   useEffect(() => {

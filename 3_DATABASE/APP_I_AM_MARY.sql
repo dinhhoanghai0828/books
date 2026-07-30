@@ -2907,7 +2907,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('If you keep immersed in negative things, it will make your life difficult and stuck','Nếu bạn cứ chìm đắm trong những điều tiêu cực, nó sẽ làm cho cuộc sống của bạn trở nên khó khăn và bế tắc','00:05:35.210','00:05:39.730','I-am-Mary-38'),
 	('It is often said, your attitude determines your success','Người ta thường nói, thái độ của bạn quyết định thành công của bạn','00:05:40.170','00:05:43.390','I-am-Mary-38'),
 	('Change your mindset to be more positive','Hãy thay đổi tư duy của bạn để trở nên tích cực hơn','00:05:44.190','00:05:46.330','I-am-Mary-38'),
-	('You will feel life is meaningful and happy, and from your energy, the lives of people around will become more colorful','Bạn sẽ cảm thấy cuộc sống có ý nghĩa và hạnh phúc, và từ năng lượng của bạn, cuộc sống của những người xung quanh sẽ trở nên màu sắc hơn','00:05:46.810','00:05:52.810','I-am-Mary-38'),
+	('You will feel life is meaningful and happy, and from your energy, the lives of people around will become more colorful','Bạn sẽ cảm thấy cuộc sống có ý nghĩa và hạnh phúc, và từ năng lượng của bạn, cuộc sống của những người xung quanh sẽ trở nên nhiều màu sắc hơn','00:05:46.810','00:05:52.810','I-am-Mary-38'),
 
 	/* (UUID(),'I-am-Mary-39','You deserve to love yourself','Bạn có đang yêu bản thân đúng cách','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_039.mp3',NULL,'00:00:00.000','00:05:38.450','I-am-Mary','NO',39) */
 	('When you think of the people you love, who comes to mind first?','Khi bạn nghĩ về những người bạn yêu thương, ai xuất hiện trong tâm trí bạn đầu tiên?','00:00:04.810','00:00:08.530','I-am-Mary-39'),
