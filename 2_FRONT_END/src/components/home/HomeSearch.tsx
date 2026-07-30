@@ -33,11 +33,13 @@ const SPEED_OPTIONS = [
 interface HomeSearchProps {
   onSearch: (searchEn: string, searchVi: string) => void;
   onSelectChange: (value: string) => void;
+  onWordAdded?: () => void;
 }
 
 const HomeSearch = React.memo(({
   onSearch,
   onSelectChange,
+  onWordAdded,
 }: HomeSearchProps) => {
   const { message } = App.useApp();
   const [searchValueEn, setSearchValueEn] = useState('');
@@ -163,6 +165,8 @@ const HomeSearch = React.memo(({
         style: { backgroundColor: '#f6ffed', border: '1px solid #b7eb8f' },
       });
       handleCancelAdd();
+      // Trigger search to refresh content with new word highlighted
+      onWordAdded?.();
     } catch (error: any) {
       if (error?.errorFields) return;
       notifApi.error({

@@ -773,9 +773,10 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 
 	/* (UUID(),'esl-fast-beginner-1-60','Playing a Doctor','Đóng vai bác sĩ','BEGINNER_01_ESL_FAST_CHILDREN_060.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',60) */
 	('She likes to pretend she is a doctor for fun','Cô bé thích giả làm bác sĩ để giải trí','00:00:00.460','00:00:05.040','esl-fast-beginner-1-60'),
-	('She wears a white coat','Cô bé mặc một chiếc áo blouse trắng','00:00:05.400','00:00:07.720','esl-fast-beginner-1-60'),
-	('She pretends her room is a medical office','Cô bé biến phòng mình thành một phòng khám','00:00:08.300','00:00:11.880','esl-fast-beginner-1-60'),
-	('Her dad pretends he is a patient','Bố cô bé đóng vai một bệnh nhân','00:00:12.400','00:00:15.519','esl-fast-beginner-1-60'),
+	('She wears a white coat','Cô bé mặc một chiếc áo khoác trắng','00:00:05.400','00:00:07.720','esl-fast-beginner-1-60'),
+	('She pretends her room is a medical office','Cô bé giả vờ phòng mình thành một phòng khám','00:00:08.300','00:00:11.880','esl-fast-beginner-1-60'),
+	('Her dad pretends he is a patient','Bố cô bé giả làm một bệnh nhân','00:00:12.400','00:00:15.519','esl-fast-beginner-1-60'),
 	('Her dad goes into her room','Bố cô bé bước vào phòng','00:00:16.000','00:00:19.000','esl-fast-beginner-1-60'),
-	('He tells her how he is feeling','Ông nói cho cô bé biết mình đang cảm thấy thế nào','00:00:19.500','00:00:22.560','esl-fast-beginner-1-60'),
-	('He says that he keeps coughing','Ông nói mình cứ ho mãi','00:00:23.000','00:00:25.920','esl-fast-beginner-1-60');
+	('He tells her how he is feeling','Bố nói với cô bé rằng bố đang cảm thấy thế nào','00:00:19.500','00:00:22.560','esl-fast-beginner-1-60'),
+	('He says that he keeps coughing','Ông nói mình cứ ho mãi','00:00:23.000','00:00:25.920','esl-fast-beginner-1-60'),
+	('She tells him to drink a lot of water','Cô bé bảo ông uống nhiều nước','00:00:26.300','00:00:29.500','esl-fast-beginner-1-60');

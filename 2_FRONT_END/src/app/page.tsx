@@ -48,6 +48,12 @@ const HomePage = () => {
     }
   };
 
+  // Refresh content after adding new word
+  const handleWordAdded = () => {
+    fetchContents();
+    fetchHighlight();
+  };
+
   // Lay danh sach tu can highlight tuong ung voi ket qua tim kiem
   const fetchHighlight = async () => {
     NProgress.start();
@@ -123,6 +129,7 @@ const HomePage = () => {
             <HomeSearch
               onSearch={handleSearch}
               onSelectChange={handleSelectChange}
+              onWordAdded={handleWordAdded}
             />
           </div>
           <HomeContent
