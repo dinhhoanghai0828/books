@@ -529,15 +529,15 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'esl-fast-beginner-1-41','An Unhealthy Boy','Một cậu bé không khỏe mạnh','BEGINNER_01_ESL_FAST_CHILDREN_041.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',41) */
-	('He is fat','Cậu ấy bị thừa cân','00:00:00.390','00:00:02.270','esl-fast-beginner-1-41'),
-	('He only eats red meat, chips, and candy','Cậu ấy chỉ ăn thịt đỏ, khoai tây chiên và kẹo','00:00:02.750','00:00:07.050','esl-fast-beginner-1-41'),
-	('His parents worry about him','Bố mẹ cậu ấy rất lo cho cậu','00:00:07.710','00:00:10.030','esl-fast-beginner-1-41'),
-	('They ban him from eating fattening foods','Họ không cho cậu ấy ăn những món dễ tăng cân nữa','00:00:10.670','00:00:13.710','esl-fast-beginner-1-41'),
-	('They cook healthy meals only from now on','Từ bây giờ họ chỉ nấu những bữa ăn lành mạnh','00:00:14.410','00:00:17.990','esl-fast-beginner-1-41'),
-	('They eat oatmeal for breakfast','Họ ăn cháo yến mạch vào bữa sáng','00:00:18.710','00:00:20.950','esl-fast-beginner-1-41'),
-	('They eat fish, carrots, and vegetables for lunch','Họ ăn cá, cà rốt và rau vào bữa trưa','00:00:21.450','00:00:25.490','esl-fast-beginner-1-41'),
-	('They eat chicken and salad for dinner','Họ ăn thịt gà và salad vào bữa tối','00:00:25.850','00:00:28.830','esl-fast-beginner-1-41'),
+	/* (UUID(),'esl-fast-beginner-1-41','An Unhealthy Boy','Một cậu bé không khỏe mạnh','BEGINNER_01_ESL_FAST_CHILDREN_041.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-children-1','YES',41) */
+	('He is fat','Cậu bé rất mập','00:00:00.390','00:00:02.270','esl-fast-beginner-1-41'),
+	('He only eats red meat, chips, and candy','Cậu ấy chỉ ăn thịt đỏ, khoai tây chiên và kẹo','00:00:02.600','00:00:07.050','esl-fast-beginner-1-41'),
+	('His parents worry about him','Bố mẹ cậu ấy rất lo cho cậu','00:00:07.400','00:00:10.030','esl-fast-beginner-1-41'),
+	('They ban him from eating fattening foods','Họ cấm cậu bé ăn những món dễ tăng cân','00:00:10.400','00:00:13.710','esl-fast-beginner-1-41'),
+	('They cook healthy meals only from now on','Từ giờ họ chỉ nấu những bữa ăn lành mạnh','00:00:14.000','00:00:17.990','esl-fast-beginner-1-41'),
+	('They eat oatmeal for breakfast','Họ ăn cháo yến mạch vào bữa sáng','00:00:18.400','00:00:20.950','esl-fast-beginner-1-41'),
+	('They eat fish, carrots, and vegetables for lunch','Họ ăn cá, cà rốt và rau vào bữa trưa','00:00:21.300','00:00:25.490','esl-fast-beginner-1-41'),
+	('They eat chicken and salad for dinner','Họ ăn thịt gà và salad vào bữa tối','00:00:25.800','00:00:28.830','esl-fast-beginner-1-41'),
 
 	/* (UUID(),'esl-fast-beginner-1-42','Ferris Wheel','Vòng đu quay','BEGINNER_01_ESL_FAST_CHILDREN_042.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',42) */
 	('A Ferris wheel is a huge rotating wheel','Vòng đu quay là một bánh xe khổng lồ quay tròn','00:00:00.330','00:00:04.370','esl-fast-beginner-1-42'),
