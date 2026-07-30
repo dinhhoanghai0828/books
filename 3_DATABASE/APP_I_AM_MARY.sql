@@ -4666,7 +4666,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('What do you love?','Bạn yêu thích điều gì?','00:00:32.770','00:00:33.750','I-am-Mary-74'),
 	('What should you not do?','Bạn không nên làm điều gì?','00:00:33.750','00:00:35.250','I-am-Mary-74'),
 	('Do you know what you want?','Bạn có biết mình muốn gì không?','00:00:35.670','00:00:36.930','I-am-Mary-74'),
-	('If life continues to pass meaninglessly, what will make us regret it later?','Nếu cuộc sống cứ trôi qua một cách vô nghĩa, điều gì sẽ khiến chúng ta hối tiếc sau này?','00:00:37.390','00:00:42.070','I-am-Mary-74'),
+	('If life continues to pass meaninglessly, what will make us regret it later?','Nếu cuộc sống cứ tiếp tục trôi qua một cách vô nghĩa, điều gì sẽ khiến chúng ta hối tiếc sau này?','00:00:37.390','00:00:42.070','I-am-Mary-74'),
 	('Some people confided to me that they don\'t know what can make them truly happy','Một số người đã tâm sự với tôi rằng họ không biết điều gì có thể khiến họ thực sự hạnh phúc','00:00:43.210','00:00:47.950','I-am-Mary-74'),
 	('They do not feel that this world has meaning, and they do not know the dreams','Họ không cảm thấy thế giới này có ý nghĩa, và họ không biết những giấc mơ','00:00:48.550','00:00:53.190','I-am-Mary-74'),
 	('They also don\'t know if their lives have meaning anymore','Họ cũng không biết liệu cuộc sống của họ còn ý nghĩa nữa không','00:00:54.050','00:00:57.450','I-am-Mary-74'),

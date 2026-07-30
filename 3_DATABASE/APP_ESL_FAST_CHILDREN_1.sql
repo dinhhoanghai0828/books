@@ -760,22 +760,22 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He puts the necklace inside','Nó để chiếc vòng cổ vào trong hố','00:00:23.000','00:00:26.150','esl-fast-beginner-1-58'),
 	('He covers the hole with dirt','Rồi nó che hố lại bằng đất','00:00:27.000','00:00:29.830','esl-fast-beginner-1-58'),
 
-	/* (UUID(),'esl-fast-beginner-1-59','Playing with the Monkey Bars','Chơi xà đơn trong sân chơi','BEGINNER_01_ESL_FAST_CHILDREN_059.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',59) */
-	('She likes the monkey bars','Cô bé thích chơi xà leo','00:00:00.580','00:00:03.500','esl-fast-beginner-1-59'),
-	('She grabs the first bar with her hands','Cô bé dùng hai tay nắm thanh xà đầu tiên','00:00:04.280','00:00:07.160','esl-fast-beginner-1-59'),
-	('Her legs are swinging from the ground','Đôi chân cô bé đung đưa trên không','00:00:07.920','00:00:10.540','esl-fast-beginner-1-59'),
-	('She puts her right hand on the second bar','Cô bé đưa tay phải sang thanh xà thứ hai','00:00:11.520','00:00:14.900','esl-fast-beginner-1-59'),
-	('She then puts her left hand on the second bar','Rồi cô bé đưa tay trái sang thanh xà thứ hai','00:00:15.400','00:00:19.260','esl-fast-beginner-1-59'),
-	('She continues doing this','Cô bé cứ tiếp tục như vậy','00:00:20.060','00:00:22.300','esl-fast-beginner-1-59'),
-	('She reaches the last bar','Cuối cùng cô bé chạm tới thanh xà cuối cùng','00:00:22.940','00:00:25.220','esl-fast-beginner-1-59'),
-	('She jumps down','Cô bé nhảy xuống đất','00:00:25.840','00:00:27.760','esl-fast-beginner-1-59'),
-	('She starts over again for fun','Rồi cô bé chơi lại từ đầu cho vui','00:00:27.460','00:00:31.100','esl-fast-beginner-1-59'),
+	/* (UUID(),'esl-fast-beginner-1-59','Playing with the Monkey Bars','Chơi xà đơn trong sân chơi','BEGINNER_01_ESL_FAST_CHILDREN_059.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1','YES',59) */
+	('She likes the monkey bars','Cô bé thích chơi xà ngang','00:00:00.580','00:00:03.500','esl-fast-beginner-1-59'),
+	('She grabs the first bar with her hands','Cô bé dùng hai tay nắm thanh xà ngang đầu tiên','00:00:03.900','00:00:07.160','esl-fast-beginner-1-59'),
+	('Her legs are swinging from the ground','Đôi chân cô bé đung đưa trên không','00:00:07.600','00:00:10.540','esl-fast-beginner-1-59'),
+	('She puts her right hand on the second bar','Cô bé đưa tay phải sang thanh xà  ngang thứ hai','00:00:11.000','00:00:14.900','esl-fast-beginner-1-59'),
+	('She then puts her left hand on the second bar','Rồi cô bé đưa tay trái sang thanh xà ngang thứ hai','00:00:15.000','00:00:19.260','esl-fast-beginner-1-59'),
+	('She continues doing this','Cô bé cứ tiếp tục làm như vậy','00:00:19.700','00:00:22.300','esl-fast-beginner-1-59'),
+	('She reaches the last bar','Cuối cùng cô bé chạm tới thanh xà ngang cuối cùng','00:00:22.700','00:00:25.220','esl-fast-beginner-1-59'),
+	('She jumps down','Cô bé nhảy xuống','00:00:25.600','00:00:27.500','esl-fast-beginner-1-59'),
+	('She starts over again for fun','Rồi cô bé lại bắt đầu lại từ đầu cho vui','00:00:27.800','00:00:31.100','esl-fast-beginner-1-59'),
 
 	/* (UUID(),'esl-fast-beginner-1-60','Playing a Doctor','Đóng vai bác sĩ','BEGINNER_01_ESL_FAST_CHILDREN_060.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',60) */
-	('She likes to pretend she is a doctor for fun','Cô bé thích giả làm bác sĩ để chơi','00:00:00.460','00:00:05.040','esl-fast-beginner-1-60'),
-	('She wears a white coat','Cô bé mặc một chiếc áo blouse trắng','00:00:05.860','00:00:07.720','esl-fast-beginner-1-60'),
-	('She pretends her room is a medical office','Cô bé biến phòng mình thành một phòng khám','00:00:08.640','00:00:11.880','esl-fast-beginner-1-60'),
-	('Her dad pretends he is a patient','Bố cô bé đóng vai một bệnh nhân','00:00:12.820','00:00:15.519','esl-fast-beginner-1-60'),
-	('Her dad goes into her room','Bố cô bé bước vào phòng','00:00:16.680','00:00:19.000','esl-fast-beginner-1-60'),
-	('He tells her how he is feeling','Ông nói cho cô bé biết mình đang cảm thấy thế nào','00:00:19.820','00:00:22.560','esl-fast-beginner-1-60'),
-	('He says that he keeps coughing','Ông nói mình cứ ho mãi','00:00:23.440','00:00:25.920','esl-fast-beginner-1-60');
+	('She likes to pretend she is a doctor for fun','Cô bé thích giả làm bác sĩ để giải trí','00:00:00.460','00:00:05.040','esl-fast-beginner-1-60'),
+	('She wears a white coat','Cô bé mặc một chiếc áo blouse trắng','00:00:05.400','00:00:07.720','esl-fast-beginner-1-60'),
+	('She pretends her room is a medical office','Cô bé biến phòng mình thành một phòng khám','00:00:08.300','00:00:11.880','esl-fast-beginner-1-60'),
+	('Her dad pretends he is a patient','Bố cô bé đóng vai một bệnh nhân','00:00:12.400','00:00:15.519','esl-fast-beginner-1-60'),
+	('Her dad goes into her room','Bố cô bé bước vào phòng','00:00:16.000','00:00:19.000','esl-fast-beginner-1-60'),
+	('He tells her how he is feeling','Ông nói cho cô bé biết mình đang cảm thấy thế nào','00:00:19.500','00:00:22.560','esl-fast-beginner-1-60'),
+	('He says that he keeps coughing','Ông nói mình cứ ho mãi','00:00:23.000','00:00:25.920','esl-fast-beginner-1-60');

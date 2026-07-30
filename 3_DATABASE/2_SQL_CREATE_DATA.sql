@@ -401,7 +401,7 @@ INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,CHE
 	(UUID(),'esl-fast-beginner-1-56','Three Friends and a Jump Rope','Ba người bạn và dây nhảy','BEGINNER_01_ESL_FAST_CHILDREN_056.mp3','null','00:00:00.000','00:00:00.000','esl-fast-children-1','NO',0,56),
 	(UUID(),'esl-fast-beginner-1-57','He Plays with the Ladybug','Cậu ấy chơi với bọ rùa','BEGINNER_01_ESL_FAST_CHILDREN_057.mp3','null','00:00:00.000','00:00:38.000','esl-fast-children-1','YES',0,57),
 	(UUID(),'esl-fast-beginner-1-58','The Dog That Digs','Con chó hay đào đất','BEGINNER_01_ESL_FAST_CHILDREN_058.mp3','null','00:00:00.000','00:00:31.000','esl-fast-children-1','YES',0,58),
-	(UUID(),'esl-fast-beginner-1-59','Playing with the Monkey Bars','Chơi xà đơn trong sân chơi','BEGINNER_01_ESL_FAST_CHILDREN_059.mp3','null','00:00:00.000','00:00:00.000','esl-fast-children-1','NO',0,59),
+	(UUID(),'esl-fast-beginner-1-59','Playing with the Monkey Bars','Chơi xà đơn trong sân chơi','BEGINNER_01_ESL_FAST_CHILDREN_059.mp3','null','00:00:00.000','00:00:33.000','esl-fast-children-1','YES',0,59),
 	(UUID(),'esl-fast-beginner-1-60','Playing a Doctor','Đóng vai bác sĩ','BEGINNER_01_ESL_FAST_CHILDREN_060.mp3','null','00:00:00.000','00:00:00.000','esl-fast-children-1','NO',0,60),
 	(UUID(),'esl-fast-beginner-1-61','Art Class','Giờ học mỹ thuật','BEGINNER_01_ESL_FAST_CHILDREN_061.mp3','null','00:00:00.000','00:00:00.000','esl-fast-children-1','NO',0,61),
 	(UUID(),'esl-fast-beginner-1-62','Getting Ready for Soccer Practice','Chuẩn bị cho buổi tập bóng đá','BEGINNER_01_ESL_FAST_CHILDREN_062.mp3','null','00:00:00.000','00:00:00.000','esl-fast-children-1','NO',0,62),

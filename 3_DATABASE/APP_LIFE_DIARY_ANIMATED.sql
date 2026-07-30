@@ -11410,7 +11410,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Today, while waiting for the driver to pick me up, I saw Banis\' group passing by','Hôm nay, trong lúc chờ tài xế đến đón, tôi thấy nhóm của Banis đi ngang qua','00:00:00.990','00:00:04.810','life-diary-animated-43'),
 	('And they also dragged another female student to the garden behind the school','Và họ cũng kéo một nữ sinh khác ra khu vườn phía sau trường','00:00:05.230','00:00:08.570','life-diary-animated-43'),
 	('I heard many classmates say that Banis and the group often bully and threaten other female students in school','Tôi nghe nhiều bạn cùng lớp nói rằng Banis và nhóm của cô ấy thường bắt nạt và đe dọa các nữ sinh khác trong trường','00:00:08.930','00:00:14.770','life-diary-animated-43'),
-	('They did this just for fun','Họ làm điều này chỉ để vui thôi','00:00:15.030','00:00:17.050','life-diary-animated-43'),
+	('They did this just for fun','Họ làm điều này chỉ để giải trí thôi','00:00:15.030','00:00:17.050','life-diary-animated-43'),
 	('The person Banis just pulled away was Kara, my class president','Người vừa bị Banis kéo đi là Kara, lớp trưởng của tôi','00:00:17.450','00:00:21.270','life-diary-animated-43'),
 	('Not only was she beautiful, but Kara also studied very well and was the ideal girlfriend of many boys in school','Không chỉ xinh đẹp, Kara còn học rất giỏi và là bạn gái lý tưởng của nhiều nam sinh trong trường','00:00:21.790','00:00:28.970','life-diary-animated-43'),
 	('Maybe that was why Banis bullied Kara','Có lẽ đó là lý do Banis bắt nạt Kara','00:00:28.970','00:00:31.729','life-diary-animated-43'),
