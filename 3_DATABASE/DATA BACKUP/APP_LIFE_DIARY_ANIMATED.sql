@@ -4520,7 +4520,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Thank you, Anna','Cảm ơn bạn, Anna','00:16:08.440','00:16:09.080','life-diary-animated-15'),
 	('Thank you for waiting for me','Cảm ơn bạn đã chờ tôi','00:16:09.500','00:16:10.820','life-diary-animated-15'),
 
-	/* (UUID(),'life-diary-animated-16','Everyone Wanna Join My Divorce Party Everyone Wanna Join My Divorce Party ','Mở Tiệc Ăn Mừng Chia Tay','STORIES_TEEN_STORY_01_LIFE_DIARY_ANIMATED_016.mp3',NULL,'00:00:00.450','00:16:52.590','life-diary-animated','NO',16) */
+	/* (UUID(),'life-diary-animated-16','Everyone Wanna Join My Divorce Party Everyone Wanna Join My Divorce Party','Mở Tiệc Ăn Mừng Chia Tay','STORIES_TEEN_STORY_01_LIFE_DIARY_ANIMATED_016.mp3',NULL,'00:00:00.450','00:16:52.590','life-diary-animated','NO',16) */
 	('Hi everyone, my name is Selena','Chào mọi người, tên tôi là Selena','00:00:00.450','00:00:02.230','life-diary-animated-16'),
 	('I grew up in a broken family, so I always yearned to meet someone who loved me unconditional','Tôi lớn lên trong một gia đình tan vỡ, vì vậy tôi luôn khao khát gặp ai đó yêu tôi vô điều kiện','00:00:02.670','00:00:08.810','life-diary-animated-16'),
 	('However, life isn\'t as smooth as I thought','Tuy nhiên, cuộc sống không suôn sẻ như tôi nghĩ','00:00:09.530','00:00:12.670','life-diary-animated-16'),
@@ -11410,7 +11410,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Today, while waiting for the driver to pick me up, I saw Banis\' group passing by','Hôm nay, trong lúc chờ tài xế đến đón, tôi thấy nhóm của Banis đi ngang qua','00:00:00.990','00:00:04.810','life-diary-animated-43'),
 	('And they also dragged another female student to the garden behind the school','Và họ cũng kéo một nữ sinh khác ra khu vườn phía sau trường','00:00:05.230','00:00:08.570','life-diary-animated-43'),
 	('I heard many classmates say that Banis and the group often bully and threaten other female students in school','Tôi nghe nhiều bạn cùng lớp nói rằng Banis và nhóm của cô ấy thường bắt nạt và đe dọa các nữ sinh khác trong trường','00:00:08.930','00:00:14.770','life-diary-animated-43'),
-	('They did this just for fun','Họ làm điều này chỉ để vui thôi','00:00:15.030','00:00:17.050','life-diary-animated-43'),
+	('They did this just for fun','Họ làm điều này chỉ để giải trí thôi','00:00:15.030','00:00:17.050','life-diary-animated-43'),
 	('The person Banis just pulled away was Kara, my class president','Người vừa bị Banis kéo đi là Kara, lớp trưởng của tôi','00:00:17.450','00:00:21.270','life-diary-animated-43'),
 	('Not only was she beautiful, but Kara also studied very well and was the ideal girlfriend of many boys in school','Không chỉ xinh đẹp, Kara còn học rất giỏi và là bạn gái lý tưởng của nhiều nam sinh trong trường','00:00:21.790','00:00:28.970','life-diary-animated-43'),
 	('Maybe that was why Banis bullied Kara','Có lẽ đó là lý do Banis bắt nạt Kara','00:00:28.970','00:00:31.729','life-diary-animated-43'),
