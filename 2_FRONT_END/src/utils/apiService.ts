@@ -195,6 +195,29 @@ export const downloadVolumeWord = async (slug: string): Promise<void> => {
   }
 };
 
+// Download PDF file with volume content
+export const downloadVolumePdf = async (slug: string): Promise<void> => {
+  try {
+    const response = await apiClient.get(`/volumes/download-book-pdf/${slug}`, {
+      responseType: 'blob',
+    });
+    
+    // Create download link
+    const url = window.URL.createObjectURL(new Blob([response.data]));
+    const link = document.createElement('a');
+    link.href = url;
+    link.setAttribute('download', `${slug}.pdf`);
+    document.body.appendChild(link);
+    link.click();
+    
+    // Cleanup
+    link.remove();
+    window.URL.revokeObjectURL(url);
+  } catch (error: any) {
+    throw new Error(getErrorMessage(error));
+  }
+};
+
 // ============================================================
 // CONTENTS
 // ============================================================

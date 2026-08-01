@@ -1,11 +1,11 @@
 import { Volume } from '@/interfaces/volume';
-import { CheckOutlined, EditOutlined, DownloadOutlined, BookOutlined } from '@ant-design/icons';
+import { CheckOutlined, EditOutlined, DownloadOutlined, BookOutlined, FilePdfOutlined } from '@ant-design/icons';
 import { Button, Col, Empty, Form, Input, Modal, Row, Select, Typography, notification } from 'antd';
 import { Content } from 'antd/es/layout/layout';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { useState } from 'react';
-import { updateVolume, runVolumesExport, markAsRead, markAsUnread, downloadVolumeWord } from '@/utils/apiService';
+import { updateVolume, runVolumesExport, markAsRead, markAsUnread, downloadVolumeWord, downloadVolumePdf } from '@/utils/apiService';
 
 interface VolumeContentComponentProps {
   volumes: Volume[];
@@ -26,6 +26,7 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
   const [exportLoading, setExportLoading] = useState(false);
   const [markReadLoading, setMarkReadLoading] = useState<string | null>(null);
   const [downloadLoading, setDownloadLoading] = useState(false);
+  const [pdfLoading, setPdfLoading] = useState(false);
 
   const handleOpenEdit = (volume: Volume, e: React.MouseEvent) => {
     e.preventDefault();
@@ -181,6 +182,32 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
     }
   };
 
+  const handleDownloadPdf = async () => {
+    try {
+      setPdfLoading(true);
+      // Download all volumes for this book as a single PDF file
+      const slug = Array.isArray(bookSlug) ? bookSlug[0] : bookSlug;
+      await downloadVolumePdf(slug || '');
+      notifApi.success({
+        message: 'Download thanh cong',
+        description: 'File PDF da duoc tai xuong.',
+        placement: 'topRight',
+        duration: 3,
+        style: { backgroundColor: '#f6ffed', border: '1px solid #b7eb8f' },
+      });
+    } catch (error: any) {
+      notifApi.warning({
+        message: 'Download that bai',
+        description: 'Chuc nang nay can backend ho tro. Vui long kiem tra API.',
+        placement: 'topRight',
+        duration: 4,
+        style: { backgroundColor: '#fff2f0', border: '1px solid #ffccc7' },
+      });
+    } finally {
+      setPdfLoading(false);
+    }
+  };
+
   return (
     <Content className="volumeClass">
       {notifContextHolder}
@@ -201,6 +228,15 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
           loading={downloadLoading}
         >
           Download Word
+        </Button>
+        <Button
+          type="default"
+          icon={<FilePdfOutlined />}
+          onClick={handleDownloadPdf}
+          loading={pdfLoading}
+          style={{ color: '#dc2626', borderColor: '#dc2626' }}
+        >
+          Download PDF
         </Button>
       </div>
       {volumes && volumes.length > 0 ? (

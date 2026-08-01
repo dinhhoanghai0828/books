@@ -5,6 +5,11 @@ import books.dto.VolumeDTO;
 import books.response.VolumeDetailResponse;
 import books.response.VolumeResponse;
 import books.service.interfaces.VolumeService;
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.pdmodel.PDPage;
+import org.apache.pdfbox.pdmodel.PDPageContentStream;
+import org.apache.pdfbox.pdmodel.common.PDRectangle;
+import org.apache.pdfbox.pdmodel.font.PDType1Font;
 import org.apache.poi.xwpf.usermodel.*;
 import org.openxmlformats.schemas.wordprocessingml.x2006.main.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +20,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.math.BigInteger;
 import java.util.List;
 
@@ -245,6 +251,206 @@ public class VolumeController {
             HttpHeaders headers = new HttpHeaders();
             headers.setContentType(MediaType.APPLICATION_OCTET_STREAM);
             headers.setContentDispositionFormData("attachment", bookSlug + ".docx");
+            
+            return new ResponseEntity<>(outputStream.toByteArray(), headers, HttpStatus.OK);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @GetMapping("/download-book-pdf/{bookSlug}")
+    public ResponseEntity<byte[]> downloadBookPdf(@PathVariable("bookSlug") String bookSlug) {
+        try {
+            List<VolumeDTO> volumes = volumeService.getVolumesByBookSlug(bookSlug);
+            
+            PDDocument document = new PDDocument();
+            PDPage page = new PDPage(PDRectangle.A4);
+            document.addPage(page);
+            
+            float margin = 50;
+            float pageWidth = page.getMediaBox().getWidth() - 2 * margin;
+            float yPosition = page.getMediaBox().getHeight() - margin;
+            float lineHeight = 25;
+            
+            PDPageContentStream contentStream = new PDPageContentStream(document, page);
+            contentStream.setFont(PDType1Font.HELVETICA, 12);
+            contentStream.beginText();
+            contentStream.newLineAtOffset(margin, yPosition);
+            
+            // Add content from all volumes
+            int lessonNumber = 1;
+            for (VolumeDTO volume : volumes) {
+                List<ContentDTO> contents = volume.getContents();
+                
+                // Skip volumes with no content
+                if (contents == null || contents.isEmpty()) {
+                    continue;
+                }
+                
+                // Add volume title with Lesson numbering
+                String title = "Lesson " + lessonNumber + ": " + volume.getEng();
+                
+                // Check if we need a new page for title
+                if (yPosition < margin + 50) {
+                    contentStream.endText();
+                    contentStream.close();
+                    page = new PDPage(PDRectangle.A4);
+                    document.addPage(page);
+                    contentStream = new PDPageContentStream(document, page);
+                    contentStream.setFont(PDType1Font.HELVETICA, 12);
+                    contentStream.beginText();
+                    contentStream.newLineAtOffset(margin, page.getMediaBox().getHeight() - margin);
+                    yPosition = page.getMediaBox().getHeight() - margin;
+                }
+                
+                // Draw title (bold and larger)
+                contentStream.setFont(PDType1Font.HELVETICA_BOLD, 16);
+                contentStream.showText(title);
+                yPosition -= 30;
+                contentStream.newLineAtOffset(0, -30);
+                contentStream.setFont(PDType1Font.HELVETICA, 12);
+                
+                // Build English and Vietnamese paragraphs
+                StringBuilder englishParagraph = new StringBuilder();
+                StringBuilder vietnameseParagraph = new StringBuilder();
+                
+                for (ContentDTO content : contents) {
+                    String eng = content.getEng().trim();
+                    String vi = content.getVi().trim();
+                    
+                    if (englishParagraph.length() > 0) {
+                        englishParagraph.append(". ");
+                    }
+                    englishParagraph.append(eng);
+                    
+                    if (vietnameseParagraph.length() > 0) {
+                        vietnameseParagraph.append(" ");
+                    }
+                    vietnameseParagraph.append(vi);
+                    
+                    if (!vi.endsWith("!") && !vi.endsWith("?") && !vi.endsWith("...")) {
+                        vietnameseParagraph.append(".");
+                    }
+                }
+                
+                // Add English paragraph
+                String engText = englishParagraph.toString();
+                String[] engWords = engText.split(" ");
+                String currentLine = "";
+                
+                for (String word : engWords) {
+                    if (currentLine.isEmpty()) {
+                        currentLine = word;
+                    } else {
+                        float lineWidth = PDType1Font.HELVETICA.getStringWidth(currentLine + " " + word) / 1000 * 12;
+                        if (lineWidth > pageWidth) {
+                            if (yPosition < margin + lineHeight) {
+                                contentStream.endText();
+                                contentStream.close();
+                                page = new PDPage(PDRectangle.A4);
+                                document.addPage(page);
+                                contentStream = new PDPageContentStream(document, page);
+                                contentStream.setFont(PDType1Font.HELVETICA, 12);
+                                contentStream.beginText();
+                                contentStream.newLineAtOffset(margin, page.getMediaBox().getHeight() - margin);
+                                yPosition = page.getMediaBox().getHeight() - margin;
+                            }
+                            contentStream.showText(currentLine);
+                            yPosition -= lineHeight;
+                            contentStream.newLineAtOffset(0, -lineHeight);
+                            currentLine = word;
+                        } else {
+                            currentLine += " " + word;
+                        }
+                    }
+                }
+                if (!currentLine.isEmpty()) {
+                    if (yPosition < margin + lineHeight) {
+                        contentStream.endText();
+                        contentStream.close();
+                        page = new PDPage(PDRectangle.A4);
+                        document.addPage(page);
+                        contentStream = new PDPageContentStream(document, page);
+                        contentStream.setFont(PDType1Font.HELVETICA, 12);
+                        contentStream.beginText();
+                        contentStream.newLineAtOffset(margin, page.getMediaBox().getHeight() - margin);
+                        yPosition = page.getMediaBox().getHeight() - margin;
+                    }
+                    contentStream.showText(currentLine);
+                    yPosition -= lineHeight;
+                    contentStream.newLineAtOffset(0, -lineHeight);
+                }
+                
+                // Add spacing between English and Vietnamese
+                yPosition -= 20;
+                contentStream.newLineAtOffset(0, -20);
+                
+                // Add Vietnamese paragraph
+                String viText = vietnameseParagraph.toString();
+                String[] viWords = viText.split(" ");
+                currentLine = "";
+                
+                for (String word : viWords) {
+                    if (currentLine.isEmpty()) {
+                        currentLine = word;
+                    } else {
+                        float lineWidth = PDType1Font.HELVETICA.getStringWidth(currentLine + " " + word) / 1000 * 12;
+                        if (lineWidth > pageWidth) {
+                            if (yPosition < margin + lineHeight) {
+                                contentStream.endText();
+                                contentStream.close();
+                                page = new PDPage(PDRectangle.A4);
+                                document.addPage(page);
+                                contentStream = new PDPageContentStream(document, page);
+                                contentStream.setFont(PDType1Font.HELVETICA, 12);
+                                contentStream.beginText();
+                                contentStream.newLineAtOffset(margin, page.getMediaBox().getHeight() - margin);
+                                yPosition = page.getMediaBox().getHeight() - margin;
+                            }
+                            contentStream.showText(currentLine);
+                            yPosition -= lineHeight;
+                            contentStream.newLineAtOffset(0, -lineHeight);
+                            currentLine = word;
+                        } else {
+                            currentLine += " " + word;
+                        }
+                    }
+                }
+                if (!currentLine.isEmpty()) {
+                    if (yPosition < margin + lineHeight) {
+                        contentStream.endText();
+                        contentStream.close();
+                        page = new PDPage(PDRectangle.A4);
+                        document.addPage(page);
+                        contentStream = new PDPageContentStream(document, page);
+                        contentStream.setFont(PDType1Font.HELVETICA, 12);
+                        contentStream.beginText();
+                        contentStream.newLineAtOffset(margin, page.getMediaBox().getHeight() - margin);
+                        yPosition = page.getMediaBox().getHeight() - margin;
+                    }
+                    contentStream.showText(currentLine);
+                    yPosition -= lineHeight;
+                    contentStream.newLineAtOffset(0, -lineHeight);
+                }
+                
+                // Add spacing between volumes
+                yPosition -= 40;
+                contentStream.newLineAtOffset(0, -40);
+                
+                lessonNumber++;
+            }
+            
+            contentStream.endText();
+            contentStream.close();
+            
+            ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+            document.save(outputStream);
+            document.close();
+            
+            HttpHeaders headers = new HttpHeaders();
+            headers.setContentType(MediaType.APPLICATION_PDF);
+            headers.setContentDispositionFormData("attachment", bookSlug + ".pdf");
             
             return new ResponseEntity<>(outputStream.toByteArray(), headers, HttpStatus.OK);
         } catch (Exception e) {
