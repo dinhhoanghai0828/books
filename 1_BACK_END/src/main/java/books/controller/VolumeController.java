@@ -359,8 +359,8 @@ public class VolumeController {
                 contentStream.showText(title);
                 contentStream.newLineAtOffset(-(titleX - margin), 0); // Reset x position
                 
-                yPosition -= 50; // 15pt spacing after title (300 in Word = 15pt)
-                contentStream.newLineAtOffset(0, -50);
+                yPosition -= 60; // 15pt spacing after title (300 in Word = 15pt)
+                contentStream.newLineAtOffset(0, -60);
                 if (useCustomFont) {
                     contentStream.setFont(font, 18);
                 } else {
@@ -520,8 +520,8 @@ public class VolumeController {
                 yPosition -= 50;
                 contentStream.newLineAtOffset(0, -50);
                 
-                // Force page break after each volume (except the last one)
-                if (lessonNumber < volumes.size()) {
+                // Force page break after each volume (only if not the last volume with content)
+                if (lessonNumber <= volumes.size()) {
                     contentStream.endText();
                     contentStream.close();
                     page = new PDPage(PDRectangle.A4);
