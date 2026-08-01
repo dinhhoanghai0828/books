@@ -166,9 +166,11 @@ public class VolumeController {
                 XWPFRun volumeTitleRun = volumeTitleParagraph.createRun();
                 volumeTitleRun.setBold(true);
                 volumeTitleRun.setFontFamily("Times New Roman");
-                volumeTitleRun.setFontSize(18);
+                volumeTitleRun.setFontSize(25);
                 volumeTitleRun.setText(volume.getEng());
-                volumeTitleRun.addBreak();
+                
+                // Set line spacing for title
+                volumeTitleParagraph.setSpacingAfter(300);
                 
                 // Use contents from VolumeDTO instead of calling service
                 List<ContentDTO> contents = volume.getContents();
@@ -200,23 +202,25 @@ public class VolumeController {
                         }
                     }
                     
-                    // Add English paragraph
+                    // Add English paragraph with 1.5 line spacing
                     XWPFParagraph engParagraph = document.createParagraph();
                     engParagraph.setAlignment(ParagraphAlignment.LEFT);
+                    engParagraph.setSpacingBetween(1.5, LineSpacingRule.AUTO);
+                    engParagraph.setSpacingAfter(200);
                     XWPFRun engRun = engParagraph.createRun();
                     engRun.setFontFamily("Times New Roman");
                     engRun.setFontSize(18);
                     engRun.setText(englishParagraph.toString());
-                    engRun.addBreak();
                     
-                    // Add Vietnamese paragraph
+                    // Add Vietnamese paragraph with 1.5 line spacing
                     XWPFParagraph viParagraph = document.createParagraph();
                     viParagraph.setAlignment(ParagraphAlignment.LEFT);
+                    viParagraph.setSpacingBetween(1.5, LineSpacingRule.AUTO);
+                    viParagraph.setSpacingAfter(200);
                     XWPFRun viRun = viParagraph.createRun();
                     viRun.setFontFamily("Times New Roman");
                     viRun.setFontSize(18);
                     viRun.setText(vietnameseParagraph.toString());
-                    viRun.addBreak();
                 } else {
                     XWPFParagraph emptyParagraph = document.createParagraph();
                     emptyParagraph.setAlignment(ParagraphAlignment.LEFT);
@@ -225,11 +229,14 @@ public class VolumeController {
                     emptyRun.setFontSize(16);
                     emptyRun.setItalic(true);
                     emptyRun.setText("(No content available for this volume)");
-                    emptyRun.addBreak();
                 }
                 
-                // Page break between volumes
-                volumeTitleRun.addBreak(BreakType.PAGE);
+                // Page break between volumes (only if not the last volume)
+                if (volumes.indexOf(volume) < volumes.size() - 1) {
+                    XWPFParagraph pageBreakParagraph = document.createParagraph();
+                    XWPFRun pageBreakRun = pageBreakParagraph.createRun();
+                    pageBreakRun.addBreak(BreakType.PAGE);
+                }
             }
             
             ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
