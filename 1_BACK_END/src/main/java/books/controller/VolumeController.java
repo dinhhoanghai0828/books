@@ -9,6 +9,7 @@ import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.pdmodel.PDPageContentStream;
 import org.apache.pdfbox.pdmodel.common.PDRectangle;
+import org.apache.pdfbox.pdmodel.font.PDType0Font;
 import org.apache.pdfbox.pdmodel.font.PDType1Font;
 import org.apache.poi.xwpf.usermodel.*;
 import org.openxmlformats.schemas.wordprocessingml.x2006.main.*;
@@ -21,6 +22,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.math.BigInteger;
 import java.util.List;
 
@@ -273,8 +275,33 @@ public class VolumeController {
             float yPosition = page.getMediaBox().getHeight() - margin;
             float lineHeight = 25;
             
+            // Load a Unicode font that supports Vietnamese
+            PDType0Font font = null;
+            boolean useCustomFont = false;
+            try {
+                // Try to load Arial from Windows system fonts
+                font = PDType0Font.load(document, new java.io.File("C:\\Windows\\Fonts\\arial.ttf"));
+                useCustomFont = true;
+            } catch (Exception e) {
+                try {
+                    // Try to load from resources
+                    InputStream fontStream = getClass().getResourceAsStream("/fonts/Arial.ttf");
+                    if (fontStream != null) {
+                        font = PDType0Font.load(document, fontStream);
+                        useCustomFont = true;
+                    }
+                } catch (Exception ex) {
+                    // If all fails, use standard font (won't support Vietnamese)
+                    useCustomFont = false;
+                }
+            }
+            
             PDPageContentStream contentStream = new PDPageContentStream(document, page);
-            contentStream.setFont(PDType1Font.HELVETICA, 12);
+            if (useCustomFont) {
+                contentStream.setFont(font, 12);
+            } else {
+                contentStream.setFont(PDType1Font.HELVETICA, 12);
+            }
             contentStream.beginText();
             contentStream.newLineAtOffset(margin, yPosition);
             
@@ -298,18 +325,30 @@ public class VolumeController {
                     page = new PDPage(PDRectangle.A4);
                     document.addPage(page);
                     contentStream = new PDPageContentStream(document, page);
-                    contentStream.setFont(PDType1Font.HELVETICA, 12);
+                    if (useCustomFont) {
+                        contentStream.setFont(font, 12);
+                    } else {
+                        contentStream.setFont(PDType1Font.HELVETICA, 12);
+                    }
                     contentStream.beginText();
                     contentStream.newLineAtOffset(margin, page.getMediaBox().getHeight() - margin);
                     yPosition = page.getMediaBox().getHeight() - margin;
                 }
                 
                 // Draw title (bold and larger)
-                contentStream.setFont(PDType1Font.HELVETICA_BOLD, 16);
+                if (useCustomFont) {
+                    contentStream.setFont(font, 16);
+                } else {
+                    contentStream.setFont(PDType1Font.HELVETICA_BOLD, 16);
+                }
                 contentStream.showText(title);
                 yPosition -= 30;
                 contentStream.newLineAtOffset(0, -30);
-                contentStream.setFont(PDType1Font.HELVETICA, 12);
+                if (useCustomFont) {
+                    contentStream.setFont(font, 12);
+                } else {
+                    contentStream.setFont(PDType1Font.HELVETICA, 12);
+                }
                 
                 // Build English and Vietnamese paragraphs
                 StringBuilder englishParagraph = new StringBuilder();
@@ -343,7 +382,12 @@ public class VolumeController {
                     if (currentLine.isEmpty()) {
                         currentLine = word;
                     } else {
-                        float lineWidth = PDType1Font.HELVETICA.getStringWidth(currentLine + " " + word) / 1000 * 12;
+                        float lineWidth;
+                        if (useCustomFont) {
+                            lineWidth = font.getStringWidth(currentLine + " " + word) / 1000 * 12;
+                        } else {
+                            lineWidth = PDType1Font.HELVETICA.getStringWidth(currentLine + " " + word) / 1000 * 12;
+                        }
                         if (lineWidth > pageWidth) {
                             if (yPosition < margin + lineHeight) {
                                 contentStream.endText();
@@ -351,7 +395,11 @@ public class VolumeController {
                                 page = new PDPage(PDRectangle.A4);
                                 document.addPage(page);
                                 contentStream = new PDPageContentStream(document, page);
-                                contentStream.setFont(PDType1Font.HELVETICA, 12);
+                                if (useCustomFont) {
+                                    contentStream.setFont(font, 12);
+                                } else {
+                                    contentStream.setFont(PDType1Font.HELVETICA, 12);
+                                }
                                 contentStream.beginText();
                                 contentStream.newLineAtOffset(margin, page.getMediaBox().getHeight() - margin);
                                 yPosition = page.getMediaBox().getHeight() - margin;
@@ -372,7 +420,11 @@ public class VolumeController {
                         page = new PDPage(PDRectangle.A4);
                         document.addPage(page);
                         contentStream = new PDPageContentStream(document, page);
-                        contentStream.setFont(PDType1Font.HELVETICA, 12);
+                        if (useCustomFont) {
+                            contentStream.setFont(font, 12);
+                        } else {
+                            contentStream.setFont(PDType1Font.HELVETICA, 12);
+                        }
                         contentStream.beginText();
                         contentStream.newLineAtOffset(margin, page.getMediaBox().getHeight() - margin);
                         yPosition = page.getMediaBox().getHeight() - margin;
@@ -395,7 +447,12 @@ public class VolumeController {
                     if (currentLine.isEmpty()) {
                         currentLine = word;
                     } else {
-                        float lineWidth = PDType1Font.HELVETICA.getStringWidth(currentLine + " " + word) / 1000 * 12;
+                        float lineWidth;
+                        if (useCustomFont) {
+                            lineWidth = font.getStringWidth(currentLine + " " + word) / 1000 * 12;
+                        } else {
+                            lineWidth = PDType1Font.HELVETICA.getStringWidth(currentLine + " " + word) / 1000 * 12;
+                        }
                         if (lineWidth > pageWidth) {
                             if (yPosition < margin + lineHeight) {
                                 contentStream.endText();
@@ -403,7 +460,11 @@ public class VolumeController {
                                 page = new PDPage(PDRectangle.A4);
                                 document.addPage(page);
                                 contentStream = new PDPageContentStream(document, page);
-                                contentStream.setFont(PDType1Font.HELVETICA, 12);
+                                if (useCustomFont) {
+                                    contentStream.setFont(font, 12);
+                                } else {
+                                    contentStream.setFont(PDType1Font.HELVETICA, 12);
+                                }
                                 contentStream.beginText();
                                 contentStream.newLineAtOffset(margin, page.getMediaBox().getHeight() - margin);
                                 yPosition = page.getMediaBox().getHeight() - margin;
@@ -424,7 +485,11 @@ public class VolumeController {
                         page = new PDPage(PDRectangle.A4);
                         document.addPage(page);
                         contentStream = new PDPageContentStream(document, page);
-                        contentStream.setFont(PDType1Font.HELVETICA, 12);
+                        if (useCustomFont) {
+                            contentStream.setFont(font, 12);
+                        } else {
+                            contentStream.setFont(PDType1Font.HELVETICA, 12);
+                        }
                         contentStream.beginText();
                         contentStream.newLineAtOffset(margin, page.getMediaBox().getHeight() - margin);
                         yPosition = page.getMediaBox().getHeight() - margin;
