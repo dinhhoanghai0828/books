@@ -1,6 +1,8 @@
 package books.dto;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class VolumeDTO {
     private String id;
@@ -21,6 +23,7 @@ public class VolumeDTO {
     private String createBy;
     private String updatedBy;
     private Long number;
+    private List<ContentDTO> contents;
 
     public String getId() {
         return id;
@@ -164,5 +167,13 @@ public class VolumeDTO {
 
     public void setVideo(String video) {
         this.video = video;
+    }
+
+    public List<ContentDTO> getContents() {
+        return contents;
+    }
+
+    public void setContents(List<ContentDTO> contents) {
+        this.contents = contents;
     }
 }

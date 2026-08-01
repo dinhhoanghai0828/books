@@ -1,6 +1,8 @@
 package books.entity;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Volume {
     private String id;
@@ -21,6 +23,7 @@ public class Volume {
     private String createBy;
     private String updatedBy;
     private int number;
+    private List<Content> contents;
 
     public String getId() {
         return id;
@@ -164,5 +167,13 @@ public class Volume {
 
     public void setVideo(String video) {
         this.video = video;
+    }
+
+    public List<Content> getContents() {
+        return contents;
+    }
+
+    public void setContents(List<Content> contents) {
+        this.contents = contents;
     }
 }

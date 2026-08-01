@@ -73,6 +73,15 @@ public class VolumeServiceImpl implements VolumeService {
         List<VolumeDTO> volumeDTOS = volumes.stream().map(volume -> {
             VolumeDTO dto = modelMapper.map(volume, VolumeDTO.class);
             dto.setIsRead(volume.getIsRead());
+            
+            // Map contents from Volume entity to VolumeDTO
+            if (volume.getContents() != null) {
+                List<ContentDTO> contentDTOS = volume.getContents().stream()
+                    .map(content -> modelMapper.map(content, ContentDTO.class))
+                    .collect(Collectors.toList());
+                dto.setContents(contentDTOS);
+            }
+            
             return dto;
         }).collect(Collectors.toList());
         return volumeDTOS;

@@ -180,7 +180,8 @@ public class VolumeController {
                 volumeTitleRun.setText(volume.getEng());
                 volumeTitleRun.addBreak();
                 
-                List<ContentDTO> contents = volumeService.getContentsByVolumeSlug(volume.getSlug());
+                // Use contents from VolumeDTO instead of calling service
+                List<ContentDTO> contents = volume.getContents();
                 
                 if (contents != null && !contents.isEmpty()) {
                     for (ContentDTO content : contents) {
