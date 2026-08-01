@@ -51,9 +51,14 @@
   left: 0; /* Ensure it's aligned with the left side of the page */
   width: 100%; /* Make sure the header spans the full width of the screen */
   background-color: #fff; /* Set the background color */
-  z-index: 1000; /* Make sure it's above other content */
+  z-index: 10000; /* Make sure it's above other content including tooltips */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow to separate from content */
   padding: 10px 20px; /* Add padding around the header content */
+}
+
+/* Ensure menu dropdowns are clickable */
+.ant-menu-submenu-popup {
+  z-index: 10001 !important;
 }
 
 .breadCrumbClass {
