@@ -206,7 +206,7 @@ public class VolumeController {
                     XWPFParagraph engParagraph = document.createParagraph();
                     engParagraph.setAlignment(ParagraphAlignment.LEFT);
                     engParagraph.setSpacingBetween(1.5, LineSpacingRule.AUTO);
-                    engParagraph.setSpacingAfter(200);
+                    engParagraph.setSpacingAfter(1000);
                     XWPFRun engRun = engParagraph.createRun();
                     engRun.setFontFamily("Times New Roman");
                     engRun.setFontSize(18);
@@ -216,7 +216,7 @@ public class VolumeController {
                     XWPFParagraph viParagraph = document.createParagraph();
                     viParagraph.setAlignment(ParagraphAlignment.LEFT);
                     viParagraph.setSpacingBetween(1.5, LineSpacingRule.AUTO);
-                    viParagraph.setSpacingAfter(200);
+                    viParagraph.setSpacingAfter(1000);
                     XWPFRun viRun = viParagraph.createRun();
                     viRun.setFontFamily("Times New Roman");
                     viRun.setFontSize(18);
