@@ -159,80 +159,79 @@ public class VolumeController {
             XWPFDocument document = new XWPFDocument();
             
             // Add content from all volumes
+            int lessonNumber = 1;
             for (VolumeDTO volume : volumes) {
-                // Add volume title
+                // Use contents from VolumeDTO instead of calling service
+                List<ContentDTO> contents = volume.getContents();
+                
+                // Skip volumes with no content
+                if (contents == null || contents.isEmpty()) {
+                    continue;
+                }
+                
+                // Add volume title with Lesson numbering
                 XWPFParagraph volumeTitleParagraph = document.createParagraph();
                 volumeTitleParagraph.setAlignment(ParagraphAlignment.CENTER);
                 XWPFRun volumeTitleRun = volumeTitleParagraph.createRun();
                 volumeTitleRun.setBold(true);
-                volumeTitleRun.setFontFamily("Times New Roman");
+                volumeTitleRun.setFontFamily("Book Antiqua");
                 volumeTitleRun.setFontSize(25);
-                volumeTitleRun.setText(volume.getEng());
+                volumeTitleRun.setText("Lesson " + lessonNumber + ": " + volume.getEng());
                 
                 // Set line spacing for title
                 volumeTitleParagraph.setSpacingAfter(300);
                 
-                // Use contents from VolumeDTO instead of calling service
-                List<ContentDTO> contents = volume.getContents();
+                // Build English paragraph
+                StringBuilder englishParagraph = new StringBuilder();
+                StringBuilder vietnameseParagraph = new StringBuilder();
                 
-                if (contents != null && !contents.isEmpty()) {
-                    // Build English paragraph
-                    StringBuilder englishParagraph = new StringBuilder();
-                    StringBuilder vietnameseParagraph = new StringBuilder();
+                for (ContentDTO content : contents) {
+                    String eng = content.getEng().trim();
+                    String vi = content.getVi().trim();
                     
-                    for (ContentDTO content : contents) {
-                        String eng = content.getEng().trim();
-                        String vi = content.getVi().trim();
-                        
-                        // Add English sentence with comma
-                        if (englishParagraph.length() > 0) {
-                            englishParagraph.append(", ");
-                        }
-                        englishParagraph.append(eng);
-                        
-                        // Add Vietnamese sentence with period, but check if it already ends with punctuation
-                        if (vietnameseParagraph.length() > 0) {
-                            vietnameseParagraph.append(" ");
-                        }
-                        vietnameseParagraph.append(vi);
-                        
-                        // Check if Vietnamese sentence ends with ! ? or ...
-                        if (!vi.endsWith("!") && !vi.endsWith("?") && !vi.endsWith("...")) {
-                            vietnameseParagraph.append(".");
-                        }
+                    // Add English sentence with comma
+                    if (englishParagraph.length() > 0) {
+                        englishParagraph.append(". ");
                     }
+                    englishParagraph.append(eng);
                     
-                    // Add English paragraph with 1.5 line spacing
-                    XWPFParagraph engParagraph = document.createParagraph();
-                    engParagraph.setAlignment(ParagraphAlignment.LEFT);
-                    engParagraph.setSpacingBetween(1.5, LineSpacingRule.AUTO);
-                    engParagraph.setSpacingAfter(1000);
-                    XWPFRun engRun = engParagraph.createRun();
-                    engRun.setFontFamily("Times New Roman");
-                    engRun.setFontSize(18);
-                    engRun.setText(englishParagraph.toString());
+                    // Add Vietnamese sentence with period, but check if it already ends with punctuation
+                    if (vietnameseParagraph.length() > 0) {
+                        vietnameseParagraph.append(" ");
+                    }
+                    vietnameseParagraph.append(vi);
                     
-                    // Add Vietnamese paragraph with 1.5 line spacing
-                    XWPFParagraph viParagraph = document.createParagraph();
-                    viParagraph.setAlignment(ParagraphAlignment.LEFT);
-                    viParagraph.setSpacingBetween(1.5, LineSpacingRule.AUTO);
-                    viParagraph.setSpacingAfter(1000);
-                    XWPFRun viRun = viParagraph.createRun();
-                    viRun.setFontFamily("Times New Roman");
-                    viRun.setFontSize(18);
-                    viRun.setText(vietnameseParagraph.toString());
-                } else {
-                    XWPFParagraph emptyParagraph = document.createParagraph();
-                    emptyParagraph.setAlignment(ParagraphAlignment.LEFT);
-                    XWPFRun emptyRun = emptyParagraph.createRun();
-                    emptyRun.setFontFamily("Times New Roman");
-                    emptyRun.setFontSize(16);
-                    emptyRun.setItalic(true);
-                    emptyRun.setText("(No content available for this volume)");
+                    // Check if Vietnamese sentence ends with ! ? or ...
+                    if (!vi.endsWith("!") && !vi.endsWith("?") && !vi.endsWith("...")) {
+                        vietnameseParagraph.append(".");
+                    }
                 }
                 
-                // Page break between volumes (only if not the last volume)
-                if (volumes.indexOf(volume) < volumes.size() - 1) {
+                // Add English paragraph with 1.5 line spacing
+                XWPFParagraph engParagraph = document.createParagraph();
+                engParagraph.setAlignment(ParagraphAlignment.LEFT);
+                engParagraph.setSpacingBetween(1.5, LineSpacingRule.AUTO);
+                engParagraph.setSpacingAfter(1000);
+                XWPFRun engRun = engParagraph.createRun();
+                engRun.setFontFamily("Book Antiqua");
+                engRun.setFontSize(18);
+                engRun.setText(englishParagraph.toString());
+                
+                // Add Vietnamese paragraph with 1.5 line spacing
+                XWPFParagraph viParagraph = document.createParagraph();
+                viParagraph.setAlignment(ParagraphAlignment.LEFT);
+                viParagraph.setSpacingBetween(1.5, LineSpacingRule.AUTO);
+                viParagraph.setSpacingAfter(1000);
+                XWPFRun viRun = viParagraph.createRun();
+                viRun.setFontFamily("Book Antiqua");
+                viRun.setFontSize(18);
+                viRun.setText(vietnameseParagraph.toString());
+                
+                // Increment lesson number
+                lessonNumber++;
+                
+                // Page break between volumes (only if not the last volume with content)
+                if (lessonNumber <= volumes.size()) {
                     XWPFParagraph pageBreakParagraph = document.createParagraph();
                     XWPFRun pageBreakRun = pageBreakParagraph.createRun();
                     pageBreakRun.addBreak(BreakType.PAGE);
