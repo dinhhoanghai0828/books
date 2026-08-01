@@ -12,7 +12,6 @@ import org.apache.pdfbox.pdmodel.common.PDRectangle;
 import org.apache.pdfbox.pdmodel.font.PDType0Font;
 import org.apache.pdfbox.pdmodel.font.PDType1Font;
 import org.apache.poi.xwpf.usermodel.*;
-import org.openxmlformats.schemas.wordprocessingml.x2006.main.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -21,9 +20,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.ByteArrayOutputStream;
-import java.io.IOException;
 import java.io.InputStream;
-import java.math.BigInteger;
 import java.util.List;
 
 @RestController
@@ -279,20 +276,26 @@ public class VolumeController {
             PDType0Font font = null;
             boolean useCustomFont = false;
             try {
-                // Try Arial first (best Vietnamese support)
-                font = PDType0Font.load(document, new java.io.File("C:\\Windows\\Fonts\\arial.ttf"));
+                // Try Times New Roman first (serif font similar to Book Antiqua)
+                font = PDType0Font.load(document, new java.io.File("C:\\Windows\\Fonts\\times.ttf"));
                 useCustomFont = true;
             } catch (Exception e) {
                 try {
-                    // Try to load from resources
-                    InputStream fontStream = getClass().getResourceAsStream("/fonts/Arial.ttf");
-                    if (fontStream != null) {
-                        font = PDType0Font.load(document, fontStream);
-                        useCustomFont = true;
-                    }
+                    // Try Arial as fallback (good Vietnamese support)
+                    font = PDType0Font.load(document, new java.io.File("C:\\Windows\\Fonts\\arial.ttf"));
+                    useCustomFont = true;
                 } catch (Exception ex) {
-                    // If all fails, use standard font (won't support Vietnamese)
-                    useCustomFont = false;
+                    try {
+                        // Try to load from resources
+                        InputStream fontStream = getClass().getResourceAsStream("/fonts/Arial.ttf");
+                        if (fontStream != null) {
+                            font = PDType0Font.load(document, fontStream);
+                            useCustomFont = true;
+                        }
+                    } catch (Exception ex2) {
+                        // If all fails, use standard font (won't support Vietnamese)
+                        useCustomFont = false;
+                    }
                 }
             }
             
@@ -335,13 +338,27 @@ public class VolumeController {
                     yPosition = page.getMediaBox().getHeight() - margin;
                 }
                 
-                // Draw title (bold and larger - 25pt to match Word)
+                // Draw title (bold and larger - 25pt to match Word, centered)
                 if (useCustomFont) {
                     contentStream.setFont(font, 25);
                 } else {
                     contentStream.setFont(PDType1Font.HELVETICA_BOLD, 25);
                 }
+                
+                // Center the title
+                float titleWidth;
+                if (useCustomFont) {
+                    titleWidth = font.getStringWidth(title) / 1000 * 25;
+                } else {
+                    titleWidth = PDType1Font.HELVETICA_BOLD.getStringWidth(title) / 1000 * 25;
+                }
+                float titleX = (page.getMediaBox().getWidth() - titleWidth) / 2;
+                
+                // Move to centered position
+                contentStream.newLineAtOffset(titleX - margin, 0);
                 contentStream.showText(title);
+                contentStream.newLineAtOffset(-(titleX - margin), 0); // Reset x position
+                
                 yPosition -= 50; // 15pt spacing after title (300 in Word = 15pt)
                 contentStream.newLineAtOffset(0, -50);
                 if (useCustomFont) {
@@ -502,6 +519,23 @@ public class VolumeController {
                 // Add spacing between volumes (50pt to match Word)
                 yPosition -= 50;
                 contentStream.newLineAtOffset(0, -50);
+                
+                // Force page break after each volume (except the last one)
+                if (lessonNumber < volumes.size()) {
+                    contentStream.endText();
+                    contentStream.close();
+                    page = new PDPage(PDRectangle.A4);
+                    document.addPage(page);
+                    contentStream = new PDPageContentStream(document, page);
+                    if (useCustomFont) {
+                        contentStream.setFont(font, 18);
+                    } else {
+                        contentStream.setFont(PDType1Font.HELVETICA, 18);
+                    }
+                    contentStream.beginText();
+                    contentStream.newLineAtOffset(margin, page.getMediaBox().getHeight() - margin);
+                    yPosition = page.getMediaBox().getHeight() - margin;
+                }
                 
                 lessonNumber++;
             }
