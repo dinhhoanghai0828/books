@@ -273,13 +273,13 @@ public class VolumeController {
             float margin = 50;
             float pageWidth = page.getMediaBox().getWidth() - 2 * margin;
             float yPosition = page.getMediaBox().getHeight() - margin;
-            float lineHeight = 25;
+            float lineHeight = 27; // 1.5 line spacing with 18pt font
             
             // Load a Unicode font that supports Vietnamese
             PDType0Font font = null;
             boolean useCustomFont = false;
             try {
-                // Try to load Arial from Windows system fonts
+                // Try Arial first (best Vietnamese support)
                 font = PDType0Font.load(document, new java.io.File("C:\\Windows\\Fonts\\arial.ttf"));
                 useCustomFont = true;
             } catch (Exception e) {
@@ -298,9 +298,9 @@ public class VolumeController {
             
             PDPageContentStream contentStream = new PDPageContentStream(document, page);
             if (useCustomFont) {
-                contentStream.setFont(font, 12);
+                contentStream.setFont(font, 18);
             } else {
-                contentStream.setFont(PDType1Font.HELVETICA, 12);
+                contentStream.setFont(PDType1Font.HELVETICA, 18);
             }
             contentStream.beginText();
             contentStream.newLineAtOffset(margin, yPosition);
@@ -319,35 +319,35 @@ public class VolumeController {
                 String title = "Lesson " + lessonNumber + ": " + volume.getEng();
                 
                 // Check if we need a new page for title
-                if (yPosition < margin + 50) {
+                if (yPosition < margin + 60) {
                     contentStream.endText();
                     contentStream.close();
                     page = new PDPage(PDRectangle.A4);
                     document.addPage(page);
                     contentStream = new PDPageContentStream(document, page);
                     if (useCustomFont) {
-                        contentStream.setFont(font, 12);
+                        contentStream.setFont(font, 18);
                     } else {
-                        contentStream.setFont(PDType1Font.HELVETICA, 12);
+                        contentStream.setFont(PDType1Font.HELVETICA, 18);
                     }
                     contentStream.beginText();
                     contentStream.newLineAtOffset(margin, page.getMediaBox().getHeight() - margin);
                     yPosition = page.getMediaBox().getHeight() - margin;
                 }
                 
-                // Draw title (bold and larger)
+                // Draw title (bold and larger - 25pt to match Word)
                 if (useCustomFont) {
-                    contentStream.setFont(font, 16);
+                    contentStream.setFont(font, 25);
                 } else {
-                    contentStream.setFont(PDType1Font.HELVETICA_BOLD, 16);
+                    contentStream.setFont(PDType1Font.HELVETICA_BOLD, 25);
                 }
                 contentStream.showText(title);
-                yPosition -= 30;
-                contentStream.newLineAtOffset(0, -30);
+                yPosition -= 50; // 15pt spacing after title (300 in Word = 15pt)
+                contentStream.newLineAtOffset(0, -50);
                 if (useCustomFont) {
-                    contentStream.setFont(font, 12);
+                    contentStream.setFont(font, 18);
                 } else {
-                    contentStream.setFont(PDType1Font.HELVETICA, 12);
+                    contentStream.setFont(PDType1Font.HELVETICA, 18);
                 }
                 
                 // Build English and Vietnamese paragraphs
@@ -384,9 +384,9 @@ public class VolumeController {
                     } else {
                         float lineWidth;
                         if (useCustomFont) {
-                            lineWidth = font.getStringWidth(currentLine + " " + word) / 1000 * 12;
+                            lineWidth = font.getStringWidth(currentLine + " " + word) / 1000 * 18;
                         } else {
-                            lineWidth = PDType1Font.HELVETICA.getStringWidth(currentLine + " " + word) / 1000 * 12;
+                            lineWidth = PDType1Font.HELVETICA.getStringWidth(currentLine + " " + word) / 1000 * 18;
                         }
                         if (lineWidth > pageWidth) {
                             if (yPosition < margin + lineHeight) {
@@ -396,9 +396,9 @@ public class VolumeController {
                                 document.addPage(page);
                                 contentStream = new PDPageContentStream(document, page);
                                 if (useCustomFont) {
-                                    contentStream.setFont(font, 12);
+                                    contentStream.setFont(font, 18);
                                 } else {
-                                    contentStream.setFont(PDType1Font.HELVETICA, 12);
+                                    contentStream.setFont(PDType1Font.HELVETICA, 18);
                                 }
                                 contentStream.beginText();
                                 contentStream.newLineAtOffset(margin, page.getMediaBox().getHeight() - margin);
@@ -421,9 +421,9 @@ public class VolumeController {
                         document.addPage(page);
                         contentStream = new PDPageContentStream(document, page);
                         if (useCustomFont) {
-                            contentStream.setFont(font, 12);
+                            contentStream.setFont(font, 18);
                         } else {
-                            contentStream.setFont(PDType1Font.HELVETICA, 12);
+                            contentStream.setFont(PDType1Font.HELVETICA, 18);
                         }
                         contentStream.beginText();
                         contentStream.newLineAtOffset(margin, page.getMediaBox().getHeight() - margin);
@@ -434,9 +434,9 @@ public class VolumeController {
                     contentStream.newLineAtOffset(0, -lineHeight);
                 }
                 
-                // Add spacing between English and Vietnamese
-                yPosition -= 20;
-                contentStream.newLineAtOffset(0, -20);
+                // Add spacing between English and Vietnamese (50pt to match Word)
+                yPosition -= 50;
+                contentStream.newLineAtOffset(0, -50);
                 
                 // Add Vietnamese paragraph
                 String viText = vietnameseParagraph.toString();
@@ -449,9 +449,9 @@ public class VolumeController {
                     } else {
                         float lineWidth;
                         if (useCustomFont) {
-                            lineWidth = font.getStringWidth(currentLine + " " + word) / 1000 * 12;
+                            lineWidth = font.getStringWidth(currentLine + " " + word) / 1000 * 18;
                         } else {
-                            lineWidth = PDType1Font.HELVETICA.getStringWidth(currentLine + " " + word) / 1000 * 12;
+                            lineWidth = PDType1Font.HELVETICA.getStringWidth(currentLine + " " + word) / 1000 * 18;
                         }
                         if (lineWidth > pageWidth) {
                             if (yPosition < margin + lineHeight) {
@@ -461,9 +461,9 @@ public class VolumeController {
                                 document.addPage(page);
                                 contentStream = new PDPageContentStream(document, page);
                                 if (useCustomFont) {
-                                    contentStream.setFont(font, 12);
+                                    contentStream.setFont(font, 18);
                                 } else {
-                                    contentStream.setFont(PDType1Font.HELVETICA, 12);
+                                    contentStream.setFont(PDType1Font.HELVETICA, 18);
                                 }
                                 contentStream.beginText();
                                 contentStream.newLineAtOffset(margin, page.getMediaBox().getHeight() - margin);
@@ -486,9 +486,9 @@ public class VolumeController {
                         document.addPage(page);
                         contentStream = new PDPageContentStream(document, page);
                         if (useCustomFont) {
-                            contentStream.setFont(font, 12);
+                            contentStream.setFont(font, 18);
                         } else {
-                            contentStream.setFont(PDType1Font.HELVETICA, 12);
+                            contentStream.setFont(PDType1Font.HELVETICA, 18);
                         }
                         contentStream.beginText();
                         contentStream.newLineAtOffset(margin, page.getMediaBox().getHeight() - margin);
@@ -499,9 +499,9 @@ public class VolumeController {
                     contentStream.newLineAtOffset(0, -lineHeight);
                 }
                 
-                // Add spacing between volumes
-                yPosition -= 40;
-                contentStream.newLineAtOffset(0, -40);
+                // Add spacing between volumes (50pt to match Word)
+                yPosition -= 50;
+                contentStream.newLineAtOffset(0, -50);
                 
                 lessonNumber++;
             }
