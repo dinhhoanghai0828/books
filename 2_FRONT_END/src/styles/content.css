@@ -53,6 +53,18 @@
   }
 }
 
+@media (min-width: 481px) and (max-width: 768px) {
+  .content-container {
+    padding: 20px;
+    padding-top: 150px; /* Đẩy nội dung xuống dưới Breadcrumb cho tablet */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Căn giữa theo chiều ngang toàn bộ nội dung */
+    padding-bottom: 150px;
+    background-color: #ffffff;
+  }
+}
+
 @media (min-width: 768px) {
   .content-container {
     padding: 20px;
