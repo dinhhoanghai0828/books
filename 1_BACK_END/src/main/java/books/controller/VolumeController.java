@@ -182,26 +182,37 @@ public class VolumeController {
                 
                 List<ContentDTO> contents = volumeService.getContentsByVolumeSlug(volume.getSlug());
                 
-                for (ContentDTO content : contents) {
-                    XWPFParagraph contentParagraph = document.createParagraph();
-                    contentParagraph.setAlignment(ParagraphAlignment.LEFT);
-                    XWPFRun contentRun = contentParagraph.createRun();
-                    contentRun.setFontFamily("Times New Roman");
-                    contentRun.setFontSize(20);
-                    contentRun.setText(content.getEng());
-                    
-                    XWPFParagraph viParagraph = document.createParagraph();
-                    viParagraph.setAlignment(ParagraphAlignment.LEFT);
-                    XWPFRun viRun = viParagraph.createRun();
-                    viRun.setFontFamily("Times New Roman");
-                    viRun.setFontSize(20);
-                    viRun.setText(content.getVi());
-                    viRun.addBreak();
-                    
-                    // Check if content is long (more than 200 characters) to decide page break
-                    if (content.getEng().length() > 200 || content.getVi().length() > 200) {
-                        contentRun.addBreak(BreakType.PAGE);
+                if (contents != null && !contents.isEmpty()) {
+                    for (ContentDTO content : contents) {
+                        XWPFParagraph contentParagraph = document.createParagraph();
+                        contentParagraph.setAlignment(ParagraphAlignment.LEFT);
+                        XWPFRun contentRun = contentParagraph.createRun();
+                        contentRun.setFontFamily("Times New Roman");
+                        contentRun.setFontSize(20);
+                        contentRun.setText(content.getEng());
+                        
+                        XWPFParagraph viParagraph = document.createParagraph();
+                        viParagraph.setAlignment(ParagraphAlignment.LEFT);
+                        XWPFRun viRun = viParagraph.createRun();
+                        viRun.setFontFamily("Times New Roman");
+                        viRun.setFontSize(20);
+                        viRun.setText(content.getVi());
+                        viRun.addBreak();
+                        
+                        // Check if content is long (more than 200 characters) to decide page break
+                        if (content.getEng().length() > 200 || content.getVi().length() > 200) {
+                            contentRun.addBreak(BreakType.PAGE);
+                        }
                     }
+                } else {
+                    XWPFParagraph emptyParagraph = document.createParagraph();
+                    emptyParagraph.setAlignment(ParagraphAlignment.LEFT);
+                    XWPFRun emptyRun = emptyParagraph.createRun();
+                    emptyRun.setFontFamily("Times New Roman");
+                    emptyRun.setFontSize(16);
+                    emptyRun.setItalic(true);
+                    emptyRun.setText("(No content available for this volume)");
+                    emptyRun.addBreak();
                 }
                 
                 // Page break between volumes
