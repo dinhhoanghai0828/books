@@ -158,16 +158,6 @@ public class VolumeController {
             
             XWPFDocument document = new XWPFDocument();
             
-            // Add book title
-            XWPFParagraph titleParagraph = document.createParagraph();
-            titleParagraph.setAlignment(ParagraphAlignment.CENTER);
-            XWPFRun titleRun = titleParagraph.createRun();
-            titleRun.setBold(true);
-            titleRun.setFontFamily("Times New Roman");
-            titleRun.setFontSize(25);
-            titleRun.setText("Book: " + bookSlug);
-            titleRun.addBreak(BreakType.PAGE);
-            
             // Add content from all volumes
             for (VolumeDTO volume : volumes) {
                 // Add volume title
@@ -176,7 +166,7 @@ public class VolumeController {
                 XWPFRun volumeTitleRun = volumeTitleParagraph.createRun();
                 volumeTitleRun.setBold(true);
                 volumeTitleRun.setFontFamily("Times New Roman");
-                volumeTitleRun.setFontSize(22);
+                volumeTitleRun.setFontSize(18);
                 volumeTitleRun.setText(volume.getEng());
                 volumeTitleRun.addBreak();
                 
@@ -184,27 +174,49 @@ public class VolumeController {
                 List<ContentDTO> contents = volume.getContents();
                 
                 if (contents != null && !contents.isEmpty()) {
+                    // Build English paragraph
+                    StringBuilder englishParagraph = new StringBuilder();
+                    StringBuilder vietnameseParagraph = new StringBuilder();
+                    
                     for (ContentDTO content : contents) {
-                        XWPFParagraph contentParagraph = document.createParagraph();
-                        contentParagraph.setAlignment(ParagraphAlignment.LEFT);
-                        XWPFRun contentRun = contentParagraph.createRun();
-                        contentRun.setFontFamily("Times New Roman");
-                        contentRun.setFontSize(20);
-                        contentRun.setText(content.getEng());
+                        String eng = content.getEng().trim();
+                        String vi = content.getVi().trim();
                         
-                        XWPFParagraph viParagraph = document.createParagraph();
-                        viParagraph.setAlignment(ParagraphAlignment.LEFT);
-                        XWPFRun viRun = viParagraph.createRun();
-                        viRun.setFontFamily("Times New Roman");
-                        viRun.setFontSize(20);
-                        viRun.setText(content.getVi());
-                        viRun.addBreak();
+                        // Add English sentence with comma
+                        if (englishParagraph.length() > 0) {
+                            englishParagraph.append(", ");
+                        }
+                        englishParagraph.append(eng);
                         
-                        // Check if content is long (more than 200 characters) to decide page break
-                        if (content.getEng().length() > 200 || content.getVi().length() > 200) {
-                            contentRun.addBreak(BreakType.PAGE);
+                        // Add Vietnamese sentence with period, but check if it already ends with punctuation
+                        if (vietnameseParagraph.length() > 0) {
+                            vietnameseParagraph.append(" ");
+                        }
+                        vietnameseParagraph.append(vi);
+                        
+                        // Check if Vietnamese sentence ends with ! ? or ...
+                        if (!vi.endsWith("!") && !vi.endsWith("?") && !vi.endsWith("...")) {
+                            vietnameseParagraph.append(".");
                         }
                     }
+                    
+                    // Add English paragraph
+                    XWPFParagraph engParagraph = document.createParagraph();
+                    engParagraph.setAlignment(ParagraphAlignment.LEFT);
+                    XWPFRun engRun = engParagraph.createRun();
+                    engRun.setFontFamily("Times New Roman");
+                    engRun.setFontSize(18);
+                    engRun.setText(englishParagraph.toString());
+                    engRun.addBreak();
+                    
+                    // Add Vietnamese paragraph
+                    XWPFParagraph viParagraph = document.createParagraph();
+                    viParagraph.setAlignment(ParagraphAlignment.LEFT);
+                    XWPFRun viRun = viParagraph.createRun();
+                    viRun.setFontFamily("Times New Roman");
+                    viRun.setFontSize(18);
+                    viRun.setText(vietnameseParagraph.toString());
+                    viRun.addBreak();
                 } else {
                     XWPFParagraph emptyParagraph = document.createParagraph();
                     emptyParagraph.setAlignment(ParagraphAlignment.LEFT);
