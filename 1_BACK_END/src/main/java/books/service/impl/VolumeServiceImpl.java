@@ -1,8 +1,10 @@
 package books.service.impl;
 
 import books.dao.interfaces.VolumeAdapter;
+import books.dto.ContentDTO;
 import books.dto.VolumeDTO;
 import books.entity.Volume;
+import books.service.interfaces.ContentService;
 import books.service.interfaces.VolumeService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,11 +18,13 @@ import java.util.stream.Collectors;
 public class VolumeServiceImpl implements VolumeService {
     private VolumeAdapter volumeAdapter;
     private ModelMapper modelMapper;
+    private ContentService contentService;
 
     @Autowired
-    public VolumeServiceImpl(VolumeAdapter volumeAdapter, ModelMapper modelMapper) {
+    public VolumeServiceImpl(VolumeAdapter volumeAdapter, ModelMapper modelMapper, ContentService contentService) {
         this.volumeAdapter = volumeAdapter;
         this.modelMapper = modelMapper;
+        this.contentService = contentService;
     }
 
     @Override
@@ -56,5 +60,21 @@ public class VolumeServiceImpl implements VolumeService {
     @Override
     public boolean markAsUnread(String slug) throws Exception {
         return volumeAdapter.markAsUnread(slug);
+    }
+
+    @Override
+    public List<ContentDTO> getContentsByVolumeSlug(String slug) throws Exception {
+        return contentService.getContentByVolumeSlug(slug);
+    }
+
+    @Override
+    public List<VolumeDTO> getVolumesByBookSlug(String bookSlug) throws Exception {
+        List<Volume> volumes = volumeAdapter.getVolumesByBookSlug(bookSlug);
+        List<VolumeDTO> volumeDTOS = volumes.stream().map(volume -> {
+            VolumeDTO dto = modelMapper.map(volume, VolumeDTO.class);
+            dto.setIsRead(volume.getIsRead());
+            return dto;
+        }).collect(Collectors.toList());
+        return volumeDTOS;
     }
 }

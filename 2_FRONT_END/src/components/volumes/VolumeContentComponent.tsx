@@ -5,7 +5,7 @@ import { Content } from 'antd/es/layout/layout';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { useState } from 'react';
-import { updateVolume, runVolumesExport, markAsRead, markAsUnread } from '@/utils/apiService';
+import { updateVolume, runVolumesExport, markAsRead, markAsUnread, downloadVolumeWord } from '@/utils/apiService';
 
 interface VolumeContentComponentProps {
   volumes: Volume[];
@@ -25,6 +25,7 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
   const [notifApi, notifContextHolder] = notification.useNotification();
   const [exportLoading, setExportLoading] = useState(false);
   const [markReadLoading, setMarkReadLoading] = useState<string | null>(null);
+  const [downloadLoading, setDownloadLoading] = useState(false);
 
   const handleOpenEdit = (volume: Volume, e: React.MouseEvent) => {
     e.preventDefault();
@@ -154,10 +155,36 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
     }
   };
 
+  const handleDownloadWord = async () => {
+    try {
+      setDownloadLoading(true);
+      // Download all volumes for this book as a single Word file
+      const slug = Array.isArray(bookSlug) ? bookSlug[0] : bookSlug;
+      await downloadVolumeWord(slug || '');
+      notifApi.success({
+        message: 'Download thanh cong',
+        description: 'File Word da duoc tai xuong.',
+        placement: 'topRight',
+        duration: 3,
+        style: { backgroundColor: '#f6ffed', border: '1px solid #b7eb8f' },
+      });
+    } catch (error: any) {
+      notifApi.warning({
+        message: 'Download that bai',
+        description: 'Chuc nang nay can backend ho tro. Vui long kiem tra API.',
+        placement: 'topRight',
+        duration: 4,
+        style: { backgroundColor: '#fff2f0', border: '1px solid #ffccc7' },
+      });
+    } finally {
+      setDownloadLoading(false);
+    }
+  };
+
   return (
     <Content className="volumeClass">
       {notifContextHolder}
-      <div style={{ marginBottom: 16 }}>
+      <div style={{ marginBottom: 16, display: 'flex', gap: 8 }}>
         <Button
           type="primary"
           icon={<DownloadOutlined />}
@@ -166,6 +193,14 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
           style={{ backgroundColor: '#6366f1', borderColor: '#6366f1', color: '#fff' }}
         >
           Cập nhật Volume
+        </Button>
+        <Button
+          type="default"
+          icon={<DownloadOutlined />}
+          onClick={handleDownloadWord}
+          loading={downloadLoading}
+        >
+          Download Word
         </Button>
       </div>
       {volumes && volumes.length > 0 ? (

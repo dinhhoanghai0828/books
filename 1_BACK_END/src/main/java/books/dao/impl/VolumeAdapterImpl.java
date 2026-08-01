@@ -21,6 +21,7 @@ public class VolumeAdapterImpl implements VolumeAdapter {
     private static final String SQL_UPDATE_VOLUME = "UPDATE VOLUMES SET ENG = ?, VI = ?, START_TIME = ?, END_TIME = ?, CHECKED = ? WHERE ID = ?";
     private static final String SQL_MARK_AS_READ = "UPDATE VOLUMES SET IS_READ = 1 WHERE SLUG = ?";
     private static final String SQL_MARK_AS_UNREAD = "UPDATE VOLUMES SET IS_READ = 0 WHERE SLUG = ?";
+    private static final String SQL_GET_VOLUMES_BY_BOOK_SLUG = "SELECT * FROM VOLUMES WHERE BOOK_SLUG = ? ORDER BY NUMBER";
 
     @Override
     public List<Volume> getVolumes() throws Exception {
@@ -158,6 +159,45 @@ public class VolumeAdapterImpl implements VolumeAdapter {
         } finally {
             DBUtils.closeAll(thisMethod, con, pstmt, null);
         }
+    }
+
+    @Override
+    public List<Volume> getVolumesByBookSlug(String bookSlug) throws Exception {
+        String thisMethod = "VolumeAdapterImpl.getVolumesByBookSlug";
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        List<Volume> volumes = new ArrayList<>();
+        try {
+            con = DBUtils.getConnection(thisMethod, true, Connection.TRANSACTION_READ_COMMITTED);
+            pstmt = DBUtils.prepareStatement(con, SQL_GET_VOLUMES_BY_BOOK_SLUG);
+            pstmt.setString(1, bookSlug);
+            rs = DBUtils.executeQuery(pstmt, SQL_GET_VOLUMES_BY_BOOK_SLUG);
+            while (rs.next()) {
+                Volume volume = new Volume();
+                volume.setId(rs.getString("ID"));
+                volume.setUuid(rs.getString("UUID"));
+                volume.setEng(rs.getString("ENG"));
+                volume.setVi(rs.getString("VI"));
+                volume.setAudio(rs.getString("AUDIO"));
+                volume.setVideo(rs.getString("VIDEO"));
+                volume.setImg(rs.getString("IMG"));
+                volume.setStartTime(rs.getString("START_TIME"));
+                volume.setEndTime(rs.getString("END_TIME"));
+                volume.setBookSlug(rs.getString("BOOK_SLUG"));
+                volume.setNumber(rs.getInt("NUMBER"));
+                volume.setChecked(rs.getString("CHECKED"));
+                volume.setIsRead(rs.getInt("IS_READ"));
+                volumes.add(volume);
+            }
+
+        } catch (Exception ex) {
+            logger.error(ex.getMessage());
+            throw ex;
+        } finally {
+            DBUtils.closeAll(thisMethod, con, pstmt, rs);
+        }
+        return volumes;
     }
 
 }

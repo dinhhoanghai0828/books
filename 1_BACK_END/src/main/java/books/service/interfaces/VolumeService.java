@@ -1,6 +1,7 @@
 package books.service.interfaces;
 
 import books.dto.BookDTO;
+import books.dto.ContentDTO;
 import books.dto.VolumeDTO;
 import org.springframework.stereotype.Service;
 
@@ -17,4 +18,8 @@ public interface VolumeService {
     boolean markAsRead(String slug) throws Exception;
 
     boolean markAsUnread(String slug) throws Exception;
+
+    List<ContentDTO> getContentsByVolumeSlug(String slug) throws Exception;
+
+    List<VolumeDTO> getVolumesByBookSlug(String bookSlug) throws Exception;
 }
