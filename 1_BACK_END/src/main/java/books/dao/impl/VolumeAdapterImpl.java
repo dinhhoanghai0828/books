@@ -188,6 +188,7 @@ public class VolumeAdapterImpl implements VolumeAdapter {
                 volume.setNumber(rs.getInt("NUMBER"));
                 volume.setChecked(rs.getString("CHECKED"));
                 volume.setIsRead(rs.getInt("IS_READ"));
+                volume.setSlug(rs.getString("SLUG"));
                 volumes.add(volume);
             }
 
