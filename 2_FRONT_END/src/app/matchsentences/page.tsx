@@ -95,8 +95,12 @@ const MatchSentencesPage = () => {
       return;
     }
     
-    // Nếu đã chọn EN khác, thay thế
     setSelectedEn(id);
+    
+    // Nếu đã chọn VI, thực hiện match ngay
+    if (selectedVi) {
+      handleMatch(id, selectedVi);
+    }
   };
 
   const handleViClick = (id: string) => {
@@ -111,14 +115,18 @@ const MatchSentencesPage = () => {
       return;
     }
     
-    // Nếu đã chọn VI khác, thay thế
     setSelectedVi(id);
+    
+    // Nếu đã chọn EN, thực hiện match ngay
+    if (selectedEn) {
+      handleMatch(selectedEn, id);
+    }
   };
 
-  const handleMatch = () => {
-    if (!selectedEn || !selectedVi) return;
+  const handleMatch = (enId: string, viId: string) => {
     const matchNumber = matchedPairs.length + 1;
-    setMatchedPairs((prev) => [...prev, { enId: selectedEn, viId: selectedVi, matchNumber }]);
+    setMatchedPairs((prev) => [...prev, { enId, viId, matchNumber }]);
+    // Clear selections to allow continuous matching
     setSelectedEn(null);
     setSelectedVi(null);
   };
@@ -324,28 +332,6 @@ const MatchSentencesPage = () => {
               />
             )}
           </svg>
-          
-          {/* Match button when both sides selected */}
-          {selectedEn && selectedVi && (
-            <div style={{
-              position: 'absolute',
-              top: '50%',
-              left: '50%',
-              transform: 'translate(-50%, -50%)',
-              zIndex: 20,
-            }}>
-              <Button
-                type="primary"
-                onClick={handleMatch}
-                style={{
-                  backgroundColor: '#fa8c16',
-                  borderColor: '#fa8c16',
-                }}
-              >
-                Ghép
-              </Button>
-            </div>
-          )}
           
           {/* Cột tiếng Anh */}
           <div style={{ flex: 1, overflow: 'visible' }}>
