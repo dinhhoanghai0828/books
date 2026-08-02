@@ -193,10 +193,12 @@ const MatchSentencesPage = () => {
       const viRect = viEl.getBoundingClientRect();
       
       // Calculate positions relative to container
+      // Subtract header offset (title + back button + margin)
+      const headerOffset = 120; // Approximate height of header elements
       const enX = enRect.right - containerRect.left;
-      const enY = enRect.top + enRect.height / 2 - containerRect.top;
+      const enY = enRect.top + enRect.height / 2 - containerRect.top - headerOffset;
       const viX = viRect.left - containerRect.left;
-      const viY = viRect.top + viRect.height / 2 - containerRect.top;
+      const viY = viRect.top + viRect.height / 2 - containerRect.top - headerOffset;
       
       // Draw bezier curve
       const midX = (enX + viX) / 2;
