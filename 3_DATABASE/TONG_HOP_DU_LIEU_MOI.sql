@@ -1,349 +1,183 @@
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES 
-('It is a sunny day','','00:00:00.390','00:00:02.350','esl-fast-beginner-1-32'),
-('She feels hot','','00:00:03.190','00:00:04.530','esl-fast-beginner-1-32'),
-('She fans herself with a book','','00:00:05.210','00:00:07.530','esl-fast-beginner-1-32'),
-('It is still hot','','00:00:08.430','00:00:09.870','esl-fast-beginner-1-32'),
-('She turns on the air conditioner','','00:00:10.630','00:00:12.910','esl-fast-beginner-1-32'),
-('It is still hot','','00:00:13.830','00:00:15.570','esl-fast-beginner-1-32'),
-('She jumps into a pool','','00:00:16.390','00:00:18.530','esl-fast-beginner-1-32'),
-('It is still hot','','00:00:19.550','00:00:21.330','esl-fast-beginner-1-32'),
-('Her dad has an idea','','00:00:22.450','00:00:24.170','esl-fast-beginner-1-32'),
-('He takes her to the ice cream shop','','00:00:24.810','00:00:27.490','esl-fast-beginner-1-32'),
-('They share a banana split','','00:00:27.490','00:00:30.150','esl-fast-beginner-1-32'),
-('She does not feel hot anymore','','00:00:31.130','00:00:32.890','esl-fast-beginner-1-32');
+('She goes to her art class','','00:00:00.460','00:00:03.059','esl-fast-beginner-1-61'),
+('She wears a special white coat','','00:00:03.980','00:00:06.380','esl-fast-beginner-1-61'),
+('Now, her inside clothes will be clean','','00:00:07.520','00:00:11.280','esl-fast-beginner-1-61'),
+('She is going to draw a sunflower','','00:00:12.560','00:00:14.900','esl-fast-beginner-1-61'),
+('She gets a paintbrush','','00:00:16.200','00:00:18.120','esl-fast-beginner-1-61'),
+('She gets green, yellow, and brown paint','','00:00:19.220','00:00:23.400','esl-fast-beginner-1-61'),
+('She gets a white piece of paper','','00:00:24.100','00:00:27.200','esl-fast-beginner-1-61'),
+('She dips her paintbrush in the paint','','00:00:28.200','00:00:30.680','esl-fast-beginner-1-61'),
+('She starts to draw','','00:00:31.920','00:00:33.440','esl-fast-beginner-1-61');
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES 
-('He has a test tomorrow','','00:00:00.330','00:00:02.370','esl-fast-beginner-1-33'),
-('He does not want to study','','00:00:03.130','00:00:04.710','esl-fast-beginner-1-33'),
-('Instead, he plays video games','','00:00:05.750','00:00:08.330','esl-fast-beginner-1-33'),
-('The next day, he takes the test','','00:00:09.250','00:00:11.610','esl-fast-beginner-1-33'),
-('It is very hard','','00:00:12.190','00:00:13.530','esl-fast-beginner-1-33'),
-('He does not know anything','','00:00:14.350','00:00:15.630','esl-fast-beginner-1-33'),
-('He turns in his test blank','','00:00:16.610','00:00:19.290','esl-fast-beginner-1-33'),
-('The teacher scolds him and gives him an F','','00:00:20.230','00:00:23.370','esl-fast-beginner-1-33');
+('She is getting ready for soccer practice','','00:00:00.260','00:00:03.380','esl-fast-beginner-1-62'),
+('She wears her uniform','','00:00:04.200','00:00:05.940','esl-fast-beginner-1-62'),
+('She gets a soccer ball','','00:00:07.140','00:00:08.780','esl-fast-beginner-1-62'),
+('Her mom drives her to the soccer field','','00:00:09.760','00:00:12.120','esl-fast-beginner-1-62'),
+('She gets out of the car','','00:00:12.920','00:00:14.820','esl-fast-beginner-1-62'),
+('She says hi to all her teammates','','00:00:16.000','00:00:18.880','esl-fast-beginner-1-62'),
+('They stretch','','00:00:19.900','00:00:20.860','esl-fast-beginner-1-62'),
+('They put their legs together','','00:00:21.800','00:00:23.400','esl-fast-beginner-1-62'),
+('They reach their toes with their hands','','00:00:24.440','00:00:26.900','esl-fast-beginner-1-62');
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES 
-('Helen wants to do well on the math test tomorrow','','00:00:00.200','00:00:03.900','esl-fast-beginner-1-34'),
-('She takes out her book and studies','','00:00:04.840','00:00:07.220','esl-fast-beginner-1-34'),
-('Her brother then comes into her room','','00:00:08.000','00:00:10.120','esl-fast-beginner-1-34'),
-('He starts making loud noises','','00:00:11.000','00:00:13.140','esl-fast-beginner-1-34'),
-('Helen yells at him','','00:00:14.340','00:00:15.800','esl-fast-beginner-1-34'),
-('Her mother then comes into her room','','00:00:16.640','00:00:18.620','esl-fast-beginner-1-34'),
-('She asks Helen to cook dinner','','00:00:19.500','00:00:22.100','esl-fast-beginner-1-34'),
-('Helen yells at her','','00:00:23.100','00:00:24.200','esl-fast-beginner-1-34'),
-('Helen finally tells her family that she is busy','','00:00:25.300','00:00:28.520','esl-fast-beginner-1-34');
+('A kangaroo is an interesting animal','','00:00:00.330','00:00:04.010','esl-fast-beginner-1-63'),
+('It has a pouch','','00:00:05.190','00:00:06.530','esl-fast-beginner-1-63'),
+('A kangaroo\'s baby goes into the pouch','','00:00:07.690','00:00:11.530','esl-fast-beginner-1-63'),
+('It is safe there','','00:00:12.410','00:00:13.870','esl-fast-beginner-1-63'),
+('James would like to have a pouch','','00:00:15.070','00:00:17.090','esl-fast-beginner-1-63'),
+('He would not put a baby in there','','00:00:18.150','00:00:20.270','esl-fast-beginner-1-63'),
+('He would put food and video games inside','','00:00:21.110','00:00:24.710','esl-fast-beginner-1-63'),
+('People and kangaroos are different','','00:00:25.970','00:00:28.670','esl-fast-beginner-1-63'),
+('I would like to have a pouch','','00:00:30.330','00:00:30.670','esl-fast-beginner-1-63');
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES 
-('He pours a glass of soda for himself','','00:00:00.200','00:00:03.220','esl-fast-beginner-1-35'),
-('He accidentally spills some on his shirt','','00:00:03.660','00:00:07.080','esl-fast-beginner-1-35'),
-('Oh no','','00:00:07.780','00:00:08.340','esl-fast-beginner-1-35'),
-('His mom will get mad','','00:00:09.120','00:00:10.760','esl-fast-beginner-1-35'),
-('His shirt is very expensive','','00:00:11.580','00:00:13.460','esl-fast-beginner-1-35'),
-('He tries to clean it up','','00:00:14.320','00:00:15.920','esl-fast-beginner-1-35'),
-('He pours water on it','','00:00:16.420','00:00:18.360','esl-fast-beginner-1-35'),
-('He uses a stain remover','','00:00:19.100','00:00:21.280','esl-fast-beginner-1-35'),
-('He takes the shirt to a dry cleaner\'s','','00:00:22.220','00:00:24.760','esl-fast-beginner-1-35'),
-('Nothing works','','00:00:25.480','00:00:26.500','esl-fast-beginner-1-35');
+('He visits his aunt and uncle','','00:00:00.330','00:00:03.090','esl-fast-beginner-1-64'),
+('They are very different from each other','','00:00:04.110','00:00:06.250','esl-fast-beginner-1-64'),
+('His aunt is tall and skinny','','00:00:07.390','00:00:09.730','esl-fast-beginner-1-64'),
+('His uncle is fat and short','','00:00:10.690','00:00:13.410','esl-fast-beginner-1-64'),
+('His aunt likes vegetables','','00:00:14.830','00:00:16.690','esl-fast-beginner-1-64'),
+('His uncle only eats meat','','00:00:17.750','00:00:20.170','esl-fast-beginner-1-64'),
+('His aunt is quiet','','00:00:21.330','00:00:23.150','esl-fast-beginner-1-64'),
+('His uncle is loud','','00:00:24.250','00:00:26.010','esl-fast-beginner-1-64'),
+('They still love each other','','00:00:26.910','00:00:28.670','esl-fast-beginner-1-64'),
+('They like it when he visits','','00:00:29.670','00:00:31.630','esl-fast-beginner-1-64'),
+('He always has fun with his aunt and uncle','','00:00:32.810','00:00:35.830','esl-fast-beginner-1-64');
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES 
-('I am a new student in school','','00:00:00.460','00:00:03.200','esl-fast-beginner-1-36'),
-('I tell the class about myself','','00:00:04.140','00:00:06.060','esl-fast-beginner-1-36'),
-('I am from Canada, but now I live in Nevada','','00:00:07.039','00:00:10.580','esl-fast-beginner-1-36'),
-('I live with my mom, dad, and brother','','00:00:11.600','00:00:15.000','esl-fast-beginner-1-36'),
-('My brother is five years younger than me','','00:00:16.040','00:00:18.640','esl-fast-beginner-1-36'),
-('Music is very important to me','','00:00:19.720','00:00:21.740','esl-fast-beginner-1-36'),
-('I like to sing and dance','','00:00:22.540','00:00:24.220','esl-fast-beginner-1-36'),
-('I also play the saxophone','','00:00:24.840','00:00:26.840','esl-fast-beginner-1-36'),
-('One day, I hope to be a music teacher','','00:00:26.840','00:00:30.880','esl-fast-beginner-1-36');
+('The boy is always busy','','00:00:00.520','00:00:03.120','esl-fast-beginner-1-65'),
+('He goes to school for eight hours','','00:00:04.040','00:00:06.480','esl-fast-beginner-1-65'),
+('He has seven classes','','00:00:07.540','00:00:09.140','esl-fast-beginner-1-65'),
+('They are all hard','','00:00:10.280','00:00:11.780','esl-fast-beginner-1-65'),
+('He has a lot of homework','','00:00:12.880','00:00:14.560','esl-fast-beginner-1-65'),
+('It takes him five hours to finish it','','00:00:15.480','00:00:18.080','esl-fast-beginner-1-65'),
+('He also has piano practice','','00:00:19.060','00:00:21.220','esl-fast-beginner-1-65'),
+('He spends two hours playing the piano','','00:00:22.300','00:00:25.220','esl-fast-beginner-1-65'),
+('He only sleeps for four hours','','00:00:26.120','00:00:28.900','esl-fast-beginner-1-65'),
+('He is tired','','00:00:28.900','00:00:31.259','esl-fast-beginner-1-65');
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES 
-('The rollercoaster ride is fun and fast','','00:00:00.330','00:00:04.090','esl-fast-beginner-1-37'),
-('The line is so long','','00:00:04.890','00:00:06.710','esl-fast-beginner-1-37'),
-('John and his friends decide to wait','','00:00:07.690','00:00:10.530','esl-fast-beginner-1-37'),
-('John tried to find ways to pass time','','00:00:11.790','00:00:14.790','esl-fast-beginner-1-37'),
-('He taps his foot for ten minutes','','00:00:15.710','00:00:17.930','esl-fast-beginner-1-37'),
-('Then, he plays games on his phone','','00:00:18.870','00:00:21.650','esl-fast-beginner-1-37'),
-('Later, he tells his friends jokes','','00:00:22.830','00:00:25.630','esl-fast-beginner-1-37'),
-('Two hours pass','','00:00:26.430','00:00:28.190','esl-fast-beginner-1-37'),
-('The boys are still in line','','00:00:28.830','00:00:30.470','esl-fast-beginner-1-37');
+('She pours some chips in a bowl','','00:00:00.970','00:00:03.910','esl-fast-beginner-1-66'),
+('Her dad sees her','','00:00:04.810','00:00:06.130','esl-fast-beginner-1-66'),
+('He tells her chips are bad','','00:00:06.910','00:00:09.030','esl-fast-beginner-1-66'),
+('They are unhealthy','','00:00:09.530','00:00:10.610','esl-fast-beginner-1-66'),
+('She throws away the chips','','00:00:11.490','00:00:13.530','esl-fast-beginner-1-66'),
+('She goes back to the kitchen','','00:00:14.350','00:00:16.410','esl-fast-beginner-1-66'),
+('She starts to make fruit salad','','00:00:17.470','00:00:19.810','esl-fast-beginner-1-66'),
+('She gets bananas, strawberries, kiwis, and apples','','00:00:20.770','00:00:27.050','esl-fast-beginner-1-66'),
+('She cuts them up in small pieces','','00:00:27.050','00:00:30.850','esl-fast-beginner-1-66'),
+('She puts them all together in a bowl','','00:00:31.770','00:00:34.350','esl-fast-beginner-1-66');
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES 
-('Mr Brown\'s lectures are boring','','00:00:00.070','00:00:02.910','esl-fast-beginner-1-38'),
-('A student looks up at Mr Brown to','','00:00:03.790','00:00:06.250','esl-fast-beginner-1-38'),
-('check what he is doing','','00:00:06.250','00:00:07.490','esl-fast-beginner-1-38'),
-('Mr Brown is writing something on the board','','00:00:08.650','00:00:11.790','esl-fast-beginner-1-38'),
-('The student takes out his phone','','00:00:12.790','00:00:14.910','esl-fast-beginner-1-38'),
-('He starts playing games','','00:00:15.950','00:00:17.850','esl-fast-beginner-1-38'),
-('Mr Brown walks over to his desk','','00:00:19.130','00:00:21.890','esl-fast-beginner-1-38'),
-('Mr Brown takes the student\'s phone away','','00:00:23.090','00:00:25.750','esl-fast-beginner-1-38'),
-('He is in trouble','','00:00:26.770','00:00:27.890','esl-fast-beginner-1-38');
+('The teacher announces that there is a test','','00:00:00.070','00:00:03.450','esl-fast-beginner-1-67'),
+('The students clear off their desks','','00:00:04.290','00:00:06.990','esl-fast-beginner-1-67'),
+('The teacher passes out the tests','','00:00:07.830','00:00:10.450','esl-fast-beginner-1-67'),
+('The student takes a deep breath','','00:00:11.330','00:00:14.270','esl-fast-beginner-1-67'),
+('He takes out his pencil','','00:00:14.930','00:00:16.730','esl-fast-beginner-1-67'),
+('He looks at the questions','','00:00:17.810','00:00:19.410','esl-fast-beginner-1-67'),
+('He knows the answers','','00:00:20.330','00:00:21.950','esl-fast-beginner-1-67'),
+('He writes them down','','00:00:22.890','00:00:24.710','esl-fast-beginner-1-67'),
+('He finishes the test','','00:00:25.630','00:00:27.430','esl-fast-beginner-1-67'),
+('He feels good','','00:00:27.430','00:00:29.610','esl-fast-beginner-1-67');
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES 
-('He is sick','','00:00:00.580','00:00:02.100','esl-fast-beginner-1-39'),
-('He goes to the doctor','','00:00:02.700','00:00:04.220','esl-fast-beginner-1-39'),
-('The doctor gives him some medicine','','00:00:05.120','00:00:07.540','esl-fast-beginner-1-39'),
-('He is still sick after one week','','00:00:08.760','00:00:11.360','esl-fast-beginner-1-39'),
-('His mom tells him to go to sleep','','00:00:12.140','00:00:15.000','esl-fast-beginner-1-39'),
-('He lies in bed all day','','00:00:15.920','00:00:18.680','esl-fast-beginner-1-39'),
-('He rests','','00:00:19.720','00:00:20.900','esl-fast-beginner-1-39'),
-('He drinks chicken soup and eats vegetables','','00:00:21.600','00:00:25.160','esl-fast-beginner-1-39'),
-('He is still sick','','00:00:26.140','00:00:27.860','esl-fast-beginner-1-39'),
-('No one likes the flu','','00:00:27.860','00:00:30.280','esl-fast-beginner-1-39');
+('Lisa and her mom go to school','','00:00:00.520','00:00:03.360','esl-fast-beginner-1-68'),
+('They meet with Lisa\'s teacher','','00:00:04.500','00:00:06.200','esl-fast-beginner-1-68'),
+('The teacher smiles','','00:00:07.400','00:00:08.860','esl-fast-beginner-1-68'),
+('They all sit down','','00:00:09.960','00:00:11.640','esl-fast-beginner-1-68'),
+('The teacher talks about Lisa\'s grades','','00:00:12.820','00:00:15.300','esl-fast-beginner-1-68'),
+('She is doing very well','','00:00:16.320','00:00:18.060','esl-fast-beginner-1-68'),
+('She is very smart','','00:00:18.920','00:00:20.580','esl-fast-beginner-1-68'),
+('The teacher also talks about Lisa\'s behavior','','00:00:21.680','00:00:24.700','esl-fast-beginner-1-68'),
+('She is friendly to everyone','','00:00:25.920','00:00:27.640','esl-fast-beginner-1-68'),
+('Her mom is happy','','00:00:28.380','00:00:29.620','esl-fast-beginner-1-68'),
+('She is a very kind person','','00:00:30.520','00:00:31.420','esl-fast-beginner-1-68');
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES 
-('She goes to the circus','','00:00:00.650','00:00:02.570','esl-fast-beginner-1-40'),
-('She sees a clown','','00:00:03.670','00:00:05.010','esl-fast-beginner-1-40'),
-('He is very colorful','','00:00:05.970','00:00:07.390','esl-fast-beginner-1-40'),
-('She sees magicians','','00:00:08.790','00:00:10.310','esl-fast-beginner-1-40'),
-('They take rabbits out of hats','','00:00:11.030','00:00:13.370','esl-fast-beginner-1-40'),
-('She sees people walking on rope up in the air','','00:00:14.490','00:00:18.610','esl-fast-beginner-1-40'),
-('She sees people juggling balls','','00:00:19.730','00:00:22.290','esl-fast-beginner-1-40'),
-('She sees a lot of animals, too','','00:00:23.310','00:00:25.730','esl-fast-beginner-1-40'),
-('There are lions that jump through hoops of fire','','00:00:26.810','00:00:29.970','esl-fast-beginner-1-40'),
-('There are elephants that dance','','00:00:30.650','00:00:32.910','esl-fast-beginner-1-40'),
-('She never wants to leave the circus','','00:00:33.870','00:00:36.190','esl-fast-beginner-1-40');
+('She has one dog already','','00:00:00.390','00:00:02.870','esl-fast-beginner-1-69'),
+('It has black fur','','00:00:03.830','00:00:05.210','esl-fast-beginner-1-69'),
+('It is very big','','00:00:06.170','00:00:07.530','esl-fast-beginner-1-69'),
+('She wants another one','','00:00:08.450','00:00:09.790','esl-fast-beginner-1-69'),
+('She goes to the pet store','','00:00:10.690','00:00:12.330','esl-fast-beginner-1-69'),
+('She buys another dog','','00:00:13.350','00:00:14.970','esl-fast-beginner-1-69'),
+('It has brown fur','','00:00:15.650','00:00:17.270','esl-fast-beginner-1-69'),
+('It is medium-sized','','00:00:18.230','00:00:19.830','esl-fast-beginner-1-69'),
+('She brings it home','','00:00:20.830','00:00:22.050','esl-fast-beginner-1-69'),
+('She puts her two dogs together','','00:00:23.010','00:00:24.990','esl-fast-beginner-1-69'),
+('They run away from each other','','00:00:26.090','00:00:27.910','esl-fast-beginner-1-69'),
+('They do not like each other','','00:00:28.550','00:00:30.570','esl-fast-beginner-1-69');
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES 
-('He is fat','','00:00:00.390','00:00:01.970','esl-fast-beginner-1-41'),
-('He only eats red meat, chips, and candy','','00:00:02.750','00:00:06.750','esl-fast-beginner-1-41'),
-('His parents worry about him','','00:00:07.710','00:00:09.730','esl-fast-beginner-1-41'),
-('They ban him from eating fattening foods','','00:00:10.670','00:00:13.410','esl-fast-beginner-1-41'),
-('They cook healthy meals only from now on','','00:00:14.410','00:00:17.690','esl-fast-beginner-1-41'),
-('They eat oatmeal for breakfast','','00:00:18.710','00:00:20.650','esl-fast-beginner-1-41'),
-('They eat fish, carrots, and vegetables for lunch','','00:00:21.450','00:00:25.190','esl-fast-beginner-1-41'),
-('They eat chicken and salad for dinner','','00:00:25.850','00:00:28.530','esl-fast-beginner-1-41');
+('The boy tries to study for his quiz tomorrow','','00:00:00.260','00:00:03.700','esl-fast-beginner-1-70'),
+('His cat keeps bothering him','','00:00:04.860','00:00:06.760','esl-fast-beginner-1-70'),
+('It keeps pulling his leg','','00:00:07.720','00:00:09.600','esl-fast-beginner-1-70'),
+('It keeps making noises','','00:00:10.460','00:00:12.340','esl-fast-beginner-1-70'),
+('He gets a ball of yarn','','00:00:13.700','00:00:15.520','esl-fast-beginner-1-70'),
+('He throws it across the room','','00:00:16.340','00:00:18.940','esl-fast-beginner-1-70'),
+('The cat chases the ball of yarn','','00:00:20.220','00:00:22.560','esl-fast-beginner-1-70'),
+('The cat catches the yarn','','00:00:23.460','00:00:26.180','esl-fast-beginner-1-70'),
+('It plays with it','','00:00:26.980','00:00:28.460','esl-fast-beginner-1-70'),
+('The boy can finally study','','00:00:28.460','00:00:31.400','esl-fast-beginner-1-70');
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES 
-('A Ferris wheel is a huge rotating wheel','','00:00:00.330','00:00:04.070','esl-fast-beginner-1-42'),
-('It has many seats','','00:00:05.030','00:00:06.590','esl-fast-beginner-1-42'),
-('He sits on one of them','','00:00:07.510','00:00:09.070','esl-fast-beginner-1-42'),
-('His seat is yellow','','00:00:09.910','00:00:11.150','esl-fast-beginner-1-42'),
-('He is excited','','00:00:12.010','00:00:13.170','esl-fast-beginner-1-42'),
-('He puts his seat belt on','','00:00:14.070','00:00:16.250','esl-fast-beginner-1-42'),
-('He holds on to the metal bar','','00:00:16.890','00:00:19.070','esl-fast-beginner-1-42'),
-('He wants to be safe','','00:00:19.950','00:00:21.570','esl-fast-beginner-1-42'),
-('The wheel moves','','00:00:22.290','00:00:23.990','esl-fast-beginner-1-42'),
-('He starts to go up, higher and higher','','00:00:24.730','00:00:28.630','esl-fast-beginner-1-42'),
-('He looks down','','00:00:28.630','00:00:30.730','esl-fast-beginner-1-42'),
-('The people are so small','','00:00:31.549','00:00:33.830','esl-fast-beginner-1-42'),
-('The view is so nice','','00:00:34.750','00:00:36.970','esl-fast-beginner-1-42');
+('He wants to grow an orange tree','','00:00:00.260','00:00:03.220','esl-fast-beginner-1-71'),
+('He digs a small hole','','00:00:04.300','00:00:05.960','esl-fast-beginner-1-71'),
+('He puts the seeds in it','','00:00:06.840','00:00:08.760','esl-fast-beginner-1-71'),
+('He covers the seeds with soil','','00:00:09.480','00:00:12.180','esl-fast-beginner-1-71'),
+('He waters it for a week','','00:00:13.100','00:00:15.200','esl-fast-beginner-1-71'),
+('No oranges have grown','','00:00:16.460','00:00:18.000','esl-fast-beginner-1-71'),
+('He asks his mom what he is doing wrong','','00:00:19.300','00:00:22.820','esl-fast-beginner-1-71'),
+('She says, you have to be patient','','00:00:23.660','00:00:26.560','esl-fast-beginner-1-71'),
+('He continues to water the tree for a month','','00:00:27.380','00:00:30.780','esl-fast-beginner-1-71'),
+('He sees an orange start to grow','','00:00:31.960','00:00:34.380','esl-fast-beginner-1-71');
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES 
-('She gets an allowance from her parents','','00:00:00.330','00:00:03.410','esl-fast-beginner-1-43'),
-('They give her $10 a week','','00:00:04.250','00:00:06.490','esl-fast-beginner-1-43'),
-('She wants more','','00:00:07.270','00:00:08.330','esl-fast-beginner-1-43'),
-('She asks her parents nicely','','00:00:09.210','00:00:11.450','esl-fast-beginner-1-43'),
-('They say no','','00:00:12.330','00:00:13.270','esl-fast-beginner-1-43'),
-('She tries to change their minds','','00:00:14.150','00:00:16.430','esl-fast-beginner-1-43'),
-('She washes their cars','','00:00:17.330','00:00:19.030','esl-fast-beginner-1-43'),
-('She makes them dinner','','00:00:19.810','00:00:21.290','esl-fast-beginner-1-43'),
-('She compliments them','','00:00:22.130','00:00:23.670','esl-fast-beginner-1-43'),
-('Her parents decide to give her a raise','','00:00:24.450','00:00:27.290','esl-fast-beginner-1-43'),
-('She will get $15 a week','','00:00:27.290','00:00:30.790','esl-fast-beginner-1-43');
+('Helen leaves her notebook in the cafeteria','','00:00:00.650','00:00:03.630','esl-fast-beginner-1-72'),
+('She does not know this yet','','00:00:04.570','00:00:06.130','esl-fast-beginner-1-72'),
+('She goes to class','','00:00:06.970','00:00:08.450','esl-fast-beginner-1-72'),
+('Kevin enters the cafeteria','','00:00:09.430','00:00:11.230','esl-fast-beginner-1-72'),
+('He sees a notebook','','00:00:12.330','00:00:13.870','esl-fast-beginner-1-72'),
+('He does not know whose it is','','00:00:14.690','00:00:16.830','esl-fast-beginner-1-72'),
+('He puts it in the lost and found box','','00:00:17.650','00:00:20.290','esl-fast-beginner-1-72'),
+('Helen realizes her notebook is gone','','00:00:21.190','00:00:23.570','esl-fast-beginner-1-72'),
+('She checks the lost and found box','','00:00:24.410','00:00:26.790','esl-fast-beginner-1-72'),
+('She finds her notebook','','00:00:27.550','00:00:29.070','esl-fast-beginner-1-72');
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES 
-('She loves to dance','','00:00:00.200','00:00:02.320','esl-fast-beginner-1-44'),
-('She dances on her school\'s team','','00:00:02.960','00:00:05.760','esl-fast-beginner-1-44'),
-('She dances after school','','00:00:06.600','00:00:08.580','esl-fast-beginner-1-44'),
-('She loves to dance in her room','','00:00:09.320','00:00:11.540','esl-fast-beginner-1-44'),
-('She loves to dance in the kitchen','','00:00:12.360','00:00:14.400','esl-fast-beginner-1-44'),
-('She even loves to dance in the bathroom','','00:00:15.440','00:00:18.380','esl-fast-beginner-1-44'),
-('Anyone can see that she is passionate','','00:00:19.500','00:00:22.340','esl-fast-beginner-1-44'),
-('People say she is the best dancer in the world','','00:00:23.420','00:00:27.060','esl-fast-beginner-1-44');
+('Tag is a very fun game','','00:00:00.460','00:00:03.400','esl-fast-beginner-1-73'),
+('George, Lisa, and Laura play tag every day','','00:00:04.200','00:00:08.720','esl-fast-beginner-1-73'),
+('Lisa and Laura run around','','00:00:09.660','00:00:11.860','esl-fast-beginner-1-73'),
+('George tries to chase them','','00:00:12.980','00:00:14.980','esl-fast-beginner-1-73'),
+('He runs as fast as he can','','00:00:15.940','00:00:18.240','esl-fast-beginner-1-73'),
+('He decides to find Lisa','','00:00:19.020','00:00:21.020','esl-fast-beginner-1-73'),
+('She is a slow runner','','00:00:22.200','00:00:24.020','esl-fast-beginner-1-73'),
+('He sees her running','','00:00:24.940','00:00:26.200','esl-fast-beginner-1-73'),
+('He catches up to her','','00:00:26.920','00:00:28.460','esl-fast-beginner-1-73'),
+('He taps her on the shoulder','','00:00:29.320','00:00:30.920','esl-fast-beginner-1-73'),
+('He says to her, Tag, you\'re it!','','00:00:31.800','00:00:34.880','esl-fast-beginner-1-73');
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES 
-('She sleeps over at a friend\'s house','','00:00:00.260','00:00:03.380','esl-fast-beginner-1-45'),
-('They do a lot of fun activities','','00:00:04.180','00:00:06.080','esl-fast-beginner-1-45'),
-('They fight with their pillows','','00:00:07.140','00:00:08.660','esl-fast-beginner-1-45'),
-('They roast marshmallows over a fire','','00:00:09.480','00:00:12.180','esl-fast-beginner-1-45'),
-('They sing songs','','00:00:13.100','00:00:14.600','esl-fast-beginner-1-45'),
-('They watch movies','','00:00:15.239','00:00:16.860','esl-fast-beginner-1-45'),
-('The movies are funny','','00:00:17.540','00:00:18.840','esl-fast-beginner-1-45'),
-('They eat popcorn while they watch','','00:00:19.880','00:00:22.260','esl-fast-beginner-1-45'),
-('They braid each other\'s hair','','00:00:23.000','00:00:25.400','esl-fast-beginner-1-45'),
-('They use sleeping bags','','00:00:26.220','00:00:28.280','esl-fast-beginner-1-45'),
-('They fall asleep','','00:00:28.280','00:00:30.400','esl-fast-beginner-1-45');
+('I like cupcakes and lollipops','','00:00:00.200','00:00:03.480','esl-fast-beginner-1-74'),
+('Both of them are sweet','','00:00:04.260','00:00:05.640','esl-fast-beginner-1-74'),
+('My mom likes hamburgers and french fries','','00:00:06.660','00:00:10.160','esl-fast-beginner-1-74'),
+('Both of them are salty','','00:00:11.080','00:00:12.580','esl-fast-beginner-1-74'),
+('My dad likes lemons and grapefruits','','00:00:14.080','00:00:17.840','esl-fast-beginner-1-74'),
+('Both of them are sour','','00:00:18.720','00:00:20.760','esl-fast-beginner-1-74'),
+('My sister likes coffee and dark chocolate','','00:00:22.100','00:00:25.720','esl-fast-beginner-1-74'),
+('Both of them are bitter','','00:00:26.560','00:00:28.480','esl-fast-beginner-1-74'),
+('My brother likes everything','','00:00:28.480','00:00:31.800','esl-fast-beginner-1-74');
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES 
-('He does not like school','','00:00:00.390','00:00:02.750','esl-fast-beginner-1-46'),
-('He hates his teachers','','00:00:03.790','00:00:05.250','esl-fast-beginner-1-46'),
-('He hates learning','','00:00:06.250','00:00:07.710','esl-fast-beginner-1-46'),
-('He hates his classmates','','00:00:08.670','00:00:10.530','esl-fast-beginner-1-46'),
-('He picks on them','','00:00:11.370','00:00:12.830','esl-fast-beginner-1-46'),
-('He bothers them','','00:00:13.350','00:00:14.710','esl-fast-beginner-1-46'),
-('He rips up their homework','','00:00:15.250','00:00:17.170','esl-fast-beginner-1-46'),
-('He steals their lunch money','','00:00:18.070','00:00:20.090','esl-fast-beginner-1-46'),
-('One day, his teacher sees him being mean','','00:00:21.250','00:00:24.650','esl-fast-beginner-1-46'),
-('She yells at him','','00:00:25.270','00:00:26.390','esl-fast-beginner-1-46'),
-('She makes him say sorry to his classmates','','00:00:26.390','00:00:30.230','esl-fast-beginner-1-46');
-
-INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES 
-('A glass of milk is on the desk','','00:00:00.330','00:00:02.950','esl-fast-beginner-1-47'),
-('It is near the edge','','00:00:03.910','00:00:05.310','esl-fast-beginner-1-47'),
-('The child looks at the milk','','00:00:06.450','00:00:08.090','esl-fast-beginner-1-47'),
-('The child wants to drink it','','00:00:08.910','00:00:10.950','esl-fast-beginner-1-47'),
-('The cat looks at the milk','','00:00:11.650','00:00:13.590','esl-fast-beginner-1-47'),
-('The cat wants to drink it, too','','00:00:14.430','00:00:16.870','esl-fast-beginner-1-47'),
-('They both walk towards the desk','','00:00:18.110','00:00:20.230','esl-fast-beginner-1-47'),
-('The cat is faster','','00:00:21.110','00:00:22.730','esl-fast-beginner-1-47'),
-('It jumps on the desk','','00:00:23.910','00:00:25.490','esl-fast-beginner-1-47'),
-('The glass of milk tips over','','00:00:26.310','00:00:28.350','esl-fast-beginner-1-47'),
-('The milk is all over the floor','','00:00:28.350','00:00:31.930','esl-fast-beginner-1-47');
-
-INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES 
-('He wants to get something for his teacher','','00:00:00.330','00:00:03.070','esl-fast-beginner-1-48'),
-('He has no money though','','00:00:03.770','00:00:05.450','esl-fast-beginner-1-48'),
-('He gets creative','','00:00:06.190','00:00:07.610','esl-fast-beginner-1-48'),
-('He goes to his backyard','','00:00:08.210','00:00:10.170','esl-fast-beginner-1-48'),
-('He looks at his rose bush','','00:00:10.990','00:00:12.830','esl-fast-beginner-1-48'),
-('He cuts a nice red one','','00:00:13.490','00:00:15.650','esl-fast-beginner-1-48'),
-('He puts it in a vase','','00:00:16.510','00:00:18.110','esl-fast-beginner-1-48'),
-('He pours some water in the vase','','00:00:18.850','00:00:21.450','esl-fast-beginner-1-48'),
-('The gift is complete','','00:00:22.190','00:00:23.650','esl-fast-beginner-1-48');
-
-INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES 
-('John covers his eyes','','00:00:00.710','00:00:02.770','esl-fast-beginner-1-49'),
-('Sandra finds a place to hide','','00:00:03.630','00:00:05.810','esl-fast-beginner-1-49'),
-('John counts to ten','','00:00:06.890','00:00:08.490','esl-fast-beginner-1-49'),
-('At ten, he opens his eyes','','00:00:09.550','00:00:12.810','esl-fast-beginner-1-49'),
-('He tries to find Sandra','','00:00:13.650','00:00:15.370','esl-fast-beginner-1-49'),
-('He walks around their room','','00:00:16.070','00:00:18.110','esl-fast-beginner-1-49'),
-('He checks the kitchen','','00:00:18.950','00:00:20.190','esl-fast-beginner-1-49'),
-('He checks under the bed','','00:00:21.050','00:00:22.890','esl-fast-beginner-1-49'),
-('He checks the laundry room','','00:00:23.290','00:00:25.710','esl-fast-beginner-1-49'),
-('He does not find her yet','','00:00:26.490','00:00:28.090','esl-fast-beginner-1-49'),
-('Sandra is in their parents\' room','','00:00:28.090','00:00:31.390','esl-fast-beginner-1-49');
-
-INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES 
-('The boy waits for the mailman','','00:00:00.780','00:00:02.960','esl-fast-beginner-1-50'),
-('A package is supposed to come today','','00:00:03.740','00:00:06.000','esl-fast-beginner-1-50'),
-('He sits by the window','','00:00:06.880','00:00:08.680','esl-fast-beginner-1-50'),
-('He sees the mailman walking','','00:00:09.620','00:00:11.420','esl-fast-beginner-1-50'),
-('He goes outside','','00:00:12.220','00:00:13.620','esl-fast-beginner-1-50'),
-('He says hello to the mailman','','00:00:14.380','00:00:16.760','esl-fast-beginner-1-50'),
-('The mailman gives him the package','','00:00:17.520','00:00:19.780','esl-fast-beginner-1-50'),
-('They say goodbye to each other','','00:00:20.820','00:00:23.580','esl-fast-beginner-1-50'),
-('The boy goes back in the house','','00:00:24.280','00:00:26.280','esl-fast-beginner-1-50');
-
-INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES 
-('Michael and his grandmother go to the park\'s playground','','00:00:00.330','00:00:04.190','esl-fast-beginner-1-51'),
-('There are so many things to do','','00:00:05.470','00:00:07.670','esl-fast-beginner-1-51'),
-('Michael runs over to the swing set','','00:00:08.670','00:00:10.790','esl-fast-beginner-1-51'),
-('He sits on a swing','','00:00:11.530','00:00:12.970','esl-fast-beginner-1-51'),
-('He kicks the ground','','00:00:13.910','00:00:15.170','esl-fast-beginner-1-51'),
-('His legs are in the air','','00:00:16.130','00:00:17.810','esl-fast-beginner-1-51'),
-('His grandmother pushes him','','00:00:18.670','00:00:20.470','esl-fast-beginner-1-51'),
-('He is even higher','','00:00:21.350','00:00:22.850','esl-fast-beginner-1-51'),
-('He feels like he can touch the sky','','00:00:23.850','00:00:26.470','esl-fast-beginner-1-51');
-
-INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES 
-('Brian has three dogs','','00:00:00.580','00:00:02.780','esl-fast-beginner-1-52'),
-('The first one is black','','00:00:03.600','00:00:04.960','esl-fast-beginner-1-52'),
-('The second one is brown','','00:00:05.620','00:00:07.240','esl-fast-beginner-1-52'),
-('The third one is gray','','00:00:08.220','00:00:09.820','esl-fast-beginner-1-52'),
-('The black dog is very big','','00:00:10.840','00:00:13.280','esl-fast-beginner-1-52'),
-('The brown dog is medium-sized','','00:00:13.940','00:00:16.700','esl-fast-beginner-1-52'),
-('The gray dog is very small','','00:00:17.400','00:00:20.360','esl-fast-beginner-1-52'),
-('Brian loves all of them','','00:00:21.500','00:00:23.220','esl-fast-beginner-1-52'),
-('He walks with his dogs at the park','','00:00:24.080','00:00:26.380','esl-fast-beginner-1-52'),
-('The dogs enjoy it','','00:00:27.160','00:00:28.820','esl-fast-beginner-1-52'),
-('They always seem happy when they are walking','','00:00:28.820','00:00:32.440','esl-fast-beginner-1-52');
-
-INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES 
-('She has a pencil','','00:00:00.200','00:00:02.020','esl-fast-beginner-1-53'),
-('It is four inches long','','00:00:02.620','00:00:04.300','esl-fast-beginner-1-53'),
-('It is shiny and pink','','00:00:05.040','00:00:06.580','esl-fast-beginner-1-53'),
-('It has an eraser and one end','','00:00:07.420','00:00:10.100','esl-fast-beginner-1-53'),
-('It even has her name on it','','00:00:11.040','00:00:12.920','esl-fast-beginner-1-53'),
-('She uses her pencil for everything','','00:00:13.860','00:00:15.880','esl-fast-beginner-1-53'),
-('She uses it to write letters','','00:00:16.960','00:00:18.740','esl-fast-beginner-1-53'),
-('She uses it to do her homework','','00:00:19.640','00:00:21.820','esl-fast-beginner-1-53'),
-('She uses it on her tests','','00:00:22.640','00:00:24.760','esl-fast-beginner-1-53');
-
-INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES 
-('Two brothers are bored','','00:00:00.200','00:00:02.340','esl-fast-beginner-1-54'),
-('They play catch with each other inside the house','','00:00:03.260','00:00:06.560','esl-fast-beginner-1-54'),
-('The older brother throws the ball to the younger brother','','00:00:07.420','00:00:11.100','esl-fast-beginner-1-54'),
-('He catches it','','00:00:11.880','00:00:13.060','esl-fast-beginner-1-54'),
-('He throws it back','','00:00:13.740','00:00:14.880','esl-fast-beginner-1-54'),
-('The ball hits the window','','00:00:15.720','00:00:17.360','esl-fast-beginner-1-54'),
-('The window breaks','','00:00:18.420','00:00:19.880','esl-fast-beginner-1-54'),
-('Their mom hears the loud sound','','00:00:20.960','00:00:23.280','esl-fast-beginner-1-54'),
-('She is mad','','00:00:24.120','00:00:25.560','esl-fast-beginner-1-54'),
-('She takes the ball away','','00:00:26.380','00:00:28.020','esl-fast-beginner-1-54');
-
-INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES 
-('He has a pet','','00:00:00.520','00:00:02.220','esl-fast-beginner-1-55'),
-('It is a rabbit','','00:00:03.000','00:00:04.140','esl-fast-beginner-1-55'),
-('His rabbit\'s name is Fluffy','','00:00:05.240','00:00:07.260','esl-fast-beginner-1-55'),
-('Fluffy is a female','','00:00:08.480','00:00:10.240','esl-fast-beginner-1-55'),
-('She is white','','00:00:11.280','00:00:12.120','esl-fast-beginner-1-55'),
-('She has black eyes','','00:00:13.040','00:00:14.460','esl-fast-beginner-1-55'),
-('She is very soft','','00:00:15.320','00:00:16.960','esl-fast-beginner-1-55'),
-('She is playful','','00:00:17.800','00:00:19.000','esl-fast-beginner-1-55'),
-('She weighs seven pounds','','00:00:20.060','00:00:22.180','esl-fast-beginner-1-55'),
-('She likes to hop around the house','','00:00:23.360','00:00:26.060','esl-fast-beginner-1-55'),
-('She likes to eat carrots','','00:00:27.060','00:00:29.280','esl-fast-beginner-1-55'),
-('He gives Fluffy five carrots a day','','00:00:30.520','00:00:33.940','esl-fast-beginner-1-55');
-
-INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES 
-('It is break time','','00:00:00.260','00:00:02.060','esl-fast-beginner-1-56'),
-('The students go out to play','','00:00:03.059','00:00:04.920','esl-fast-beginner-1-56'),
-('Three friends play with a jump rope','','00:00:06.240','00:00:08.780','esl-fast-beginner-1-56'),
-('Elizabeth holds one end','','00:00:09.840','00:00:11.760','esl-fast-beginner-1-56'),
-('Susan holds the other end','','00:00:12.840','00:00:14.880','esl-fast-beginner-1-56'),
-('They stand apart from each other','','00:00:15.960','00:00:17.960','esl-fast-beginner-1-56'),
-('They swing the rope','','00:00:18.800','00:00:20.420','esl-fast-beginner-1-56'),
-('Maria jumps in','','00:00:21.600','00:00:23.020','esl-fast-beginner-1-56'),
-('The rope goes over her head','','00:00:24.060','00:00:26.540','esl-fast-beginner-1-56'),
-('She is good','','00:00:27.520','00:00:28.500','esl-fast-beginner-1-56'),
-('She keeps jumping over the rope','','00:00:28.500','00:00:31.520','esl-fast-beginner-1-56');
-
-INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES 
-('He goes outside','','00:00:00.260','00:00:01.860','esl-fast-beginner-1-57'),
-('He sees a ladybug','','00:00:02.960','00:00:04.440','esl-fast-beginner-1-57'),
-('The ladybug is red','','00:00:05.120','00:00:07.340','esl-fast-beginner-1-57'),
-('It has black spots too','','00:00:08.400','00:00:10.380','esl-fast-beginner-1-57'),
-('It has six legs','','00:00:11.580','00:00:13.240','esl-fast-beginner-1-57'),
-('It has two wings','','00:00:14.080','00:00:15.780','esl-fast-beginner-1-57'),
-('It is small','','00:00:16.720','00:00:18.080','esl-fast-beginner-1-57'),
-('He puts the ladybug on his finger','','00:00:19.200','00:00:22.220','esl-fast-beginner-1-57'),
-('It tickles','','00:00:22.960','00:00:24.360','esl-fast-beginner-1-57'),
-('The ladybug crawls all over him','','00:00:24.360','00:00:28.420','esl-fast-beginner-1-57'),
-('He wants to keep it','','00:00:29.440','00:00:30.960','esl-fast-beginner-1-57'),
-('The ladybug flies away','','00:00:31.860','00:00:33.940','esl-fast-beginner-1-57'),
-('He tries to catch it','','00:00:34.880','00:00:36.480','esl-fast-beginner-1-57');
-
-INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES 
-('The dog likes to dig','','00:00:00.390','00:00:02.710','esl-fast-beginner-1-58'),
-('It is his favorite thing to do','','00:00:03.310','00:00:05.710','esl-fast-beginner-1-58'),
-('He goes into his owner\'s house','','00:00:06.830','00:00:09.450','esl-fast-beginner-1-58'),
-('He takes a necklace','','00:00:10.450','00:00:11.630','esl-fast-beginner-1-58'),
-('He puts the necklace in his mouth','','00:00:12.770','00:00:15.750','esl-fast-beginner-1-58'),
-('He runs into the backyard','','00:00:16.730','00:00:18.630','esl-fast-beginner-1-58'),
-('He digs a hole with his paws','','00:00:19.690','00:00:22.390','esl-fast-beginner-1-58'),
-('He puts the necklace inside','','00:00:23.270','00:00:25.850','esl-fast-beginner-1-58'),
-('He covers the hole with dirt','','00:00:27.030','00:00:29.530','esl-fast-beginner-1-58');
-
-INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES 
-('She likes the monkey bars','','00:00:00.580','00:00:03.200','esl-fast-beginner-1-59'),
-('She grabs the first bar with her hands','','00:00:04.280','00:00:06.860','esl-fast-beginner-1-59'),
-('Her legs are swinging from the ground','','00:00:07.920','00:00:10.240','esl-fast-beginner-1-59'),
-('She puts her right hand on the second bar','','00:00:11.520','00:00:14.600','esl-fast-beginner-1-59'),
-('She then puts her left hand on the second bar','','00:00:15.400','00:00:18.960','esl-fast-beginner-1-59'),
-('She continues doing this','','00:00:20.060','00:00:22.000','esl-fast-beginner-1-59'),
-('She reaches the last bar','','00:00:22.940','00:00:24.920','esl-fast-beginner-1-59'),
-('She jumps down','','00:00:25.840','00:00:27.460','esl-fast-beginner-1-59'),
-('She starts over again for fun','','00:00:27.460','00:00:30.800','esl-fast-beginner-1-59');
-
-INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES 
-('She likes to pretend she is a doctor for fun','','00:00:00.460','00:00:04.740','esl-fast-beginner-1-60'),
-('She wears a white coat','','00:00:05.860','00:00:07.420','esl-fast-beginner-1-60'),
-('She pretends her room is a medical office','','00:00:08.640','00:00:11.580','esl-fast-beginner-1-60'),
-('Her dad pretends he is a patient','','00:00:12.820','00:00:15.219','esl-fast-beginner-1-60'),
-('Her dad goes into her room','','00:00:16.680','00:00:18.700','esl-fast-beginner-1-60'),
-('He tells her how he is feeling','','00:00:19.820','00:00:22.260','esl-fast-beginner-1-60'),
-('He says that he keeps coughing','','00:00:23.440','00:00:25.620','esl-fast-beginner-1-60');
+('The teacher is talking about U.S. government','','00:00:00.390','00:00:03.950','esl-fast-beginner-1-75'),
+('She thinks it is boring','','00:00:04.830','00:00:06.310','esl-fast-beginner-1-75'),
+('She stares at her desk','','00:00:07.270','00:00:08.850','esl-fast-beginner-1-75'),
+('She starts to daydream','','00:00:09.950','00:00:11.590','esl-fast-beginner-1-75'),
+('She dreams about her friends','','00:00:12.690','00:00:14.470','esl-fast-beginner-1-75'),
+('They invite her to a party','','00:00:15.350','00:00:17.390','esl-fast-beginner-1-75'),
+('The party is fun','','00:00:18.330','00:00:20.210','esl-fast-beginner-1-75'),
+('She dances and sings','','00:00:21.290','00:00:23.710','esl-fast-beginner-1-75'),
+('She listens to good music','','00:00:24.430','00:00:26.530','esl-fast-beginner-1-75'),
+('The teacher wakes her up','','00:00:26.530','00:00:29.290','esl-fast-beginner-1-75');
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES 
 ('He eats his breakfast','','00:00:00.330','00:00:02.850','esl-fast-beginner-2-1'),
@@ -370,7 +204,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 ('Lily walks home alone','','00:00:19.570','00:00:20.970','esl-fast-beginner-2-10'),
 ('She opens the door','','00:00:21.970','00:00:23.310','esl-fast-beginner-2-10'),
 ('Her friends and family are holding a cake','','00:00:24.330','00:00:26.950','esl-fast-beginner-2-10'),
-('They say, surprise Lily','','00:00:26.950','00:00:29.890','esl-fast-beginner-2-10');
+('They say, surprise Lily!','','00:00:26.950','00:00:29.890','esl-fast-beginner-2-10');
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES 
 ('Kate is walking','','00:00:00.650','00:00:02.290','esl-fast-beginner-2-11'),
@@ -387,7 +221,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 ('They love each other','','00:00:31.390','00:00:32.430','esl-fast-beginner-2-11');
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES 
-('Ms Howard assigns a project','','00:00:00.260','00:00:03.280','esl-fast-beginner-2-12'),
+('Ms. Howard assigns a project','','00:00:00.260','00:00:03.280','esl-fast-beginner-2-12'),
 ('She wants the students to work in groups','','00:00:04.380','00:00:07.039','esl-fast-beginner-2-12'),
 ('Adam works with Joe and Bill','','00:00:08.160','00:00:10.400','esl-fast-beginner-2-12'),
 ('Adam is smart','','00:00:11.320','00:00:12.540','esl-fast-beginner-2-12'),
@@ -395,9 +229,47 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 ('Bill is cooperative','','00:00:15.960','00:00:17.460','esl-fast-beginner-2-12'),
 ('They make a good group','','00:00:18.780','00:00:20.260','esl-fast-beginner-2-12'),
 ('They turn in their project','','00:00:21.200','00:00:22.920','esl-fast-beginner-2-12'),
-('Ms Howard likes it','','00:00:23.920','00:00:25.740','esl-fast-beginner-2-12'),
+('Ms. Howard likes it','','00:00:23.920','00:00:25.740','esl-fast-beginner-2-12'),
 ('She gives them a high grade','','00:00:26.460','00:00:28.620','esl-fast-beginner-2-12'),
 ('Adam, Joe, and Bill are joyful','','00:00:29.480','00:00:32.940','esl-fast-beginner-2-12');
+
+INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES 
+('He takes out a pen','','00:00:00.460','00:00:01.920','esl-fast-beginner-2-13'),
+('He takes off the cap','','00:00:02.740','00:00:04.780','esl-fast-beginner-2-13'),
+('He drops it','','00:00:05.580','00:00:07.060','esl-fast-beginner-2-13'),
+('He looks down','','00:00:08.120','00:00:09.400','esl-fast-beginner-2-13'),
+('He does not see the cap','','00:00:10.300','00:00:12.480','esl-fast-beginner-2-13'),
+('He looks around his desk','','00:00:13.160','00:00:15.460','esl-fast-beginner-2-13'),
+('He still does not see the cap','','00:00:16.480','00:00:19.220','esl-fast-beginner-2-13'),
+('Where could it be?','','00:00:20.120','00:00:21.620','esl-fast-beginner-2-13'),
+('He has to find it','','00:00:22.460','00:00:24.180','esl-fast-beginner-2-13'),
+('The pen will dry out without the cap','','00:00:24.180','00:00:28.120','esl-fast-beginner-2-13'),
+('He goes to the other side of the room','','00:00:28.960','00:00:31.560','esl-fast-beginner-2-13'),
+('He sees the cap','','00:00:32.780','00:00:34.620','esl-fast-beginner-2-13');
+
+INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES 
+('She has a lunch bag','','00:00:00.600','00:00:02.280','esl-fast-beginner-2-14'),
+('It has two pockets','','00:00:03.360','00:00:05.180','esl-fast-beginner-2-14'),
+('There is one on top','','00:00:06.380','00:00:08.440','esl-fast-beginner-2-14'),
+('That is the big pocket','','00:00:09.340','00:00:10.800','esl-fast-beginner-2-14'),
+('She puts a sandwich inside','','00:00:12.180','00:00:14.420','esl-fast-beginner-2-14'),
+('There is another in the front','','00:00:15.640','00:00:18.020','esl-fast-beginner-2-14'),
+('That is the small pocket','','00:00:19.120','00:00:20.980','esl-fast-beginner-2-14'),
+('She puts a pack of gum inside','','00:00:22.100','00:00:24.280','esl-fast-beginner-2-14'),
+('There is a long strap, too','','00:00:25.220','00:00:28.200','esl-fast-beginner-2-14'),
+('She can put it over her shoulder','','00:00:28.920','00:00:31.479','esl-fast-beginner-2-14');
+
+INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES 
+('He gets school lunch','','00:00:00.370','00:00:02.350','esl-fast-beginner-2-15'),
+('It is not good','','00:00:02.890','00:00:04.590','esl-fast-beginner-2-15'),
+('At least it is free','','00:00:05.010','00:00:07.410','esl-fast-beginner-2-15'),
+('He looks around the cafeteria','','00:00:08.730','00:00:11.010','esl-fast-beginner-2-15'),
+('He thinks about sitting with new people','','00:00:12.190','00:00:15.710','esl-fast-beginner-2-15'),
+('There are a lot of different groups','','00:00:16.810','00:00:19.470','esl-fast-beginner-2-15'),
+('He could sit with the athletes','','00:00:20.630','00:00:22.850','esl-fast-beginner-2-15'),
+('He could sit with the drama club kids','','00:00:23.670','00:00:26.750','esl-fast-beginner-2-15'),
+('He could sit with the rich kids group','','00:00:27.590','00:00:30.310','esl-fast-beginner-2-15'),
+('He had a lot of choices','','00:00:31.549','00:00:33.370','esl-fast-beginner-2-15');
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES 
 ('She is a teacher','','00:00:00.720','00:00:01.920','esl-fast-beginner-2-2'),

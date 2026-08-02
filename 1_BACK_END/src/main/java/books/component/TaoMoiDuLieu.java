@@ -15,26 +15,40 @@ public class TaoMoiDuLieu {
 
     public static List<String> splitSentences(String input) {
         String ellipsisPlaceholder = "[ELLIPSIS]";
-        String[] abbreviations = {"Mr.", "Mrs.", "Dr.", "Ms.", "Prof.", "mr.", "mrs.", "dr.", "prof."};
+        String doubleDotPlaceholder = "[DOUBLE_DOT]";
+        String[] abbreviations = {
+            "Mr.", "Mrs.", "Dr.", "Ms.", "Prof.", "mr.", "mrs.", "dr.", "prof.",
+            "U.S.", "U.K.", "E.U.", "u.s.", "u.k.", "e.u.",
+            "U.S.A.", "U.K.A.", "U.S.A", "U.K.A",
+            "St.", "Ave.", "Blvd.", "Rd.", "st.", "ave.", "blvd.", "rd."
+        };
 
+        // Replace ... and .. with placeholders to prevent splitting
         input = input.replace("...", ellipsisPlaceholder);
+        input = input.replace("..", doubleDotPlaceholder);
 
         for (String abbreviation : abbreviations) {
             input = input.replace(abbreviation, abbreviation.replace(".", "[DOT]"));
         }
 
-        String[] splitSentences = input.split("(?<=[.!?])");
+        // Split only after period (not ! or ?) to keep ! ? in sentences
+        String[] splitSentences = input.split("(?<=[.])");
 
         List<String> sentences = new ArrayList<>();
         for (String sentence : splitSentences) {
             sentence = sentence.replace(ellipsisPlaceholder, "...");
+            sentence = sentence.replace(doubleDotPlaceholder, "..");
             for (String abbreviation : abbreviations) {
                 sentence = sentence.replace(abbreviation.replace(".", "[DOT]"), abbreviation);
             }
-            sentence = sentence.replaceAll("(?<!\\.)[.!](?!\\.)", "").trim();
+            // Remove trailing period only if it's not part of abbreviation
+            sentence = sentence.trim();
+            if (sentence.endsWith(".") && !sentence.matches(".*[A-Za-z]\\.\\s*$")) {
+                sentence = sentence.substring(0, sentence.length() - 1).trim();
+            }
 
             if (!sentence.isEmpty()) {
-                sentences.add(sentence.trim());
+                sentences.add(sentence);
             }
         }
 
