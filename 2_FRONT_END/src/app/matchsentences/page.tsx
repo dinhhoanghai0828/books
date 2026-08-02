@@ -194,10 +194,11 @@ const MatchSentencesPage = () => {
       
       // Calculate positions relative to container
       // Subtract header offset (title + back button + margin)
-      const headerOffset = 120; // Approximate height of header elements
-      const enX = enRect.right - containerRect.left;
+      const headerOffset = 135; // Approximate height of header elements
+      const xOffset = 30; // Shift line to the left
+      const enX = enRect.right - containerRect.left - xOffset;
       const enY = enRect.top + enRect.height / 2 - containerRect.top - headerOffset;
-      const viX = viRect.left - containerRect.left;
+      const viX = viRect.left - containerRect.left - xOffset;
       const viY = viRect.top + viRect.height / 2 - containerRect.top - headerOffset;
       
       // Draw bezier curve
