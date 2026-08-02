@@ -439,10 +439,10 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
         open={selectModalOpen}
         onCancel={() => setSelectModalOpen(false)}
         footer={
-          <div style={{ textAlign: 'center' }}>
+          <div style={{ textAlign: 'center', display: 'flex', gap: 12, justifyContent: 'center' }}>
             <Button onClick={() => setSelectModalOpen(false)}>Hủy</Button>
-            <Button 
-              type="primary" 
+            <Button
+              type="primary"
               onClick={handleDownloadSelectedWord}
               loading={downloadSelectedLoading}
               disabled={selectedVolumes.length === 0}
@@ -453,41 +453,85 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
         }
         width={600}
       >
-        <div style={{ maxHeight: '400px', overflowY: 'auto' }}>
-          <Checkbox
-            checked={selectedVolumes.length === volumes.length && volumes.length > 0}
-            indeterminate={selectedVolumes.length > 0 && selectedVolumes.length < volumes.length}
-            onChange={(e) => {
-              if (e.target.checked) {
-                setSelectedVolumes(volumes.map(v => v.slug));
-              } else {
-                setSelectedVolumes([]);
-              }
-            }}
-            style={{ marginBottom: 16, fontWeight: 'bold' }}
-          >
-            Chọn tất cả
-          </Checkbox>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+        <div style={{ maxHeight: '400px', overflowY: 'auto', padding: '8px 0' }}>
+          <div style={{ 
+            padding: '12px 16px', 
+            backgroundColor: '#f5f5f5', 
+            borderRadius: '8px',
+            marginBottom: '16px'
+          }}>
+            <Checkbox
+              checked={selectedVolumes.length === volumes.length && volumes.length > 0}
+              indeterminate={selectedVolumes.length > 0 && selectedVolumes.length < volumes.length}
+              onChange={(e) => {
+                if (e.target.checked) {
+                  setSelectedVolumes(volumes.map(v => v.slug));
+                } else {
+                  setSelectedVolumes([]);
+                }
+              }}
+              style={{ fontWeight: 'bold', fontSize: '14px' }}
+            >
+              Chọn tất cả ({volumes.length} volume)
+            </Checkbox>
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
             {volumes.map((volume) => (
-              <Checkbox
+              <div
                 key={volume.slug}
-                checked={selectedVolumes.includes(volume.slug)}
-                onChange={(e) => {
-                  if (e.target.checked) {
-                    setSelectedVolumes([...selectedVolumes, volume.slug]);
-                  } else {
+                style={{
+                  padding: '12px 16px',
+                  border: selectedVolumes.includes(volume.slug) ? '2px solid #52c41a' : '1px solid #d9d9d9',
+                  borderRadius: '8px',
+                  backgroundColor: selectedVolumes.includes(volume.slug) ? '#f6ffed' : '#ffffff',
+                  transition: 'all 0.2s',
+                  cursor: 'pointer'
+                }}
+                onClick={() => {
+                  if (selectedVolumes.includes(volume.slug)) {
                     setSelectedVolumes(selectedVolumes.filter(v => v !== volume.slug));
+                  } else {
+                    setSelectedVolumes([...selectedVolumes, volume.slug]);
                   }
                 }}
               >
-                <span style={{ fontWeight: volume.isRead === 1 ? 'bold' : 'normal' }}>
-                  Tập {volume.number}: {volume.eng}
-                </span>
-                {volume.isRead === 1 && (
-                  <span style={{ color: '#1890ff', marginLeft: 8 }}>(Đã đọc)</span>
-                )}
-              </Checkbox>
+                <Checkbox
+                  checked={selectedVolumes.includes(volume.slug)}
+                  onChange={(e) => {
+                    e.stopPropagation();
+                    if (e.target.checked) {
+                      setSelectedVolumes([...selectedVolumes, volume.slug]);
+                    } else {
+                      setSelectedVolumes(selectedVolumes.filter(v => v !== volume.slug));
+                    }
+                  }}
+                  style={{ marginBottom: 4 }}
+                >
+                  <span style={{ 
+                    fontWeight: volume.isRead === 1 ? 'bold' : '500',
+                    fontSize: '14px',
+                    color: volume.isRead === 1 ? '#1890ff' : '#000'
+                  }}>
+                    Tập {volume.number}: {volume.eng}
+                  </span>
+                  {volume.isRead === 1 && (
+                    <span style={{ 
+                      color: '#52c41a', 
+                      marginLeft: 8,
+                      fontSize: '12px',
+                      fontWeight: 'normal'
+                    }}>(Đã đọc)</span>
+                  )}
+                </Checkbox>
+                <div style={{ 
+                  fontSize: '13px', 
+                  color: '#666',
+                  marginLeft: 24,
+                  marginTop: 4
+                }}>
+                  {volume.vi}
+                </div>
+              </div>
             ))}
           </div>
         </div>
