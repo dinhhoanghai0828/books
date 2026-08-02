@@ -68,7 +68,7 @@ const ContentComponent = ({
   onContentUpdate,
 }: ContentComponentProps) => {
   const router = useRouter();
-  const { volumeEngName = '', volumeViName = '' } = contents?.[0] || {};
+  const { eng: volumeEngName = '', vi: volumeViName = '' } = volume || {};
 
   // Đường dẫn video dùng chung
   const sharedVideoPath = contents?.find((item) => item.video)?.video ?? null;
