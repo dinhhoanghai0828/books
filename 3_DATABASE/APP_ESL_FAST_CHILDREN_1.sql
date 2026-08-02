@@ -643,43 +643,43 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He does not find her yet','Nhưng cậu bé vẫn chưa tìm thấy cô bé','00:00:26.400','00:00:28.000','esl-fast-beginner-1-49'),
 	('Sandra is in their parents\' room','Sandra đang ở trong phòng của bố mẹ','00:00:28.300','00:00:31.690','esl-fast-beginner-1-49'),
 
-	/* (UUID(),'esl-fast-beginner-1-50','Excited for the Mail','Hồi hộp chờ thư','BEGINNER_01_ESL_FAST_CHILDREN_050.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',50) */
+	/* (UUID(),'esl-fast-beginner-1-50','Excited for the Mail','Hồi hộp chờ thư','BEGINNER_01_ESL_FAST_CHILDREN_050.mp3',NULL,'00:00:00.000','00:00:28.000','esl-fast-children-1','YES',50) */
 	('The boy waits for the mailman','Cậu bé đợi người đưa thư','00:00:00.780','00:00:03.260','esl-fast-beginner-1-50'),
-	('A package is supposed to come today','Hôm nay có một kiện hàng sẽ được giao đến','00:00:03.740','00:00:06.300','esl-fast-beginner-1-50'),
-	('He sits by the window','Cậu bé ngồi bên cửa sổ','00:00:06.880','00:00:08.980','esl-fast-beginner-1-50'),
-	('He sees the mailman walking','Cậu bé thấy người đưa thư đang đi tới','00:00:09.620','00:00:11.720','esl-fast-beginner-1-50'),
-	('He goes outside','Cậu bé đi ra ngoài','00:00:12.220','00:00:13.920','esl-fast-beginner-1-50'),
-	('He says hello to the mailman','Cậu bé chào người đưa thư','00:00:14.380','00:00:17.060','esl-fast-beginner-1-50'),
-	('The mailman gives him the package','Người đưa thư trao kiện hàng cho cậu bé','00:00:17.520','00:00:20.080','esl-fast-beginner-1-50'),
-	('They say goodbye to each other','Hai người chào tạm biệt nhau','00:00:20.820','00:00:23.880','esl-fast-beginner-1-50'),
-	('The boy goes back in the house','Cậu bé quay trở vào nhà','00:00:24.280','00:00:26.580','esl-fast-beginner-1-50');
+	('A package is supposed to come today','Hôm nay một kiện hàng dự kiến sẽ đến','00:00:03.600','00:00:06.300','esl-fast-beginner-1-50'),
+	('He sits by the window','Cậu bé ngồi bên cửa sổ','00:00:06.700','00:00:08.980','esl-fast-beginner-1-50'),
+	('He sees the mailman walking','Cậu bé thấy người đưa thư đang đi tới','00:00:09.300','00:00:11.720','esl-fast-beginner-1-50'),
+	('He goes outside','Cậu bé đi ra ngoài','00:00:12.100','00:00:13.920','esl-fast-beginner-1-50'),
+	('He says hello to the mailman','Cậu bé chào người đưa thư','00:00:14.300','00:00:17.060','esl-fast-beginner-1-50'),
+	('The mailman gives him the package','Người đưa thư trao kiện hàng cho cậu bé','00:00:17.400','00:00:20.080','esl-fast-beginner-1-50'),
+	('They say goodbye to each other','Hai người chào tạm biệt nhau','00:00:20.400','00:00:23.880','esl-fast-beginner-1-50'),
+	('The boy goes back in the house','Cậu bé quay trở về nhà của mình','00:00:24.200','00:00:26.580','esl-fast-beginner-1-50');
 
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'esl-fast-beginner-1-51','Having Fun on a Swing','Vui chơi trên xích đu','BEGINNER_01_ESL_FAST_CHILDREN_051.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',51) */
+	/* (UUID(),'esl-fast-beginner-1-51','Having Fun on a Swing','Vui chơi trên xích đu','BEGINNER_01_ESL_FAST_CHILDREN_051.mp3',NULL,'00:00:00.000','00:00:28.000','esl-fast-children-1','YES',51) */
 	('Michael and his grandmother go to the park\'s playground','Michael cùng bà đến khu vui chơi trong công viên','00:00:00.330','00:00:04.490','esl-fast-beginner-1-51'),
-	('There are so many things to do','Ở đó có rất nhiều trò để chơi','00:00:05.470','00:00:07.970','esl-fast-beginner-1-51'),
-	('Michael runs over to the swing set','Michael chạy ngay đến khu xích đu','00:00:08.670','00:00:11.090','esl-fast-beginner-1-51'),
-	('He sits on a swing','Cậu bé ngồi lên một chiếc xích đu','00:00:11.530','00:00:13.270','esl-fast-beginner-1-51'),
-	('He kicks the ground','Cậu bé dùng chân đạp xuống đất','00:00:13.910','00:00:15.470','esl-fast-beginner-1-51'),
-	('His legs are in the air','Đôi chân cậu bé vung lên không trung','00:00:16.130','00:00:18.110','esl-fast-beginner-1-51'),
-	('His grandmother pushes him','Bà đẩy xích đu cho cậu bé','00:00:18.670','00:00:20.770','esl-fast-beginner-1-51'),
-	('He is even higher','Cậu bé bay lên còn cao hơn nữa','00:00:21.350','00:00:23.150','esl-fast-beginner-1-51'),
-	('He feels like he can touch the sky','Cậu bé có cảm giác như mình chạm được tới bầu trời','00:00:23.850','00:00:26.770','esl-fast-beginner-1-51'),
+	('There are so many things to do','Ở đó có rất nhiều việc để làm','00:00:05.000','00:00:07.970','esl-fast-beginner-1-51'),
+	('Michael runs over to the swing set','Michael chạy đến khu xích đu','00:00:08.300','00:00:11.090','esl-fast-beginner-1-51'),
+	('He sits on a swing','Cậu bé ngồi lên một chiếc xích đu','00:00:11.400','00:00:13.270','esl-fast-beginner-1-51'),
+	('He kicks the ground','Cậu bé đạp chân xuống đất','00:00:13.600','00:00:15.470','esl-fast-beginner-1-51'),
+	('His legs are in the air','Đôi chân cậu bé đưa lên không trung','00:00:15.800','00:00:18.110','esl-fast-beginner-1-51'),
+	('His grandmother pushes him','Bà đẩy cậu bé','00:00:18.500','00:00:20.770','esl-fast-beginner-1-51'),
+	('He is even higher','Cậu bé thậm chí lên còn cao hơn nữa','00:00:21.000','00:00:23.150','esl-fast-beginner-1-51'),
+	('He feels like he can touch the sky','Cậu bé có cảm giác như mình chạm được tới bầu trời','00:00:23.500','00:00:26.770','esl-fast-beginner-1-51'),
 
-	/* (UUID(),'esl-fast-beginner-1-52','He Walks His Dogs','Cậu ấy dắt chó đi dạo','BEGINNER_01_ESL_FAST_CHILDREN_052.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',52) */
+	/* (UUID(),'esl-fast-beginner-1-52','He Walks His Dogs','Cậu ấy dắt chó đi dạo','BEGINNER_01_ESL_FAST_CHILDREN_052.mp3',NULL,'00:00:00.000','00:00:34.000','esl-fast-children-1','YES',52) */
 	('Brian has three dogs','Brian có ba chú chó','00:00:00.580','00:00:03.080','esl-fast-beginner-1-52'),
-	('The first one is black','Con đầu tiên có màu đen','00:00:03.600','00:00:05.260','esl-fast-beginner-1-52'),
-	('The second one is brown','Con thứ hai có màu nâu','00:00:05.620','00:00:07.540','esl-fast-beginner-1-52'),
-	('The third one is gray','Con thứ ba có màu xám','00:00:08.220','00:00:10.120','esl-fast-beginner-1-52'),
-	('The black dog is very big','Chú chó màu đen rất to','00:00:10.840','00:00:13.580','esl-fast-beginner-1-52'),
-	('The brown dog is medium-sized','Chú chó màu nâu có kích thước vừa','00:00:13.940','00:00:17.000','esl-fast-beginner-1-52'),
+	('The first one is black','Con đầu tiên có màu đen','00:00:03.400','00:00:05.260','esl-fast-beginner-1-52'),
+	('The second one is brown','Con thứ hai có màu nâu','00:00:05.600','00:00:07.540','esl-fast-beginner-1-52'),
+	('The third one is gray','Con thứ ba có màu xám','00:00:08.000','00:00:10.120','esl-fast-beginner-1-52'),
+	('The black dog is very big','Chú chó đen rất to','00:00:10.500','00:00:13.580','esl-fast-beginner-1-52'),
+	('The brown dog is medium-sized','Chú chó màu nâu có kích thước trung bình','00:00:13.880','00:00:17.000','esl-fast-beginner-1-52'),
 	('The gray dog is very small','Chú chó màu xám rất nhỏ','00:00:17.400','00:00:20.660','esl-fast-beginner-1-52'),
-	('Brian loves all of them','Brian yêu quý cả ba chú chó','00:00:21.500','00:00:23.520','esl-fast-beginner-1-52'),
-	('He walks with his dogs at the park','Cậu ấy dắt những chú chó đi dạo trong công viên','00:00:24.080','00:00:26.680','esl-fast-beginner-1-52'),
-	('The dogs enjoy it','Những chú chó rất thích điều đó','00:00:27.160','00:00:29.120','esl-fast-beginner-1-52'),
-	('They always seem happy when they are walking','Mỗi lần đi dạo, chúng lúc nào cũng trông rất vui vẻ','00:00:28.820','00:00:32.740','esl-fast-beginner-1-52'),
+	('Brian loves all of them','Brian yêu quý tất cả chúng','00:00:21.000','00:00:23.520','esl-fast-beginner-1-52'),
+	('He walks with his dogs at the park','Cậu bé đi dạo cùng những chú chó trong công viên','00:00:23.800','00:00:26.680','esl-fast-beginner-1-52'),
+	('The dogs enjoy it','Những chú chó rất thích điều đó','00:00:27.000','00:00:28.900','esl-fast-beginner-1-52'),
+	('They always seem happy when they are walking','Chúng dường như lúc nào cũng vui vẻ khi chúng đi dạo','00:00:29.200','00:00:32.740','esl-fast-beginner-1-52'),
 
 	/* (UUID(),'esl-fast-beginner-1-53','A Pencil for Everything','Một cây bút chì cho mọi việc','BEGINNER_01_ESL_FAST_CHILDREN_053.mp3',NULL,'00:00:00.000','00:00:26.000','esl-fast-children-1','YES',53) */
 	('She has a pencil','Cô bé có một cây bút chì','00:00:00.200','00:00:02.100','esl-fast-beginner-1-53'),
