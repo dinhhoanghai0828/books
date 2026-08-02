@@ -874,6 +874,7 @@ const ContentComponent = ({
         onToggleVietnamese={() => setShowVietnamese((p) => !p)}
         onToggleMissingWords={() => setHighlightMissingWords((p) => !p)}
         onTest={() => router.push(`/test?volumeSlug=${volumeSlug}`)}
+        onMatchSentences={() => router.push(`/matchsentences?volumeSlug=${volumeSlug}`)}
         onFillBlanks={() => router.push(`/fillblanks?volumeSlug=${volumeSlug}`)}
         onInsertWord={handleOpenInsert}
         volumeSlug={volumeSlug}

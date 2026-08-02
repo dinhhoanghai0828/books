@@ -31,6 +31,7 @@ const FillBlanksPage = () => {
   const [blanksData, setBlanksData] = useState<Record<string, { sentence: string[], blanks: string[] }>>({});
   const [blankAnswers, setBlankAnswers] = useState<Record<string, Record<number, string>>>({});
   const [checkedResults, setCheckedResults] = useState<Record<string, boolean>>({});
+  const [individualChecked, setIndividualChecked] = useState<Record<string, boolean>>({});
   const [loading, setLoading] = useState(true);
   const [isChecked, setIsChecked] = useState(false);
   const [score, setScore] = useState(0);
@@ -126,6 +127,30 @@ const FillBlanksPage = () => {
   // CHECK RESULTS
   // ============================================================
 
+  const handleCheckIndividual = (sentenceId: string) => {
+    const blanks = blanksData[sentenceId]?.blanks || [];
+    const answers = blankAnswers[sentenceId] || {};
+    
+    // Kiểm tra từng blank
+    let allCorrect = true;
+    blanks.forEach((word, idx) => {
+      const userAnswer = (answers[idx] || '').trim().toLowerCase();
+      const correctWord = word.toLowerCase();
+      if (userAnswer !== correctWord) {
+        allCorrect = false;
+      }
+    });
+    
+    setCheckedResults((prev) => ({
+      ...prev,
+      [sentenceId]: allCorrect,
+    }));
+    setIndividualChecked((prev) => ({
+      ...prev,
+      [sentenceId]: true,
+    }));
+  };
+
   const handleCheckResults = () => {
     setConfirmLoading(true);
     setTimeout(() => {
@@ -164,6 +189,7 @@ const FillBlanksPage = () => {
     setBlanksData({});
     setBlankAnswers({});
     setCheckedResults({});
+    setIndividualChecked({});
     setIsChecked(false);
     setScore(0);
     await fetchData(limit);
@@ -282,23 +308,27 @@ const FillBlanksPage = () => {
               <div className="engClass" style={{ marginTop: 10 }}>
                 {blanks.sentence.map((part, idx) => {
                   const blankIndex = blanks.sentence.slice(0, idx).filter(p => p === '___').length;
+                  const isIndividualChecked = individualChecked[sentence.id];
+                  const isCorrect = checkedResults[sentence.id];
+                  const userAnswer = blankAnswers[sentence.id]?.[blankIndex] || '';
+                  
                   return (
                     <Text key={idx} style={{ marginRight: 4 }}>
                       {part === '___' ? (
-                        isChecked ? (
+                        isChecked || isIndividualChecked ? (
                           <span style={{ 
-                            borderBottom: '2px solid #1890ff', 
+                            borderBottom: `2px solid ${isCorrect ? '#52c41a' : '#ff4d4f'}`, 
                             minWidth: 60, 
                             display: 'inline-block',
                             padding: '0 8px',
-                            color: checkedResults[sentence.id] ? 'green' : 'red'
+                            color: isCorrect ? 'green' : 'red'
                           }}>
-                            {blanks.blanks[blankIndex] || '?'}
+                            {userAnswer || '?'}
                           </span>
                         ) : (
                           <Input
                             placeholder=""
-                            value={blankAnswers[sentence.id]?.[blankIndex] || ''}
+                            value={userAnswer}
                             onChange={(e) => handleBlankChange(sentence.id, blankIndex, e.target.value)}
                             style={{ 
                               width: 80, 
@@ -323,7 +353,19 @@ const FillBlanksPage = () => {
                 })}
               </div>
 
-              {isChecked && !checkedResults[sentence.id] && (
+              {!isChecked && !individualChecked[sentence.id] && (
+                <div style={{ marginTop: 10 }}>
+                  <Button
+                    type="primary"
+                    size="small"
+                    onClick={() => handleCheckIndividual(sentence.id)}
+                  >
+                    Kiểm tra
+                  </Button>
+                </div>
+              )}
+
+              {(isChecked || individualChecked[sentence.id]) && !checkedResults[sentence.id] && (
                 <div style={{ marginTop: 10 }}>
                   <Text style={{ fontSize: 14, color: 'red' }}>Đáp án đúng: {blanks.blanks.join(', ')}</Text>
                 </div>

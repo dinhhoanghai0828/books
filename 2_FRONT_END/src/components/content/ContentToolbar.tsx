@@ -28,6 +28,7 @@ export interface ContentToolbarProps {
   onToggleVietnamese: () => void;
   onToggleMissingWords: () => void;
   onTest: () => void;
+  onMatchSentences: () => void;
   onFillBlanks: () => void;
   onInsertWord: () => void;
   volumeSlug: string | string[];
@@ -48,6 +49,7 @@ const ContentToolbar: React.FC<ContentToolbarProps> = ({
   onToggleVietnamese,
   onToggleMissingWords,
   onTest,
+  onMatchSentences,
   onFillBlanks,
   onInsertWord,
   volumeSlug,
@@ -236,9 +238,14 @@ const ContentToolbar: React.FC<ContentToolbarProps> = ({
           menu={{
             items: [
               {
+                key: 'sắp xếp câu',
+                label: 'Sắp xếp câu',
+                onClick: onTest,
+              },
+              {
                 key: 'ghép câu',
                 label: 'Ghép câu',
-                onClick: onTest,
+                onClick: onMatchSentences,
               },
               {
                 key: 'điền từ',
