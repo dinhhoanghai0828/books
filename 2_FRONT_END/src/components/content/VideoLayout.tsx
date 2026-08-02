@@ -73,6 +73,7 @@ const VideoLayout: React.FC<VideoLayoutProps> = ({
 }) => {
   const segmentRef = useRef({ start: 0, end: 0 });
   const isLoopRef = useRef(false);
+  const justStoppedItemRef = useRef(false);
 
   // Synchronize Refs
   const onActiveItemChangeRef = useRef(onActiveItemChange);
@@ -102,14 +103,17 @@ const VideoLayout: React.FC<VideoLayoutProps> = ({
         } else {
           segmentRef.current = { start: 0, end: 0 };
           video.pause();
+          // Reset lastActiveId và set flag để tránh auto-switch sang item tiếp theo
+          lastActiveId.current = '';
+          justStoppedItemRef.current = true;
           onVideoStopRef.current?.();
         }
         return;
       }
 
       // Chỉ auto-switch item khi KHÔNG có segment (tức là user đang play toàn bộ video, không play từng item)
-      // Khi user play từng item, segment sẽ được set và khi hết sẽ reset về 0
-      if (segmentRef.current.end === 0) {
+      // Và KHÔNG phải khi vừa stop item (để tránh auto-switch ngay sau khi stop item)
+      if (segmentRef.current.end === 0 && !justStoppedItemRef.current) {
         // Tìm câu đang active trong khoảng thời gian
         const found = findActiveItem(contentsRef.current, current);
         if (found && String(found.id) !== lastActiveId.current) {

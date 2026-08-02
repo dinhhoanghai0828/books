@@ -106,6 +106,7 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
   const getAudio = (): HTMLAudioElement | null => audioRef.current;
   const segmentRef = useRef({ start: 0, end: 0 });
   const isLoopRef = useRef(false);
+  const justStoppedItemRef = useRef(false);
 
   const onActiveItemChangeRef = useRef(onActiveItemChange);
   useEffect(() => { onActiveItemChangeRef.current = onActiveItemChange; }, [onActiveItemChange]);
@@ -126,7 +127,10 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
     listenerCleanupRef.current?.();
     const lastActiveId = { current: '' };
 
-    const onPlay = () => setIsPlaying(true);
+    const onPlay = () => {
+      setIsPlaying(true);
+      justStoppedItemRef.current = false;
+    };
     const onPause = () => setIsPlaying(false);
     const onLoadedMetadata = () => setDuration(audio.duration);
 
@@ -144,14 +148,17 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
           // QUAN TRỌNG: Reset segment về 0 khi hết câu để cho phép bấm nút Play thủ công ở Player bên dưới
           segmentRef.current = { start: 0, end: 0 };
           audio.pause();
+          // Reset lastActiveId và set flag để tránh auto-switch sang item tiếp theo
+          lastActiveId.current = '';
+          justStoppedItemRef.current = true;
           onAudioStopRef.current();
         }
         return;
       }
 
       // Chỉ auto-switch item khi KHÔNG có segment (tức là user đang play toàn bộ audio, không play từng item)
-      // Khi user play từng item, segment sẽ được set và khi hết sẽ reset về 0
-      if (segmentRef.current.end === 0) {
+      // Và KHÔNG phải khi vừa stop item (để tránh auto-switch ngay sau khi stop item)
+      if (segmentRef.current.end === 0 && !justStoppedItemRef.current) {
         const found = findActiveItem(contentsRef.current, current);
         if (found && String(found.id) !== lastActiveId.current) {
           lastActiveId.current = String(found.id);
