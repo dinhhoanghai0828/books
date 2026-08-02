@@ -554,18 +554,18 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The people are so small','Mọi người trông nhỏ xíu','00:00:31.300','00:00:34.130','esl-fast-beginner-1-42'),
 	('The view is so nice','Khung cảnh thật đẹp','00:00:34.500','00:00:37.270','esl-fast-beginner-1-42'),
 
-	/* (UUID(),'esl-fast-beginner-1-43','More Money','Nhiều tiền hơn','BEGINNER_01_ESL_FAST_CHILDREN_043.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',43) */
+	/* (UUID(),'esl-fast-beginner-1-43','More Money','Nhiều tiền hơn','BEGINNER_01_ESL_FAST_CHILDREN_043.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1','YES',43) */
 	('She gets an allowance from her parents','Cô bé được bố mẹ cho tiền tiêu vặt','00:00:00.330','00:00:03.710','esl-fast-beginner-1-43'),
-	('They give her $10 a week','Mỗi tuần bố mẹ cho cô bé 10 đô la','00:00:04.250','00:00:06.790','esl-fast-beginner-1-43'),
-	('She wants more','Cô bé muốn được nhiều hơn','00:00:07.270','00:00:08.630','esl-fast-beginner-1-43'),
-	('She asks her parents nicely','Cô bé nhẹ nhàng xin bố mẹ','00:00:09.210','00:00:11.750','esl-fast-beginner-1-43'),
-	('They say no','Nhưng bố mẹ không đồng ý','00:00:12.330','00:00:13.570','esl-fast-beginner-1-43'),
-	('She tries to change their minds','Cô bé cố gắng thuyết phục bố mẹ đổi ý','00:00:14.150','00:00:16.730','esl-fast-beginner-1-43'),
-	('She washes their cars','Cô bé rửa xe cho bố mẹ','00:00:17.330','00:00:19.330','esl-fast-beginner-1-43'),
-	('She makes them dinner','Cô bé nấu bữa tối cho bố mẹ','00:00:19.810','00:00:21.590','esl-fast-beginner-1-43'),
-	('She compliments them','Cô bé dành cho bố mẹ những lời khen ngọt ngào','00:00:22.130','00:00:23.970','esl-fast-beginner-1-43'),
-	('Her parents decide to give her a raise','Cuối cùng bố mẹ quyết định tăng tiền tiêu vặt cho cô bé','00:00:24.450','00:00:27.590','esl-fast-beginner-1-43'),
-	('She will get $15 a week','Từ giờ mỗi tuần cô bé sẽ được 15 đô la','00:00:27.290','00:00:31.090','esl-fast-beginner-1-43'),
+	('They give her $10 a week','Mỗi tuần,  bố mẹ cho cô bé 10 đô la','00:00:04.000','00:00:06.790','esl-fast-beginner-1-43'),
+	('She wants more','Cô bé muốn được nhiều hơn','00:00:07.100','00:00:08.630','esl-fast-beginner-1-43'),
+	('She asks her parents nicely','Cô bé khéo léo xin bố mẹ','00:00:09.000','00:00:11.750','esl-fast-beginner-1-43'),
+	('They say no','Bố mẹ từ chối','00:00:12.100','00:00:13.570','esl-fast-beginner-1-43'),
+	('She tries to change their minds','Cô bé cố gắng thay đổi suy nghĩ của bố mẹ','00:00:14.000','00:00:16.730','esl-fast-beginner-1-43'),
+	('She washes their cars','Cô bé rửa xe cho bố mẹ','00:00:17.100','00:00:19.330','esl-fast-beginner-1-43'),
+	('She makes them dinner','Cô bé nấu bữa tối cho họ','00:00:19.700','00:00:21.590','esl-fast-beginner-1-43'),
+	('She compliments them','Cô bé khen ngợi họ','00:00:21.900','00:00:23.970','esl-fast-beginner-1-43'),
+	('Her parents decide to give her a raise','Bố mẹ quyết định tăng tiền tiêu vặt cho cô bé','00:00:24.300','00:00:27.300','esl-fast-beginner-1-43'),
+	('She will get $15 a week','Cô bé sẽ được 15 đô la mỗi tuần','00:00:27.500','00:00:31.090','esl-fast-beginner-1-43'),
 
 	/* (UUID(),'esl-fast-beginner-1-44','Loving Dance','Yêu thích khiêu vũ','BEGINNER_01_ESL_FAST_CHILDREN_044.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',44) */
 	('She loves to dance','Cô bé rất thích nhảy múa','00:00:00.200','00:00:02.620','esl-fast-beginner-1-44'),

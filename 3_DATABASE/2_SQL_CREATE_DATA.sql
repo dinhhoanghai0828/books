@@ -385,7 +385,7 @@ INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,CHE
 	(UUID(),'esl-fast-beginner-1-40','The Circus','Rạp xiếc','BEGINNER_01_ESL_FAST_CHILDREN_040.mp3','null','00:00:00.000','00:00:38.000','esl-fast-children-1','YES',0,40),
 	(UUID(),'esl-fast-beginner-1-41','An Unhealthy Boy','Một cậu bé không khỏe mạnh','BEGINNER_01_ESL_FAST_CHILDREN_041.mp3','null','00:00:00.000','00:00:31.000','esl-fast-children-1','YES',0,41),
 	(UUID(),'esl-fast-beginner-1-42','Ferris Wheel','Vòng đu quay','BEGINNER_01_ESL_FAST_CHILDREN_042.mp3','null','00:00:00.000','00:00:39.000','esl-fast-children-1','YES',0,42),
-	(UUID(),'esl-fast-beginner-1-43','More Money','Nhiều tiền hơn','BEGINNER_01_ESL_FAST_CHILDREN_043.mp3','null','00:00:00.000','00:00:00.000','esl-fast-children-1','NO',0,43),
+	(UUID(),'esl-fast-beginner-1-43','More Money','Nhiều tiền hơn','BEGINNER_01_ESL_FAST_CHILDREN_043.mp3','null','00:00:00.000','00:00:33.000','esl-fast-children-1','YES',0,43),
 	(UUID(),'esl-fast-beginner-1-44','Loving Dance','Yêu thích khiêu vũ','BEGINNER_01_ESL_FAST_CHILDREN_044.mp3','null','00:00:00.000','00:00:00.000','esl-fast-children-1','NO',0,44),
 	(UUID(),'esl-fast-beginner-1-45','A Fun Sleepover','Một buổi ngủ qua đêm vui vẻ','BEGINNER_01_ESL_FAST_CHILDREN_045.mp3','null','00:00:00.000','00:00:00.000','esl-fast-children-1','NO',0,45),
 	(UUID(),'esl-fast-beginner-1-46','Apology','Lời xin lỗi','BEGINNER_01_ESL_FAST_CHILDREN_046.mp3','null','00:00:00.000','00:00:00.000','esl-fast-children-1','NO',0,46),
