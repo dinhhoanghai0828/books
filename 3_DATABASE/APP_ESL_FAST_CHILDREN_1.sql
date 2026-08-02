@@ -593,31 +593,31 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'esl-fast-beginner-1-46','Apology','Lời xin lỗi','BEGINNER_01_ESL_FAST_CHILDREN_046.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',46) */
+	/* (UUID(),'esl-fast-beginner-1-46','Apology','Lời xin lỗi','BEGINNER_01_ESL_FAST_CHILDREN_046.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1','YES',46) */
 	('He does not like school','Cậu bé không thích đi học','00:00:00.390','00:00:03.050','esl-fast-beginner-1-46'),
-	('He hates his teachers','Cậu bé ghét các thầy cô giáo','00:00:03.790','00:00:05.550','esl-fast-beginner-1-46'),
-	('He hates learning','Cậu bé ghét học hành','00:00:06.250','00:00:08.010','esl-fast-beginner-1-46'),
-	('He hates his classmates','Cậu bé ghét các bạn cùng lớp','00:00:08.670','00:00:10.830','esl-fast-beginner-1-46'),
-	('He picks on them','Cậu bé hay bắt nạt các bạn','00:00:11.370','00:00:13.130','esl-fast-beginner-1-46'),
-	('He bothers them','Cậu bé thường quấy phá các bạn','00:00:13.350','00:00:15.010','esl-fast-beginner-1-46'),
+	('He hates his teachers','Cậu bé ghét các thầy cô giáo','00:00:03.400','00:00:05.550','esl-fast-beginner-1-46'),
+	('He hates learning','Cậu bé ghét học hành','00:00:05.900','00:00:08.010','esl-fast-beginner-1-46'),
+	('He hates his classmates','Cậu bé ghét các bạn cùng lớp','00:00:08.400','00:00:10.830','esl-fast-beginner-1-46'),
+	('He picks on them','Cậu bé hay bắt nạt các bạn','00:00:11.200','00:00:13.130','esl-fast-beginner-1-46'),
+	('He bothers them','Cậu bé thường làm phiền các bạn','00:00:13.350','00:00:15.010','esl-fast-beginner-1-46'),
 	('He rips up their homework','Cậu bé xé nát bài tập của các bạn','00:00:15.250','00:00:17.470','esl-fast-beginner-1-46'),
-	('He steals their lunch money','Cậu bé lấy trộm tiền ăn trưa của các bạn','00:00:18.070','00:00:20.390','esl-fast-beginner-1-46'),
-	('One day, his teacher sees him being mean','Một hôm, cô giáo bắt gặp cậu bé đang bắt nạt các bạn','00:00:21.250','00:00:24.950','esl-fast-beginner-1-46'),
-	('She yells at him','Cô giáo mắng cậu bé','00:00:25.270','00:00:26.690','esl-fast-beginner-1-46'),
-	('She makes him say sorry to his classmates','Cô giáo bắt cậu bé xin lỗi các bạn cùng lớp','00:00:26.390','00:00:30.530','esl-fast-beginner-1-46'),
+	('He steals their lunch money','Cậu bé lấy trộm tiền ăn trưa của các bạn','00:00:17.800','00:00:20.390','esl-fast-beginner-1-46'),
+	('One day, his teacher sees him being mean','Một hôm, cô giáo bắt gặp cậu bé đang bắt nạt các bạn','00:00:20.800','00:00:24.950','esl-fast-beginner-1-46'),
+	('She yells at him','Cô giáo mắng cậu bé','00:00:25.270','00:00:26.300','esl-fast-beginner-1-46'),
+	('She makes him say sorry to his classmates','Cô giáo bắt cậu bé xin lỗi các bạn cùng lớp','00:00:26.600','00:00:30.530','esl-fast-beginner-1-46'),
 
-	/* (UUID(),'esl-fast-beginner-1-47','Glass of Milk on the Desk','Ly sữa trên bàn học','BEGINNER_01_ESL_FAST_CHILDREN_047.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',47) */
-	('A glass of milk is on the desk','Một ly sữa đặt trên bàn','00:00:00.330','00:00:03.250','esl-fast-beginner-1-47'),
-	('It is near the edge','Ly sữa ở sát mép bàn','00:00:03.910','00:00:05.610','esl-fast-beginner-1-47'),
-	('The child looks at the milk','Đứa trẻ nhìn ly sữa','00:00:06.450','00:00:08.390','esl-fast-beginner-1-47'),
-	('The child wants to drink it','Đứa trẻ muốn uống sữa','00:00:08.910','00:00:11.250','esl-fast-beginner-1-47'),
-	('The cat looks at the milk','Con mèo cũng nhìn ly sữa','00:00:11.650','00:00:13.890','esl-fast-beginner-1-47'),
-	('The cat wants to drink it, too','Con mèo cũng muốn uống sữa','00:00:14.430','00:00:17.170','esl-fast-beginner-1-47'),
-	('They both walk towards the desk','Cả hai cùng tiến về phía chiếc bàn','00:00:18.110','00:00:20.530','esl-fast-beginner-1-47'),
-	('The cat is faster','Con mèo nhanh hơn','00:00:21.110','00:00:23.030','esl-fast-beginner-1-47'),
-	('It jumps on the desk','Nó nhảy lên bàn','00:00:23.910','00:00:25.790','esl-fast-beginner-1-47'),
-	('The glass of milk tips over','Ly sữa bị đổ','00:00:26.310','00:00:28.650','esl-fast-beginner-1-47'),
-	('The milk is all over the floor','Sữa chảy lênh láng khắp sàn nhà','00:00:28.350','00:00:32.230','esl-fast-beginner-1-47'),
+	/* (UUID(),'esl-fast-beginner-1-47','Glass of Milk on the Desk','Ly sữa trên bàn học','BEGINNER_01_ESL_FAST_CHILDREN_047.mp3',NULL,'00:00:00.000','00:00:34.000','esl-fast-children-1','YES',47) */
+	('A glass of milk is on the desk','Một ly sữa được đặt trên bàn','00:00:00.330','00:00:03.250','esl-fast-beginner-1-47'),
+	('It is near the edge','Ly sữa ở sát mép bàn','00:00:03.600','00:00:05.610','esl-fast-beginner-1-47'),
+	('The child looks at the milk','Đứa trẻ nhìn ly sữa','00:00:06.000','00:00:08.390','esl-fast-beginner-1-47'),
+	('The child wants to drink it','Đứa trẻ muốn uống sữa','00:00:08.700','00:00:11.250','esl-fast-beginner-1-47'),
+	('The cat looks at the milk','Con mèo nhìn ly sữa','00:00:11.500','00:00:13.890','esl-fast-beginner-1-47'),
+	('The cat wants to drink it, too','Con mèo cũng muốn uống sữa','00:00:14.200','00:00:17.170','esl-fast-beginner-1-47'),
+	('They both walk towards the desk','Cả hai cùng tiến về phía chiếc bàn','00:00:17.700','00:00:20.530','esl-fast-beginner-1-47'),
+	('The cat is faster','Con mèo nhanh hơn','00:00:20.900','00:00:23.030','esl-fast-beginner-1-47'),
+	('It jumps on the desk','Nó nhảy lên bàn','00:00:23.500','00:00:25.790','esl-fast-beginner-1-47'),
+	('The glass of milk tips over','Ly sữa bị nghiêng rồi đổ xuống','00:00:26.100','00:00:28.300','esl-fast-beginner-1-47'),
+	('The milk is all over the floor','Sữa lênh láng khắp sàn nhà','00:00:28.600','00:00:32.230','esl-fast-beginner-1-47'),
 
 	/* (UUID(),'esl-fast-beginner-1-48','A Simple Gift','Một món quà đơn giản','BEGINNER_01_ESL_FAST_CHILDREN_048.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',48) */
 	('He wants to get something for his teacher','Cậu bé muốn tặng cô giáo một món quà','00:00:00.330','00:00:03.370','esl-fast-beginner-1-48'),
