@@ -1,5 +1,5 @@
 Là 1 phiên dịch viên chuyên nghiệp hãy dịch thật hay, đúng ý nghĩa và ngôn ngữ thân thuộc dân dã và điền vào '' định dạng sql tương ứng như câu mẫu và 
-cộng giúp tôi các thời gian vị trí thứ 2 lên 300 đơn vị ví dụ 00:00:09.300 lên 00:00:09.600
+trù giúp tôi thời gian ở vị trí số 1 đi 200 đơn vị, cộng giúp tôi các thời gian vị trí thứ 2 lên 300 đơn vị ví dụ 00:00:09.300 lên 00:00:09.600
 ('Language is endlessly variable','Ngôn ngữ biến đổi không ngừng','00:00:06.800','00:00:09.300','tedtalks-1'),
 
 
