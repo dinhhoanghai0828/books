@@ -567,28 +567,28 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Her parents decide to give her a raise','Bố mẹ quyết định tăng tiền tiêu vặt cho cô bé','00:00:24.300','00:00:27.300','esl-fast-beginner-1-43'),
 	('She will get $15 a week','Cô bé sẽ được 15 đô la mỗi tuần','00:00:27.500','00:00:31.090','esl-fast-beginner-1-43'),
 
-	/* (UUID(),'esl-fast-beginner-1-44','Loving Dance','Yêu thích khiêu vũ','BEGINNER_01_ESL_FAST_CHILDREN_044.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',44) */
+	/* (UUID(),'esl-fast-beginner-1-44','Loving Dance','Yêu thích khiêu vũ','BEGINNER_01_ESL_FAST_CHILDREN_044.mp3',NULL,'00:00:00.000','00:00:29.000','esl-fast-children-1','YES',44) */
 	('She loves to dance','Cô bé rất thích nhảy múa','00:00:00.200','00:00:02.620','esl-fast-beginner-1-44'),
-	('She dances on her school\'s team','Cô bé nhảy trong đội văn nghệ của trường','00:00:02.960','00:00:06.060','esl-fast-beginner-1-44'),
-	('She dances after school','Tan học là cô bé đi tập nhảy','00:00:06.600','00:00:08.880','esl-fast-beginner-1-44'),
-	('She loves to dance in her room','Cô bé thích nhảy ngay trong phòng mình','00:00:09.320','00:00:11.840','esl-fast-beginner-1-44'),
-	('She loves to dance in the kitchen','Cô bé cũng thích nhảy trong bếp','00:00:12.360','00:00:14.700','esl-fast-beginner-1-44'),
-	('She even loves to dance in the bathroom','Thậm chí cô bé còn thích nhảy trong phòng tắm','00:00:15.440','00:00:18.680','esl-fast-beginner-1-44'),
-	('Anyone can see that she is passionate','Ai cũng có thể thấy cô bé rất đam mê nhảy múa','00:00:19.500','00:00:22.640','esl-fast-beginner-1-44'),
-	('People say she is the best dancer in the world','Mọi người nói cô bé là vũ công giỏi nhất thế giới','00:00:23.420','00:00:27.360','esl-fast-beginner-1-44'),
+	('She dances on her school\'s team','Cô bé nhảy trong đội của trường','00:00:02.960','00:00:06.060','esl-fast-beginner-1-44'),
+	('She dances after school','Cô bé nhảy sau khi tan học','00:00:06.400','00:00:08.880','esl-fast-beginner-1-44'),
+	('She loves to dance in her room','Cô bé thích nhảy trong phòng mình','00:00:09.200','00:00:11.840','esl-fast-beginner-1-44'),
+	('She loves to dance in the kitchen','Cô bé thích nhảy trong bếp','00:00:12.200','00:00:14.700','esl-fast-beginner-1-44'),
+	('She even loves to dance in the bathroom','Thậm chí cô bé còn thích nhảy trong phòng tắm','00:00:15.100','00:00:18.680','esl-fast-beginner-1-44'),
+	('Anyone can see that she is passionate','Ai cũng có thể thấy cô bé rất đam mê','00:00:19.000','00:00:22.640','esl-fast-beginner-1-44'),
+	('People say she is the best dancer in the world','Mọi người nói cô bé là vũ công giỏi nhất thế giới','00:00:23.100','00:00:27.360','esl-fast-beginner-1-44'),
 
-	/* (UUID(),'esl-fast-beginner-1-45','A Fun Sleepover','Một buổi ngủ qua đêm vui vẻ','BEGINNER_01_ESL_FAST_CHILDREN_045.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',45) */
-	('She sleeps over at a friend\'s house','Cô bé sang nhà bạn ngủ lại','00:00:00.260','00:00:03.680','esl-fast-beginner-1-45'),
-	('They do a lot of fun activities','Hai bạn cùng làm rất nhiều hoạt động vui vẻ','00:00:04.180','00:00:06.380','esl-fast-beginner-1-45'),
-	('They fight with their pillows','Hai bạn đánh gối với nhau','00:00:07.140','00:00:08.960','esl-fast-beginner-1-45'),
-	('They roast marshmallows over a fire','Hai bạn nướng kẹo dẻo trên bếp lửa','00:00:09.480','00:00:12.480','esl-fast-beginner-1-45'),
-	('They sing songs','Hai bạn cùng hát','00:00:13.100','00:00:14.900','esl-fast-beginner-1-45'),
-	('They watch movies','Hai bạn cùng xem phim','00:00:15.239','00:00:17.160','esl-fast-beginner-1-45'),
-	('The movies are funny','Những bộ phim rất hài hước','00:00:17.540','00:00:19.140','esl-fast-beginner-1-45'),
-	('They eat popcorn while they watch','Hai bạn vừa xem phim vừa ăn bỏng ngô','00:00:19.880','00:00:22.560','esl-fast-beginner-1-45'),
-	('They braid each other\'s hair','Hai bạn tết tóc cho nhau','00:00:23.000','00:00:25.700','esl-fast-beginner-1-45'),
-	('They use sleeping bags','Hai bạn dùng túi ngủ','00:00:26.220','00:00:28.580','esl-fast-beginner-1-45'),
-	('They fall asleep','Rồi cả hai chìm vào giấc ngủ','00:00:28.280','00:00:30.700','esl-fast-beginner-1-45');
+	/* (UUID(),'esl-fast-beginner-1-45','A Fun Sleepover','Một buổi ngủ qua đêm vui vẻ','BEGINNER_01_ESL_FAST_CHILDREN_045.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1','YES',45) */
+	('She sleeps over at a friend\'s house','Cô bé ngủ lại qua đêm ở nhà bạn','00:00:00.260','00:00:03.600','esl-fast-beginner-1-45'),
+	('They do a lot of fun activities','Họ làm rất nhiều hoạt động vui vẻ','00:00:03.900','00:00:06.380','esl-fast-beginner-1-45'),
+	('They fight with their pillows','Hai bạn đánh gối với nhau','00:00:06.800','00:00:08.960','esl-fast-beginner-1-45'),
+	('They roast marshmallows over a fire','Hai bạn nướng kẹo dẻo trên bếp lửa','00:00:09.300','00:00:12.480','esl-fast-beginner-1-45'),
+	('They sing songs','Hai bạn cùng hát','00:00:12.900','00:00:14.900','esl-fast-beginner-1-45'),
+	('They watch movies','Hai bạn cùng xem phim','00:00:15.200','00:00:17.160','esl-fast-beginner-1-45'),
+	('The movies are funny','Những bộ phim rất hài hước','00:00:17.400','00:00:19.140','esl-fast-beginner-1-45'),
+	('They eat popcorn while they watch','Hai bạn ăn bỏng ngô trong khi xem','00:00:19.600','00:00:22.560','esl-fast-beginner-1-45'),
+	('They braid each other\'s hair','Hai bạn tết tóc cho nhau','00:00:22.800','00:00:25.700','esl-fast-beginner-1-45'),
+	('They use sleeping bags','Hai bạn dùng túi ngủ','00:00:26.000','00:00:28.200','esl-fast-beginner-1-45'),
+	('They fall asleep','Rồi cả hai ngủ thiếp đi','00:00:28.500','00:00:30.700','esl-fast-beginner-1-45');
 
 /*=====================================================================================================================================================================================================================================================*/
 
