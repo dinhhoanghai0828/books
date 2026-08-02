@@ -516,11 +516,11 @@ public class RunSQLComponent {
                     int number = resultSet.getInt("NUMBER");
 
                     // Convert null to SQL NULL (without quotes)
-                    String audioSql = (audio == null) ? "null" : "'" + audio + "'";
-                    String imgSql = (img == null) ? "null" : "'" + img + "'";
-                    String startTimeSql = (startTime == null) ? "null" : "'" + startTime + "'";
-                    String endTimeSql = (endTime == null) ? "null" : "'" + endTime + "'";
-                    String checkedSql = (checked == null) ? "null" : "'" + checked + "'";
+                    String audioSql = (audio == null) ? "NULL" : "'" + audio + "'";
+                    String imgSql = (img == null) ? "NULL" : "'" + img + "'";
+                    String startTimeSql = (startTime == null) ? "NULL" : "'" + startTime + "'";
+                    String endTimeSql = (endTime == null) ? "NULL" : "'" + endTime + "'";
+                    String checkedSql = (checked == null) ? "NULL" : "'" + checked + "'";
 
                     // Check if book_slug changed
                     if (currentBookSlug == null || !currentBookSlug.equals(bookSlug)) {
