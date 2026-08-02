@@ -3,6 +3,8 @@
 // Interface cho doi tuong Tap (Volume)
 // ============================================================
 
+import { ContentType } from './content';
+
 export interface Volume {
   id: string;              // ID cua tap
   uuid: string;            // UUID cua tap
@@ -18,4 +20,5 @@ export interface Volume {
   img: string;             // Ten file anh
   number: number;          // So thu tu
   isRead: number;          // Trang thai da doc xong (0: chua doc, 1: da doc)
+  contents?: ContentType[]; // Danh sach cau trong tap
 }

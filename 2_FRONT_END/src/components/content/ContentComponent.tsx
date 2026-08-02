@@ -260,9 +260,16 @@ const ContentComponent = ({
   // Đồng bộ trạng thái từ Audio Player bên dưới
   const onAudioPlayStateChange = useCallback((isPlayingAudio: boolean, currentActiveId: string | null) => {
     if (!currentActiveId) return;
-    setPlayStates((prev) =>
-      Object.fromEntries(Object.keys(prev).map((k) => [k, k === currentActiveId ? isPlayingAudio : false]))
-    );
+    setPlayStates((prev) => {
+      const newStates = { ...prev };
+      Object.keys(prev).forEach(k => {
+        if (prev[k] && k !== currentActiveId) {
+          newStates[k] = false;
+        }
+      });
+      newStates[currentActiveId] = isPlayingAudio;
+      return newStates;
+    });
   }, []);
 
   // ============================================================
@@ -276,7 +283,7 @@ const ContentComponent = ({
 
     if (isCurrentlyPlaying) {
       // Đang phát item này -> tạm dừng
-      setPlayStates((prev) => Object.fromEntries(Object.keys(prev).map((k) => [k, false])));
+      setPlayStates((prev) => ({ ...prev, [itemIdStr]: false }));
       setActive(null, null);
       setIsVideoPlaying(false);
       setPauseCommand(Date.now());
@@ -288,8 +295,18 @@ const ContentComponent = ({
       handlePauseAudio(true);
     }
 
-    // Cập nhật state & phát command cho Video
-    setPlayStates((prev) => Object.fromEntries(Object.keys(prev).map((k) => [k, k === itemIdStr])));
+    // Cập nhật state & phát command cho Video - chỉ cập nhật item được click
+    setPlayStates((prev) => {
+      const newStates = { ...prev };
+      // Chỉ set false cho đang playing, không set toàn bộ
+      Object.keys(prev).forEach(k => {
+        if (prev[k] && k !== itemIdStr) {
+          newStates[k] = false;
+        }
+      });
+      newStates[itemIdStr] = true;
+      return newStates;
+    });
     setLoopStates((prev) => ({ ...prev, [itemIdStr]: false }));
     setActive(itemIdStr, 'video');
     setIsVideoPlaying(true);
@@ -298,8 +315,24 @@ const ContentComponent = ({
 
   // Callback từ VideoLayout khi video dừng/hết đoạn
   const onVideoStop = useCallback(() => {
-    setPlayStates((prev) => Object.fromEntries(Object.keys(prev).map((k) => [k, false])));
-    setLoopStates((prev) => Object.fromEntries(Object.keys(prev).map((k) => [k, false])));
+    setPlayStates((prev) => {
+      const newStates = { ...prev };
+      Object.keys(prev).forEach(k => {
+        if (prev[k]) {
+          newStates[k] = false;
+        }
+      });
+      return newStates;
+    });
+    setLoopStates((prev) => {
+      const newStates = { ...prev };
+      Object.keys(prev).forEach(k => {
+        if (prev[k]) {
+          newStates[k] = false;
+        }
+      });
+      return newStates;
+    });
     setActive(null, null);
     setIsVideoPlaying(false);
   }, [setActive]);
@@ -308,9 +341,17 @@ const ContentComponent = ({
   const onVideoActiveItemChange = useCallback((id: string) => {
     if (activeItemIdRef.current === id) return;
     setActive(id, 'video');
-    setPlayStates((prev) =>
-      Object.fromEntries(Object.keys(prev).map((k) => [k, k === id]))
-    );
+    setPlayStates((prev) => {
+      const newStates = { ...prev };
+      // Chỉ set false cho đang playing, set true cho id mới
+      Object.keys(prev).forEach(k => {
+        if (prev[k] && k !== id) {
+          newStates[k] = false;
+        }
+      });
+      newStates[id] = true;
+      return newStates;
+    });
   }, [setActive]);
 
   // 2. AUDIO PLAY/PAUSE HANDLER
@@ -319,7 +360,7 @@ const ContentComponent = ({
     const isCurrentlyPlaying = playStates[itemIdStr] ?? false;
 
     if (isCurrentlyPlaying) {
-      setPlayStates((prev) => Object.fromEntries(Object.keys(prev).map((k) => [k, false])));
+      setPlayStates((prev) => ({ ...prev, [itemIdStr]: false }));
       setActive(null, null);
       setPauseCommand(Date.now());
       return;
@@ -331,24 +372,57 @@ const ContentComponent = ({
       setPauseCommand(Date.now());
     }
 
-    setPlayStates((prev) => Object.fromEntries(Object.keys(prev).map((k) => [k, k === itemIdStr])));
+    // Chỉ cập nhật item được click và các item đang playing
+    setPlayStates((prev) => {
+      const newStates = { ...prev };
+      Object.keys(prev).forEach(k => {
+        if (prev[k] && k !== itemIdStr) {
+          newStates[k] = false;
+        }
+      });
+      newStates[itemIdStr] = true;
+      return newStates;
+    });
     setLoopStates((prev) => ({ ...prev, [itemIdStr]: false }));
     setActive(itemIdStr, 'audio');
     setPlayCommand({ itemId: itemIdStr, startTime, endTime, ts: Date.now() });
   }, [playStates, setActive]);
 
   const onAudioStop = useCallback(() => {
-    setPlayStates((prev) => Object.fromEntries(Object.keys(prev).map((k) => [k, false])));
-    setLoopStates((prev) => Object.fromEntries(Object.keys(prev).map((k) => [k, false])));
+    setPlayStates((prev) => {
+      const newStates = { ...prev };
+      Object.keys(prev).forEach(k => {
+        if (prev[k]) {
+          newStates[k] = false;
+        }
+      });
+      return newStates;
+    });
+    setLoopStates((prev) => {
+      const newStates = { ...prev };
+      Object.keys(prev).forEach(k => {
+        if (prev[k]) {
+          newStates[k] = false;
+        }
+      });
+      return newStates;
+    });
     setActive(null, null);
   }, [setActive]);
 
   const onAudioActiveItemChange = useCallback((id: string) => {
     if (activeItemIdRef.current === id) return;
     setActive(id, 'audio');
-    setPlayStates((prev) =>
-      Object.fromEntries(Object.keys(prev).map((k) => [k, k === id]))
-    );
+    setPlayStates((prev) => {
+      const newStates = { ...prev };
+      Object.keys(prev).forEach(k => {
+        if (prev[k] && k !== id) {
+          newStates[k] = false;
+        }
+      });
+      newStates[id] = true;
+      return newStates;
+    });
   }, [setActive]);
 
   // 3. LOOP HANDLER (Chung cho cả Audio & Video)
