@@ -91,7 +91,7 @@ const MatchSentencesPage = () => {
     
     setSelectedEn(id);
     
-    // Nếu đã chọn VI, thực hiện match
+    // Nếu đã chọn VI, thực hiện match ngay
     if (selectedVi) {
       handleMatch(id, selectedVi);
     }
@@ -111,7 +111,7 @@ const MatchSentencesPage = () => {
     
     setSelectedVi(id);
     
-    // Nếu đã chọn EN, thực hiện match
+    // Nếu đã chọn EN, thực hiện match ngay
     if (selectedEn) {
       handleMatch(selectedEn, id);
     }
@@ -170,6 +170,10 @@ const MatchSentencesPage = () => {
     await fetchData(limit);
   };
 
+  // Get all matched EN and VI IDs
+  const matchedEnIds = matchedPairs.map(p => p.enId);
+  const matchedViIds = matchedPairs.map(p => p.viId);
+
   // ============================================================
   // RENDER
   // ============================================================
@@ -189,7 +193,7 @@ const MatchSentencesPage = () => {
       {loading ? (
         <Spin size="large" />
       ) : (
-        <div style={{ display: 'flex', gap: 60, marginTop: 30 }}>
+        <div style={{ display: 'flex', gap: 100, marginTop: 30 }}>
           {/* Cột tiếng Anh */}
           <div style={{ flex: 1 }}>
             <Text strong style={{ fontSize: 18, marginBottom: 20, display: 'block', color: '#1890ff' }}>
@@ -200,6 +204,7 @@ const MatchSentencesPage = () => {
               const match = matchedPairs.find(p => p.enId === item.id);
               const isCorrect = match ? checkedResults[match.enId] : undefined;
               const isSelected = selectedEn === item.id;
+              const isUnselected = isChecked && !isMatched;
               
               return (
                 <div
@@ -210,11 +215,13 @@ const MatchSentencesPage = () => {
                     marginBottom: 12,
                     border: `2px solid ${
                       isSelected ? '#1890ff' : 
+                      isUnselected ? '#ff4d4f' :
                       isMatched ? (isCorrect === true ? '#52c41a' : isCorrect === false ? '#ff4d4f' : '#d9d9d9') : '#e8e8e8'
                     }`,
                     borderRadius: 12,
                     cursor: isChecked || isMatched ? 'default' : 'pointer',
                     backgroundColor: isSelected ? '#e6f7ff' : 
+                      isUnselected ? '#fff2f0' :
                       isMatched ? (isCorrect === true ? '#f6ffed' : isCorrect === false ? '#fff2f0' : '#fafafa') : '#fff',
                     boxShadow: isSelected ? '0 4px 12px rgba(24, 144, 255, 0.3)' : 
                       isMatched ? '0 2px 8px rgba(0, 0, 0, 0.1)' : '0 2px 4px rgba(0, 0, 0, 0.05)',
@@ -278,6 +285,7 @@ const MatchSentencesPage = () => {
               const match = matchedPairs.find(p => p.viId === item.id);
               const isCorrect = match ? checkedResults[match.enId] : undefined;
               const isSelected = selectedVi === item.id;
+              const isUnselected = isChecked && !isMatched;
               
               return (
                 <div
@@ -288,11 +296,13 @@ const MatchSentencesPage = () => {
                     marginBottom: 12,
                     border: `2px solid ${
                       isSelected ? '#52c41a' : 
+                      isUnselected ? '#ff4d4f' :
                       isMatched ? (isCorrect === true ? '#52c41a' : isCorrect === false ? '#ff4d4f' : '#d9d9d9') : '#e8e8e8'
                     }`,
                     borderRadius: 12,
                     cursor: isChecked || isMatched ? 'default' : 'pointer',
                     backgroundColor: isSelected ? '#f6ffed' : 
+                      isUnselected ? '#fff2f0' :
                       isMatched ? (isCorrect === true ? '#f6ffed' : isCorrect === false ? '#fff2f0' : '#fafafa') : '#fff',
                     boxShadow: isSelected ? '0 4px 12px rgba(82, 196, 26, 0.3)' : 
                       isMatched ? '0 2px 8px rgba(0, 0, 0, 0.1)' : '0 2px 4px rgba(0, 0, 0, 0.05)',
