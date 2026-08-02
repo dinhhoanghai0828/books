@@ -50,6 +50,7 @@ const MatchSentencesPage = () => {
   const enRefs = useRef<Record<string, HTMLDivElement>>({});
   const viRefs = useRef<Record<string, HTMLDivElement>>({});
   const [selectedLinePath, setSelectedLinePath] = useState<string>('');
+  const [matchedLinePaths, setMatchedLinePaths] = useState<Array<{ enId: string; viId: string; path: string; color: string }>>([]);
 
   // ============================================================
   // DATA FETCHING
@@ -220,6 +221,57 @@ const MatchSentencesPage = () => {
     };
   }, [selectedEn, selectedVi, shuffledEn, shuffledVi]);
 
+  // Calculate connection line paths for matched pairs
+  useEffect(() => {
+    if (matchedPairs.length === 0) {
+      setMatchedLinePaths([]);
+      return;
+    }
+
+    const calculateMatchedPaths = () => {
+      const containerRect = containerRef.current?.getBoundingClientRect();
+      if (!containerRect) return;
+
+      const headerOffset = 135;
+      const xOffset = 30;
+
+      const lines = matchedPairs.map((pair) => {
+        const enEl = enRefs.current[pair.enId];
+        const viEl = viRefs.current[pair.viId];
+        
+        if (!enEl || !viEl) return null;
+        
+        const enRect = enEl.getBoundingClientRect();
+        const viRect = viEl.getBoundingClientRect();
+        
+        const enX = enRect.right - containerRect.left - xOffset;
+        const enY = enRect.top + enRect.height / 2 - containerRect.top - headerOffset;
+        const viX = viRect.left - containerRect.left - xOffset;
+        const viY = viRect.top + viRect.height / 2 - containerRect.top - headerOffset;
+        
+        const isCorrect = checkedResults[pair.enId];
+        const color = isCorrect === true ? '#52c41a' : isCorrect === false ? '#ff4d4f' : '#1890ff';
+        
+        const midX = (enX + viX) / 2;
+        const path = `M ${enX} ${enY} C ${midX} ${enY}, ${midX} ${viY}, ${viX} ${viY}`;
+        
+        return { enId: pair.enId, viId: pair.viId, path, color };
+      }).filter((line): line is { enId: string; viId: string; path: string; color: string } => line !== null);
+
+      setMatchedLinePaths(lines);
+    };
+
+    const timeout1 = setTimeout(calculateMatchedPaths, 0);
+    const timeout2 = setTimeout(calculateMatchedPaths, 50);
+    const timeout3 = setTimeout(calculateMatchedPaths, 100);
+    
+    return () => {
+      clearTimeout(timeout1);
+      clearTimeout(timeout2);
+      clearTimeout(timeout3);
+    };
+  }, [matchedPairs, checkedResults, shuffledEn, shuffledVi]);
+
   // ============================================================
   // RENDER
   // ============================================================
@@ -252,6 +304,17 @@ const MatchSentencesPage = () => {
               zIndex: 10,
             }}
           >
+            {/* Matched pairs lines */}
+            {matchedLinePaths.map((line) => (
+              <path
+                key={`${line.enId}-${line.viId}`}
+                d={line.path}
+                stroke={line.color}
+                strokeWidth="4"
+                fill="none"
+              />
+            ))}
+            {/* Currently selected line */}
             {selectedLinePath && (
               <path
                 d={selectedLinePath}
