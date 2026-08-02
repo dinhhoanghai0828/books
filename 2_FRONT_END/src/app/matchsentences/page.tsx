@@ -7,6 +7,7 @@ import {
   ReloadOutlined,
   LinkOutlined,
   TranslationOutlined,
+  SoundOutlined,
 } from '@ant-design/icons';
 import { Button, Modal, Spin, Typography, message } from 'antd';
 import { useRouter, useSearchParams } from 'next/navigation';
@@ -51,6 +52,7 @@ const MatchSentencesPage = () => {
   const viRefs = useRef<Record<string, HTMLDivElement>>({});
   const [selectedLinePath, setSelectedLinePath] = useState<string>('');
   const [matchedLinePaths, setMatchedLinePaths] = useState<Array<{ enId: string; viId: string; path: string; color: string }>>([]);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   // ============================================================
   // DATA FETCHING
@@ -138,6 +140,62 @@ const MatchSentencesPage = () => {
       // Re-number remaining matches
       return removed.map((p, idx) => ({ ...p, matchNumber: idx + 1 }));
     });
+  };
+
+  const handlePlayAudio = (audioUrl: string, startTime: number, endTime: number) => {
+    if (!audioUrl) {
+      message.warning('Không có file audio cho câu này');
+      return;
+    }
+
+    // Format audio URL to include /media/ prefix (same as Sort Sentences page)
+    let formattedAudioUrl = audioUrl;
+    if (!audioUrl.startsWith('/media/')) {
+      formattedAudioUrl = `/media/${audioUrl}`;
+    }
+
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current = null;
+    }
+    
+    try {
+      const audio = new Audio(formattedAudioUrl);
+      audioRef.current = audio;
+      
+      // Validate and set start time
+      const validStartTime = Number(startTime) || 0;
+      if (isFinite(validStartTime)) {
+        audio.currentTime = validStartTime / 1000;
+      }
+      
+      const handleTimeUpdate = () => {
+        const currentTime = audio.currentTime * 1000;
+        const validEndTime = Number(endTime) || 0;
+        if (isFinite(validEndTime) && validEndTime > 0 && currentTime >= validEndTime) {
+          audio.pause();
+          audio.removeEventListener('timeupdate', handleTimeUpdate);
+        }
+      };
+      
+      const handleError = (e: Event) => {
+        console.error('Audio error:', e);
+        message.error('Không thể phát audio. File có thể không tồn tại hoặc định dạng không được hỗ trợ.');
+        audio.removeEventListener('error', handleError);
+        audio.removeEventListener('timeupdate', handleTimeUpdate);
+      };
+      
+      audio.addEventListener('timeupdate', handleTimeUpdate);
+      audio.addEventListener('error', handleError);
+      
+      audio.play().catch(err => {
+        console.error('Error playing audio:', err);
+        message.error('Không thể phát audio. Vui lòng thử lại sau.');
+      });
+    } catch (err) {
+      console.error('Error creating audio:', err);
+      message.error('Lỗi khi khởi tạo audio.');
+    }
   };
 
   // ============================================================
@@ -372,22 +430,37 @@ const MatchSentencesPage = () => {
                 >
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                     <Text style={{ fontSize: 15, flex: 1 }}>{item.eng}</Text>
-                    {isMatched && match && (
-                      <div style={{
-                        backgroundColor: isCorrect === true ? '#52c41a' : isCorrect === false ? '#ff4d4f' : '#1890ff',
-                        color: '#fff',
-                        borderRadius: '50%',
-                        width: 28,
-                        height: 28,
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        fontWeight: 'bold',
-                        fontSize: 14,
-                      }}>
-                        {match.matchNumber}
-                      </div>
-                    )}
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                      {item.audio && (
+                        <SoundOutlined
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handlePlayAudio(item.audio, Number(item.startTime || 0), Number(item.endTime || 0));
+                          }}
+                          style={{ 
+                            cursor: 'pointer', 
+                            color: '#1890ff',
+                            fontSize: 16,
+                          }}
+                        />
+                      )}
+                      {isMatched && match && (
+                        <div style={{
+                          backgroundColor: isCorrect === true ? '#52c41a' : isCorrect === false ? '#ff4d4f' : '#1890ff',
+                          color: '#fff',
+                          borderRadius: '50%',
+                          width: 28,
+                          height: 28,
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          fontWeight: 'bold',
+                          fontSize: 14,
+                        }}>
+                          {match.matchNumber}
+                        </div>
+                      )}
+                    </div>
                   </div>
                   {isMatched && !isChecked && (
                     <Button
