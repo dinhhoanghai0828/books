@@ -18,7 +18,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	/* (UUID(),'esl-fast-elementary-1-2','First Day of School','Ngày đầu tiên đi học','ELEMENTARY_01_ESL_FAST_002.mp3',NULL,'00:00:29.000','00:00:00.000','esl-fast-elementary-1','NO',2) */
 	('He goes to class','Anh ấy đi đến lớp học','00:00:00.330','00:00:02.130','esl-fast-elementary-1-2'),
 	('There is an empty seat in front','Có một chỗ ngồi trống ở phía trước','00:00:02.590','00:00:04.990','esl-fast-elementary-1-2'),
-	('He sits in the seat','Anh ấy ngồi vào chỗ','00:00:05.790','00:00:07.290','esl-fast-elementary-1-2'),
+	('He sits in the seat','Anh ấy ngồi vào ghế','00:00:05.790','00:00:07.290','esl-fast-elementary-1-2'),
 	('He looks around','Anh ấy nhìn xung quanh','00:00:08.090','00:00:09.370','esl-fast-elementary-1-2'),
 	('There are different people','Có nhiều người khác nhau trong lớp','00:00:10.170','00:00:11.970','esl-fast-elementary-1-2'),
 	('He says hi to the girl next to him','Anh ấy chào cô gái ngồi cạnh mình','00:00:12.890','00:00:16.030','esl-fast-elementary-1-2'),

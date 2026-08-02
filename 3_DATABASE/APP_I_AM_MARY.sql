@@ -4548,7 +4548,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('A flow will have an ebb','Có dòng chảy thì sẽ có lúc ngừng','00:04:35.880','00:04:37.500','I-am-Mary-71'),
 	('Who knows, tomorrow, the people you despise because of poverty will do the same for you','Ai biết được, ngày mai những người mà bạn khinh thường vì nghèo khó sẽ đối xử với bạn như thế','00:04:38.520','00:04:44.240','I-am-Mary-71'),
 	('How will you feel?','Bạn sẽ cảm thấy thế nào?','00:04:45.060','00:04:46.020','I-am-Mary-71'),
-	('A famous businessman said, why do stars look so small?','Một doanh nhân nổi tiếng từng nói, tại sao các ngôi sao trông nhỏ bé như vậy?','00:04:47.360','00:04:51.220','I-am-Mary-71'),
+	('A famous businessman said, why do stars look so small?','Một doanh nhân nổi tiếng từng nói, tại sao các ngôi sao trông nhỏ xíu như vậy?','00:04:47.360','00:04:51.220','I-am-Mary-71'),
 	('It is because they are placed so high','Bởi vì chúng ở trên cao','00:04:51.640','00:04:53.960','I-am-Mary-71'),
 	('The rich will hide, calm down, not workaholics, do not brag','Người giàu sẽ ẩn mình, điềm tĩnh, không tham công tiếc việc, không khoe khoang','00:04:54.420','00:04:58.760','I-am-Mary-71'),
 	('Being human requires modesty','Làm người cần có sự khiêm tốn','00:04:59.980','00:05:02.180','I-am-Mary-71'),

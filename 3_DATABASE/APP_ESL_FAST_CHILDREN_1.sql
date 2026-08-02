@@ -539,20 +539,20 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('They eat fish, carrots, and vegetables for lunch','Họ ăn cá, cà rốt và rau vào bữa trưa','00:00:21.300','00:00:25.490','esl-fast-beginner-1-41'),
 	('They eat chicken and salad for dinner','Họ ăn thịt gà và salad vào bữa tối','00:00:25.800','00:00:28.830','esl-fast-beginner-1-41'),
 
-	/* (UUID(),'esl-fast-beginner-1-42','Ferris Wheel','Vòng đu quay','BEGINNER_01_ESL_FAST_CHILDREN_042.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',42) */
+	/* (UUID(),'esl-fast-beginner-1-42','Ferris Wheel','Vòng đu quay','BEGINNER_01_ESL_FAST_CHILDREN_042.mp3',NULL,'00:00:00.000','00:00:39.000','esl-fast-children-1','YES',42) */
 	('A Ferris wheel is a huge rotating wheel','Vòng đu quay là một bánh xe khổng lồ quay tròn','00:00:00.330','00:00:04.370','esl-fast-beginner-1-42'),
-	('It has many seats','Nó có rất nhiều chỗ ngồi','00:00:05.030','00:00:06.890','esl-fast-beginner-1-42'),
-	('He sits on one of them','Cậu ấy ngồi vào một trong những chỗ đó','00:00:07.510','00:00:09.370','esl-fast-beginner-1-42'),
-	('His seat is yellow','Chỗ ngồi của cậu ấy có màu vàng','00:00:09.910','00:00:11.450','esl-fast-beginner-1-42'),
-	('He is excited','Cậu ấy rất háo hức','00:00:12.010','00:00:13.470','esl-fast-beginner-1-42'),
-	('He puts his seat belt on','Cậu ấy thắt dây an toàn','00:00:14.070','00:00:16.550','esl-fast-beginner-1-42'),
-	('He holds on to the metal bar','Cậu ấy bám chặt vào thanh kim loại','00:00:16.890','00:00:19.370','esl-fast-beginner-1-42'),
-	('He wants to be safe','Cậu ấy muốn được an toàn','00:00:19.950','00:00:21.870','esl-fast-beginner-1-42'),
-	('The wheel moves','Vòng đu quay bắt đầu chuyển động','00:00:22.290','00:00:24.290','esl-fast-beginner-1-42'),
-	('He starts to go up, higher and higher','Cậu ấy bắt đầu lên cao, càng lúc càng cao','00:00:24.730','00:00:28.930','esl-fast-beginner-1-42'),
-	('He looks down','Cậu ấy nhìn xuống dưới','00:00:28.630','00:00:31.030','esl-fast-beginner-1-42'),
-	('The people are so small','Mọi người trông nhỏ xíu','00:00:31.549','00:00:34.130','esl-fast-beginner-1-42'),
-	('The view is so nice','Khung cảnh thật đẹp','00:00:34.750','00:00:37.270','esl-fast-beginner-1-42'),
+	('It has many seats','Có rất nhiều ghế ngồi','00:00:04.800','00:00:06.890','esl-fast-beginner-1-42'),
+	('He sits on one of them','Cậu bé ngồi vào một trong những chỗ đó','00:00:07.300','00:00:09.370','esl-fast-beginner-1-42'),
+	('His seat is yellow','Ghế của cậu bé có màu vàng','00:00:09.700','00:00:11.450','esl-fast-beginner-1-42'),
+	('He is excited','Cậu bé rất háo hức','00:00:11.800','00:00:13.470','esl-fast-beginner-1-42'),
+	('He puts his seat belt on','Cậu bé thắt dây an toàn','00:00:13.800','00:00:16.550','esl-fast-beginner-1-42'),
+	('He holds on to the metal bar','Cậu ấy bám chặt vào thanh kim loại','00:00:16.800','00:00:19.370','esl-fast-beginner-1-42'),
+	('He wants to be safe','Cậu bé muốn bảo đảm an toàn','00:00:19.700','00:00:21.870','esl-fast-beginner-1-42'),
+	('The wheel moves','Vòng quay chuyển động','00:00:22.200','00:00:24.290','esl-fast-beginner-1-42'),
+	('He starts to go up, higher and higher','Cậu bé bắt đầu lên cao, càng lúc càng cao','00:00:24.600','00:00:28.700','esl-fast-beginner-1-42'),
+	('He looks down','Cậu ấy nhìn xuống dưới','00:00:29.000','00:00:31.030','esl-fast-beginner-1-42'),
+	('The people are so small','Mọi người trông nhỏ xíu','00:00:31.300','00:00:34.130','esl-fast-beginner-1-42'),
+	('The view is so nice','Khung cảnh thật đẹp','00:00:34.500','00:00:37.270','esl-fast-beginner-1-42'),
 
 	/* (UUID(),'esl-fast-beginner-1-43','More Money','Nhiều tiền hơn','BEGINNER_01_ESL_FAST_CHILDREN_043.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',43) */
 	('She gets an allowance from her parents','Cô bé được bố mẹ cho tiền tiêu vặt','00:00:00.330','00:00:03.710','esl-fast-beginner-1-43'),
