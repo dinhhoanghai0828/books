@@ -619,29 +619,29 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The glass of milk tips over','Ly sữa bị nghiêng rồi đổ xuống','00:00:26.100','00:00:28.300','esl-fast-beginner-1-47'),
 	('The milk is all over the floor','Sữa lênh láng khắp sàn nhà','00:00:28.600','00:00:32.230','esl-fast-beginner-1-47'),
 
-	/* (UUID(),'esl-fast-beginner-1-48','A Simple Gift','Một món quà đơn giản','BEGINNER_01_ESL_FAST_CHILDREN_048.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',48) */
-	('He wants to get something for his teacher','Cậu bé muốn tặng cô giáo một món quà','00:00:00.330','00:00:03.370','esl-fast-beginner-1-48'),
-	('He has no money though','Nhưng cậu bé lại không có tiền','00:00:03.770','00:00:05.750','esl-fast-beginner-1-48'),
-	('He gets creative','Cậu bé liền nghĩ ra một cách hay','00:00:06.190','00:00:07.910','esl-fast-beginner-1-48'),
+	/* (UUID(),'esl-fast-beginner-1-48','A Simple Gift','Một món quà đơn giản','BEGINNER_01_ESL_FAST_CHILDREN_048.mp3',NULL,'00:00:00.000','00:00:25.000','esl-fast-children-1','YES',48) */
+	('He wants to get something for his teacher','Cậu bé muốn mua thứ gì đó cho cô giáo','00:00:00.330','00:00:03.370','esl-fast-beginner-1-48'),
+	('He has no money though','Nhưng cậu bé lại không có tiền','00:00:03.670','00:00:05.700','esl-fast-beginner-1-48'),
+	('He gets creative','Cậu bé liền sáng tạo','00:00:06.000','00:00:07.910','esl-fast-beginner-1-48'),
 	('He goes to his backyard','Cậu bé ra sân sau nhà','00:00:08.210','00:00:10.470','esl-fast-beginner-1-48'),
-	('He looks at his rose bush','Cậu bé nhìn bụi hoa hồng của mình','00:00:10.990','00:00:13.130','esl-fast-beginner-1-48'),
+	('He looks at his rose bush','Cậu bé nhìn bụi hoa hồng của mình','00:00:10.800','00:00:13.130','esl-fast-beginner-1-48'),
 	('He cuts a nice red one','Cậu bé cắt một bông hồng đỏ thật đẹp','00:00:13.490','00:00:15.950','esl-fast-beginner-1-48'),
-	('He puts it in a vase','Cậu bé cắm bông hoa vào bình','00:00:16.510','00:00:18.410','esl-fast-beginner-1-48'),
-	('He pours some water in the vase','Cậu bé đổ nước vào bình hoa','00:00:18.850','00:00:21.750','esl-fast-beginner-1-48'),
-	('The gift is complete','Món quà đã hoàn thành','00:00:22.190','00:00:23.950','esl-fast-beginner-1-48'),
+	('He puts it in a vase','Cậu bé cho bông hoa vào bình hoa','00:00:16.300','00:00:18.410','esl-fast-beginner-1-48'),
+	('He pours some water in the vase','Cậu bé đổ một ít nước vào bình','00:00:18.800','00:00:21.750','esl-fast-beginner-1-48'),
+	('The gift is complete','Món quà đã hoàn thành','00:00:22.100','00:00:23.950','esl-fast-beginner-1-48'),
 
-	/* (UUID(),'esl-fast-beginner-1-49','Hide-and-Seek','Trò chơi trốn tìm','BEGINNER_01_ESL_FAST_CHILDREN_049.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',49) */
+	/* (UUID(),'esl-fast-beginner-1-49','Hide-and-Seek','Trò chơi trốn tìm','BEGINNER_01_ESL_FAST_CHILDREN_049.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1','YES',49) */
 	('John covers his eyes','John che mắt lại','00:00:00.710','00:00:03.070','esl-fast-beginner-1-49'),
-	('Sandra finds a place to hide','Sandra tìm một chỗ để trốn','00:00:03.630','00:00:06.110','esl-fast-beginner-1-49'),
-	('John counts to ten','John đếm đến mười','00:00:06.890','00:00:08.790','esl-fast-beginner-1-49'),
-	('At ten, he opens his eyes','Đếm đến mười, cậu ấy mở mắt ra','00:00:09.550','00:00:13.110','esl-fast-beginner-1-49'),
-	('He tries to find Sandra','Cậu ấy cố tìm Sandra','00:00:13.650','00:00:15.670','esl-fast-beginner-1-49'),
-	('He walks around their room','Cậu ấy đi quanh phòng','00:00:16.070','00:00:18.410','esl-fast-beginner-1-49'),
-	('He checks the kitchen','Cậu ấy tìm trong bếp','00:00:18.950','00:00:20.490','esl-fast-beginner-1-49'),
-	('He checks under the bed','Cậu ấy nhìn dưới gầm giường','00:00:21.050','00:00:23.190','esl-fast-beginner-1-49'),
-	('He checks the laundry room','Cậu ấy kiểm tra phòng giặt đồ','00:00:23.290','00:00:26.010','esl-fast-beginner-1-49'),
-	('He does not find her yet','Nhưng cậu ấy vẫn chưa tìm thấy Sandra','00:00:26.490','00:00:28.390','esl-fast-beginner-1-49'),
-	('Sandra is in their parents\' room','Sandra đang ở trong phòng của bố mẹ','00:00:28.090','00:00:31.690','esl-fast-beginner-1-49'),
+	('Sandra finds a place to hide','Sandra tìm một chỗ để trốn','00:00:03.430','00:00:06.110','esl-fast-beginner-1-49'),
+	('John counts to ten','John đếm đến mười','00:00:06.600','00:00:08.790','esl-fast-beginner-1-49'),
+	('At ten, he opens his eyes','Đếm đến mười, cậu bé mở mắt ra','00:00:09.200','00:00:13.110','esl-fast-beginner-1-49'),
+	('He tries to find Sandra','Cậu bé cố gắng tìm Sandra','00:00:13.500','00:00:15.670','esl-fast-beginner-1-49'),
+	('He walks around their room','Cậu bé đi quanh phòng','00:00:16.000','00:00:18.410','esl-fast-beginner-1-49'),
+	('He checks the kitchen','Cậu bé kiểm tra nhà bếp','00:00:18.800','00:00:20.490','esl-fast-beginner-1-49'),
+	('He checks under the bed','Cậu bé kiểm tra dưới gầm giường','00:00:20.800','00:00:23.000','esl-fast-beginner-1-49'),
+	('He checks the laundry room','Cậu bé kiểm tra phòng giặt đồ','00:00:23.300','00:00:26.010','esl-fast-beginner-1-49'),
+	('He does not find her yet','Nhưng cậu bé vẫn chưa tìm thấy cô bé','00:00:26.400','00:00:28.000','esl-fast-beginner-1-49'),
+	('Sandra is in their parents\' room','Sandra đang ở trong phòng của bố mẹ','00:00:28.300','00:00:31.690','esl-fast-beginner-1-49'),
 
 	/* (UUID(),'esl-fast-beginner-1-50','Excited for the Mail','Hồi hộp chờ thư','BEGINNER_01_ESL_FAST_CHILDREN_050.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',50) */
 	('The boy waits for the mailman','Cậu bé đợi người đưa thư','00:00:00.780','00:00:03.260','esl-fast-beginner-1-50'),

@@ -5149,7 +5149,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('"Oh no" said Jen in a subtle voice','"Ôi không" Jen khẽ kêu lên','','','4000-essential-english-words-149'),
 	('"I sure hope the rest of the tour goes better than this"','"Tôi hi vọng chắc chắn phần còn lại của chuyến đi sẽ tốt hơn thế này"','','','4000-essential-english-words-149'),
 	('The rest of the tour did not go any better','Nhưng không tốt hơn một chút nào cả','','','4000-essential-english-words-149'),
-	('She tripped over an antique vase and broke a piece off of it','Cô ấy vướng chân vào một cái bình cổ và làm vỡ vụn nó','','','4000-essential-english-words-149'),
+	('She tripped over an antique vase and broke a piece off of it','Cô ấy vướng chân vào một cái bình hoa cổ và làm vỡ vụn nó','','','4000-essential-english-words-149'),
 	('As she was reading an excerpt from a lyric poem, she sneezed and tore a page of the epic','Khi cô ấy đọc một trích đoạn từ một  bài thơ trữ tình , cô hắt xì và xé tan trang sử thi','','','4000-essential-english-words-149'),
 	('After the tour, Jen approached the queen to apologize','Sau chuyến đi, Jen gặp Nữ hoàng để nói lời xin lỗi','','','4000-essential-english-words-149'),
 	('She said, "I\'m sorry, your Majesty"','Cô nói, "Tôi xin lỗi thưa Nữ hoàng"','','','4000-essential-english-words-149'),
