@@ -489,22 +489,38 @@ public class RunSQLComponent {
                         vi = vi.replace("\'", "\\'");
                     }
                     String audio = resultSet.getString("AUDIO");
-                    if (audio != null && audio.contains("\'")) {
-                        audio = audio.replace("\'", "\\'");
+                    if (audio != null) {
+                        audio = audio.trim();
+                        if (audio.contains("\'")) {
+                            audio = audio.replace("\'", "\\'");
+                        }
                     }
                     String img = resultSet.getString("IMG");
-                    if (img != null && img.contains("\'")) {
-                        img = img.replace("\'", "\\'");
+                    if (img != null) {
+                        img = img.trim();
+                        if (img.contains("\'")) {
+                            img = img.replace("\'", "\\'");
+                        }
                     }
                     String startTime = resultSet.getString("START_TIME");
                     String endTime = resultSet.getString("END_TIME");
                     String bookSlug = resultSet.getString("BOOK_SLUG");
-                    if (bookSlug != null && bookSlug.contains("\'")) {
-                        bookSlug = bookSlug.replace("\'", "\\'");
+                    if (bookSlug != null) {
+                        bookSlug = bookSlug.trim();
+                        if (bookSlug.contains("\'")) {
+                            bookSlug = bookSlug.replace("\'", "\\'");
+                        }
                     }
                     String checked = resultSet.getString("CHECKED");
                     int isRead = resultSet.getInt("IS_READ");
                     int number = resultSet.getInt("NUMBER");
+
+                    // Convert null to SQL NULL (without quotes)
+                    String audioSql = (audio == null) ? "null" : "'" + audio + "'";
+                    String imgSql = (img == null) ? "null" : "'" + img + "'";
+                    String startTimeSql = (startTime == null) ? "null" : "'" + startTime + "'";
+                    String endTimeSql = (endTime == null) ? "null" : "'" + endTime + "'";
+                    String checkedSql = (checked == null) ? "null" : "'" + checked + "'";
 
                     // Check if book_slug changed
                     if (currentBookSlug == null || !currentBookSlug.equals(bookSlug)) {
@@ -525,7 +541,7 @@ public class RunSQLComponent {
                         currentGroupValues.clear();
                     }
 
-                    String value = "\t(UUID(),'" + slug + "','" + eng + "','" + vi + "','" + audio + "','" + img + "','" + startTime + "','" + endTime + "','" + bookSlug + "','" + checked + "'," + isRead + "," + number + ")";
+                    String value = "\t(UUID(),'" + slug + "','" + eng + "','" + vi + "'," + audioSql + "," + imgSql + "," + startTimeSql + "," + endTimeSql + ",'" + bookSlug + "'," + checkedSql + "," + isRead + "," + number + ")";
                     currentGroupValues.add(value);
                 } catch (Exception e) {
                     System.out.println(resultSet.getString("SLUG"));
