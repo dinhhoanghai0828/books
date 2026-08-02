@@ -223,7 +223,7 @@ const TestPage = () => {
   return (
     <div className="test-container" style={{ marginTop: 50, marginBottom: 70 }}>
       <Typography.Title level={3} className="test-title">
-        Bai kiem tra - {volumeSlug}
+        Ghép Câu
       </Typography.Title>
 
       <div className="back-button-container">

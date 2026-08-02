@@ -241,7 +241,7 @@ const FillBlanksPage = () => {
   return (
     <div className="test-container" style={{ marginTop: 50, marginBottom: 70 }}>
       <Typography.Title level={3} className="test-title">
-        Điền từ còn thiếu - {volumeSlug}
+        Điền từ còn thiếu
       </Typography.Title>
 
       <div className="back-button-container">
