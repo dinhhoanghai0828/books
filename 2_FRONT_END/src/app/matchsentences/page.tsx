@@ -193,9 +193,9 @@ const MatchSentencesPage = () => {
       {loading ? (
         <Spin size="large" />
       ) : (
-        <div style={{ display: 'flex', gap: 100, marginTop: 30 }}>
+        <div style={{ display: 'flex', gap: 100, marginTop: 30, overflow: 'visible' }}>
           {/* Cột tiếng Anh */}
-          <div style={{ flex: 1 }}>
+          <div style={{ flex: 1, overflow: 'visible' }}>
             <Text strong style={{ fontSize: 18, marginBottom: 20, display: 'block', color: '#1890ff' }}>
               <span style={{ marginRight: 8 }}>🇬🇧</span>Tiếng Anh
             </Text>
@@ -205,6 +205,7 @@ const MatchSentencesPage = () => {
               const isCorrect = match ? checkedResults[match.enId] : undefined;
               const isSelected = selectedEn === item.id;
               const isUnselected = isChecked && !isMatched;
+              const bothSelected = selectedEn && selectedVi;
               
               return (
                 <div
@@ -214,20 +215,33 @@ const MatchSentencesPage = () => {
                     padding: 16,
                     marginBottom: 12,
                     border: `2px solid ${
-                      isSelected ? '#1890ff' : 
+                      isSelected ? '#fa8c16' : 
                       isUnselected ? '#ff4d4f' :
                       isMatched ? (isCorrect === true ? '#52c41a' : isCorrect === false ? '#ff4d4f' : '#d9d9d9') : '#e8e8e8'
                     }`,
                     borderRadius: 12,
                     cursor: isChecked || isMatched ? 'default' : 'pointer',
-                    backgroundColor: isSelected ? '#e6f7ff' : 
+                    backgroundColor: isSelected ? '#fff7e6' : 
                       isUnselected ? '#fff2f0' :
                       isMatched ? (isCorrect === true ? '#f6ffed' : isCorrect === false ? '#fff2f0' : '#fafafa') : '#fff',
-                    boxShadow: isSelected ? '0 4px 12px rgba(24, 144, 255, 0.3)' : 
+                    boxShadow: isSelected ? '0 4px 12px rgba(250, 140, 22, 0.3)' : 
                       isMatched ? '0 2px 8px rgba(0, 0, 0, 0.1)' : '0 2px 4px rgba(0, 0, 0, 0.05)',
                     transition: 'all 0.3s ease',
+                    position: 'relative',
                   }}
                 >
+                  {isSelected && bothSelected && (
+                    <div style={{
+                      position: 'absolute',
+                      right: -120,
+                      top: '50%',
+                      transform: 'translateY(-50%)',
+                      width: 120,
+                      height: 4,
+                      backgroundColor: '#fa8c16',
+                      zIndex: 10,
+                    }} />
+                  )}
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                     <Text style={{ fontSize: 15, flex: 1 }}>{item.eng}</Text>
                     {isMatched && match && (
@@ -276,7 +290,7 @@ const MatchSentencesPage = () => {
           </div>
 
           {/* Cột tiếng Việt */}
-          <div style={{ flex: 1 }}>
+          <div style={{ flex: 1, overflow: 'visible' }}>
             <Text strong style={{ fontSize: 18, marginBottom: 20, display: 'block', color: '#52c41a' }}>
               <TranslationOutlined style={{ marginRight: 8 }} />Tiếng Việt
             </Text>
@@ -286,6 +300,7 @@ const MatchSentencesPage = () => {
               const isCorrect = match ? checkedResults[match.enId] : undefined;
               const isSelected = selectedVi === item.id;
               const isUnselected = isChecked && !isMatched;
+              const bothSelected = selectedEn && selectedVi;
               
               return (
                 <div
@@ -295,20 +310,33 @@ const MatchSentencesPage = () => {
                     padding: 16,
                     marginBottom: 12,
                     border: `2px solid ${
-                      isSelected ? '#52c41a' : 
+                      isSelected ? '#fa8c16' : 
                       isUnselected ? '#ff4d4f' :
                       isMatched ? (isCorrect === true ? '#52c41a' : isCorrect === false ? '#ff4d4f' : '#d9d9d9') : '#e8e8e8'
                     }`,
                     borderRadius: 12,
                     cursor: isChecked || isMatched ? 'default' : 'pointer',
-                    backgroundColor: isSelected ? '#f6ffed' : 
+                    backgroundColor: isSelected ? '#fff7e6' : 
                       isUnselected ? '#fff2f0' :
                       isMatched ? (isCorrect === true ? '#f6ffed' : isCorrect === false ? '#fff2f0' : '#fafafa') : '#fff',
-                    boxShadow: isSelected ? '0 4px 12px rgba(82, 196, 26, 0.3)' : 
+                    boxShadow: isSelected ? '0 4px 12px rgba(250, 140, 22, 0.3)' : 
                       isMatched ? '0 2px 8px rgba(0, 0, 0, 0.1)' : '0 2px 4px rgba(0, 0, 0, 0.05)',
                     transition: 'all 0.3s ease',
+                    position: 'relative',
                   }}
                 >
+                  {isSelected && bothSelected && (
+                    <div style={{
+                      position: 'absolute',
+                      left: -120,
+                      top: '50%',
+                      transform: 'translateY(-50%)',
+                      width: 120,
+                      height: 4,
+                      backgroundColor: '#fa8c16',
+                      zIndex: 10,
+                    }} />
+                  )}
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                     <Text style={{ fontSize: 15, flex: 1 }}>{item.vi}</Text>
                     {isMatched && match && (
