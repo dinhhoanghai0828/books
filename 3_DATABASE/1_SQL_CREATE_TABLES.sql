@@ -141,7 +141,7 @@ CREATE TABLE GOLD_INVESTMENTS (
 INSERT INTO GOLD_INVESTMENTS (INITIAL_CAPITAL, GOLD_PRICE, GOLD_QUANTITY, GOLD_TYPE, PURCHASE_DATE, COMMENT)
 VALUES 
 (1150800000, 82200000, 14, 'Miếng', '2024-07-20', 'Giá vàng lúc đó là 78 triệu thấp hơn mua ở quán là 82.2 triệu'),
-(117750000, 117750000, 1, 'Miếng', '2025-06-02', 'Giá vàng lúc đó là 117.75 triệu')
+(117750000, 117750000, 1, 'Miếng', '2025-06-02', 'Giá vàng lúc đó là 117.75 triệu'),
 (514400000, 128600000, 4, 'Miếng', '2025-08-24', 'Giá vàng lúc đó là 126.6 nhưng ngoài tiệm là 128.6 triệu'),
 (132500000, 132500000, 1, 'Miếng', '2025-09-14', 'Giá vàng lúc đó là 131.1 nhưng ngoài tiệm là 132.5 triệu'),
 (170000000, 85000000, 2, 'Nhẫn', '2024-11-04', 'Giá nhẫn lúc đó là 87 triệu cao hơn mua ở quán là 85 triệu'),
