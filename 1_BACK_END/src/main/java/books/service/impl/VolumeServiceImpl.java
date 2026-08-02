@@ -47,6 +47,23 @@ public class VolumeServiceImpl implements VolumeService {
     }
 
     @Override
+    public VolumeDTO getVolumeBySlug(String slug) throws Exception {
+        Volume volume = volumeAdapter.getVolumeDetailBySlug(slug);
+        VolumeDTO dto = modelMapper.map(volume, VolumeDTO.class);
+        dto.setIsRead(volume.getIsRead());
+        
+        // Map contents from Volume entity to VolumeDTO
+        if (volume.getContents() != null) {
+            List<ContentDTO> contentDTOS = volume.getContents().stream()
+                .map(content -> modelMapper.map(content, ContentDTO.class))
+                .collect(Collectors.toList());
+            dto.setContents(contentDTOS);
+        }
+        
+        return dto;
+    }
+
+    @Override
     public boolean updateVolume(VolumeDTO volumeDTO) throws Exception {
         Volume volume = modelMapper.map(volumeDTO, Volume.class);
         return volumeAdapter.updateVolume(volume);

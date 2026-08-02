@@ -258,6 +258,96 @@ public class VolumeController {
         }
     }
 
+    @GetMapping("/download-volume-word/{volumeSlug}")
+    public ResponseEntity<byte[]> downloadVolumeWord(@PathVariable("volumeSlug") String volumeSlug) {
+        try {
+            VolumeDTO volume = volumeService.getVolumeBySlug(volumeSlug);
+            if (volume == null) {
+                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            }
+            
+            List<ContentDTO> contents = volume.getContents();
+            
+            // Skip volumes with no content
+            if (contents == null || contents.isEmpty()) {
+                return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+            }
+            
+            XWPFDocument document = new XWPFDocument();
+            
+            // Add volume title
+            XWPFParagraph volumeTitleParagraph = document.createParagraph();
+            volumeTitleParagraph.setAlignment(ParagraphAlignment.CENTER);
+            XWPFRun volumeTitleRun = volumeTitleParagraph.createRun();
+            volumeTitleRun.setBold(true);
+            volumeTitleRun.setFontFamily("Book Antiqua");
+            volumeTitleRun.setFontSize(25);
+            volumeTitleRun.setText(volume.getEng());
+            
+            // Set line spacing for title
+            volumeTitleParagraph.setSpacingAfter(300);
+            
+            // Build English paragraph
+            StringBuilder englishParagraph = new StringBuilder();
+            StringBuilder vietnameseParagraph = new StringBuilder();
+            
+            for (ContentDTO content : contents) {
+                String eng = content.getEng().trim();
+                String vi = content.getVi().trim();
+                
+                // Add English sentence with period
+                if (englishParagraph.length() > 0) {
+                    englishParagraph.append(". ");
+                }
+                englishParagraph.append(eng);
+                
+                // Add Vietnamese sentence with period, but check if it already ends with punctuation
+                if (vietnameseParagraph.length() > 0) {
+                    vietnameseParagraph.append(" ");
+                }
+                vietnameseParagraph.append(vi);
+                
+                // Check if Vietnamese sentence ends with ! ? or ...
+                if (!vi.endsWith("!") && !vi.endsWith("?") && !vi.endsWith("...")) {
+                    vietnameseParagraph.append(".");
+                }
+            }
+            
+            // Add English paragraph with 1.5 line spacing
+            XWPFParagraph engParagraph = document.createParagraph();
+            engParagraph.setAlignment(ParagraphAlignment.LEFT);
+            engParagraph.setSpacingBetween(1.5, LineSpacingRule.AUTO);
+            engParagraph.setSpacingAfter(1000);
+            XWPFRun engRun = engParagraph.createRun();
+            engRun.setFontFamily("Book Antiqua");
+            engRun.setFontSize(18);
+            engRun.setText(englishParagraph.toString());
+            
+            // Add Vietnamese paragraph with 1.5 line spacing
+            XWPFParagraph viParagraph = document.createParagraph();
+            viParagraph.setAlignment(ParagraphAlignment.LEFT);
+            viParagraph.setSpacingBetween(1.5, LineSpacingRule.AUTO);
+            viParagraph.setSpacingAfter(1000);
+            XWPFRun viRun = viParagraph.createRun();
+            viRun.setFontFamily("Book Antiqua");
+            viRun.setFontSize(18);
+            viRun.setText(vietnameseParagraph.toString());
+            
+            ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+            document.write(outputStream);
+            document.close();
+            
+            HttpHeaders headers = new HttpHeaders();
+            headers.setContentType(MediaType.APPLICATION_OCTET_STREAM);
+            headers.setContentDispositionFormData("attachment", volumeSlug + ".docx");
+            
+            return new ResponseEntity<>(outputStream.toByteArray(), headers, HttpStatus.OK);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+    }
+
     @GetMapping("/download-book-pdf/{bookSlug}")
     public ResponseEntity<byte[]> downloadBookPdf(@PathVariable("bookSlug") String bookSlug) {
         try {

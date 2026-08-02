@@ -13,6 +13,8 @@ public interface VolumeService {
 
     VolumeDTO getVolumeDetailBySlug(String slug) throws Exception;
 
+    VolumeDTO getVolumeBySlug(String slug) throws Exception;
+
     boolean updateVolume(VolumeDTO volumeDTO) throws Exception;
 
     boolean markAsRead(String slug) throws Exception;

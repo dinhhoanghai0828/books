@@ -19,6 +19,7 @@ public class VolumeAdapterImpl implements VolumeAdapter {
     private static final Logger logger = LoggerFactory.getLogger(VolumeAdapterImpl.class);
     private static final String SQL_GET_VOLUMES = "SELECT * FROM VOLUMES";
     private static final String SQL_GET_VOLUME_DETAIL_BY_SLUG = "SELECT * FROM VOLUMES WHERE SLUG = ?";
+    private static final String SQL_GET_VOLUME_WITH_CONTENTS_BY_SLUG = "SELECT V.*, C.ID as CONTENT_ID, C.ENG as CONTENT_ENG, C.VI as CONTENT_VI, C.START_TIME as CONTENT_START_TIME, C.END_TIME as CONTENT_END_TIME FROM VOLUMES V LEFT JOIN CONTENTS C ON V.SLUG = C.VOLUME_SLUG WHERE V.SLUG = ? ORDER BY C.ID";
     private static final String SQL_UPDATE_VOLUME = "UPDATE VOLUMES SET ENG = ?, VI = ?, START_TIME = ?, END_TIME = ?, CHECKED = ? WHERE ID = ?";
     private static final String SQL_MARK_AS_READ = "UPDATE VOLUMES SET IS_READ = 1 WHERE SLUG = ?";
     private static final String SQL_MARK_AS_UNREAD = "UPDATE VOLUMES SET IS_READ = 0 WHERE SLUG = ?";
@@ -72,24 +73,43 @@ public class VolumeAdapterImpl implements VolumeAdapter {
         Volume volume = null;
         try {
             con = DBUtils.getConnection(thisMethod, true, Connection.TRANSACTION_READ_COMMITTED);
-            pstmt = DBUtils.prepareStatement(con, SQL_GET_VOLUME_DETAIL_BY_SLUG);
+            pstmt = DBUtils.prepareStatement(con, SQL_GET_VOLUME_WITH_CONTENTS_BY_SLUG);
             pstmt.setString(1, slug);
-            rs = DBUtils.executeQuery(pstmt, SQL_GET_VOLUME_DETAIL_BY_SLUG);
-            if (rs.next()) {
-                volume = new Volume();
-                volume.setId(rs.getString("ID"));
-                volume.setUuid(rs.getString("UUID"));
-                volume.setEng(rs.getString("ENG"));
-                volume.setVi(rs.getString("VI"));
-                volume.setAudio(rs.getString("AUDIO"));
-                volume.setVideo(rs.getString("VIDEO"));
-                volume.setImg(rs.getString("IMG"));
-                volume.setStartTime(rs.getString("START_TIME"));
-                volume.setEndTime(rs.getString("END_TIME"));
-                volume.setBookSlug(rs.getString("BOOK_SLUG"));
-                volume.setNumber(rs.getInt("NUMBER"));
-                volume.setChecked(rs.getString("CHECKED"));
-                volume.setIsRead(rs.getInt("IS_READ"));
+            rs = DBUtils.executeQuery(pstmt, SQL_GET_VOLUME_WITH_CONTENTS_BY_SLUG);
+            
+            List<Content> contents = new ArrayList<>();
+            
+            while (rs.next()) {
+                if (volume == null) {
+                    volume = new Volume();
+                    volume.setId(rs.getString("ID"));
+                    volume.setUuid(rs.getString("UUID"));
+                    volume.setEng(rs.getString("ENG"));
+                    volume.setVi(rs.getString("VI"));
+                    volume.setAudio(rs.getString("AUDIO"));
+                    volume.setVideo(rs.getString("VIDEO"));
+                    volume.setImg(rs.getString("IMG"));
+                    volume.setStartTime(rs.getString("START_TIME"));
+                    volume.setEndTime(rs.getString("END_TIME"));
+                    volume.setBookSlug(rs.getString("BOOK_SLUG"));
+                    volume.setNumber(rs.getInt("NUMBER"));
+                    volume.setChecked(rs.getString("CHECKED"));
+                    volume.setIsRead(rs.getInt("IS_READ"));
+                    volume.setSlug(rs.getString("SLUG"));
+                    volume.setContents(contents);
+                }
+                
+                // Add content if exists (LEFT JOIN may return null for content fields)
+                String contentId = rs.getString("CONTENT_ID");
+                if (contentId != null) {
+                    Content content = new Content();
+                    content.setId(contentId);
+                    content.setEng(rs.getString("CONTENT_ENG"));
+                    content.setVi(rs.getString("CONTENT_VI"));
+                    content.setStartTime(rs.getString("CONTENT_START_TIME"));
+                    content.setEndTime(rs.getString("CONTENT_END_TIME"));
+                    contents.add(content);
+                }
             }
 
         } catch (Exception ex) {

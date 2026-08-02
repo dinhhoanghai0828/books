@@ -218,6 +218,29 @@ export const downloadVolumePdf = async (slug: string): Promise<void> => {
   }
 };
 
+// Download Word file for single volume
+export const downloadSingleVolumeWord = async (slug: string): Promise<void> => {
+  try {
+    const response = await apiClient.get(`/volumes/download-volume-word/${slug}`, {
+      responseType: 'blob',
+    });
+    
+    // Create download link
+    const url = window.URL.createObjectURL(new Blob([response.data]));
+    const link = document.createElement('a');
+    link.href = url;
+    link.setAttribute('download', `${slug}.docx`);
+    document.body.appendChild(link);
+    link.click();
+    
+    // Cleanup
+    link.remove();
+    window.URL.revokeObjectURL(url);
+  } catch (error: any) {
+    throw new Error(getErrorMessage(error));
+  }
+};
+
 // ============================================================
 // CONTENTS
 // ============================================================

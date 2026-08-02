@@ -2,11 +2,12 @@ import {
   EyeInvisibleOutlined,
   EyeOutlined,
   PlusOutlined,
+  FileWordOutlined,
 } from '@ant-design/icons';
 import { Button, Segmented, Space, notification } from 'antd';
 import { App } from 'antd';
 import React, { useState } from 'react';
-import { runContentsExport, runWordGeneral } from '@/utils/apiService';
+import { runContentsExport, runWordGeneral, downloadSingleVolumeWord } from '@/utils/apiService';
 
 // ============================================================
 // TYPES
@@ -26,6 +27,7 @@ export interface ContentToolbarProps {
   onToggleMissingWords: () => void;
   onTest: () => void;
   onInsertWord: () => void;
+  volumeSlug: string | string[];
 }
 
 // ============================================================
@@ -44,10 +46,12 @@ const ContentToolbar: React.FC<ContentToolbarProps> = ({
   onToggleMissingWords,
   onTest,
   onInsertWord,
+  volumeSlug,
 }) => {
   const [notifApi, notifContextHolder] = notification.useNotification();
   const [loadingTonghopCau, setLoadingTonghopCau] = useState(false);
   const [loadingTonghopTu, setLoadingTonghopTu] = useState(false);
+  const [loadingDownloadWord, setLoadingDownloadWord] = useState(false);
 
   const handleTonghopCau = async () => {
     setLoadingTonghopCau(true);
@@ -94,6 +98,31 @@ const ContentToolbar: React.FC<ContentToolbarProps> = ({
       });
     } finally {
       setLoadingTonghopTu(false);
+    }
+  };
+
+  const handleDownloadWord = async () => {
+    setLoadingDownloadWord(true);
+    try {
+      const slug = Array.isArray(volumeSlug) ? volumeSlug[0] : volumeSlug;
+      await downloadSingleVolumeWord(slug || '');
+      notifApi.success({
+        message: 'Download thanh cong',
+        description: 'File Word da duoc tai xuong.',
+        placement: 'topRight',
+        duration: 3,
+        style: { backgroundColor: '#f6ffed', border: '1px solid #b7eb8f' },
+      });
+    } catch (error: any) {
+      notifApi.error({
+        message: 'Download that bai',
+        description: error.message || 'Da xay ra loi, vui long thu lai.',
+        placement: 'topRight',
+        duration: 4,
+        style: { backgroundColor: '#fff2f0', border: '1px solid #ffccc7' },
+      });
+    } finally {
+      setLoadingDownloadWord(false);
     }
   };
   return (
@@ -174,6 +203,17 @@ const ContentToolbar: React.FC<ContentToolbarProps> = ({
           className="custom-button"
         >
           Tổng hợp Từ
+        </Button>
+
+        {/* Download Word */}
+        <Button
+          icon={<FileWordOutlined />}
+          onClick={handleDownloadWord}
+          loading={loadingDownloadWord}
+          style={{ backgroundColor: '#1890ff', borderColor: '#1890ff', color: '#fff' }}
+          className="custom-button"
+        >
+          Download Word
         </Button>
       </Space>
     </div>

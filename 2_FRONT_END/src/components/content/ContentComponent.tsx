@@ -1,7 +1,7 @@
 import { ContentType } from '@/interfaces/content';
 import { Volume } from '@/interfaces/volume';
-import { getMeaningWords, insertWord, updateContent } from '@/utils/apiService';
-import { MinusCircleOutlined, PlusOutlined, SoundOutlined } from '@ant-design/icons';
+import { getMeaningWords, insertWord, updateContent, downloadSingleVolumeWord } from '@/utils/apiService';
+import { MinusCircleOutlined, PlusOutlined, SoundOutlined, FileWordOutlined } from '@ant-design/icons';
 import { Button, Form, Input, Modal, notification, Space, Select, Switch } from 'antd';
 import debounce from 'lodash.debounce';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
@@ -783,6 +783,7 @@ const ContentComponent = ({
         onToggleMissingWords={() => setHighlightMissingWords((p) => !p)}
         onTest={() => router.push(`/test?volumeSlug=${volumeSlug}`)}
         onInsertWord={handleOpenInsert}
+        volumeSlug={volumeSlug}
       />
 
       {renderLayout()}
