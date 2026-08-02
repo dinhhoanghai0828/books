@@ -692,47 +692,47 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She uses it to do her homework','Cô bé dùng nó để làm bài tập về nhà','00:00:19.400','00:00:22.120','esl-fast-beginner-1-53'),
 	('She uses it on her tests','Cô bé dùng nó khi làm bài kiểm tra','00:00:22.400','00:00:25.060','esl-fast-beginner-1-53'),
 
-	/* (UUID(),'esl-fast-beginner-1-54','Being Careless','Sự bất cẩn','BEGINNER_01_ESL_FAST_CHILDREN_054.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',54) */
+	/* (UUID(),'esl-fast-beginner-1-54','Being Careless','Sự bất cẩn','BEGINNER_01_ESL_FAST_CHILDREN_054.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1','YES',54) */
 	('Two brothers are bored','Hai anh em cảm thấy chán','00:00:00.200','00:00:02.640','esl-fast-beginner-1-54'),
-	('They play catch with each other inside the house','Hai anh em ném bóng cho nhau trong nhà','00:00:03.260','00:00:06.860','esl-fast-beginner-1-54'),
-	('The older brother throws the ball to the younger brother','Người anh ném bóng cho em trai','00:00:07.420','00:00:11.400','esl-fast-beginner-1-54'),
-	('He catches it','Cậu em bắt được bóng','00:00:11.880','00:00:13.360','esl-fast-beginner-1-54'),
-	('He throws it back','Rồi cậu ấy ném trả lại','00:00:13.740','00:00:15.180','esl-fast-beginner-1-54'),
-	('The ball hits the window','Quả bóng bay trúng cửa sổ','00:00:15.720','00:00:17.660','esl-fast-beginner-1-54'),
-	('The window breaks','Cửa sổ bị vỡ','00:00:18.420','00:00:20.180','esl-fast-beginner-1-54'),
-	('Their mom hears the loud sound','Mẹ của hai anh em nghe thấy tiếng động lớn','00:00:20.960','00:00:23.580','esl-fast-beginner-1-54'),
-	('She is mad','Mẹ rất tức giận','00:00:24.120','00:00:25.860','esl-fast-beginner-1-54'),
-	('She takes the ball away','Mẹ tịch thu quả bóng','00:00:26.380','00:00:28.320','esl-fast-beginner-1-54'),
+	('They play catch with each other inside the house','Hai anh em chơi ném và bắt bóng với nhau trong nhà','00:00:03.000','00:00:06.860','esl-fast-beginner-1-54'),
+	('The older brother throws the ball to the younger brother','Người anh ném bóng cho em trai','00:00:07.200','00:00:11.400','esl-fast-beginner-1-54'),
+	('He catches it','Cậu em bắt được bóng','00:00:11.700','00:00:13.360','esl-fast-beginner-1-54'),
+	('He throws it back','Cậu bé ném trả lại','00:00:13.700','00:00:15.180','esl-fast-beginner-1-54'),
+	('The ball hits the window','Quả bóng đập trúng cửa sổ','00:00:15.500','00:00:17.660','esl-fast-beginner-1-54'),
+	('The window breaks','Cửa sổ bị vỡ','00:00:18.000','00:00:20.180','esl-fast-beginner-1-54'),
+	('Their mom hears the loud sound','Mẹ của hai anh em nghe thấy tiếng động lớn','00:00:20.500','00:00:23.580','esl-fast-beginner-1-54'),
+	('She is mad','Mẹ rất tức giận','00:00:23.900','00:00:25.860','esl-fast-beginner-1-54'),
+	('She takes the ball away','Mẹ tịch thu quả bóng','00:00:26.200','00:00:28.320','esl-fast-beginner-1-54'),
 
-	/* (UUID(),'esl-fast-beginner-1-55','Fluffy the Rabbit','Fluffy chú thỏ nhỏ','BEGINNER_01_ESL_FAST_CHILDREN_055.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',55) */
+	/* (UUID(),'esl-fast-beginner-1-55','Fluffy the Rabbit','Fluffy chú thỏ nhỏ','BEGINNER_01_ESL_FAST_CHILDREN_055.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-children-1','YES',55) */
 	('He has a pet','Cậu bé có một con vật cưng','00:00:00.520','00:00:02.520','esl-fast-beginner-1-55'),
-	('It is a rabbit','Đó là một chú thỏ','00:00:03.000','00:00:04.440','esl-fast-beginner-1-55'),
-	('His rabbit\'s name is Fluffy','Chú thỏ của cậu bé tên là Fluffy','00:00:05.240','00:00:07.560','esl-fast-beginner-1-55'),
-	('Fluffy is a female','Fluffy là thỏ cái','00:00:08.480','00:00:10.540','esl-fast-beginner-1-55'),
-	('She is white','Nó có bộ lông màu trắng','00:00:11.280','00:00:12.420','esl-fast-beginner-1-55'),
-	('She has black eyes','Nó có đôi mắt màu đen','00:00:13.040','00:00:14.760','esl-fast-beginner-1-55'),
-	('She is very soft','Bộ lông của nó rất mềm mại','00:00:15.320','00:00:17.260','esl-fast-beginner-1-55'),
-	('She is playful','Nó rất hiếu động','00:00:17.800','00:00:19.300','esl-fast-beginner-1-55'),
-	('She weighs seven pounds','Nó nặng bảy pound','00:00:20.060','00:00:22.480','esl-fast-beginner-1-55'),
-	('She likes to hop around the house','Nó thích nhảy tung tăng khắp nhà','00:00:23.360','00:00:26.360','esl-fast-beginner-1-55'),
-	('She likes to eat carrots','Nó thích ăn cà rốt','00:00:27.060','00:00:29.580','esl-fast-beginner-1-55'),
-	('He gives Fluffy five carrots a day','Mỗi ngày cậu bé cho Fluffy ăn năm củ cà rốt','00:00:30.520','00:00:34.240','esl-fast-beginner-1-55');
+	('It is a rabbit','Đó là một chú thỏ','00:00:02.900','00:00:04.440','esl-fast-beginner-1-55'),
+	('His rabbit\'s name is Fluffy','Chú thỏ của cậu bé tên là Fluffy','00:00:04.900','00:00:07.560','esl-fast-beginner-1-55'),
+	('Fluffy is a female','Fluffy là thỏ cái','00:00:08.000','00:00:10.540','esl-fast-beginner-1-55'),
+	('She is white','Nó có bộ lông màu trắng','00:00:10.900','00:00:12.420','esl-fast-beginner-1-55'),
+	('She has black eyes','Nó có đôi mắt màu đen','00:00:12.900','00:00:14.760','esl-fast-beginner-1-55'),
+	('She is very soft','Nó rất mềm mại','00:00:15.100','00:00:17.260','esl-fast-beginner-1-55'),
+	('She is playful','Nó rất hiếu động','00:00:17.600','00:00:19.300','esl-fast-beginner-1-55'),
+	('She weighs seven pounds','Nó nặng bảy pao','00:00:19.800','00:00:22.480','esl-fast-beginner-1-55'),
+	('She likes to hop around the house','Nó thích nhảy tung tăng khắp nhà','00:00:22.800','00:00:26.360','esl-fast-beginner-1-55'),
+	('She likes to eat carrots','Nó thích ăn cà rốt','00:00:26.800','00:00:29.580','esl-fast-beginner-1-55'),
+	('He gives Fluffy five carrots a day','Mỗi ngày cậu bé cho Fluffy ăn năm củ cà rốt','00:00:30.000','00:00:34.240','esl-fast-beginner-1-55');
 
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'esl-fast-beginner-1-56','Three Friends and a Jump Rope','Ba người bạn và dây nhảy','BEGINNER_01_ESL_FAST_CHILDREN_056.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',56) */
+	/* (UUID(),'esl-fast-beginner-1-56','Three Friends and a Jump Rope','Ba người bạn và dây nhảy','BEGINNER_01_ESL_FAST_CHILDREN_056.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1','YES',56) */
 	('It is break time','Đến giờ ra chơi rồi','00:00:00.260','00:00:02.360','esl-fast-beginner-1-56'),
-	('The students go out to play','Các học sinh ra ngoài chơi','00:00:03.059','00:00:05.220','esl-fast-beginner-1-56'),
-	('Three friends play with a jump rope','Ba người bạn cùng chơi nhảy dây','00:00:06.240','00:00:09.080','esl-fast-beginner-1-56'),
-	('Elizabeth holds one end','Elizabeth cầm một đầu dây','00:00:09.840','00:00:12.060','esl-fast-beginner-1-56'),
-	('Susan holds the other end','Susan cầm đầu dây còn lại','00:00:12.840','00:00:15.180','esl-fast-beginner-1-56'),
-	('They stand apart from each other','Hai bạn đứng cách nhau','00:00:15.960','00:00:18.260','esl-fast-beginner-1-56'),
-	('They swing the rope','Hai bạn quay dây','00:00:18.800','00:00:20.720','esl-fast-beginner-1-56'),
-	('Maria jumps in','Maria nhảy vào','00:00:21.600','00:00:23.320','esl-fast-beginner-1-56'),
-	('The rope goes over her head','Sợi dây lướt qua trên đầu cô bé','00:00:24.060','00:00:26.840','esl-fast-beginner-1-56'),
-	('She is good','Cô bé nhảy rất giỏi','00:00:27.520','00:00:28.800','esl-fast-beginner-1-56'),
-	('She keeps jumping over the rope','Cô bé tiếp tục nhảy qua sợi dây','00:00:28.500','00:00:31.820','esl-fast-beginner-1-56'),
+	('The students go out to play','Các học sinh ra ngoài chơi','00:00:02.800','00:00:05.220','esl-fast-beginner-1-56'),
+	('Three friends play with a jump rope','Ba người bạn cùng chơi nhảy dây','00:00:05.800','00:00:09.080','esl-fast-beginner-1-56'),
+	('Elizabeth holds one end','Elizabeth cầm một đầu dây','00:00:09.500','00:00:12.060','esl-fast-beginner-1-56'),
+	('Susan holds the other end','Susan cầm đầu dây còn lại','00:00:12.400','00:00:15.180','esl-fast-beginner-1-56'),
+	('They stand apart from each other','Hai bạn đứng cách nhau','00:00:15.600','00:00:18.260','esl-fast-beginner-1-56'),
+	('They swing the rope','Hai bạn quay dây','00:00:18.600','00:00:20.720','esl-fast-beginner-1-56'),
+	('Maria jumps in','Maria nhảy vào','00:00:21.200','00:00:23.320','esl-fast-beginner-1-56'),
+	('The rope goes over her head','Sợi dây lướt qua đầu cô bé','00:00:23.800','00:00:26.840','esl-fast-beginner-1-56'),
+	('She is good','Cô bé rất giỏi','00:00:27.200','00:00:28.600','esl-fast-beginner-1-56'),
+	('She keeps jumping over the rope','Cô bé tiếp tục nhảy qua sợi dây','00:00:28.900','00:00:31.820','esl-fast-beginner-1-56'),
 
 	/* (UUID(),'esl-fast-beginner-1-57','He Plays with the Ladybug','Cậu ấy chơi với bọ rùa','BEGINNER_01_ESL_FAST_CHILDREN_057.mp3',NULL,'00:00:00.000','00:00:38.000','esl-fast-children-1','YES',57) */
 	('He goes outside','Cậu bé đi ra ngoài','00:00:00.260','00:00:02.160','esl-fast-beginner-1-57'),
