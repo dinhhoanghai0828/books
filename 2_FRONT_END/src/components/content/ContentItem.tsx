@@ -185,6 +185,26 @@ const ContentItem = React.memo(({
       </div>
     </div>
   );
+}, (prevProps, nextProps) => {
+  // Custom comparison to prevent unnecessary re-renders
+  return (
+    prevProps.item.id === nextProps.item.id &&
+    prevProps.item.eng === nextProps.item.eng &&
+    prevProps.item.vi === nextProps.item.vi &&
+    prevProps.item.startTime === nextProps.item.startTime &&
+    prevProps.item.endTime === nextProps.item.endTime &&
+    prevProps.item.missingWords?.length === nextProps.item.missingWords?.length &&
+    prevProps.isActive === nextProps.isActive &&
+    prevProps.isAudioPlaying === nextProps.isAudioPlaying &&
+    prevProps.isLooping === nextProps.isLooping &&
+    prevProps.isVideoPlaying === nextProps.isVideoPlaying &&
+    prevProps.showEnglish === nextProps.showEnglish &&
+    prevProps.showVietnamese === nextProps.showVietnamese &&
+    prevProps.highlightMissingWords === nextProps.highlightMissingWords &&
+    prevProps.showVideoButton === nextProps.showVideoButton &&
+    prevProps.showAudioButton === nextProps.showAudioButton &&
+    prevProps.activeSource === nextProps.activeSource
+  );
 });
 
 ContentItem.displayName = 'ContentItem';
