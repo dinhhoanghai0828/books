@@ -107,11 +107,15 @@ const VideoLayout: React.FC<VideoLayoutProps> = ({
         return;
       }
 
-      // Tìm câu đang active trong khoảng thời gian
-      const found = findActiveItem(contentsRef.current, current);
-      if (found && String(found.id) !== lastActiveId.current) {
-        lastActiveId.current = String(found.id);
-        onActiveItemChangeRef.current?.(String(found.id));
+      // Chỉ auto-switch item khi KHÔNG có segment (tức là user đang play toàn bộ video, không play từng item)
+      // Khi user play từng item, segment sẽ được set và khi hết sẽ reset về 0
+      if (segmentRef.current.end === 0) {
+        // Tìm câu đang active trong khoảng thời gian
+        const found = findActiveItem(contentsRef.current, current);
+        if (found && String(found.id) !== lastActiveId.current) {
+          lastActiveId.current = String(found.id);
+          onActiveItemChangeRef.current?.(String(found.id));
+        }
       }
     };
 
