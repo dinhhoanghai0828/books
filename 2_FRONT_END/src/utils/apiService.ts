@@ -241,6 +241,31 @@ export const downloadSingleVolumeWord = async (slug: string): Promise<void> => {
   }
 };
 
+// Download Word file for selected volumes
+export const downloadSelectedVolumesWord = async (slug: string, volumeSlugs: string[]): Promise<void> => {
+  try {
+    const response = await apiClient.post(`/volumes/download-selected-volumes-word/${slug}`, {
+      volumeSlugs: volumeSlugs
+    }, {
+      responseType: 'blob',
+    });
+    
+    // Create download link
+    const url = window.URL.createObjectURL(new Blob([response.data]));
+    const link = document.createElement('a');
+    link.href = url;
+    link.setAttribute('download', `${slug}-selected.docx`);
+    document.body.appendChild(link);
+    link.click();
+    
+    // Cleanup
+    link.remove();
+    window.URL.revokeObjectURL(url);
+  } catch (error: any) {
+    throw new Error(getErrorMessage(error));
+  }
+};
+
 // ============================================================
 // CONTENTS
 // ============================================================

@@ -1,11 +1,11 @@
 import { Volume } from '@/interfaces/volume';
 import { CheckOutlined, EditOutlined, DownloadOutlined, BookOutlined, FilePdfOutlined } from '@ant-design/icons';
-import { Button, Col, Empty, Form, Input, Modal, Row, Select, Typography, notification } from 'antd';
+import { Button, Checkbox, Col, Empty, Form, Input, Modal, Row, Select, Typography, notification } from 'antd';
 import { Content } from 'antd/es/layout/layout';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { useState } from 'react';
-import { updateVolume, runVolumesExport, markAsRead, markAsUnread, downloadVolumeWord, downloadVolumePdf } from '@/utils/apiService';
+import { updateVolume, runVolumesExport, markAsRead, markAsUnread, downloadVolumeWord, downloadVolumePdf, downloadSelectedVolumesWord } from '@/utils/apiService';
 
 interface VolumeContentComponentProps {
   volumes: Volume[];
@@ -27,6 +27,9 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
   const [markReadLoading, setMarkReadLoading] = useState<string | null>(null);
   const [downloadLoading, setDownloadLoading] = useState(false);
   const [pdfLoading, setPdfLoading] = useState(false);
+  const [selectModalOpen, setSelectModalOpen] = useState(false);
+  const [selectedVolumes, setSelectedVolumes] = useState<string[]>([]);
+  const [downloadSelectedLoading, setDownloadSelectedLoading] = useState(false);
 
   const handleOpenEdit = (volume: Volume, e: React.MouseEvent) => {
     e.preventDefault();
@@ -208,6 +211,44 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
     }
   };
 
+  const handleDownloadSelectedWord = async () => {
+    if (selectedVolumes.length === 0) {
+      notifApi.warning({
+        message: 'Canh bao',
+        description: 'Vui long chon it nhat mot volume de export.',
+        placement: 'topRight',
+        duration: 3,
+        style: { backgroundColor: '#fffbe6', border: '1px solid #ffe58f' },
+      });
+      return;
+    }
+
+    try {
+      setDownloadSelectedLoading(true);
+      const slug = Array.isArray(bookSlug) ? bookSlug[0] : bookSlug;
+      await downloadSelectedVolumesWord(slug || '', selectedVolumes);
+      notifApi.success({
+        message: 'Download thanh cong',
+        description: `File Word da duoc tai xuong (${selectedVolumes.length} volumes).`,
+        placement: 'topRight',
+        duration: 3,
+        style: { backgroundColor: '#f6ffed', border: '1px solid #b7eb8f' },
+      });
+      setSelectModalOpen(false);
+      setSelectedVolumes([]);
+    } catch (error: any) {
+      notifApi.error({
+        message: 'Download that bai',
+        description: error.message || 'Da xay ra loi, vui long thu lai.',
+        placement: 'topRight',
+        duration: 4,
+        style: { backgroundColor: '#fff2f0', border: '1px solid #ffccc7' },
+      });
+    } finally {
+      setDownloadSelectedLoading(false);
+    }
+  };
+
   return (
     <Content className="volumeClass">
       {notifContextHolder}
@@ -227,7 +268,15 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
           onClick={handleDownloadWord}
           loading={downloadLoading}
         >
-          Download Word
+          Download Word (Tất cả)
+        </Button>
+        <Button
+          type="default"
+          icon={<DownloadOutlined />}
+          onClick={() => setSelectModalOpen(true)}
+          style={{ backgroundColor: '#52c41a', borderColor: '#52c41a', color: '#fff' }}
+        >
+          Download Word (Chọn)
         </Button>
         <Button
           type="default"
@@ -368,6 +417,65 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
             </Form.Item>
           </Form>
         )}
+      </Modal>
+
+      <Modal
+        title="Chọn volume để export Word"
+        open={selectModalOpen}
+        onCancel={() => setSelectModalOpen(false)}
+        footer={
+          <div style={{ textAlign: 'center' }}>
+            <Button onClick={() => setSelectModalOpen(false)}>Hủy</Button>
+            <Button 
+              type="primary" 
+              onClick={handleDownloadSelectedWord}
+              loading={downloadSelectedLoading}
+              disabled={selectedVolumes.length === 0}
+            >
+              Download Word ({selectedVolumes.length} volume)
+            </Button>
+          </div>
+        }
+        width={600}
+      >
+        <div style={{ maxHeight: '400px', overflowY: 'auto' }}>
+          <Checkbox
+            checked={selectedVolumes.length === volumes.length && volumes.length > 0}
+            indeterminate={selectedVolumes.length > 0 && selectedVolumes.length < volumes.length}
+            onChange={(e) => {
+              if (e.target.checked) {
+                setSelectedVolumes(volumes.map(v => v.slug));
+              } else {
+                setSelectedVolumes([]);
+              }
+            }}
+            style={{ marginBottom: 16, fontWeight: 'bold' }}
+          >
+            Chọn tất cả
+          </Checkbox>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+            {volumes.map((volume) => (
+              <Checkbox
+                key={volume.slug}
+                checked={selectedVolumes.includes(volume.slug)}
+                onChange={(e) => {
+                  if (e.target.checked) {
+                    setSelectedVolumes([...selectedVolumes, volume.slug]);
+                  } else {
+                    setSelectedVolumes(selectedVolumes.filter(v => v !== volume.slug));
+                  }
+                }}
+              >
+                <span style={{ fontWeight: volume.isRead === 1 ? 'bold' : 'normal' }}>
+                  Tập {volume.number}: {volume.eng}
+                </span>
+                {volume.isRead === 1 && (
+                  <span style={{ color: '#1890ff', marginLeft: 8 }}>(Đã đọc)</span>
+                )}
+              </Checkbox>
+            ))}
+          </div>
+        </div>
       </Modal>
     </Content>
   );

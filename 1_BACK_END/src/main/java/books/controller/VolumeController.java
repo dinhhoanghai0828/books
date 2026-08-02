@@ -22,6 +22,8 @@ import org.springframework.web.bind.annotation.*;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 @RestController
 @CrossOrigin("*")
@@ -250,6 +252,120 @@ public class VolumeController {
             HttpHeaders headers = new HttpHeaders();
             headers.setContentType(MediaType.APPLICATION_OCTET_STREAM);
             headers.setContentDispositionFormData("attachment", bookSlug + ".docx");
+            
+            return new ResponseEntity<>(outputStream.toByteArray(), headers, HttpStatus.OK);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @PostMapping("/download-selected-volumes-word/{bookSlug}")
+    public ResponseEntity<byte[]> downloadSelectedVolumesWord(
+            @PathVariable("bookSlug") String bookSlug,
+            @RequestBody Map<String, List<String>> request) {
+        try {
+            List<String> volumeSlugs = request.get("volumeSlugs");
+            if (volumeSlugs == null || volumeSlugs.isEmpty()) {
+                return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+            }
+            
+            List<VolumeDTO> allVolumes = volumeService.getVolumesByBookSlug(bookSlug);
+            
+            // Filter volumes based on selected slugs
+            List<VolumeDTO> selectedVolumes = allVolumes.stream()
+                    .filter(v -> volumeSlugs.contains(v.getSlug()))
+                    .collect(Collectors.toList());
+            
+            XWPFDocument document = new XWPFDocument();
+            
+            // Add content from selected volumes
+            int lessonNumber = 1;
+            for (VolumeDTO volume : selectedVolumes) {
+                // Use contents from VolumeDTO instead of calling service
+                List<ContentDTO> contents = volume.getContents();
+                
+                // Skip volumes with no content
+                if (contents == null || contents.isEmpty()) {
+                    continue;
+                }
+                
+                // Add volume title with Lesson numbering
+                XWPFParagraph volumeTitleParagraph = document.createParagraph();
+                volumeTitleParagraph.setAlignment(ParagraphAlignment.CENTER);
+                XWPFRun volumeTitleRun = volumeTitleParagraph.createRun();
+                volumeTitleRun.setBold(true);
+                volumeTitleRun.setFontFamily("Book Antiqua");
+                volumeTitleRun.setFontSize(25);
+                volumeTitleRun.setText("Lesson " + lessonNumber + ": " + volume.getEng());
+                
+                // Set line spacing for title
+                volumeTitleParagraph.setSpacingAfter(300);
+                
+                // Build English paragraph
+                StringBuilder englishParagraph = new StringBuilder();
+                StringBuilder vietnameseParagraph = new StringBuilder();
+                
+                for (ContentDTO content : contents) {
+                    String eng = content.getEng().trim();
+                    String vi = content.getVi().trim();
+                    
+                    // Add English sentence with comma
+                    if (englishParagraph.length() > 0) {
+                        englishParagraph.append(". ");
+                    }
+                    englishParagraph.append(eng);
+                    
+                    // Add Vietnamese sentence with period, but check if it already ends with punctuation
+                    if (vietnameseParagraph.length() > 0) {
+                        vietnameseParagraph.append(" ");
+                    }
+                    vietnameseParagraph.append(vi);
+                    
+                    // Check if Vietnamese sentence ends with ! ? or ...
+                    if (!vi.endsWith("!") && !vi.endsWith("?") && !vi.endsWith("...")) {
+                        vietnameseParagraph.append(".");
+                    }
+                }
+                
+                // Add English paragraph with 1.5 line spacing
+                XWPFParagraph engParagraph = document.createParagraph();
+                engParagraph.setAlignment(ParagraphAlignment.LEFT);
+                engParagraph.setSpacingBetween(1.5, LineSpacingRule.AUTO);
+                engParagraph.setSpacingAfter(1000);
+                XWPFRun engRun = engParagraph.createRun();
+                engRun.setFontFamily("Book Antiqua");
+                engRun.setFontSize(18);
+                engRun.setText(englishParagraph.toString());
+                
+                // Add Vietnamese paragraph with 1.5 line spacing
+                XWPFParagraph viParagraph = document.createParagraph();
+                viParagraph.setAlignment(ParagraphAlignment.LEFT);
+                viParagraph.setSpacingBetween(1.5, LineSpacingRule.AUTO);
+                viParagraph.setSpacingAfter(1000);
+                XWPFRun viRun = viParagraph.createRun();
+                viRun.setFontFamily("Book Antiqua");
+                viRun.setFontSize(18);
+                viRun.setText(vietnameseParagraph.toString());
+                
+                // Increment lesson number
+                lessonNumber++;
+                
+                // Page break between volumes (only if not the last volume with content)
+                if (lessonNumber <= selectedVolumes.size()) {
+                    XWPFParagraph pageBreakParagraph = document.createParagraph();
+                    XWPFRun pageBreakRun = pageBreakParagraph.createRun();
+                    pageBreakRun.addBreak(BreakType.PAGE);
+                }
+            }
+            
+            ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+            document.write(outputStream);
+            document.close();
+            
+            HttpHeaders headers = new HttpHeaders();
+            headers.setContentType(MediaType.APPLICATION_OCTET_STREAM);
+            headers.setContentDispositionFormData("attachment", bookSlug + "-selected.docx");
             
             return new ResponseEntity<>(outputStream.toByteArray(), headers, HttpStatus.OK);
         } catch (Exception e) {
