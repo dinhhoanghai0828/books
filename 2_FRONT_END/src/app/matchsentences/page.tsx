@@ -10,7 +10,7 @@ import {
 } from '@ant-design/icons';
 import { Button, Modal, Spin, Typography, message } from 'antd';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { Suspense, useEffect, useState } from 'react';
+import { Suspense, useEffect, useState, useRef } from 'react';
 import '../../styles/global.css';
 
 const { Text } = Typography;
@@ -45,6 +45,11 @@ const MatchSentencesPage = () => {
   const [confirmLoading, setConfirmLoading] = useState(false);
   const [openResultModal, setOpenResultModal] = useState(false);
   const [limit] = useState(DEFAULT_LIMIT);
+  
+  const containerRef = useRef<HTMLDivElement>(null);
+  const enRefs = useRef<Record<string, HTMLDivElement>>({});
+  const viRefs = useRef<Record<string, HTMLDivElement>>({});
+  const [selectedLinePath, setSelectedLinePath] = useState<string>('');
 
   // ============================================================
   // DATA FETCHING
@@ -174,12 +179,50 @@ const MatchSentencesPage = () => {
   const matchedEnIds = matchedPairs.map(p => p.enId);
   const matchedViIds = matchedPairs.map(p => p.viId);
 
+  // Calculate connection line path when items are selected
+  useEffect(() => {
+    if (!selectedEn || !selectedVi) {
+      setSelectedLinePath('');
+      return;
+    }
+
+    const calculatePath = () => {
+      const enEl = enRefs.current[selectedEn];
+      const viEl = viRefs.current[selectedVi];
+      const containerRect = containerRef.current?.getBoundingClientRect();
+      
+      if (!enEl || !viEl || !containerRect) {
+        setSelectedLinePath('');
+        return;
+      }
+
+      const enRect = enEl.getBoundingClientRect();
+      const viRect = viEl.getBoundingClientRect();
+      
+      // Calculate positions relative to container
+      const enX = enRect.right - containerRect.left;
+      const enY = enRect.top + enRect.height / 2 - containerRect.top;
+      const viX = viRect.left - containerRect.left;
+      const viY = viRect.top + viRect.height / 2 - containerRect.top;
+      
+      // Draw bezier curve
+      const midX = (enX + viX) / 2;
+      const path = `M ${enX} ${enY} C ${midX} ${enY}, ${midX} ${viY}, ${viX} ${viY}`;
+      
+      setSelectedLinePath(path);
+    };
+
+    // Use setTimeout to ensure DOM is updated
+    const timeout = setTimeout(calculatePath, 0);
+    return () => clearTimeout(timeout);
+  }, [selectedEn, selectedVi, shuffledEn, shuffledVi]);
+
   // ============================================================
   // RENDER
   // ============================================================
 
   return (
-    <div className="test-container" style={{ marginTop: 50, marginBottom: 70 }}>
+    <div className="test-container" style={{ marginTop: 50, marginBottom: 70 }} ref={containerRef}>
       <Typography.Title level={3} className="test-title">
         Ghép câu
       </Typography.Title>
@@ -193,7 +236,29 @@ const MatchSentencesPage = () => {
       {loading ? (
         <Spin size="large" />
       ) : (
-        <div style={{ display: 'flex', gap: 100, marginTop: 30, overflow: 'visible' }}>
+        <div style={{ display: 'flex', gap: 100, marginTop: 30, position: 'relative' }}>
+          {/* SVG overlay for connection line */}
+          {selectedLinePath && (
+            <svg
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                pointerEvents: 'none',
+                zIndex: 10,
+              }}
+            >
+              <path
+                d={selectedLinePath}
+                stroke="#fa8c16"
+                strokeWidth="4"
+                fill="none"
+              />
+            </svg>
+          )}
+          
           {/* Cột tiếng Anh */}
           <div style={{ flex: 1, overflow: 'visible' }}>
             <Text strong style={{ fontSize: 18, marginBottom: 20, display: 'block', color: '#1890ff' }}>
@@ -210,6 +275,7 @@ const MatchSentencesPage = () => {
               return (
                 <div
                   key={item.id}
+                  ref={(el) => { if (el) enRefs.current[item.id] = el; }}
                   onClick={() => handleEnClick(item.id)}
                   style={{
                     padding: 16,
@@ -230,18 +296,6 @@ const MatchSentencesPage = () => {
                     position: 'relative',
                   }}
                 >
-                  {isSelected && bothSelected && (
-                    <div style={{
-                      position: 'absolute',
-                      right: -120,
-                      top: '50%',
-                      transform: 'translateY(-50%)',
-                      width: 120,
-                      height: 4,
-                      backgroundColor: '#fa8c16',
-                      zIndex: 10,
-                    }} />
-                  )}
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                     <Text style={{ fontSize: 15, flex: 1 }}>{item.eng}</Text>
                     {isMatched && match && (
@@ -305,6 +359,7 @@ const MatchSentencesPage = () => {
               return (
                 <div
                   key={item.id}
+                  ref={(el) => { if (el) viRefs.current[item.id] = el; }}
                   onClick={() => handleViClick(item.id)}
                   style={{
                     padding: 16,
@@ -325,18 +380,6 @@ const MatchSentencesPage = () => {
                     position: 'relative',
                   }}
                 >
-                  {isSelected && bothSelected && (
-                    <div style={{
-                      position: 'absolute',
-                      left: -120,
-                      top: '50%',
-                      transform: 'translateY(-50%)',
-                      width: 120,
-                      height: 4,
-                      backgroundColor: '#fa8c16',
-                      zIndex: 10,
-                    }} />
-                  )}
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                     <Text style={{ fontSize: 15, flex: 1 }}>{item.vi}</Text>
                     {isMatched && match && (
