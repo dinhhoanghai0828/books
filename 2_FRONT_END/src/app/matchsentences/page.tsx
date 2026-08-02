@@ -94,12 +94,8 @@ const MatchSentencesPage = () => {
       return;
     }
     
+    // Nếu đã chọn EN khác, thay thế
     setSelectedEn(id);
-    
-    // Nếu đã chọn VI, thực hiện match ngay
-    if (selectedVi) {
-      handleMatch(id, selectedVi);
-    }
   };
 
   const handleViClick = (id: string) => {
@@ -114,17 +110,14 @@ const MatchSentencesPage = () => {
       return;
     }
     
+    // Nếu đã chọn VI khác, thay thế
     setSelectedVi(id);
-    
-    // Nếu đã chọn EN, thực hiện match ngay
-    if (selectedEn) {
-      handleMatch(selectedEn, id);
-    }
   };
 
-  const handleMatch = (enId: string, viId: string) => {
+  const handleMatch = () => {
+    if (!selectedEn || !selectedVi) return;
     const matchNumber = matchedPairs.length + 1;
-    setMatchedPairs((prev) => [...prev, { enId, viId, matchNumber }]);
+    setMatchedPairs((prev) => [...prev, { enId: selectedEn, viId: selectedVi, matchNumber }]);
     setSelectedEn(null);
     setSelectedVi(null);
   };
@@ -212,9 +205,16 @@ const MatchSentencesPage = () => {
       setSelectedLinePath(path);
     };
 
-    // Use setTimeout to ensure DOM is updated
-    const timeout = setTimeout(calculatePath, 0);
-    return () => clearTimeout(timeout);
+    // Use multiple timeouts to ensure DOM is updated
+    const timeout1 = setTimeout(calculatePath, 0);
+    const timeout2 = setTimeout(calculatePath, 50);
+    const timeout3 = setTimeout(calculatePath, 100);
+    
+    return () => {
+      clearTimeout(timeout1);
+      clearTimeout(timeout2);
+      clearTimeout(timeout3);
+    };
   }, [selectedEn, selectedVi, shuffledEn, shuffledVi]);
 
   // ============================================================
@@ -238,25 +238,47 @@ const MatchSentencesPage = () => {
       ) : (
         <div style={{ display: 'flex', gap: 100, marginTop: 30, position: 'relative' }}>
           {/* SVG overlay for connection line */}
-          {selectedLinePath && (
-            <svg
-              style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
-                pointerEvents: 'none',
-                zIndex: 10,
-              }}
-            >
+          <svg
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              pointerEvents: 'none',
+              zIndex: 10,
+            }}
+          >
+            {selectedLinePath && (
               <path
                 d={selectedLinePath}
                 stroke="#fa8c16"
                 strokeWidth="4"
                 fill="none"
               />
-            </svg>
+            )}
+          </svg>
+          
+          {/* Match button when both sides selected */}
+          {selectedEn && selectedVi && (
+            <div style={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              zIndex: 20,
+            }}>
+              <Button
+                type="primary"
+                onClick={handleMatch}
+                style={{
+                  backgroundColor: '#fa8c16',
+                  borderColor: '#fa8c16',
+                }}
+              >
+                Ghép
+              </Button>
+            </div>
           )}
           
           {/* Cột tiếng Anh */}
