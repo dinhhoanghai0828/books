@@ -4,6 +4,7 @@ import {
   PlusOutlined,
   FileWordOutlined,
   DownOutlined,
+  CheckOutlined,
 } from '@ant-design/icons';
 import { Button, Segmented, Space, notification, Dropdown } from 'antd';
 import { App } from 'antd';
@@ -27,6 +28,7 @@ export interface ContentToolbarProps {
   onToggleVietnamese: () => void;
   onToggleMissingWords: () => void;
   onTest: () => void;
+  onFillBlanks: () => void;
   onInsertWord: () => void;
   volumeSlug: string | string[];
 }
@@ -46,6 +48,7 @@ const ContentToolbar: React.FC<ContentToolbarProps> = ({
   onToggleVietnamese,
   onToggleMissingWords,
   onTest,
+  onFillBlanks,
   onInsertWord,
   volumeSlug,
 }) => {
@@ -229,9 +232,27 @@ const ContentToolbar: React.FC<ContentToolbarProps> = ({
         </Dropdown>
 
         {/* Group 2: Học tập */}
-        <Button type="primary" onClick={onTest} className="custom-button">
-          Kiem tra
-        </Button>
+        <Dropdown
+          menu={{
+            items: [
+              {
+                key: 'ghép câu',
+                label: 'Ghép câu',
+                onClick: onTest,
+              },
+              {
+                key: 'điền từ',
+                label: 'Điền từ còn thiếu',
+                onClick: onFillBlanks,
+              },
+            ],
+          }}
+          trigger={['click']}
+        >
+          <Button type="primary" icon={<CheckOutlined />} className="custom-button">
+            Kiểm tra
+          </Button>
+        </Dropdown>
 
         <Button
           type="primary"
@@ -251,7 +272,7 @@ const ContentToolbar: React.FC<ContentToolbarProps> = ({
               label: item.label,
               onClick: item.onClick,
               icon: item.icon,
-              disabled: item.loading,
+              disabled: item.disabled,
             })),
           }}
           trigger={['click']}
