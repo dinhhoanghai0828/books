@@ -193,14 +193,17 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
     const start = parseTimeToSeconds(playCommand.startTime);
     const end = parseTimeToSeconds(playCommand.endTime);
 
-    segmentRef.current = { start, end };
-    isLoopRef.current = isGlobalLoop;
+    // Validate that start is finite before setting currentTime
+    if (isFinite(start)) {
+      segmentRef.current = { start, end };
+      isLoopRef.current = isGlobalLoop;
 
-    audio.currentTime = start;
-    audio.playbackRate = playbackSpeed;
+      audio.currentTime = start;
+      audio.playbackRate = playbackSpeed;
 
-    // Đảm bảo bắt được lỗi Promise Play
-    audio.play().catch((err) => console.log('Audio play error:', err));
+      // Đảm bảo bắt được lỗi Promise Play
+      audio.play().catch((err) => console.log('Audio play error:', err));
+    }
   }, [playCommand]);
 
   useEffect(() => {
@@ -239,7 +242,7 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
   // KÉO HOẶC BẤM VÀO THANH SLIDER
   const handleSliderSeek = (value: number) => {
     const audio = getAudio();
-    if (audio) {
+    if (audio && isFinite(value)) {
       // Xóa giới hạn segment để phát tự do từ vị trí bấm
       segmentRef.current = { start: 0, end: 0 };
       audio.currentTime = value;

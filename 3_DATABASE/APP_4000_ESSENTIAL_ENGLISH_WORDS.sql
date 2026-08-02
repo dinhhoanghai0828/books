@@ -761,7 +761,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	/* (UUID(),'4000-essential-english-words-19','Shipwrecked','Đắm tàu','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_019.mp3',NULL,'00:00:00.000','00:02:14.800','4000-essential-english-words','NO',19) */
 	('Shipwrecked','Đắm tàu','00:00:00.960','00:00:02.900','4000-essential-english-words-19'),
 	('Simon Yates was a lawyer','Simon Yates là một luật sư','00:00:02.900','00:00:05.000','4000-essential-english-words-19'),
-	('He helped many people','Ông ta giúp đỡ rất nhiều người','00:00:05.000','00:00:06.930','4000-essential-english-words-19'),
+	('He helped many people','Ông ta giúp đỡ rất nhiều người','00:00:05.300','00:00:06.930','4000-essential-english-words-19'),
 	('However, he was not a nice man','Tuy nhiên, ông ta không phải là một người tốt','00:00:07.000','00:00:10.000','4000-essential-english-words-19'),
 	('His policy was to help only rich people','Chính sách của ông ta là chỉ giúp những người giàu có','00:00:10.000','00:00:14.000','4000-essential-english-words-19'),
 	('He didn\'t bother about social injustice','Ông chẳng thèm bận tâm đến sự bất công xã hội','00:00:14.000','00:00:17.000','4000-essential-english-words-19'),

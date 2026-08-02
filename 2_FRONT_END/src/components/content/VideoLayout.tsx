@@ -146,10 +146,13 @@ const VideoLayout: React.FC<VideoLayoutProps> = ({
     const start = parseTimeToSeconds(playCommand.startTime);
     const end = parseTimeToSeconds(playCommand.endTime);
 
-    segmentRef.current = { start, end };
+    // Validate that start is finite before setting currentTime
+    if (isFinite(start)) {
+      segmentRef.current = { start, end };
 
-    video.currentTime = start;
-    video.play().catch((err) => console.log('Video play error:', err));
+      video.currentTime = start;
+      video.play().catch((err) => console.log('Video play error:', err));
+    }
   }, [playCommand]);
 
   // 3. LỆNH LẶP TỪ ITEM (LOOP COMMAND)

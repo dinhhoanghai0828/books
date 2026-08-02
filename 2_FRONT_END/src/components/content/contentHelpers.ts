@@ -2,7 +2,9 @@ import { ContentType } from '@/interfaces/content';
 
 // Chuyen chuoi "hh:mm:ss" hoac "mm:ss" thanh so giay
 export const parseTimeToSeconds = (time: string): number => {
+  if (!time) return 0;
   const parts = time.split(':').map(Number);
+  if (parts.some(isNaN)) return 0;
   if (parts.length === 3) {
     const [h, m, s] = parts;
     return h * 3600 + m * 60 + s;
