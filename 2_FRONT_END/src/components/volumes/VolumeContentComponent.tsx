@@ -1,6 +1,6 @@
 import { Volume } from '@/interfaces/volume';
-import { CheckOutlined, EditOutlined, DownloadOutlined, BookOutlined, FilePdfOutlined, FileWordOutlined } from '@ant-design/icons';
-import { Button, Checkbox, Col, Empty, Form, Input, Modal, Row, Select, Typography, notification } from 'antd';
+import { CheckOutlined, EditOutlined, DownloadOutlined, BookOutlined, FilePdfOutlined, FileWordOutlined, DownOutlined } from '@ant-design/icons';
+import { Button, Checkbox, Col, Empty, Form, Input, Modal, Row, Select, Typography, notification, Dropdown } from 'antd';
 import { Content } from 'antd/es/layout/layout';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
@@ -251,6 +251,31 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
     }
   };
 
+  const downloadMenuItems = [
+    {
+      key: 'word',
+      label: (
+        <span>
+          {downloadSelectedLoading ? 'Đang download...' : 'Download Word'}
+        </span>
+      ),
+      onClick: () => setSelectModalOpen(true),
+      disabled: downloadSelectedLoading || pdfLoading,
+      icon: <FileWordOutlined />,
+    },
+    {
+      key: 'pdf',
+      label: (
+        <span>
+          {pdfLoading ? 'Đang download...' : 'Download PDF'}
+        </span>
+      ),
+      onClick: handleDownloadPdf,
+      disabled: downloadSelectedLoading || pdfLoading,
+      icon: <FilePdfOutlined />,
+    },
+  ];
+
   return (
     <Content className="volumeClass">
       {notifContextHolder}
@@ -264,23 +289,19 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
         >
           Cập nhật Volume
         </Button>
-        <Button
-          type="default"
-          icon={<FileWordOutlined />}
-          onClick={() => setSelectModalOpen(true)}
-          style={{ backgroundColor: '#52c41a', borderColor: '#52c41a', color: '#fff' }}
+        <Dropdown
+          menu={{
+            items: downloadMenuItems,
+          }}
+          trigger={['click']}
         >
-          Download Word
-        </Button>
-        <Button
-          type="default"
-          icon={<FilePdfOutlined />}
-          onClick={handleDownloadPdf}
-          loading={pdfLoading}
-          style={{ color: '#dc2626', borderColor: '#dc2626' }}
-        >
-          Download PDF
-        </Button>
+          <Button
+            icon={<DownloadOutlined />}
+            style={{ backgroundColor: '#52c41a', borderColor: '#52c41a', color: '#fff' }}
+          >
+            Tác vụ <DownOutlined />
+          </Button>
+        </Dropdown>
       </div>
       {volumes && volumes.length > 0 ? (
         <Row gutter={[16, 16]}>
