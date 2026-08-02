@@ -49,7 +49,9 @@ const ContentToolbar: React.FC<ContentToolbarProps> = ({
   onInsertWord,
   volumeSlug,
 }) => {
-  const [notifApi, notifContextHolder] = notification.useNotification();
+  const [notifApi, notifContextHolder] = notification.useNotification({
+    top: 80,
+  });
   const [loadingTonghopCau, setLoadingTonghopCau] = useState(false);
   const [loadingTonghopTu, setLoadingTonghopTu] = useState(false);
   const [loadingDownloadWord, setLoadingDownloadWord] = useState(false);

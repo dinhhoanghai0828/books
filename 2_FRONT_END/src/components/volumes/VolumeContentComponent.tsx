@@ -22,7 +22,9 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
   const [editingVolume, setEditingVolume] = useState<Volume | null>(null);
   const [editLoading, setEditLoading] = useState(false);
   const [editForm] = Form.useForm();
-  const [notifApi, notifContextHolder] = notification.useNotification();
+  const [notifApi, notifContextHolder] = notification.useNotification({
+    top: 80,
+  });
   const [exportLoading, setExportLoading] = useState(false);
   const [markReadLoading, setMarkReadLoading] = useState<string | null>(null);
   const [downloadLoading, setDownloadLoading] = useState(false);

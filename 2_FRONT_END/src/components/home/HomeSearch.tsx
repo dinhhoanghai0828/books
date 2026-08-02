@@ -48,7 +48,9 @@ const HomeSearch = React.memo(({
   const [suggestionsVi, setSuggestionsVi] = useState<string[]>([]);
   const [selectedSpeed, setSelectedSpeed] = useState('100%');
   const [loadingTonghop, setLoadingTonghop] = useState(false);
-  const [notifApi, notifContextHolder] = notification.useNotification();
+  const [notifApi, notifContextHolder] = notification.useNotification({
+    top: 80,
+  });
 
   // State cho modal them tu moi
   const [addOpen, setAddOpen] = useState(false);

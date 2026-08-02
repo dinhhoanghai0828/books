@@ -155,7 +155,9 @@ const ContentComponent = ({
   const [insertModalOpen, setInsertModalOpen] = useState(false);
   const [insertLoading, setInsertLoading] = useState(false);
   const [insertForm] = Form.useForm();
-  const [notifApi, notifContextHolder] = notification.useNotification();
+  const [notifApi, notifContextHolder] = notification.useNotification({
+    top: 80,
+  });
 
   // ============================================================
   // STATE — edit content modal

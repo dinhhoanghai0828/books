@@ -143,7 +143,9 @@ const HomeContent = React.memo(({
   const [editingItem, setEditingItem] = useState<ContentType | null>(null);
   const [editLoading, setEditLoading] = useState(false);
   const [editForm] = Form.useForm();
-  const [notifApi, notifContextHolder] = notification.useNotification();
+  const [notifApi, notifContextHolder] = notification.useNotification({
+    top: 80,
+  });
 
   // Trang thai modal xem video
   const [videoModalOpen, setVideoModalOpen] = useState(false);
