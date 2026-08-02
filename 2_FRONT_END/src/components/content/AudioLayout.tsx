@@ -9,7 +9,7 @@ import {
   SoundOutlined,
   MutedOutlined
 } from '@ant-design/icons';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import '../../styles/audio.css';
 import ContentItem from './ContentItem';
 import { findActiveItem, parseTimeToSeconds } from './contentHelpers';
@@ -56,7 +56,7 @@ const PLAYBACK_SPEED_OPTIONS = [
   { value: 2.0, label: '2.0x' },
 ];
 
-const formatTime = (seconds: number) => {
+const formatTime = (seconds: number): string => {
   if (isNaN(seconds)) return '00:00';
   const mins = Math.floor(seconds / 60);
   const secs = Math.floor(seconds % 60);
@@ -228,7 +228,7 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
   }, [pauseCommand]);
 
   // BẤM NÚT PLAY / PAUSE TRỰC TIẾP TRÊN PLAYER DƯỚI CÙNG
-  const togglePlayPause = () => {
+  const togglePlayPause = useCallback(() => {
     const audio = getAudio();
     if (!audio) return;
 
@@ -241,10 +241,10 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
       }
       audio.play().catch((err) => console.log('Audio play error:', err));
     }
-  };
+  }, [isPlaying]);
 
   // KÉO HOẶC BẤM VÀO THANH SLIDER
-  const handleSliderSeek = (value: number) => {
+  const handleSliderSeek = useCallback((value: number) => {
     const audio = getAudio();
     if (audio && isFinite(value)) {
       // Xóa giới hạn segment để phát tự do từ vị trí bấm
@@ -257,36 +257,41 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
         audio.play().catch((err) => console.log('Audio play error:', err));
       }
     }
-  };
+  }, []);
 
-  const handleSpeedChange = (value: number) => {
+  const handleSpeedChange = useCallback((value: number) => {
     setPlaybackSpeed(value);
     const audio = getAudio();
     if (audio) audio.playbackRate = value;
-  };
+  }, []);
 
-  const toggleGlobalLoop = () => {
+  const toggleGlobalLoop = useCallback(() => {
     const nextState = !isGlobalLoop;
     setIsGlobalLoop(nextState);
     isLoopRef.current = nextState;
-  };
+  }, [isGlobalLoop]);
 
-  const toggleMute = () => {
+  const toggleMute = useCallback(() => {
     const audio = getAudio();
     if (audio) {
       audio.muted = !isMuted;
       setIsMuted(!isMuted);
     }
-  };
+  }, [isMuted]);
 
-  const handleVolumeChange = (val: number) => {
+  const handleVolumeChange = useCallback((val: number) => {
     const audio = getAudio();
     if (audio) {
       audio.volume = val;
       setVolumeLevel(val);
       setIsMuted(val === 0);
     }
-  };
+  }, []);
+
+  // Memoized item ref handler to prevent unnecessary re-renders
+  const handleItemRef = useCallback((itemId: string, el: HTMLDivElement | null) => {
+    itemRefsRef.current[itemId] = el;
+  }, [itemRefsRef]);
 
   return (
     <div style={{ paddingBottom: '100px' }}>
@@ -320,7 +325,7 @@ const AudioLayout: React.FC<AudioLayoutProps> = ({
             onGetMeaning={onGetMeaning}
             onEdit={onEdit}
             onInsertWord={onInsertWord}
-            itemRef={(el) => { itemRefsRef.current[String(item.id)] = el; }}
+            itemRef={(el) => handleItemRef(String(item.id), el)}
           />
         ))
       ) : (

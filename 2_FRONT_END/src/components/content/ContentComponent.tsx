@@ -174,8 +174,24 @@ const ContentComponent = ({
     if (activeSourceRef.current === 'audio') {
       handlePauseAudio(true);
     }
-    setPlayStates((prev) => Object.fromEntries(Object.keys(prev).map((k) => [k, false])));
-    setLoopStates((prev) => Object.fromEntries(Object.keys(prev).map((k) => [k, false])));
+    setPlayStates((prev) => {
+      const newStates = { ...prev };
+      Object.keys(prev).forEach(k => {
+        if (prev[k]) {
+          newStates[k] = false;
+        }
+      });
+      return newStates;
+    });
+    setLoopStates((prev) => {
+      const newStates = { ...prev };
+      Object.keys(prev).forEach(k => {
+        if (prev[k]) {
+          newStates[k] = false;
+        }
+      });
+      return newStates;
+    });
     setActive(null, null);
     setIsVideoPlaying(false);
     setPlayCommand(null);
@@ -769,7 +785,7 @@ const ContentComponent = ({
   // SHARED PROPS
   // ============================================================
 
-  const commonItemProps = {
+  const commonItemProps = useMemo(() => ({
     activeItemId,
     activeSource,
     isVideoPlaying,
@@ -781,7 +797,7 @@ const ContentComponent = ({
     renderTooltip,
     onEdit: handleOpenEdit,
     onInsertWord: handleOpenInsert,
-  };
+  }), [activeItemId, activeSource, isVideoPlaying, showEnglish, showVietnamese, highlightMissingWords, itemRefsRef, handleGetMeaning, renderTooltip, handleOpenEdit, handleOpenInsert]);
 
   // ============================================================
   // RENDER LAYOUT

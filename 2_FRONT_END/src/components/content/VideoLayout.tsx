@@ -1,7 +1,7 @@
 import { ContentType } from '@/interfaces/content';
 import { Volume } from '@/interfaces/volume';
 import { Empty, Typography } from 'antd';
-import React, { useEffect, useRef } from 'react';
+import React, { useCallback, useEffect, useRef } from 'react';
 import ContentItem from './ContentItem';
 import { findActiveItem, parseTimeToSeconds } from './contentHelpers';
 
@@ -178,6 +178,13 @@ const VideoLayout: React.FC<VideoLayoutProps> = ({
     if (video) video.pause();
   }, [pauseCommand]);
 
+  // Memoized item ref handler to prevent unnecessary re-renders
+  const handleItemRef = useCallback((itemId: string, el: HTMLDivElement | null) => {
+    if (itemRefsRef.current) {
+      itemRefsRef.current[itemId] = el;
+    }
+  }, [itemRefsRef]);
+
   return (
     <div style={{ paddingBottom: '220px' }}>
       {/* Video cố định ở cuối màn hình */}
@@ -242,11 +249,7 @@ const VideoLayout: React.FC<VideoLayoutProps> = ({
                 onGetMeaning={onGetMeaning}
                 onEdit={onEdit}
                 onInsertWord={onInsertWord}
-                itemRef={(el) => {
-                  if (itemRefsRef.current) {
-                    itemRefsRef.current[itemIdStr] = el;
-                  }
-                }}
+                itemRef={(el) => handleItemRef(itemIdStr, el)}
               />
             );
           })
