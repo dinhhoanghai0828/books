@@ -3,8 +3,9 @@ import {
   EyeOutlined,
   PlusOutlined,
   FileWordOutlined,
+  DownOutlined,
 } from '@ant-design/icons';
-import { Button, Segmented, Space, notification } from 'antd';
+import { Button, Segmented, Space, notification, Dropdown } from 'antd';
 import { App } from 'antd';
 import React, { useState } from 'react';
 import { runContentsExport, runWordGeneral, downloadSingleVolumeWord } from '@/utils/apiService';
@@ -125,6 +126,70 @@ const ContentToolbar: React.FC<ContentToolbarProps> = ({
       setLoadingDownloadWord(false);
     }
   };
+
+  const adminMenuItems = [
+    {
+      key: 'tonghopcau',
+      label: (
+        <span>
+          {loadingTonghopCau ? 'Đang tổng hợp...' : 'Tổng hợp Câu'}
+        </span>
+      ),
+      onClick: handleTonghopCau,
+      disabled: loadingTonghopCau || loadingTonghopTu || loadingDownloadWord,
+    },
+    {
+      key: 'tonghoptu',
+      label: (
+        <span>
+          {loadingTonghopTu ? 'Đang tổng hợp...' : 'Tổng hợp Từ'}
+        </span>
+      ),
+      onClick: handleTonghopTu,
+      disabled: loadingTonghopCau || loadingTonghopTu || loadingDownloadWord,
+    },
+    {
+      key: 'download',
+      label: (
+        <span>
+          {loadingDownloadWord ? 'Đang download...' : 'Download Word'}
+        </span>
+      ),
+      onClick: handleDownloadWord,
+      disabled: loadingTonghopCau || loadingTonghopTu || loadingDownloadWord,
+      icon: <FileWordOutlined />,
+    },
+  ];
+
+  const displayMenuItems = [
+    {
+      key: 'eng',
+      label: (
+        <span>
+          {showEnglish ? 'Ẩn Tiếng Anh' : 'Hiện Tiếng Anh'}
+        </span>
+      ),
+      onClick: onToggleEnglish,
+    },
+    {
+      key: 'vi',
+      label: (
+        <span>
+          {showVietnamese ? 'Ẩn Tiếng Việt' : 'Hiện Tiếng Việt'}
+        </span>
+      ),
+      onClick: onToggleVietnamese,
+    },
+    {
+      key: 'words',
+      label: (
+        <span>
+          {highlightMissingWords ? 'Ẩn từ mới' : 'Hiện từ mới'}
+        </span>
+      ),
+      onClick: onToggleMissingWords,
+    },
+  ];
   return (
     <>
       {notifContextHolder}
@@ -142,39 +207,30 @@ const ContentToolbar: React.FC<ContentToolbarProps> = ({
       )}
 
       <Space wrap>
-        {/* An / Hien tieng Anh */}
-        <Button
-          icon={showEnglish ? <EyeInvisibleOutlined /> : <EyeOutlined />}
-          onClick={onToggleEnglish}
-          className="custom-button"
+        {/* Group 1: Hiển thị - Dropdown */}
+        <Dropdown
+          menu={{
+            items: displayMenuItems.map(item => ({
+              key: item.key,
+              label: item.label,
+              onClick: item.onClick,
+            })),
+          }}
+          trigger={['click']}
         >
-          {showEnglish ? 'An Eng' : 'Hien Eng'}
-        </Button>
+          <Button
+            icon={<EyeOutlined />}
+            className="custom-button"
+          >
+            Hiển thị
+          </Button>
+        </Dropdown>
 
-        {/* An / Hien tieng Viet */}
-        <Button
-          icon={showVietnamese ? <EyeInvisibleOutlined /> : <EyeOutlined />}
-          onClick={onToggleVietnamese}
-          className="custom-button"
-        >
-          {showVietnamese ? 'An Vi' : 'Hien Vi'}
-        </Button>
-
-        {/* An / Hien tu moi */}
-        <Button
-          icon={highlightMissingWords ? <EyeInvisibleOutlined /> : <EyeOutlined />}
-          onClick={onToggleMissingWords}
-          className="custom-button"
-        >
-          {highlightMissingWords ? 'An tu moi' : 'Tu moi'}
-        </Button>
-
-        {/* Kiem tra */}
+        {/* Group 2: Học tập */}
         <Button type="primary" onClick={onTest} className="custom-button">
           Kiem tra
         </Button>
 
-        {/* Them tu moi */}
         <Button
           type="primary"
           icon={<PlusOutlined />}
@@ -185,36 +241,27 @@ const ContentToolbar: React.FC<ContentToolbarProps> = ({
           Them tu moi
         </Button>
 
-        {/* Tong hop Cau */}
-        <Button
-          onClick={handleTonghopCau}
-          loading={loadingTonghopCau}
-          style={{ backgroundColor: '#fa8c16', borderColor: '#fa8c16', color: '#fff' }}
-          className="custom-button"
+        {/* Group 3: Admin functions - Dropdown */}
+        <Dropdown
+          menu={{
+            items: adminMenuItems.map(item => ({
+              key: item.key,
+              label: item.label,
+              onClick: item.onClick,
+              icon: item.icon,
+              disabled: item.loading,
+            })),
+          }}
+          trigger={['click']}
         >
-          Tổng hợp Câu
-        </Button>
-
-        {/* Tong hop Tu */}
-        <Button
-          onClick={handleTonghopTu}
-          loading={loadingTonghopTu}
-          style={{ backgroundColor: '#fa8c16', borderColor: '#fa8c16', color: '#fff' }}
-          className="custom-button"
-        >
-          Tổng hợp Từ
-        </Button>
-
-        {/* Download Word */}
-        <Button
-          icon={<FileWordOutlined />}
-          onClick={handleDownloadWord}
-          loading={loadingDownloadWord}
-          style={{ backgroundColor: '#1890ff', borderColor: '#1890ff', color: '#fff' }}
-          className="custom-button"
-        >
-          Download Word
-        </Button>
+          <Button
+            style={{ backgroundColor: '#fa8c16', borderColor: '#fa8c16', color: '#fff' }}
+            className="custom-button"
+            icon={<DownOutlined />}
+          >
+            Tác vụ khác
+          </Button>
+        </Dropdown>
       </Space>
     </div>
     </>
