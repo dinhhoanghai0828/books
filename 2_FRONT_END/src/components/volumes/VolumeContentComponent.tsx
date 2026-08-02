@@ -1,5 +1,5 @@
 import { Volume } from '@/interfaces/volume';
-import { CheckOutlined, EditOutlined, DownloadOutlined, BookOutlined, FilePdfOutlined } from '@ant-design/icons';
+import { CheckOutlined, EditOutlined, DownloadOutlined, BookOutlined, FilePdfOutlined, FileWordOutlined } from '@ant-design/icons';
 import { Button, Checkbox, Col, Empty, Form, Input, Modal, Row, Select, Typography, notification } from 'antd';
 import { Content } from 'antd/es/layout/layout';
 import Link from 'next/link';
@@ -264,19 +264,11 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
         </Button>
         <Button
           type="default"
-          icon={<DownloadOutlined />}
-          onClick={handleDownloadWord}
-          loading={downloadLoading}
-        >
-          Download Word (Tất cả)
-        </Button>
-        <Button
-          type="default"
-          icon={<DownloadOutlined />}
+          icon={<FileWordOutlined />}
           onClick={() => setSelectModalOpen(true)}
           style={{ backgroundColor: '#52c41a', borderColor: '#52c41a', color: '#fff' }}
         >
-          Download Word (Chọn)
+          Download Word
         </Button>
         <Button
           type="default"
