@@ -5,7 +5,7 @@ import { Content } from 'antd/es/layout/layout';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { useState } from 'react';
-import { updateVolume, runVolumesExport, markAsRead, markAsUnread, downloadVolumeWord, downloadVolumePdf, downloadSelectedVolumesWord } from '@/utils/apiService';
+import { updateVolume, runVolumesExport, markAsRead, markAsUnread, downloadVolumeWord, downloadVolumePdf, downloadSelectedVolumesWord, downloadSelectedVolumesWordEnglish } from '@/utils/apiService';
 
 interface VolumeContentComponentProps {
   volumes: Volume[];
@@ -32,6 +32,8 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
   const [selectModalOpen, setSelectModalOpen] = useState(false);
   const [selectedVolumes, setSelectedVolumes] = useState<string[]>([]);
   const [downloadSelectedLoading, setDownloadSelectedLoading] = useState(false);
+  const [downloadEnglishOnlyLoading, setDownloadEnglishOnlyLoading] = useState(false);
+  const [exportMode, setExportMode] = useState<'full' | 'english'>('full');
 
   const handleOpenEdit = (volume: Volume, e: React.MouseEvent) => {
     e.preventDefault();
@@ -226,16 +228,30 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
     }
 
     try {
-      setDownloadSelectedLoading(true);
       const slug = Array.isArray(bookSlug) ? bookSlug[0] : bookSlug;
-      await downloadSelectedVolumesWord(slug || '', selectedVolumes);
-      notifApi.success({
-        message: 'Download thanh cong',
-        description: `File Word da duoc tai xuong (${selectedVolumes.length} volumes).`,
-        placement: 'topRight',
-        duration: 3,
-        style: { backgroundColor: '#f6ffed', border: '1px solid #b7eb8f' },
-      });
+
+      if (exportMode === 'full') {
+        setDownloadSelectedLoading(true);
+        await downloadSelectedVolumesWord(slug || '', selectedVolumes);
+        notifApi.success({
+          message: 'Download thanh cong',
+          description: `File Word da duoc tai xuong (${selectedVolumes.length} volumes).`,
+          placement: 'topRight',
+          duration: 3,
+          style: { backgroundColor: '#f6ffed', border: '1px solid #b7eb8f' },
+        });
+      } else {
+        setDownloadEnglishOnlyLoading(true);
+        await downloadSelectedVolumesWordEnglish(slug || '', selectedVolumes);
+        notifApi.success({
+          message: 'Download thanh cong',
+          description: `File Word (Tiếng Anh) da duoc tai xuong (${selectedVolumes.length} volumes).`,
+          placement: 'topRight',
+          duration: 3,
+          style: { backgroundColor: '#f6ffed', border: '1px solid #b7eb8f' },
+        });
+      }
+
       setSelectModalOpen(false);
       setSelectedVolumes([]);
     } catch (error: any) {
@@ -248,6 +264,7 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
       });
     } finally {
       setDownloadSelectedLoading(false);
+      setDownloadEnglishOnlyLoading(false);
     }
   };
 
@@ -259,8 +276,25 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
           {downloadSelectedLoading ? 'Đang download...' : 'Download Word'}
         </span>
       ),
-      onClick: () => setSelectModalOpen(true),
-      disabled: downloadSelectedLoading || pdfLoading,
+      onClick: () => {
+        setExportMode('full');
+        setSelectModalOpen(true);
+      },
+      disabled: downloadSelectedLoading || pdfLoading || downloadEnglishOnlyLoading,
+      icon: <FileWordOutlined />,
+    },
+    {
+      key: 'word-english',
+      label: (
+        <span>
+          {downloadEnglishOnlyLoading ? 'Đang download...' : 'Download Word (Tiếng Anh)'}
+        </span>
+      ),
+      onClick: () => {
+        setExportMode('english');
+        setSelectModalOpen(true);
+      },
+      disabled: downloadSelectedLoading || pdfLoading || downloadEnglishOnlyLoading,
       icon: <FileWordOutlined />,
     },
     {
@@ -271,7 +305,7 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
         </span>
       ),
       onClick: handleDownloadPdf,
-      disabled: downloadSelectedLoading || pdfLoading,
+      disabled: downloadSelectedLoading || pdfLoading || downloadEnglishOnlyLoading,
       icon: <FilePdfOutlined />,
     },
   ];
@@ -435,7 +469,7 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
       </Modal>
 
       <Modal
-        title="Chọn volume để export Word"
+        title={`Chọn volume để export Word${exportMode === 'english' ? ' (Tiếng Anh)' : ''}`}
         open={selectModalOpen}
         onCancel={() => setSelectModalOpen(false)}
         footer={
@@ -444,10 +478,10 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
             <Button
               type="primary"
               onClick={handleDownloadSelectedWord}
-              loading={downloadSelectedLoading}
+              loading={downloadSelectedLoading || downloadEnglishOnlyLoading}
               disabled={selectedVolumes.length === 0}
             >
-              Download Word ({selectedVolumes.length} volume)
+              Download Word{exportMode === 'english' ? ' (Tiếng Anh)' : ''} ({selectedVolumes.length} volume)
             </Button>
           </div>
         }
