@@ -3,7 +3,7 @@ import BreadCrumbComponent from '@/components/breadcumb/BreadcrumbComponent';
 import ContentComponent from '@/components/content/ContentComponent';
 import { ContentType } from '@/interfaces/content';
 import { Volume } from '@/interfaces/volume';
-import { getContents, getVolumeDetail } from '@/utils/apiService';
+import { getVolumeDetail } from '@/utils/apiService';
 import { useHasMounted } from '@/utils/customHook';
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
@@ -26,36 +26,26 @@ const ContentPage = () => {
   // DATA FETCHING
   // ============================================================
 
-  const fetchContents = async () => {
+  const fetchVolumeDetail = async () => {
     if (!volumeSlug || Array.isArray(volumeSlug)) return;
     NProgress.start();
     setLoading(true);
     try {
-      const response = await getContents(volumeSlug);
-      setContents(response.data);
+      const data = await getVolumeDetail(volumeSlug);
+      setVolume(data);
+      // Extract contents from volume detail
+      if (data.contents) {
+        setContents(data.contents);
+      }
     } catch (error) {
-      console.error('Loi khi lay noi dung:', error);
+      console.error('Loi khi lay chi tiet tap:', error);
     } finally {
       setLoading(false);
       NProgress.done();
     }
   };
 
-  const fetchVolumeDetail = async () => {
-    if (!volumeSlug || Array.isArray(volumeSlug)) return;
-    NProgress.start();
-    try {
-      const data = await getVolumeDetail(volumeSlug);
-      setVolume(data);
-    } catch (error) {
-      console.error('Loi khi lay chi tiet tap:', error);
-    } finally {
-      NProgress.done();
-    }
-  };
-
   useEffect(() => {
-    fetchContents();
     fetchVolumeDetail();
   }, [volumeSlug]);
 
@@ -87,7 +77,7 @@ const ContentPage = () => {
         handleToggleAudio={() => {}}
         onViewModeChange={undefined}
         volume={volume}
-        onContentUpdate={fetchContents}
+        onContentUpdate={fetchVolumeDetail}
       />
     </div>
   );
