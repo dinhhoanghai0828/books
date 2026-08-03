@@ -21,4 +21,6 @@ public interface WordAdapter {
     boolean updateWord(Long id, String eng, String vi) throws Exception;
 
     boolean deleteWord(Long id) throws Exception;
+
+    boolean isInMissingWords(String eng) throws Exception;
 }

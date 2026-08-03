@@ -70,7 +70,7 @@ public class ContentServiceImpl implements ContentService {
             }
         }
         
-        // Check which words exist in dictionary
+        // Check which words exist in dictionary (words table)
         Set<String> wordsInDictionary = new HashSet<>();
         for (String word : allWords) {
             try {
@@ -84,14 +84,28 @@ public class ContentServiceImpl implements ContentService {
             }
         }
         
-        // For each content, find words NOT in dictionary (words that need highlighting)
+        // Check which words exist in MISSING_WORDS table (words to skip highlighting)
+        Set<String> wordsInMissingWordsTable = new HashSet<>();
+        for (String word : allWords) {
+            try {
+                boolean inMissingWords = wordAdapter.isInMissingWords(word);
+                if (inMissingWords) {
+                    wordsInMissingWordsTable.add(word.toLowerCase());
+                }
+            } catch (Exception e) {
+                continue;
+            }
+        }
+        
+        // For each content, find words NOT in dictionary AND NOT in MISSING_WORDS table
         for (ContentDTO content : contents) {
             List<String> missingWords = new ArrayList<>();
             if (content.getEng() != null) {
                 String[] words = content.getEng().split("\\s+");
                 for (String word : words) {
                     String cleanWord = word.replaceAll("[.,?!\"';]", "").toLowerCase();
-                    if (!cleanWord.isEmpty() && !wordsInDictionary.contains(cleanWord)) {
+                    // Highlight if: NOT in dictionary AND NOT in MISSING_WORDS table
+                    if (!cleanWord.isEmpty() && !wordsInDictionary.contains(cleanWord) && !wordsInMissingWordsTable.contains(cleanWord)) {
                         missingWords.add(cleanWord);
                     }
                 }

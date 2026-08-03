@@ -90,6 +90,5 @@ INSERT INTO `MISSING_WORDS` (`ENG`) VALUES
 	('be'),
 	('been'),
 	('ones'),
-	('their'),
 	('huh');
 	

@@ -29,6 +29,7 @@ public class WordAdapterImpl implements WordAdapter {
     private static final String SQL_GET_WORDS        = "SELECT ID, ENG, VI FROM WORDS WHERE 1 = 1 ";
     private static final String SQL_UPDATE_WORD      = "UPDATE WORDS SET ENG = ?, VI = ? WHERE ID = ?";
     private static final String SQL_DELETE_WORD      = "DELETE FROM WORDS WHERE ID = ?";
+    private static final String SQL_CHECK_MISSING_WORDS = "SELECT COUNT(*) FROM MISSING_WORDS WHERE LOWER(ENG) = LOWER(?)";
 
     @Override
     public List<Word> getEngWords(String eng) throws Exception {
@@ -358,6 +359,29 @@ public class WordAdapterImpl implements WordAdapter {
             throw ex;
         } finally {
             DBUtils.closeAll(thisMethod, con, pstmt, null);
+        }
+    }
+
+    @Override
+    public boolean isInMissingWords(String eng) throws Exception {
+        String thisMethod = "WordAdapterImpl.isInMissingWords";
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        try {
+            con = DBUtils.getConnection(thisMethod, true, Connection.TRANSACTION_READ_COMMITTED);
+            pstmt = DBUtils.prepareStatement(con, SQL_CHECK_MISSING_WORDS);
+            pstmt.setString(1, eng);
+            rs = DBUtils.executeQuery(pstmt, SQL_CHECK_MISSING_WORDS);
+            if (rs.next()) {
+                return rs.getInt(1) > 0;
+            }
+            return false;
+        } catch (Exception ex) {
+            logger.error(thisMethod, ex);
+            throw ex;
+        } finally {
+            DBUtils.closeAll(thisMethod, con, pstmt, rs);
         }
     }
 }
