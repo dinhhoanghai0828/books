@@ -184,7 +184,7 @@ public class VolumeController {
                 volumeTitleRun.setFontFamily("Book Antiqua");
                 volumeTitleRun.setFontSize(25);
                 volumeTitleRun.setText("Lesson " + lessonNumber + ": " + volume.getEng());
-                volumeTitleParagraph.setSpacingAfter(200);
+                volumeTitleParagraph.setSpacingAfter(300);
                 
                 // Build English paragraph
                 StringBuilder englishParagraph = new StringBuilder();
@@ -225,7 +225,7 @@ public class VolumeController {
                 XWPFParagraph viParagraph = document.createParagraph();
                 viParagraph.setAlignment(ParagraphAlignment.LEFT);
                 viParagraph.setSpacingBetween(1.5, LineSpacingRule.AUTO);
-                viParagraph.setSpacingAfter(200);
+                viParagraph.setSpacingAfter(300);
                 XWPFRun viRun = viParagraph.createRun();
                 viRun.setFontFamily("Book Antiqua");
                 viRun.setFontSize(18);
@@ -291,7 +291,7 @@ public class VolumeController {
                 volumeTitleRun.setFontFamily("Book Antiqua");
                 volumeTitleRun.setFontSize(25);
                 volumeTitleRun.setText("Lesson " + lessonNumber + ": " + volume.getEng());
-                volumeTitleParagraph.setSpacingAfter(200);
+                volumeTitleParagraph.setSpacingAfter(300);
                 
                 // Build English paragraph
                 StringBuilder englishParagraph = new StringBuilder();
@@ -332,7 +332,7 @@ public class VolumeController {
                 XWPFParagraph viParagraph = document.createParagraph();
                 viParagraph.setAlignment(ParagraphAlignment.LEFT);
                 viParagraph.setSpacingBetween(1.5, LineSpacingRule.AUTO);
-                viParagraph.setSpacingAfter(200);
+                viParagraph.setSpacingAfter(300);
                 XWPFRun viRun = viParagraph.createRun();
                 viRun.setFontFamily("Book Antiqua");
                 viRun.setFontSize(18);
