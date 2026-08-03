@@ -184,7 +184,7 @@ public class VolumeController {
                 volumeTitleRun.setFontFamily("Book Antiqua");
                 volumeTitleRun.setFontSize(25);
                 volumeTitleRun.setText("Lesson " + lessonNumber + ": " + volume.getEng());
-                volumeTitleParagraph.setSpacingAfter(300);
+                volumeTitleParagraph.setSpacingAfter(400);
                 
                 // Build English paragraph
                 StringBuilder englishParagraph = new StringBuilder();
@@ -225,7 +225,7 @@ public class VolumeController {
                 XWPFParagraph viParagraph = document.createParagraph();
                 viParagraph.setAlignment(ParagraphAlignment.LEFT);
                 viParagraph.setSpacingBetween(1.5, LineSpacingRule.AUTO);
-                viParagraph.setSpacingAfter(300);
+                viParagraph.setSpacingAfter(120);
                 XWPFRun viRun = viParagraph.createRun();
                 viRun.setFontFamily("Book Antiqua");
                 viRun.setFontSize(18);
@@ -291,7 +291,7 @@ public class VolumeController {
                 volumeTitleRun.setFontFamily("Book Antiqua");
                 volumeTitleRun.setFontSize(25);
                 volumeTitleRun.setText("Lesson " + lessonNumber + ": " + volume.getEng());
-                volumeTitleParagraph.setSpacingAfter(300);
+                volumeTitleParagraph.setSpacingAfter(400);
                 
                 // Build English paragraph
                 StringBuilder englishParagraph = new StringBuilder();
@@ -323,6 +323,7 @@ public class VolumeController {
                 XWPFParagraph engParagraph = document.createParagraph();
                 engParagraph.setAlignment(ParagraphAlignment.LEFT);
                 engParagraph.setSpacingBetween(1.5, LineSpacingRule.AUTO);
+                engParagraph.setSpacingAfter(1100);
                 XWPFRun engRun = engParagraph.createRun();
                 engRun.setFontFamily("Book Antiqua");
                 engRun.setFontSize(18);
@@ -332,7 +333,7 @@ public class VolumeController {
                 XWPFParagraph viParagraph = document.createParagraph();
                 viParagraph.setAlignment(ParagraphAlignment.LEFT);
                 viParagraph.setSpacingBetween(1.5, LineSpacingRule.AUTO);
-                viParagraph.setSpacingAfter(300);
+                viParagraph.setSpacingAfter(120);
                 XWPFRun viRun = viParagraph.createRun();
                 viRun.setFontFamily("Book Antiqua");
                 viRun.setFontSize(18);
@@ -391,7 +392,7 @@ public class VolumeController {
             volumeTitleRun.setText(volume.getEng());
             
             // Set line spacing for title
-            volumeTitleParagraph.setSpacingAfter(300);
+            volumeTitleParagraph.setSpacingAfter(400);
             
             // Build English paragraph
             StringBuilder englishParagraph = new StringBuilder();
@@ -423,7 +424,7 @@ public class VolumeController {
             XWPFParagraph engParagraph = document.createParagraph();
             engParagraph.setAlignment(ParagraphAlignment.LEFT);
             engParagraph.setSpacingBetween(1.5, LineSpacingRule.AUTO);
-            engParagraph.setSpacingAfter(1000);
+            engParagraph.setSpacingAfter(1100);
             XWPFRun engRun = engParagraph.createRun();
             engRun.setFontFamily("Book Antiqua");
             engRun.setFontSize(18);
@@ -433,7 +434,7 @@ public class VolumeController {
             XWPFParagraph viParagraph = document.createParagraph();
             viParagraph.setAlignment(ParagraphAlignment.LEFT);
             viParagraph.setSpacingBetween(1.5, LineSpacingRule.AUTO);
-            viParagraph.setSpacingAfter(1000);
+            viParagraph.setSpacingAfter(120);
             XWPFRun viRun = viParagraph.createRun();
             viRun.setFontFamily("Book Antiqua");
             viRun.setFontSize(18);
