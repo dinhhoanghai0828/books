@@ -163,18 +163,18 @@ public class VolumeController {
         try {
             List<VolumeDTO> volumes = volumeService.getVolumesByBookSlug(bookSlug);
             
+            // Filter volumes with content only
+            List<VolumeDTO> volumesWithContent = volumes.stream()
+                    .filter(v -> v.getContents() != null && !v.getContents().isEmpty())
+                    .collect(Collectors.toList());
+            
             XWPFDocument document = new XWPFDocument();
             
             // Add content from all volumes
             int lessonNumber = 1;
-            for (VolumeDTO volume : volumes) {
-                // Use contents from VolumeDTO instead of calling service
+            for (int i = 0; i < volumesWithContent.size(); i++) {
+                VolumeDTO volume = volumesWithContent.get(i);
                 List<ContentDTO> contents = volume.getContents();
-                
-                // Skip volumes with no content
-                if (contents == null || contents.isEmpty()) {
-                    continue;
-                }
                 
                 // Add volume title with Lesson numbering
                 XWPFParagraph volumeTitleParagraph = document.createParagraph();
@@ -184,9 +184,7 @@ public class VolumeController {
                 volumeTitleRun.setFontFamily("Book Antiqua");
                 volumeTitleRun.setFontSize(25);
                 volumeTitleRun.setText("Lesson " + lessonNumber + ": " + volume.getEng());
-                
-                // Set line spacing for title
-                volumeTitleParagraph.setSpacingAfter(300);
+                volumeTitleParagraph.setSpacingAfter(200);
                 
                 // Build English paragraph
                 StringBuilder englishParagraph = new StringBuilder();
@@ -218,7 +216,6 @@ public class VolumeController {
                 XWPFParagraph engParagraph = document.createParagraph();
                 engParagraph.setAlignment(ParagraphAlignment.LEFT);
                 engParagraph.setSpacingBetween(1.5, LineSpacingRule.AUTO);
-                engParagraph.setSpacingAfter(1000);
                 XWPFRun engRun = engParagraph.createRun();
                 engRun.setFontFamily("Book Antiqua");
                 engRun.setFontSize(18);
@@ -228,7 +225,7 @@ public class VolumeController {
                 XWPFParagraph viParagraph = document.createParagraph();
                 viParagraph.setAlignment(ParagraphAlignment.LEFT);
                 viParagraph.setSpacingBetween(1.5, LineSpacingRule.AUTO);
-                viParagraph.setSpacingAfter(1000);
+                viParagraph.setSpacingAfter(200);
                 XWPFRun viRun = viParagraph.createRun();
                 viRun.setFontFamily("Book Antiqua");
                 viRun.setFontSize(18);
@@ -237,8 +234,8 @@ public class VolumeController {
                 // Increment lesson number
                 lessonNumber++;
                 
-                // Page break between volumes (only if not the last volume with content)
-                if (lessonNumber <= volumes.size()) {
+                // Page break between volumes (only if not the last volume)
+                if (i < volumesWithContent.size() - 1) {
                     XWPFParagraph pageBreakParagraph = document.createParagraph();
                     XWPFRun pageBreakRun = pageBreakParagraph.createRun();
                     pageBreakRun.addBreak(BreakType.PAGE);
@@ -272,23 +269,19 @@ public class VolumeController {
             
             List<VolumeDTO> allVolumes = volumeService.getVolumesByBookSlug(bookSlug);
             
-            // Filter volumes based on selected slugs
+            // Filter volumes based on selected slugs and only keep those with content
             List<VolumeDTO> selectedVolumes = allVolumes.stream()
                     .filter(v -> volumeSlugs.contains(v.getSlug()))
+                    .filter(v -> v.getContents() != null && !v.getContents().isEmpty())
                     .collect(Collectors.toList());
             
             XWPFDocument document = new XWPFDocument();
             
             // Add content from selected volumes
             int lessonNumber = 1;
-            for (VolumeDTO volume : selectedVolumes) {
-                // Use contents from VolumeDTO instead of calling service
+            for (int i = 0; i < selectedVolumes.size(); i++) {
+                VolumeDTO volume = selectedVolumes.get(i);
                 List<ContentDTO> contents = volume.getContents();
-                
-                // Skip volumes with no content
-                if (contents == null || contents.isEmpty()) {
-                    continue;
-                }
                 
                 // Add volume title with Lesson numbering
                 XWPFParagraph volumeTitleParagraph = document.createParagraph();
@@ -298,9 +291,7 @@ public class VolumeController {
                 volumeTitleRun.setFontFamily("Book Antiqua");
                 volumeTitleRun.setFontSize(25);
                 volumeTitleRun.setText("Lesson " + lessonNumber + ": " + volume.getEng());
-                
-                // Set line spacing for title
-                volumeTitleParagraph.setSpacingAfter(300);
+                volumeTitleParagraph.setSpacingAfter(200);
                 
                 // Build English paragraph
                 StringBuilder englishParagraph = new StringBuilder();
@@ -332,7 +323,6 @@ public class VolumeController {
                 XWPFParagraph engParagraph = document.createParagraph();
                 engParagraph.setAlignment(ParagraphAlignment.LEFT);
                 engParagraph.setSpacingBetween(1.5, LineSpacingRule.AUTO);
-                engParagraph.setSpacingAfter(1000);
                 XWPFRun engRun = engParagraph.createRun();
                 engRun.setFontFamily("Book Antiqua");
                 engRun.setFontSize(18);
@@ -342,7 +332,7 @@ public class VolumeController {
                 XWPFParagraph viParagraph = document.createParagraph();
                 viParagraph.setAlignment(ParagraphAlignment.LEFT);
                 viParagraph.setSpacingBetween(1.5, LineSpacingRule.AUTO);
-                viParagraph.setSpacingAfter(1000);
+                viParagraph.setSpacingAfter(200);
                 XWPFRun viRun = viParagraph.createRun();
                 viRun.setFontFamily("Book Antiqua");
                 viRun.setFontSize(18);
@@ -351,8 +341,8 @@ public class VolumeController {
                 // Increment lesson number
                 lessonNumber++;
                 
-                // Page break between volumes (only if not the last volume with content)
-                if (lessonNumber <= selectedVolumes.size()) {
+                // Page break between volumes (only if not the last volume)
+                if (i < selectedVolumes.size() - 1) {
                     XWPFParagraph pageBreakParagraph = document.createParagraph();
                     XWPFRun pageBreakRun = pageBreakParagraph.createRun();
                     pageBreakRun.addBreak(BreakType.PAGE);
@@ -476,23 +466,19 @@ public class VolumeController {
 
             List<VolumeDTO> allVolumes = volumeService.getVolumesByBookSlug(bookSlug);
 
-            // Filter volumes based on selected slugs
+            // Filter volumes based on selected slugs and only keep those with content
             List<VolumeDTO> selectedVolumes = allVolumes.stream()
                     .filter(v -> volumeSlugs.contains(v.getSlug()))
+                    .filter(v -> v.getContents() != null && !v.getContents().isEmpty())
                     .collect(Collectors.toList());
 
             XWPFDocument document = new XWPFDocument();
 
             // Add content from selected volumes (English only)
             int lessonNumber = 1;
-            for (VolumeDTO volume : selectedVolumes) {
-                // Use contents from VolumeDTO instead of calling service
+            for (int i = 0; i < selectedVolumes.size(); i++) {
+                VolumeDTO volume = selectedVolumes.get(i);
                 List<ContentDTO> contents = volume.getContents();
-
-                // Skip volumes with no content
-                if (contents == null || contents.isEmpty()) {
-                    continue;
-                }
 
                 // Add volume title with Lesson numbering
                 XWPFParagraph volumeTitleParagraph = document.createParagraph();
@@ -502,9 +488,6 @@ public class VolumeController {
                 volumeTitleRun.setFontFamily("Book Antiqua");
                 volumeTitleRun.setFontSize(25);
                 volumeTitleRun.setText("Lesson " + lessonNumber + ": " + volume.getEng());
-
-                // Set line spacing for title
-                volumeTitleParagraph.setSpacingAfter(300);
 
                 // Build English paragraph only
                 StringBuilder englishParagraph = new StringBuilder();
@@ -523,7 +506,6 @@ public class VolumeController {
                 XWPFParagraph engParagraph = document.createParagraph();
                 engParagraph.setAlignment(ParagraphAlignment.LEFT);
                 engParagraph.setSpacingBetween(1.5, LineSpacingRule.AUTO);
-                engParagraph.setSpacingAfter(1000);
                 XWPFRun engRun = engParagraph.createRun();
                 engRun.setFontFamily("Book Antiqua");
                 engRun.setFontSize(18);
@@ -532,8 +514,8 @@ public class VolumeController {
                 // Increment lesson number
                 lessonNumber++;
 
-                // Page break between volumes (only if not the last volume with content)
-                if (lessonNumber <= selectedVolumes.size()) {
+                // Page break between volumes (only if not the last volume)
+                if (i < selectedVolumes.size() - 1) {
                     XWPFParagraph pageBreakParagraph = document.createParagraph();
                     XWPFRun pageBreakRun = pageBreakParagraph.createRun();
                     pageBreakRun.addBreak(BreakType.PAGE);
