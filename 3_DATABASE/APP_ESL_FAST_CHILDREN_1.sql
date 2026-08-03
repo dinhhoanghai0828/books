@@ -795,7 +795,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She dips her paintbrush in the paint','Cô bé nhúng cọ vẽ vào màu','00:00:28.000','00:00:30.980','esl-fast-beginner-1-61'),
 	('She starts to draw','Cô bé bắt đầu vẽ','00:00:31.720','00:00:33.740','esl-fast-beginner-1-61'),
 
-	/* (UUID(),'esl-fast-beginner-1-62','Getting Ready for Soccer Practice','Chuẩn bị cho buổi tập bóng đá','BEGINNER_01_ESL_FAST_CHILDREN_062.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',62) */
+	/* (UUID(),'esl-fast-beginner-1-62','Getting Ready for Soccer Practice','Chuẩn bị cho buổi tập bóng đá','BEGINNER_01_ESL_FAST_CHILDREN_062.mp3',NULL,'00:00:00.000','00:00:27.000','esl-fast-children-1','YES',62) */
 	('She is getting ready for soccer practice','Cô bé đang chuẩn bị đi tập bóng đá','00:00:00.060','00:00:03.680','esl-fast-beginner-1-62'),
 	('She wears her uniform','Cô bé mặc đồng phục','00:00:04.000','00:00:06.240','esl-fast-beginner-1-62'),
 	('She gets a soccer ball','Cô bé lấy một quả bóng đá','00:00:06.940','00:00:09.080','esl-fast-beginner-1-62'),
@@ -808,14 +808,13 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 
 	/* (UUID(),'esl-fast-beginner-1-63','The Pouch of a Kangaroo','Túi của con chuột túi','BEGINNER_01_ESL_FAST_CHILDREN_063.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',63) */
 	('A kangaroo is an interesting animal','Chuột túi là một loài động vật rất thú vị','00:00:00.130','00:00:04.310','esl-fast-beginner-1-63'),
-	('It has a pouch','Nó có một chiếc túi trước bụng','00:00:04.990','00:00:06.830','esl-fast-beginner-1-63'),
+	('It has a pouch','Nó có một chiếc túi','00:00:04.990','00:00:06.830','esl-fast-beginner-1-63'),
 	('A kangaroo\'s baby goes into the pouch','Chuột túi con sẽ chui vào chiếc túi đó','00:00:07.490','00:00:11.830','esl-fast-beginner-1-63'),
 	('It is safe there','Ở đó rất an toàn','00:00:12.210','00:00:14.170','esl-fast-beginner-1-63'),
-	('James would like to have a pouch','James cũng muốn có một chiếc túi như vậy','00:00:14.870','00:00:17.390','esl-fast-beginner-1-63'),
-	('He would not put a baby in there','Cậu ấy sẽ không cho em bé vào trong đó','00:00:17.950','00:00:20.570','esl-fast-beginner-1-63'),
+	('James would like to have a pouch','James muốn có một chiếc túi như thế','00:00:14.870','00:00:17.390','esl-fast-beginner-1-63'),
+	('He would not put a baby in there','Cậu bé sẽ không cho em bé vào trong đó','00:00:17.950','00:00:20.570','esl-fast-beginner-1-63'),
 	('He would put food and video games inside','Cậu ấy sẽ bỏ đồ ăn và trò chơi điện tử vào trong','00:00:20.910','00:00:25.010','esl-fast-beginner-1-63'),
 	('People and kangaroos are different','Con người và chuột túi rất khác nhau','00:00:25.770','00:00:28.970','esl-fast-beginner-1-63'),
-	('I would like to have a pouch','Tôi cũng muốn có một chiếc túi như vậy','00:00:30.130','00:00:30.970','esl-fast-beginner-1-63'),
 
 	/* (UUID(),'esl-fast-beginner-1-64','Aunt and Uncle','Dì và chú','BEGINNER_01_ESL_FAST_CHILDREN_064.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',64) */
 	('He visits his aunt and uncle','Cậu bé đến thăm cô và chú của mình','00:00:00.130','00:00:03.390','esl-fast-beginner-1-64'),

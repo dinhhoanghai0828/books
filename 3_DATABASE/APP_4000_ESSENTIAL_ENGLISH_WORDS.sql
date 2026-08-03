@@ -5617,7 +5617,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He made a torch and followed the prints','Cậu làm một ngọn đuốc rồi lần theo dấu vết','','','4000-essential-english-words-164'),
 	('He heard a twig snap very close ahead, but he bravely went on','Cậu nghe thấy tiếng gãy răng rắc của cành cây rất gần trên đầu, nhưng cậu vẫn can đảm bước tiếp','','','4000-essential-english-words-164'),
 	('Seconds later, he discovered what had scared him','Vào giây sau, cậu phát hiện ra thứ đã khiến cậu sợ hãi','','','4000-essential-english-words-164'),
-	('It was only a kangaroo','Đó chỉ là một con kangaroo','','','4000-essential-english-words-164'),
+	('It was only a kangaroo','Đó chỉ là một con chuột túi','','','4000-essential-english-words-164'),
 	('Tom went back to his camp and slept','Rồi Tom trở về trại của mình và ngủ','','','4000-essential-english-words-164'),
 	('In the morning, he found his squad','Sáng hôm sau, cậu ta tìm thấy được đội của mình','','','4000-essential-english-words-164'),
 	('He had finally learned courage','Cuối cùng cậu đã học được sự can đảm','','','4000-essential-english-words-164'),
