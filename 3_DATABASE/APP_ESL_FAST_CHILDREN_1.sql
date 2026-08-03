@@ -784,13 +784,13 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'esl-fast-beginner-1-61','Art Class','Giờ học mỹ thuật','BEGINNER_01_ESL_FAST_CHILDREN_061.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',61) */
+	/* (UUID(),'esl-fast-beginner-1-61','Art Class','Giờ học mỹ thuật','BEGINNER_01_ESL_FAST_CHILDREN_061.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-children-1','YES',61) */
 	('She goes to her art class','Cô bé đến lớp học vẽ','00:00:00.260','00:00:03.359','esl-fast-beginner-1-61'),
 	('She wears a special white coat','Cô bé mặc một chiếc áo choàng trắng chuyên dụng','00:00:03.780','00:00:06.680','esl-fast-beginner-1-61'),
-	('Now, her inside clothes will be clean','Giờ thì quần áo bên trong của cô bé sẽ không bị bẩn','00:00:07.320','00:00:11.580','esl-fast-beginner-1-61'),
-	('She is going to draw a sunflower','Cô bé sắp vẽ một bông hoa hướng dương','00:00:12.360','00:00:15.200','esl-fast-beginner-1-61'),
+	('Now, her inside clothes will be clean','Giờ thì quần áo bên trong của cô bé sẽ rất sạch sẽ','00:00:07.320','00:00:11.580','esl-fast-beginner-1-61'),
+	('She is going to draw a sunflower','Cô bé định vẽ một bông hoa hướng dương','00:00:12.360','00:00:15.600','esl-fast-beginner-1-61'),
 	('She gets a paintbrush','Cô bé lấy một cây cọ vẽ','00:00:16.000','00:00:18.420','esl-fast-beginner-1-61'),
-	('She gets green, yellow, and brown paint','Cô bé lấy màu xanh lá, màu vàng và màu nâu','00:00:19.020','00:00:23.700','esl-fast-beginner-1-61'),
+	('She gets green, yellow, and brown paint','Cô bé lấy nước sơn màu xanh lá, màu vàng và màu nâu','00:00:19.020','00:00:23.700','esl-fast-beginner-1-61'),
 	('She gets a white piece of paper','Cô bé lấy một tờ giấy trắng','00:00:23.900','00:00:27.500','esl-fast-beginner-1-61'),
 	('She dips her paintbrush in the paint','Cô bé nhúng cọ vẽ vào màu','00:00:28.000','00:00:30.980','esl-fast-beginner-1-61'),
 	('She starts to draw','Cô bé bắt đầu vẽ','00:00:31.720','00:00:33.740','esl-fast-beginner-1-61'),
@@ -802,8 +802,8 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Her mom drives her to the soccer field','Mẹ chở cô bé đến sân bóng đá','00:00:09.560','00:00:12.420','esl-fast-beginner-1-62'),
 	('She gets out of the car','Cô bé bước xuống xe','00:00:12.720','00:00:15.120','esl-fast-beginner-1-62'),
 	('She says hi to all her teammates','Cô bé chào tất cả đồng đội','00:00:15.800','00:00:19.180','esl-fast-beginner-1-62'),
-	('They stretch','Cả đội khởi động giãn cơ','00:00:19.700','00:00:21.160','esl-fast-beginner-1-62'),
-	('They put their legs together','Họ khép hai chân lại','00:00:21.600','00:00:23.700','esl-fast-beginner-1-62'),
+	('They stretch','Bọn họ đang giãn cơ','00:00:19.700','00:00:21.160','esl-fast-beginner-1-62'),
+	('They put their legs together','Họ khép hai chân lại cùng nhau','00:00:21.600','00:00:23.700','esl-fast-beginner-1-62'),
 	('They reach their toes with their hands','Họ dùng tay chạm vào các ngón chân','00:00:24.240','00:00:27.200','esl-fast-beginner-1-62'),
 
 	/* (UUID(),'esl-fast-beginner-1-63','The Pouch of a Kangaroo','Túi của con chuột túi','BEGINNER_01_ESL_FAST_CHILDREN_063.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',63) */

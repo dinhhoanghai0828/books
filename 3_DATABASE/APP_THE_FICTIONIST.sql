@@ -907,7 +907,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('See that bright star over there?','Ngươi thấy ngôi sao sáng kia không?','00:01:10.310','00:01:11.990','the-fictionist-26'),
 	('Long ago, it was the light of a wise woman who guided her people through dark times','Ngày xưa, nó là ánh sáng của một người phụ nữ trí tuệ, người đã dẫn dắt dân làng vượt qua những thời khắc tối tăm','00:01:12.910','00:01:17.390','the-fictionist-26'),
 	('Her kindness and strength still shine, offering comfort to those who feel lost','Lòng tốt và sức mạnh của bà vẫn tỏa sáng, mang đến sự an ủi cho những ai cảm thấy lạc lối','00:01:18.230','00:01:22.810','the-fictionist-26'),
-	('And over there, that soft, flickering star?','Và kia, ngôi sao mềm mại, lung linh kia?','00:01:23.630','00:01:26.450','the-fictionist-26'),
+	('And over there, that soft, flickering star?','Còn ở đằng kia, ngôi sao mờ ảo đang chớp sáng kia thì sao?','00:01:23.630','00:01:26.450','the-fictionist-26'),
 	('That was a young healer who found peace in helping others','Đó là một thầy thuốc trẻ đã tìm thấy sự bình yên trong việc giúp đỡ người khác','00:01:27.130','00:01:30.610','the-fictionist-26'),
 	('Even now, his light reaches down, soothing those who need it most','Ngay cả bây giờ, ánh sáng của anh ta vẫn tỏa xuống, xoa dịu những ai cần nhất','00:01:31.630','00:01:35.450','the-fictionist-26'),
 	('As the sky shared these tales, Arun felt warmth fill his heart','Khi bầu trời chia sẻ những câu chuyện này, Arun cảm thấy ấm áp lan tỏa trong trái tim mình','00:01:36.410','00:01:40.250','the-fictionist-26'),

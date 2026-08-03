@@ -5889,12 +5889,12 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Alex and Timothy, signing off','Alex và Timothy, kết thúc','00:14:49.030','00:14:50.890','your-animated-story-show-19'),
 
 	/* (UUID(),'your-animated-story-show-20','An annoying handsome dormmate? I can deal with it','Bạn Cùng Ký Túc Xá Đẹp Trai Nhưng Phiền Phức? Tôi Có Thể Xử Lý Được','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_020.mp3',NULL,'00:00:00.120','00:13:16.140','your-animated-story-show','NO',20) */
-	('It was the middle of the night, when flickering lights and clattering sounds awoke me from the most wonderful dream','Giữa đêm, những ánh đèn chập chờn và âm thanh lạ đánh thức tôi khỏi giấc mơ tuyệt vời nhất','00:00:00.360','00:00:06.400','your-animated-story-show-20'),
-	('Through bleary eyes, I saw my frantic parents peering over me','Qua đôi mắt mờ, tôi thấy cha mẹ tôi lo lắng nhìn tôi','00:00:06.700','00:00:09.860','your-animated-story-show-20'),
+	('It was the middle of the night, when flickering lights and clattering sounds awoke me from the most wonderful dream','Giữa đêm, những ánh đèn chập chờn và âm thanh lạ đánh thức tôi khỏi giấc mơ tuyệt vời nhất','00:00:00.100','00:00:06.350','your-animated-story-show-20'),
+	('Through bleary eyes, I saw my frantic parents peering over me','Qua đôi mắt mờ, tôi thấy cha mẹ tôi lo lắng nhìn tôi','00:00:06.600','00:00:09.860','your-animated-story-show-20'),
 	('Sweetie, you have to leave England right now','Cưng à, con phải rời khỏi Anh ngay bây giờ','00:00:10.080','00:00:12.240','your-animated-story-show-20'),
 	('We\'ve received a death threat','Chúng tôi đã nhận được một lời đe dọa giết người','00:00:12.420','00:00:13.680','your-animated-story-show-20'),
 	('Death threat?','Lời đe dọa giết người?','00:00:14.200','00:00:14.980','your-animated-story-show-20'),
-	('What happened?','Chuyện gì đã xảy ra?','00:00:15.300','00:00:16.180','your-animated-story-show-20'),
+	('What happened?','Chuyện gì đã xảy ra?','00:00:15.000','00:00:16.180','your-animated-story-show-20'),
 	('Hurry up and pack your things','Nhanh lên và thu dọn đồ đạc của con','00:00:16.480','00:00:17.480','your-animated-story-show-20'),
 	('We don\'t have much time','Chúng ta không còn nhiều thời gian','00:00:17.740','00:00:18.700','your-animated-story-show-20'),
 	('But where am I going?','Nhưng con sẽ đi đâu?','00:00:19.000','00:00:20.100','your-animated-story-show-20'),
