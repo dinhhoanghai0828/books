@@ -364,6 +364,18 @@ export const getHighLightWords = async (
   }
 };
 
+// Gui danh sach contents va tra ve cac tu chua co nghia can highlight
+export const getMissingWordsFromContents = async (
+    contents: ContentType[]
+): Promise<Record<string, string[]>> => {
+  try {
+    const response = await apiClient.post('/content/missing-words', contents);
+    return response.data;
+  } catch (error: any) {
+    throw new Error(getErrorMessage(error));
+  }
+};
+
 // Lay nghia cua tu/cum tu khi nguoi dung boi chon (dung cho tooltip tra nghia)
 export const getMeaningWords = async (
     eng: string | null,

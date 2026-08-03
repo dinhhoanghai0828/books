@@ -1,6 +1,7 @@
 package books.service.impl;
 
 import books.dao.interfaces.ContentAdapter;
+import books.dao.interfaces.WordAdapter;
 import books.dto.ContentDTO;
 import books.entity.Content;
 import books.service.interfaces.ContentService;
@@ -8,18 +9,19 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
 public class ContentServiceImpl implements ContentService {
     private ContentAdapter contentAdapter;
+    private WordAdapter wordAdapter;
     private ModelMapper modelMapper;
 
     @Autowired
-    public ContentServiceImpl(ContentAdapter contentAdapter, ModelMapper modelMapper) {
+    public ContentServiceImpl(ContentAdapter contentAdapter, WordAdapter wordAdapter, ModelMapper modelMapper) {
         this.contentAdapter = contentAdapter;
+        this.wordAdapter = wordAdapter;
         this.modelMapper = modelMapper;
     }
 
@@ -48,5 +50,55 @@ public class ContentServiceImpl implements ContentService {
     @Override
     public boolean updateContent(Long id, String eng, String vi, String startTime, String endTime) throws Exception {
         return contentAdapter.updateContent(id, eng, vi, startTime, endTime);
+    }
+
+    @Override
+    public Map<String, List<String>> getMissingWords(List<ContentDTO> contents) throws Exception {
+        Map<String, List<String>> result = new HashMap<>();
+        
+        // Collect all unique words from all contents
+        Set<String> allWords = new HashSet<>();
+        for (ContentDTO content : contents) {
+            if (content.getEng() != null) {
+                String[] words = content.getEng().split("\\s+");
+                for (String word : words) {
+                    String cleanWord = word.replaceAll("[.,?!\"';]", "").toLowerCase();
+                    if (!cleanWord.isEmpty()) {
+                        allWords.add(cleanWord);
+                    }
+                }
+            }
+        }
+        
+        // Check which words exist in dictionary
+        Set<String> wordsInDictionary = new HashSet<>();
+        for (String word : allWords) {
+            try {
+                List<books.entity.Word> foundWords = wordAdapter.getEngWords(word);
+                if (!foundWords.isEmpty()) {
+                    wordsInDictionary.add(word.toLowerCase());
+                }
+            } catch (Exception e) {
+                // If check fails, assume word is not in dictionary
+                continue;
+            }
+        }
+        
+        // For each content, find words NOT in dictionary (words that need highlighting)
+        for (ContentDTO content : contents) {
+            List<String> missingWords = new ArrayList<>();
+            if (content.getEng() != null) {
+                String[] words = content.getEng().split("\\s+");
+                for (String word : words) {
+                    String cleanWord = word.replaceAll("[.,?!\"';]", "").toLowerCase();
+                    if (!cleanWord.isEmpty() && !wordsInDictionary.contains(cleanWord)) {
+                        missingWords.add(cleanWord);
+                    }
+                }
+            }
+            result.put(String.valueOf(content.getId()), missingWords);
+        }
+        
+        return result;
     }
 }

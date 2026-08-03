@@ -77,4 +77,14 @@ public class ContentController {
             return new ResponseEntity<>(new BaseResponse("99", "failed"), HttpStatus.OK);
         }
     }
+
+    @PostMapping("/missing-words")
+    public ResponseEntity<?> getMissingWords(@RequestBody List<ContentDTO> contents) {
+        try {
+            Map<String, List<String>> missingWordsMap = contentService.getMissingWords(contents);
+            return new ResponseEntity<>(missingWordsMap, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+    }
 }

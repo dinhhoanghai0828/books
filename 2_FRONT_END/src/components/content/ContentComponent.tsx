@@ -1,6 +1,6 @@
 import { ContentType } from '@/interfaces/content';
 import { Volume } from '@/interfaces/volume';
-import { getMeaningWords, insertWord, updateContent, downloadSingleVolumeWord } from '@/utils/apiService';
+import { getMeaningWords, insertWord, updateContent, downloadSingleVolumeWord, getMissingWordsFromContents } from '@/utils/apiService';
 import { MinusCircleOutlined, PlusOutlined, SoundOutlined, FileWordOutlined } from '@ant-design/icons';
 import { Button, Form, Input, Modal, notification, Space, Select, Switch } from 'antd';
 import debounce from 'lodash.debounce';
@@ -69,6 +69,9 @@ const ContentComponent = ({
 }: ContentComponentProps) => {
   const router = useRouter();
   const { eng: volumeEngName = '', vi: volumeViName = '' } = volume || {};
+
+  // Local state for contents with missingWords populated
+  const [contentsWithMissingWords, setContentsWithMissingWords] = useState<ContentType[]>(contents);
 
   // Đường dẫn video dùng chung
   const sharedVideoPath = contents?.find((item) => item.video)?.video ?? null;
@@ -236,6 +239,32 @@ const ContentComponent = ({
     });
     setPlayStates(play);
     setLoopStates(loop);
+  }, [contents]);
+
+  // Fetch missing words for highlighting
+  useEffect(() => {
+    const fetchMissingWords = async () => {
+      if (!contents || contents.length === 0) return;
+
+      try {
+        // Send entire contents array to backend
+        const missingWordsMap = await getMissingWordsFromContents(contents);
+        
+        // Update contents with missing words returned from backend
+        const updatedContents = contents.map(item => {
+          const missingWords = missingWordsMap[String(item.id)] || [];
+          return { ...item, missingWords };
+        });
+        
+        setContentsWithMissingWords(updatedContents);
+      } catch (error) {
+        console.error('Error fetching missing words:', error);
+        // If fetch fails, use original contents
+        setContentsWithMissingWords(contents);
+      }
+    };
+
+    fetchMissingWords();
   }, [contents]);
 
   // Load available voices for text-to-speech
@@ -810,7 +839,7 @@ const ContentComponent = ({
         return (
           <VideoLayout
             {...commonItemProps}
-            contents={contents}
+            contents={contentsWithMissingWords}
             videoPath={sharedVideoPath}
             volumeEngName={volumeEngName}
             volumeViName={volumeViName}
@@ -836,7 +865,7 @@ const ContentComponent = ({
   const renderAudioLayout = () => (
     <AudioLayout
       {...commonItemProps}
-      contents={contents}
+      contents={contentsWithMissingWords}
       volumeEngName={volumeEngName}
       volumeViName={volumeViName}
       playStates={playStates}
