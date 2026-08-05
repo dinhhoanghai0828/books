@@ -125,7 +125,7 @@ public class VolumeController {
                 XWPFParagraph contentParagraph = document.createParagraph();
                 contentParagraph.setAlignment(ParagraphAlignment.LEFT);
                 XWPFRun contentRun = contentParagraph.createRun();
-                contentRun.setFontFamily("Times New Roman");
+                contentRun.setFontFamily("Book Antiqua");
                 contentRun.setFontSize(20);
                 contentRun.setText(content.getEng());
                 
@@ -220,17 +220,17 @@ public class VolumeController {
                 engRun.setFontFamily("Book Antiqua");
                 engRun.setFontSize(18);
                 engRun.setText(englishParagraph.toString());
-                
+
                 // Add Vietnamese paragraph with 1.5 line spacing
                 XWPFParagraph viParagraph = document.createParagraph();
                 viParagraph.setAlignment(ParagraphAlignment.LEFT);
                 viParagraph.setSpacingBetween(1.5, LineSpacingRule.AUTO);
                 viParagraph.setSpacingAfter(120);
                 XWPFRun viRun = viParagraph.createRun();
-                viRun.setFontFamily("Book Antiqua");
+                viRun.setFontFamily("Times New Roman");
                 viRun.setFontSize(18);
                 viRun.setText(vietnameseParagraph.toString());
-                
+
                 // Increment lesson number
                 lessonNumber++;
                 
@@ -328,17 +328,17 @@ public class VolumeController {
                 engRun.setFontFamily("Book Antiqua");
                 engRun.setFontSize(18);
                 engRun.setText(englishParagraph.toString());
-                
+
                 // Add Vietnamese paragraph with 1.5 line spacing
                 XWPFParagraph viParagraph = document.createParagraph();
                 viParagraph.setAlignment(ParagraphAlignment.LEFT);
                 viParagraph.setSpacingBetween(1.5, LineSpacingRule.AUTO);
                 viParagraph.setSpacingAfter(120);
                 XWPFRun viRun = viParagraph.createRun();
-                viRun.setFontFamily("Book Antiqua");
+                viRun.setFontFamily("Times New Roman");
                 viRun.setFontSize(18);
                 viRun.setText(vietnameseParagraph.toString());
-                
+
                 // Increment lesson number
                 lessonNumber++;
                 
@@ -429,14 +429,14 @@ public class VolumeController {
             engRun.setFontFamily("Book Antiqua");
             engRun.setFontSize(18);
             engRun.setText(englishParagraph.toString());
-            
+
             // Add Vietnamese paragraph with 1.5 line spacing
             XWPFParagraph viParagraph = document.createParagraph();
             viParagraph.setAlignment(ParagraphAlignment.LEFT);
             viParagraph.setSpacingBetween(1.5, LineSpacingRule.AUTO);
             viParagraph.setSpacingAfter(120);
             XWPFRun viRun = viParagraph.createRun();
-            viRun.setFontFamily("Book Antiqua");
+            viRun.setFontFamily("Times New Roman");
             viRun.setFontSize(18);
             viRun.setText(vietnameseParagraph.toString());
             
