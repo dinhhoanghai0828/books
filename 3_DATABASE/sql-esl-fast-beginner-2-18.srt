@@ -1,0 +1,43 @@
+1
+00:00:00,010 --> 00:00:01,930
+(Được chép bởi TurboScribe. Nâng cấp lên Không giới hạn để gỡ bỏ thông báo này.) He is hungry.
+
+2
+00:00:02,430 --> 00:00:05,250
+He smells something good.
+
+3
+00:00:05,810 --> 00:00:08,230
+It is coming from the kitchen.
+
+4
+00:00:09,690 --> 00:00:11,690
+He leaves the living room.
+
+5
+00:00:12,410 --> 00:00:14,210
+He goes to the kitchen.
+
+6
+00:00:15,170 --> 00:00:17,830
+He sees a plate of chicken.
+
+7
+00:00:18,710 --> 00:00:20,070
+It is hot.
+
+8
+00:00:21,110 --> 00:00:23,530
+He gets a fork and a knife.
+
+9
+00:00:24,090 --> 00:00:26,510
+He cuts a piece of chicken.
+
+10
+00:00:27,490 --> 00:00:29,910
+He sticks the fork in it.
+
+11
+00:00:30,010 --> 00:00:32,210
+He eats the chicken.
