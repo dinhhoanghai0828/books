@@ -14252,6 +14252,7 @@ INSERT INTO `WORDS` (`ENG`,`VI`) VALUES
 	('unheard of','chưa từng xảy ra'),
 	('UNICEF','Quỹ Nhi đồng Liên Hợp Quốc'),
 	('uniform','đồng phục'),
+	('uniforms','đồng phục'),
 	('union','liên minh'),
 	('unique','có một không hai'),
 	('unique','duy nhất'),
