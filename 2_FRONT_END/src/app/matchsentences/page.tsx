@@ -8,6 +8,8 @@ import {
   LinkOutlined,
   TranslationOutlined,
   SoundOutlined,
+  PlayCircleOutlined,
+  PauseOutlined,
 } from '@ant-design/icons';
 import { Button, Modal, Spin, Typography, message, Select, Switch } from 'antd';
 import { useRouter, useSearchParams } from 'next/navigation';
@@ -48,6 +50,23 @@ const DEFAULT_LIMIT = '20';
 
 const shuffleArray = <T,>(arr: T[]): T[] => [...arr].sort(() => Math.random() - 0.5);
 
+// Chuyen doi thoi gian tu format HH:MM:SS.mmm sang milliseconds
+const parseTimeToMs = (timeStr: string): number => {
+  if (!timeStr) return 0;
+  
+  // Format: HH:MM:SS.mmm
+  const parts = timeStr.split(':');
+  if (parts.length !== 3) return 0;
+  
+  const hours = parseInt(parts[0], 10) || 0;
+  const minutes = parseInt(parts[1], 10) || 0;
+  const secondsParts = parts[2].split('.');
+  const seconds = parseInt(secondsParts[0], 10) || 0;
+  const milliseconds = secondsParts.length > 1 ? parseInt(secondsParts[1], 10) || 0 : 0;
+  
+  return (hours * 3600 + minutes * 60 + seconds) * 1000 + milliseconds;
+};
+
 // ============================================================
 // COMPONENT
 // ============================================================
@@ -78,6 +97,7 @@ const MatchSentencesPage = () => {
   const [selectedLinePath, setSelectedLinePath] = useState<string>('');
   const [matchedLinePaths, setMatchedLinePaths] = useState<Array<{ enId: string; viId: string; path: string; color: string }>>([]);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [playingAudioId, setPlayingAudioId] = useState<string | null>(null);
 
   // State for word meaning tooltip
   const [meaningEnKeywords, setMeaningEnKeywords] = useState<string[]>([]);
@@ -235,7 +255,7 @@ const MatchSentencesPage = () => {
     });
   };
 
-  const handlePlayAudio = (audioUrl: string, startTime: number, endTime: number) => {
+  const handlePlayAudio = (audioUrl: string, startTime: string, endTime: string, itemId: string) => {
     if (!audioUrl) {
       message.warning('Không có file audio cho câu này');
       return;
@@ -247,24 +267,37 @@ const MatchSentencesPage = () => {
       formattedAudioUrl = `/media/${audioUrl}`;
     }
 
+    // Check if this audio is already playing
+    if (playingAudioId === itemId && audioRef.current) {
+      // Pause the audio
+      audioRef.current.pause();
+      audioRef.current = null;
+      setPlayingAudioId(null);
+      return;
+    }
+
+    // Stop any currently playing audio
     if (audioRef.current) {
       audioRef.current.pause();
       audioRef.current = null;
     }
+    setPlayingAudioId(null);
     
     try {
       const audio = new Audio(formattedAudioUrl);
       audioRef.current = audio;
       
-      // Validate and set start time
-      const validStartTime = Number(startTime) || 0;
-      const validEndTime = Number(endTime) || 0;
+      // Parse time strings to milliseconds
+      const validStartTime = parseTimeToMs(startTime);
+      const validEndTime = parseTimeToMs(endTime);
       
       const handleTimeUpdate = () => {
         const currentTime = audio.currentTime * 1000;
         if (isFinite(validEndTime) && validEndTime > 0 && currentTime >= validEndTime) {
           audio.pause();
           audio.removeEventListener('timeupdate', handleTimeUpdate);
+          audioRef.current = null;
+          setPlayingAudioId(null);
         }
       };
       
@@ -273,23 +306,37 @@ const MatchSentencesPage = () => {
         message.error('Không thể phát audio. File có thể không tồn tại hoặc định dạng không được hỗ trợ.');
         audio.removeEventListener('error', handleError);
         audio.removeEventListener('timeupdate', handleTimeUpdate);
+        audioRef.current = null;
+        setPlayingAudioId(null);
+      };
+      
+      const handleEnded = () => {
+        audioRef.current = null;
+        setPlayingAudioId(null);
+        audio.removeEventListener('ended', handleEnded);
       };
       
       audio.addEventListener('timeupdate', handleTimeUpdate);
       audio.addEventListener('error', handleError);
+      audio.addEventListener('ended', handleEnded);
       
       // Set start time before playing
       if (isFinite(validStartTime) && validStartTime > 0) {
         audio.currentTime = validStartTime / 1000;
       }
       
+      setPlayingAudioId(itemId);
+      
       audio.play().catch(err => {
         console.error('Error playing audio:', err);
         message.error('Không thể phát audio. Vui lòng thử lại sau.');
+        audioRef.current = null;
+        setPlayingAudioId(null);
       });
     } catch (err) {
       console.error('Error creating audio:', err);
       message.error('Lỗi khi khởi tạo audio.');
+      setPlayingAudioId(null);
     }
   };
 
@@ -719,15 +766,16 @@ const MatchSentencesPage = () => {
                     >{item.eng}</Text>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                       {item.audio && (
-                        <SoundOutlined
+                        <Button
+                          type="link"
+                          icon={playingAudioId === item.id ? <PauseOutlined style={{ color: '#1677ff' }} /> : <PlayCircleOutlined />}
                           onClick={(e) => {
                             e.stopPropagation();
-                            handlePlayAudio(item.audio, Number(item.startTime || 0), Number(item.endTime || 0));
+                            handlePlayAudio(item.audio, item.startTime || '0', item.endTime || '0', item.id);
                           }}
                           style={{ 
-                            cursor: 'pointer', 
-                            color: '#1890ff',
-                            fontSize: 16,
+                            padding: 0,
+                            height: 'auto',
                           }}
                         />
                       )}
@@ -820,22 +868,38 @@ const MatchSentencesPage = () => {
                       onMouseUp={(e) => { e.stopPropagation(); }}
                       onTouchEnd={(e) => { e.stopPropagation(); }}
                     >{item.vi}</Text>
-                    {isMatched && match && (
-                      <div style={{
-                        backgroundColor: isCorrect === true ? '#52c41a' : isCorrect === false ? '#ff4d4f' : '#1890ff',
-                        color: '#fff',
-                        borderRadius: '50%',
-                        width: 28,
-                        height: 28,
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        fontWeight: 'bold',
-                        fontSize: 14,
-                      }}>
-                        {match.matchNumber}
-                      </div>
-                    )}
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                      {item.audio && (
+                        <Button
+                          type="link"
+                          icon={playingAudioId === item.id ? <PauseOutlined style={{ color: '#1677ff' }} /> : <PlayCircleOutlined />}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handlePlayAudio(item.audio, item.startTime || '0', item.endTime || '0', item.id);
+                          }}
+                          style={{ 
+                            padding: 0,
+                            height: 'auto',
+                          }}
+                        />
+                      )}
+                      {isMatched && match && (
+                        <div style={{
+                          backgroundColor: isCorrect === true ? '#52c41a' : isCorrect === false ? '#ff4d4f' : '#1890ff',
+                          color: '#fff',
+                          borderRadius: '50%',
+                          width: 28,
+                          height: 28,
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          fontWeight: 'bold',
+                          fontSize: 14,
+                        }}>
+                          {match.matchNumber}
+                        </div>
+                      )}
+                    </div>
                   </div>
                   {isChecked && isCorrect !== undefined && (
                     <span style={{ float: 'right', fontSize: 18 }}>
