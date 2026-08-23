@@ -1,6 +1,6 @@
 'use client';
 import { ContentType } from '@/interfaces/content';
-import { getTests } from '@/utils/apiService';
+import { getTests, getMeaningWords } from '@/utils/apiService';
 import {
   CheckCircleOutlined,
   CloseCircleOutlined,
@@ -9,12 +9,37 @@ import {
   TranslationOutlined,
   SoundOutlined,
 } from '@ant-design/icons';
-import { Button, Modal, Spin, Typography, message } from 'antd';
+import { Button, Modal, Spin, Typography, message, Select, Switch } from 'antd';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { Suspense, useEffect, useState, useRef } from 'react';
+import { Suspense, useEffect, useState, useRef, useMemo, useCallback } from 'react';
+import { createPortal } from 'react-dom';
+import debounce from 'lodash.debounce';
 import '../../styles/global.css';
 
 const { Text } = Typography;
+
+const TOOLTIP_STYLE: React.CSSProperties = {
+  position: 'fixed',
+  backgroundColor: '#1d1d2e',
+  color: 'white',
+  padding: '10px 14px',
+  borderRadius: 10,
+  boxShadow: '0 4px 16px rgba(0,0,0,0.22)',
+  zIndex: 10000,
+  maxWidth: 360,
+  wordWrap: 'break-word',
+  fontSize: 14,
+  lineHeight: '1.85',
+  pointerEvents: 'auto',
+  borderLeft: '4px solid #108ee9',
+};
+
+const TOOLTIP_BODY_STYLE: React.CSSProperties = {
+  maxHeight: '60vh',
+  overflowY: 'auto',
+  overflowX: 'hidden',
+  pointerEvents: 'auto',
+};
 
 // So cau hoi mac dinh moi lan kiem tra
 const DEFAULT_LIMIT = '20';
@@ -53,6 +78,74 @@ const MatchSentencesPage = () => {
   const [selectedLinePath, setSelectedLinePath] = useState<string>('');
   const [matchedLinePaths, setMatchedLinePaths] = useState<Array<{ enId: string; viId: string; path: string; color: string }>>([]);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  // State for word meaning tooltip
+  const [meaningEnKeywords, setMeaningEnKeywords] = useState<string[]>([]);
+  const [meaningViKeywords, setMeaningViKeywords] = useState<string[]>([]);
+  const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
+  const [selectedText, setSelectedText] = useState('');
+  const [availableVoices, setAvailableVoices] = useState<SpeechSynthesisVoice[]>([]);
+  const [selectedVoice, setSelectedVoice] = useState('');
+  const [autoRead, setAutoRead] = useState(true);
+  const meaningEnRef = useRef<string[]>([]);
+  const meaningViRef = useRef<string[]>([]);
+  meaningEnRef.current = meaningEnKeywords;
+  meaningViRef.current = meaningViKeywords;
+
+  // Load available voices for TTS
+  useEffect(() => {
+    if ('speechSynthesis' in window) {
+      const loadVoices = () => {
+        const voices = window.speechSynthesis.getVoices();
+        setAvailableVoices(voices);
+        // Select default English voice
+        const enVoice = voices.find(v => v.lang.startsWith('en'));
+        if (enVoice) {
+          setSelectedVoice(enVoice.name);
+        }
+      };
+      
+      loadVoices();
+      window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+  }, []);
+
+  // Text-to-speech function
+  const speakText = useCallback((text: string) => {
+    if (!text || text.trim().length === 0) {
+      return;
+    }
+
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+
+      const cleanedText = text
+        .replace(/\s+/g, ' ')
+        .replace(/[\u200B-\u200D\uFEFF]/g, '')
+        .trim();
+
+      try {
+        const utterance = new SpeechSynthesisUtterance(cleanedText);
+        utterance.rate = 1.0;
+        utterance.lang = /^[a-zA-Z ]+$/.test(cleanedText) ? 'en-US' : 'vi-VN';
+
+        if (selectedVoice) {
+          const voice = availableVoices.find(v => v.name === selectedVoice);
+          if (voice) {
+            utterance.voice = voice;
+          }
+        }
+
+        utterance.onerror = (event) => {
+          console.error('TTS Error:', event.error);
+        };
+
+        window.speechSynthesis.speak(utterance);
+      } catch (error) {
+        console.error('TTS Exception:', error);
+      }
+    }
+  }, [selectedVoice, availableVoices]);
 
   // ============================================================
   // DATA FETCHING
@@ -165,13 +258,10 @@ const MatchSentencesPage = () => {
       
       // Validate and set start time
       const validStartTime = Number(startTime) || 0;
-      if (isFinite(validStartTime)) {
-        audio.currentTime = validStartTime / 1000;
-      }
+      const validEndTime = Number(endTime) || 0;
       
       const handleTimeUpdate = () => {
         const currentTime = audio.currentTime * 1000;
-        const validEndTime = Number(endTime) || 0;
         if (isFinite(validEndTime) && validEndTime > 0 && currentTime >= validEndTime) {
           audio.pause();
           audio.removeEventListener('timeupdate', handleTimeUpdate);
@@ -188,6 +278,11 @@ const MatchSentencesPage = () => {
       audio.addEventListener('timeupdate', handleTimeUpdate);
       audio.addEventListener('error', handleError);
       
+      // Set start time before playing
+      if (isFinite(validStartTime) && validStartTime > 0) {
+        audio.currentTime = validStartTime / 1000;
+      }
+      
       audio.play().catch(err => {
         console.error('Error playing audio:', err);
         message.error('Không thể phát audio. Vui lòng thử lại sau.');
@@ -197,6 +292,196 @@ const MatchSentencesPage = () => {
       message.error('Lỗi khi khởi tạo audio.');
     }
   };
+
+  // ============================================================
+  // WORD MEANING HANDLER
+  // ============================================================
+
+  const handleGetMeaning = useMemo(
+    () =>
+      debounce(async () => {
+        try {
+          const selection = window.getSelection();
+          const searchValue = selection?.toString().trim();
+          if (!searchValue) {
+            setMeaningEnKeywords([]);
+            setMeaningViKeywords([]);
+            setSelectedText('');
+            return;
+          }
+
+          setSelectedText(searchValue);
+
+          const alreadyShown =
+            searchValue === meaningEnRef.current.join(' ') ||
+            searchValue === meaningViRef.current.join(' ');
+          if (alreadyShown) return;
+
+          const isEng = /^[a-zA-Z ]+$/.test(searchValue);
+          const res = isEng
+            ? await getMeaningWords(searchValue, null)
+            : await getMeaningWords(null, searchValue);
+
+          if (res.length > 0) {
+            setMeaningEnKeywords(res.map((w) => w.eng));
+            setMeaningViKeywords(res.map((w) => w.vi));
+          } else {
+            setMeaningEnKeywords([]);
+            setMeaningViKeywords([]);
+          }
+
+          if (selection?.rangeCount) {
+            const rect = selection.getRangeAt(0).getBoundingClientRect();
+            setTooltipPosition({
+              x: Math.min(rect.left, window.innerWidth - 380),
+              y: rect.bottom + 8,
+            });
+          }
+
+          // Auto-read if enabled
+          if (autoRead) {
+            speakText(searchValue);
+          }
+        } catch (e) {
+          console.error(e);
+        }
+      }, 300),
+    [autoRead, selectedVoice, speakText]
+  );
+
+  useEffect(() => {
+    document.addEventListener('selectionchange', handleGetMeaning);
+    return () => {
+      document.removeEventListener('selectionchange', handleGetMeaning);
+      handleGetMeaning.cancel();
+    };
+  }, [handleGetMeaning]);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      const tooltip = document.querySelector('[style*="position: fixed"][style*="z-index: 10000"]');
+
+      const dropdowns = document.querySelectorAll('.ant-select-dropdown');
+      const isInDropdown = Array.from(dropdowns).some(dropdown => dropdown.contains(target));
+
+      if (tooltip?.contains(target) || isInDropdown) {
+        return;
+      }
+
+      if (window.getSelection()?.toString().trim() === '') {
+        setMeaningEnKeywords([]);
+        setMeaningViKeywords([]);
+        setSelectedText('');
+      }
+    };
+
+    const handleSelectionChange = () => {
+      const dropdowns = document.querySelectorAll('.ant-select-dropdown');
+      const isDropdownOpen = Array.from(dropdowns).some(dropdown => {
+        const htmlDropdown = dropdown as HTMLElement;
+        return htmlDropdown.style.display !== 'none' && htmlDropdown.style.visibility !== 'hidden';
+      });
+
+      if (isDropdownOpen) {
+        return;
+      }
+
+      if (window.getSelection()?.toString().trim() === '') {
+        setMeaningEnKeywords([]);
+        setMeaningViKeywords([]);
+        setSelectedText('');
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('selectionchange', handleSelectionChange);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('selectionchange', handleSelectionChange);
+    };
+  }, []);
+
+  // Render tooltip for word meaning
+  const renderTooltip = useCallback((): React.ReactNode => {
+    if (!selectedText) return null;
+    const sel = window.getSelection()?.toString().trim() || '';
+    const isEng = /^[a-zA-Z ]+$/.test(sel);
+    return createPortal(
+      <div style={{ ...TOOLTIP_STYLE, left: tooltipPosition.x, top: tooltipPosition.y }}>
+        <div style={TOOLTIP_BODY_STYLE}>
+          <div style={{ marginBottom: 12, paddingBottom: 8, borderBottom: '1px solid rgba(255,255,255,0.2)' }}>
+            <div style={{ marginBottom: 8 }}>
+              <Select
+                value={selectedVoice}
+                onChange={setSelectedVoice}
+                style={{ width: '100%' }}
+                placeholder="Chon giọng đọc"
+                size="small"
+                getPopupContainer={(triggerNode) => triggerNode.parentElement as HTMLElement}
+                dropdownStyle={{ zIndex: 10001 }}
+                options={availableVoices.map(voice => ({
+                  value: voice.name,
+                  label: `${voice.name} (${voice.lang})`
+                }))}
+              />
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
+              <Button
+                type="link"
+                icon={<SoundOutlined />}
+                onClick={() => speakText(selectedText)}
+                style={{ color: '#7dd3fc', padding: 0, height: 'auto' }}
+              >
+                Đọc từ đã chọn
+              </Button>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                <span style={{ fontSize: 12, opacity: 0.8 }}>Tự động đọc</span>
+                <Switch
+                  size="small"
+                  checked={autoRead}
+                  onChange={setAutoRead}
+                />
+              </div>
+            </div>
+          </div>
+          {meaningEnKeywords.length > 0 && meaningViKeywords.length > 0 && (
+            <>
+              {isEng ? (
+                <>
+                  <div style={{ fontSize: 11, opacity: 0.65, marginBottom: 4, letterSpacing: 1 }}>
+                    EN → VI
+                  </div>
+                  {meaningEnKeywords.map((word, i) => (
+                    <div key={i}>
+                      <strong style={{ color: '#7dd3fc' }}>{word}</strong>
+                      <span style={{ opacity: 0.8 }}> : </span>
+                      {meaningViKeywords[i]}
+                    </div>
+                  ))}
+                </>
+              ) : (
+                <>
+                  <div style={{ fontSize: 11, opacity: 0.65, marginBottom: 4, letterSpacing: 1 }}>
+                    VI → EN
+                  </div>
+                  {meaningViKeywords.map((word, i) => (
+                    <div key={i}>
+                      <strong style={{ color: '#7dd3fc' }}>{word}</strong>
+                      <span style={{ opacity: 0.8 }}> : </span>
+                      {meaningEnKeywords[i]}
+                    </div>
+                  ))}
+                </>
+              )}
+            </>
+          )}
+        </div>
+      </div>,
+      document.body
+    );
+  }, [selectedText, selectedVoice, availableVoices, autoRead, meaningEnKeywords, meaningViKeywords, tooltipPosition, speakText]);
 
   // ============================================================
   // CHECK RESULTS
@@ -429,7 +714,9 @@ const MatchSentencesPage = () => {
                   }}
                 >
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                    <Text style={{ fontSize: 15, flex: 1 }}>{item.eng}</Text>
+                    <Text 
+                      style={{ fontSize: 15, flex: 1, userSelect: 'text' }}
+                    >{item.eng}</Text>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                       {item.audio && (
                         <SoundOutlined
@@ -528,7 +815,11 @@ const MatchSentencesPage = () => {
                   }}
                 >
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                    <Text style={{ fontSize: 15, flex: 1 }}>{item.vi}</Text>
+                    <Text 
+                      style={{ fontSize: 15, flex: 1, userSelect: 'text' }}
+                      onMouseUp={(e) => { e.stopPropagation(); }}
+                      onTouchEnd={(e) => { e.stopPropagation(); }}
+                    >{item.vi}</Text>
                     {isMatched && match && (
                       <div style={{
                         backgroundColor: isCorrect === true ? '#52c41a' : isCorrect === false ? '#ff4d4f' : '#1890ff',
@@ -646,6 +937,9 @@ const MatchSentencesPage = () => {
           </Text>
         </Modal>
       )}
+
+      {/* Tooltip for word meaning */}
+      {renderTooltip()}
     </div>
   );
 };
