@@ -1,0 +1,43 @@
+1
+00:00:00,500 --> 00:00:03,620
+(Được chép bởi TurboScribe. Nâng cấp lên Không giới hạn để gỡ bỏ thông báo này.) He slices up tofu in ten pieces.
+
+2
+00:00:04,560 --> 00:00:07,380
+He puts the pan on the stove.
+
+3
+00:00:08,280 --> 00:00:10,480
+He turns on the stove.
+
+4
+00:00:11,400 --> 00:00:14,200
+He puts oil in the pan.
+
+5
+00:00:15,239 --> 00:00:17,860
+He puts the tofu in the pan.
+
+6
+00:00:18,800 --> 00:00:22,280
+He waits for the tofu to turn brown.
+
+7
+00:00:23,340 --> 00:00:25,660
+He flips over the tofu.
+
+8
+00:00:26,880 --> 00:00:29,020
+Now the other side is frying.
+
+9
+00:00:30,360 --> 00:00:33,320
+He waits for the tofu to turn brown
+
+10
+00:00:33,320 --> 00:00:33,940
+again.
+
+11
+00:00:34,640 --> 00:00:36,980
+He turns off the stove.

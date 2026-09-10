@@ -1,0 +1,39 @@
+1
+00:00:00,540 --> 00:00:01,580
+(Được chép bởi TurboScribe. Nâng cấp lên Không giới hạn để gỡ bỏ thông báo này.) He is bald.
+
+2
+00:00:02,200 --> 00:00:05,120
+He wants to get a hat to cover
+
+3
+00:00:05,120 --> 00:00:06,120
+his baldness.
+
+4
+00:00:07,280 --> 00:00:09,320
+He goes to a hat store.
+
+5
+00:00:10,160 --> 00:00:12,380
+There are a lot of different hats.
+
+6
+00:00:13,160 --> 00:00:14,460
+There are caps.
+
+7
+00:00:15,320 --> 00:00:17,480
+They are good to wear in the summer.
+
+8
+00:00:18,660 --> 00:00:20,140
+There are beanies.
+
+9
+00:00:21,000 --> 00:00:22,760
+They are good to wear in the winter.
+
+10
+00:00:23,860 --> 00:00:26,980
+He buys a beanie and a cap.
