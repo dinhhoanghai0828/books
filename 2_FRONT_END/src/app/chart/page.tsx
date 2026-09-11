@@ -183,10 +183,13 @@ const ChartPage = () => {
   const [startDate, setStartDate] = useState<Dayjs>(dayjs().subtract(1, 'month'));
   const [endDate, setEndDate] = useState<Dayjs>(dayjs());
   
-  // Search filters for prices
-  const [worldPriceFilter, setWorldPriceFilter] = useState<string>('');
-  const [shopNPurchasePriceFilter, setShopNPurchasePriceFilter] = useState<string>('');
-  const [shopMPurchasePriceFilter, setShopMPurchasePriceFilter] = useState<string>('');
+  // Search filters for prices (range min-max)
+  const [worldPriceMin, setWorldPriceMin] = useState<string>('');
+  const [worldPriceMax, setWorldPriceMax] = useState<string>('');
+  const [shopNPurchasePriceMin, setShopNPurchasePriceMin] = useState<string>('');
+  const [shopNPurchasePriceMax, setShopNPurchasePriceMax] = useState<string>('');
+  const [shopMPurchasePriceMin, setShopMPurchasePriceMin] = useState<string>('');
+  const [shopMPurchasePriceMax, setShopMPurchasePriceMax] = useState<string>('');
 
   // Format number to VND style (dot separator)
   const formatNumber = (value: string): string => {
@@ -218,9 +221,12 @@ const ChartPage = () => {
       const data = await getChart(
         startDate.format('YYYY-MM-DD'),
         endDate.format('YYYY-MM-DD'),
-        cleanNumber(worldPriceFilter),
-        cleanNumber(shopNPurchasePriceFilter),
-        cleanNumber(shopMPurchasePriceFilter)
+        cleanNumber(worldPriceMin),
+        cleanNumber(worldPriceMax),
+        cleanNumber(shopNPurchasePriceMin),
+        cleanNumber(shopNPurchasePriceMax),
+        cleanNumber(shopMPurchasePriceMin),
+        cleanNumber(shopMPurchasePriceMax)
       );
 
       // Tinh toan 2 truong chenh lech bo sung cho moi dong du lieu
@@ -271,27 +277,63 @@ const ChartPage = () => {
       {/* Bo loc ngay */}
       <div className="controls">
         <Space className="controls" style={{ marginBottom: 12 }}>
-          <Input
-            placeholder="Gia Thế Giới"
-            value={worldPriceFilter}
-            onChange={(e) => setWorldPriceFilter(formatNumber(e.target.value))}
-            size="middle"
-            style={{ width: 150 }}
-          />
-          <Input
-            placeholder="Giá Nhẫn bán ra"
-            value={shopNPurchasePriceFilter}
-            onChange={(e) => setShopNPurchasePriceFilter(formatNumber(e.target.value))}
-            size="middle"
-            style={{ width: 150 }}
-          />
-          <Input
-            placeholder="Giá SJC bán ra"
-            value={shopMPurchasePriceFilter}
-            onChange={(e) => setShopMPurchasePriceFilter(formatNumber(e.target.value))}
-            size="middle"
-            style={{ width: 150 }}
-          />
+          <div>
+            <label style={{ display: 'block', marginBottom: 4, fontSize: 12 }}>Giá Thế Giới (Min - Max)</label>
+            <Space>
+              <Input
+                placeholder="Min"
+                value={worldPriceMin}
+                onChange={(e) => setWorldPriceMin(formatNumber(e.target.value))}
+                size="middle"
+                style={{ width: 100 }}
+              />
+              <Input
+                placeholder="Max"
+                value={worldPriceMax}
+                onChange={(e) => setWorldPriceMax(formatNumber(e.target.value))}
+                size="middle"
+                style={{ width: 100 }}
+              />
+            </Space>
+          </div>
+          <div>
+            <label style={{ display: 'block', marginBottom: 4, fontSize: 12 }}>Giá Nhẫn bán ra (Min - Max)</label>
+            <Space>
+              <Input
+                placeholder="Min"
+                value={shopNPurchasePriceMin}
+                onChange={(e) => setShopNPurchasePriceMin(formatNumber(e.target.value))}
+                size="middle"
+                style={{ width: 100 }}
+              />
+              <Input
+                placeholder="Max"
+                value={shopNPurchasePriceMax}
+                onChange={(e) => setShopNPurchasePriceMax(formatNumber(e.target.value))}
+                size="middle"
+                style={{ width: 100 }}
+              />
+            </Space>
+          </div>
+          <div>
+            <label style={{ display: 'block', marginBottom: 4, fontSize: 12 }}>Giá SJC bán ra (Min - Max)</label>
+            <Space>
+              <Input
+                placeholder="Min"
+                value={shopMPurchasePriceMin}
+                onChange={(e) => setShopMPurchasePriceMin(formatNumber(e.target.value))}
+                size="middle"
+                style={{ width: 100 }}
+              />
+              <Input
+                placeholder="Max"
+                value={shopMPurchasePriceMax}
+                onChange={(e) => setShopMPurchasePriceMax(formatNumber(e.target.value))}
+                size="middle"
+                style={{ width: 100 }}
+              />
+            </Space>
+          </div>
         </Space>
         <Space className="controls">
           <DatePicker

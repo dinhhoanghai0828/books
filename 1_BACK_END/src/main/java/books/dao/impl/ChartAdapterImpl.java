@@ -22,7 +22,7 @@ public class ChartAdapterImpl implements ChartAdapter {
     private static final String SQL_GET_CHARTS = "SELECT * from CHARTS WHERE 1=1 ";
 
     @Override
-    public List<Chart> getCharts(String startDate, String endDate, String worldPrice, String shopNPurchasePrice, String shopMPurchasePrice) throws Exception {
+    public List<Chart> getCharts(String startDate, String endDate, String worldPriceMin, String worldPriceMax, String shopNPurchasePriceMin, String shopNPurchasePriceMax, String shopMPurchasePriceMin, String shopMPurchasePriceMax) throws Exception {
         String thisMethod = "ChartAdapterImpl.getCharts";
         Connection con = null;
         PreparedStatement pstmt = null;
@@ -58,14 +58,26 @@ public class ChartAdapterImpl implements ChartAdapter {
             if (StringUtils.isNotBlank(endDate)) {
                 sql.append(" AND CREATED_AT < ?");
             }
-            if (StringUtils.isNotBlank(worldPrice)) {
-                sql.append(" AND WORLD_PRICE = ? ");
+            if (StringUtils.isNotBlank(worldPriceMin) && StringUtils.isNotBlank(worldPriceMax)) {
+                sql.append(" AND WORLD_PRICE BETWEEN ? AND ? ");
+            } else if (StringUtils.isNotBlank(worldPriceMin)) {
+                sql.append(" AND WORLD_PRICE >= ? ");
+            } else if (StringUtils.isNotBlank(worldPriceMax)) {
+                sql.append(" AND WORLD_PRICE <= ? ");
             }
-            if (StringUtils.isNotBlank(shopNPurchasePrice)) {
-                sql.append(" AND DOMESTIC_RING_PURCHASE_PRICE = ? ");
+            if (StringUtils.isNotBlank(shopNPurchasePriceMin) && StringUtils.isNotBlank(shopNPurchasePriceMax)) {
+                sql.append(" AND DOMESTIC_RING_PURCHASE_PRICE BETWEEN ? AND ? ");
+            } else if (StringUtils.isNotBlank(shopNPurchasePriceMin)) {
+                sql.append(" AND DOMESTIC_RING_PURCHASE_PRICE >= ? ");
+            } else if (StringUtils.isNotBlank(shopNPurchasePriceMax)) {
+                sql.append(" AND DOMESTIC_RING_PURCHASE_PRICE <= ? ");
             }
-            if (StringUtils.isNotBlank(shopMPurchasePrice)) {
-                sql.append(" AND DOMESTIC_PURCHASE_PRICE = ? ");
+            if (StringUtils.isNotBlank(shopMPurchasePriceMin) && StringUtils.isNotBlank(shopMPurchasePriceMax)) {
+                sql.append(" AND DOMESTIC_PURCHASE_PRICE BETWEEN ? AND ? ");
+            } else if (StringUtils.isNotBlank(shopMPurchasePriceMin)) {
+                sql.append(" AND DOMESTIC_PURCHASE_PRICE >= ? ");
+            } else if (StringUtils.isNotBlank(shopMPurchasePriceMax)) {
+                sql.append(" AND DOMESTIC_PURCHASE_PRICE <= ? ");
             }
             sql.append(" ORDER BY CREATED_AT ASC");
 
@@ -79,14 +91,29 @@ public class ChartAdapterImpl implements ChartAdapter {
                 endDate = endDate.trim() + " 23:59:59";
                 pstmt.setString(index++, endDate);
             }
-            if (StringUtils.isNotBlank(worldPrice)) {
-                pstmt.setDouble(index++, Double.parseDouble(worldPrice));
+            if (StringUtils.isNotBlank(worldPriceMin) && StringUtils.isNotBlank(worldPriceMax)) {
+                pstmt.setDouble(index++, Double.parseDouble(worldPriceMin));
+                pstmt.setDouble(index++, Double.parseDouble(worldPriceMax));
+            } else if (StringUtils.isNotBlank(worldPriceMin)) {
+                pstmt.setDouble(index++, Double.parseDouble(worldPriceMin));
+            } else if (StringUtils.isNotBlank(worldPriceMax)) {
+                pstmt.setDouble(index++, Double.parseDouble(worldPriceMax));
             }
-            if (StringUtils.isNotBlank(shopNPurchasePrice)) {
-                pstmt.setDouble(index++, Double.parseDouble(shopNPurchasePrice));
+            if (StringUtils.isNotBlank(shopNPurchasePriceMin) && StringUtils.isNotBlank(shopNPurchasePriceMax)) {
+                pstmt.setDouble(index++, Double.parseDouble(shopNPurchasePriceMin));
+                pstmt.setDouble(index++, Double.parseDouble(shopNPurchasePriceMax));
+            } else if (StringUtils.isNotBlank(shopNPurchasePriceMin)) {
+                pstmt.setDouble(index++, Double.parseDouble(shopNPurchasePriceMin));
+            } else if (StringUtils.isNotBlank(shopNPurchasePriceMax)) {
+                pstmt.setDouble(index++, Double.parseDouble(shopNPurchasePriceMax));
             }
-            if (StringUtils.isNotBlank(shopMPurchasePrice)) {
-                pstmt.setDouble(index++, Double.parseDouble(shopMPurchasePrice));
+            if (StringUtils.isNotBlank(shopMPurchasePriceMin) && StringUtils.isNotBlank(shopMPurchasePriceMax)) {
+                pstmt.setDouble(index++, Double.parseDouble(shopMPurchasePriceMin));
+                pstmt.setDouble(index++, Double.parseDouble(shopMPurchasePriceMax));
+            } else if (StringUtils.isNotBlank(shopMPurchasePriceMin)) {
+                pstmt.setDouble(index++, Double.parseDouble(shopMPurchasePriceMin));
+            } else if (StringUtils.isNotBlank(shopMPurchasePriceMax)) {
+                pstmt.setDouble(index++, Double.parseDouble(shopMPurchasePriceMax));
             }
             rs = DBUtils.executeQuery(pstmt, sql.toString());
             while (rs.next()) {

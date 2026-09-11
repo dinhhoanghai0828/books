@@ -454,15 +454,21 @@ export const updateWord = async (id: string, eng: string, vi: string): Promise<v
 export const getChart = async (
     startDate: string,
     endDate: string,
-    worldPrice?: string,
-    shopNPurchasePrice?: string,
-    shopMPurchasePrice?: string
+    worldPriceMin?: string,
+    worldPriceMax?: string,
+    shopNPurchasePriceMin?: string,
+    shopNPurchasePriceMax?: string,
+    shopMPurchasePriceMin?: string,
+    shopMPurchasePriceMax?: string
 ): Promise<Chart[]> => {
   try {
     const params = new URLSearchParams({ startDate, endDate });
-    if (worldPrice) params.append('worldPrice', worldPrice);
-    if (shopNPurchasePrice) params.append('shopNPurchasePrice', shopNPurchasePrice);
-    if (shopMPurchasePrice) params.append('shopMPurchasePrice', shopMPurchasePrice);
+    if (worldPriceMin) params.append('worldPriceMin', worldPriceMin);
+    if (worldPriceMax) params.append('worldPriceMax', worldPriceMax);
+    if (shopNPurchasePriceMin) params.append('shopNPurchasePriceMin', shopNPurchasePriceMin);
+    if (shopNPurchasePriceMax) params.append('shopNPurchasePriceMax', shopNPurchasePriceMax);
+    if (shopMPurchasePriceMin) params.append('shopMPurchasePriceMin', shopMPurchasePriceMin);
+    if (shopMPurchasePriceMax) params.append('shopMPurchasePriceMax', shopMPurchasePriceMax);
     const response = await apiClient.get(`/chart/get-chart?${params}`);
     return response.data.charts || [];
   } catch (error: any) {

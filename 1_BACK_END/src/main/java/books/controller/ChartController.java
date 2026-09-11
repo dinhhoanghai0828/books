@@ -24,11 +24,14 @@ public class ChartController {
 
     @GetMapping("/get-chart")
     public ResponseEntity<?> getChart(@Param("startDate") String startDate, @Param("endDate") String endDate, 
-                                       @Param("worldPrice") String worldPrice, 
-                                       @Param("shopNPurchasePrice") String shopNPurchasePrice,
-                                       @Param("shopMPurchasePrice") String shopMPurchasePrice) {
+                                       @Param("worldPriceMin") String worldPriceMin, 
+                                       @Param("worldPriceMax") String worldPriceMax,
+                                       @Param("shopNPurchasePriceMin") String shopNPurchasePriceMin,
+                                       @Param("shopNPurchasePriceMax") String shopNPurchasePriceMax,
+                                       @Param("shopMPurchasePriceMin") String shopMPurchasePriceMin,
+                                       @Param("shopMPurchasePriceMax") String shopMPurchasePriceMax) {
         try {
-            List<ChartDTO> chartDTOS = chartService.getCharts(startDate, endDate, worldPrice, shopNPurchasePrice, shopMPurchasePrice);
+            List<ChartDTO> chartDTOS = chartService.getCharts(startDate, endDate, worldPriceMin, worldPriceMax, shopNPurchasePriceMin, shopNPurchasePriceMax, shopMPurchasePriceMin, shopMPurchasePriceMax);
             ChartResponse response = new ChartResponse();
             response.setCharts(chartDTOS);
             return new ResponseEntity<>(response, HttpStatus.OK);

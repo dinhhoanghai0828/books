@@ -23,8 +23,8 @@ public class ChartServiceImpl implements ChartService {
     }
 
     @Override
-    public List<ChartDTO> getCharts(String startDate, String endDate, String worldPrice, String shopNPurchasePrice, String shopMPurchasePrice) throws Exception {
-        List<Chart> charts = chartAdapter.getCharts(startDate, endDate, worldPrice, shopNPurchasePrice, shopMPurchasePrice);
+    public List<ChartDTO> getCharts(String startDate, String endDate, String worldPriceMin, String worldPriceMax, String shopNPurchasePriceMin, String shopNPurchasePriceMax, String shopMPurchasePriceMin, String shopMPurchasePriceMax) throws Exception {
+        List<Chart> charts = chartAdapter.getCharts(startDate, endDate, worldPriceMin, worldPriceMax, shopNPurchasePriceMin, shopNPurchasePriceMax, shopMPurchasePriceMin, shopMPurchasePriceMax);
         List<ChartDTO> chartDTOS = charts.stream().map(chart -> modelMapper.map(chart, ChartDTO.class)).collect(Collectors.toList());
         return chartDTOS;
     }
