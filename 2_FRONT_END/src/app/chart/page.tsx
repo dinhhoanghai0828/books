@@ -46,7 +46,7 @@ interface ChartRowData {
 // Dinh nghia cau hinh cac cot dung chung cho ca 2 bang (bang chinh va bang extreme)
 const SHARED_COLUMNS = [
   {
-    title: 'Ngay',
+    title: 'Ngày',
     dataIndex: 'createdAt',
     key: 'createdAt',
     render: (text: string) => dayjs(text).format('YYYY-MM-DD'),
@@ -55,7 +55,7 @@ const SHARED_COLUMNS = [
     defaultSortOrder: 'descend' as SortOrder,
   },
   {
-    title: 'Gia The Gioi',
+    title: 'Giá Thế Giới',
     dataIndex: 'worldPrice',
     key: 'worldPrice',
     render: (value: number | string) => {
@@ -64,7 +64,7 @@ const SHARED_COLUMNS = [
     },
   },
   {
-    title: 'Ty gia',
+    title: 'Tỷ giá',
     dataIndex: 'dollarPrice',
     key: 'dollarPrice',
     render: (value: number | string) => {
@@ -73,7 +73,7 @@ const SHARED_COLUMNS = [
     },
   },
   {
-    title: 'Quy doi VND',
+    title: 'Quy đổi VND',
     dataIndex: 'worldPriceVND',
     key: 'worldPriceVND',
     render: (value: number | string) => {
@@ -82,7 +82,7 @@ const SHARED_COLUMNS = [
     },
   },
   {
-    title: 'Gia M shop ban',
+    title: 'Giá SJC bán ra',
     dataIndex: 'domesticPurchasePrice',
     key: 'domesticPurchasePrice',
     render: (value: number | string) => {
@@ -91,7 +91,7 @@ const SHARED_COLUMNS = [
     },
   },
   {
-    title: 'Gia M shop mua',
+    title: 'Giá SJC mua vào',
     dataIndex: 'domesticSalePrice',
     key: 'domesticSalePrice',
     render: (value: number | string) => {
@@ -100,7 +100,7 @@ const SHARED_COLUMNS = [
     },
   },
   {
-    title: 'Gia N shop ban',
+    title: 'Giá Nhẫn bán ra',
     dataIndex: 'domesticRingPurchasePrice',
     key: 'domesticRingPurchasePrice',
     render: (value: number | string) => {
@@ -109,7 +109,7 @@ const SHARED_COLUMNS = [
     },
   },
   {
-    title: 'Gia N shop mua',
+    title: 'Giá Nhẫn mua vào',
     dataIndex: 'domesticRingSalePrice',
     key: 'domesticRingSalePrice',
     render: (value: number | string) => {
@@ -118,7 +118,7 @@ const SHARED_COLUMNS = [
     },
   },
   {
-    title: 'Chenh Lech N - The Gioi',
+    title: 'Chênh lệch Nhẫn - Thế Giới',
     dataIndex: 'ringWorldDiff',
     key: 'ringWorldDiff',
     render: (value: number | string) => {
@@ -127,7 +127,7 @@ const SHARED_COLUMNS = [
     },
   },
   {
-    title: 'Chenh Lech M - The Gioi',
+    title: 'Chênh lệch SJC - Thế Giới',
     dataIndex: 'domesticWorldDiff',
     key: 'domesticWorldDiff',
     render: (value: number | string) => {
@@ -136,7 +136,7 @@ const SHARED_COLUMNS = [
     },
   },
   {
-    title: 'Loi nhuan M',
+    title: 'Tiền lãi SJC',
     dataIndex: 'profitGoldBar',
     key: 'profitGoldBar',
     render: (value: number | string) => {
@@ -145,7 +145,7 @@ const SHARED_COLUMNS = [
     },
   },
   {
-    title: 'Loi nhuan N',
+    title: 'Tiền lãi Nhẫn',
     dataIndex: 'profitGoldRing',
     key: 'profitGoldRing',
     render: (value: number | string) => {
@@ -154,7 +154,7 @@ const SHARED_COLUMNS = [
     },
   },
   {
-    title: 'Tong loi nhuan',
+    title: 'Tiền lãi',
     dataIndex: 'totalProfit',
     key: 'totalProfit',
     render: (value: number | string) => {
@@ -163,7 +163,7 @@ const SHARED_COLUMNS = [
     },
   },
   {
-    title: 'Tien lai / Tien von',
+    title: 'Tiền lãi / Tiền vốn',
     dataIndex: 'totalInvestment',
     key: 'totalInvestment',
     render: (value: number | string) => {
@@ -269,46 +269,50 @@ const ChartPage = () => {
       <h2 className="title">Bieu Do</h2>
 
       {/* Bo loc ngay */}
-      <Space className="controls">
-        <DatePicker
-          value={startDate}
-          onChange={(date) => date && setStartDate(date)}
-          format="DD-MM-YYYY"
-          size="middle"
-          placeholder="Chon ngay bat dau"
-        />
-        <DatePicker
-          value={endDate}
-          onChange={(date) => date && setEndDate(date)}
-          format="DD-MM-YYYY"
-          size="middle"
-          placeholder="Chon ngay ket thuc"
-        />
-        <Input
-          placeholder="Gia The Gioi"
-          value={worldPriceFilter}
-          onChange={(e) => setWorldPriceFilter(formatNumber(e.target.value))}
-          size="middle"
-          style={{ width: 150 }}
-        />
-        <Input
-          placeholder="Gia N shop ban"
-          value={shopNPurchasePriceFilter}
-          onChange={(e) => setShopNPurchasePriceFilter(formatNumber(e.target.value))}
-          size="middle"
-          style={{ width: 150 }}
-        />
-        <Input
-          placeholder="Gia M shop ban"
-          value={shopMPurchasePriceFilter}
-          onChange={(e) => setShopMPurchasePriceFilter(formatNumber(e.target.value))}
-          size="middle"
-          style={{ width: 150 }}
-        />
-        <Button type="primary" onClick={fetchChartData} loading={loading} size="middle">
-          Tim kiem
-        </Button>
-      </Space>
+      <div className="controls">
+        <Space className="controls" style={{ marginBottom: 12 }}>
+          <Input
+            placeholder="Gia Thế Giới"
+            value={worldPriceFilter}
+            onChange={(e) => setWorldPriceFilter(formatNumber(e.target.value))}
+            size="middle"
+            style={{ width: 150 }}
+          />
+          <Input
+            placeholder="Giá Nhẫn bán ra"
+            value={shopNPurchasePriceFilter}
+            onChange={(e) => setShopNPurchasePriceFilter(formatNumber(e.target.value))}
+            size="middle"
+            style={{ width: 150 }}
+          />
+          <Input
+            placeholder="Giá SJC bán ra"
+            value={shopMPurchasePriceFilter}
+            onChange={(e) => setShopMPurchasePriceFilter(formatNumber(e.target.value))}
+            size="middle"
+            style={{ width: 150 }}
+          />
+        </Space>
+        <Space className="controls">
+          <DatePicker
+            value={startDate}
+            onChange={(date) => date && setStartDate(date)}
+            format="DD-MM-YYYY"
+            size="middle"
+            placeholder="Chon ngay bat dau"
+          />
+          <DatePicker
+            value={endDate}
+            onChange={(date) => date && setEndDate(date)}
+            format="DD-MM-YYYY"
+            size="middle"
+            placeholder="Chon ngay ket thuc"
+          />
+          <Button type="primary" onClick={fetchChartData} loading={loading} size="middle">
+            Tim kiem
+          </Button>
+        </Space>
+      </div>
 
       {/* Bieu do duong */}
       <div className="chartWrapper">
