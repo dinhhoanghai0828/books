@@ -502,15 +502,15 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He is in trouble','Cậu ấy gặp rắc rối rồi','00:00:26.500','00:00:28.190','esl-fast-beginner-1-38'),
 
 	/* (UUID(),'esl-fast-beginner-1-39','No One Likes the Flu','Không ai thích bị cúm','BEGINNER_01_ESL_FAST_CHILDREN_039.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1','YES',39) */
-	('He is sick','Cậu ấy bị ốm','00:00:00.580','00:00:02.400','esl-fast-beginner-1-39'),
-	('He goes to the doctor','Cậu ấy đến gặp bác sĩ','00:00:02.700','00:00:04.520','esl-fast-beginner-1-39'),
-	('The doctor gives him some medicine','Bác sĩ đưa cho cậu ấy một ít thuốc','00:00:05.120','00:00:07.840','esl-fast-beginner-1-39'),
-	('He is still sick after one week','Sau một tuần cậu ấy vẫn bị ốm','00:00:08.760','00:00:11.660','esl-fast-beginner-1-39'),
-	('His mom tells him to go to sleep','Mẹ bảo cậu ấy đi ngủ','00:00:12.140','00:00:15.300','esl-fast-beginner-1-39'),
-	('He lies in bed all day','Cậu ấy nằm trên giường cả ngày','00:00:15.920','00:00:18.980','esl-fast-beginner-1-39'),
-	('He rests','Cậu ấy nghỉ ngơi','00:00:19.720','00:00:21.200','esl-fast-beginner-1-39'),
-	('He drinks chicken soup and eats vegetables','Cậu ấy uống súp gà và ăn rau','00:00:21.600','00:00:25.460','esl-fast-beginner-1-39'),
-	('He is still sick','Cậu ấy vẫn bị ốm','00:00:26.140','00:00:28.000','esl-fast-beginner-1-39'),
+	('He is sick','Cậu bé bị ốm','00:00:00.580','00:00:02.400','esl-fast-beginner-1-39'),
+	('He goes to the doctor','Cậu bé đến gặp bác sĩ','00:00:02.400','00:00:04.520','esl-fast-beginner-1-39'),
+	('The doctor gives him some medicine','Bác sĩ đưa cho cậu bé một ít thuốc','00:00:05.120','00:00:07.840','esl-fast-beginner-1-39'),
+	('He is still sick after one week','Sau một tuần cậu bé vẫn bị ốm','00:00:08.760','00:00:11.660','esl-fast-beginner-1-39'),
+	('His mom tells him to go to sleep','Mẹ bảo cậu bé đi ngủ','00:00:12.140','00:00:15.300','esl-fast-beginner-1-39'),
+	('He lies in bed all day','Cậu bé nằm trên giường cả ngày','00:00:15.600','00:00:18.980','esl-fast-beginner-1-39'),
+	('He rests','Cậu bé nghỉ ngơi','00:00:19.720','00:00:21.200','esl-fast-beginner-1-39'),
+	('He drinks chicken soup and eats vegetables','Cậu bé uống súp gà và ăn rau','00:00:21.200','00:00:25.460','esl-fast-beginner-1-39'),
+	('He is still sick','Cậu bé vẫn bị ốm','00:00:26.140','00:00:28.000','esl-fast-beginner-1-39'),
 	('No one likes the flu','Chẳng ai thích bị cúm cả','00:00:28.300','00:00:30.580','esl-fast-beginner-1-39'),
 
 	/* (UUID(),'esl-fast-beginner-1-40','The Circus','Rạp xiếc','BEGINNER_01_ESL_FAST_CHILDREN_040.mp3',NULL,'00:00:00.000','00:00:38.000','esl-fast-children-1','YES',40) */
