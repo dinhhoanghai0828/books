@@ -453,10 +453,16 @@ export const updateWord = async (id: string, eng: string, vi: string): Promise<v
 // Lay du lieu gia vang theo khoang ngay (dung cho bieu do va bang thong ke)
 export const getChart = async (
     startDate: string,
-    endDate: string
+    endDate: string,
+    worldPrice?: string,
+    shopNPurchasePrice?: string,
+    shopMPurchasePrice?: string
 ): Promise<Chart[]> => {
   try {
     const params = new URLSearchParams({ startDate, endDate });
+    if (worldPrice) params.append('worldPrice', worldPrice);
+    if (shopNPurchasePrice) params.append('shopNPurchasePrice', shopNPurchasePrice);
+    if (shopMPurchasePrice) params.append('shopMPurchasePrice', shopMPurchasePrice);
     const response = await apiClient.get(`/chart/get-chart?${params}`);
     return response.data.charts || [];
   } catch (error: any) {

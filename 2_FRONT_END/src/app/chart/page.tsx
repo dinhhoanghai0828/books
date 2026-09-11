@@ -1,6 +1,6 @@
 'use client';
 import { getChart } from '@/utils/apiService';
-import { Button, DatePicker, message, Space, Table } from 'antd';
+import { Button, DatePicker, Input, message, Space, Table } from 'antd';
 import { SortOrder } from 'antd/es/table/interface';
 import dayjs, { Dayjs } from 'dayjs';
 import { useState } from 'react';
@@ -58,79 +58,118 @@ const SHARED_COLUMNS = [
     title: 'Gia The Gioi',
     dataIndex: 'worldPrice',
     key: 'worldPrice',
-    render: (value: number) => value?.toLocaleString() || '-',
+    render: (value: number | string) => {
+      const num = typeof value === 'string' ? parseFloat(value) : value;
+      return !isNaN(num) ? num.toLocaleString('vi-VN') : '-';
+    },
   },
   {
     title: 'Ty gia',
     dataIndex: 'dollarPrice',
     key: 'dollarPrice',
-    render: (value: number) => value?.toLocaleString() || '-',
+    render: (value: number | string) => {
+      const num = typeof value === 'string' ? parseFloat(value) : value;
+      return !isNaN(num) ? num.toLocaleString('vi-VN') : '-';
+    },
   },
   {
     title: 'Quy doi VND',
     dataIndex: 'worldPriceVND',
     key: 'worldPriceVND',
-    render: (value: number) => value?.toLocaleString() || '-',
+    render: (value: number | string) => {
+      const num = typeof value === 'string' ? parseFloat(value) : value;
+      return !isNaN(num) ? num.toLocaleString('vi-VN') : '-';
+    },
   },
   {
     title: 'Gia M shop ban',
     dataIndex: 'domesticPurchasePrice',
     key: 'domesticPurchasePrice',
-    render: (value: number) => value?.toLocaleString() || '-',
+    render: (value: number | string) => {
+      const num = typeof value === 'string' ? parseFloat(value) : value;
+      return !isNaN(num) ? num.toLocaleString('vi-VN') : '-';
+    },
   },
   {
     title: 'Gia M shop mua',
     dataIndex: 'domesticSalePrice',
     key: 'domesticSalePrice',
-    render: (value: number) => value?.toLocaleString() || '-',
+    render: (value: number | string) => {
+      const num = typeof value === 'string' ? parseFloat(value) : value;
+      return !isNaN(num) ? num.toLocaleString('vi-VN') : '-';
+    },
   },
   {
     title: 'Gia N shop ban',
     dataIndex: 'domesticRingPurchasePrice',
     key: 'domesticRingPurchasePrice',
-    render: (value: number) => value?.toLocaleString() || '-',
+    render: (value: number | string) => {
+      const num = typeof value === 'string' ? parseFloat(value) : value;
+      return !isNaN(num) ? num.toLocaleString('vi-VN') : '-';
+    },
   },
   {
     title: 'Gia N shop mua',
     dataIndex: 'domesticRingSalePrice',
     key: 'domesticRingSalePrice',
-    render: (value: number) => value?.toLocaleString() || '-',
+    render: (value: number | string) => {
+      const num = typeof value === 'string' ? parseFloat(value) : value;
+      return !isNaN(num) ? num.toLocaleString('vi-VN') : '-';
+    },
   },
   {
     title: 'Chenh Lech N - The Gioi',
     dataIndex: 'ringWorldDiff',
     key: 'ringWorldDiff',
-    render: (value: number) => value?.toLocaleString() || '-',
+    render: (value: number | string) => {
+      const num = typeof value === 'string' ? parseFloat(value) : value;
+      return !isNaN(num) ? num.toLocaleString('vi-VN') : '-';
+    },
   },
   {
     title: 'Chenh Lech M - The Gioi',
     dataIndex: 'domesticWorldDiff',
     key: 'domesticWorldDiff',
-    render: (value: number) => value?.toLocaleString() || '-',
+    render: (value: number | string) => {
+      const num = typeof value === 'string' ? parseFloat(value) : value;
+      return !isNaN(num) ? num.toLocaleString('vi-VN') : '-';
+    },
   },
   {
     title: 'Loi nhuan M',
     dataIndex: 'profitGoldBar',
     key: 'profitGoldBar',
-    render: (value: number) => value?.toLocaleString() || '-',
+    render: (value: number | string) => {
+      const num = typeof value === 'string' ? parseFloat(value) : value;
+      return !isNaN(num) ? num.toLocaleString('vi-VN') : '-';
+    },
   },
   {
     title: 'Loi nhuan N',
     dataIndex: 'profitGoldRing',
     key: 'profitGoldRing',
-    render: (value: number) => value?.toLocaleString() || '-',
+    render: (value: number | string) => {
+      const num = typeof value === 'string' ? parseFloat(value) : value;
+      return !isNaN(num) ? num.toLocaleString('vi-VN') : '-';
+    },
   },
   {
     title: 'Tong loi nhuan',
     dataIndex: 'totalProfit',
     key: 'totalProfit',
-    render: (value: number) => value?.toLocaleString() || '-',
+    render: (value: number | string) => {
+      const num = typeof value === 'string' ? parseFloat(value) : value;
+      return !isNaN(num) ? num.toLocaleString('vi-VN') : '-';
+    },
   },
   {
     title: 'Tien lai / Tien von',
     dataIndex: 'totalInvestment',
     key: 'totalInvestment',
-    render: (value: number) => value?.toLocaleString() || '-',
+    render: (value: number | string) => {
+      const num = typeof value === 'string' ? parseFloat(value) : value;
+      return !isNaN(num) ? num.toLocaleString('vi-VN') : '-';
+    },
   },
 ];
 
@@ -143,6 +182,25 @@ const ChartPage = () => {
   const [loading, setLoading] = useState(false);
   const [startDate, setStartDate] = useState<Dayjs>(dayjs().subtract(1, 'month'));
   const [endDate, setEndDate] = useState<Dayjs>(dayjs());
+  
+  // Search filters for prices
+  const [worldPriceFilter, setWorldPriceFilter] = useState<string>('');
+  const [shopNPurchasePriceFilter, setShopNPurchasePriceFilter] = useState<string>('');
+  const [shopMPurchasePriceFilter, setShopMPurchasePriceFilter] = useState<string>('');
+
+  // Format number to VND style (dot separator)
+  const formatNumber = (value: string): string => {
+    if (!value) return '';
+    const cleanValue = value.replace(/\./g, '');
+    const num = parseFloat(cleanValue);
+    if (isNaN(num)) return value;
+    return num.toLocaleString('vi-VN');
+  };
+
+  // Clean formatted number back to plain number for API
+  const cleanNumber = (value: string): string => {
+    return value.replace(/\./g, '');
+  };
 
   // Gia tri min/max theo tong chenh lech dau tu va theo gia the gioi
   const [extremeData, setExtremeData] = useState<ChartRowData[]>([]);
@@ -159,7 +217,10 @@ const ChartPage = () => {
     try {
       const data = await getChart(
         startDate.format('YYYY-MM-DD'),
-        endDate.format('YYYY-MM-DD')
+        endDate.format('YYYY-MM-DD'),
+        cleanNumber(worldPriceFilter),
+        cleanNumber(shopNPurchasePriceFilter),
+        cleanNumber(shopMPurchasePriceFilter)
       );
 
       // Tinh toan 2 truong chenh lech bo sung cho moi dong du lieu
@@ -223,6 +284,27 @@ const ChartPage = () => {
           size="small"
           placeholder="Chon ngay ket thuc"
         />
+        <Input
+          placeholder="Gia The Gioi"
+          value={worldPriceFilter}
+          onChange={(e) => setWorldPriceFilter(formatNumber(e.target.value))}
+          size="small"
+          style={{ width: 120 }}
+        />
+        <Input
+          placeholder="Gia N shop ban"
+          value={shopNPurchasePriceFilter}
+          onChange={(e) => setShopNPurchasePriceFilter(formatNumber(e.target.value))}
+          size="small"
+          style={{ width: 120 }}
+        />
+        <Input
+          placeholder="Gia M shop ban"
+          value={shopMPurchasePriceFilter}
+          onChange={(e) => setShopMPurchasePriceFilter(formatNumber(e.target.value))}
+          size="small"
+          style={{ width: 120 }}
+        />
         <Button type="primary" onClick={fetchChartData} loading={loading}>
           Tim kiem
         </Button>
@@ -240,7 +322,10 @@ const ChartPage = () => {
               dataKey="createdAt"
               tickFormatter={(tick) => dayjs(tick).format('YYYY-MM-DD')}
             />
-            <YAxis tickFormatter={(value) => value?.toLocaleString() || '-'} />
+            <YAxis tickFormatter={(value) => {
+              const num = typeof value === 'string' ? parseFloat(value) : value;
+              return !isNaN(num) ? num.toLocaleString('vi-VN') : '-';
+            }} />
             <Tooltip contentStyle={{ backgroundColor: 'white', borderRadius: 5 }} />
             <Legend />
             <Line
