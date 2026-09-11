@@ -275,8 +275,8 @@ const ChartPage = () => {
       <h2 className="title">Bieu Do</h2>
 
       {/* Bo loc ngay */}
-      <div className="controls">
-        <Space className="controls" style={{ marginBottom: 12 }}>
+      <div className="controls" style={{ marginBottom: 16 }}>
+        <Space style={{ marginBottom: 12 }} align="center">
           <div>
             <label style={{ display: 'block', marginBottom: 4, fontSize: 12 }}>Giá Thế Giới (Min - Max)</label>
             <Space>
@@ -335,25 +335,28 @@ const ChartPage = () => {
             </Space>
           </div>
         </Space>
-        <Space className="controls">
-          <DatePicker
-            value={startDate}
-            onChange={(date) => date && setStartDate(date)}
-            format="DD-MM-YYYY"
-            size="middle"
-            placeholder="Chon ngay bat dau"
-          />
-          <DatePicker
-            value={endDate}
-            onChange={(date) => date && setEndDate(date)}
-            format="DD-MM-YYYY"
-            size="middle"
-            placeholder="Chon ngay ket thuc"
-          />
-          <Button type="primary" onClick={fetchChartData} loading={loading} size="middle">
-            Tim kiem
-          </Button>
-        </Space>
+        
+        <div style={{ marginBottom: 12, display: 'flex', justifyContent: 'center' }}>
+          <Space align="center">
+            <DatePicker
+              value={startDate}
+              onChange={(date) => date && setStartDate(date)}
+              format="DD-MM-YYYY"
+              size="middle"
+              placeholder="Chon ngay bat dau"
+            />
+            <DatePicker
+              value={endDate}
+              onChange={(date) => date && setEndDate(date)}
+              format="DD-MM-YYYY"
+              size="middle"
+              placeholder="Chon ngay ket thuc"
+            />
+            <Button type="primary" onClick={fetchChartData} loading={loading} size="middle">
+              Tim kiem
+            </Button>
+          </Space>
+        </div>
       </div>
 
       {/* Bieu do duong */}
