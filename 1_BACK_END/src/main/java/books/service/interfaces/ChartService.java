@@ -7,5 +7,5 @@ import java.util.List;
 
 @Service
 public interface ChartService {
-    List<ChartDTO> getCharts(String startDate, String endDate) throws Exception;
+    List<ChartDTO> getCharts(String startDate, String endDate, String worldPrice, String shopNPurchasePrice, String shopMPurchasePrice) throws Exception;
 }

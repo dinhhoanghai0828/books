@@ -22,7 +22,7 @@ public class ChartAdapterImpl implements ChartAdapter {
     private static final String SQL_GET_CHARTS = "SELECT * from CHARTS WHERE 1=1 ";
 
     @Override
-    public List<Chart> getCharts(String startDate, String endDate) throws Exception {
+    public List<Chart> getCharts(String startDate, String endDate, String worldPrice, String shopNPurchasePrice, String shopMPurchasePrice) throws Exception {
         String thisMethod = "ChartAdapterImpl.getCharts";
         Connection con = null;
         PreparedStatement pstmt = null;
@@ -58,6 +58,15 @@ public class ChartAdapterImpl implements ChartAdapter {
             if (StringUtils.isNotBlank(endDate)) {
                 sql.append(" AND CREATED_AT < ?");
             }
+            if (StringUtils.isNotBlank(worldPrice)) {
+                sql.append(" AND WORLD_PRICE = ? ");
+            }
+            if (StringUtils.isNotBlank(shopNPurchasePrice)) {
+                sql.append(" AND DOMESTIC_RING_PURCHASE_PRICE = ? ");
+            }
+            if (StringUtils.isNotBlank(shopMPurchasePrice)) {
+                sql.append(" AND DOMESTIC_PURCHASE_PRICE = ? ");
+            }
             sql.append(" ORDER BY CREATED_AT ASC");
 
             pstmt = DBUtils.prepareStatement(con, sql.toString());
@@ -69,6 +78,15 @@ public class ChartAdapterImpl implements ChartAdapter {
             if (StringUtils.isNotBlank(endDate)) {
                 endDate = endDate.trim() + " 23:59:59";
                 pstmt.setString(index++, endDate);
+            }
+            if (StringUtils.isNotBlank(worldPrice)) {
+                pstmt.setDouble(index++, Double.parseDouble(worldPrice));
+            }
+            if (StringUtils.isNotBlank(shopNPurchasePrice)) {
+                pstmt.setDouble(index++, Double.parseDouble(shopNPurchasePrice));
+            }
+            if (StringUtils.isNotBlank(shopMPurchasePrice)) {
+                pstmt.setDouble(index++, Double.parseDouble(shopMPurchasePrice));
             }
             rs = DBUtils.executeQuery(pstmt, sql.toString());
             while (rs.next()) {
