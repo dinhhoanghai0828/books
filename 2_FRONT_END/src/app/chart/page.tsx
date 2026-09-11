@@ -274,38 +274,38 @@ const ChartPage = () => {
           value={startDate}
           onChange={(date) => date && setStartDate(date)}
           format="DD-MM-YYYY"
-          size="small"
+          size="middle"
           placeholder="Chon ngay bat dau"
         />
         <DatePicker
           value={endDate}
           onChange={(date) => date && setEndDate(date)}
           format="DD-MM-YYYY"
-          size="small"
+          size="middle"
           placeholder="Chon ngay ket thuc"
         />
         <Input
           placeholder="Gia The Gioi"
           value={worldPriceFilter}
           onChange={(e) => setWorldPriceFilter(formatNumber(e.target.value))}
-          size="small"
-          style={{ width: 120 }}
+          size="middle"
+          style={{ width: 150 }}
         />
         <Input
           placeholder="Gia N shop ban"
           value={shopNPurchasePriceFilter}
           onChange={(e) => setShopNPurchasePriceFilter(formatNumber(e.target.value))}
-          size="small"
-          style={{ width: 120 }}
+          size="middle"
+          style={{ width: 150 }}
         />
         <Input
           placeholder="Gia M shop ban"
           value={shopMPurchasePriceFilter}
           onChange={(e) => setShopMPurchasePriceFilter(formatNumber(e.target.value))}
-          size="small"
-          style={{ width: 120 }}
+          size="middle"
+          style={{ width: 150 }}
         />
-        <Button type="primary" onClick={fetchChartData} loading={loading}>
+        <Button type="primary" onClick={fetchChartData} loading={loading} size="middle">
           Tim kiem
         </Button>
       </Space>
