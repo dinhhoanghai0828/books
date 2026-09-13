@@ -179,17 +179,24 @@ public class WordAdapterImpl implements WordAdapter {
         try {
             con = DBUtils.getConnection(thisMethod, false, Connection.TRANSACTION_READ_COMMITTED);
 
+            // Lowercase eng and viList before processing
+            String lowerEng = eng.toLowerCase().trim();
+            List<String> lowerViList = new ArrayList<>();
+            for (String vi : viList) {
+                lowerViList.add(vi.toLowerCase().trim());
+            }
+
             // Kiem tra tung cap (eng, vi) truoc khi insert
             String sqlCheck = "SELECT COUNT(*) FROM WORDS WHERE LOWER(ENG) = LOWER(?) AND LOWER(VI) = LOWER(?)";
-            for (String vi : viList) {
+            for (String vi : lowerViList) {
                 pstmtCheck = DBUtils.prepareStatement(con, sqlCheck);
-                pstmtCheck.setString(1, eng.trim());
-                pstmtCheck.setString(2, vi.trim());
+                pstmtCheck.setString(1, lowerEng);
+                pstmtCheck.setString(2, vi);
                 ResultSet rs = pstmtCheck.executeQuery();
                 if (rs.next() && rs.getInt(1) > 0) {
                     rs.close();
                     throw new Exception(
-                        "Từ \"" + eng.trim() + "\" có nghĩa tiếng Việt \"" + vi.trim()
+                        "Từ \"" + lowerEng + "\" có nghĩa tiếng Việt \"" + vi
                         + "\" đã tồn tại. Vui lòng thêm nghĩa tiếng Việt khác."
                     );
                 }
@@ -200,8 +207,8 @@ public class WordAdapterImpl implements WordAdapter {
 
             // Tat ca cac cap deu hop le, thuc hien insert
             pstmt = DBUtils.prepareStatement(con, SQL_INSERT_WORD);
-            for (String vi : viList) {
-                pstmt.setString(1, eng);
+            for (String vi : lowerViList) {
+                pstmt.setString(1, lowerEng);
                 pstmt.setString(2, vi);
                 pstmt.addBatch();
             }
@@ -305,17 +312,21 @@ public class WordAdapterImpl implements WordAdapter {
         try {
             con = DBUtils.getConnection(thisMethod, false, Connection.TRANSACTION_READ_COMMITTED);
 
+            // Lowercase eng and vi before processing
+            String lowerEng = eng.toLowerCase().trim();
+            String lowerVi = vi.toLowerCase().trim();
+
             // Kiem tra cap (eng, vi) da ton tai chua, bo qua chinh record dang sua
             String sqlCheck = "SELECT COUNT(*) FROM WORDS WHERE LOWER(ENG) = LOWER(?) AND LOWER(VI) = LOWER(?) AND ID != ?";
             pstmtCheck = DBUtils.prepareStatement(con, sqlCheck);
-            pstmtCheck.setString(1, eng.trim());
-            pstmtCheck.setString(2, vi.trim());
+            pstmtCheck.setString(1, lowerEng);
+            pstmtCheck.setString(2, lowerVi);
             pstmtCheck.setLong(3, id);
             ResultSet rs = pstmtCheck.executeQuery();
             if (rs.next() && rs.getInt(1) > 0) {
                 rs.close();
                 throw new Exception(
-                    "Từ \"" + eng.trim() + "\" có nghĩa tiếng Việt \"" + vi.trim()
+                    "Từ \"" + lowerEng + "\" có nghĩa tiếng Việt \"" + lowerVi
                     + "\" đã tồn tại. Vui lòng nhập nghĩa tiếng Việt khác."
                 );
             }
@@ -325,8 +336,8 @@ public class WordAdapterImpl implements WordAdapter {
 
             // Thuc hien update
             pstmt = DBUtils.prepareStatement(con, SQL_UPDATE_WORD);
-            pstmt.setString(1, eng);
-            pstmt.setString(2, vi);
+            pstmt.setString(1, lowerEng);
+            pstmt.setString(2, lowerVi);
             pstmt.setLong(3, id);
             int rows = pstmt.executeUpdate();
             con.commit();
