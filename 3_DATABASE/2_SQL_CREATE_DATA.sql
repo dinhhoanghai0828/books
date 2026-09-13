@@ -437,7 +437,7 @@ INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,CHE
 	(UUID(),'esl-fast-beginner-1-93','A Kind Stranger','Một người lạ tốt bụng','BEGINNER_01_ESL_FAST_CHILDREN_093.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1','NO',0,93);
 
 INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,CHECKED,IS_READ,NUMBER) VALUES
-	(UUID(),'esl-fast-beginner-2-1','Going to School','Đi tới trường','BEGINNER_02_ESL_FAST_CHILDREN_001.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2','NO',0,1),
+	(UUID(),'esl-fast-beginner-2-1','Going to School','Đi tới trường','BEGINNER_02_ESL_FAST_CHILDREN_001.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2','YES',0,1),
 	(UUID(),'esl-fast-beginner-2-2','A Nice Teacher','Một giáo viên tốt','BEGINNER_02_ESL_FAST_CHILDREN_002.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2','NO',0,2),
 	(UUID(),'esl-fast-beginner-2-3','Harry Studies Everywhere','Harry học ở mọi nơi','BEGINNER_02_ESL_FAST_CHILDREN_003.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2','NO',0,3),
 	(UUID(),'esl-fast-beginner-2-4','The Coloring Book','Cuốn sách tô màu','BEGINNER_02_ESL_FAST_CHILDREN_004.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2','NO',0,4),

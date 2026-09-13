@@ -1,6 +1,6 @@
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	/* (UUID(),'esl-fast-beginner-2-1','Going to School','Đi tới trường','BEGINNER_02_ESL_FAST_CHILDREN_001.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2','NO',1) */
-	('He eats his breakfast','Cậu ấy ăn bữa sáng','00:00:00.130','00:00:03.400','esl-fast-beginner-2-1'),
+	('He eats his breakfast','Cậu bé ăn bữa sáng','00:00:00.130','00:00:03.400','esl-fast-beginner-2-1'),
 	('He leaves his house','Cậu bé rời khỏi nhà','00:00:03.810','00:00:06.490','esl-fast-beginner-2-1'),
 	('He walks to the bus stop','Cậu bé đi bộ đến trạm xe buýt','00:00:07.310','00:00:10.230','esl-fast-beginner-2-1'),
 	('He waits five minutes','Cậu bé đợi năm phút','00:00:10.890','00:00:13.630','esl-fast-beginner-2-1'),

@@ -9,7 +9,7 @@ import { App, Layout } from 'antd';
 import { Content } from 'antd/es/layout/layout';
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import '../../styles/global.css';
 import '../../styles/home-page.css';
 
@@ -24,7 +24,7 @@ const WordsPage = () => {
     const [pageSize, setPageSize]     = useState(50);
     const [totalItems, setTotalItems] = useState(0);
 
-    const fetchWords = async () => {
+    const fetchWords = useCallback(async () => {
         NProgress.start();
         try {
             const response = await getWordSearch(
@@ -40,16 +40,19 @@ const WordsPage = () => {
         } finally {
             NProgress.done();
         }
-    };
+    }, [searchEng, searchVi, currentPage, pageSize]);
 
+    // Fetch data on component mount and when search parameters change
     useEffect(() => {
         fetchWords();
-    }, [searchEng, searchVi, currentPage, pageSize]);
+    }, [fetchWords]);
 
     const handleSearch = (eng: string, vi: string) => {
         setSearchEng(eng);
         setSearchVi(vi);
         setCurrentPage(1);
+        // Force refresh data
+        fetchWords();
     };
 
     const handlePageChange = (page: number, size: number) => {
