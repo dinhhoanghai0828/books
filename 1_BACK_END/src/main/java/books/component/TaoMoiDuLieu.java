@@ -13,6 +13,14 @@ import java.util.Scanner;
 
 public class TaoMoiDuLieu {
 
+    private static String getTextFromSentence(List<String> sentence) {
+        StringBuilder text = new StringBuilder();
+        for (int i = 2; i < sentence.size(); i++) {
+            text.append(sentence.get(i)).append(" ");
+        }
+        return text.toString().trim();
+    }
+
     public static List<String> splitSentences(String input) {
         String ellipsisPlaceholder = "[ELLIPSIS]";
         String doubleDotPlaceholder = "[DOUBLE_DOT]";
@@ -134,6 +142,39 @@ public class TaoMoiDuLieu {
                         }
                     }
                 }
+
+                // Merge consecutive subtitle lines that belong to the same sentence
+                List<List<String>> mergedListSetences = new ArrayList<>();
+                for (int i = 0; i < listSetences.size(); i++) {
+                    List<String> currentSentence = listSetences.get(i);
+                    
+                    if (mergedListSetences.isEmpty()) {
+                        mergedListSetences.add(currentSentence);
+                    } else {
+                        List<String> lastSentence = mergedListSetences.get(mergedListSetences.size() - 1);
+                        
+                        // Check if current sentence text ends without punctuation and should be merged
+                        String lastText = getTextFromSentence(lastSentence);
+                        String currentText = getTextFromSentence(currentSentence);
+                        
+                        // Merge if last sentence doesn't end with . ? ! and current sentence doesn't start with capital letter
+                        // Also merge if current text starts with lowercase letter
+                        boolean shouldMerge = !lastText.matches(".*[.!?]$") && 
+                                             (!currentText.matches("^[A-Z].*") || currentText.matches("^[a-z].*"));
+                        
+                        if (shouldMerge) {
+                            // Merge the sentences
+                            List<String> mergedSentence = new ArrayList<>();
+                            mergedSentence.add(lastSentence.get(0)); // Keep first timestamp
+                            mergedSentence.add(currentSentence.get(1)); // Use current end timestamp
+                            mergedSentence.add(lastText.trim() + " " + currentText.trim());
+                            mergedListSetences.set(mergedListSetences.size() - 1, mergedSentence);
+                        } else {
+                            mergedListSetences.add(currentSentence);
+                        }
+                    }
+                }
+                listSetences = mergedListSetences;
 
                 List<books.read.Object> listObject = new ArrayList<>();
                 for (int i = 0; i < listSetences.size(); i++) {
