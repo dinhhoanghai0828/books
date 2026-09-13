@@ -1,5 +1,5 @@
 import { Volume } from '@/interfaces/volume';
-import { CheckOutlined, EditOutlined, DownloadOutlined, BookOutlined, FilePdfOutlined, FileWordOutlined, DownOutlined } from '@ant-design/icons';
+import { CheckOutlined, EditOutlined, DownloadOutlined, BookOutlined, FilePdfOutlined, FileWordOutlined, DownOutlined, CloseOutlined } from '@ant-design/icons';
 import { Button, Checkbox, Col, Empty, Form, Input, Modal, Row, Select, Typography, notification, Dropdown } from 'antd';
 import { Content } from 'antd/es/layout/layout';
 import Link from 'next/link';
@@ -27,6 +27,7 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
   });
   const [exportLoading, setExportLoading] = useState(false);
   const [markReadLoading, setMarkReadLoading] = useState<string | null>(null);
+  const [checkedLoading, setCheckedLoading] = useState<string | null>(null);
   const [downloadLoading, setDownloadLoading] = useState(false);
   const [pdfLoading, setPdfLoading] = useState(false);
   const [selectModalOpen, setSelectModalOpen] = useState(false);
@@ -160,6 +161,34 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
       });
     } finally {
       setMarkReadLoading(null);
+    }
+  };
+
+  const handleToggleChecked = async (volume: Volume, e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    try {
+      setCheckedLoading(volume.slug);
+      const newChecked = volume.checked === 'YES' ? 'NO' : 'YES';
+      await updateVolume(volume.id, volume.eng, volume.vi, volume.startTime, volume.endTime, newChecked);
+      notifApi.success({
+        message: 'Cap nhat thanh cong',
+        description: `Tap da duoc danh dau la ${newChecked === 'YES' ? 'da hoan thanh' : 'chua hoan thanh'}.`,
+        placement: 'topRight',
+        duration: 3,
+        style: { backgroundColor: '#f6ffed', border: '1px solid #b7eb8f' },
+      });
+      onVolumeUpdate?.();
+    } catch (error: any) {
+      notifApi.error({
+        message: 'Cap nhat that bai',
+        description: error.message || 'Da xay ra loi, vui long thu lai.',
+        placement: 'topRight',
+        duration: 4,
+        style: { backgroundColor: '#fff2f0', border: '1px solid #ffccc7' },
+      });
+    } finally {
+      setCheckedLoading(null);
     }
   };
 
@@ -359,9 +388,14 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
                       Tap {volume.number}
                     </Typography.Title>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                      {volume.checked === 'YES' && (
-                        <CheckOutlined style={{ color: 'green' }} />
-                      )}
+                      <Button
+                        type="link"
+                        icon={volume.checked === 'YES' ? <CheckOutlined /> : <CloseOutlined />}
+                        onClick={(e) => handleToggleChecked(volume, e)}
+                        loading={checkedLoading === volume.slug}
+                        style={{ padding: 0, color: volume.checked === 'YES' ? 'green' : 'red' }}
+                        title={volume.checked === 'YES' ? 'Đánh dấu chưa hoàn thành' : 'Đánh dấu hoàn thành'}
+                      />
                       <Button
                         type="link"
                         icon={<EditOutlined />}
