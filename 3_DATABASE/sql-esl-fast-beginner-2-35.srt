@@ -1,0 +1,39 @@
+1
+00:00:00,680 --> 00:00:01,800
+(Được chép bởi TurboScribe. Nâng cấp lên Không giới hạn để gỡ bỏ thông báo này.) It is spring.
+
+2
+00:00:02,620 --> 00:00:06,160
+It is nice and sunny at the beach.
+
+3
+00:00:06,980 --> 00:00:09,300
+The sun is shining.
+
+4
+00:00:10,280 --> 00:00:12,380
+There is a nice breeze.
+
+5
+00:00:13,360 --> 00:00:15,960
+People are swimming in the water.
+
+6
+00:00:16,760 --> 00:00:20,340
+People are tanning under the sun.
+
+7
+00:00:21,440 --> 00:00:24,560
+Sam is making a sand castle.
+
+8
+00:00:25,360 --> 00:00:28,560
+No one else is making a sand castle.
+
+9
+00:00:29,360 --> 00:00:33,060
+He can use all the sand he wants.
+
+10
+00:00:33,860 --> 00:00:37,300
+He can make his castle huge.
