@@ -385,9 +385,14 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
                 >
                   {/* Dong so tap va icon da hoc */}
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <Typography.Title level={5} style={{ marginBottom: 0 }}>
-                      Tap {volume.number}
-                    </Typography.Title>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                      <Typography.Title level={5} style={{ marginBottom: 0 }}>
+                        Tap {volume.number}
+                      </Typography.Title>
+                      {volume.isReviewCompleted === 0 && (
+                        <span style={{ fontSize: '12px', color: '#ff4d4f', fontWeight: 'bold' }}>Chưa duyệt</span>
+                      )}
+                    </div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                       <Button
                         type="link"
@@ -397,6 +402,9 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
                         style={{ padding: 0, color: volume.isLanguageApproved === 1 ? 'green' : 'red' }}
                         title={volume.isLanguageApproved === 1 ? 'Đánh dấu chưa duyệt ngôn ngữ' : 'Đánh dấu đã duyệt ngôn ngữ'}
                       />
+                      {volume.isReviewCompleted === 1 && (
+                          <span style={{ fontSize: '12px', color: '#52c41a', fontWeight: 'bold' }}>Đã duyệt</span>
+                      )}
                       <Button
                         type="link"
                         icon={<EditOutlined />}
@@ -533,9 +541,9 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
         width={600}
       >
         <div style={{ maxHeight: '400px', overflowY: 'auto', padding: '8px 0' }}>
-          <div style={{ 
-            padding: '12px 16px', 
-            backgroundColor: '#f5f5f5', 
+          <div style={{
+            padding: '12px 16px',
+            backgroundColor: '#f5f5f5',
             borderRadius: '8px',
             marginBottom: '16px'
           }}>
@@ -586,7 +594,7 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
                   }}
                   style={{ marginBottom: 4 }}
                 >
-                  <span style={{ 
+                  <span style={{
                     fontWeight: volume.isRead === 1 ? 'bold' : '500',
                     fontSize: '14px',
                     color: volume.isRead === 1 ? '#1890ff' : '#000'
@@ -594,16 +602,16 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
                     Tập {volume.number}: {volume.eng}
                   </span>
                   {volume.isRead === 1 && (
-                    <span style={{ 
-                      color: '#52c41a', 
+                    <span style={{
+                      color: '#52c41a',
                       marginLeft: 8,
                       fontSize: '12px',
                       fontWeight: 'normal'
                     }}>(Đã đọc)</span>
                   )}
                 </Checkbox>
-                <div style={{ 
-                  fontSize: '13px', 
+                <div style={{
+                  fontSize: '13px',
                   color: '#666',
                   marginLeft: 24,
                   marginTop: 4

@@ -342,7 +342,7 @@ INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,IS_
 	(UUID(),'english-fairy-tales-65','A Magical Winter','Một Mùa Đông Kỳ Diệu','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_065.mp3',NULL,'00:00:05.360','00:15:43.730','english-fairy-tales',0,0,0,65);
 
 INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,IS_LANGUAGE_APPROVED,IS_REVIEW_COMPLETED,IS_READ,NUMBER) VALUES
-	(UUID(),'esl-fast-beginner-1-1','Going to the Zoo','Đi tới sở thú','BEGINNER_01_ESL_FAST_CHILDREN_001.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-children-1',1,0,1,1),
+	(UUID(),'esl-fast-beginner-1-1','Going to the Zoo','Đi tới sở thú','BEGINNER_01_ESL_FAST_CHILDREN_001.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-children-1',0,0,1,1),
 	(UUID(),'esl-fast-beginner-1-2','Christmas Time','Giáng sinh','BEGINNER_01_ESL_FAST_CHILDREN_002.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-children-1',1,0,1,2),
 	(UUID(),'esl-fast-beginner-1-3','She Goes to the Nurse','Cô ấy đến gặp y tá','BEGINNER_01_ESL_FAST_CHILDREN_003.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-children-1',1,0,1,3),
 	(UUID(),'esl-fast-beginner-1-4','Waiting','Chờ đợi','BEGINNER_01_ESL_FAST_CHILDREN_004.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,0,1,4),
