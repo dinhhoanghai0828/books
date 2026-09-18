@@ -1,0 +1,39 @@
+1
+00:00:00,620 --> 00:00:02,920
+(Được chép bởi TurboScribe. Nâng cấp lên Không giới hạn để gỡ bỏ thông báo này.) You cannot kill a person.
+
+2
+00:00:03,660 --> 00:00:05,740
+That is against the law.
+
+3
+00:00:06,340 --> 00:00:07,860
+You will go to jail.
+
+4
+00:00:08,620 --> 00:00:11,560
+You cannot kill someone else's dog.
+
+5
+00:00:12,100 --> 00:00:14,700
+That is against the law too.
+
+6
+00:00:15,620 --> 00:00:18,160
+You can kill an ant.
+
+7
+00:00:18,920 --> 00:00:20,620
+No one likes ants.
+
+8
+00:00:21,580 --> 00:00:23,260
+Ants eat your food.
+
+9
+00:00:24,300 --> 00:00:26,460
+Ants invade your house.
+
+10
+00:00:26,460 --> 00:00:30,920
+Killing ants is not against the law.
