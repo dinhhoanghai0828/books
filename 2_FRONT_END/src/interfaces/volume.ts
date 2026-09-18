@@ -16,7 +16,8 @@ export interface Volume {
   startTime: string;       // Thoi gian bat dau cua tap
   endTime: string;         // Thoi gian ket thuc cua tap
   bookId: string;          // ID sach
-  checked: string;         // Trang thai da hoan thanh
+  isLanguageApproved: number;  // Trang thai da duyet ngon ngu (0: chua duyet, 1: da duyet)
+  isReviewCompleted: number;   // Trang thai da hoan thanh review (0: chua review, 1: da review)
   img: string;             // Ten file anh
   number: number;          // So thu tu
   isRead: number;          // Trang thai da doc xong (0: chua doc, 1: da doc)

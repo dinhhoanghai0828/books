@@ -68,7 +68,8 @@ public class BookAdapterImpl implements BookAdapter {
                 volume.setImg(rs.getString("IMG"));
                 volume.setBookSlug(rs.getString("BOOK_SLUG"));
                 volume.setNumber(rs.getInt("NUMBER"));
-                volume.setChecked(rs.getString("CHECKED"));
+                volume.setIsLanguageApproved(rs.getInt("IS_LANGUAGE_APPROVED"));
+                volume.setIsReviewCompleted(rs.getInt("IS_REVIEW_COMPLETED"));
                 volume.setIsRead(rs.getInt("IS_READ"));
                 volumes.add(volume);
             }

@@ -9,6 +9,7 @@ export interface ContentType {
   bookEngName: string;
   audio: string;
   video?: string;  // Duong dan file video tuong ung voi cau (co the khong co)
-  checked: string;
+  isLanguageApproved: number;
+  isReviewCompleted: number;
   missingWords: string[];
 }

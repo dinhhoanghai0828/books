@@ -29,7 +29,12 @@ public class ContentServiceImpl implements ContentService {
     public List<ContentDTO> getContentByVolumeSlug(String volumeSlug) throws Exception {
         List<Content> contents = contentAdapter.getContentByVolumeSlug(volumeSlug);
         List<ContentDTO> contentDTOS = contents.stream()
-                .map(content -> modelMapper.map(content, ContentDTO.class))
+                .map(content -> {
+                    ContentDTO dto = modelMapper.map(content, ContentDTO.class);
+                    dto.setIsLanguageApproved(content.getIsLanguageApproved());
+                    dto.setIsReviewCompleted(content.getIsReviewCompleted());
+                    return dto;
+                })
                 .collect(Collectors.toList());
 
         return contentDTOS;
@@ -40,7 +45,12 @@ public class ContentServiceImpl implements ContentService {
         Map<String, Object> result = contentAdapter.getContents(eng, vi, page, size);
         List<Content> contents = (List<Content>) result.get("CONTENTS");
         List<ContentDTO> contentDTOS = contents.stream()
-                .map(content -> modelMapper.map(content, ContentDTO.class))
+                .map(content -> {
+                    ContentDTO dto = modelMapper.map(content, ContentDTO.class);
+                    dto.setIsLanguageApproved(content.getIsLanguageApproved());
+                    dto.setIsReviewCompleted(content.getIsReviewCompleted());
+                    return dto;
+                })
                 .collect(Collectors.toList());
 
         result.put("CONTENTS", contentDTOS);

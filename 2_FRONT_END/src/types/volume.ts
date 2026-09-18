@@ -8,7 +8,8 @@ export interface Volume {
   startTime: string;
   endTime: string;
   bookId: string;
-  checked: string;
+  isLanguageApproved: number;
+  isReviewCompleted: number;
   img: string;
   number: number;
 }

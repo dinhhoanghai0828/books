@@ -20,7 +20,7 @@ public class ContentAdapterImpl implements ContentAdapter {
     private static final String SQL_GET_CONTENTS_BY_VOLUME_SLUG = "SELECT C.*, V.ENG AS VOLUME_ENG, V.VI AS VOLUME_VI, V.AUDIO AS AUDIO, V.VIDEO AS VIDEO FROM CONTENTS C JOIN VOLUMES V ON C.VOLUME_SLUG = V.SLUG WHERE V.SLUG = ?";
     private static final String SQL_GET_MISSING_WORDS = "SELECT * FROM MISSING_WORDS";
     private static final String SQL_COUNT_CONTENTS_SEARCH = "SELECT COUNT(*) FROM CONTENTS WHERE 1 = 1 ";
-    private static final String SQL_GET_CONTENTS_SEARCH = "SELECT C.*, V.ENG AS VOLUME_ENG, V.VI AS VOLUME_VI, V.AUDIO AS AUDIO, V.VIDEO AS VIDEO, V.CHECKED AS CHECKED, V.NUMBER AS NUMBER, B.ENG AS BOOK_ENG FROM CONTENTS C INNER JOIN VOLUMES V ON C.VOLUME_SLUG = V.SLUG  INNER JOIN BOOKS B ON B.SLUG = V.BOOK_SLUG WHERE 1 = 1 ";
+    private static final String SQL_GET_CONTENTS_SEARCH = "SELECT C.*, V.ENG AS VOLUME_ENG, V.VI AS VOLUME_VI, V.AUDIO AS AUDIO, V.VIDEO AS VIDEO, V.IS_LANGUAGE_APPROVED AS IS_LANGUAGE_APPROVED, V.IS_REVIEW_COMPLETED AS IS_REVIEW_COMPLETED, V.NUMBER AS NUMBER, B.ENG AS BOOK_ENG FROM CONTENTS C INNER JOIN VOLUMES V ON C.VOLUME_SLUG = V.SLUG  INNER JOIN BOOKS B ON B.SLUG = V.BOOK_SLUG WHERE 1 = 1 ";
     private static final String SQL_UPDATE_CONTENT = "UPDATE CONTENTS SET ENG = ?, VI = ?, START_TIME = ?, END_TIME = ? WHERE ID = ?";
 
     @Override
@@ -180,7 +180,7 @@ public class ContentAdapterImpl implements ContentAdapter {
                 sql.append(" AND UPPER(C.VI) REGEXP CONCAT('\\\\b', UPPER(?), '\\\\b')");
             }
             if (StringUtils.isNotBlank(eng) || StringUtils.isNotBlank(vi)) {
-                sql.append(" ORDER BY V.CHECKED DESC");
+                sql.append(" ORDER BY V.IS_LANGUAGE_APPROVED DESC");
             }
             sql.append(" LIMIT ? OFFSET ?");
             pstmt = DBUtils.prepareStatement(con, sql.toString());
@@ -207,7 +207,8 @@ public class ContentAdapterImpl implements ContentAdapter {
                 content.setBookEngName(rs.getString("BOOK_ENG") + " " + rs.getString("NUMBER"));
                 content.setAudio(rs.getString("AUDIO"));
                 content.setVideo(rs.getString("VIDEO"));
-                content.setChecked(rs.getString("CHECKED"));
+                content.setIsLanguageApproved(rs.getInt("IS_LANGUAGE_APPROVED"));
+                content.setIsReviewCompleted(rs.getInt("IS_REVIEW_COMPLETED"));
                 contents.add(content);
             }
             result.put("CONTENTS", contents);

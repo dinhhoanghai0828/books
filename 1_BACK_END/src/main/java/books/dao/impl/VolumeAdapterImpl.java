@@ -20,7 +20,7 @@ public class VolumeAdapterImpl implements VolumeAdapter {
     private static final String SQL_GET_VOLUMES = "SELECT * FROM VOLUMES";
     private static final String SQL_GET_VOLUME_DETAIL_BY_SLUG = "SELECT * FROM VOLUMES WHERE SLUG = ?";
     private static final String SQL_GET_VOLUME_WITH_CONTENTS_BY_SLUG = "SELECT V.*, C.ID as CONTENT_ID, C.ENG as CONTENT_ENG, C.VI as CONTENT_VI, C.START_TIME as CONTENT_START_TIME, C.END_TIME as CONTENT_END_TIME FROM VOLUMES V LEFT JOIN CONTENTS C ON V.SLUG = C.VOLUME_SLUG WHERE V.SLUG = ? ORDER BY C.ID";
-    private static final String SQL_UPDATE_VOLUME = "UPDATE VOLUMES SET ENG = ?, VI = ?, START_TIME = ?, END_TIME = ?, CHECKED = ? WHERE ID = ?";
+    private static final String SQL_UPDATE_VOLUME = "UPDATE VOLUMES SET ENG = ?, VI = ?, START_TIME = ?, END_TIME = ?, IS_LANGUAGE_APPROVED = ?, IS_REVIEW_COMPLETED = ? WHERE ID = ?";
     private static final String SQL_MARK_AS_READ = "UPDATE VOLUMES SET IS_READ = 1 WHERE SLUG = ?";
     private static final String SQL_MARK_AS_UNREAD = "UPDATE VOLUMES SET IS_READ = 0 WHERE SLUG = ?";
     private static final String SQL_GET_VOLUMES_BY_BOOK_SLUG = "SELECT * FROM VOLUMES WHERE BOOK_SLUG = ? ORDER BY NUMBER";
@@ -50,7 +50,8 @@ public class VolumeAdapterImpl implements VolumeAdapter {
                 volume.setEndTime(rs.getString("END_TIME"));
                 volume.setBookSlug(rs.getString("BOOK_SLUG"));
                 volume.setNumber(rs.getInt("NUMBER"));
-                volume.setChecked(rs.getString("CHECKED"));
+                volume.setIsLanguageApproved(rs.getInt("IS_LANGUAGE_APPROVED"));
+                volume.setIsReviewCompleted(rs.getInt("IS_REVIEW_COMPLETED"));
                 volume.setIsRead(rs.getInt("IS_READ"));
                 volumes.add(volume);
             }
@@ -93,7 +94,8 @@ public class VolumeAdapterImpl implements VolumeAdapter {
                     volume.setEndTime(rs.getString("END_TIME"));
                     volume.setBookSlug(rs.getString("BOOK_SLUG"));
                     volume.setNumber(rs.getInt("NUMBER"));
-                    volume.setChecked(rs.getString("CHECKED"));
+                    volume.setIsLanguageApproved(rs.getInt("IS_LANGUAGE_APPROVED"));
+                    volume.setIsReviewCompleted(rs.getInt("IS_REVIEW_COMPLETED"));
                     volume.setIsRead(rs.getInt("IS_READ"));
                     volume.setSlug(rs.getString("SLUG"));
                     volume.setContents(contents);
@@ -133,8 +135,9 @@ public class VolumeAdapterImpl implements VolumeAdapter {
             pstmt.setString(2, volume.getVi());
             pstmt.setString(3, volume.getStartTime());
             pstmt.setString(4, volume.getEndTime());
-            pstmt.setString(5, volume.getChecked());
-            pstmt.setString(6, volume.getId());
+            pstmt.setInt(5, volume.getIsLanguageApproved());
+            pstmt.setInt(6, volume.getIsReviewCompleted());
+            pstmt.setString(7, volume.getId());
             int result = pstmt.executeUpdate();
             return result > 0;
         } catch (Exception ex) {
@@ -220,7 +223,8 @@ public class VolumeAdapterImpl implements VolumeAdapter {
                     currentVolume.setEndTime(rs.getString("END_TIME"));
                     currentVolume.setBookSlug(rs.getString("BOOK_SLUG"));
                     currentVolume.setNumber(rs.getInt("NUMBER"));
-                    currentVolume.setChecked(rs.getString("CHECKED"));
+                    currentVolume.setIsLanguageApproved(rs.getInt("IS_LANGUAGE_APPROVED"));
+                    currentVolume.setIsReviewCompleted(rs.getInt("IS_REVIEW_COMPLETED"));
                     currentVolume.setIsRead(rs.getInt("IS_READ"));
                     currentVolume.setSlug(rs.getString("SLUG"));
                     currentVolume.setContents(new ArrayList<>());

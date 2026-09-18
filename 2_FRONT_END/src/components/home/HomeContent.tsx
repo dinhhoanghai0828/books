@@ -619,7 +619,7 @@ const HomeContent = React.memo(({
                     )}
                   </Text>
                   <Space>
-                    {item.checked === 'YES' && (
+                    {item.isLanguageApproved === 1 && (
                       <CheckOutlined style={{ color: 'green', fontSize: 22 }} />
                     )}
                     {/* Nut Play / Pause */}

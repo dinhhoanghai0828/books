@@ -14,7 +14,8 @@ public class ContentDTO {
     private String bookEngName;
     private String audio;
     private String video;
-    private String checked;
+    private int isLanguageApproved;
+    private int isReviewCompleted;
     private List<String> missingWords;
 
     public List<String> getMissingWords() {
@@ -105,12 +106,20 @@ public class ContentDTO {
         this.audio = audio;
     }
 
-    public String getChecked() {
-        return checked;
+    public int getIsLanguageApproved() {
+        return isLanguageApproved;
     }
 
-    public void setChecked(String checked) {
-        this.checked = checked;
+    public void setIsLanguageApproved(int isLanguageApproved) {
+        this.isLanguageApproved = isLanguageApproved;
+    }
+
+    public int getIsReviewCompleted() {
+        return isReviewCompleted;
+    }
+
+    public void setIsReviewCompleted(int isReviewCompleted) {
+        this.isReviewCompleted = isReviewCompleted;
     }
 
     public String getVideo() {

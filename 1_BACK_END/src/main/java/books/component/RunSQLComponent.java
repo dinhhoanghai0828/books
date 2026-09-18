@@ -511,7 +511,8 @@ public class RunSQLComponent {
                             bookSlug = bookSlug.replace("\'", "\\'");
                         }
                     }
-                    String checked = resultSet.getString("CHECKED");
+                    int isLanguageApproved = resultSet.getInt("IS_LANGUAGE_APPROVED");
+                    int isReviewCompleted = resultSet.getInt("IS_REVIEW_COMPLETED");
                     int isRead = resultSet.getInt("IS_READ");
                     int number = resultSet.getInt("NUMBER");
 
@@ -520,13 +521,12 @@ public class RunSQLComponent {
                     String imgSql = (img == null) ? "NULL" : "'" + img + "'";
                     String startTimeSql = (startTime == null) ? "NULL" : "'" + startTime + "'";
                     String endTimeSql = (endTime == null) ? "NULL" : "'" + endTime + "'";
-                    String checkedSql = (checked == null) ? "NULL" : "'" + checked + "'";
 
                     // Check if book_slug changed
                     if (currentBookSlug == null || !currentBookSlug.equals(bookSlug)) {
                         // Flush previous group if exists
                         if (currentBookSlug != null && !currentGroupValues.isEmpty()) {
-                            volumeSql.append("INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,CHECKED,IS_READ,NUMBER) VALUES\n");
+                            volumeSql.append("INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,IS_LANGUAGE_APPROVED,IS_REVIEW_COMPLETED,IS_READ,NUMBER) VALUES\n");
                             for (int j = 0; j < currentGroupValues.size(); j++) {
                                 String value = currentGroupValues.get(j);
                                 if (j == currentGroupValues.size() - 1) {
@@ -541,7 +541,7 @@ public class RunSQLComponent {
                         currentGroupValues.clear();
                     }
 
-                    String value = "\t(UUID(),'" + slug + "','" + eng + "','" + vi + "'," + audioSql + "," + imgSql + "," + startTimeSql + "," + endTimeSql + ",'" + bookSlug + "'," + checkedSql + "," + isRead + "," + number + ")";
+                    String value = "\t(UUID(),'" + slug + "','" + eng + "','" + vi + "'," + audioSql + "," + imgSql + "," + startTimeSql + "," + endTimeSql + ",'" + bookSlug + "'," + isLanguageApproved + "," + isReviewCompleted + "," + isRead + "," + number + ")";
                     currentGroupValues.add(value);
                 } catch (Exception e) {
                     System.out.println(resultSet.getString("SLUG"));
@@ -552,7 +552,7 @@ public class RunSQLComponent {
 
             // Flush the last group
             if (!currentGroupValues.isEmpty()) {
-                volumeSql.append("INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,CHECKED,IS_READ,NUMBER) VALUES\n");
+                volumeSql.append("INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,IS_LANGUAGE_APPROVED,IS_REVIEW_COMPLETED,IS_READ,NUMBER) VALUES\n");
                 for (int j = 0; j < currentGroupValues.size(); j++) {
                     String value = currentGroupValues.get(j);
                     if (j == currentGroupValues.size() - 1) {
@@ -657,7 +657,7 @@ public class RunSQLComponent {
                 "SELECT C.ENG, C.VI, C.START_TIME, C.END_TIME, C.VOLUME_SLUG, " +
                 "V.SLUG AS V_SLUG, V.ENG AS V_ENG, V.VI AS V_VI, V.AUDIO AS V_AUDIO, " +
                 "V.START_TIME AS V_START, V.END_TIME AS V_END, V.BOOK_SLUG AS V_BOOK_SLUG, " +
-                "V.CHECKED AS V_CHECKED, V.NUMBER AS V_NUMBER, V.ID AS V_ID " +
+                "V.IS_LANGUAGE_APPROVED AS V_IS_LANGUAGE_APPROVED, V.IS_REVIEW_COMPLETED AS V_IS_REVIEW_COMPLETED, V.NUMBER AS V_NUMBER, V.ID AS V_ID " +
                 "FROM CONTENTS C " +
                 "INNER JOIN VOLUMES V ON C.VOLUME_SLUG = V.SLUG " +
                 "WHERE V.BOOK_SLUG = ? " +
@@ -716,7 +716,8 @@ public class RunSQLComponent {
                         String vStart    = rsContents.getString("V_START");
                         String vEnd      = rsContents.getString("V_END");
                         String vBookSlug = rsContents.getString("V_BOOK_SLUG");
-                        String vChecked  = rsContents.getString("V_CHECKED");
+                        int    vIsLanguageApproved = rsContents.getInt("V_IS_LANGUAGE_APPROVED");
+                        int    vIsReviewCompleted = rsContents.getInt("V_IS_REVIEW_COMPLETED");
                         int    vNumber   = rsContents.getInt("V_NUMBER");
 
                         if (eng   != null) eng   = eng.replace("'", "\\'");
@@ -757,7 +758,8 @@ public class RunSQLComponent {
                               .append(vEng).append("','").append(vVi).append("',")
                               .append(audioVal).append(",NULL,'")
                               .append(vStart).append("','").append(vEnd).append("','")
-                              .append(vBookSlug).append("','").append(vChecked).append("',")
+                              .append(vBookSlug).append("',").append(vIsLanguageApproved).append(",")
+                              .append(vIsReviewCompleted).append(",")
                               .append(vNumber).append(") */");
 
                             firstRowInInsert = false;

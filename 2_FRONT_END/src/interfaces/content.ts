@@ -14,6 +14,7 @@ export interface ContentType {
   bookEngName: string;    // Ten tieng Anh cua sach
   audio: string;           // Duong dan file audio cua cau
   video?: string;          // Duong dan file video tuong ung voi cau (co the khong co)
-  checked: string;         // Trang thai da hoan thanh
+  isLanguageApproved: number;  // Trang thai da duyet ngon ngu (0: chua duyet, 1: da duyet)
+  isReviewCompleted: number;   // Trang thai da hoan thanh review (0: chua review, 1: da review)
   missingWords: string[];  // Danh sach tu thieu trong cau (dung de highlight)
 }

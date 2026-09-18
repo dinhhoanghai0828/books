@@ -138,17 +138,18 @@ export const getVolumeDetail = async (slug: string): Promise<Volume> => {
   }
 };
 
-// Cap nhat tap (tieng Anh, tieng Viet, startTime, endTime, checked) theo id
+// Cap nhat tap (tieng Anh, tieng Viet, startTime, endTime, isLanguageApproved, isReviewCompleted) theo id
 export const updateVolume = async (
   id: string,
   eng: string,
   vi: string,
   startTime: string,
   endTime: string,
-  checked: string
+  isLanguageApproved: number,
+  isReviewCompleted: number
 ): Promise<void> => {
   try {
-    await apiClient.post('/volumes/update', { id, eng, vi, startTime, endTime, checked });
+    await apiClient.post('/volumes/update', { id, eng, vi, startTime, endTime, isLanguageApproved, isReviewCompleted });
   } catch (error: any) {
     throw new Error(getErrorMessage(error));
   }

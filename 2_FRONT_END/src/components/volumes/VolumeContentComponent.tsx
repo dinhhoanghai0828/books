@@ -46,7 +46,8 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
       vi: volume.vi,
       startTime: volume.startTime,
       endTime: volume.endTime,
-      checked: volume.checked,
+      isLanguageApproved: volume.isLanguageApproved,
+      isReviewCompleted: volume.isReviewCompleted,
     });
     setEditModalOpen(true);
   };
@@ -62,7 +63,7 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
     try {
       const values = await editForm.validateFields();
       setEditLoading(true);
-      await updateVolume(values.id, values.eng, values.vi, values.startTime, values.endTime, values.checked);
+      await updateVolume(values.id, values.eng, values.vi, values.startTime, values.endTime, values.isLanguageApproved, values.isReviewCompleted);
       notifApi.success({
         message: 'Cap nhat thanh cong',
         description: 'Thong tin tap da duoc luu lai.',
@@ -169,11 +170,11 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
     e.stopPropagation();
     try {
       setCheckedLoading(volume.slug);
-      const newChecked = volume.checked === 'YES' ? 'NO' : 'YES';
-      await updateVolume(volume.id, volume.eng, volume.vi, volume.startTime, volume.endTime, newChecked);
+      const newIsLanguageApproved = volume.isLanguageApproved === 1 ? 0 : 1;
+      await updateVolume(volume.id, volume.eng, volume.vi, volume.startTime, volume.endTime, newIsLanguageApproved, volume.isReviewCompleted);
       notifApi.success({
         message: 'Cap nhat thanh cong',
-        description: `Tap da duoc danh dau la ${newChecked === 'YES' ? 'da hoan thanh' : 'chua hoan thanh'}.`,
+        description: `Tap da duoc danh dau la ${newIsLanguageApproved === 1 ? 'da duyet ngon ngu' : 'chua duyet ngon ngu'}.`,
         placement: 'topRight',
         duration: 3,
         style: { backgroundColor: '#f6ffed', border: '1px solid #b7eb8f' },
@@ -390,11 +391,11 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
                     <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                       <Button
                         type="link"
-                        icon={volume.checked === 'YES' ? <CheckOutlined /> : <CloseOutlined />}
+                        icon={volume.isLanguageApproved === 1 ? <CheckOutlined /> : <CloseOutlined />}
                         onClick={(e) => handleToggleChecked(volume, e)}
                         loading={checkedLoading === volume.slug}
-                        style={{ padding: 0, color: volume.checked === 'YES' ? 'green' : 'red' }}
-                        title={volume.checked === 'YES' ? 'Đánh dấu chưa hoàn thành' : 'Đánh dấu hoàn thành'}
+                        style={{ padding: 0, color: volume.isLanguageApproved === 1 ? 'green' : 'red' }}
+                        title={volume.isLanguageApproved === 1 ? 'Đánh dấu chưa duyệt ngôn ngữ' : 'Đánh dấu đã duyệt ngôn ngữ'}
                       />
                       <Button
                         type="link"
@@ -489,13 +490,23 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
               <Input placeholder="00:00:00.000" />
             </Form.Item>
             <Form.Item
-              label="Trang thai"
-              name="checked"
+              label="Trang thai duyet ngon ngu"
+              name="isLanguageApproved"
               rules={[{ required: true, message: 'Vui long chon trang thai' }]}
             >
               <Select placeholder="Chọn trạng thái">
-                <Select.Option value="YES">YES</Select.Option>
-                <Select.Option value="NO">NO</Select.Option>
+                <Select.Option value={1}>YES</Select.Option>
+                <Select.Option value={0}>NO</Select.Option>
+              </Select>
+            </Form.Item>
+            <Form.Item
+              label="Trang thai hoan thanh review"
+              name="isReviewCompleted"
+              rules={[{ required: true, message: 'Vui long chon trang thai' }]}
+            >
+              <Select placeholder="Chọn trạng thái">
+                <Select.Option value={1}>YES</Select.Option>
+                <Select.Option value={0}>NO</Select.Option>
               </Select>
             </Form.Item>
           </Form>

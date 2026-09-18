@@ -16,7 +16,8 @@ public class VolumeDTO {
     private String startTime;
     private String endTime;
     private String bookSlug;
-    private String checked;
+    private int isLanguageApproved;
+    private int isReviewCompleted;
     private int isRead;
     private Date createdAt;
     private Date updatedAt;
@@ -105,12 +106,20 @@ public class VolumeDTO {
         this.bookSlug = bookSlug;
     }
 
-    public String getChecked() {
-        return checked;
+    public int getIsLanguageApproved() {
+        return isLanguageApproved;
     }
 
-    public void setChecked(String checked) {
-        this.checked = checked;
+    public void setIsLanguageApproved(int isLanguageApproved) {
+        this.isLanguageApproved = isLanguageApproved;
+    }
+
+    public int getIsReviewCompleted() {
+        return isReviewCompleted;
+    }
+
+    public void setIsReviewCompleted(int isReviewCompleted) {
+        this.isReviewCompleted = isReviewCompleted;
     }
 
     public int getIsRead() {

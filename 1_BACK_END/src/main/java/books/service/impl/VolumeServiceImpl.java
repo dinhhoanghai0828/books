@@ -33,6 +33,8 @@ public class VolumeServiceImpl implements VolumeService {
         List<VolumeDTO> volumeDTOS = volumes.stream().map(volume -> {
             VolumeDTO dto = modelMapper.map(volume, VolumeDTO.class);
             dto.setIsRead(volume.getIsRead());
+            dto.setIsLanguageApproved(volume.getIsLanguageApproved());
+            dto.setIsReviewCompleted(volume.getIsReviewCompleted());
             return dto;
         }).collect(Collectors.toList());
         return volumeDTOS;
@@ -43,6 +45,8 @@ public class VolumeServiceImpl implements VolumeService {
         Volume volume = volumeAdapter.getVolumeDetailBySlug(slug);
         VolumeDTO dto = modelMapper.map(volume, VolumeDTO.class);
         dto.setIsRead(volume.getIsRead());
+        dto.setIsLanguageApproved(volume.getIsLanguageApproved());
+        dto.setIsReviewCompleted(volume.getIsReviewCompleted());
         return dto;
     }
 
@@ -51,7 +55,9 @@ public class VolumeServiceImpl implements VolumeService {
         Volume volume = volumeAdapter.getVolumeDetailBySlug(slug);
         VolumeDTO dto = modelMapper.map(volume, VolumeDTO.class);
         dto.setIsRead(volume.getIsRead());
-        
+        dto.setIsLanguageApproved(volume.getIsLanguageApproved());
+        dto.setIsReviewCompleted(volume.getIsReviewCompleted());
+
         // Map contents from Volume entity to VolumeDTO
         if (volume.getContents() != null) {
             List<ContentDTO> contentDTOS = volume.getContents().stream()
@@ -59,7 +65,7 @@ public class VolumeServiceImpl implements VolumeService {
                 .collect(Collectors.toList());
             dto.setContents(contentDTOS);
         }
-        
+
         return dto;
     }
 
@@ -90,7 +96,9 @@ public class VolumeServiceImpl implements VolumeService {
         List<VolumeDTO> volumeDTOS = volumes.stream().map(volume -> {
             VolumeDTO dto = modelMapper.map(volume, VolumeDTO.class);
             dto.setIsRead(volume.getIsRead());
-            
+            dto.setIsLanguageApproved(volume.getIsLanguageApproved());
+            dto.setIsReviewCompleted(volume.getIsReviewCompleted());
+
             // Map contents from Volume entity to VolumeDTO
             if (volume.getContents() != null) {
                 List<ContentDTO> contentDTOS = volume.getContents().stream()
@@ -98,7 +106,7 @@ public class VolumeServiceImpl implements VolumeService {
                     .collect(Collectors.toList());
                 dto.setContents(contentDTOS);
             }
-            
+
             return dto;
         }).collect(Collectors.toList());
         return volumeDTOS;
