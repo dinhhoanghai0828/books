@@ -7,6 +7,7 @@ trù giúp tôi thời gian ở vị trí số 1 đi 200 đơn vị, cộng giú
 dịch hay và sát nghĩa điền vào '' tương ứng như câu mẫu
 (UUID(),'life-diary-animated-40','I\'m 7 But I Know Everything','Tôi 7 Tuổi Nhưng Biết Mọi Thứ','STORIES_TEEN_STORY_01_LIFE_DIARY_ANIMATED_040.mp3',NULL,'00:00:00.000','00:14:27.920','life-diary-animated','NO',40),
 
+Kiểm tra giúp tôi xem script này đã đúng với đoạn văn như bên dưới chưa, nếu đúng báo đúng, sai chỗ nào mới nêu ra
 
 https://turboscribe.ai/vi?ref=gad&gad_source=1&gclid=Cj0KCQiAz6q-BhCfARIsAOezPxmd9DwumaEAS-1spNngNw2qQfPG13ja8T9MM4idLqsOd4RhR4KgJ2MaAlUEEALw_wcB
 
@@ -22,3 +23,7 @@ Peppa Pig (Series 1) - Muddy Puddles (with subtitles)
 
 https://www.youtube.com/watch?v=bmR08GMho5s&list=PL9H5wl7jyq4RwVmeT12DY06PHwACABzod
 https://www.youtube.com/@peppapigsubtitled8981
+
+
+IS_LANGUAGE_APPROVED
+IS_REVIEW_COMPLETED
