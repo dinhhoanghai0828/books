@@ -28,6 +28,7 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
   const [exportLoading, setExportLoading] = useState(false);
   const [markReadLoading, setMarkReadLoading] = useState<string | null>(null);
   const [checkedLoading, setCheckedLoading] = useState<string | null>(null);
+  const [reviewLoading, setReviewLoading] = useState<string | null>(null);
   const [downloadLoading, setDownloadLoading] = useState(false);
   const [pdfLoading, setPdfLoading] = useState(false);
   const [selectModalOpen, setSelectModalOpen] = useState(false);
@@ -190,6 +191,34 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
       });
     } finally {
       setCheckedLoading(null);
+    }
+  };
+
+  const handleToggleReview = async (volume: Volume, e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    try {
+      setReviewLoading(volume.slug);
+      const newIsReviewCompleted = volume.isReviewCompleted === 1 ? 0 : 1;
+      await updateVolume(volume.id, volume.eng, volume.vi, volume.startTime, volume.endTime, volume.isLanguageApproved, newIsReviewCompleted);
+      notifApi.success({
+        message: 'Cap nhat thanh cong',
+        description: `Tap da duoc danh dau la ${newIsReviewCompleted === 1 ? 'da duyet' : 'chua duyet'}.`,
+        placement: 'topRight',
+        duration: 3,
+        style: { backgroundColor: '#f6ffed', border: '1px solid #b7eb8f' },
+      });
+      onVolumeUpdate?.();
+    } catch (error: any) {
+      notifApi.error({
+        message: 'Cap nhat that bai',
+        description: error.message || 'Da xay ra loi, vui long thu lai.',
+        placement: 'topRight',
+        duration: 4,
+        style: { backgroundColor: '#fff2f0', border: '1px solid #ffccc7' },
+      });
+    } finally {
+      setReviewLoading(null);
     }
   };
 
@@ -389,9 +418,21 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
                       <Typography.Title level={5} style={{ marginBottom: 0 }}>
                         Tap {volume.number}
                       </Typography.Title>
-                      {volume.isReviewCompleted === 0 && (
-                        <span style={{ fontSize: '12px', color: '#ff4d4f', fontWeight: 'bold' }}>Chưa duyệt</span>
-                      )}
+                      <Button
+                        type="link"
+                        onClick={(e) => handleToggleReview(volume, e)}
+                        loading={reviewLoading === volume.slug}
+                        style={{ 
+                          padding: 0, 
+                          fontSize: '12px', 
+                          color: volume.isReviewCompleted === 1 ? '#52c41a' : '#ff4d4f',
+                          fontWeight: 'bold',
+                          height: 'auto'
+                        }}
+                        title={volume.isReviewCompleted === 1 ? 'Đánh dấu chưa duyệt' : 'Đánh dấu đã duyệt'}
+                      >
+                        {volume.isReviewCompleted === 1 ? 'Đã duyệt' : 'Chưa duyệt'}
+                      </Button>
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                       <Button
@@ -402,9 +443,6 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
                         style={{ padding: 0, color: volume.isLanguageApproved === 1 ? 'green' : 'red' }}
                         title={volume.isLanguageApproved === 1 ? 'Đánh dấu chưa duyệt ngôn ngữ' : 'Đánh dấu đã duyệt ngôn ngữ'}
                       />
-                      {volume.isReviewCompleted === 1 && (
-                          <span style={{ fontSize: '12px', color: '#52c41a', fontWeight: 'bold' }}>Đã duyệt</span>
-                      )}
                       <Button
                         type="link"
                         icon={<EditOutlined />}
