@@ -1,0 +1,39 @@
+1
+00:00:00,010 --> 00:00:02,730
+(Được chép bởi TurboScribe. Nâng cấp lên Không giới hạn để gỡ bỏ thông báo này.) He finds a dog on the street.
+
+2
+00:00:03,290 --> 00:00:04,990
+There is no collar.
+
+3
+00:00:05,970 --> 00:00:07,410
+He likes dogs.
+
+4
+00:00:08,270 --> 00:00:09,970
+He takes it to his house.
+
+5
+00:00:10,890 --> 00:00:12,010
+He washes it.
+
+6
+00:00:12,830 --> 00:00:15,030
+He takes it to the veterinarian.
+
+7
+00:00:15,870 --> 00:00:17,250
+The dog is sick.
+
+8
+00:00:18,210 --> 00:00:19,730
+It will die soon.
+
+9
+00:00:20,570 --> 00:00:23,210
+The surgery will not help that much.
+
+10
+00:00:24,090 --> 00:00:27,170
+He decides to let the dog go.
