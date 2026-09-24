@@ -103,9 +103,29 @@ const MultipleChoicePage = () => {
     // key: questionCode → hiện/ẩn nghĩa câu hỏi
     // key: `${questionCode}-${answerCode}` → hiện/ẩn nghĩa từng đáp án
     const [shownVi, setShownVi] = useState<Record<string, boolean>>({});
+    const [showAllVi, setShowAllVi] = useState(false);
 
     const toggleVi = (key: string) =>
         setShownVi(prev => ({...prev, [key]: !prev[key]}));
+
+    // Hiện/ẩn toàn bộ tiếng Việt cùng lúc
+    const toggleAllViHandler = () => {
+        const next = !showAllVi;
+        setShowAllVi(next);
+        if (next) {
+            // Hiện tất cả — build map với mọi key = true
+            const all: Record<string, boolean> = {};
+            questions.forEach(q => {
+                all[q.questionCode] = true;
+                q.answers.forEach(a => {
+                    all[`${q.questionCode}-${getAnswerCode(a)}`] = true;
+                });
+            });
+            setShownVi(all);
+        } else {
+            setShownVi({});
+        }
+    };
 
     // TTS
     const currentAudioRef = useRef<HTMLAudioElement | null>(null);
@@ -398,7 +418,40 @@ const MultipleChoicePage = () => {
     const performSubmit = async () => {
         try {
             const result = await submitQuiz(userAnswers, questions);
-            setQuizResult(result);
+
+            // Double-check kết quả trên frontend để tránh lỗi so sánh backend
+            // Nếu isCorrect từ server sai, tự tính lại dựa vào isCorrect='Y' trong answers
+            const corrected = {
+                ...result,
+                questionResults: result.questionResults.map((qr, i) => {
+                    const q = questions[i];
+                    if (!q) return qr;
+                    const correctAnswer = q.answers.find(a => a.isCorrect === 'Y' || a.isCorrect === 'y');
+                    const correctCode = correctAnswer
+                        ? (correctAnswer.answerCode ?? correctAnswer.optionCode ?? '').trim()
+                        : '';
+                    const userAns = (userAnswers[q.questionCode] ?? '').trim();
+                    const isUnanswered = !userAns;
+                    const isCorrect = !isUnanswered && userAns === correctCode;
+                    return {
+                        ...qr,
+                        correctAnswer: correctCode,
+                        correctAnswerText: correctAnswer
+                            ? (correctAnswer.answerText ?? correctAnswer.optionText ?? '')
+                            : qr.correctAnswerText,
+                        isCorrect,
+                        isUnanswered,
+                    };
+                }),
+            };
+            // Tính lại tổng
+            const correct = corrected.questionResults.filter(r => r.isCorrect).length;
+            const unanswered = corrected.questionResults.filter(r => r.isUnanswered).length;
+            corrected.correctAnswers = correct;
+            corrected.unansweredQuestions = unanswered;
+            corrected.incorrectAnswers = corrected.totalQuestions - correct - unanswered;
+
+            setQuizResult(corrected);
             setIsChecked(true);
             setOpenConfirmModal(false);
             setConfirmLoading(false);
@@ -587,6 +640,7 @@ const MultipleChoicePage = () => {
         setMeaningViKeywords([]);
         setSelectedText('');
         setShownVi({});
+        setShowAllVi(false);
         setLoading(true);
         setQuestions([]);
         setUserAnswers({});
@@ -649,9 +703,9 @@ const MultipleChoicePage = () => {
                             value={questionLimit}
                             onChange={(val) => {
                                 setQuestionLimit(val);
-                                // Reset và load lại ngay với giới hạn mới
                                 stopSpeaking();
                                 setShownVi({});
+                                setShowAllVi(false);
                                 setUserAnswers({});
                                 setIsChecked(false);
                                 setQuizResult({} as QuizResultType);
@@ -670,6 +724,21 @@ const MultipleChoicePage = () => {
                             ]}
                         />
                     </div>
+
+                    {/* Nút hiện/ẩn toàn bộ tiếng Việt */}
+                    <Button
+                        size="small"
+                        icon={showAllVi ? <EyeInvisibleOutlined/> : <EyeOutlined/>}
+                        onClick={toggleAllViHandler}
+                        style={{
+                            color: showAllVi ? '#389e0d' : '#555',
+                            borderColor: showAllVi ? '#52c41a' : '#d9d9d9',
+                            background: showAllVi ? '#f6ffed' : 'white',
+                            whiteSpace: 'nowrap',
+                        }}
+                    >
+                        {showAllVi ? 'Ẩn tất cả nghĩa' : 'Hiện tất cả nghĩa'}
+                    </Button>
                 </div>
             )}
 
@@ -771,7 +840,20 @@ const MultipleChoicePage = () => {
                                                         marginBottom: 16,
                                                         padding: '12px 16px',
                                                         borderRadius: '6px',
-                                                        border: '1px solid #e8e8e8',
+                                                        border: (() => {
+                                                            if (!isChecked || !quizResult) return '1px solid #e8e8e8';
+                                                            const qr = quizResult.questionResults[index];
+                                                            if (code === qr?.correctAnswer) return '2px solid #52c41a';
+                                                            if (code === userAnswers[question.questionCode] && !qr?.isCorrect) return '2px solid #ff4d4f';
+                                                            return '1px solid #e8e8e8';
+                                                        })(),
+                                                        background: (() => {
+                                                            if (!isChecked || !quizResult) return 'white';
+                                                            const qr = quizResult.questionResults[index];
+                                                            if (code === qr?.correctAnswer) return '#f6ffed';
+                                                            if (code === userAnswers[question.questionCode] && !qr?.isCorrect) return '#fff1f0';
+                                                            return 'white';
+                                                        })(),
                                                         transition: 'all 0.3s',
                                                         cursor: isChecked ? 'not-allowed' : 'pointer',
                                                     }}
