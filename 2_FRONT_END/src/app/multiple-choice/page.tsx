@@ -162,6 +162,7 @@ const MultipleChoicePage = () => {
         return;
       }
 
+      // Neu khong co cau chua lam, nop bai truc tiep
       await performSubmit();
     } catch (error) {
       setConfirmLoading(false);
@@ -171,16 +172,22 @@ const MultipleChoicePage = () => {
 
   const performSubmit = async () => {
     try {
+      console.log('Đang nộp bài với userAnswers:', userAnswers);
+      console.log('Questions:', questions);
+      
       const result = await submitQuiz(userAnswers, questions);
+      console.log('Kết quả từ server:', result);
+      
       setQuizResult(result);
       setIsChecked(true);
       setOpenConfirmModal(false);
       setConfirmLoading(false);
-      // Delay một chút để modal đóng hoàn toàn trước khi mở modal kết quả
-      setTimeout(() => {
-        setOpenResultModal(true);
-      }, 300);
+      
+      // Mở modal kết quả ngay lập tức
+      console.log('Đang mở modal kết quả...');
+      setOpenResultModal(true);
     } catch (error) {
+      console.error('Lỗi khi nộp bài:', error);
       setConfirmLoading(false);
       message.error('Có lỗi xảy ra khi tính điểm');
     }
@@ -337,99 +344,106 @@ const MultipleChoicePage = () => {
       </Modal>
 
       {/* Modal hien thi ket qua sau khi nop bai */}
-      {isChecked && quizResult && (
-        <Modal
-          title={
-            <div style={{ textAlign: 'center', fontSize: 28, fontWeight: 'bold' }}>
-              Kết quả
-            </div>
-          }
-          open={openResultModal}
-          onOk={() => setOpenResultModal(false)}
-          onCancel={() => setOpenResultModal(false)}
-          width={700}
-          centered
-          footer={
-            <div style={{ textAlign: 'center' }}>
-              <Button type="primary" onClick={() => setOpenResultModal(false)}>
-                OK
-              </Button>
-              <Button onClick={() => setOpenResultModal(false)} style={{ marginLeft: 10 }}>
-                Đóng
-              </Button>
-            </div>
-          }
-        >
-          <div style={{ textAlign: 'center', fontSize: 24 }}>
-            {quizResult.correctAnswers === quizResult.totalQuestions ? (
-              <CheckCircleOutlined style={{ color: 'green', fontSize: 64 }} />
-            ) : (
-              <CloseCircleOutlined style={{ color: 'red', fontSize: 64 }} />
-            )}
+      <Modal
+        title={
+          <div style={{ textAlign: 'center', fontSize: 28, fontWeight: 'bold' }}>
+            Kết quả
           </div>
-          
-          <div style={{ marginTop: 20, fontSize: 18 }}>
-            <Text style={{ display: 'block', marginBottom: 10 }}>
-              <strong>Tổng số câu:</strong> {quizResult.totalQuestions}
-            </Text>
-            <Text style={{ display: 'block', marginBottom: 10, color: 'green' }}>
-              <strong>Đúng:</strong> {quizResult.correctAnswers}
-            </Text>
-            <Text style={{ display: 'block', marginBottom: 10, color: 'red' }}>
-              <strong>Sai:</strong> {quizResult.incorrectAnswers}
-            </Text>
-            <Text style={{ display: 'block', marginBottom: 10, color: 'orange' }}>
-              <strong>Chưa làm:</strong> {quizResult.unansweredQuestions}
-            </Text>
-            <Text
-              style={{
-                display: 'block',
-                marginTop: 10,
-                fontSize: 20,
-                fontWeight: 'bold',
-              }}
-            >
-              Điểm: {quizResult.correctAnswers} / {quizResult.totalQuestions}
-            </Text>
+        }
+        open={openResultModal && isChecked && quizResult !== null}
+        onOk={() => setOpenResultModal(false)}
+        onCancel={() => setOpenResultModal(false)}
+        width={700}
+        centered
+        footer={
+          <div style={{ textAlign: 'center' }}>
+            <Button type="primary" onClick={() => setOpenResultModal(false)}>
+              OK
+            </Button>
+            <Button onClick={() => setOpenResultModal(false)} style={{ marginLeft: 10 }}>
+              Đóng
+            </Button>
           </div>
-
-          {/* Chi tiet ket qua moi cau */}
-          <div style={{ marginTop: 20, maxHeight: 300, overflowY: 'auto' }}>
-            <Typography.Title level={5}>Chi tiết kết quả:</Typography.Title>
-            {quizResult.questionResults.map((result, index) => (
-              <div
-                key={index}
+        }
+      >
+        {quizResult ? (
+          <>
+            <div style={{ textAlign: 'center', fontSize: 24 }}>
+              {quizResult.correctAnswers === quizResult.totalQuestions ? (
+                <CheckCircleOutlined style={{ color: 'green', fontSize: 64 }} />
+              ) : (
+                <CloseCircleOutlined style={{ color: 'red', fontSize: 64 }} />
+              )}
+            </div>
+            
+            <div style={{ marginTop: 20, fontSize: 18 }}>
+              <Text style={{ display: 'block', marginBottom: 10 }}>
+                <strong>Tổng số câu:</strong> {quizResult.totalQuestions}
+              </Text>
+              <Text style={{ display: 'block', marginBottom: 10, color: 'green' }}>
+                <strong>Đúng:</strong> {quizResult.correctAnswers}
+              </Text>
+              <Text style={{ display: 'block', marginBottom: 10, color: 'red' }}>
+                <strong>Sai:</strong> {quizResult.incorrectAnswers}
+              </Text>
+              <Text style={{ display: 'block', marginBottom: 10, color: 'orange' }}>
+                <strong>Chưa làm:</strong> {quizResult.unansweredQuestions}
+              </Text>
+              <Text
                 style={{
-                  padding: 10,
-                  marginBottom: 10,
-                  border: '1px solid #d9d9d9',
-                  borderRadius: 4,
-                  backgroundColor: result.isCorrect ? '#f6ffed' : result.isUnanswered ? '#fffbe6' : '#fff1f0'
+                  display: 'block',
+                  marginTop: 10,
+                  fontSize: 20,
+                  fontWeight: 'bold',
                 }}
               >
-                <Text strong>Câu {result.questionNumber}:</Text>
-                <div style={{ marginLeft: 10 }}>
-                  <Text>{result.questionText}</Text>
-                  {result.isUnanswered ? (
-                    <div style={{ color: 'orange', marginTop: 5 }}>
-                      Chưa chọn đáp án
-                    </div>
-                  ) : (
-                    <div style={{ marginTop: 5 }}>
-                      <Text>Bạn chọn: {result.userAnswer}</Text>
-                      {!result.isCorrect && (
-                        <div style={{ color: 'red' }}>
-                          Đáp án đúng: {result.correctAnswer} - {result.correctAnswerText}
-                        </div>
-                      )}
-                    </div>
-                  )}
+                Điểm: {quizResult.correctAnswers} / {quizResult.totalQuestions}
+              </Text>
+            </div>
+
+            {/* Chi tiet ket qua moi cau */}
+            <div style={{ marginTop: 20, maxHeight: 300, overflowY: 'auto' }}>
+              <Typography.Title level={5}>Chi tiết kết quả:</Typography.Title>
+              {quizResult.questionResults.map((result, index) => (
+                <div
+                  key={index}
+                  style={{
+                    padding: 10,
+                    marginBottom: 10,
+                    border: '1px solid #d9d9d9',
+                    borderRadius: 4,
+                    backgroundColor: result.isCorrect ? '#f6ffed' : result.isUnanswered ? '#fffbe6' : '#fff1f0'
+                  }}
+                >
+                  <Text strong>Câu {result.questionNumber}:</Text>
+                  <div style={{ marginLeft: 10 }}>
+                    <Text>{result.questionText}</Text>
+                    {result.isUnanswered ? (
+                      <div style={{ color: 'orange', marginTop: 5 }}>
+                        Chưa chọn đáp án
+                      </div>
+                    ) : (
+                      <div style={{ marginTop: 5 }}>
+                        <Text>Bạn chọn: {result.userAnswer}</Text>
+                        {!result.isCorrect && (
+                          <div style={{ color: 'red' }}>
+                            Đáp án đúng: {result.correctAnswer} - {result.correctAnswerText}
+                          </div>
+                        )}
+                      </div>
+                    )}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+          </>
+        ) : (
+          <div style={{ textAlign: 'center', padding: 20 }}>
+            <Spin size="large" />
+            <p>Đang tính kết quả...</p>
           </div>
-        </Modal>
-      )}
+        )}
+      </Modal>
     </div>
   );
 };
