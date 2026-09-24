@@ -1,0 +1,39 @@
+1
+00:00:00,140 --> 00:00:02,500
+(Được chép bởi TurboScribe. Nâng cấp lên Không giới hạn để gỡ bỏ thông báo này.) She is a babysitter.
+
+2
+00:00:02,940 --> 00:00:07,540
+She charges parents $10 per hour.
+
+3
+00:00:08,800 --> 00:00:11,620
+Babysitting is a part-time job for her.
+
+4
+00:00:12,440 --> 00:00:14,200
+She goes to the house.
+
+5
+00:00:14,800 --> 00:00:16,520
+She plays with the kids.
+
+6
+00:00:17,260 --> 00:00:19,680
+She helps them with their homework.
+
+7
+00:00:20,780 --> 00:00:22,240
+She cooks for them.
+
+8
+00:00:23,020 --> 00:00:25,200
+The parents come back from work.
+
+9
+00:00:25,800 --> 00:00:27,200
+They thank her.
+
+10
+00:00:27,940 --> 00:00:29,440
+They pay her $80.
