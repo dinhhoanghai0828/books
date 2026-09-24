@@ -215,36 +215,34 @@ const MultipleChoicePage = () => {
               />
             </div>
 
-            {/* Danh sach cau tra loi - 2 column layout */}
+            {/* Danh sach cau tra loi - layout 1 dong cho moi dap an */}
             <div className="engClass" style={{ marginLeft: 20 }}>
               <Radio.Group
                 value={userAnswers[question.questionCode]}
                 onChange={(e) => handleAnswerChange(question.questionCode, e.target.value)}
                 disabled={isChecked}
               >
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '30px' }}>
-                  {question.answers.map((answer) => (
-                    <div key={answer.optionCode} style={{ marginBottom: 8 }}>
-                      <Radio value={answer.optionCode}>
-                        <span style={{ marginRight: 8 }}>{answer.optionCode}.</span>
-                        <span>{answer.optionText}</span>
-                        
-                        {/* Nut phat audio cho cau tra loi */}
-                        <Button
-                          type="link"
-                          icon={
-                            currentPlayingId === `answer-${question.questionCode}-${answer.optionCode}`
-                              ? <PauseOutlined />
-                              : <PlayCircleOutlined />
-                          }
-                          onClick={() => speakText(answer.optionText, `answer-${question.questionCode}-${answer.optionCode}`)}
-                          style={{ marginLeft: 10 }}
-                          size="small"
-                        />
-                      </Radio>
-                    </div>
-                  ))}
-                </div>
+                {question.answers.map((answer) => (
+                  <div key={answer.optionCode} style={{ marginBottom: 12 }}>
+                    <Radio value={answer.optionCode}>
+                      <span style={{ marginRight: 8 }}>{answer.optionCode}.</span>
+                      <span>{answer.optionText}</span>
+                      
+                      {/* Nut phat audio cho cau tra loi */}
+                      <Button
+                        type="link"
+                        icon={
+                          currentPlayingId === `answer-${question.questionCode}-${answer.optionCode}`
+                            ? <PauseOutlined />
+                            : <PlayCircleOutlined />
+                        }
+                        onClick={() => speakText(answer.optionText, `answer-${question.questionCode}-${answer.optionCode}`)}
+                        style={{ marginLeft: 10 }}
+                        size="small"
+                      />
+                    </Radio>
+                  </div>
+                ))}
               </Radio.Group>
             </div>
 
