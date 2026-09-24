@@ -196,7 +196,7 @@ const MultipleChoicePage = () => {
       ) : (
         questions.map((question, index) => (
           <div key={question.questionCode} className="sentence-container">
-            <div style={{ display: 'flex', alignItems: 'center', marginBottom: 10 }}>
+            <div style={{ marginBottom: 15 }}>
               <Text strong style={{ marginRight: 10 }}>
                 Câu {index + 1}:
               </Text>
@@ -222,9 +222,9 @@ const MultipleChoicePage = () => {
                 onChange={(e) => handleAnswerChange(question.questionCode, e.target.value)}
                 disabled={isChecked}
               >
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '40px', marginBottom: '12px' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '30px' }}>
                   {question.answers.map((answer) => (
-                    <div key={answer.optionCode}>
+                    <div key={answer.optionCode} style={{ marginBottom: 8 }}>
                       <Radio value={answer.optionCode}>
                         <span style={{ marginRight: 8 }}>{answer.optionCode}.</span>
                         <span>{answer.optionText}</span>
