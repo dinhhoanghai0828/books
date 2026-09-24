@@ -412,7 +412,7 @@ const MultipleChoicePage = () => {
 
             {renderTooltip()}
 
-            <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 30}}>
+            <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16}}>
                 <Typography.Title level={2} style={{margin: 0}}>
                     Lựa chọn đáp án đúng
                 </Typography.Title>
@@ -420,6 +420,33 @@ const MultipleChoicePage = () => {
                     Quay lại
                 </Button>
             </div>
+
+            {/* Thanh chọn giọng đọc */}
+            {availableVoices.length > 0 && (
+                <div style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: 10,
+                    marginBottom: 24,
+                    padding: '10px 16px',
+                    background: '#f0f7ff',
+                    borderRadius: 8,
+                    border: '1px solid #d0e8ff',
+                }}>
+                    <SoundOutlined style={{color: '#1890ff', fontSize: 16}}/>
+                    <span style={{fontSize: 14, color: '#555', whiteSpace: 'nowrap'}}>Giọng đọc:</span>
+                    <Select
+                        value={selectedVoice}
+                        onChange={setSelectedVoice}
+                        style={{flex: 1, maxWidth: 360}}
+                        size="small"
+                        options={availableVoices.map(v => ({
+                            value: v.name,
+                            label: `${v.name} (${v.lang})`,
+                        }))}
+                    />
+                </div>
+            )}
 
             {loading ? (
                 <div style={{textAlign: 'center', padding: '50px'}}>
