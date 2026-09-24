@@ -97,7 +97,7 @@ const MultipleChoicePage = () => {
     const [openResultModal, setOpenResultModal] = useState(false);
 
     // Số câu muốn làm (0 = tất cả)
-    const [questionLimit, setQuestionLimit] = useState<number>(5);
+    const [questionLimit, setQuestionLimit] = useState<number>(10);
 
     // Toggle hiển thị nghĩa tiếng Việt
     // key: questionCode → hiện/ẩn nghĩa câu hỏi
