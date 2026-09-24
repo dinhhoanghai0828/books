@@ -54,14 +54,9 @@ const MultipleChoicePage = () => {
     setLoading(true);
     try {
       const response = await getQuestionsWithAnswersByVolumeSlug(volumeSlug);
-      // Randomize cau hoi
+      // Chỉ randomize câu hỏi, giữ nguyên thứ tự câu trả lời A, B, C, D
       const shuffledQuestions = shuffleArray(response);
-      // Randomize cau tra loi cho moi cau hoi
-      const questionsWithShuffledAnswers = shuffledQuestions.map(question => ({
-        ...question,
-        answers: shuffleArray(question.answers)
-      }));
-      setQuestions(questionsWithShuffledAnswers);
+      setQuestions(shuffledQuestions);
     } catch (error) {
       console.error('Lỗi khi lấy dữ liệu câu hỏi:', error);
       message.error('Không thể tải dữ liệu câu hỏi');
@@ -151,11 +146,13 @@ const MultipleChoicePage = () => {
         setOpenConfirmModal(false);
         setConfirmLoading(false);
         setShowWarningModal(true);
-        return;
+        return; // Quan trọng: return để không gọi performSubmit ở dưới
       }
 
       // Neu khong co cau chua lam, nop bai truc tiep
       console.log('Không có câu chưa làm, nộp bài trực tiếp');
+      setOpenConfirmModal(false);
+      setConfirmLoading(false);
       await performSubmit();
     } catch (error) {
       console.error('Lỗi trong handleSubmitQuiz:', error);
@@ -251,34 +248,36 @@ const MultipleChoicePage = () => {
               />
             </div>
 
-            {/* Danh sach cau tra loi */}
+            {/* Danh sach cau tra loi - 2 column layout */}
             <div className="engClass" style={{ marginLeft: 20 }}>
               <Radio.Group
                 value={userAnswers[question.questionCode]}
                 onChange={(e) => handleAnswerChange(question.questionCode, e.target.value)}
                 disabled={isChecked}
               >
-                {question.answers.map((answer) => (
-                  <div key={answer.optionCode} style={{ marginBottom: 8 }}>
-                    <Radio value={answer.optionCode}>
-                      <span style={{ marginRight: 8 }}>{answer.optionCode}.</span>
-                      <span>{answer.optionText}</span>
-                      
-                      {/* Nut phat audio cho cau tra loi */}
-                      <Button
-                        type="link"
-                        icon={
-                          currentPlayingId === `answer-${question.questionCode}-${answer.optionCode}`
-                            ? <PauseOutlined />
-                            : <PlayCircleOutlined />
-                        }
-                        onClick={() => speakText(answer.optionText, `answer-${question.questionCode}-${answer.optionCode}`)}
-                        style={{ marginLeft: 10 }}
-                        size="small"
-                      />
-                    </Radio>
-                  </div>
-                ))}
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+                  {question.answers.map((answer) => (
+                    <div key={answer.optionCode} style={{ marginBottom: 8 }}>
+                      <Radio value={answer.optionCode}>
+                        <span style={{ marginRight: 8 }}>{answer.optionCode}.</span>
+                        <span>{answer.optionText}</span>
+                        
+                        {/* Nut phat audio cho cau tra loi */}
+                        <Button
+                          type="link"
+                          icon={
+                            currentPlayingId === `answer-${question.questionCode}-${answer.optionCode}`
+                              ? <PauseOutlined />
+                              : <PlayCircleOutlined />
+                          }
+                          onClick={() => speakText(answer.optionText, `answer-${question.questionCode}-${answer.optionCode}`)}
+                          style={{ marginLeft: 10 }}
+                          size="small"
+                        />
+                      </Radio>
+                    </div>
+                  ))}
+                </div>
               </Radio.Group>
             </div>
 
