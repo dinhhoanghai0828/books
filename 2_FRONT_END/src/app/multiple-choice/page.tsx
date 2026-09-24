@@ -180,105 +180,207 @@ const MultipleChoicePage = () => {
   // ============================================================
 
   return (
-    <div className="test-container" style={{ marginTop: 50, marginBottom: 70 }}>
-      <Typography.Title level={3} className="test-title">
-        Lựa chọn đáp án đúng
-      </Typography.Title>
-
-      <div className="back-button-container">
-        <Button onClick={() => router.back()} className="back-btn">
-          ⬅ Quay lại
+    <div style={{ 
+      maxWidth: '2000px',
+      margin: '100px auto 70px',
+      padding: '10px 20px'
+    }}>
+      <div style={{ 
+        display: 'flex', 
+        justifyContent: 'space-between', 
+        alignItems: 'center', 
+        marginBottom: 30
+      }}>
+        <Typography.Title level={2} style={{ margin: 0 }}>
+          Lựa chọn đáp án đúng
+        </Typography.Title>
+        <Button 
+          onClick={() => router.back()} 
+          icon={<ReloadOutlined />}
+        >
+          Quay lại
         </Button>
       </div>
 
       {loading ? (
-        <Spin size="large" />
+        <div style={{ textAlign: 'center', padding: '50px' }}>
+          <Spin size="large" />
+        </div>
       ) : (
-        questions.map((question, index) => (
-          <div key={question.questionCode} className="sentence-container">
-            <div style={{ marginBottom: 15 }}>
-              <Text strong style={{ marginRight: 10 }}>
-                Câu {index + 1}:
-              </Text>
-              <Text className="viClass">{question.questionText}</Text>
+        <div style={{ background: '#f5f5f5', borderRadius: '8px', padding: '24px' }}>
+          {questions.map((question, index) => (
+            <div 
+              key={question.questionCode} 
+              style={{ 
+                background: 'white', 
+                borderRadius: '8px', 
+                padding: '20px', 
+                marginBottom: '16px',
+                boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
+              }}
+            >
+              <div style={{ marginBottom: 20 }}>
+                <div style={{ display: 'flex', alignItems: 'flex-start', marginBottom: 12 }}>
+                  <Text strong style={{ 
+                    marginRight: 12, 
+                    minWidth: '50px',
+                    fontSize: '16px',
+                    color: '#1890ff'
+                  }}>
+                    Câu {index + 1}:
+                  </Text>
+                  <div style={{ flex: 1 }}>
+                    <Text style={{ fontSize: '16px', lineHeight: '1.6' }}>
+                      {question.questionText}
+                    </Text>
 
-              {/* Nut phat audio cho cau hoi */}
-              <Button
-                type="link"
-                icon={
-                  currentPlayingId === `question-${question.questionCode}`
-                    ? <PauseOutlined />
-                    : <PlayCircleOutlined />
-                }
-                onClick={() => speakText(question.questionText, `question-${question.questionCode}`)}
-                style={{ marginLeft: 10 }}
-              />
-            </div>
-
-            {/* Danh sach cau tra loi - layout 1 dong cho moi dap an */}
-            <div className="engClass" style={{ marginLeft: 20 }}>
-              <Radio.Group
-                value={userAnswers[question.questionCode]}
-                onChange={(e) => handleAnswerChange(question.questionCode, e.target.value)}
-                disabled={isChecked}
-              >
-                {question.answers.map((answer) => (
-                  <div key={answer.optionCode} style={{ marginBottom: 12 }}>
-                    <Radio value={answer.optionCode}>
-                      <span style={{ marginRight: 8 }}>{answer.optionCode}.</span>
-                      <span>{answer.optionText}</span>
-                      
-                      {/* Nut phat audio cho cau tra loi */}
-                      <Button
-                        type="link"
-                        icon={
-                          currentPlayingId === `answer-${question.questionCode}-${answer.optionCode}`
-                            ? <PauseOutlined />
-                            : <PlayCircleOutlined />
-                        }
-                        onClick={() => speakText(answer.optionText, `answer-${question.questionCode}-${answer.optionCode}`)}
-                        style={{ marginLeft: 10 }}
-                        size="small"
-                      />
-                    </Radio>
+                    {/* Nut phat audio cho cau hoi */}
+                    <Button
+                      type="text"
+                      icon={
+                        currentPlayingId === `question-${question.questionCode}`
+                          ? <PauseOutlined />
+                          : <PlayCircleOutlined />
+                      }
+                      onClick={() => speakText(question.questionText, `question-${question.questionCode}`)}
+                      style={{ marginLeft: 12, color: '#1890ff' }}
+                    />
                   </div>
-                ))}
-              </Radio.Group>
-            </div>
-
-            {/* Hien ket qua sau khi da kiem tra */}
-            {isChecked && quizResult && (
-              <div style={{ marginLeft: 20, marginTop: 10 }}>
-                {quizResult.questionResults[index]?.isUnanswered ? (
-                  <Text type="warning">Bạn chưa chọn đáp án</Text>
-                ) : quizResult.questionResults[index]?.isCorrect ? (
-                  <Text type="success" style={{ display: 'flex', alignItems: 'center' }}>
-                    <CheckCircleOutlined style={{ marginRight: 5 }} /> Đúng!
-                  </Text>
-                ) : (
-                  <Text type="danger" style={{ display: 'flex', alignItems: 'center' }}>
-                    <CloseCircleOutlined style={{ marginRight: 5 }} /> Sai! 
-                    Đáp án đúng: {quizResult.questionResults[index]?.correctAnswer} - {quizResult.questionResults[index]?.correctAnswerText}
-                  </Text>
-                )}
+                </div>
               </div>
-            )}
-          </div>
-        ))
+
+              {/* Danh sach cau tra loi - layout 1 dong cho moi dap an */}
+              <div style={{ marginLeft: 62 }}>
+                <Radio.Group
+                  value={userAnswers[question.questionCode]}
+                  onChange={(e) => handleAnswerChange(question.questionCode, e.target.value)}
+                  disabled={isChecked}
+                  style={{ width: '100%' }}
+                >
+                  {question.answers.map((answer) => (
+                    <div 
+                      key={answer.optionCode} 
+                      style={{ 
+                        marginBottom: 16,
+                        padding: '12px 16px',
+                        borderRadius: '6px',
+                        border: '1px solid #e8e8e8',
+                        transition: 'all 0.3s',
+                        cursor: isChecked ? 'not-allowed' : 'pointer'
+                      }}
+                      onMouseEnter={(e) => {
+                        if (!isChecked) {
+                          e.currentTarget.style.borderColor = '#1890ff';
+                          e.currentTarget.style.backgroundColor = '#f0f7ff';
+                        }
+                      }}
+                      onMouseLeave={(e) => {
+                        if (!isChecked) {
+                          e.currentTarget.style.borderColor = '#e8e8e8';
+                          e.currentTarget.style.backgroundColor = 'white';
+                        }
+                      }}
+                    >
+                      <Radio value={answer.optionCode} style={{ marginRight: 12 }}>
+                        <span style={{ 
+                          fontWeight: 'bold', 
+                          marginRight: 8,
+                          color: '#1890ff'
+                        }}>
+                          {answer.optionCode}.
+                        </span>
+                        <span style={{ fontSize: '15px' }}>{answer.optionText}</span>
+                        
+                        {/* Nut phat audio cho cau tra loi */}
+                        <Button
+                          type="text"
+                          icon={
+                            currentPlayingId === `answer-${question.questionCode}-${answer.optionCode}`
+                              ? <PauseOutlined />
+                              : <PlayCircleOutlined />
+                          }
+                          onClick={() => speakText(answer.optionText, `answer-${question.questionCode}-${answer.optionCode}`)}
+                          style={{ marginLeft: 12, color: '#52c41a' }}
+                          size="small"
+                        />
+                      </Radio>
+                    </div>
+                  ))}
+                </Radio.Group>
+              </div>
+
+              {/* Hien ket qua sau khi da kiem tra */}
+              {isChecked && quizResult && (
+                <div style={{ 
+                  marginLeft: 62, 
+                  marginTop: 16,
+                  padding: '12px 16px',
+                  borderRadius: '6px',
+                  background: quizResult.questionResults[index]?.isUnanswered 
+                    ? '#fffbe6' 
+                    : quizResult.questionResults[index]?.isCorrect 
+                      ? '#f6ffed' 
+                      : '#fff1f0',
+                  border: `1px solid ${
+                    quizResult.questionResults[index]?.isUnanswered 
+                      ? '#ffe58f' 
+                      : quizResult.questionResults[index]?.isCorrect 
+                        ? '#b7eb8f' 
+                        : '#ffccc7'
+                  }`
+                }}>
+                  {quizResult.questionResults[index]?.isUnanswered ? (
+                    <Text style={{ color: '#fa8c16', fontSize: '14px' }}>
+                      ⚠️ Bạn chưa chọn đáp án
+                    </Text>
+                  ) : quizResult.questionResults[index]?.isCorrect ? (
+                    <Text style={{ color: '#52c41a', fontSize: '14px', display: 'flex', alignItems: 'center' }}>
+                      <CheckCircleOutlined style={{ marginRight: 8 }} /> Đúng!
+                    </Text>
+                  ) : (
+                    <Text style={{ color: '#ff4d4f', fontSize: '14px', display: 'flex', alignItems: 'center' }}>
+                      <CloseCircleOutlined style={{ marginRight: 8 }} /> Sai! 
+                      Đáp án đúng: {quizResult.questionResults[index]?.correctAnswer} - {quizResult.questionResults[index]?.correctAnswerText}
+                    </Text>
+                  )}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
       )}
 
       {/* Nut nop bai va lam lai */}
-      <div className="button-container">
+      <div style={{ 
+        display: 'flex', 
+        justifyContent: 'center', 
+        gap: '16px', 
+        marginTop: '32px' 
+      }}>
         <Button
           type="primary"
+          size="large"
           onClick={() => setOpenConfirmModal(true)}
-          className="check-btn"
           disabled={isChecked}
+          style={{ 
+            minWidth: '120px',
+            height: '44px',
+            fontSize: '16px'
+          }}
         >
           Nộp bài
         </Button>
-        <Button onClick={reloadQuiz} className="reload-btn">
-          <ReloadOutlined /> Làm lại
+        <Button 
+          size="large"
+          onClick={reloadQuiz}
+          icon={<ReloadOutlined />}
+          style={{ 
+            minWidth: '120px',
+            height: '44px',
+            fontSize: '16px'
+          }}
+        >
+          Làm lại
         </Button>
       </div>
 
