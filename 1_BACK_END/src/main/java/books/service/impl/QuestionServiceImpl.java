@@ -115,26 +115,27 @@ public class QuestionServiceImpl implements QuestionService {
             String userAnswer = userAnswers.get(question.getQuestionCode());
             questionResult.setUserAnswer(userAnswer);
 
+            // Tìm đáp án đúng cho câu hỏi này (luôn tìm, không phụ thuộc vào việc người dùng chọn hay không)
+            String correctAnswer = null;
+            String correctAnswerText = null;
+
+            for (AnswerDTO answer : question.getAnswers()) {
+                if ("Y".equalsIgnoreCase(answer.getIsCorrect())) {
+                    correctAnswer = answer.getOptionCode();
+                    correctAnswerText = answer.getOptionText();
+                    break;
+                }
+            }
+
+            questionResult.setCorrectAnswer(correctAnswer);
+            questionResult.setCorrectAnswerText(correctAnswerText);
+
             if (userAnswer == null || userAnswer.trim().isEmpty()) {
                 questionResult.setUnanswered(true);
                 questionResult.setCorrect(false);
                 unansweredQuestions++;
             } else {
                 questionResult.setUnanswered(false);
-
-                String correctAnswer = null;
-                String correctAnswerText = null;
-
-                for (AnswerDTO answer : question.getAnswers()) {
-                    if ("Y".equals(answer.getIsCorrect())) {
-                        correctAnswer = answer.getOptionCode();
-                        correctAnswerText = answer.getOptionText();
-                        break;
-                    }
-                }
-
-                questionResult.setCorrectAnswer(correctAnswer);
-                questionResult.setCorrectAnswerText(correctAnswerText);
 
                 if (userAnswer.equals(correctAnswer)) {
                     questionResult.setCorrect(true);
