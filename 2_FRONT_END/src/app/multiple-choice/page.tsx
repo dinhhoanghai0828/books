@@ -224,13 +224,13 @@ const MultipleChoicePage = () => {
                   <Text strong style={{ 
                     marginRight: 12, 
                     minWidth: '50px',
-                    fontSize: '16px',
+                    fontSize: '20px',
                     color: '#1890ff'
                   }}>
                     Câu {index + 1}:
                   </Text>
                   <div style={{ flex: 1 }}>
-                    <Text style={{ fontSize: '16px', lineHeight: '1.6' }}>
+                    <Text style={{ fontSize: '20px', lineHeight: '1.6' }}>
                       {question.questionText}
                     </Text>
 
@@ -289,7 +289,7 @@ const MultipleChoicePage = () => {
                         }}>
                           {answer.optionCode}.
                         </span>
-                        <span style={{ fontSize: '15px' }}>{answer.optionText}</span>
+                        <span style={{ fontSize: '20px' }}>{answer.optionText}</span>
                         
                         {/* Nut phat audio cho cau tra loi */}
                         <Button
@@ -330,15 +330,15 @@ const MultipleChoicePage = () => {
                   }`
                 }}>
                   {quizResult.questionResults[index]?.isUnanswered ? (
-                    <Text style={{ color: '#fa8c16', fontSize: '14px' }}>
+                    <Text style={{ color: '#fa8c16', fontSize: '20px' }}>
                       ⚠️ Bạn chưa chọn đáp án
                     </Text>
                   ) : quizResult.questionResults[index]?.isCorrect ? (
-                    <Text style={{ color: '#52c41a', fontSize: '14px', display: 'flex', alignItems: 'center' }}>
+                    <Text style={{ color: '#52c41a', fontSize: '20px', display: 'flex', alignItems: 'center' }}>
                       <CheckCircleOutlined style={{ marginRight: 8 }} /> Đúng!
                     </Text>
                   ) : (
-                    <Text style={{ color: '#ff4d4f', fontSize: '14px', display: 'flex', alignItems: 'center' }}>
+                    <Text style={{ color: '#ff4d4f', fontSize: '20px', display: 'flex', alignItems: 'center' }}>
                       <CloseCircleOutlined style={{ marginRight: 8 }} /> Sai! 
                       Đáp án đúng: {quizResult.questionResults[index]?.correctAnswer} - {quizResult.questionResults[index]?.correctAnswerText}
                     </Text>
@@ -365,7 +365,7 @@ const MultipleChoicePage = () => {
           style={{ 
             minWidth: '120px',
             height: '44px',
-            fontSize: '16px'
+            fontSize: '20px'
           }}
         >
           Nộp bài
@@ -377,7 +377,7 @@ const MultipleChoicePage = () => {
           style={{ 
             minWidth: '120px',
             height: '44px',
-            fontSize: '16px'
+            fontSize: '20px'
           }}
         >
           Làm lại
