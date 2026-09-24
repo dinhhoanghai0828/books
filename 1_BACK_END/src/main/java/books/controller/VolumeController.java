@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -102,55 +103,168 @@ public class VolumeController {
         }
     }
 
+    // ============================================================
+    // HELPER — tạo XWPFDocument đẹp từ danh sách volumes
+    // ============================================================
+
+    /**
+     * Tạo style chung: font, size, spacing cho 1 run tiếng Anh.
+     */
+    private XWPFRun createEngRun(XWPFParagraph para, String text) {
+        XWPFRun run = para.createRun();
+        run.setFontFamily("Book Antiqua");
+        run.setFontSize(18);
+        run.setColor("1A1A2E");
+        run.setText(text);
+        return run;
+    }
+
+    /**
+     * Tạo style chung: font, size, color cho 1 run tiếng Việt.
+     */
+    private XWPFRun createViRun(XWPFParagraph para, String text) {
+        XWPFRun run = para.createRun();
+        run.setFontFamily("Times New Roman");
+        run.setFontSize(17);
+        run.setColor("4A4A6A");
+        run.setItalic(true);
+        run.setText(text);
+        return run;
+    }
+
+    /**
+     * Thêm tiêu đề bài học vào document.
+     */
+    private void addLessonTitle(XWPFDocument doc, String title) {
+        XWPFParagraph para = doc.createParagraph();
+        para.setAlignment(ParagraphAlignment.CENTER);
+        para.setSpacingAfter(240);
+        para.setSpacingBefore(120);
+        XWPFRun run = para.createRun();
+        run.setBold(true);
+        run.setFontFamily("Book Antiqua");
+        run.setFontSize(22);
+        run.setColor("1D3461");
+        run.setText(title);
+        run.addBreak();
+
+        // Đường kẻ ngang sau tiêu đề
+        XWPFParagraph line = doc.createParagraph();
+        line.setSpacingAfter(240);
+        line.setBorderBottom(Borders.SINGLE);
+    }
+
+    /**
+     * Thêm cặp câu EN + VI vào document theo dạng 2 dòng liên tiếp.
+     */
+    private void addContentPair(XWPFDocument doc, String eng, String vi) {
+        // Câu tiếng Anh
+        XWPFParagraph engPara = doc.createParagraph();
+        engPara.setAlignment(ParagraphAlignment.BOTH);
+        engPara.setSpacingBetween(1.35, LineSpacingRule.AUTO);
+        engPara.setSpacingAfter(0);
+        engPara.setIndentationLeft(360); // 0.25 inch indent
+        createEngRun(engPara, eng);
+
+        // Câu tiếng Việt
+        XWPFParagraph viPara = doc.createParagraph();
+        viPara.setAlignment(ParagraphAlignment.BOTH);
+        viPara.setSpacingBetween(1.2, LineSpacingRule.AUTO);
+        viPara.setSpacingAfter(140); // khoảng cách giữa các cặp
+        viPara.setIndentationLeft(360);
+        createViRun(viPara, vi);
+    }
+
+    /**
+     * Xây dựng XWPFDocument từ danh sách volumes.
+     * englishOnly = true: chỉ xuất tiếng Anh (dạng đoạn văn liên tục), không có VI.
+     * englishOnly = false: xuất cả EN + VI theo từng cặp câu.
+     */
+    private XWPFDocument buildVolumeDocument(List<VolumeDTO> volumes, boolean englishOnly) throws Exception {
+        XWPFDocument doc = new XWPFDocument();
+
+        for (int i = 0; i < volumes.size(); i++) {
+            VolumeDTO volume = volumes.get(i);
+            List<ContentDTO> contents = volume.getContents();
+            if (contents == null || contents.isEmpty()) continue;
+
+            String lessonTitle = (volumes.size() > 1)
+                    ? "Lesson " + (i + 1) + ": " + volume.getEng()
+                    : volume.getEng();
+
+            addLessonTitle(doc, lessonTitle);
+
+            if (volume.getVi() != null && !volume.getVi().isEmpty() && !englishOnly) {
+                // Phụ đề tiếng Việt của tập
+                XWPFParagraph subPara = doc.createParagraph();
+                subPara.setAlignment(ParagraphAlignment.CENTER);
+                subPara.setSpacingAfter(320);
+                XWPFRun subRun = subPara.createRun();
+                subRun.setFontFamily("Times New Roman");
+                subRun.setFontSize(16);
+                subRun.setItalic(true);
+                subRun.setColor("666688");
+                subRun.setText(volume.getVi());
+            }
+
+            if (englishOnly) {
+                // Chế độ chỉ EN: gộp tất cả câu thành 1 đoạn văn liên tục
+                StringBuilder sb = new StringBuilder();
+                for (ContentDTO c : contents) {
+                    String eng = c.getEng().trim();
+                    if (sb.length() > 0) sb.append(" ");
+                    sb.append(eng);
+                    if (!eng.endsWith(".") && !eng.endsWith("!") && !eng.endsWith("?")) {
+                        sb.append(".");
+                    }
+                }
+                XWPFParagraph engPara = doc.createParagraph();
+                engPara.setAlignment(ParagraphAlignment.BOTH);
+                engPara.setSpacingBetween(1.5, LineSpacingRule.AUTO);
+                engPara.setIndentationLeft(360);
+                createEngRun(engPara, sb.toString());
+            } else {
+                // Chế độ đầy đủ: từng cặp câu EN + VI
+                for (ContentDTO c : contents) {
+                    String eng = c.getEng().trim();
+                    String vi = c.getVi() != null ? c.getVi().trim() : "";
+                    addContentPair(doc, eng, vi);
+                }
+            }
+
+            // Page break giữa các tập (trừ tập cuối)
+            if (i < volumes.size() - 1) {
+                XWPFParagraph pb = doc.createParagraph();
+                XWPFRun pbRun = pb.createRun();
+                pbRun.addBreak(BreakType.PAGE);
+            }
+        }
+
+        return doc;
+    }
+
+    // ============================================================
+    // DOWNLOAD WORD — 1 tập đơn
+    // ============================================================
+
     @GetMapping("/download-word/{slug}")
     public ResponseEntity<byte[]> downloadWord(@PathVariable("slug") String slug) {
         try {
             List<ContentDTO> contents = volumeService.getContentsByVolumeSlug(slug);
             VolumeDTO volume = volumeService.getVolumeDetailBySlug(slug);
-            
-            XWPFDocument document = new XWPFDocument();
-            
-            // Add title
-            XWPFParagraph titleParagraph = document.createParagraph();
-            titleParagraph.setAlignment(ParagraphAlignment.CENTER);
-            XWPFRun titleRun = titleParagraph.createRun();
-            titleRun.setBold(true);
-            titleRun.setFontFamily("Times New Roman");
-            titleRun.setFontSize(25);
-            titleRun.setText(volume.getEng());
-            titleRun.addBreak(BreakType.PAGE);
-            
-            // Add content
-            for (ContentDTO content : contents) {
-                XWPFParagraph contentParagraph = document.createParagraph();
-                contentParagraph.setAlignment(ParagraphAlignment.LEFT);
-                XWPFRun contentRun = contentParagraph.createRun();
-                contentRun.setFontFamily("Book Antiqua");
-                contentRun.setFontSize(20);
-                contentRun.setText(content.getEng());
-                
-                XWPFParagraph viParagraph = document.createParagraph();
-                viParagraph.setAlignment(ParagraphAlignment.LEFT);
-                XWPFRun viRun = viParagraph.createRun();
-                viRun.setFontFamily("Times New Roman");
-                viRun.setFontSize(20);
-                viRun.setText(content.getVi());
-                viRun.addBreak();
-                
-                // Check if content is long (more than 200 characters) to decide page break
-                if (content.getEng().length() > 200 || content.getVi().length() > 200) {
-                    contentRun.addBreak(BreakType.PAGE);
-                }
-            }
-            
+            volume.setContents(contents);
+
+            XWPFDocument document = buildVolumeDocument(Collections.singletonList(volume), false);
+
             ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
             document.write(outputStream);
             document.close();
-            
+
             HttpHeaders headers = new HttpHeaders();
             headers.setContentType(MediaType.APPLICATION_OCTET_STREAM);
-            headers.setContentDispositionFormData("attachment", volume.getEng() + ".docx");
-            
+            headers.setContentDispositionFormData("attachment",
+                    java.net.URLEncoder.encode(volume.getEng(), "UTF-8") + ".docx");
+
             return new ResponseEntity<>(outputStream.toByteArray(), headers, HttpStatus.OK);
         } catch (Exception e) {
             e.printStackTrace();
@@ -158,98 +272,28 @@ public class VolumeController {
         }
     }
 
+    // ============================================================
+    // DOWNLOAD WORD — toàn bộ cuốn sách
+    // ============================================================
+
     @GetMapping("/download-book-word/{bookSlug}")
     public ResponseEntity<byte[]> downloadBookWord(@PathVariable("bookSlug") String bookSlug) {
         try {
             List<VolumeDTO> volumes = volumeService.getVolumesByBookSlug(bookSlug);
-            
-            // Filter volumes with content only
             List<VolumeDTO> volumesWithContent = volumes.stream()
                     .filter(v -> v.getContents() != null && !v.getContents().isEmpty())
                     .collect(Collectors.toList());
-            
-            XWPFDocument document = new XWPFDocument();
-            
-            // Add content from all volumes
-            int lessonNumber = 1;
-            for (int i = 0; i < volumesWithContent.size(); i++) {
-                VolumeDTO volume = volumesWithContent.get(i);
-                List<ContentDTO> contents = volume.getContents();
-                
-                // Add volume title with Lesson numbering
-                XWPFParagraph volumeTitleParagraph = document.createParagraph();
-                volumeTitleParagraph.setAlignment(ParagraphAlignment.CENTER);
-                XWPFRun volumeTitleRun = volumeTitleParagraph.createRun();
-                volumeTitleRun.setBold(true);
-                volumeTitleRun.setFontFamily("Book Antiqua");
-                volumeTitleRun.setFontSize(25);
-                volumeTitleRun.setText("Lesson " + lessonNumber + ": " + volume.getEng());
-                volumeTitleParagraph.setSpacingAfter(400);
-                
-                // Build English paragraph
-                StringBuilder englishParagraph = new StringBuilder();
-                StringBuilder vietnameseParagraph = new StringBuilder();
-                
-                for (ContentDTO content : contents) {
-                    String eng = content.getEng().trim();
-                    String vi = content.getVi().trim();
-                    
-                    // Add English sentence with comma
-                    if (englishParagraph.length() > 0) {
-                        englishParagraph.append(". ");
-                    }
-                    englishParagraph.append(eng);
-                    
-                    // Add Vietnamese sentence with period, but check if it already ends with punctuation
-                    if (vietnameseParagraph.length() > 0) {
-                        vietnameseParagraph.append(" ");
-                    }
-                    vietnameseParagraph.append(vi);
-                    
-                    // Check if Vietnamese sentence ends with ! ? or ...
-                    if (!vi.endsWith("!") && !vi.endsWith("?") && !vi.endsWith("...")) {
-                        vietnameseParagraph.append(".");
-                    }
-                }
-                
-                // Add English paragraph with 1.5 line spacing
-                XWPFParagraph engParagraph = document.createParagraph();
-                engParagraph.setAlignment(ParagraphAlignment.LEFT);
-                engParagraph.setSpacingBetween(1.5, LineSpacingRule.AUTO);
-                XWPFRun engRun = engParagraph.createRun();
-                engRun.setFontFamily("Book Antiqua");
-                engRun.setFontSize(18);
-                engRun.setText(englishParagraph.toString());
 
-                // Add Vietnamese paragraph with 1.5 line spacing
-                XWPFParagraph viParagraph = document.createParagraph();
-                viParagraph.setAlignment(ParagraphAlignment.LEFT);
-                viParagraph.setSpacingBetween(1.5, LineSpacingRule.AUTO);
-                viParagraph.setSpacingAfter(120);
-                XWPFRun viRun = viParagraph.createRun();
-                viRun.setFontFamily("Times New Roman");
-                viRun.setFontSize(18);
-                viRun.setText(vietnameseParagraph.toString());
+            XWPFDocument document = buildVolumeDocument(volumesWithContent, false);
 
-                // Increment lesson number
-                lessonNumber++;
-                
-                // Page break between volumes (only if not the last volume)
-                if (i < volumesWithContent.size() - 1) {
-                    XWPFParagraph pageBreakParagraph = document.createParagraph();
-                    XWPFRun pageBreakRun = pageBreakParagraph.createRun();
-                    pageBreakRun.addBreak(BreakType.PAGE);
-                }
-            }
-            
             ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
             document.write(outputStream);
             document.close();
-            
+
             HttpHeaders headers = new HttpHeaders();
             headers.setContentType(MediaType.APPLICATION_OCTET_STREAM);
             headers.setContentDispositionFormData("attachment", bookSlug + ".docx");
-            
+
             return new ResponseEntity<>(outputStream.toByteArray(), headers, HttpStatus.OK);
         } catch (Exception e) {
             e.printStackTrace();
@@ -266,98 +310,21 @@ public class VolumeController {
             if (volumeSlugs == null || volumeSlugs.isEmpty()) {
                 return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
             }
-            
             List<VolumeDTO> allVolumes = volumeService.getVolumesByBookSlug(bookSlug);
-            
-            // Filter volumes based on selected slugs and only keep those with content
             List<VolumeDTO> selectedVolumes = allVolumes.stream()
                     .filter(v -> volumeSlugs.contains(v.getSlug()))
                     .filter(v -> v.getContents() != null && !v.getContents().isEmpty())
                     .collect(Collectors.toList());
-            
-            XWPFDocument document = new XWPFDocument();
-            
-            // Add content from selected volumes
-            int lessonNumber = 1;
-            for (int i = 0; i < selectedVolumes.size(); i++) {
-                VolumeDTO volume = selectedVolumes.get(i);
-                List<ContentDTO> contents = volume.getContents();
-                
-                // Add volume title with Lesson numbering
-                XWPFParagraph volumeTitleParagraph = document.createParagraph();
-                volumeTitleParagraph.setAlignment(ParagraphAlignment.CENTER);
-                XWPFRun volumeTitleRun = volumeTitleParagraph.createRun();
-                volumeTitleRun.setBold(true);
-                volumeTitleRun.setFontFamily("Book Antiqua");
-                volumeTitleRun.setFontSize(25);
-                volumeTitleRun.setText("Lesson " + lessonNumber + ": " + volume.getEng());
-                volumeTitleParagraph.setSpacingAfter(400);
-                
-                // Build English paragraph
-                StringBuilder englishParagraph = new StringBuilder();
-                StringBuilder vietnameseParagraph = new StringBuilder();
-                
-                for (ContentDTO content : contents) {
-                    String eng = content.getEng().trim();
-                    String vi = content.getVi().trim();
-                    
-                    // Add English sentence with comma
-                    if (englishParagraph.length() > 0) {
-                        englishParagraph.append(". ");
-                    }
-                    englishParagraph.append(eng);
-                    
-                    // Add Vietnamese sentence with period, but check if it already ends with punctuation
-                    if (vietnameseParagraph.length() > 0) {
-                        vietnameseParagraph.append(" ");
-                    }
-                    vietnameseParagraph.append(vi);
-                    
-                    // Check if Vietnamese sentence ends with ! ? or ...
-                    if (!vi.endsWith("!") && !vi.endsWith("?") && !vi.endsWith("...")) {
-                        vietnameseParagraph.append(".");
-                    }
-                }
-                
-                // Add English paragraph with 1.5 line spacing
-                XWPFParagraph engParagraph = document.createParagraph();
-                engParagraph.setAlignment(ParagraphAlignment.LEFT);
-                engParagraph.setSpacingBetween(1.5, LineSpacingRule.AUTO);
-                engParagraph.setSpacingAfter(1100);
-                XWPFRun engRun = engParagraph.createRun();
-                engRun.setFontFamily("Book Antiqua");
-                engRun.setFontSize(18);
-                engRun.setText(englishParagraph.toString());
 
-                // Add Vietnamese paragraph with 1.5 line spacing
-                XWPFParagraph viParagraph = document.createParagraph();
-                viParagraph.setAlignment(ParagraphAlignment.LEFT);
-                viParagraph.setSpacingBetween(1.5, LineSpacingRule.AUTO);
-                viParagraph.setSpacingAfter(120);
-                XWPFRun viRun = viParagraph.createRun();
-                viRun.setFontFamily("Times New Roman");
-                viRun.setFontSize(18);
-                viRun.setText(vietnameseParagraph.toString());
+            XWPFDocument document = buildVolumeDocument(selectedVolumes, false);
 
-                // Increment lesson number
-                lessonNumber++;
-                
-                // Page break between volumes (only if not the last volume)
-                if (i < selectedVolumes.size() - 1) {
-                    XWPFParagraph pageBreakParagraph = document.createParagraph();
-                    XWPFRun pageBreakRun = pageBreakParagraph.createRun();
-                    pageBreakRun.addBreak(BreakType.PAGE);
-                }
-            }
-            
             ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
             document.write(outputStream);
             document.close();
-            
+
             HttpHeaders headers = new HttpHeaders();
             headers.setContentType(MediaType.APPLICATION_OCTET_STREAM);
             headers.setContentDispositionFormData("attachment", bookSlug + "-selected.docx");
-            
             return new ResponseEntity<>(outputStream.toByteArray(), headers, HttpStatus.OK);
         } catch (Exception e) {
             e.printStackTrace();
@@ -369,85 +336,20 @@ public class VolumeController {
     public ResponseEntity<byte[]> downloadVolumeWord(@PathVariable("volumeSlug") String volumeSlug) {
         try {
             VolumeDTO volume = volumeService.getVolumeBySlug(volumeSlug);
-            if (volume == null) {
-                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-            }
-            
+            if (volume == null) return new ResponseEntity<>(HttpStatus.NOT_FOUND);
             List<ContentDTO> contents = volume.getContents();
-            
-            // Skip volumes with no content
-            if (contents == null || contents.isEmpty()) {
-                return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-            }
-            
-            XWPFDocument document = new XWPFDocument();
-            
-            // Add volume title
-            XWPFParagraph volumeTitleParagraph = document.createParagraph();
-            volumeTitleParagraph.setAlignment(ParagraphAlignment.CENTER);
-            XWPFRun volumeTitleRun = volumeTitleParagraph.createRun();
-            volumeTitleRun.setBold(true);
-            volumeTitleRun.setFontFamily("Book Antiqua");
-            volumeTitleRun.setFontSize(25);
-            volumeTitleRun.setText(volume.getEng());
-            
-            // Set line spacing for title
-            volumeTitleParagraph.setSpacingAfter(400);
-            
-            // Build English paragraph
-            StringBuilder englishParagraph = new StringBuilder();
-            StringBuilder vietnameseParagraph = new StringBuilder();
-            
-            for (ContentDTO content : contents) {
-                String eng = content.getEng().trim();
-                String vi = content.getVi().trim();
-                
-                // Add English sentence with period
-                if (englishParagraph.length() > 0) {
-                    englishParagraph.append(". ");
-                }
-                englishParagraph.append(eng);
-                
-                // Add Vietnamese sentence with period, but check if it already ends with punctuation
-                if (vietnameseParagraph.length() > 0) {
-                    vietnameseParagraph.append(" ");
-                }
-                vietnameseParagraph.append(vi);
-                
-                // Check if Vietnamese sentence ends with ! ? or ...
-                if (!vi.endsWith("!") && !vi.endsWith("?") && !vi.endsWith("...")) {
-                    vietnameseParagraph.append(".");
-                }
-            }
-            
-            // Add English paragraph with 1.5 line spacing
-            XWPFParagraph engParagraph = document.createParagraph();
-            engParagraph.setAlignment(ParagraphAlignment.LEFT);
-            engParagraph.setSpacingBetween(1.5, LineSpacingRule.AUTO);
-            engParagraph.setSpacingAfter(1100);
-            XWPFRun engRun = engParagraph.createRun();
-            engRun.setFontFamily("Book Antiqua");
-            engRun.setFontSize(18);
-            engRun.setText(englishParagraph.toString());
+            if (contents == null || contents.isEmpty()) return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 
-            // Add Vietnamese paragraph with 1.5 line spacing
-            XWPFParagraph viParagraph = document.createParagraph();
-            viParagraph.setAlignment(ParagraphAlignment.LEFT);
-            viParagraph.setSpacingBetween(1.5, LineSpacingRule.AUTO);
-            viParagraph.setSpacingAfter(120);
-            XWPFRun viRun = viParagraph.createRun();
-            viRun.setFontFamily("Times New Roman");
-            viRun.setFontSize(18);
-            viRun.setText(vietnameseParagraph.toString());
-            
+            XWPFDocument document = buildVolumeDocument(Collections.singletonList(volume), false);
+
             ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
             document.write(outputStream);
             document.close();
-            
+
             HttpHeaders headers = new HttpHeaders();
             headers.setContentType(MediaType.APPLICATION_OCTET_STREAM);
-            headers.setContentDispositionFormData("attachment", volumeSlug + ".docx");
-            
+            headers.setContentDispositionFormData("attachment",
+                    java.net.URLEncoder.encode(volume.getEng(), "UTF-8") + ".docx");
             return new ResponseEntity<>(outputStream.toByteArray(), headers, HttpStatus.OK);
         } catch (Exception e) {
             e.printStackTrace();
@@ -466,62 +368,12 @@ public class VolumeController {
             }
 
             List<VolumeDTO> allVolumes = volumeService.getVolumesByBookSlug(bookSlug);
-
-            // Filter volumes based on selected slugs and only keep those with content
             List<VolumeDTO> selectedVolumes = allVolumes.stream()
                     .filter(v -> volumeSlugs.contains(v.getSlug()))
                     .filter(v -> v.getContents() != null && !v.getContents().isEmpty())
                     .collect(Collectors.toList());
 
-            XWPFDocument document = new XWPFDocument();
-
-            // Add content from selected volumes (English only)
-            int lessonNumber = 1;
-            for (int i = 0; i < selectedVolumes.size(); i++) {
-                VolumeDTO volume = selectedVolumes.get(i);
-                List<ContentDTO> contents = volume.getContents();
-
-                // Add volume title with Lesson numbering
-                XWPFParagraph volumeTitleParagraph = document.createParagraph();
-                volumeTitleParagraph.setAlignment(ParagraphAlignment.CENTER);
-                XWPFRun volumeTitleRun = volumeTitleParagraph.createRun();
-                volumeTitleRun.setBold(true);
-                volumeTitleRun.setFontFamily("Book Antiqua");
-                volumeTitleRun.setFontSize(25);
-                volumeTitleRun.setText("Lesson " + lessonNumber + ": " + volume.getEng());
-
-                // Build English paragraph only
-                StringBuilder englishParagraph = new StringBuilder();
-
-                for (ContentDTO content : contents) {
-                    String eng = content.getEng().trim();
-
-                    // Add English sentence with period
-                    if (englishParagraph.length() > 0) {
-                        englishParagraph.append(". ");
-                    }
-                    englishParagraph.append(eng);
-                }
-
-                // Add English paragraph with 1.5 line spacing
-                XWPFParagraph engParagraph = document.createParagraph();
-                engParagraph.setAlignment(ParagraphAlignment.LEFT);
-                engParagraph.setSpacingBetween(1.5, LineSpacingRule.AUTO);
-                XWPFRun engRun = engParagraph.createRun();
-                engRun.setFontFamily("Book Antiqua");
-                engRun.setFontSize(18);
-                engRun.setText(englishParagraph.toString());
-
-                // Increment lesson number
-                lessonNumber++;
-
-                // Page break between volumes (only if not the last volume)
-                if (i < selectedVolumes.size() - 1) {
-                    XWPFParagraph pageBreakParagraph = document.createParagraph();
-                    XWPFRun pageBreakRun = pageBreakParagraph.createRun();
-                    pageBreakRun.addBreak(BreakType.PAGE);
-                }
-            }
+            XWPFDocument document = buildVolumeDocument(selectedVolumes, true);
 
             ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
             document.write(outputStream);
