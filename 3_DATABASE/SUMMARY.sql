@@ -64610,7 +64610,39 @@ INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_
     ('Q-esl-fast-beginner-1-24-017', 'esl-fast-beginner-1-24', 'Why does Sarah cry?', 'Tại sao Sarah khóc?', 'ACTIVE', NULL, NULL, NULL, NULL),
     ('Q-esl-fast-beginner-1-24-018', 'esl-fast-beginner-1-24', 'How does Sarah feel after eating the warm cookies?', 'Sarah cảm thấy thế nào sau khi ăn những chiếc bánh quy ấm áp?', 'ACTIVE', NULL, NULL, NULL, NULL),
     ('Q-esl-fast-beginner-1-24-019', 'esl-fast-beginner-1-24', 'What does Sarah do after her mom bakes the cookies?', 'Sarah làm gì sau khi mẹ làm bánh quy?', 'ACTIVE', NULL, NULL, NULL, NULL),
-    ('Q-esl-fast-beginner-1-24-020', 'esl-fast-beginner-1-24', 'What is the main lesson Sarah learns?', 'Bài học chính mà Sarah rút ra là gì?', 'ACTIVE', NULL, NULL, NULL, NULL);
+    ('Q-esl-fast-beginner-1-24-020', 'esl-fast-beginner-1-24', 'What is the main lesson Sarah learns?', 'Bài học chính mà Sarah rút ra là gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	
+	/* (UUID(),'esl-fast-beginner-1-25','A New Home','Ngôi nhà mới','BEGINNER_01_ESL_FAST_CHILDREN_025.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1','YES',25) */
+    ('Q-esl-fast-beginner-1-25-001', 'esl-fast-beginner-1-25', 'Where does he move?', 'Cậu bé chuyển đến đâu?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-002', 'esl-fast-beginner-1-25', 'What kind of place does he move to?', 'Cậu bé chuyển đến một nơi như thế nào?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-003', 'esl-fast-beginner-1-25', 'What are there many of in the new city?', 'Có rất nhiều gì ở thành phố mới?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-004', 'esl-fast-beginner-1-25', 'What are many people doing?', 'Có nhiều người đang làm gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-005', 'esl-fast-beginner-1-25', 'What kind of cars are mentioned?', 'Loại xe nào được nhắc đến?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-006', 'esl-fast-beginner-1-25', 'How does he feel in the new city?', 'Cậu bé cảm thấy thế nào ở thành phố mới?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-007', 'esl-fast-beginner-1-25', 'Why might he feel lonely?', 'Tại sao cậu bé có thể cảm thấy cô đơn?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-008', 'esl-fast-beginner-1-25', 'How do people act in the new city?', 'Mọi người cư xử như thế nào ở thành phố mới?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-009', 'esl-fast-beginner-1-25', 'Where does he go after moving?', 'Sau khi chuyển nhà, cậu bé đi đâu?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-010', 'esl-fast-beginner-1-25', 'What does he see at his new school?', 'Cậu bé nhìn thấy gì ở trường mới?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-011', 'esl-fast-beginner-1-25', 'What does the person look like?', 'Người đó trông như thế nào?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-012', 'esl-fast-beginner-1-25', 'Who does he meet at school?', 'Cậu bé gặp ai ở trường?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-013', 'esl-fast-beginner-1-25', 'What does he ask the person to do?', 'Cậu bé nhờ người đó làm gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-014', 'esl-fast-beginner-1-25', 'Does he know the new city well?', 'Cậu bé có biết rõ thành phố mới không?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-015', 'esl-fast-beginner-1-25', 'Is the new city crowded?', 'Thành phố mới có đông đúc không?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-016', 'esl-fast-beginner-1-25', 'What is different about the new place?', 'Điều gì khác biệt ở nơi mới?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-017', 'esl-fast-beginner-1-25', 'What does he notice first about the city?', 'Cậu bé chú ý điều gì đầu tiên về thành phố?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-018', 'esl-fast-beginner-1-25', 'What does he notice about the people?', 'Cậu bé nhận thấy điều gì về mọi người?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-019', 'esl-fast-beginner-1-25', 'Where are many people walking?', 'Có nhiều người đang đi bộ ở đâu?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-020', 'esl-fast-beginner-1-25', 'What makes the city look busy?', 'Điều gì khiến thành phố trông nhộn nhịp?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-021', 'esl-fast-beginner-1-25', 'What does he do when he gets to school?', 'Cậu bé làm gì khi đến trường?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-022', 'esl-fast-beginner-1-25', 'Does he find someone friendly?', 'Cậu bé có gặp một người thân thiện không?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-023', 'esl-fast-beginner-1-25', 'How does the person seem?', 'Người đó có vẻ như thế nào?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-024', 'esl-fast-beginner-1-25', 'What does he need help with?', 'Cậu bé cần giúp đỡ về việc gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-025', 'esl-fast-beginner-1-25', 'What does “show him around” mean?', '“Show him around” có nghĩa là gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-026', 'esl-fast-beginner-1-25', 'Why does he talk to the friendly-looking person?', 'Tại sao cậu bé nói chuyện với người trông thân thiện?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-027', 'esl-fast-beginner-1-25', 'What is the boy experiencing?', 'Cậu bé đang trải qua điều gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-028', 'esl-fast-beginner-1-25', 'What happens before he goes to school?', 'Điều gì xảy ra trước khi cậu bé đến trường?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-029', 'esl-fast-beginner-1-25', 'What happens at the end of the story?', 'Điều gì xảy ra ở cuối câu chuyện?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-030', 'esl-fast-beginner-1-25', 'What is the main idea of the story?', 'Ý chính của câu chuyện là gì?', 'ACTIVE', NULL, NULL, NULL, NULL);
 /* (UUID(),'esl-fast-beginner-1-24','Sometimes You Lose','Đôi khi bạn thua','BEGINNER_01_ESL_FAST_CHILDREN_024.mp3',NULL,'00:00:00.000','00:00:39.000','esl-fast-children-1','YES',24) */
 INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE, ANSWER_TEXT, ANSWER_TEXT_VI, IS_CORRECT,DISPLAY_ORDER,CREATED_AT,UPDATED_AT,CREATED_BY,UPDATED_BY) VALUES
     ('Q-esl-fast-beginner-1-24-001','A','They won','Họ đã thắng','N',1,NULL,NULL,NULL,NULL),
@@ -64711,4 +64743,155 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE, ANSWER_TEXT, ANSWER_TEXT_VI, IS_
     ('Q-esl-fast-beginner-1-24-020','A','You should always win','Bạn luôn luôn phải thắng','N',1,NULL,NULL,NULL,NULL),
     ('Q-esl-fast-beginner-1-24-020','B','You should never play sports','Bạn không bao giờ nên chơi thể thao','N',2,NULL,NULL,NULL,NULL),
     ('Q-esl-fast-beginner-1-24-020','C','Sometimes you win and sometimes you lose','Đôi khi bạn thắng và đôi khi bạn thua','Y',3,NULL,NULL,NULL,NULL),
-    ('Q-esl-fast-beginner-1-24-020','D','Losing means you should quit','Thua nghĩa là bạn nên bỏ cuộc','N',4,NULL,NULL,NULL,NULL);
+    ('Q-esl-fast-beginner-1-24-020','D','Losing means you should quit','Thua nghĩa là bạn nên bỏ cuộc','N',4,NULL,NULL,NULL,NULL),
+	
+	/* (UUID(),'esl-fast-beginner-1-25','A New Home','Ngôi nhà mới','BEGINNER_01_ESL_FAST_CHILDREN_025.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1','YES',25) */
+    ('Q-esl-fast-beginner-1-25-001', 'A', 'A new city', 'Một thành phố mới', 'Y', 1, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-001', 'B', 'A new country', 'Một đất nước mới', 'N', 2, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-001', 'C', 'A new school', 'Một ngôi trường mới', 'N', 3, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-001', 'D', 'A small village', 'Một ngôi làng nhỏ', 'N', 4, NULL, NULL, NULL, NULL),
+
+    ('Q-esl-fast-beginner-1-25-002', 'A', 'A busy city', 'Một thành phố nhộn nhịp', 'Y', 1, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-002', 'B', 'A quiet farm', 'Một trang trại yên tĩnh', 'N', 2, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-002', 'C', 'A small village', 'Một ngôi làng nhỏ', 'N', 3, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-002', 'D', 'A beach town', 'Một thị trấn ven biển', 'N', 4, NULL, NULL, NULL, NULL),
+
+    ('Q-esl-fast-beginner-1-25-003', 'A', 'Buildings', 'Các tòa nhà', 'Y', 1, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-003', 'B', 'Trees', 'Cây cối', 'N', 2, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-003', 'C', 'Houses', 'Những ngôi nhà', 'N', 3, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-003', 'D', 'Parks', 'Công viên', 'N', 4, NULL, NULL, NULL, NULL),
+
+    ('Q-esl-fast-beginner-1-25-004', 'A', 'Walking', 'Đi bộ', 'Y', 1, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-004', 'B', 'Running', 'Chạy', 'N', 2, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-004', 'C', 'Driving', 'Lái xe', 'N', 3, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-004', 'D', 'Sleeping', 'Ngủ', 'N', 4, NULL, NULL, NULL, NULL),
+
+    ('Q-esl-fast-beginner-1-25-005', 'A', 'Taxis', 'Xe taxi', 'Y', 1, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-005', 'B', 'Buses', 'Xe buýt', 'N', 2, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-005', 'C', 'Trucks', 'Xe tải', 'N', 3, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-005', 'D', 'Bikes', 'Xe đạp', 'N', 4, NULL, NULL, NULL, NULL),
+
+    ('Q-esl-fast-beginner-1-25-006', 'A', 'Lonely', 'Cô đơn', 'Y', 1, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-006', 'B', 'Happy', 'Vui vẻ', 'N', 2, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-006', 'C', 'Angry', 'Tức giận', 'N', 3, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-006', 'D', 'Excited', 'Phấn khích', 'N', 4, NULL, NULL, NULL, NULL),
+
+    ('Q-esl-fast-beginner-1-25-007', 'A', 'He is new there', 'Cậu bé là người mới ở đó', 'Y', 1, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-007', 'B', 'He has many friends', 'Cậu bé có nhiều bạn', 'N', 2, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-007', 'C', 'He likes the city', 'Cậu bé thích thành phố', 'N', 3, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-007', 'D', 'He knows everyone', 'Cậu bé biết mọi người', 'N', 4, NULL, NULL, NULL, NULL),
+
+    ('Q-esl-fast-beginner-1-25-008', 'A', 'They act differently', 'Họ cư xử khác', 'Y', 1, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-008', 'B', 'They act the same', 'Họ cư xử giống nhau', 'N', 2, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-008', 'C', 'They are angry', 'Họ tức giận', 'N', 3, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-008', 'D', 'They are sleeping', 'Họ đang ngủ', 'N', 4, NULL, NULL, NULL, NULL),
+
+    ('Q-esl-fast-beginner-1-25-009', 'A', 'His new school', 'Ngôi trường mới', 'Y', 1, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-009', 'B', 'A park', 'Một công viên', 'N', 2, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-009', 'C', 'A restaurant', 'Một nhà hàng', 'N', 3, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-009', 'D', 'A store', 'Một cửa hàng', 'N', 4, NULL, NULL, NULL, NULL),
+
+    ('Q-esl-fast-beginner-1-25-010', 'A', 'A friendly-looking person', 'Một người trông thân thiện', 'Y', 1, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-010', 'B', 'A teacher', 'Một giáo viên', 'N', 2, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-010', 'C', 'A taxi driver', 'Một tài xế taxi', 'N', 3, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-010', 'D', 'A student sleeping', 'Một học sinh đang ngủ', 'N', 4, NULL, NULL, NULL, NULL),
+
+    ('Q-esl-fast-beginner-1-25-011', 'A', 'Friendly', 'Thân thiện', 'Y', 1, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-011', 'B', 'Angry', 'Tức giận', 'N', 2, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-011', 'C', 'Sad', 'Buồn', 'N', 3, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-011', 'D', 'Unhappy', 'Không vui', 'N', 4, NULL, NULL, NULL, NULL),
+
+    ('Q-esl-fast-beginner-1-25-012', 'A', 'A friendly-looking person', 'Một người trông thân thiện', 'Y', 1, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-012', 'B', 'A taxi driver', 'Một tài xế taxi', 'N', 2, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-012', 'C', 'A shopkeeper', 'Một chủ cửa hàng', 'N', 3, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-012', 'D', 'A teacher', 'Một giáo viên', 'N', 4, NULL, NULL, NULL, NULL),
+
+    ('Q-esl-fast-beginner-1-25-013', 'A', 'To show him around', 'Dẫn cậu bé đi tham quan', 'Y', 1, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-013', 'B', 'To take him home', 'Đưa cậu bé về nhà', 'N', 2, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-013', 'C', 'To buy him food', 'Mua đồ ăn cho cậu bé', 'N', 3, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-013', 'D', 'To drive him to school', 'Chở cậu bé đến trường', 'N', 4, NULL, NULL, NULL, NULL),
+
+    ('Q-esl-fast-beginner-1-25-014', 'A', 'No, he is new there', 'Không, cậu bé mới đến đó', 'Y', 1, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-014', 'B', 'Yes, very well', 'Có, rất rõ', 'N', 2, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-014', 'C', 'Yes, he grew up there', 'Có, cậu bé lớn lên ở đó', 'N', 3, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-014', 'D', 'Yes, he owns the city', 'Có, cậu bé sở hữu thành phố', 'N', 4, NULL, NULL, NULL, NULL),
+
+    ('Q-esl-fast-beginner-1-25-015', 'A', 'Yes', 'Có', 'Y', 1, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-015', 'B', 'No', 'Không', 'N', 2, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-015', 'C', 'Only at night', 'Chỉ vào ban đêm', 'N', 3, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-015', 'D', 'Only at school', 'Chỉ ở trường', 'N', 4, NULL, NULL, NULL, NULL),
+
+    ('Q-esl-fast-beginner-1-25-016', 'A', 'People act differently', 'Mọi người cư xử khác', 'Y', 1, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-016', 'B', 'There are no buildings', 'Không có tòa nhà nào', 'N', 2, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-016', 'C', 'There are no people', 'Không có người nào', 'N', 3, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-016', 'D', 'There are no taxis', 'Không có taxi', 'N', 4, NULL, NULL, NULL, NULL),
+
+    ('Q-esl-fast-beginner-1-25-017', 'A', 'Many buildings', 'Nhiều tòa nhà', 'Y', 1, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-017', 'B', 'Many farms', 'Nhiều trang trại', 'N', 2, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-017', 'C', 'Many beaches', 'Nhiều bãi biển', 'N', 3, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-017', 'D', 'Many mountains', 'Nhiều ngọn núi', 'N', 4, NULL, NULL, NULL, NULL),
+
+    ('Q-esl-fast-beginner-1-25-018', 'A', 'They act differently', 'Họ cư xử khác', 'Y', 1, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-018', 'B', 'They are all friendly', 'Tất cả họ đều thân thiện', 'N', 2, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-018', 'C', 'They are all students', 'Tất cả họ đều là học sinh', 'N', 3, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-018', 'D', 'They are all teachers', 'Tất cả họ đều là giáo viên', 'N', 4, NULL, NULL, NULL, NULL),
+
+    ('Q-esl-fast-beginner-1-25-019', 'A', 'In the city', 'Trong thành phố', 'Y', 1, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-019', 'B', 'At home', 'Ở nhà', 'N', 2, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-019', 'C', 'At the beach', 'Ở bãi biển', 'N', 3, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-019', 'D', 'On a farm', 'Ở trang trại', 'N', 4, NULL, NULL, NULL, NULL),
+
+    ('Q-esl-fast-beginner-1-25-020', 'A', 'Buildings, people, and taxis', 'Tòa nhà, người và taxi', 'Y', 1, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-020', 'B', 'Trees and farms', 'Cây cối và trang trại', 'N', 2, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-020', 'C', 'Animals and birds', 'Động vật và chim', 'N', 3, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-020', 'D', 'Rivers and mountains', 'Sông và núi', 'N', 4, NULL, NULL, NULL, NULL),
+
+    ('Q-esl-fast-beginner-1-25-021', 'A', 'He looks for someone to talk to', 'Cậu bé tìm người để nói chuyện', 'Y', 1, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-021', 'B', 'He goes home', 'Cậu bé về nhà', 'N', 2, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-021', 'C', 'He takes a taxi', 'Cậu bé đi taxi', 'N', 3, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-021', 'D', 'He goes shopping', 'Cậu bé đi mua sắm', 'N', 4, NULL, NULL, NULL, NULL),
+
+    ('Q-esl-fast-beginner-1-25-022', 'A', 'Yes', 'Có', 'Y', 1, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-022', 'B', 'No', 'Không', 'N', 2, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-022', 'C', 'Only at home', 'Chỉ ở nhà', 'N', 3, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-022', 'D', 'Only on the street', 'Chỉ trên đường', 'N', 4, NULL, NULL, NULL, NULL),
+
+    ('Q-esl-fast-beginner-1-25-023', 'A', 'Friendly', 'Thân thiện', 'Y', 1, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-023', 'B', 'Angry', 'Tức giận', 'N', 2, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-023', 'C', 'Sad', 'Buồn', 'N', 3, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-023', 'D', 'Scared', 'Sợ hãi', 'N', 4, NULL, NULL, NULL, NULL),
+
+    ('Q-esl-fast-beginner-1-25-024', 'A', 'Finding his way around', 'Tìm hiểu đường đi và xung quanh', 'Y', 1, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-024', 'B', 'Buying a new house', 'Mua một ngôi nhà mới', 'N', 2, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-024', 'C', 'Finding a taxi', 'Tìm một chiếc taxi', 'N', 3, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-024', 'D', 'Finding food', 'Tìm đồ ăn', 'N', 4, NULL, NULL, NULL, NULL),
+
+    ('Q-esl-fast-beginner-1-25-025', 'A', 'To take someone around a place', 'Dẫn ai đó đi tham quan một nơi', 'Y', 1, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-025', 'B', 'To take someone home', 'Đưa ai đó về nhà', 'N', 2, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-025', 'C', 'To buy something', 'Mua thứ gì đó', 'N', 3, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-025', 'D', 'To call someone', 'Gọi điện cho ai đó', 'N', 4, NULL, NULL, NULL, NULL),
+
+    ('Q-esl-fast-beginner-1-25-026', 'A', 'He needs help in the new place', 'Cậu bé cần giúp đỡ ở nơi mới', 'Y', 1, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-026', 'B', 'He wants to buy a taxi', 'Cậu bé muốn mua một chiếc taxi', 'N', 2, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-026', 'C', 'He wants to go home', 'Cậu bé muốn về nhà', 'N', 3, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-026', 'D', 'He wants to leave school', 'Cậu bé muốn rời trường', 'N', 4, NULL, NULL, NULL, NULL),
+
+    ('Q-esl-fast-beginner-1-25-027', 'A', 'Moving to a new city', 'Chuyển đến một thành phố mới', 'Y', 1, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-027', 'B', 'Starting a new job', 'Bắt đầu một công việc mới', 'N', 2, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-027', 'C', 'Going on vacation', 'Đi nghỉ mát', 'N', 3, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-027', 'D', 'Buying a new car', 'Mua một chiếc xe mới', 'N', 4, NULL, NULL, NULL, NULL),
+
+    ('Q-esl-fast-beginner-1-25-028', 'A', 'He feels lonely', 'Cậu bé cảm thấy cô đơn', 'Y', 1, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-028', 'B', 'He buys a taxi', 'Cậu bé mua một chiếc taxi', 'N', 2, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-028', 'C', 'He meets his old friends', 'Cậu bé gặp những người bạn cũ', 'N', 3, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-028', 'D', 'He goes to the beach', 'Cậu bé đi biển', 'N', 4, NULL, NULL, NULL, NULL),
+
+    ('Q-esl-fast-beginner-1-25-029', 'A', 'He asks someone to show him around', 'Cậu bé nhờ một người dẫn mình đi tham quan', 'Y', 1, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-029', 'B', 'He goes back home', 'Cậu bé trở về nhà', 'N', 2, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-029', 'C', 'He takes a taxi', 'Cậu bé đi taxi', 'N', 3, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-029', 'D', 'He leaves the city', 'Cậu bé rời khỏi thành phố', 'N', 4, NULL, NULL, NULL, NULL),
+
+    ('Q-esl-fast-beginner-1-25-030', 'A', 'A boy adjusts to life in a new city', 'Một cậu bé thích nghi với cuộc sống ở thành phố mới', 'Y', 1, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-030', 'B', 'A boy wins a competition', 'Một cậu bé thắng một cuộc thi', 'N', 2, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-030', 'C', 'A boy goes on a vacation', 'Một cậu bé đi nghỉ mát', 'N', 3, NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-25-030', 'D', 'A boy buys a new house', 'Một cậu bé mua một ngôi nhà mới', 'N', 4, NULL, NULL, NULL, NULL);
