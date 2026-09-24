@@ -535,65 +535,69 @@ const MultipleChoicePage = () => {
                                                             e.currentTarget.style.backgroundColor = 'white';
                                                         }
                                                     }}
+                                                    onClick={() => {
+                                                        if (!isChecked) handleAnswerChange(question.questionCode, code);
+                                                    }}
                                                 >
-                                                    <Radio value={code} style={{marginRight: 12, width: '100%'}}>
-                                                        <div style={{display: 'inline-flex', flexDirection: 'column', width: 'calc(100% - 24px)'}}>
-                                                            {/* Dòng đáp án EN */}
-                                                            <div style={{display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: 4}}>
-                                                                <span style={{fontWeight: 'bold', color: '#1890ff', minWidth: 24}}>
-                                                                    {code}.
-                                                                </span>
-                                                                <span style={{fontSize: '20px', userSelect: 'text', flex: 1}}>
-                                                                    {textEn}
-                                                                </span>
+                                                    {/* Layout: Radio + mã + text EN + buttons — tất cả trên 1 dòng */}
+                                                    <div style={{display: 'flex', alignItems: 'center', gap: 6}}>
+                                                        {/* Radio chỉ chứa mã đáp án */}
+                                                        <Radio value={code} style={{marginRight: 0}}>
+                                                            <span style={{fontWeight: 'bold', color: '#1890ff', fontSize: '20px', whiteSpace: 'nowrap'}}>
+                                                                {code}.
+                                                            </span>
+                                                        </Radio>
 
-                                                                {/* Nút phát âm đáp án */}
+                                                        {/* Text tiếng Anh — chiếm toàn bộ không gian còn lại */}
+                                                        <span style={{fontSize: '20px', userSelect: 'text', flex: 1, lineHeight: '1.5'}}>
+                                                            {textEn}
+                                                        </span>
+
+                                                        {/* Nút phát âm đáp án */}
+                                                        <Button
+                                                            type="text"
+                                                            icon={currentPlayingId === `a-${question.questionCode}-${code}` ? <PauseOutlined/> : <PlayCircleOutlined/>}
+                                                            onClick={(e) => {
+                                                                e.stopPropagation();
+                                                                speakFull(textEn, `a-${question.questionCode}-${code}`);
+                                                            }}
+                                                            style={{color: '#52c41a', flexShrink: 0}}
+                                                            size="small"
+                                                        />
+
+                                                        {/* Nút xem nghĩa tiếng Việt đáp án */}
+                                                        {hasAVi && (
+                                                            <Tooltip title={isAViShown ? 'Ẩn nghĩa' : 'Xem nghĩa tiếng Việt'}>
                                                                 <Button
                                                                     type="text"
-                                                                    icon={currentPlayingId === `a-${question.questionCode}-${code}` ? <PauseOutlined/> : <PlayCircleOutlined/>}
+                                                                    icon={isAViShown ? <EyeInvisibleOutlined/> : <EyeOutlined/>}
                                                                     onClick={(e) => {
                                                                         e.stopPropagation();
-                                                                        speakFull(textEn, `a-${question.questionCode}-${code}`);
+                                                                        toggleVi(aViKey);
                                                                     }}
                                                                     style={{color: '#52c41a', flexShrink: 0}}
                                                                     size="small"
                                                                 />
+                                                            </Tooltip>
+                                                        )}
+                                                    </div>
 
-                                                                {/* Nút xem nghĩa tiếng Việt đáp án */}
-                                                                {hasAVi && (
-                                                                    <Tooltip title={isAViShown ? 'Ẩn nghĩa' : 'Xem nghĩa tiếng Việt'}>
-                                                                        <Button
-                                                                            type="text"
-                                                                            icon={isAViShown ? <EyeInvisibleOutlined/> : <EyeOutlined/>}
-                                                                            onClick={(e) => {
-                                                                                e.stopPropagation();
-                                                                                toggleVi(aViKey);
-                                                                            }}
-                                                                            style={{color: '#52c41a', flexShrink: 0}}
-                                                                            size="small"
-                                                                        />
-                                                                    </Tooltip>
-                                                                )}
-                                                            </div>
-
-                                                            {/* Nghĩa tiếng Việt đáp án (toggle) */}
-                                                            {isAViShown && textVi && (
-                                                                <div style={{
-                                                                    marginTop: 4,
-                                                                    marginLeft: 28,
-                                                                    padding: '4px 10px',
-                                                                    background: '#f6ffed',
-                                                                    borderLeft: '3px solid #52c41a',
-                                                                    borderRadius: '4px',
-                                                                    fontSize: '17px',
-                                                                    color: '#389e0d',
-                                                                    userSelect: 'text',
-                                                                }}>
-                                                                    🇻🇳 {textVi}
-                                                                </div>
-                                                            )}
+                                                    {/* Nghĩa tiếng Việt đáp án (toggle) — dòng riêng bên dưới */}
+                                                    {isAViShown && textVi && (
+                                                        <div style={{
+                                                            marginTop: 6,
+                                                            marginLeft: 52,
+                                                            padding: '4px 10px',
+                                                            background: '#f6ffed',
+                                                            borderLeft: '3px solid #52c41a',
+                                                            borderRadius: '4px',
+                                                            fontSize: '17px',
+                                                            color: '#389e0d',
+                                                            userSelect: 'text',
+                                                        }}>
+                                                            🇻🇳 {textVi}
                                                         </div>
-                                                    </Radio>
+                                                    )}
                                                 </div>
                                             );
                                         })}
