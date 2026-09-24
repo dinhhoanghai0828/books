@@ -39,6 +39,8 @@ const MultipleChoicePage = () => {
   const [openConfirmModal, setOpenConfirmModal] = useState(false);
   const [confirmLoading, setConfirmLoading] = useState(false);
   const [openResultModal, setOpenResultModal] = useState(false);
+  const [showWarningModal, setShowWarningModal] = useState(false);
+  const [unansweredNumbers, setUnansweredNumbers] = useState<string>('');
 
   // Quan ly audio bang ref de tranh stale closure
   const currentAudioRef = useRef<HTMLAudioElement | null>(null);
@@ -138,36 +140,41 @@ const MultipleChoicePage = () => {
       );
 
       if (unansweredQuestions.length > 0) {
-        const unansweredNumbers = unansweredQuestions.map((q) => 
+        const unansweredNums = unansweredQuestions.map((q) => 
           questions.indexOf(q) + 1
         ).join(', ');
         
-        // Cap nhat content cua modal hien tai
+        console.log('Có câu chưa làm:', unansweredNums);
+        setUnansweredNumbers(unansweredNums);
+        
+        // Đóng modal xác nhận và mở modal cảnh báo
         setOpenConfirmModal(false);
         setConfirmLoading(false);
-        
-        Modal.confirm({
-          title: 'Cảnh báo',
-          content: `Bạn chưa chọn đáp án cho câu hỏi số: ${unansweredNumbers}. Bạn có chắc chắn muốn nộp bài không?`,
-          okText: 'Đồng ý',
-          cancelText: 'Hủy',
-          onOk: async () => {
-            await performSubmit();
-          },
-          onCancel: () => {
-            // Mở lại modal xác nhận ban đầu
-            setOpenConfirmModal(true);
-          },
-        });
+        setShowWarningModal(true);
         return;
       }
 
       // Neu khong co cau chua lam, nop bai truc tiep
+      console.log('Không có câu chưa làm, nộp bài trực tiếp');
       await performSubmit();
     } catch (error) {
+      console.error('Lỗi trong handleSubmitQuiz:', error);
       setConfirmLoading(false);
       message.error('Có lỗi xảy ra khi nộp bài');
     }
+  };
+
+  const handleWarningConfirm = async () => {
+    console.log('Người dùng bấm Đồng ý trong modal cảnh báo');
+    setShowWarningModal(false);
+    await performSubmit();
+  };
+
+  const handleWarningCancel = () => {
+    console.log('Người dùng bấm Hủy trong modal cảnh báo');
+    setShowWarningModal(false);
+    // Mở lại modal xác nhận ban đầu
+    setOpenConfirmModal(true);
   };
 
   const performSubmit = async () => {
@@ -328,12 +335,12 @@ const MultipleChoicePage = () => {
           );
           
           if (unansweredQuestions.length > 0) {
-            const unansweredNumbers = unansweredQuestions.map((q) => 
+            const unansweredNums = unansweredQuestions.map((q) => 
               questions.indexOf(q) + 1
             ).join(', ');
             return (
               <div>
-                <p>Bạn chưa chọn đáp án cho câu hỏi số: <strong>{unansweredNumbers}</strong></p>
+                <p>Bạn chưa chọn đáp án cho câu hỏi số: <strong>{unansweredNums}</strong></p>
                 <p>Bạn có chắc chắn muốn nộp bài không?</p>
               </div>
             );
@@ -341,6 +348,20 @@ const MultipleChoicePage = () => {
           
           return <p>Bạn có chắc chắn muốn nộp bài không?</p>;
         })()}
+      </Modal>
+
+      {/* Modal canh bao khi co cau chua lam */}
+      <Modal
+        title="Cảnh báo"
+        open={showWarningModal}
+        onOk={handleWarningConfirm}
+        onCancel={handleWarningCancel}
+        centered
+        okText="Đồng ý"
+        cancelText="Hủy"
+      >
+        <p>Bạn chưa chọn đáp án cho câu hỏi số: <strong>{unansweredNumbers}</strong></p>
+        <p>Bạn có chắc chắn muốn nộp bài không?</p>
       </Modal>
 
       {/* Modal hien thi ket qua sau khi nop bai */}
