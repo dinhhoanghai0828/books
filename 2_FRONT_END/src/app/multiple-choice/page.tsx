@@ -80,6 +80,9 @@ const MultipleChoicePage = () => {
     const [confirmLoading, setConfirmLoading] = useState(false);
     const [openResultModal, setOpenResultModal] = useState(false);
 
+    // Số câu muốn làm (0 = tất cả)
+    const [questionLimit, setQuestionLimit] = useState<number>(0);
+
     // Toggle hiển thị nghĩa tiếng Việt
     // key: questionCode → hiện/ẩn nghĩa câu hỏi
     // key: `${questionCode}-${answerCode}` → hiện/ẩn nghĩa từng đáp án
@@ -134,11 +137,13 @@ const MultipleChoicePage = () => {
     // DATA FETCHING
     // ============================================================
 
-    const fetchData = async () => {
+    const fetchData = async (limit?: number) => {
         setLoading(true);
         try {
             const response = await getQuestionsWithAnswersByVolumeSlug(volumeSlug);
-            setQuestions(shuffleArray(response));
+            const shuffled = shuffleArray(response);
+            const cap = limit ?? questionLimit;
+            setQuestions(cap > 0 ? shuffled.slice(0, cap) : shuffled);
         } catch (error) {
             console.error('Lỗi khi lấy dữ liệu câu hỏi:', error);
             message.error('Không thể tải dữ liệu câu hỏi');
@@ -400,7 +405,7 @@ const MultipleChoicePage = () => {
         setUserAnswers({});
         setIsChecked(false);
         setQuizResult(null);
-        await fetchData();
+        await fetchData(questionLimit);
     };
 
     // ============================================================
@@ -421,30 +426,63 @@ const MultipleChoicePage = () => {
                 </Button>
             </div>
 
-            {/* Thanh chọn giọng đọc */}
+            {/* Thanh chọn giọng đọc + số câu */}
             {availableVoices.length > 0 && (
                 <div style={{
                     display: 'flex',
                     alignItems: 'center',
-                    gap: 10,
+                    gap: 16,
                     marginBottom: 24,
                     padding: '10px 16px',
                     background: '#f0f7ff',
                     borderRadius: 8,
                     border: '1px solid #d0e8ff',
+                    flexWrap: 'wrap',
                 }}>
-                    <SoundOutlined style={{color: '#1890ff', fontSize: 16}}/>
-                    <span style={{fontSize: 14, color: '#555', whiteSpace: 'nowrap'}}>Giọng đọc:</span>
-                    <Select
-                        value={selectedVoice}
-                        onChange={setSelectedVoice}
-                        style={{flex: 1, maxWidth: 360}}
-                        size="small"
-                        options={availableVoices.map(v => ({
-                            value: v.name,
-                            label: `${v.name} (${v.lang})`,
-                        }))}
-                    />
+                    {/* Giọng đọc */}
+                    <div style={{display: 'flex', alignItems: 'center', gap: 8, flex: 1, minWidth: 200}}>
+                        <SoundOutlined style={{color: '#1890ff', fontSize: 16}}/>
+                        <span style={{fontSize: 14, color: '#555', whiteSpace: 'nowrap'}}>Giọng đọc:</span>
+                        <Select
+                            value={selectedVoice}
+                            onChange={setSelectedVoice}
+                            style={{flex: 1, maxWidth: 360}}
+                            size="small"
+                            options={availableVoices.map(v => ({
+                                value: v.name,
+                                label: `${v.name} (${v.lang})`,
+                            }))}
+                        />
+                    </div>
+
+                    {/* Số câu */}
+                    <div style={{display: 'flex', alignItems: 'center', gap: 8}}>
+                        <span style={{fontSize: 14, color: '#555', whiteSpace: 'nowrap'}}>Số câu:</span>
+                        <Select
+                            value={questionLimit}
+                            onChange={(val) => {
+                                setQuestionLimit(val);
+                                // Reset và load lại ngay với giới hạn mới
+                                stopSpeaking();
+                                setShownVi({});
+                                setUserAnswers({});
+                                setIsChecked(false);
+                                setQuizResult({} as QuizResultType);
+                                setQuizResult(null);
+                                fetchData(val);
+                            }}
+                            size="small"
+                            style={{width: 100}}
+                            options={[
+                                {value: 0,  label: 'Tất cả'},
+                                {value: 5,  label: '5 câu'},
+                                {value: 10, label: '10 câu'},
+                                {value: 15, label: '15 câu'},
+                                {value: 20, label: '20 câu'},
+                                {value: 30, label: '30 câu'},
+                            ]}
+                        />
+                    </div>
                 </div>
             )}
 
