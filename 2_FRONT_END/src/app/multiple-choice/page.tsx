@@ -6,6 +6,7 @@ import {
     CloseCircleOutlined,
     EyeOutlined,
     EyeInvisibleOutlined,
+    FileWordOutlined,
     PauseOutlined,
     PlayCircleOutlined,
     ReloadOutlined,
@@ -16,6 +17,21 @@ import debounce from 'lodash.debounce';
 import {useRouter, useSearchParams} from 'next/navigation';
 import {Suspense, useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {createPortal} from 'react-dom';
+import {
+    AlignmentType,
+    Document,
+    HeadingLevel,
+    Packer,
+    PageBreak,
+    Paragraph,
+    Table,
+    TableCell,
+    TableRow,
+    TextRun,
+    WidthType,
+    BorderStyle,
+} from 'docx';
+import {saveAs} from 'file-saver';
 import '../../styles/global.css';
 
 const {Text} = Typography;
@@ -394,6 +410,177 @@ const MultipleChoicePage = () => {
         }
     };
 
+    // ============================================================
+    // EXPORT WORD
+    // ============================================================
+
+    const exportToWord = async () => {
+        if (questions.length === 0) { message.warning('Không có câu hỏi để xuất'); return; }
+
+        // ── Hàm tạo border transparent cho table cell ──
+        const noBorder = {
+            top:    {style: BorderStyle.NONE, size: 0, color: 'FFFFFF'},
+            bottom: {style: BorderStyle.NONE, size: 0, color: 'FFFFFF'},
+            left:   {style: BorderStyle.NONE, size: 0, color: 'FFFFFF'},
+            right:  {style: BorderStyle.NONE, size: 0, color: 'FFFFFF'},
+        };
+
+        // ── PHẦN 1: Câu hỏi + đáp án ──
+        const questionParagraphs: Paragraph[] = [];
+
+        questions.forEach((q, idx) => {
+            const code = (a: QuestionType['answers'][0]) => a.answerCode ?? a.optionCode;
+            const textEn = (a: QuestionType['answers'][0]) => a.answerText ?? a.optionText;
+
+            // Tiêu đề câu hỏi
+            questionParagraphs.push(
+                new Paragraph({
+                    children: [
+                        new TextRun({text: `Câu ${idx + 1}: `, bold: true, size: 26, color: '1890FF'}),
+                        new TextRun({text: q.questionText, size: 26}),
+                    ],
+                    spacing: {before: 200, after: 80},
+                })
+            );
+
+            // Nghĩa tiếng Việt câu hỏi (nếu có)
+            if (q.questionTextVi) {
+                questionParagraphs.push(
+                    new Paragraph({
+                        children: [new TextRun({text: `   ${q.questionTextVi}`, size: 22, color: '888888', italics: true})],
+                        spacing: {after: 80},
+                    })
+                );
+            }
+
+            // Các đáp án
+            q.answers.forEach(a => {
+                questionParagraphs.push(
+                    new Paragraph({
+                        children: [
+                            new TextRun({text: `   ${code(a)}.  `, bold: true, size: 24, color: '1890FF'}),
+                            new TextRun({text: textEn(a), size: 24}),
+                            ...(a.answerTextVi
+                                ? [new TextRun({text: `  (${a.answerTextVi})`, size: 22, color: '888888', italics: true})]
+                                : []),
+                        ],
+                        spacing: {before: 60, after: 60},
+                    })
+                );
+            });
+
+            questionParagraphs.push(new Paragraph({text: '', spacing: {after: 100}}));
+        });
+
+        // ── PHẦN 2: Bảng đáp án — trang riêng ──
+        const answersPageParagraphs: Paragraph[] = [
+            // Page break để sang trang mới
+            new Paragraph({
+                children: [new PageBreak()],
+            }),
+            new Paragraph({
+                text: 'ĐÁP ÁN',
+                heading: HeadingLevel.HEADING_1,
+                alignment: AlignmentType.CENTER,
+                spacing: {before: 0, after: 300},
+            }),
+        ];
+
+        // Tạo bảng đáp án: 5 cột mỗi hàng
+        const COLS = 5;
+        const rows: TableRow[] = [];
+
+        // Header row
+        const headerCells = Array.from({length: COLS}, (_, c) => {
+            const start = c * Math.ceil(questions.length / COLS);
+            return new TableCell({
+                children: [new Paragraph({
+                    children: [new TextRun({text: `Câu`, bold: true, size: 22})],
+                    alignment: AlignmentType.CENTER,
+                })],
+                width: {size: 20, type: WidthType.PERCENTAGE},
+                shading: {fill: 'D0E8FF'},
+            });
+        });
+        rows.push(new TableRow({children: headerCells}));
+
+        // Số hàng dữ liệu
+        const numRows = Math.ceil(questions.length / COLS);
+        for (let r = 0; r < numRows; r++) {
+            const cells: TableCell[] = [];
+            for (let c = 0; c < COLS; c++) {
+                const idx = c * numRows + r;
+                if (idx < questions.length) {
+                    const q = questions[idx];
+                    const correctAnswer = q.answers.find(a => a.isCorrect === 'Y');
+                    const correctCode = correctAnswer
+                        ? (correctAnswer.answerCode ?? correctAnswer.optionCode)
+                        : '?';
+                    cells.push(new TableCell({
+                        children: [new Paragraph({
+                            children: [
+                                new TextRun({text: `${idx + 1}. `, bold: true, size: 22}),
+                                new TextRun({text: correctCode, bold: true, size: 22, color: 'D4380D'}),
+                            ],
+                            alignment: AlignmentType.CENTER,
+                        })],
+                        width: {size: 20, type: WidthType.PERCENTAGE},
+                    }));
+                } else {
+                    cells.push(new TableCell({
+                        children: [new Paragraph({text: ''})],
+                        width: {size: 20, type: WidthType.PERCENTAGE},
+                        borders: noBorder,
+                    }));
+                }
+            }
+            rows.push(new TableRow({children: cells}));
+        }
+
+        answersPageParagraphs.push(
+            new Paragraph({
+                children: [
+                    new TextRun({
+                        text: `Tổng số câu: ${questions.length}`,
+                        size: 22,
+                        color: '555555',
+                    }),
+                ],
+                spacing: {after: 200},
+                alignment: AlignmentType.CENTER,
+            })
+        );
+
+        const doc = new Document({
+            sections: [
+                {
+                    children: [
+                        // Tiêu đề
+                        new Paragraph({
+                            text: 'BÀI KIỂM TRA TRẮC NGHIỆM',
+                            heading: HeadingLevel.HEADING_1,
+                            alignment: AlignmentType.CENTER,
+                            spacing: {after: 400},
+                        }),
+                        // Câu hỏi
+                        ...questionParagraphs,
+                        // Trang đáp án
+                        ...answersPageParagraphs,
+                        new Table({rows, width: {size: 100, type: WidthType.PERCENTAGE}}),
+                    ],
+                },
+            ],
+        });
+
+        const blob = await Packer.toBlob(doc);
+        saveAs(blob, `bai-kiem-tra-${questions.length}-cau.docx`);
+        message.success('Đã xuất file Word thành công!');
+    };
+
+    // ============================================================
+    // RELOAD QUIZ
+    // ============================================================
+
     const reloadQuiz = async () => {
         stopSpeaking();
         setMeaningEnKeywords([]);
@@ -710,7 +897,7 @@ const MultipleChoicePage = () => {
                 </div>
             )}
 
-            {/* Nút nộp bài và làm lại */}
+            {/* Nút nộp bài, làm lại, xuất Word */}
             <div style={{display: 'flex', justifyContent: 'center', gap: '16px', marginTop: '32px'}}>
                 <Button
                     type="primary" size="large"
@@ -725,6 +912,15 @@ const MultipleChoicePage = () => {
                     style={{minWidth: '120px', height: '44px', fontSize: '20px'}}
                 >
                     Làm lại
+                </Button>
+                <Button
+                    size="large"
+                    icon={<FileWordOutlined/>}
+                    onClick={exportToWord}
+                    disabled={questions.length === 0}
+                    style={{minWidth: '120px', height: '44px', fontSize: '20px', color: '#1D6FDE', borderColor: '#1D6FDE'}}
+                >
+                    Xuất Word
                 </Button>
             </div>
 
