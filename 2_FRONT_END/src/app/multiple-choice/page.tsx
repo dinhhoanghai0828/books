@@ -489,7 +489,7 @@ const MultipleChoicePage = () => {
                                                     color: '#389e0d',
                                                     userSelect: 'text',
                                                 }}>
-                                                    🇻🇳 {question.questionTextVi}
+                                                    {question.questionTextVi}
                                                 </div>
                                             )}
                                         </div>
@@ -595,7 +595,7 @@ const MultipleChoicePage = () => {
                                                             color: '#389e0d',
                                                             userSelect: 'text',
                                                         }}>
-                                                            🇻🇳 {textVi}
+                                                            {textVi}
                                                         </div>
                                                     )}
                                                 </div>
