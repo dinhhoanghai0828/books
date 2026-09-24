@@ -191,22 +191,3 @@ CREATE TABLE ANSWERS (
     UNIQUE INDEX UK_ANSWERS_QUESTION_OPTION (QUESTION_CODE, OPTION_CODE)
 );
 
--- Insert sample data for testing
-INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, STATUS, CREATED_BY) VALUES
-('Q001', 'volume-1', 'What is the capital of Vietnam?', 'ACTIVE', 'admin'),
-('Q002', 'volume-1', 'Which language is spoken in Vietnam?', 'ACTIVE', 'admin'),
-('Q003', 'volume-1', 'What is the currency of Vietnam?', 'ACTIVE', 'admin');
-
-INSERT INTO ANSWERS (QUESTION_CODE, OPTION_CODE, OPTION_TEXT, IS_CORRECT, DISPLAY_ORDER, CREATED_BY) VALUES
-('Q001', 'A', 'Ho Chi Minh City', 'N', 1, 'admin'),
-('Q001', 'B', 'Hanoi', 'Y', 2, 'admin'),
-('Q001', 'C', 'Da Nang', 'N', 3, 'admin'),
-('Q001', 'D', 'Hai Phong', 'N', 4, 'admin'),
-('Q002', 'A', 'English', 'N', 1, 'admin'),
-('Q002', 'B', 'Chinese', 'N', 2, 'admin'),
-('Q002', 'C', 'Vietnamese', 'Y', 3, 'admin'),
-('Q002', 'D', 'Japanese', 'N', 4, 'admin'),
-('Q003', 'A', 'Baht', 'N', 1, 'admin'),
-('Q003', 'B', 'Ringgit', 'N', 2, 'admin'),
-('Q003', 'C', 'Dong', 'Y', 3, 'admin'),
-('Q003', 'D', 'Rupiah', 'N', 4, 'admin');
