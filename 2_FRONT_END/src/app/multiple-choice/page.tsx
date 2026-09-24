@@ -39,8 +39,6 @@ const MultipleChoicePage = () => {
   const [openConfirmModal, setOpenConfirmModal] = useState(false);
   const [confirmLoading, setConfirmLoading] = useState(false);
   const [openResultModal, setOpenResultModal] = useState(false);
-  const [showWarningModal, setShowWarningModal] = useState(false);
-  const [unansweredNumbers, setUnansweredNumbers] = useState<string>('');
 
   // Quan ly audio bang ref de tranh stale closure
   const currentAudioRef = useRef<HTMLAudioElement | null>(null);
@@ -128,29 +126,11 @@ const MultipleChoicePage = () => {
   // ============================================================
 
   const handleSubmitQuiz = async () => {
+    console.log('handleSubmitQuiz được gọi');
     setConfirmLoading(true);
     try {
-      const unansweredQuestions = questions.filter(
-        q => !userAnswers[q.questionCode]
-      );
-
-      if (unansweredQuestions.length > 0) {
-        const unansweredNums = unansweredQuestions.map((q) => 
-          questions.indexOf(q) + 1
-        ).join(', ');
-        
-        console.log('Có câu chưa làm:', unansweredNums);
-        setUnansweredNumbers(unansweredNums);
-        
-        // Đóng modal xác nhận và mở modal cảnh báo
-        setOpenConfirmModal(false);
-        setConfirmLoading(false);
-        setShowWarningModal(true);
-        return; // Quan trọng: return để không gọi performSubmit ở dưới
-      }
-
-      // Neu khong co cau chua lam, nop bai truc tiep
-      console.log('Không có câu chưa làm, nộp bài trực tiếp');
+      // Nộp bài trực tiếp, không cần modal cảnh báo
+      console.log('Nộp bài trực tiếp');
       setOpenConfirmModal(false);
       setConfirmLoading(false);
       await performSubmit();
@@ -159,19 +139,6 @@ const MultipleChoicePage = () => {
       setConfirmLoading(false);
       message.error('Có lỗi xảy ra khi nộp bài');
     }
-  };
-
-  const handleWarningConfirm = async () => {
-    console.log('Người dùng bấm Đồng ý trong modal cảnh báo');
-    setShowWarningModal(false);
-    await performSubmit();
-  };
-
-  const handleWarningCancel = () => {
-    console.log('Người dùng bấm Hủy trong modal cảnh báo');
-    setShowWarningModal(false);
-    // Mở lại modal xác nhận ban đầu
-    setOpenConfirmModal(true);
   };
 
   const performSubmit = async () => {
@@ -255,9 +222,9 @@ const MultipleChoicePage = () => {
                 onChange={(e) => handleAnswerChange(question.questionCode, e.target.value)}
                 disabled={isChecked}
               >
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '40px', marginBottom: '12px' }}>
                   {question.answers.map((answer) => (
-                    <div key={answer.optionCode} style={{ marginBottom: 8 }}>
+                    <div key={answer.optionCode}>
                       <Radio value={answer.optionCode}>
                         <span style={{ marginRight: 8 }}>{answer.optionCode}.</span>
                         <span>{answer.optionText}</span>
@@ -347,20 +314,6 @@ const MultipleChoicePage = () => {
           
           return <p>Bạn có chắc chắn muốn nộp bài không?</p>;
         })()}
-      </Modal>
-
-      {/* Modal canh bao khi co cau chua lam */}
-      <Modal
-        title="Cảnh báo"
-        open={showWarningModal}
-        onOk={handleWarningConfirm}
-        onCancel={handleWarningCancel}
-        centered
-        okText="Đồng ý"
-        cancelText="Hủy"
-      >
-        <p>Bạn chưa chọn đáp án cho câu hỏi số: <strong>{unansweredNumbers}</strong></p>
-        <p>Bạn có chắc chắn muốn nộp bài không?</p>
       </Modal>
 
       {/* Modal hien thi ket qua sau khi nop bai */}
