@@ -4,12 +4,14 @@ import {getMeaningWords, getQuestionsWithAnswersByVolumeSlug, submitQuiz} from '
 import {
     CheckCircleOutlined,
     CloseCircleOutlined,
+    EyeOutlined,
+    EyeInvisibleOutlined,
     PauseOutlined,
     PlayCircleOutlined,
     ReloadOutlined,
     SoundOutlined,
 } from '@ant-design/icons';
-import {Button, Modal, Radio, Select, Spin, Switch, Typography, message} from 'antd';
+import {Button, Modal, Radio, Select, Spin, Switch, Tooltip, Typography, message} from 'antd';
 import debounce from 'lodash.debounce';
 import {useRouter, useSearchParams} from 'next/navigation';
 import {Suspense, useCallback, useEffect, useMemo, useRef, useState} from 'react';
@@ -19,7 +21,7 @@ import '../../styles/global.css';
 const {Text} = Typography;
 
 // ============================================================
-// TOOLTIP STYLE — giống hệt ContentComponent
+// TOOLTIP STYLE — giống ContentComponent
 // ============================================================
 
 const TOOLTIP_STYLE: React.CSSProperties = {
@@ -51,6 +53,14 @@ const TOOLTIP_BODY_STYLE: React.CSSProperties = {
 
 const shuffleArray = <T,>(arr: T[]): T[] => [...arr].sort(() => Math.random() - 0.5);
 
+// Helper: lấy mã đáp án ưu tiên answerCode, fallback optionCode
+const getAnswerCode = (answer: QuestionType['answers'][0]) =>
+    answer.answerCode ?? answer.optionCode;
+
+// Helper: lấy text đáp án EN ưu tiên answerText, fallback optionText
+const getAnswerTextEn = (answer: QuestionType['answers'][0]) =>
+    answer.answerText ?? answer.optionText;
+
 // ============================================================
 // MAIN COMPONENT
 // ============================================================
@@ -70,11 +80,19 @@ const MultipleChoicePage = () => {
     const [confirmLoading, setConfirmLoading] = useState(false);
     const [openResultModal, setOpenResultModal] = useState(false);
 
-    // TTS (play full sentence)
+    // Toggle hiển thị nghĩa tiếng Việt
+    // key: questionCode → hiện/ẩn nghĩa câu hỏi
+    // key: `${questionCode}-${answerCode}` → hiện/ẩn nghĩa từng đáp án
+    const [shownVi, setShownVi] = useState<Record<string, boolean>>({});
+
+    const toggleVi = (key: string) =>
+        setShownVi(prev => ({...prev, [key]: !prev[key]}));
+
+    // TTS
     const currentAudioRef = useRef<HTMLAudioElement | null>(null);
     const [currentPlayingId, setCurrentPlayingId] = useState<string | null>(null);
 
-    // Tooltip / meaning state — giống ContentComponent
+    // Tooltip / meaning (bôi chọn từ) — giống ContentComponent
     const [meaningEnKeywords, setMeaningEnKeywords] = useState<string[]>([]);
     const [meaningViKeywords, setMeaningViKeywords] = useState<string[]>([]);
     const [tooltipPosition, setTooltipPosition] = useState({x: 0, y: 0});
@@ -93,7 +111,6 @@ const MultipleChoicePage = () => {
 
     useEffect(() => {
         if (!('speechSynthesis' in window)) return;
-
         const loadVoices = () => {
             const voices = window.speechSynthesis.getVoices();
             setAvailableVoices(voices);
@@ -102,14 +119,11 @@ const MultipleChoicePage = () => {
                 setSelectedVoice(def.name);
             }
         };
-
         loadVoices();
         window.speechSynthesis.onvoiceschanged = loadVoices;
-
         const timeout = setTimeout(() => {
             if (window.speechSynthesis.getVoices().length === 0) loadVoices();
         }, 1000);
-
         return () => {
             window.speechSynthesis.onvoiceschanged = null;
             clearTimeout(timeout);
@@ -133,19 +147,19 @@ const MultipleChoicePage = () => {
         }
     };
 
-    useEffect(() => {fetchData();}, [volumeSlug]);
+    useEffect(() => { fetchData(); }, [volumeSlug]);
 
     // ============================================================
     // ANSWER SELECTION
     // ============================================================
 
-    const handleAnswerChange = (questionCode: string, optionCode: string) => {
+    const handleAnswerChange = (questionCode: string, code: string) => {
         if (isChecked) return;
-        setUserAnswers(prev => ({...prev, [questionCode]: optionCode}));
+        setUserAnswers(prev => ({...prev, [questionCode]: code}));
     };
 
     // ============================================================
-    // TTS — speak text
+    // TTS
     // ============================================================
 
     const speakText = useCallback((text: string) => {
@@ -164,15 +178,14 @@ const MultipleChoicePage = () => {
         window.speechSynthesis.speak(utterance);
     }, [selectedVoice, availableVoices]);
 
-    // TTS cho nút play toàn câu
     const stopSpeaking = () => {
         if (window.speechSynthesis) window.speechSynthesis.cancel();
         setCurrentPlayingId(null);
     };
 
     const speakFull = (text: string, itemId: string) => {
-        if (!('speechSynthesis' in window)) {message.error('Trình duyệt không hỗ trợ TTS'); return;}
-        if (currentPlayingId === itemId) {stopSpeaking(); return;}
+        if (!('speechSynthesis' in window)) { message.error('Trình duyệt không hỗ trợ TTS'); return; }
+        if (currentPlayingId === itemId) { stopSpeaking(); return; }
         stopSpeaking();
         const utterance = new SpeechSynthesisUtterance(text);
         utterance.lang = 'en-US';
@@ -189,7 +202,7 @@ const MultipleChoicePage = () => {
     };
 
     // ============================================================
-    // TOOLTIP — selectionchange handler (giống ContentComponent)
+    // TOOLTIP bôi chọn từ — giống ContentComponent
     // ============================================================
 
     const handleGetMeaning = useMemo(
@@ -204,19 +217,15 @@ const MultipleChoicePage = () => {
                         setSelectedText('');
                         return;
                     }
-
                     setSelectedText(searchValue);
-
                     const alreadyShown =
                         searchValue === meaningEnRef.current.join(' ') ||
                         searchValue === meaningViRef.current.join(' ');
                     if (alreadyShown) return;
-
                     const isEng = /^[a-zA-Z ]+$/.test(searchValue);
                     const res = isEng
                         ? await getMeaningWords(searchValue, null)
                         : await getMeaningWords(null, searchValue);
-
                     if (res.length > 0) {
                         setMeaningEnKeywords(res.map(w => w.eng));
                         setMeaningViKeywords(res.map(w => w.vi));
@@ -224,7 +233,6 @@ const MultipleChoicePage = () => {
                         setMeaningEnKeywords([]);
                         setMeaningViKeywords([]);
                     }
-
                     if (selection?.rangeCount) {
                         const rect = selection.getRangeAt(0).getBoundingClientRect();
                         setTooltipPosition({
@@ -232,7 +240,6 @@ const MultipleChoicePage = () => {
                             y: rect.bottom + 8,
                         });
                     }
-
                     if (autoRead) speakText(searchValue);
                 } catch (e) {
                     console.error(e);
@@ -241,7 +248,6 @@ const MultipleChoicePage = () => {
         [autoRead, speakText]
     );
 
-    // Đăng ký / huỷ selectionchange
     useEffect(() => {
         document.addEventListener('selectionchange', handleGetMeaning);
         return () => {
@@ -250,7 +256,6 @@ const MultipleChoicePage = () => {
         };
     }, [handleGetMeaning]);
 
-    // Đóng tooltip khi click ra ngoài (giống ContentComponent)
     useEffect(() => {
         const handleClickOutside = (e: MouseEvent) => {
             const target = e.target as HTMLElement;
@@ -264,7 +269,6 @@ const MultipleChoicePage = () => {
                 setSelectedText('');
             }
         };
-
         const handleSelectionChange = () => {
             const dropdowns = document.querySelectorAll('.ant-select-dropdown');
             const isDropdownOpen = Array.from(dropdowns).some(d => {
@@ -278,7 +282,6 @@ const MultipleChoicePage = () => {
                 setSelectedText('');
             }
         };
-
         document.addEventListener('mousedown', handleClickOutside);
         document.addEventListener('selectionchange', handleSelectionChange);
         return () => {
@@ -287,19 +290,13 @@ const MultipleChoicePage = () => {
         };
     }, []);
 
-    // ============================================================
-    // RENDER TOOLTIP — giống hệt ContentComponent
-    // ============================================================
-
     const renderTooltip = useCallback((): React.ReactNode => {
         if (!selectedText) return null;
         const sel = window.getSelection()?.toString().trim() || '';
         const isEng = /^[a-zA-Z ]+$/.test(sel);
-
         return createPortal(
             <div style={{...TOOLTIP_STYLE, left: tooltipPosition.x, top: tooltipPosition.y}}>
                 <div style={TOOLTIP_BODY_STYLE}>
-                    {/* Voice selector + Auto-read */}
                     <div style={{marginBottom: 12, paddingBottom: 8, borderBottom: '1px solid rgba(255,255,255,0.2)'}}>
                         <div style={{marginBottom: 8}}>
                             <Select
@@ -310,16 +307,12 @@ const MultipleChoicePage = () => {
                                 size="small"
                                 getPopupContainer={(t) => t.parentElement as HTMLElement}
                                 dropdownStyle={{zIndex: 10001}}
-                                options={availableVoices.map(v => ({
-                                    value: v.name,
-                                    label: `${v.name} (${v.lang})`,
-                                }))}
+                                options={availableVoices.map(v => ({value: v.name, label: `${v.name} (${v.lang})`}))}
                             />
                         </div>
                         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8}}>
                             <Button
-                                type="link"
-                                icon={<SoundOutlined/>}
+                                type="link" icon={<SoundOutlined/>}
                                 onClick={() => speakText(selectedText)}
                                 style={{color: '#7dd3fc', padding: 0, height: 'auto'}}
                             >
@@ -331,15 +324,11 @@ const MultipleChoicePage = () => {
                             </div>
                         </div>
                     </div>
-
-                    {/* Kết quả nghĩa */}
                     {meaningEnKeywords.length > 0 && meaningViKeywords.length > 0 && (
                         <>
                             {isEng ? (
                                 <>
-                                    <div style={{fontSize: 11, opacity: 0.65, marginBottom: 4, letterSpacing: 1}}>
-                                        EN → VI
-                                    </div>
+                                    <div style={{fontSize: 11, opacity: 0.65, marginBottom: 4, letterSpacing: 1}}>EN → VI</div>
                                     {meaningEnKeywords.map((word, i) => (
                                         <div key={i}>
                                             <strong style={{color: '#7dd3fc'}}>{word}</strong>
@@ -350,9 +339,7 @@ const MultipleChoicePage = () => {
                                 </>
                             ) : (
                                 <>
-                                    <div style={{fontSize: 11, opacity: 0.65, marginBottom: 4, letterSpacing: 1}}>
-                                        VI → EN
-                                    </div>
+                                    <div style={{fontSize: 11, opacity: 0.65, marginBottom: 4, letterSpacing: 1}}>VI → EN</div>
                                     {meaningViKeywords.map((word, i) => (
                                         <div key={i}>
                                             <strong style={{color: '#7dd3fc'}}>{word}</strong>
@@ -381,7 +368,7 @@ const MultipleChoicePage = () => {
             setConfirmLoading(false);
             await performSubmit();
         } catch (error) {
-            console.error('Lỗi trong handleSubmitQuiz:', error);
+            console.error(error);
             setConfirmLoading(false);
             message.error('Có lỗi xảy ra khi nộp bài');
         }
@@ -396,7 +383,7 @@ const MultipleChoicePage = () => {
             setConfirmLoading(false);
             setOpenResultModal(true);
         } catch (error) {
-            console.error('Lỗi khi nộp bài:', error);
+            console.error(error);
             setConfirmLoading(false);
             message.error('Có lỗi xảy ra khi tính điểm');
         }
@@ -407,6 +394,7 @@ const MultipleChoicePage = () => {
         setMeaningEnKeywords([]);
         setMeaningViKeywords([]);
         setSelectedText('');
+        setShownVi({});
         setLoading(true);
         setQuestions([]);
         setUserAnswers({});
@@ -422,7 +410,6 @@ const MultipleChoicePage = () => {
     return (
         <div style={{maxWidth: '2000px', margin: '100px auto 70px', padding: '10px 20px'}}>
 
-            {/* Tooltip portal */}
             {renderTooltip()}
 
             <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 30}}>
@@ -440,125 +427,217 @@ const MultipleChoicePage = () => {
                 </div>
             ) : (
                 <div>
-                    {questions.map((question, index) => (
-                        <div
-                            key={question.questionCode}
-                            style={{
-                                background: 'white',
-                                borderRadius: '12px',
-                                padding: '28px',
-                                marginBottom: '24px',
-                                boxShadow: '0 4px 16px rgba(0,0,0,0.1)',
-                                border: '1px solid #e8e8e8',
-                            }}
-                        >
-                            {/* Câu hỏi */}
-                            <div style={{marginBottom: 20}}>
-                                <div style={{display: 'flex', alignItems: 'flex-start', marginBottom: 12}}>
-                                    <Text strong style={{marginRight: 12, minWidth: '50px', fontSize: '20px', color: '#1890ff'}}>
-                                        Câu {index + 1}:
-                                    </Text>
-                                    <div style={{flex: 1}}>
-                                        <Text style={{fontSize: '20px', lineHeight: '1.6', userSelect: 'text'}}>
-                                            {question.questionText}
+                    {questions.map((question, index) => {
+                        const qViKey = question.questionCode;
+                        const isQViShown = !!shownVi[qViKey];
+                        const hasQVi = !!question.questionTextVi;
+
+                        return (
+                            <div
+                                key={question.questionCode}
+                                style={{
+                                    background: 'white',
+                                    borderRadius: '12px',
+                                    padding: '28px',
+                                    marginBottom: '24px',
+                                    boxShadow: '0 4px 16px rgba(0,0,0,0.1)',
+                                    border: '1px solid #e8e8e8',
+                                }}
+                            >
+                                {/* ── CÂU HỎI ── */}
+                                <div style={{marginBottom: 20}}>
+                                    <div style={{display: 'flex', alignItems: 'flex-start', marginBottom: 4}}>
+                                        <Text strong style={{marginRight: 12, minWidth: '50px', fontSize: '20px', color: '#1890ff'}}>
+                                            Câu {index + 1}:
                                         </Text>
-                                        <Button
-                                            type="text"
-                                            icon={currentPlayingId === `q-${question.questionCode}` ? <PauseOutlined/> : <PlayCircleOutlined/>}
-                                            onClick={() => speakFull(question.questionText, `q-${question.questionCode}`)}
-                                            style={{marginLeft: 12, color: '#1890ff'}}
-                                        />
+                                        <div style={{flex: 1}}>
+                                            {/* Tiếng Anh */}
+                                            <Text style={{fontSize: '20px', lineHeight: '1.6', userSelect: 'text'}}>
+                                                {question.questionText}
+                                            </Text>
+
+                                            {/* Nút phát âm toàn câu */}
+                                            <Button
+                                                type="text"
+                                                icon={currentPlayingId === `q-${question.questionCode}` ? <PauseOutlined/> : <PlayCircleOutlined/>}
+                                                onClick={() => speakFull(question.questionText, `q-${question.questionCode}`)}
+                                                style={{marginLeft: 8, color: '#1890ff'}}
+                                            />
+
+                                            {/* Nút xem nghĩa tiếng Việt câu hỏi */}
+                                            {hasQVi && (
+                                                <Tooltip title={isQViShown ? 'Ẩn nghĩa' : 'Xem nghĩa tiếng Việt'}>
+                                                    <Button
+                                                        type="text"
+                                                        icon={isQViShown ? <EyeInvisibleOutlined/> : <EyeOutlined/>}
+                                                        onClick={() => toggleVi(qViKey)}
+                                                        style={{marginLeft: 4, color: '#52c41a', fontSize: '14px'}}
+                                                        size="small"
+                                                    />
+                                                </Tooltip>
+                                            )}
+
+                                            {/* Tiếng Việt câu hỏi (toggle) */}
+                                            {isQViShown && question.questionTextVi && (
+                                                <div style={{
+                                                    marginTop: 6,
+                                                    padding: '6px 12px',
+                                                    background: '#f6ffed',
+                                                    borderLeft: '3px solid #52c41a',
+                                                    borderRadius: '4px',
+                                                    fontSize: '18px',
+                                                    color: '#389e0d',
+                                                    userSelect: 'text',
+                                                }}>
+                                                    🇻🇳 {question.questionTextVi}
+                                                </div>
+                                            )}
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            {/* Đáp án */}
-                            <div style={{marginLeft: 62}}>
-                                <Radio.Group
-                                    value={userAnswers[question.questionCode]}
-                                    onChange={(e) => handleAnswerChange(question.questionCode, e.target.value)}
-                                    disabled={isChecked}
-                                    style={{width: '100%'}}
-                                >
-                                    {question.answers.map((answer) => (
-                                        <div
-                                            key={answer.optionCode}
-                                            style={{
-                                                marginBottom: 16,
-                                                padding: '12px 16px',
-                                                borderRadius: '6px',
-                                                border: '1px solid #e8e8e8',
-                                                transition: 'all 0.3s',
-                                                cursor: isChecked ? 'not-allowed' : 'pointer',
-                                            }}
-                                            onMouseEnter={(e) => {
-                                                if (!isChecked) {
-                                                    e.currentTarget.style.borderColor = '#1890ff';
-                                                    e.currentTarget.style.backgroundColor = '#f0f7ff';
-                                                }
-                                            }}
-                                            onMouseLeave={(e) => {
-                                                if (!isChecked) {
-                                                    e.currentTarget.style.borderColor = '#e8e8e8';
-                                                    e.currentTarget.style.backgroundColor = 'white';
-                                                }
-                                            }}
-                                        >
-                                            <Radio value={answer.optionCode} style={{marginRight: 12}}>
-                                                <span style={{fontWeight: 'bold', marginRight: 8, color: '#1890ff'}}>
-                                                    {answer.optionCode}.
-                                                </span>
-                                                <span style={{fontSize: '20px', userSelect: 'text'}}>
-                                                    {answer.optionText}
-                                                </span>
-                                                <Button
-                                                    type="text"
-                                                    icon={currentPlayingId === `a-${question.questionCode}-${answer.optionCode}` ? <PauseOutlined/> : <PlayCircleOutlined/>}
-                                                    onClick={() => speakFull(answer.optionText, `a-${question.questionCode}-${answer.optionCode}`)}
-                                                    style={{marginLeft: 12, color: '#52c41a'}}
-                                                    size="small"
-                                                />
-                                            </Radio>
-                                        </div>
-                                    ))}
-                                </Radio.Group>
-                            </div>
+                                {/* ── ĐÁP ÁN ── */}
+                                <div style={{marginLeft: 62}}>
+                                    <Radio.Group
+                                        value={userAnswers[question.questionCode]}
+                                        onChange={(e) => handleAnswerChange(question.questionCode, e.target.value)}
+                                        disabled={isChecked}
+                                        style={{width: '100%'}}
+                                    >
+                                        {question.answers.map((answer) => {
+                                            const code = getAnswerCode(answer);
+                                            const textEn = getAnswerTextEn(answer);
+                                            const textVi = answer.answerTextVi;
+                                            const aViKey = `${question.questionCode}-${code}`;
+                                            const isAViShown = !!shownVi[aViKey];
+                                            const hasAVi = !!textVi;
 
-                            {/* Kết quả sau khi kiểm tra */}
-                            {isChecked && quizResult && (
-                                <div style={{
-                                    marginLeft: 62,
-                                    marginTop: 16,
-                                    padding: '12px 16px',
-                                    borderRadius: '6px',
-                                    background: quizResult.questionResults[index]?.isUnanswered
-                                        ? '#fffbe6'
-                                        : quizResult.questionResults[index]?.isCorrect
-                                            ? '#f6ffed'
-                                            : '#fff1f0',
-                                    border: `1px solid ${
-                                        quizResult.questionResults[index]?.isUnanswered
-                                            ? '#ffe58f'
-                                            : quizResult.questionResults[index]?.isCorrect
-                                                ? '#b7eb8f'
-                                                : '#ffccc7'
-                                    }`,
-                                }}>
-                                    {quizResult.questionResults[index]?.isUnanswered ? (
-                                        <Text style={{color: '#fa8c16', fontSize: '20px'}}>⚠️ Bạn chưa chọn đáp án</Text>
-                                    ) : quizResult.questionResults[index]?.isCorrect ? (
-                                        <Text style={{color: '#52c41a', fontSize: '20px', display: 'flex', alignItems: 'center'}}>
-                                            <CheckCircleOutlined style={{marginRight: 8}}/> Đúng!
-                                        </Text>
-                                    ) : (
-                                        <Text style={{color: '#ff4d4f', fontSize: '20px', display: 'flex', alignItems: 'center'}}>
-                                            <CloseCircleOutlined style={{marginRight: 8}}/> Sai! Đáp án đúng: {quizResult.questionResults[index]?.correctAnswer} - {quizResult.questionResults[index]?.correctAnswerText}
-                                        </Text>
-                                    )}
+                                            return (
+                                                <div
+                                                    key={code}
+                                                    style={{
+                                                        marginBottom: 16,
+                                                        padding: '12px 16px',
+                                                        borderRadius: '6px',
+                                                        border: '1px solid #e8e8e8',
+                                                        transition: 'all 0.3s',
+                                                        cursor: isChecked ? 'not-allowed' : 'pointer',
+                                                    }}
+                                                    onMouseEnter={(e) => {
+                                                        if (!isChecked) {
+                                                            e.currentTarget.style.borderColor = '#1890ff';
+                                                            e.currentTarget.style.backgroundColor = '#f0f7ff';
+                                                        }
+                                                    }}
+                                                    onMouseLeave={(e) => {
+                                                        if (!isChecked) {
+                                                            e.currentTarget.style.borderColor = '#e8e8e8';
+                                                            e.currentTarget.style.backgroundColor = 'white';
+                                                        }
+                                                    }}
+                                                >
+                                                    <Radio value={code} style={{marginRight: 12, width: '100%'}}>
+                                                        <div style={{display: 'inline-flex', flexDirection: 'column', width: 'calc(100% - 24px)'}}>
+                                                            {/* Dòng đáp án EN */}
+                                                            <div style={{display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: 4}}>
+                                                                <span style={{fontWeight: 'bold', color: '#1890ff', minWidth: 24}}>
+                                                                    {code}.
+                                                                </span>
+                                                                <span style={{fontSize: '20px', userSelect: 'text', flex: 1}}>
+                                                                    {textEn}
+                                                                </span>
+
+                                                                {/* Nút phát âm đáp án */}
+                                                                <Button
+                                                                    type="text"
+                                                                    icon={currentPlayingId === `a-${question.questionCode}-${code}` ? <PauseOutlined/> : <PlayCircleOutlined/>}
+                                                                    onClick={(e) => {
+                                                                        e.stopPropagation();
+                                                                        speakFull(textEn, `a-${question.questionCode}-${code}`);
+                                                                    }}
+                                                                    style={{color: '#52c41a', flexShrink: 0}}
+                                                                    size="small"
+                                                                />
+
+                                                                {/* Nút xem nghĩa tiếng Việt đáp án */}
+                                                                {hasAVi && (
+                                                                    <Tooltip title={isAViShown ? 'Ẩn nghĩa' : 'Xem nghĩa tiếng Việt'}>
+                                                                        <Button
+                                                                            type="text"
+                                                                            icon={isAViShown ? <EyeInvisibleOutlined/> : <EyeOutlined/>}
+                                                                            onClick={(e) => {
+                                                                                e.stopPropagation();
+                                                                                toggleVi(aViKey);
+                                                                            }}
+                                                                            style={{color: '#52c41a', flexShrink: 0}}
+                                                                            size="small"
+                                                                        />
+                                                                    </Tooltip>
+                                                                )}
+                                                            </div>
+
+                                                            {/* Nghĩa tiếng Việt đáp án (toggle) */}
+                                                            {isAViShown && textVi && (
+                                                                <div style={{
+                                                                    marginTop: 4,
+                                                                    marginLeft: 28,
+                                                                    padding: '4px 10px',
+                                                                    background: '#f6ffed',
+                                                                    borderLeft: '3px solid #52c41a',
+                                                                    borderRadius: '4px',
+                                                                    fontSize: '17px',
+                                                                    color: '#389e0d',
+                                                                    userSelect: 'text',
+                                                                }}>
+                                                                    🇻🇳 {textVi}
+                                                                </div>
+                                                            )}
+                                                        </div>
+                                                    </Radio>
+                                                </div>
+                                            );
+                                        })}
+                                    </Radio.Group>
                                 </div>
-                            )}
-                        </div>
-                    ))}
+
+                                {/* ── KẾT QUẢ SAU KHI KIỂM TRA ── */}
+                                {isChecked && quizResult && (
+                                    <div style={{
+                                        marginLeft: 62,
+                                        marginTop: 16,
+                                        padding: '12px 16px',
+                                        borderRadius: '6px',
+                                        background: quizResult.questionResults[index]?.isUnanswered
+                                            ? '#fffbe6'
+                                            : quizResult.questionResults[index]?.isCorrect
+                                                ? '#f6ffed'
+                                                : '#fff1f0',
+                                        border: `1px solid ${
+                                            quizResult.questionResults[index]?.isUnanswered
+                                                ? '#ffe58f'
+                                                : quizResult.questionResults[index]?.isCorrect
+                                                    ? '#b7eb8f'
+                                                    : '#ffccc7'
+                                        }`,
+                                    }}>
+                                        {quizResult.questionResults[index]?.isUnanswered ? (
+                                            <Text style={{color: '#fa8c16', fontSize: '20px'}}>
+                                                ⚠️ Bạn chưa chọn đáp án
+                                            </Text>
+                                        ) : quizResult.questionResults[index]?.isCorrect ? (
+                                            <Text style={{color: '#52c41a', fontSize: '20px', display: 'flex', alignItems: 'center'}}>
+                                                <CheckCircleOutlined style={{marginRight: 8}}/> Đúng!
+                                            </Text>
+                                        ) : (
+                                            <Text style={{color: '#ff4d4f', fontSize: '20px', display: 'flex', alignItems: 'center'}}>
+                                                <CloseCircleOutlined style={{marginRight: 8}}/> Sai! Đáp án đúng: {quizResult.questionResults[index]?.correctAnswer} — {quizResult.questionResults[index]?.correctAnswerText}
+                                            </Text>
+                                        )}
+                                    </div>
+                                )}
+                            </div>
+                        );
+                    })}
                 </div>
             )}
 
@@ -659,7 +738,7 @@ const MultipleChoicePage = () => {
                                                 <Text>Bạn chọn: {result.userAnswer}</Text>
                                                 {!result.isCorrect && (
                                                     <div style={{color: 'red'}}>
-                                                        Đáp án đúng: {result.correctAnswer} - {result.correctAnswerText}
+                                                        Đáp án đúng: {result.correctAnswer} — {result.correctAnswerText}
                                                     </div>
                                                 )}
                                             </div>

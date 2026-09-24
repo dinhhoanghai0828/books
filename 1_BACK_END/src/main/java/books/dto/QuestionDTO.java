@@ -9,6 +9,7 @@ public class QuestionDTO {
     private String questionCode;
     private String volumeSlug;
     private String questionText;
+    private String questionTextVi;
     private String status;
     private Date createdAt;
     private Date updatedAt;
@@ -46,6 +47,14 @@ public class QuestionDTO {
 
     public void setQuestionText(String questionText) {
         this.questionText = questionText;
+    }
+
+    public String getQuestionTextVi() {
+        return questionTextVi;
+    }
+
+    public void setQuestionTextVi(String questionTextVi) {
+        this.questionTextVi = questionTextVi;
     }
 
     public String getStatus() {

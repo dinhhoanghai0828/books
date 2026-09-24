@@ -121,8 +121,9 @@ public class QuestionServiceImpl implements QuestionService {
 
             for (AnswerDTO answer : question.getAnswers()) {
                 if ("Y".equalsIgnoreCase(answer.getIsCorrect())) {
-                    correctAnswer = answer.getOptionCode();
-                    correctAnswerText = answer.getOptionText();
+                    // Ưu tiên answerCode/answerText mới, fallback về optionCode/optionText cũ
+                    correctAnswer = answer.getAnswerCode() != null ? answer.getAnswerCode() : answer.getOptionCode();
+                    correctAnswerText = answer.getAnswerText() != null ? answer.getAnswerText() : answer.getOptionText();
                     break;
                 }
             }
@@ -137,6 +138,7 @@ public class QuestionServiceImpl implements QuestionService {
             } else {
                 questionResult.setUnanswered(false);
 
+                // So sánh với correctAnswer đã được resolve ở trên (answerCode hoặc optionCode)
                 if (userAnswer.equals(correctAnswer)) {
                     questionResult.setCorrect(true);
                     correctAnswers++;

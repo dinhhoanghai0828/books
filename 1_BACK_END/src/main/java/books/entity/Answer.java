@@ -7,6 +7,9 @@ public class Answer {
     private String questionCode;
     private String optionCode;
     private String optionText;
+    private String answerCode;
+    private String answerText;
+    private String answerTextVi;
     private String isCorrect;
     private int displayOrder;
     private Date createdAt;
@@ -44,6 +47,30 @@ public class Answer {
 
     public void setOptionText(String optionText) {
         this.optionText = optionText;
+    }
+
+    public String getAnswerCode() {
+        return answerCode;
+    }
+
+    public void setAnswerCode(String answerCode) {
+        this.answerCode = answerCode;
+    }
+
+    public String getAnswerText() {
+        return answerText;
+    }
+
+    public void setAnswerText(String answerText) {
+        this.answerText = answerText;
+    }
+
+    public String getAnswerTextVi() {
+        return answerTextVi;
+    }
+
+    public void setAnswerTextVi(String answerTextVi) {
+        this.answerTextVi = answerTextVi;
     }
 
     public String getIsCorrect() {

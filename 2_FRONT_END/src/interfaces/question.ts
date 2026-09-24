@@ -1,58 +1,59 @@
 // ============================================================
 // QUESTION INTERFACE
-// Interface cho doi tuong Cau hoi (Question)
 // ============================================================
 
 export interface QuestionType {
-  id: string;                  // ID duoi database
-  questionCode: string;        // Ma duy nhat cua cau hoi
-  volumeSlug: string;          // Slug cua volume lien quan
-  questionText: string;        // Noi dung cau hoi
-  status: string;              // Trang thai (ACTIVE/INACTIVE)
-  createdAt?: string;          // Ngay tao
-  updatedAt?: string;          // Ngay cap nhat
-  createdBy?: string;          // Nguoi tao
-  updatedBy?: string;          // Nguoi cap nhat
-  answers: AnswerType[];       // Danh sach cac cau tra loi
+  id: string;
+  questionCode: string;
+  volumeSlug: string;
+  questionText: string;           // Nội dung câu hỏi tiếng Anh
+  questionTextVi?: string;        // Nội dung câu hỏi tiếng Việt
+  status: string;
+  createdAt?: string;
+  updatedAt?: string;
+  createdBy?: string;
+  updatedBy?: string;
+  answers: AnswerType[];
 }
 
 // ============================================================
 // ANSWER INTERFACE
-// Interface cho doi tuong Cau tra loi (Answer)
 // ============================================================
 
 export interface AnswerType {
-  id: string;                  // ID duoi database
-  questionCode: string;        // Ma cau hoi lien quan
-  optionCode: string;          // Ma phuong an (A, B, C, D)
-  optionText: string;          // Noi dung phuong an
-  isCorrect: string;           // Dap an dung (Y/N)
-  displayOrder: number;        // Thu tu hien thi
-  createdAt?: string;          // Ngay tao
-  updatedAt?: string;          // Ngay cap nhat
-  createdBy?: string;          // Nguoi tao
-  updatedBy?: string;          // Nguoi cap nhat
+  id: string;
+  questionCode: string;
+  optionCode: string;             // Mã cũ (A, B, C, D) — giữ tương thích
+  optionText: string;             // Nội dung cũ — giữ tương thích
+  answerCode?: string;            // Mã mới (A, B, C, D)
+  answerText?: string;            // Nội dung đáp án tiếng Anh mới
+  answerTextVi?: string;          // Nội dung đáp án tiếng Việt
+  isCorrect: string;
+  displayOrder: number;
+  createdAt?: string;
+  updatedAt?: string;
+  createdBy?: string;
+  updatedBy?: string;
 }
 
 // ============================================================
-// QUIZ RESULT INTERFACE
-// Interface cho ket qua kiem tra
+// QUIZ RESULT INTERFACES
 // ============================================================
 
 export interface QuizResultType {
-  totalQuestions: number;           // Tong so cau hoi
-  correctAnswers: number;           // So cau tra loi dung
-  incorrectAnswers: number;         // So cau tra loi sai
-  unansweredQuestions: number;       // So cau chua tra loi
-  questionResults: QuestionResultType[]; // Chi tiet ket qua moi cau
+  totalQuestions: number;
+  correctAnswers: number;
+  incorrectAnswers: number;
+  unansweredQuestions: number;
+  questionResults: QuestionResultType[];
 }
 
 export interface QuestionResultType {
-  questionNumber: number;           // So thu tu cau hoi
-  questionText: string;            // Noi dung cau hoi
-  userAnswer?: string;              // Dap an nguoi dung chon
-  correctAnswer?: string;           // Dap an dung
-  correctAnswerText?: string;       // Noi dung dap an dung
-  isCorrect: boolean;               // Dung sai
-  isUnanswered: boolean;            // Chua tra loi
+  questionNumber: number;
+  questionText: string;
+  userAnswer?: string;
+  correctAnswer?: string;
+  correctAnswerText?: string;
+  isCorrect: boolean;
+  isUnanswered: boolean;
 }

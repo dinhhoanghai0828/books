@@ -17,8 +17,8 @@ import java.util.List;
 public class AnswerAdapterImpl implements AnswerAdapter {
     private static final Logger logger = LoggerFactory.getLogger(AnswerAdapterImpl.class);
     private static final String SQL_GET_ANSWERS_BY_QUESTION_CODE = "SELECT * FROM ANSWERS WHERE QUESTION_CODE = ? ORDER BY DISPLAY_ORDER";
-    private static final String SQL_INSERT_ANSWER = "INSERT INTO ANSWERS (QUESTION_CODE, OPTION_CODE, OPTION_TEXT, IS_CORRECT, DISPLAY_ORDER, CREATED_BY) VALUES (?, ?, ?, ?, ?, ?)";
-    private static final String SQL_UPDATE_ANSWER = "UPDATE ANSWERS SET OPTION_TEXT = ?, IS_CORRECT = ?, DISPLAY_ORDER = ?, UPDATED_BY = ? WHERE QUESTION_CODE = ? AND OPTION_CODE = ?";
+    private static final String SQL_INSERT_ANSWER = "INSERT INTO ANSWERS (QUESTION_CODE, OPTION_CODE, OPTION_TEXT, ANSWER_CODE, ANSWER_TEXT, ANSWER_TEXT_VI, IS_CORRECT, DISPLAY_ORDER, CREATED_BY) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    private static final String SQL_UPDATE_ANSWER = "UPDATE ANSWERS SET OPTION_TEXT = ?, ANSWER_CODE = ?, ANSWER_TEXT = ?, ANSWER_TEXT_VI = ?, IS_CORRECT = ?, DISPLAY_ORDER = ?, UPDATED_BY = ? WHERE QUESTION_CODE = ? AND OPTION_CODE = ?";
     private static final String SQL_DELETE_ANSWER = "DELETE FROM ANSWERS WHERE QUESTION_CODE = ? AND OPTION_CODE = ?";
     private static final String SQL_DELETE_ANSWERS_BY_QUESTION_CODE = "DELETE FROM ANSWERS WHERE QUESTION_CODE = ?";
 
@@ -40,6 +40,9 @@ public class AnswerAdapterImpl implements AnswerAdapter {
                 answer.setQuestionCode(rs.getString("QUESTION_CODE"));
                 answer.setOptionCode(rs.getString("OPTION_CODE"));
                 answer.setOptionText(rs.getString("OPTION_TEXT"));
+                answer.setAnswerCode(rs.getString("ANSWER_CODE"));
+                answer.setAnswerText(rs.getString("ANSWER_TEXT"));
+                answer.setAnswerTextVi(rs.getString("ANSWER_TEXT_VI"));
                 answer.setIsCorrect(rs.getString("IS_CORRECT"));
                 answer.setDisplayOrder(rs.getInt("DISPLAY_ORDER"));
                 answer.setCreatedAt(rs.getTimestamp("CREATED_AT"));
@@ -68,9 +71,12 @@ public class AnswerAdapterImpl implements AnswerAdapter {
             pstmt.setString(1, answer.getQuestionCode());
             pstmt.setString(2, answer.getOptionCode());
             pstmt.setString(3, answer.getOptionText());
-            pstmt.setString(4, answer.getIsCorrect());
-            pstmt.setInt(5, answer.getDisplayOrder());
-            pstmt.setString(6, answer.getCreatedBy());
+            pstmt.setString(4, answer.getAnswerCode());
+            pstmt.setString(5, answer.getAnswerText());
+            pstmt.setString(6, answer.getAnswerTextVi());
+            pstmt.setString(7, answer.getIsCorrect());
+            pstmt.setInt(8, answer.getDisplayOrder());
+            pstmt.setString(9, answer.getCreatedBy());
             int rows = pstmt.executeUpdate();
             con.commit();
             return rows > 0;
@@ -97,11 +103,14 @@ public class AnswerAdapterImpl implements AnswerAdapter {
             con = DBUtils.getConnection(thisMethod, false, Connection.TRANSACTION_READ_COMMITTED);
             pstmt = DBUtils.prepareStatement(con, SQL_UPDATE_ANSWER);
             pstmt.setString(1, answer.getOptionText());
-            pstmt.setString(2, answer.getIsCorrect());
-            pstmt.setInt(3, answer.getDisplayOrder());
-            pstmt.setString(4, answer.getUpdatedBy());
-            pstmt.setString(5, answer.getQuestionCode());
-            pstmt.setString(6, answer.getOptionCode());
+            pstmt.setString(2, answer.getAnswerCode());
+            pstmt.setString(3, answer.getAnswerText());
+            pstmt.setString(4, answer.getAnswerTextVi());
+            pstmt.setString(5, answer.getIsCorrect());
+            pstmt.setInt(6, answer.getDisplayOrder());
+            pstmt.setString(7, answer.getUpdatedBy());
+            pstmt.setString(8, answer.getQuestionCode());
+            pstmt.setString(9, answer.getOptionCode());
             int rows = pstmt.executeUpdate();
             con.commit();
             return rows > 0;
