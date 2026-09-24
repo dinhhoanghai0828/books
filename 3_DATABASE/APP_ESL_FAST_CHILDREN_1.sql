@@ -1,5 +1,5 @@
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'esl-fast-beginner-1-1','Going to the Zoo','Đi tới sở thú','BEGINNER_01_ESL_FAST_CHILDREN_001.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-children-1','YES',1) */
+	/* (UUID(),'esl-fast-beginner-1-1','Going to the Zoo','Đi tới sở thú','BEGINNER_01_ESL_FAST_CHILDREN_001.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-children-1',1,1,1,1), */
 	('She goes to the zoo','Cô bé đi đến sở thú','00:00:00.520','00:00:03.301','esl-fast-beginner-1-1'),
 	('She sees a lion','Cô bé nhìn thấy một con sư tử','00:00:04.120','00:00:06.200','esl-fast-beginner-1-1'),
 	('The lion roars','Con sư tử gầm lên','00:00:06.960','00:00:09.200','esl-fast-beginner-1-1'),
