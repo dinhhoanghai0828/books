@@ -25,7 +25,7 @@ https://www.youtube.com/watch?v=bmR08GMho5s&list=PL9H5wl7jyq4RwVmeT12DY06PHwACAB
 https://www.youtube.com/@peppapigsubtitled8981
 
 
-Tạo cho tôi 1 bộ câu hỏi 30 câu cho bài đọc dưới đây và tạo scrip tương ứng như example, cac script nho viet lien khong cach dong
+Tạo cho tôi 1 bộ câu hỏi 30 câu cho bài đọc dưới đây và tạo scrip tương ứng như example, cac script nho viet lien khong cach dong và ngôi xưng giống như đoạn văn
 INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_VI, STATUS, CREATED_AT, UPDATED_AT, CREATED_BY, UPDATED_BY) VALUES
     ('Q-esl-fast-beginner-1-24-001', 'esl-fast-beginner-1-24', 'What happened to Sarah''s basketball team?', 'Điều gì đã xảy ra với đội bóng rổ của Sarah?', 'ACTIVE', NULL, NULL, NULL, NULL),
 INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE, ANSWER_TEXT, ANSWER_TEXT_VI, IS_CORRECT,DISPLAY_ORDER,CREATED_AT,UPDATED_AT,CREATED_BY,UPDATED_BY) VALUES
