@@ -905,6 +905,7 @@ const ContentComponent = ({
         onTest={() => router.push(`/test?volumeSlug=${volumeSlug}`)}
         onMatchSentences={() => router.push(`/matchsentences?volumeSlug=${volumeSlug}`)}
         onFillBlanks={() => router.push(`/fillblanks?volumeSlug=${volumeSlug}`)}
+        onMultipleChoice={() => router.push(`/multiple-choice?volumeSlug=${volumeSlug}`)}
         onInsertWord={handleOpenInsert}
         volumeSlug={volumeSlug}
       />
