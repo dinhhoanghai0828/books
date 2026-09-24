@@ -1,0 +1,22 @@
+/* (UUID(),'esl-fast-beginner-1-24','Sometimes You Lose','Đôi khi bạn thua','BEGINNER_01_ESL_FAST_CHILDREN_024.mp3',NULL,'00:00:00.000','00:00:39.000','esl-fast-children-1','YES',24) */
+INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_VI, STATUS, CREATED_AT, UPDATED_AT, CREATED_BY, UPDATED_BY) VALUES
+    ('Q-esl-fast-beginner-1-24-001', 'esl-fast-beginner-1-24', 'What happened to Sarah''s basketball team?', 'Điều gì đã xảy ra với đội bóng rổ của Sarah?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-24-002', 'esl-fast-beginner-1-24', 'How does Sarah feel after the game?', 'Sarah cảm thấy thế nào sau trận đấu?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-24-003', 'esl-fast-beginner-1-24', 'How does Sarah walk home?', 'Sarah đi bộ về nhà như thế nào?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-24-004', 'esl-fast-beginner-1-24', 'Where does Sarah sit when she gets home?', 'Sarah ngồi ở đâu khi về đến nhà?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-24-005', 'esl-fast-beginner-1-24', 'What does Sarah start doing on the couch?', 'Sarah bắt đầu làm gì khi ngồi trên ghế sofa?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-24-006', 'esl-fast-beginner-1-24', 'Who sees Sarah crying?', 'Ai nhìn thấy Sarah đang khóc?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-24-007', 'esl-fast-beginner-1-24', 'What does Sarah''s mom do when she sees her?', 'Mẹ của Sarah làm gì khi nhìn thấy cô bé?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-24-008', 'esl-fast-beginner-1-24', 'What does Sarah''s mom bake?', 'Mẹ của Sarah làm bánh gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-24-009', 'esl-fast-beginner-1-24', 'Whose favorite cookies does her mom bake?', 'Mẹ của Sarah làm loại bánh quy yêu thích của ai?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-24-010', 'esl-fast-beginner-1-24', 'What makes Sarah smile?', 'Điều gì khiến Sarah mỉm cười?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-24-011', 'esl-fast-beginner-1-24', 'What does Sarah wipe away?', 'Sarah lau đi điều gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-24-012', 'esl-fast-beginner-1-24', 'What does Sarah realize about winning and losing?', 'Sarah nhận ra điều gì về việc thắng và thua?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-24-013', 'esl-fast-beginner-1-24', 'What does the word "upset" mean in the lesson?', 'Từ "upset" có nghĩa là gì trong bài học?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-24-014', 'esl-fast-beginner-1-24', 'What does "sadly" mean in the lesson?', 'Từ "sadly" có nghĩa là gì trong bài học?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-24-015', 'esl-fast-beginner-1-24', 'What does "hug" mean in the lesson?', 'Từ "hug" có nghĩa là gì trong bài học?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-24-016', 'esl-fast-beginner-1-24', 'What does "tears" mean in the lesson?', 'Từ "tears" có nghĩa là gì trong bài học?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-24-017', 'esl-fast-beginner-1-24', 'Why does Sarah cry?', 'Tại sao Sarah khóc?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-24-018', 'esl-fast-beginner-1-24', 'How does Sarah feel after eating the warm cookies?', 'Sarah cảm thấy thế nào sau khi ăn những chiếc bánh quy ấm áp?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-24-019', 'esl-fast-beginner-1-24', 'What does Sarah do after her mom bakes the cookies?', 'Sarah làm gì sau khi mẹ làm bánh quy?', 'ACTIVE', NULL, NULL, NULL, NULL),
+    ('Q-esl-fast-beginner-1-24-020', 'esl-fast-beginner-1-24', 'What is the main lesson Sarah learns?', 'Bài học chính mà Sarah rút ra là gì?', 'ACTIVE', NULL, NULL, NULL, NULL);
