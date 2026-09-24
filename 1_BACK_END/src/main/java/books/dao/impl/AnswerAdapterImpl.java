@@ -17,9 +17,9 @@ import java.util.List;
 public class AnswerAdapterImpl implements AnswerAdapter {
     private static final Logger logger = LoggerFactory.getLogger(AnswerAdapterImpl.class);
     private static final String SQL_GET_ANSWERS_BY_QUESTION_CODE = "SELECT * FROM ANSWERS WHERE QUESTION_CODE = ? ORDER BY DISPLAY_ORDER";
-    private static final String SQL_INSERT_ANSWER = "INSERT INTO ANSWERS (QUESTION_CODE, OPTION_CODE, OPTION_TEXT, ANSWER_CODE, ANSWER_TEXT, ANSWER_TEXT_VI, IS_CORRECT, DISPLAY_ORDER, CREATED_BY) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
-    private static final String SQL_UPDATE_ANSWER = "UPDATE ANSWERS SET OPTION_TEXT = ?, ANSWER_CODE = ?, ANSWER_TEXT = ?, ANSWER_TEXT_VI = ?, IS_CORRECT = ?, DISPLAY_ORDER = ?, UPDATED_BY = ? WHERE QUESTION_CODE = ? AND OPTION_CODE = ?";
-    private static final String SQL_DELETE_ANSWER = "DELETE FROM ANSWERS WHERE QUESTION_CODE = ? AND OPTION_CODE = ?";
+    private static final String SQL_INSERT_ANSWER = "INSERT INTO ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, ANSWER_TEXT_VI, IS_CORRECT, DISPLAY_ORDER, CREATED_BY) VALUES (?, ?, ?, ?, ?, ?, ?)";
+    private static final String SQL_UPDATE_ANSWER = "UPDATE ANSWERS SET ANSWER_CODE = ?, ANSWER_TEXT = ?, ANSWER_TEXT_VI = ?, IS_CORRECT = ?, DISPLAY_ORDER = ?, UPDATED_BY = ? WHERE QUESTION_CODE = ? AND ANSWER_CODE = ?";
+    private static final String SQL_DELETE_ANSWER = "DELETE FROM ANSWERS WHERE QUESTION_CODE = ? AND ANSWER_CODE = ?";
     private static final String SQL_DELETE_ANSWERS_BY_QUESTION_CODE = "DELETE FROM ANSWERS WHERE QUESTION_CODE = ?";
 
     @Override
@@ -38,8 +38,6 @@ public class AnswerAdapterImpl implements AnswerAdapter {
                 Answer answer = new Answer();
                 answer.setId(rs.getString("ID"));
                 answer.setQuestionCode(rs.getString("QUESTION_CODE"));
-                answer.setOptionCode(rs.getString("OPTION_CODE"));
-                answer.setOptionText(rs.getString("OPTION_TEXT"));
                 answer.setAnswerCode(rs.getString("ANSWER_CODE"));
                 answer.setAnswerText(rs.getString("ANSWER_TEXT"));
                 answer.setAnswerTextVi(rs.getString("ANSWER_TEXT_VI"));

@@ -19,8 +19,8 @@ public class QuestionAdapterImpl implements QuestionAdapter {
     private static final Logger logger = LoggerFactory.getLogger(QuestionAdapterImpl.class);
     private static final String SQL_GET_QUESTIONS_BY_VOLUME_SLUG = "SELECT * FROM QUESTIONS WHERE VOLUME_SLUG = ? AND STATUS = 'ACTIVE' ORDER BY ID";
     private static final String SQL_GET_QUESTION_BY_CODE = "SELECT * FROM QUESTIONS WHERE QUESTION_CODE = ?";
-    private static final String SQL_GET_QUESTION_WITH_ANSWERS_BY_CODE = "SELECT Q.*, A.ID as ANSWER_ID, A.QUESTION_CODE as ANSWER_QUESTION_CODE, A.OPTION_CODE, A.OPTION_TEXT, A.ANSWER_CODE, A.ANSWER_TEXT, A.ANSWER_TEXT_VI, A.IS_CORRECT, A.DISPLAY_ORDER FROM QUESTIONS Q LEFT JOIN ANSWERS A ON Q.QUESTION_CODE = A.QUESTION_CODE WHERE Q.QUESTION_CODE = ? ORDER BY A.DISPLAY_ORDER";
-    private static final String SQL_GET_QUESTIONS_WITH_ANSWERS_BY_VOLUME_SLUG = "SELECT Q.*, A.ID as ANSWER_ID, A.QUESTION_CODE as ANSWER_QUESTION_CODE, A.OPTION_CODE, A.OPTION_TEXT, A.ANSWER_CODE, A.ANSWER_TEXT, A.ANSWER_TEXT_VI, A.IS_CORRECT, A.DISPLAY_ORDER FROM QUESTIONS Q LEFT JOIN ANSWERS A ON Q.QUESTION_CODE = A.QUESTION_CODE WHERE Q.VOLUME_SLUG = ? AND Q.STATUS = 'ACTIVE' ORDER BY Q.ID, A.DISPLAY_ORDER";
+    private static final String SQL_GET_QUESTION_WITH_ANSWERS_BY_CODE = "SELECT Q.*, A.ID as ANSWER_ID, A.QUESTION_CODE as ANSWER_QUESTION_CODE, A.ANSWER_CODE, A.ANSWER_TEXT, A.ANSWER_TEXT_VI, A.IS_CORRECT, A.DISPLAY_ORDER FROM QUESTIONS Q LEFT JOIN ANSWERS A ON Q.QUESTION_CODE = A.QUESTION_CODE WHERE Q.QUESTION_CODE = ? ORDER BY A.DISPLAY_ORDER";
+    private static final String SQL_GET_QUESTIONS_WITH_ANSWERS_BY_VOLUME_SLUG = "SELECT Q.*, A.ID as ANSWER_ID, A.QUESTION_CODE as ANSWER_QUESTION_CODE, A.ANSWER_CODE, A.ANSWER_TEXT, A.ANSWER_TEXT_VI, A.IS_CORRECT, A.DISPLAY_ORDER FROM QUESTIONS Q LEFT JOIN ANSWERS A ON Q.QUESTION_CODE = A.QUESTION_CODE WHERE Q.VOLUME_SLUG = ? AND Q.STATUS = 'ACTIVE' ORDER BY Q.ID, A.DISPLAY_ORDER";
     private static final String SQL_INSERT_QUESTION = "INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_VI, STATUS, CREATED_BY) VALUES (?, ?, ?, ?, 'ACTIVE', ?)";
     private static final String SQL_UPDATE_QUESTION = "UPDATE QUESTIONS SET QUESTION_TEXT = ?, QUESTION_TEXT_VI = ?, STATUS = ?, UPDATED_BY = ? WHERE QUESTION_CODE = ?";
     private static final String SQL_DELETE_QUESTION = "DELETE FROM QUESTIONS WHERE QUESTION_CODE = ?";
@@ -130,8 +130,6 @@ public class QuestionAdapterImpl implements QuestionAdapter {
                     Answer answer = new Answer();
                     answer.setId(answerId);
                     answer.setQuestionCode(rs.getString("ANSWER_QUESTION_CODE"));
-                    answer.setOptionCode(rs.getString("OPTION_CODE"));
-                    answer.setOptionText(rs.getString("OPTION_TEXT"));
                     answer.setAnswerCode(rs.getString("ANSWER_CODE"));
                     answer.setAnswerText(rs.getString("ANSWER_TEXT"));
                     answer.setAnswerTextVi(rs.getString("ANSWER_TEXT_VI"));
@@ -197,8 +195,6 @@ public class QuestionAdapterImpl implements QuestionAdapter {
                     Answer answer = new Answer();
                     answer.setId(answerId);
                     answer.setQuestionCode(rs.getString("ANSWER_QUESTION_CODE"));
-                    answer.setOptionCode(rs.getString("OPTION_CODE"));
-                    answer.setOptionText(rs.getString("OPTION_TEXT"));
                     answer.setAnswerCode(rs.getString("ANSWER_CODE"));
                     answer.setAnswerText(rs.getString("ANSWER_TEXT"));
                     answer.setAnswerTextVi(rs.getString("ANSWER_TEXT_VI"));
