@@ -55,7 +55,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The clock moves slowly','Kim đồng hồ trôi thật chậm','00:00:25.060','00:00:27.800','esl-fast-beginner-1-4'),
 	('The kids continue to wait','Bọn trẻ vẫn tiếp tục chờ đợi','00:00:28.100','00:00:31.000','esl-fast-beginner-1-4'),
 
-	/* (UUID(),'esl-fast-beginner-1-5','Chores','Việc nhà','BEGINNER_01_ESL_FAST_CHILDREN_005.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-children-1','YES',5) */
+	/* (UUID(),'esl-fast-beginner-1-5','Chores','Việc nhà','BEGINNER_01_ESL_FAST_CHILDREN_005.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-children-1',1,1,1,5) */
 	('He is playing video games','Cậu bé đang chơi điện tử','00:00:00.650','00:00:03.500','esl-fast-beginner-1-5'),
 	('Mom gets mad','Mẹ rất tức giận','00:00:03.990','00:00:05.810','esl-fast-beginner-1-5'),
 	('She thinks he is lazy','Mẹ nghĩ cậu bé lười biếng','00:00:06.170','00:00:08.600','esl-fast-beginner-1-5'),
