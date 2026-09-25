@@ -109,7 +109,10 @@ const MENU_ITEMS: MenuItem[] = [
     label: 'Test',
     key: 'test',
     icon: <CheckCircleOutlined />,
-    href: '/test',
+    children: [
+      { label: 'Sắp xếp câu', key: 'sap-xep-cau', href: '/test' },
+      { label: 'Lựa chọn đáp án đúng', key: 'lua-chon-dap-an', href: '/multiple-choice' },
+    ],
   },
   {
     label: 'Bieu do',

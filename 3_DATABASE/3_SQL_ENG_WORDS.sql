@@ -5138,6 +5138,7 @@ INSERT INTO `WORDS` (`ENG`,`VI`) VALUES
 	('friend','bạn bè'),
 	('friendly','thân thiện'),
 	('friendly greeting','lời chào thân thiện'),
+	('friendly-looking','rất thân thiện'),
 	('friendly-looking','trông khá thân thiện'),
 	('friendly-looking','trông rất thân thiện'),
 	('friends','bạn'),

@@ -1,0 +1,124 @@
+{
+  "info": {
+    "name": "Books - RunSQL API",
+    "_postman_id": "run-sql-collection-001",
+    "description": "Collection test 2 API RunSQL: word-general và contents-export",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080/api/v1",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "API 1 - Word General (tương đương RunSQLWordGeneralService)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/run-sql/word-general",
+          "host": ["{{baseUrl}}"],
+          "path": ["run-sql", "word-general"]
+        },
+        "description": "Tạo lại bảng WORDS2 từ WORDS, rồi tổng hợp ra file 3_SQL_ENG_WORDS.sql trong 3_DATABASE.\n\nExpected response:\n{\n  \"code\": \"00\",\n  \"message\": \"word-general success\"\n}"
+      },
+      "response": [
+        {
+          "name": "Success",
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"code\": \"00\",\n  \"message\": \"word-general success\"\n}"
+        },
+        {
+          "name": "Failed",
+          "status": "Internal Server Error",
+          "code": 500,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"code\": \"99\",\n  \"message\": \"word-general failed: <error detail>\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "API 2 - Contents Export (đọc CONTENTS ghi ra file APP_*.sql)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/run-sql/contents-export",
+          "host": ["{{baseUrl}}"],
+          "path": ["run-sql", "contents-export"]
+        },
+        "description": "Đọc toàn bộ bảng CONTENTS từ DB, nhóm theo BOOK_SLUG, ghi ra các file APP_<BOOK_SLUG>.sql trong thư mục 3_DATABASE.\n\nExpected response:\n{\n  \"code\": \"00\",\n  \"message\": \"contents-export success. Files generated: 15\"\n}"
+      },
+      "response": [
+        {
+          "name": "Success",
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"code\": \"00\",\n  \"message\": \"contents-export success. Files generated: 15\"\n}"
+        },
+        {
+          "name": "Failed",
+          "status": "Internal Server Error",
+          "code": 500,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"code\": \"99\",\n  \"message\": \"contents-export failed: <error detail>\"\n}"
+        }
+      ]
+    }
+    {
+      "name": "API 3 - Contents Insert (TRUNCATE + execute APP_*.sql từ DB)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/run-sql/contents-insert",
+          "host": ["{{baseUrl}}"],
+          "path": ["run-sql", "contents-insert"]
+        },
+        "description": "Tương đương RunSQLContentService nhưng danh sách file APP_*.sql được build động từ DB.\nThực hiện: TRUNCATE CONTENTS → execute từng APP_<BOOK_SLUG>.sql → ghi SUMMARY.sql\n\nExpected response:\n{\n  \"code\": \"00\",\n  \"message\": \"contents-insert success. Executed files: 15\"\n}"
+      },
+      "response": [
+        {
+          "name": "Success",
+          "status": "OK",
+          "code": 200,
+          "header": [{"key": "Content-Type", "value": "application/json"}],
+          "body": "{\n  \"code\": \"00\",\n  \"message\": \"contents-insert success. Executed files: 15\"\n}"
+        },
+        {
+          "name": "Failed",
+          "status": "Internal Server Error",
+          "code": 500,
+          "header": [{"key": "Content-Type", "value": "application/json"}],
+          "body": "{\n  \"code\": \"99\",\n  \"message\": \"contents-insert failed: <error detail>\"\n}"
+        }
+      ]
+    }
+  ]
+}

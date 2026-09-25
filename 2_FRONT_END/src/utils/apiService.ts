@@ -2,6 +2,7 @@ import { Book } from '@/interfaces/book';
 import { Chart } from '@/interfaces/chart';
 import { ContentType } from '@/interfaces/content';
 import { PaginationResponse } from '@/interfaces/pagination';
+import { QuestionType, QuizResultType } from '@/interfaces/question';
 import { Volume } from '@/interfaces/volume';
 import { Word, WordItem } from '@/interfaces/word';
 import { message } from 'antd';
@@ -524,6 +525,87 @@ export const runVolumesExport = async (): Promise<string> => {
   try {
     const response = await apiClient.post('/run-sql/volumes-export');
     return response.data?.message ?? 'volumes-export success';
+  } catch (error: any) {
+    throw new Error(getErrorMessage(error));
+  }
+};
+
+// ============================================================
+// QUESTIONS
+// ============================================================
+
+// Lay danh sach cau hoi theo volume slug
+export const getQuestionsByVolumeSlug = async (volumeSlug: string): Promise<QuestionType[]> => {
+  try {
+    const response = await apiClient.get(`/question/volume/${volumeSlug}`);
+    return response.data;
+  } catch (error: any) {
+    throw new Error(getErrorMessage(error));
+  }
+};
+
+// Lay cau hoi theo ma
+export const getQuestionByCode = async (questionCode: string): Promise<QuestionType> => {
+  try {
+    const response = await apiClient.get(`/question/code/${questionCode}`);
+    return response.data;
+  } catch (error: any) {
+    throw new Error(getErrorMessage(error));
+  }
+};
+
+// Lay cau hoi kem danh sach cau tra loi theo ma
+export const getQuestionWithAnswersByCode = async (questionCode: string): Promise<QuestionType> => {
+  try {
+    const response = await apiClient.get(`/question/code/${questionCode}/with-answers`);
+    return response.data;
+  } catch (error: any) {
+    throw new Error(getErrorMessage(error));
+  }
+};
+
+// Lay danh sach cau hoi kem danh sach cau tra loi theo volume slug
+export const getQuestionsWithAnswersByVolumeSlug = async (volumeSlug: string): Promise<QuestionType[]> => {
+  try {
+    const response = await apiClient.get(`/question/volume/${volumeSlug}/with-answers`);
+    return response.data;
+  } catch (error: any) {
+    throw new Error(getErrorMessage(error));
+  }
+};
+
+// Them cau hoi moi
+export const insertQuestion = async (question: QuestionType): Promise<void> => {
+  try {
+    await apiClient.post('/question/insert', question);
+  } catch (error: any) {
+    throw new Error(getErrorMessage(error));
+  }
+};
+
+// Cap nhat cau hoi
+export const updateQuestion = async (question: QuestionType): Promise<void> => {
+  try {
+    await apiClient.put('/question/update', question);
+  } catch (error: any) {
+    throw new Error(getErrorMessage(error));
+  }
+};
+
+// Xoa cau hoi theo ma
+export const deleteQuestion = async (questionCode: string): Promise<void> => {
+  try {
+    await apiClient.delete(`/question/delete/${questionCode}`);
+  } catch (error: any) {
+    throw new Error(getErrorMessage(error));
+  }
+};
+
+// Nop bai kiem tra
+export const submitQuiz = async (userAnswers: Record<string, string>, questions: QuestionType[]): Promise<QuizResultType> => {
+  try {
+    const response = await apiClient.post('/question/submit-quiz', { userAnswers, questions });
+    return response.data;
   } catch (error: any) {
     throw new Error(getErrorMessage(error));
   }

@@ -30,6 +30,7 @@ export interface ContentToolbarProps {
   onTest: () => void;
   onMatchSentences: () => void;
   onFillBlanks: () => void;
+  onMultipleChoice: () => void;
   onInsertWord: () => void;
   volumeSlug: string | string[];
 }
@@ -51,6 +52,7 @@ const ContentToolbar: React.FC<ContentToolbarProps> = ({
   onTest,
   onMatchSentences,
   onFillBlanks,
+  onMultipleChoice,
   onInsertWord,
   volumeSlug,
 }) => {
@@ -251,6 +253,11 @@ const ContentToolbar: React.FC<ContentToolbarProps> = ({
                 key: 'điền từ',
                 label: 'Điền từ còn thiếu',
                 onClick: onFillBlanks,
+              },
+              {
+                key: 'lựa chọn đáp án',
+                label: 'Lựa chọn đáp án đúng',
+                onClick: onMultipleChoice,
               },
             ],
           }}
