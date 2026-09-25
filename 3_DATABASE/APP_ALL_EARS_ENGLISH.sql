@@ -1,5 +1,5 @@
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'all-ears-english-1','How to lead a conversation between people who disagree?','Làm thế nào để dẫn dắt đối thoại giữa những người đối nghịch?','CONVERSATIONS_ACADEMIC_CONVERSATION_02_ALL_EARS_ENGLISH_001.mp3',NULL,'00:00:13.205','00:09:05.362','all-ears-english','NO',1) */
+	/* (UUID(),'all-ears-english-1','How to lead a conversation between people who disagree?','Làm thế nào để dẫn dắt đối thoại giữa những người đối nghịch?','CONVERSATIONS_ACADEMIC_CONVERSATION_02_ALL_EARS_ENGLISH_001.mp3',NULL,'00:00:13.205','00:09:05.362','all-ears-english',0,0,1) */
 	('Hey there, Aubrey','Chào Aubrey','00:00:00.210','00:00:00.710','all-ears-english-1'),
 	('What have you got going on today?','Hôm nay bạn có kế hoạch gì không?','00:00:00.870','00:00:02.150','all-ears-english-1'),
 	('I am taking my daughter to a job fair','Tôi đưa con gái đến hội chợ việc làm','00:00:03.110','00:00:06.010','all-ears-english-1'),

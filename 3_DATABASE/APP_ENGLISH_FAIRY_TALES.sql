@@ -1,5 +1,5 @@
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'english-fairy-tales-1','An Eternal Winter','Mùa đông vĩnh cửu','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_001.mp3',NULL,'00:00:05.300','00:15:11.000','english-fairy-tales','YES',1) */
+	/* (UUID(),'english-fairy-tales-1','An Eternal Winter','Mùa đông vĩnh cửu','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_001.mp3',NULL,'00:00:05.300','00:15:11.000','english-fairy-tales',1,0,1) */
 	('Once upon a time, far away at the foot of a hill, in a humble farming village, there lived a jovial young girl by the name of Elsa','Ngày xửa ngày xưa, xa xa dưới chân núi nọ, ở một ngôi làng thuần nông bình thường, có một cô gái trẻ vui tính tên là Elsa','00:00:10.000','00:00:20.560','english-fairy-tales-1'),
 	('She lived with her foster family, but Elsa didn\'t know that','Cô sống cùng cha mẹ nuôi, nhưng Elsa không hề hay biết','00:00:20.560','00:00:24.971','english-fairy-tales-1'),
 	('Father, look at our mustaches','Cha ơi, nhìn râu của bọn con này','00:00:30.100','00:00:34.000','english-fairy-tales-1'),
@@ -187,12 +187,12 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Of course, she would visit Ally, George, and the twins frequently and didn\'t love them any less','Dĩ nhiên, cô vẫn tới thăm Ally, George và hai anh em sinh đôi thường xuyên và không hề yêu mến họ ít đi','00:14:57.900','00:15:04.400','english-fairy-tales-1'),
 	('But she was happy to have finally found a place where she felt she belonged','Nhưng cô rất vui khi cuối cùng đã tìm thấy nơi mà cô cảm thấy mình thực sự thuộc về','00:15:04.720','00:15:10.490','english-fairy-tales-1'),
 
-	/* (UUID(),'english-fairy-tales-2','The Two Princesses','Hai nàng công chúa','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_002.mp3',NULL,'00:00:04.830','00:13:07.900','english-fairy-tales','YES',2) */
+	/* (UUID(),'english-fairy-tales-2','The Two Princesses','Hai nàng công chúa','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_002.mp3',NULL,'00:00:04.830','00:13:07.900','english-fairy-tales',1,0,2) */
 	('The Two Princesses','Hai nàng công chúa','00:00:04.830','00:00:07.500','english-fairy-tales-2'),
 	('The king of an ancient kingdom was a good man, but his ignorance to the plight of his daughters, Stella and Ellen, allowed their stepmother\'s cruel actions to go unchecked','Nhà vua của một vương quốc cổ xưa là một người tốt bụng, nhưng do sự thờ ơ của ông đối với hoàn cảnh của hai cô con gái, Stella và Ellen, đã tạo điều kiện cho những hành động tàn ác của mẹ kế không bị ngăn cản','00:00:07.500','00:00:19.800','english-fairy-tales-2'),
 	('Hands off, you little brat','Bỏ tay ra, đồ nhóc con','00:00:26.700','00:00:28.960','english-fairy-tales-2'),
 	('These jewels belong to me','Đồ trang sức này là của ta','00:00:29.260','00:00:30.960','english-fairy-tales-2'),
-	('But father gave them to us','Nhưng cha đã tặng chúng cho bọn con mà','00:00:31.400','00:00:33.480','english-fairy-tales-2'),
+	('But father gave them to us','Nhưng cha đã tặng chúng cho bọn con mà','00:00:31.400','00:00:33.500','english-fairy-tales-2'),
 	('Why are you doing this?','Sao dì lại làm như vậy?','00:00:33.600','00:00:35.600','english-fairy-tales-2'),
 	('Don\'t you dare talk back to me, you insolent child','Ngươi dám cãi lại ta sao, đứa trẻ hỗn xược','00:00:36.400','00:00:39.900','english-fairy-tales-2'),
 	('Remember, I am the queen now, and I decide who gets what in this palace','Nhớ kỹ, giờ ta là hoàng hậu, và ta quyết định ai được giữ cái gì trong cung điện này','00:00:40.300','00:00:46.300','english-fairy-tales-2'),
@@ -342,8 +342,8 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('There\'s an intruder in the palace','Có một kẻ xâm nhập trong cung điện','00:11:54.500','00:11:56.550','english-fairy-tales-2'),
 	('Stella, Stella, Stella, Stella','Stella, Stella, Stella, Stella','00:11:59.260','00:12:08.040','english-fairy-tales-2'),
 	('There you are','Em đây rồi','00:12:08.400','00:12:09.500','english-fairy-tales-2'),
-	('Ellen, you, you, oh','Ellen, là chị, là chị, ôi','00:12:18.000','00:12:21.400','english-fairy-tales-2'),
-	('Are you alright?','Em có sao không?','00:12:22.000','00:12:23.800','english-fairy-tales-2'),
+	('Ellen, you, you, oh','Ellen, là chị, là chị, ôi','00:12:18.000','00:12:21.600','english-fairy-tales-2'),
+	('Are you alright?','Em có sao không?','00:12:22.000','00:12:24.000','english-fairy-tales-2'),
 	('What is going on?','Có chuyện gì đang xảy ra vậy?','00:12:26.000','00:12:27.900','english-fairy-tales-2'),
 	('The princesses poured out their entire story to the queen and the princes','Hai công chúa đã kể hết toàn bộ câu chuyện của mình cho nữ hoàng và các hoàng tử','00:12:29.000','00:12:33.300','english-fairy-tales-2'),
 	('You have been really good, patient, and kind with me','Anh thực sự rất tốt, kiên nhẫn và tử tế với em','00:12:33.800','00:12:37.040','english-fairy-tales-2'),
@@ -355,7 +355,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The queen was delighted as the marriages were performed','Nữ hoàng rất vui khi hôn lễ được cử hành','00:12:58.800','00:13:02.420','english-fairy-tales-2'),
 	('The two couples lived in perfect happiness for the rest of their lives','Hai cặp đôi sống trong hạnh phúc trọn vẹn cho đến hết cuộc đời','00:13:03.000','00:13:07.900','english-fairy-tales-2'),
 
-	/* (UUID(),'english-fairy-tales-3','Rosanella and the fickle Prince','Rosanella và hoàng tử hay thay đổi','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_003.mp3',NULL,'00:00:04.830','00:13:07.820','english-fairy-tales','YES',3) */
+	/* (UUID(),'english-fairy-tales-3','Rosanella and the fickle Prince','Rosanella và hoàng tử hay thay đổi','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_003.mp3',NULL,'00:00:04.830','00:13:07.820','english-fairy-tales',1,0,3) */
 	('Rosanella and the fickle Prince','Rosanella và hoàng Tử hay thay đổi','00:00:04.790','00:00:07.200','english-fairy-tales-3'),
 	('Long, long ago, in the land of fairies, a very important discussion was underway','Xưa kia, ở xứ sở của các nàng tiên, một cuộc thảo luận rất quan trọng đã diễn ra','00:00:07.400','00:00:13.300','english-fairy-tales-3'),
 	('I am touched at your love, but rules are rules, and I really must retire soon','Ta rất cảm động trước tình cảm của mọi người, nhưng quy tắc là quy tắc, và ta thực sự sắp phải nghỉ hưu rồi','00:00:18.900','00:00:24.600','english-fairy-tales-3'),
@@ -514,7 +514,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And so it was, Prince Merliflor gave up his fickle ways and became a committed, focused man','Và thế là, Hoàng tử Merliflor đã từ bỏ tính hay thay đổi và trở thành một người đàn ông chú tâm và tận tụy','00:12:45.790','00:12:53.310','english-fairy-tales-3'),
 	('And together, Prince Merliflor and Princess Rosanella lived happily ever after','Và cùng nhau, Hoàng tử Merliflor và Công chúa Rosanella sống hạnh phúc mãi mãi về sau','00:12:53.310','00:13:00.050','english-fairy-tales-3'),
 
-	/* (UUID(),'english-fairy-tales-4','The gardener','Người làm vườn','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_004.mp3',NULL,'00:00:05.600','00:15:51.170','english-fairy-tales','NO',4) */
+	/* (UUID(),'english-fairy-tales-4','The gardener','Người làm vườn','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_004.mp3',NULL,'00:00:05.600','00:15:51.170','english-fairy-tales',0,0,4) */
 	('The gardener','Người làm vườn','00:00:05.000','00:00:07.000','english-fairy-tales-4'),
 	('Five miles from the hustle-bustle of the city of London, there was a small town, quiet, lush and beautiful, where great noblemen and ministers held their summer mansions','Cách thành phố Luân Đôn đông đúc nhộn nhịp năm dặm, có một thị trấn nhỏ, bình lặng, xanh tươi và xinh đẹp nơi giới quý tộc và các quan đại thần sở hữu các dinh thự mùa hè','00:00:07.000','00:00:19.580','english-fairy-tales-4'),
 	('This is the story of the most celebrated manor of them all, one which was beautiful beyond imagination','Đây là câu chuyện về một dinh thự nổi tiếng nhất trong số đó, một trong những nơi đẹp ngoài sức tưởng tượng','00:00:20.620','00:00:28.580','english-fairy-tales-4'),
@@ -729,7 +729,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And that is how it shall be known all over the country','Và đó là cách để khu vườn sẽ được biết đến trên toàn vương quốc','00:15:41.150','00:15:45.010','english-fairy-tales-4'),
 	('Finally, Larsen got the appreciation he deserved','Cuối cùng, Larsen cũng nhận được sự trân trọng mà anh xứng đáng được hưởng','00:15:46.650','00:15:51.170','english-fairy-tales-4'),
 
-	/* (UUID(),'english-fairy-tales-5','Sisterhood','Tình chị em','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_005.mp3',NULL,'00:00:00.000','00:10:20.750','english-fairy-tales','YES',5) */
+	/* (UUID(),'english-fairy-tales-5','Sisterhood','Tình chị em','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_005.mp3',NULL,'00:00:00.000','00:10:20.750','english-fairy-tales',1,0,5) */
 	('Sisterhood','Tình chị em','00:00:05.240','00:00:06.600','english-fairy-tales-5'),
 	('Once upon a time, in a kingdom not so far away, there lived a widowed king with his beautiful young daughter, Princess Anne','Ngày xửa ngày xưa, trong một vương quốc không xa lắm, có một vị vua góa vợ sống cùng với cô con gái nhỏ xinh đẹp của mình, Công chúa Anne','00:00:06.700','00:00:15.260','english-fairy-tales-5'),
 	('The king\'s heart was lonely, and he decided it was time to marry again','Trái tim của nhà vua luôn cô đơn, và ông quyết định đã đến lúc kết hôn lần nữa','00:00:15.680','00:00:20.480','english-fairy-tales-5'),
@@ -869,7 +869,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'english-fairy-tales-6','Touch Wood','Chạm vào gỗ - May mắn','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_006.mp3',NULL,'00:00:00.000','00:14:36.000','english-fairy-tales','NO',6) */
+	/* (UUID(),'english-fairy-tales-6','Touch Wood','Chạm vào gỗ - May mắn','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_006.mp3',NULL,'00:00:00.000','00:14:36.000','english-fairy-tales',0,0,6) */
 	('So so glad that the gloomy days are behind us. Touch Wood','Thật là mừng vì những ngày u ám đã đi qua. Chạm gỗ','00:00:00.000','00:00:00.000','english-fairy-tales-6'),
 	('Daddy, why did you do that?','Bố ơi, sao bố lại làm thế?','00:00:00.000','00:00:00.000','english-fairy-tales-6'),
 	('Do what little fella?','Làm gì cơ anh bạn nhỏ?','00:00:00.000','00:00:00.000','english-fairy-tales-6'),
@@ -994,7 +994,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And that\'s why we say touch Wood, instinctively so as to not ruin the moment','Thế nên người ta nói chạm gỗ, theo tự nhiên để không phá hỏng giây phút đó','00:00:00.000','00:00:00.000','english-fairy-tales-6'),
 	('The end','Hết chuyện','00:00:00.000','00:00:00.000','english-fairy-tales-6'),
 
-	/* (UUID(),'english-fairy-tales-7','Mellidora','Mellidora','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_007.mp3',NULL,'null','null','english-fairy-tales','NO',7) */
+	/* (UUID(),'english-fairy-tales-7','Mellidora','Mellidora','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_007.mp3',NULL,'null','null','english-fairy-tales',0,0,7) */
 	('Once upon a time, when... I need something different here','Ngày xửa ngày xưa, khi mà... Tôi cần một chút gì đó khác biệt ở đây','00:00:00.000','00:00:00.000','english-fairy-tales-7'),
 	('When an apple was just a fruit?','Khi táo chỉ là một loại quả được không?','00:00:00.000','00:00:00.000','english-fairy-tales-7'),
 	('When war raged upon all over the..','khi chiến tranh reo rắc khắp.','00:00:00.000','00:00:00.000','english-fairy-tales-7'),
@@ -1113,7 +1113,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And thus, the story of prince Tyler and princess Mellidora ends on a happy note','Và rồi, câu chuyện về hoàng tử Tyler và công chúa Mellidora kết thúc viên mãn','00:00:00.000','00:00:00.000','english-fairy-tales-7'),
 	('Teaching us a very important lesson, too, that in life, always surround yourself with people who laugh through their own miseries and cry at other\'s pain','Dạy cho chúng ta một bài học rất quan trọng, rằng trong cuộc sống này, xung quanh mình luôn có những người lạc quan trong khó khăn và biết cảm thông với nỗi đau của người khác','00:00:00.000','00:00:00.000','english-fairy-tales-7'),
 
-	/* (UUID(),'english-fairy-tales-8','Anansi and the Pot of Beans','Anansi và nồi đậu','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_008.mp3',NULL,'null','null','english-fairy-tales','NO',8) */
+	/* (UUID(),'english-fairy-tales-8','Anansi and the Pot of Beans','Anansi và nồi đậu','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_008.mp3',NULL,'null','null','english-fairy-tales',0,0,8) */
 	('You must have heard of Anansi the spider. He is a mischief maker, a trickster, and the king of stories','Bạn hẳn đã nghe nói về nhện Anansi. Anh ta là một kẻ chuyên gây rối, một kẻ lừa bịp và là vua của những câu chuyện','00:00:00.000','00:00:00.000','english-fairy-tales-8'),
 	('And today, I will tell you about one such story which will make you laugh a little, smile a little, and tell you a little bit more about the strong folklore character from the magnificent land of Afri','Và hôm nay, tôi sẽ kể cho các bạn nghe về một câu chuyện sẽ khiến bạn bật cười, hay mỉm cười và kể thêm một chút về nhân vật văn hóa dân gian mạnh mẽ đến từ vùng đất tráng lệ của Châu Phi','00:00:00.000','00:00:00.000','english-fairy-tales-8'),
 	('It was a hot day and as all days had been for the last couple of months. Anansi was in his house, sitting by the window, bored out of his mind','Vào một ngày nắng nóng và như những ngày khác trong các tháng qua. Anasi ngồi buồn chán cạnh cửa sổ, trong ngôi nhà của anh ta','00:00:00.000','00:00:00.000','english-fairy-tales-8'),
@@ -1210,7 +1210,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And if you look carefully you might still see him hiding there today','Và nếu bạn nhìn kỹ bà có thể vẫn thấy anh ấy trốn ở đó hôm nay','00:00:00.000','00:00:00.000','english-fairy-tales-8'),
 	('But you will never see him crazy about beans anymore','Nhưng bạn sẽ không bao giờ thấy anh ấy phát cuồng vì đậu nữa','00:00:00.000','00:00:00.000','english-fairy-tales-8'),
 
-	/* (UUID(),'english-fairy-tales-9','The shrew farmer','Người nông dân thông minh','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_009.mp3',NULL,'null','null','english-fairy-tales','NO',9) */
+	/* (UUID(),'english-fairy-tales-9','The shrew farmer','Người nông dân thông minh','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_009.mp3',NULL,'null','null','english-fairy-tales',0,0,9) */
 	('Once upon a time, there lived a farmer who worked far from his home in the fields of a rich baron','Ngày xửa ngày có một anh nông dân phải làm việc xa nhà ngoài các cánh đồng của một nam tước giàu có','00:00:00.000','00:00:00.000','english-fairy-tales-9'),
 	('In the past, gangs of bandits hid in the mountains rising behind the plains but the emperor has sent his soldiers to find and kill the thieves and now the area was safe and quite','Vào thời xa xưa, các toán cướp thường lẩn trốn trong các dãy núi nhô lên ở phía sau các vùng đồng bằng nhưng hoàng đế đã đưa quân đi tìm và giết bọn cướp, và giờ đây cả vùng đã an toàn và bình yên','00:00:00.000','00:00:00.000','english-fairy-tales-9'),
 	('Oh my another weapon','Ôi trời ơi, lại một loại vũ khí khác nữa nè','00:00:00.000','00:00:00.000','english-fairy-tales-9'),
@@ -1291,7 +1291,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Unfortunately, I have the same problem with my wife','Thật không may, ta cũng chịu cùng tình cảnh với vợ ta giống như vậy','00:00:00.000','00:00:00.000','english-fairy-tales-9'),
 	('The farmer and his wife were sent home and no one believed their story and so the shrewd farmer didn\'t go to the jail and spent his money wisely','Anh nông dân và cô vợ được đưa về nhà và chẳng ai tin vào câu chuyện của họ và anh nông dân thông minh không bị tống vào ngục và đã tiêu tiền của mình một cách khôn ngoan','00:00:00.000','00:00:00.000','english-fairy-tales-9'),
 
-	/* (UUID(),'english-fairy-tales-10','Princess Rosette','Nàng công chúa Rosette','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_010.mp3',NULL,'00:00:04.000','00:13:34.910','english-fairy-tales','NO',10) */
+	/* (UUID(),'english-fairy-tales-10','Princess Rosette','Nàng công chúa Rosette','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_010.mp3',NULL,'00:00:04.000','00:13:34.910','english-fairy-tales',0,0,10) */
 	('Princess Rosette','Nàng công chúa Rosette','00:00:04.000','00:00:06.500','english-fairy-tales-10'),
 	('Once upon a time, there lived a king and queen, who had two beautiful sons and one little daughter, who had such beautiful golden hair that no one who saw her could help loving her','Ngày xửa ngày xưa có một vị vua và hoàng hậu có hai người con trai khôi ngô tuấn tú và một cô con gái nhỏ có mái tóc vàng rực rỡ khiến không một ai khi nhìn thấy cô mà không thể không yêu quý nàng','00:00:07.750','00:00:21.930','english-fairy-tales-10'),
 	('When it was time for the christening of the princess, the queen invited fairies from all over the world and threw a splendid banquet','Khi đến thời điểm làm lễ rửa tội cho công chúa, hoàng hậu đã mời các nàng tiên từ khắp nơi trên thế giới đến và tổ chức một bữa tiệc linh đình','00:00:22.930','00:00:31.870','english-fairy-tales-10'),
@@ -1435,7 +1435,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'english-fairy-tales-11','The Sibling Menace','Mối Nguy Hiểm Của Anh Chị Em','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_011.mp3',NULL,'00:00:04.000','00:13:34.910','english-fairy-tales','NO',11) */
+	/* (UUID(),'english-fairy-tales-11','The Sibling Menace','Mối Nguy Hiểm Của Anh Chị Em','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_011.mp3',NULL,'00:00:04.000','00:13:34.910','english-fairy-tales',0,0,11) */
 	('The Sibling Menace','Mối Nguy Hiểm Của Anh Chị Em','00:00:05.020','00:00:08.000','english-fairy-tales-11'),
 	('In a quaint, far-off town, nestled away from the chaos of the world, there lived two siblings, Jamie and Izzie','Tại một thị trấn cổ kính, xa xôi, tách biệt khỏi sự hỗn loạn của thế giới, có hai chị em, Jamie và Izzie','00:00:08.000','00:00:16.400','english-fairy-tales-11'),
 	('Izzie was the vigilant older sister, while Jamie was the mischievous younger brother','Izzie là người chị cả cẩn trọng, còn Jamie là cậu em trai tinh nghịch','00:00:17.020','00:00:22.400','english-fairy-tales-11'),
@@ -1608,7 +1608,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Who knew so much about us?','Ai biết nhiều về chúng ta như vậy?','00:12:49.620','00:12:51.560','english-fairy-tales-11'),
 	('Well, Jamie, that\'s a mystery we may never solve','Chà, Jamie, đó là một bí ẩn mà chúng ta có thể sẽ không bao giờ giải quyết được','00:12:52.180','00:12:55.600','english-fairy-tales-11'),
 
-	/* (UUID(),'english-fairy-tales-12','The Grateful Prince','Chàng hoàng tử luôn biết ơn','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_012.mp3',NULL,'00:00:06.270.mp3','null','english-fairy-tales','NO',12) */
+	/* (UUID(),'english-fairy-tales-12','The Grateful Prince','Chàng hoàng tử luôn biết ơn','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_012.mp3',NULL,'00:00:06.270.mp3','null','english-fairy-tales',0,0,12) */
 	('The Grateful Prince','Chàng hoàng tử luôn biết ơn','00:00:06.270','00:00:09.000','english-fairy-tales-12'),
 	('Forests are enchanting, peaceful places, with stories and creatures with deep and dark secrets','Những khu rừng là nơi vừa yên bình, lại vừa cuốn hút, với những câu chuyện và những sinh vật cùng với những bí mật sâu kín và tối tăm','00:00:09.000','00:00:17.490','english-fairy-tales-12'),
 	('At the center of one such forest, a king had strayed from his usual path','Tại trung tâm một khu rừng như thế, một vị vua bị lạc khỏi con đường quen thuộc','00:00:18.050','00:00:23.750','english-fairy-tales-12'),
@@ -1829,7 +1829,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('I cannot ask for anything more','Ta không thể đòi hỏi gì hơn nữa','00:17:58.170','00:18:00.390','english-fairy-tales-12'),
 	('And together they lived happily ever after','Và họ sống hạnh phúc với nhau mãi mãi về sau','00:18:01.290','00:18:04.990','english-fairy-tales-12'),
 
-	/* (UUID(),'english-fairy-tales-13','The True Bride','Cô dâu thực sự','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_013.mp3',NULL,'00:00:08.000','00:13:59.800','english-fairy-tales','NO',13) */
+	/* (UUID(),'english-fairy-tales-13','The True Bride','Cô dâu thực sự','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_013.mp3',NULL,'00:00:08.000','00:13:59.800','english-fairy-tales',0,0,13) */
 	('The True Bride','Cô dâu thực sự','00:00:05.000','00:00:07.400','english-fairy-tales-13'),
 	('Once upon a time in a humble village, there lived a young woman named Clover','Ngày xưa tại một ngôi làng bình thường, có một người phụ nữ trẻ tên là Cỏ ba lá','00:00:08.639','00:00:14.000','english-fairy-tales-13'),
 	('Clover symbolizes good omens for faith, hope, love, and luck','Cỏ ba lá tượng trưng cho những điềm lành như niềm tin, hi vọng, tình yêu và sự may mắn','00:00:14.200','00:00:20.400','english-fairy-tales-13'),
@@ -2079,7 +2079,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Even if the world is full of wrongs or lies, there is only one power that is strong enough to drown it all out','Ngay cả khi thế giới đầy rẫy những điều sai trái hay dối trá, chỉ có một sức mạnh duy nhất đủ mạnh để nhấn chìm tất cả','00:13:48.700','00:13:56.800','english-fairy-tales-13'),
 	('And that is the power of love','Và đó là sức mạnh của tình yêu','00:13:56.800','00:13:59.900','english-fairy-tales-13'),
 
-	/* (UUID(),'english-fairy-tales-14','Maiden of the seas','Thiếu nữ của biển cả','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_014.mp3',NULL,'00:00:04.000','00:11:54.000','english-fairy-tales','NO',14) */
+	/* (UUID(),'english-fairy-tales-14','Maiden of the seas','Thiếu nữ của biển cả','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_014.mp3',NULL,'00:00:04.000','00:11:54.000','english-fairy-tales',0,0,14) */
 	('Maiden of the Seas','Thiếu nữ của biển cả','00:00:04.170','00:00:06.000','english-fairy-tales-14'),
 	('A long time ago, in the coast of Yolana, there lived a fisherman named Samson','Cách đây rất lâu, ở bờ biển Yolana, có một ngư dân tên là Samson','00:00:06.000','00:00:12.250','english-fairy-tales-14'),
 	('He lived with his grandmother, Lona, in a small cottage by the sea','Anh ấy sống với bà nội, Lona, trong một ngôi nhà nhỏ bên bờ biển','00:00:13.150','00:00:17.470','english-fairy-tales-14'),
@@ -2306,7 +2306,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('We should be kind','Chúng ta nên tốt bụng','00:11:49.590','00:11:50.690','english-fairy-tales-14'),
 	('And hey, kindness takes you a long way','Và này, lòng tốt sẽ đưa bạn đi thật xa','00:11:51.170','00:11:54.000','english-fairy-tales-14'),
 
-	/* (UUID(),'english-fairy-tales-15','How to be a Princess','Cách để trở thành công chúa','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_015.mp3',NULL,'00:00:04.280','00:15:36.940','english-fairy-tales','NO',15) */
+	/* (UUID(),'english-fairy-tales-15','How to be a Princess','Cách để trở thành công chúa','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_015.mp3',NULL,'00:00:04.280','00:15:36.940','english-fairy-tales',0,0,15) */
 	('How to be a Princess','Cách để trở thành công chúa','00:00:04.280','00:00:06.200','english-fairy-tales-15'),
 	('Our tale begins, as many princesses stories always do, in a land far, far away','Câu chuyện của chúng ta bắt đầu, như nhiều câu chuyện về các nàng công chúa khác, tại một vùng đất xa xôi','00:00:06.200','00:00:12.940','english-fairy-tales-15'),
 	('No, this won\'t be a story about a princess falling in love with a prince','Không, đây sẽ không phải là câu chuyện về một công chúa yêu hoàng tử','00:00:13.700','00:00:17.800','english-fairy-tales-15'),
@@ -2448,7 +2448,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'english-fairy-tales-15','How to be a Princess','Cách để trở thành công chúa','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_015.mp3',NULL,'00:00:04.280','00:15:36.940','english-fairy-tales','NO',15) */
+	/* (UUID(),'english-fairy-tales-15','How to be a Princess','Cách để trở thành công chúa','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_015.mp3',NULL,'00:00:04.280','00:15:36.940','english-fairy-tales',0,0,15) */
 	('What are you talking about?','Ông đang nói cái gì vậy?','00:10:05.060','00:10:06.780','english-fairy-tales-15'),
 	('Princess Urena, meet Princess Niabi','Công chúa Urena, hãy gặp Công chúa Niabi đi','00:10:12.510','00:10:16.500','english-fairy-tales-15'),
 	('She\'s been tracking our carriage for the last fifty miles','Cô ấy đã theo dõi xe ngựa của chúng ta suốt năm mươi dặm qua','00:10:17.570','00:10:21.530','english-fairy-tales-15'),
@@ -2534,7 +2534,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('You don\'t need to be anyone but you, because she is amazing and incredible','Các cô không cần phải là ai khác ngoài chính mình, vì cô ấy thật tuyệt vời và phi thường','00:15:29.180','00:15:33.600','english-fairy-tales-15'),
 	('She is the girl you need to be, and I love her','Cô ấy chính là cô gái mà các cô cần trở thành, và tôi yêu cô ấy','00:15:33.650','00:15:36.940','english-fairy-tales-15'),
 
-	/* (UUID(),'english-fairy-tales-16','Witchy Misfits','Phù thủy Misfits','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_016.mp3',NULL,'00:00:04.500','00:15:43.120','english-fairy-tales','NO',16) */
+	/* (UUID(),'english-fairy-tales-16','Witchy Misfits','Phù thủy Misfits','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_016.mp3',NULL,'00:00:04.500','00:15:43.120','english-fairy-tales',0,0,16) */
 	('Witchy Misfits','Phù thủy Misfits','00:00:04.500','00:00:11.280','english-fairy-tales-16'),
 	('Once upon a time, in the whimsical town of Everglimmer, nestled amidst rolling hills and cobbled streets, lived four unlikely friends','Ngày xửa ngày xưa, tại thị trấn Everclimber huyền ảo, nếp mình giữa những ngọn đồi thôi thoải và những con đường đầy đá cùi, có bốn người bạn kỳ lạ','00:00:04.500','00:00:16.660','english-fairy-tales-16'),
 	('Willow the Herbalist, Luna the Seer, Ember the Firebrand, and Morticia the Necromancer','Willow nhà tháo dược, Luna nhà tiến trí, Embe người tạo lửa, và Morticia người trò chuyện với linh hồn','00:00:17.360','00:00:26.060','english-fairy-tales-16'),
@@ -2758,7 +2758,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And from that day onward, Everglimmer and its people lived happily ever after','Và từ ngày đó trở đi Everglimmer và người dân ở đó sống hạnh phúc mãi mãi','00:15:33.200','00:15:37.900','english-fairy-tales-16'),
 	('Forever watched over by their unlikely heroes, the Witchy Misfits','Luôn được bảo vệ bởi những người anh hùng khác thường, những phù thủy lạc lối','00:15:38.460','00:15:43.120','english-fairy-tales-16'),
 
-	/* (UUID(),'english-fairy-tales-17','Untangle','Gỡ rối','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_017.mp3',NULL,'00:00:05.140','00:13:22.930','english-fairy-tales','NO',17) */
+	/* (UUID(),'english-fairy-tales-17','Untangle','Gỡ rối','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_017.mp3',NULL,'00:00:05.140','00:13:22.930','english-fairy-tales',0,0,17) */
 	('Untangle','Gỡ Rối','00:00:05.140','00:00:10.300','english-fairy-tales-17'),
 	('In the village of Greenfields, there lived two sisters, in what was perhaps a happy family?','Ở một ngôi làng tên là Rinfield, có hai chị em nọ sống trong một gia đình dường như rất hạnh phúc','00:00:05.140','00:00:14.860','english-fairy-tales-17'),
 	('Hello, aunt Grace','Con chào dì đây','00:00:18.060','00:00:20.380','english-fairy-tales-17'),
@@ -2959,7 +2959,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('But that means I don\'t have to talk that\'s, like, the best thing ever','Nhưng nó cũng có nghĩa là chị không cần phải nói đó là điều tuyệt vời nhất rồi','00:13:08.910','00:13:12.610','english-fairy-tales-17'),
 	('By untangling the knots of their misunderstandings, the sisters strengthen their bond, showing that love and understanding can heal even the deepest wounds','Bằng cách gỡ rối những lúc thắt của sự hiểu nhầm hai chị em đã thắt chặt hơn tình cảm của mình cho thấy rằng tình yêu và sự thấu hiểu có thể chữa lành những vết thương sâu nhất','00:13:12.870','00:13:22.930','english-fairy-tales-17'),
 
-	/* (UUID(),'english-fairy-tales-18','Sanely in love','Tỉnh táo trong tình yêu','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_018.mp3',NULL,'00:00:05.140','00:13:22.930','english-fairy-tales','NO',18) */
+	/* (UUID(),'english-fairy-tales-18','Sanely in love','Tỉnh táo trong tình yêu','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_018.mp3',NULL,'00:00:05.140','00:13:22.930','english-fairy-tales',0,0,18) */
 	('Sanely in love','Tỉnh táo trong tình yêu','00:00:05.640','00:13:22.000','english-fairy-tales-18'),
 	('In the enchanting kingdom of Monera, where magic and romance intertwined, lived a princess named Fabiola','Trong vương quốc huyền bí Monera, nơi phép thuật và tình yêu đan xen, có một công chúa tên là Fabiola','00:00:05.640','00:00:14.540','english-fairy-tales-18'),
 	('Her beauty was legendary, her spirit fiery, and her heart longed for true love','Vẻ đẹp của cô ấy là huyền thoại, tinh thần của cô ấy mạnh mẽ, và trái tim cô ấy khao khát tình yêu đích thực','00:00:15.180','00:00:21.240','english-fairy-tales-18'),
@@ -3117,7 +3117,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('My adventure has already begun','Cuộc phiêu lưu của ta đã bắt đầu rồi','00:13:17.560','00:13:19.720','english-fairy-tales-18'),
 	('We should start with the bakery indeed','Chúng ta thực sự nên bắt đầu với tiệm bánh','00:13:20.140','00:13:22.000','english-fairy-tales-18'),
 
-	/* (UUID(),'english-fairy-tales-19','Princess Mayblossom','Công chúa Mayblossom','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_019.mp3',NULL,'00:00:04.970','00:14:38.020','english-fairy-tales','NO',19) */
+	/* (UUID(),'english-fairy-tales-19','Princess Mayblossom','Công chúa Mayblossom','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_019.mp3',NULL,'00:00:04.970','00:14:38.020','english-fairy-tales',0,0,19) */
 	('Princess Mayblossom','Công chúa Mayblossom','00:00:04.970','00:00:11.430','english-fairy-tales-19'),
 	('Long, long ago, in a beautiful, mighty kingdom, the king and queen awaited the arrival of their little baby princess','Ngày xửa ngày xưa, trong một vương quốc xinh đẹp và hùng mạnh, nhà vua và hoàng hậu đang mong đợi sự ra đời của công chúa bé nhỏ','00:00:04.970','00:00:14.990','english-fairy-tales-19'),
 	('To them, she was the loveliest child in the whole world','Đối với họ, cô bé là đứa trẻ xinh đẹp nhất trên thế giới','00:00:16.350','00:00:20.950','english-fairy-tales-19'),
@@ -3296,7 +3296,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'english-fairy-tales-20','Hansel and Gretel','Hansel và Gretel','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_020.mp3',NULL,'00:00:04.970','00:14:38.020','english-fairy-tales','NO',20) */
+	/* (UUID(),'english-fairy-tales-20','Hansel and Gretel','Hansel và Gretel','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_020.mp3',NULL,'00:00:04.970','00:14:38.020','english-fairy-tales',0,0,20) */
 	('Hansel and Gretel','Hansel và Gretel','00:00:04.160','00:00:10.380','english-fairy-tales-20'),
 	('Once upon a time, nestled at the edge of a dense forest, there was a humble woodcutter\'s home','Ngày xửa ngày xưa, ở rìa một khu rừng rậm, có một ngôi nhà khiêm tốn của một người chặt cây','00:00:04.160','00:00:12.960','english-fairy-tales-20'),
 	('Here the woodcutter shared his hearth with his two children and his new wife','Tại đây, người chặt cây chia sẻ bếp lửa của mình với hai đứa trẻ và người vợ mới','00:00:13.560','00:00:18.880','english-fairy-tales-20'),
@@ -3515,7 +3515,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Our story reminds us that even in the darkest times, spiritual thinking and family unity can light the way','Câu chuyện của chúng ta nhắc nhở chúng ta rằng ngay cả trong những thời điểm tăm tối nhất, suy nghĩ tâm linh và sự đoàn kết gia đình có thể soi sáng con đường','null','null','english-fairy-tales-20'),
 	('And so, as time passed, the family lived not just happily ever after, but with a profound sense of fulfillment and purpose, for they had learned that it was love, kindness, unity, and clever thinking that truly made their lives a fairytale worth living','Và vì vậy, khi thời gian trôi qua, gia đình không chỉ sống hạnh phúc mãi mãi, mà còn với cảm giác thỏa mãn và mục đích sâu sắc, vì họ đã học được rằng chính tình yêu, lòng tốt, sự đoàn kết và tư duy thông minh mới thực sự làm cho cuộc sống của họ trở thành một câu chuyện cổ tích đáng sống','null','null','english-fairy-tales-20'),
 
-	/* (UUID(),'english-fairy-tales-21','The Bear Princess','Công chúa gấu','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_021.mp3',NULL,'00:00:04.970','00:14:04.230','english-fairy-tales','NO',21) */
+	/* (UUID(),'english-fairy-tales-21','The Bear Princess','Công chúa gấu','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_021.mp3',NULL,'00:00:04.970','00:14:04.230','english-fairy-tales',0,0,21) */
 	('The Bear Princess','Công chúa gấu','00:00:04.970','00:00:13.830','english-fairy-tales-21'),
 	('This is a story about the beautiful kingdom of Belialt, where there lived a king and a queen','Đây là một câu chuyện về vương quốc xinh đẹp Belialt, nơi có một vị vua và một hoàng hậu','00:00:04.970','00:00:15.670','english-fairy-tales-21'),
 	('It was a big day, for the queen had given birth to two princesses and invited fairies to celebrate','Đó là một ngày trọng đại, vì hoàng hậu đã sinh ra hai công chúa và mời các nàng tiên đến dự','00:00:16.430','00:00:23.130','english-fairy-tales-21'),
@@ -3768,7 +3768,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Everyone laughed','Mọi người cười','00:13:54.750','00:13:55.610','english-fairy-tales-21'),
 	('King Joe and Queen Berdine got back to their land of Pagod and lived happily ever after','Vua Joe và Nữ hoàng Berdine đã trở về vùng đất Pagod của họ và sống hạnh phúc mãi mãi','00:13:57.390','00:14:04.230','english-fairy-tales-21'),
 
-	/* (UUID(),'english-fairy-tales-22','Happily Ever After Alone','Hạnh phúc mãi mãi một mình','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_022.mp3',NULL,'00:00:04.160','00:12:48.810','english-fairy-tales','NO',22) */
+	/* (UUID(),'english-fairy-tales-22','Happily Ever After Alone','Hạnh phúc mãi mãi một mình','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_022.mp3',NULL,'00:00:04.160','00:12:48.810','english-fairy-tales',0,0,22) */
 	('Happily Ever After Alone','Hạnh phúc mãi mãi một mình','00:00:04.160','00:00:11.600','english-fairy-tales-22'),
 	('So, the princess lived happily ever after, alone','Vậy, công chúa đã sống hạnh phúc mãi mãi, một mình','00:00:04.160','00:00:11.600','english-fairy-tales-22'),
 	('Remember, my child, you don\'t have to get married','Hãy nhớ, con yêu, con không cần phải kết hôn','00:00:12.240','00:00:15.720','english-fairy-tales-22'),
@@ -3950,7 +3950,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She found out there\'s more to the story when you let someone read between your lines','Cô nhận ra rằng còn nhiều điều hơn trong câu chuyện khi bạn để ai đó đọc giữa những dòng chữ của bạn','00:12:38.890','00:12:43.550','english-fairy-tales-22'),
 	('Turns out, solo is great, but duets can be dazzling too','Hóa ra, đơn ca thì tuyệt, nhưng song ca cũng có thể rực rỡ không kém','00:12:44.110','00:12:48.810','english-fairy-tales-22'),
 
-	/* (UUID(),'english-fairy-tales-23','Manifestopia','Manifestopia','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_023.mp3',NULL,'00:00:05.710','00:14:47.780','english-fairy-tales','NO',23) */
+	/* (UUID(),'english-fairy-tales-23','Manifestopia','Manifestopia','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_023.mp3',NULL,'00:00:05.710','00:14:47.780','english-fairy-tales',0,0,23) */
 	('Manifestopia','Manifestopia','00:00:05.710','00:00:12.170','english-fairy-tales-23'),
 	('Once, in a luscious green valley amidst the sun-bathed hills, there lay a tiny village','Một lần, trong một thung lũng xanh tươi giữa những ngọn đồi ngập tràn ánh nắng, có một ngôi làng nhỏ','00:00:05.710','00:00:14.050','english-fairy-tales-23'),
 	('Here, amidst fluttering leaves and cheerful chirping, lived Dahlia, a beacon of imagination','Tại đây, giữa những chiếc lá bay lượn và tiếng chim hót líu lo, có một cô gái tên là Dahlia, một ngọn hải đăng của trí tưởng tượng','00:00:14.750','00:00:21.130','english-fairy-tales-23'),
@@ -4230,7 +4230,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Dreams don\'t come true unless we believe and work to bring in the change','Ước mơ sẽ không thành hiện thực trừ khi chúng ta tin tưởng và nỗ lực mang lại sự thay đổi','00:14:36.820','00:14:42.460','english-fairy-tales-23'),
 	('So, hope and believe for a life filled with magnificent dreams','Vậy nên, hãy hy vọng và tin tưởng cho một cuộc sống đầy những giấc mơ tuyệt vời','00:14:42.920','00:14:47.780','english-fairy-tales-23'),
 
-	/* (UUID(),'english-fairy-tales-24','Little Goldina','Cô bé Goldina nhỏ bé','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_024.mp3',NULL,'00:00:04.000','00:14:47.780','english-fairy-tales','NO',24) */
+	/* (UUID(),'english-fairy-tales-24','Little Goldina','Cô bé Goldina nhỏ bé','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_024.mp3',NULL,'00:00:04.000','00:14:47.780','english-fairy-tales',0,0,24) */
 	('Little Goldina','Cô bé Goldina nhỏ bé','00:00:04.000','00:00:07.390','english-fairy-tales-24'),
 	('Once upon a time, in a distant land, beyond towering mountains, lived a king and queen','Ngày xửa ngày xưa, ở một vùng đất xa xôi, bên kia những ngọn núi cao, có một vị vua và hoàng hậu sinh sống','00:00:07.390','00:00:14.050','english-fairy-tales-24'),
 	('They amassed wealth beyond imagination, their riches overflowed like a golden river','Họ tích lũy tài sản vượt ngoài sức tưởng tượng, của cải tràn ngập như một dòng sông vàng','00:00:14.550','00:00:19.870','english-fairy-tales-24'),
@@ -4309,7 +4309,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'english-fairy-tales-24','Little Goldina','Cô bé Goldina nhỏ bé','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_024.mp3',NULL,'00:00:04.000','00:14:47.780','english-fairy-tales','NO',24) */
+	/* (UUID(),'english-fairy-tales-24','Little Goldina','Cô bé Goldina nhỏ bé','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_024.mp3',NULL,'00:00:04.000','00:14:47.780','english-fairy-tales',0,0,24) */
 	('My, my, how you\'ve all changed','Ôi chao, các người thay đổi nhiều thật','00:06:11.020','00:06:13.640','english-fairy-tales-24'),
 	('Changed?','Thay đổi sao?','00:06:14.340','00:06:14.960','english-fairy-tales-24'),
 	('What do you mean?','Ý ngài là gì?','00:06:15.580','00:06:16.820','english-fairy-tales-24'),
@@ -4429,7 +4429,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Yes, my magical prince','Vâng, hoàng tử phép thuật của em','00:14:07.990','00:14:10.590','english-fairy-tales-24'),
 	('And now, we can say, they lived happily ever after','Và giờ đây, chúng ta có thể nói rằng, họ sống hạnh phúc mãi mãi về sau','00:14:11.090','00:14:15.830','english-fairy-tales-24'),
 
-	/* (UUID(),'english-fairy-tales-25','Rose Prince and Thorn Princess','Hoàng Tử Hoa Hồng và Công Chúa Gai','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_025.mp3',NULL,'00:00:04.000','00:14:47.780','english-fairy-tales','NO',25) */
+	/* (UUID(),'english-fairy-tales-25','Rose Prince and Thorn Princess','Hoàng Tử Hoa Hồng và Công Chúa Gai','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_025.mp3',NULL,'00:00:04.000','00:14:47.780','english-fairy-tales',0,0,25) */
 	('Rose Prince and Thorn Princess','Hoàng Tử Hoa Hồng và Công Chúa Gai','00:00:04.220','00:00:06.420','english-fairy-tales-25'),
 	('Every kingdom has its bling','Mỗi vương quốc đều có thứ lấp lánh riêng của nó','00:00:06.940','00:00:08.880','english-fairy-tales-25'),
 	('Some flash gold','Có nơi lấp lánh vàng','00:00:09.240','00:00:10.300','english-fairy-tales-25'),
@@ -4656,7 +4656,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('It\'s about celebrating differences, being your own hero, and above all, embracing every part of ourselves, our strengths, and our vulnerabilities','Đó là việc kỷ niệm sự khác biệt, trở thành anh hùng của chính mình, và trên hết là chấp nhận mọi phần của bản thân, cả sức mạnh và sự dễ bị tổn thương của chúng ta','00:12:16.350','00:12:26.010','english-fairy-tales-25'),
 	('Because in life, if you want the flowers, you have to accept the thorns','Bởi vì trong cuộc sống, nếu bạn muốn có những bông hoa, bạn phải chấp nhận những chiếc gai','00:12:26.750','00:12:31.350','english-fairy-tales-25'),
 
-	/* (UUID(),'english-fairy-tales-26','The Lazy Boy','Cậu bé lười biếng','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_026.mp3',NULL,'00:00:05.580','00:11:28.690','english-fairy-tales','NO',26) */
+	/* (UUID(),'english-fairy-tales-26','The Lazy Boy','Cậu bé lười biếng','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_026.mp3',NULL,'00:00:05.580','00:11:28.690','english-fairy-tales',0,0,26) */
 	('The Lazy Boy','Cậu bé lười biếng','00:00:05.580','00:00:15.160','english-fairy-tales-26'),
 	('Meet Joe and Willow, a lovely couple with a lovely home','Gặp gỡ Joe và Willow, một cặp đôi đáng yêu với một ngôi nhà xinh xắn','00:00:05.580','00:00:15.160','english-fairy-tales-26'),
 	('Joe and Willow loved each other more than anything else','Joe và Willow yêu nhau hơn bất cứ điều gì khác','00:00:15.820','00:00:18.680','english-fairy-tales-26'),
@@ -4844,7 +4844,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He soon got a job and was respected by his friends','Cậu ấy nhanh chóng tìm được một công việc và được bạn bè tôn trọng','00:11:19.010','00:11:22.270','english-fairy-tales-26'),
 	('Jaden was successful and rich, but he never forgot his friend Clive and the weeds in the garden','Jaden đã thành công và giàu có, nhưng cậu không bao giờ quên người bạn Clive và những cỏ dại trong vườn','00:11:23.070','00:11:28.690','english-fairy-tales-26'),
 
-	/* (UUID(),'english-fairy-tales-27','Whispers of Courage','Lời thì thầm của lòng dũng cảm','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_027.mp3',NULL,'00:00:04.000','00:14:22.460','english-fairy-tales','NO',27) */
+	/* (UUID(),'english-fairy-tales-27','Whispers of Courage','Lời thì thầm của lòng dũng cảm','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_027.mp3',NULL,'00:00:04.000','00:14:22.460','english-fairy-tales',0,0,27) */
 	('Whispers of Courage','Lời thì thầm của lòng dũng cảm','00:00:04.540','00:00:10.640','english-fairy-tales-27'),
 	('Once upon a time, in the enchanting kingdom of Deloria, lived a young and timid king named Alex','Ngày xửa ngày xưa, tại vương quốc huyền bí Deloria, có một vị vua trẻ và nhút nhát tên là Alex','00:00:04.540','00:00:14.160','english-fairy-tales-27'),
 	('His love for his people was as vast as the ocean, but his timid nature allowed disloyalty to flourish','Tình yêu của ngài dành cho dân chúng bao la như đại dương, nhưng tính nhút nhát của ngài đã để sự bất trung phát triển','00:00:14.600','00:00:22.140','english-fairy-tales-27'),
@@ -5125,7 +5125,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He evolved from a shy king to a confident leader','Anh đã phát triển từ một vị vua nhút nhát thành một nhà lãnh đạo tự tin','00:14:09.780','00:14:13.340','english-fairy-tales-27'),
 	('His rule shaped Eloria into a prosperous kingdom, showing that courage and honesty prevail, even in the face of manipulation','Sự cai trị của anh đã hình thành Eloria thành một vương quốc thịnh vượng, cho thấy rằng lòng dũng cảm và sự trung thực sẽ chiến thắng, ngay cả trong đối mặt với sự thao túng','00:14:14.380','00:14:22.460','english-fairy-tales-27'),
 
-	/* (UUID(),'english-fairy-tales-28','Rich Princess and Broke Princess','Công Chúa Giàu và Công Chúa Nghèo','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_028.mp3',NULL,'00:00:03.500','00:15:14.260','english-fairy-tales','NO',28) */
+	/* (UUID(),'english-fairy-tales-28','Rich Princess and Broke Princess','Công Chúa Giàu và Công Chúa Nghèo','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_028.mp3',NULL,'00:00:03.500','00:15:14.260','english-fairy-tales',0,0,28) */
 	('Rich Princess and Broke Princess','Công Chúa Giàu và Công Chúa Nghèo','00:00:03.500','00:00:10.080','english-fairy-tales-28'),
 	('Once upon a starry night, the sleepy kingdom of Everdawn was bathed in the moon\'s soft glow','Vào một đêm đầy sao, vương quốc ngủ say Everdawn được tắm trong ánh sáng dịu dàng của mặt trăng','00:00:03.500','00:00:13.620','english-fairy-tales-28'),
 	('That night, in the neighboring castles, two lovely princesses were born, and the moon, in all her kindness, had saved her brightest beams for the little royal cousins','Đêm đó, trong các lâu đài lân cận, hai công chúa xinh đẹp đã ra đời, và mặt trăng, trong tất cả lòng tốt của mình, đã dành những tia sáng rực rỡ nhất cho hai cô công chúa nhỏ','00:00:14.340','00:00:25.720','english-fairy-tales-28'),
@@ -5322,7 +5322,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'english-fairy-tales-28','Rich Princess and Broke Princess','Công Chúa Giàu và Công Chúa Nghèo','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_028.mp3',NULL,'00:00:03.500','00:15:14.260','english-fairy-tales','NO',28) */
+	/* (UUID(),'english-fairy-tales-28','Rich Princess and Broke Princess','Công Chúa Giàu và Công Chúa Nghèo','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_028.mp3',NULL,'00:00:03.500','00:15:14.260','english-fairy-tales',0,0,28) */
 	('There are ways for glow to prosper, and I need to see it immediately','Có những cách để ánh sáng phát triển, và tôi cần phải thấy điều đó ngay lập tức','00:12:14.000','00:12:17.840','english-fairy-tales-28'),
 	('Please, please','Xin hãy, xin hãy','00:12:17.840','00:12:20.320','english-fairy-tales-28'),
 	('We wish to return to our own bodies','Chúng tôi mong muốn trở về cơ thể của mình','00:12:21.120','00:12:24.380','english-fairy-tales-28'),
@@ -5367,7 +5367,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The girls had understood that true richness lies not in material wealth, but in the wealth of the heart and the bonds we forge with others','Các cô gái đã hiểu rằng sự giàu có thật sự không nằm ở của cải vật chất, mà ở sự giàu có của trái tim và những mối liên kết mà chúng ta tạo dựng với người khác','00:15:01.640','00:15:10.100','english-fairy-tales-28'),
 	('Only then can we truly flourish','Chỉ khi đó chúng ta mới thực sự phát triển','00:15:11.300','00:15:14.260','english-fairy-tales-28'),
 
-	/* (UUID(),'english-fairy-tales-29','The Cloak of Wishes','Chiếc áo choàng của những điều ước','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_029.mp3',NULL,'00:00:04.150','00:14:18.810','english-fairy-tales','NO',29) */
+	/* (UUID(),'english-fairy-tales-29','The Cloak of Wishes','Chiếc áo choàng của những điều ước','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_029.mp3',NULL,'00:00:04.150','00:14:18.810','english-fairy-tales',0,0,29) */
 	('The Cloak of Wishes','Chiếc áo choàng của những điều ước','00:00:04.150','00:00:14.020','english-fairy-tales-29'),
 	('Give this magical cloak to the first person you see sad and miserable','Hãy trao chiếc áo choàng ma thuật này cho người đầu tiên bạn thấy buồn bã và khổ sở','00:00:04.150','00:00:15.760','english-fairy-tales-29'),
 	('So, the fairy flew all over the world and suddenly, just outside the city of Noland, she met Fluff','Vì vậy, nàng tiên bay khắp thế giới và bất ngờ, ngay bên ngoài thành phố Noland, nàng gặp Fluff','00:00:16.520','00:00:23.580','english-fairy-tales-29'),
@@ -5593,7 +5593,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('If all we ever wanted was wisdom, so many troubles in this world would be over','Nếu tất cả những gì chúng ta từng muốn là trí tuệ, thì rất nhiều rắc rối trong thế giới này sẽ được giải quyết','00:14:12.170','00:14:17.470','english-fairy-tales-29'),
 	('Wouldn\'t they?','Phải không?','00:14:18.010','00:14:18.810','english-fairy-tales-29'),
 
-	/* (UUID(),'english-fairy-tales-30','Pollyanna','Pollyanna','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_030.mp3',NULL,'00:00:05.770','00:13:21.830','english-fairy-tales','NO',30) */
+	/* (UUID(),'english-fairy-tales-30','Pollyanna','Pollyanna','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_030.mp3',NULL,'00:00:05.770','00:13:21.830','english-fairy-tales',0,0,30) */
 	('Pollyanna','Pollyanna','00:00:05.770','00:00:11.670','english-fairy-tales-30'),
 	('Our story begins in a quaint little country village','Câu chuyện của chúng ta bắt đầu ở một ngôi làng nhỏ xinh đẹp','00:00:05.770','00:00:11.670','english-fairy-tales-30'),
 	('The people of the village work hard to provide for their families, but none of them seem to take notice of the small orphanage and the children inside','Người dân trong làng làm việc chăm chỉ để nuôi sống gia đình, nhưng không ai để ý đến trại mồ côi nhỏ và những đứa trẻ bên trong','00:00:12.290','00:00:20.190','english-fairy-tales-30'),
@@ -5790,7 +5790,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('If I hadn\'t lost my ability to walk, I would never have understood how much of a blessing it is to be able to move around on your own','Nếu tôi không mất khả năng đi lại, tôi sẽ không bao giờ hiểu được rằng việc có thể tự di chuyển là một điều may mắn như thế nào','00:13:08.790','00:13:17.430','english-fairy-tales-30'),
 	('With sincere love, your daughter, Pollyanna','Với tình yêu chân thành, con gái của bạn, Pollyanna','00:13:17.790','00:13:21.830','english-fairy-tales-30'),
 
-	/* (UUID(),'english-fairy-tales-31','The royal rock star','Ngôi sao nhạc rock hoàng gia','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_031.mp3',NULL,'00:00:04.990','00:15:05.720','english-fairy-tales','NO',31) */
+	/* (UUID(),'english-fairy-tales-31','The royal rock star','Ngôi sao nhạc rock hoàng gia','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_031.mp3',NULL,'00:00:04.990','00:15:05.720','english-fairy-tales',0,0,31) */
 	('The Royal Rock Star','Ngôi sao nhạc rock hoàng gia','00:00:04.990','00:00:11.650','english-fairy-tales-31'),
 	('This is a story of a princess who was born to the king and queen of Muzak, a kingdom alive with celebration','Đây là câu chuyện về một nàng công chúa được sinh ra bởi vua và hoàng hậu của Muzak, một vương quốc đầy niềm vui','00:00:04.990','00:00:15.550','english-fairy-tales-31'),
 	('I present to you our beautiful daughter, Odalin','Ta giới thiệu với các người con gái xinh đẹp của ta, Odalin','00:00:16.410','00:00:20.870','english-fairy-tales-31'),
@@ -6070,7 +6070,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Odalyn\'s mom realized that all she really wanted for her was her happiness, and Odalyn was definitely very happy to be accepted for who she was','Mẹ của Odalyn nhận ra rằng điều duy nhất bà muốn cho cô là hạnh phúc, và Odalyn chắc chắn rất hạnh phúc khi được chấp nhận vì chính con người của cô','00:14:53.580','00:15:04.660','english-fairy-tales-31'),
 	('Shazna','Shazna','00:15:05.600','00:15:05.720','english-fairy-tales-31'),
 
-	/* (UUID(),'english-fairy-tales-32','The secret princess','Công chúa bí mật','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_032.mp3',NULL,'00:00:04.500','00:11:23.360','english-fairy-tales','NO',32) */
+	/* (UUID(),'english-fairy-tales-32','The secret princess','Công chúa bí mật','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_032.mp3',NULL,'00:00:04.500','00:11:23.360','english-fairy-tales',0,0,32) */
 	('The Secret Princess','Công chúa bí mật','00:00:04.500','00:00:12.320','english-fairy-tales-32'),
 	('We need to leave the royal palace','Chúng ta cần rời khỏi hoàng cung','00:00:04.500','00:00:12.320','english-fairy-tales-32'),
 	('I cannot deal with this discrimination','Tôi không thể chịu đựng sự phân biệt này nữa','00:00:12.900','00:00:14.780','english-fairy-tales-32'),
@@ -6276,7 +6276,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'english-fairy-tales-33','A little princess','Cô công chúa nhỏ','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_033.mp3',NULL,'00:00:05.640','00:13:21.000','english-fairy-tales','NO',33) */
+	/* (UUID(),'english-fairy-tales-33','A little princess','Cô công chúa nhỏ','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_033.mp3',NULL,'00:00:05.640','00:13:21.000','english-fairy-tales',0,0,33) */
 	('A Little Princess','Công Chúa Nhỏ','00:00:05.640','00:00:15.560','english-fairy-tales-33'),
 	('But Papa, we just got back to London','Nhưng Papa, chúng ta vừa trở về London mà','00:00:05.640','00:00:16.560','english-fairy-tales-33'),
 	('Darling, would you rather have me stay with you when our motherland needs us?','Con yêu, con muốn ta ở lại với con khi quê hương đang cần ta sao?','00:00:18.320','00:00:23.000','english-fairy-tales-33'),
@@ -6498,7 +6498,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('But coming to think of it, Sarah had never really let herself become sad and helpless, had she?','Nhưng nghĩ kỹ lại, Sarah chưa bao giờ để bản thân thực sự buồn bã và bất lực, đúng không?','00:13:04.420','00:13:10.700','english-fairy-tales-33'),
 	('All because she used the true human spirit that knows how to be brave and how to be kind all at the same time','Tất cả vì cô đã sử dụng tinh thần nhân loại đích thực, biết cách dũng cảm và tử tế cùng một lúc','00:13:11.740','00:13:21.000','english-fairy-tales-33'),
 
-	/* (UUID(),'english-fairy-tales-34','Vampire Royalty','Hoàng Gia Ma Cà Rồng','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_034.mp3',NULL,'00:00:06.370','00:13:54.790','english-fairy-tales','NO',34) */
+	/* (UUID(),'english-fairy-tales-34','Vampire Royalty','Hoàng Gia Ma Cà Rồng','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_034.mp3',NULL,'00:00:06.370','00:13:54.790','english-fairy-tales',0,0,34) */
 	('Vampire Royalty','Hoàng Gia Ma Cà Rồng','00:00:06.370','00:00:13.140','english-fairy-tales-34'),
 	('A long time ago, in the kingdom of Lunaville, lived a beautiful princess named Selina','Ngày xửa ngày xưa, tại vương quốc Lunaville, có một công chúa xinh đẹp tên là Selina','00:00:06.370','00:00:14.820','english-fairy-tales-34'),
 	('She was born to a very generous king and queen','Cô được sinh ra bởi một vị vua và hoàng hậu rất hào phóng','00:00:15.239','00:00:18.380','english-fairy-tales-34'),
@@ -6744,7 +6744,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('All\'s well that ends well, right?','Mọi chuyện kết thúc tốt đẹp, phải không?','00:13:48.130','00:13:50.330','english-fairy-tales-34'),
 	('But hey, it\'s just the beginning to a fantastic journey','Nhưng này, đó chỉ là khởi đầu cho một hành trình tuyệt vời','00:13:50.770','00:13:54.790','english-fairy-tales-34'),
 
-	/* (UUID(),'english-fairy-tales-35','I believe in myself','Tôi tin vào bản thân','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_035.mp3',NULL,'00:00:05.240','00:14:34.300','english-fairy-tales','NO',35) */
+	/* (UUID(),'english-fairy-tales-35','I believe in myself','Tôi tin vào bản thân','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_035.mp3',NULL,'00:00:05.240','00:14:34.300','english-fairy-tales',0,0,35) */
 	('I believe in myself','Tôi tin vào bản thân','00:00:05.240','00:00:07.340','english-fairy-tales-35'),
 	('Once upon a time, in the cozy village of Starhaven, there lived a young woman by the name of Celeste','Ngày xửa ngày xưa, trong ngôi làng ấm cúng Starhaven, có một cô gái trẻ tên là Celeste','00:00:08.300','00:00:14.900','english-fairy-tales-35'),
 	('She possessed long, lustrous hair that trailed after her','Cô sở hữu mái tóc dài, óng ả kéo dài phía sau','00:00:15.480','00:00:19.600','english-fairy-tales-35'),
@@ -7004,7 +7004,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Celeste, too, had grown from the experience','Celeste, cũng đã trưởng thành từ trải nghiệm đó','00:14:22.660','00:14:25.280','english-fairy-tales-35'),
 	('All she had needed to do was believe in herself, knowing love and kindness are the only powers strong enough to overcome anything','Tất cả những gì cô ấy cần làm là tin vào bản thân mình, biết rằng tình yêu và lòng tốt là những sức mạnh duy nhất đủ mạnh để vượt qua mọi thứ','00:14:25.720','00:14:34.300','english-fairy-tales-35'),
 
-	/* (UUID(),'english-fairy-tales-36','Finding Ethan','Tìm Ethan','00:00:04.810',NULL,'null','00:15:49.700','english-fairy-tales','NO',36) */
+	/* (UUID(),'english-fairy-tales-36','Finding Ethan','Tìm Ethan','00:00:04.810',NULL,'null','00:15:49.700','english-fairy-tales',0,0,36) */
 	('Finding Ethan','Tìm Ethan','00:00:04.810','00:00:11.050','english-fairy-tales-36'),
 	('Far away in the kingdom of Syberra, lived a princess named Mel and her brother, Prince Ethan','Xa xôi trong vương quốc Syberra, có một nàng công chúa tên Mel và anh trai của cô, Hoàng tử Ethan','00:00:04.810','00:00:12.510','english-fairy-tales-36'),
 	('While their parents were ruling another region, Ethan and Mel were responsible for the computerized kingdom, trusting their youth and tech knowledge','Trong khi cha mẹ họ cai trị một vùng đất khác, Ethan và Mel chịu trách nhiệm về vương quốc máy tính, dựa vào tuổi trẻ và kiến thức công nghệ của họ','00:00:13.050','00:00:21.710','english-fairy-tales-36'),
@@ -7287,7 +7287,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'english-fairy-tales-36','Finding Ethan','Tìm Ethan','00:00:04.810',NULL,'null','00:15:49.700','english-fairy-tales','NO',36) */
+	/* (UUID(),'english-fairy-tales-36','Finding Ethan','Tìm Ethan','00:00:04.810',NULL,'null','00:15:49.700','english-fairy-tales',0,0,36) */
 	('The crowd cheered and the rewards were hefty','Đám đông reo hò và phần thưởng rất lớn','00:15:02.540','00:15:06.040','english-fairy-tales-36'),
 	('But most importantly, this helped them get back to the real world','Nhưng quan trọng nhất, điều này đã giúp họ trở lại thế giới thực','00:15:06.040','00:15:11.100','english-fairy-tales-36'),
 	('Bye, Timmy','Tạm biệt, Timmy','00:15:11.320','00:15:11.900','english-fairy-tales-36'),
@@ -7304,7 +7304,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Prince Ethan helped the people of the kingdom along with Mel, did his assignments and studied hard','Hoàng tử Ethan giúp đỡ người dân vương quốc cùng với Mel, làm bài tập và học hành chăm chỉ','00:15:39.320','00:15:45.160','english-fairy-tales-36'),
 	('In the evening, the two played video games and met Timmy as well','Vào buổi tối, cả hai chơi trò chơi điện tử và gặp Timmy','00:15:45.680','00:15:49.700','english-fairy-tales-36'),
 
-	/* (UUID(),'english-fairy-tales-37','The Jeweled Princess','Công chúa Đá Quý','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_037.mp3',NULL,'00:00:04.490','00:14:01.530','english-fairy-tales','NO',37) */
+	/* (UUID(),'english-fairy-tales-37','The Jeweled Princess','Công chúa Đá Quý','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_037.mp3',NULL,'00:00:04.490','00:14:01.530','english-fairy-tales',0,0,37) */
 	('The Jeweled Princess','Công chúa Đá Quý','00:00:04.490','00:00:10.690','english-fairy-tales-37'),
 	('Once upon a time, in the enchanted kingdom just beyond the horizon, where the boundaries of sky and earth melded into a mystical haze, lived a princess like no other','Ngày xửa ngày xưa, trong vương quốc thần tiên ở phía xa chân trời, nơi ranh giới giữa bầu trời và mặt đất hòa quyện thành một màn sương huyền bí, sống một nàng công chúa đặc biệt','00:00:04.490','00:00:17.890','english-fairy-tales-37'),
 	('The Jeweled Princess','Công chúa Đá Quý','00:00:18.590','00:00:19.990','english-fairy-tales-37'),
@@ -7491,7 +7491,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And eventually, the prince indeed found the princess','Và cuối cùng, hoàng tử thật sự đã tìm thấy công chúa','00:13:53.290','00:13:56.690','english-fairy-tales-37'),
 	('And now we can say they lived happily ever after','Và bây giờ chúng ta có thể nói họ đã sống hạnh phúc mãi mãi','00:13:57.350','00:14:01.530','english-fairy-tales-37'),
 
-	/* (UUID(),'english-fairy-tales-38','Twelfth Night','Đêm Mười Hai','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_038.mp3',NULL,'00:00:06.090','00:15:16.700','english-fairy-tales','NO',38) */
+	/* (UUID(),'english-fairy-tales-38','Twelfth Night','Đêm Mười Hai','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_038.mp3',NULL,'00:00:06.090','00:15:16.700','english-fairy-tales',0,0,38) */
 	('Twelfth Night','Đêm Mười Hai','00:00:06.090','00:00:12.770','english-fairy-tales-38'),
 	('Once upon a sunny day, under the cerulean sky, a ship sailed majestically across the luminous ocean carrying royal twins, Violet and Sebastian','Vào một ngày nắng đẹp, dưới bầu trời xanh ngọc, một con tàu lướt đi một cách uy nghiêm trên đại dương sáng rực, mang theo cặp song sinh hoàng gia, Violet và Sebastian','00:00:06.090','00:00:18.630','english-fairy-tales-38'),
 	('They were returning from a vacation, feeling fresh and happy','Họ đang trở về sau kỳ nghỉ, cảm thấy thoải mái và vui vẻ','00:00:19.390','00:00:22.870','english-fairy-tales-38'),
@@ -7777,7 +7777,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Indeed it was','Quả thật là vậy','00:15:06.600','00:15:07.980','english-fairy-tales-38'),
 	('Sometimes bad situations bring us closer to what we want, but only our truest selves will lead us to what we need','Đôi khi những tình huống xấu giúp ta gần hơn với những gì ta muốn, nhưng chỉ có chính bản thân thật sự của ta mới dẫn dắt ta đến những gì ta cần','00:15:08.640','00:15:16.700','english-fairy-tales-38'),
 
-	/* (UUID(),'english-fairy-tales-39','The Swapped Princes','Những Hoàng Tử Hoán Đổi','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_039.mp3',NULL,'00:00:04.490','00:14:17.580','english-fairy-tales','NO',39) */
+	/* (UUID(),'english-fairy-tales-39','The Swapped Princes','Những Hoàng Tử Hoán Đổi','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_039.mp3',NULL,'00:00:04.490','00:14:17.580','english-fairy-tales',0,0,39) */
 	('The Swapped Princess','Công Chúa Hoán Đổi','00:00:04.490','00:00:17.880','english-fairy-tales-39'),
 	('Princess Amanda, her highness, the queen asked me to bring you these','Công chúa Amanda, hoàng hậu đã bảo tôi mang những thứ này cho ngài','00:00:17.880','00:00:22.340','english-fairy-tales-39'),
 	('More jewels','Thêm nhiều trang sức','00:00:23.300','00:00:24.280','english-fairy-tales-39'),
@@ -8035,7 +8035,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Complete it','Hoàn tất đi','00:14:01.830','00:14:02.610','english-fairy-tales-39'),
 	('So the two friends went back to their original places, each feeling a lot better about her own life now','Vậy là hai người bạn đã quay lại chỗ cũ, mỗi người đều cảm thấy tốt hơn rất nhiều về cuộc sống của mình bây giờ','00:14:03.090','00:14:17.580','english-fairy-tales-39'),
 
-	/* (UUID(),'english-fairy-tales-40','The Golden Key','Chìa khóa vàng','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_040.mp3',NULL,'00:00:05.830','00:12:30.920','english-fairy-tales','NO',40) */
+	/* (UUID(),'english-fairy-tales-40','The Golden Key','Chìa khóa vàng','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_040.mp3',NULL,'00:00:05.830','00:12:30.920','english-fairy-tales',0,0,40) */
 	('The Golden Key','Chìa khóa vàng','00:00:05.830','00:00:11.110','english-fairy-tales-40'),
 	('And what did the squirrel say?','Vậy con sóc đã nói gì?','00:00:05.830','00:00:11.110','english-fairy-tales-40'),
 	('Wow, are you on to rhymes again?','Wow, bạn lại bắt đầu nói vần nữa à?','00:00:20.300','00:00:23.420','english-fairy-tales-40'),
@@ -8221,7 +8221,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'english-fairy-tales-41','Coppelia','Coppelia','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_041.mp3',NULL,'00:00:06.460','00:15:07.690','english-fairy-tales','NO',41) */
+	/* (UUID(),'english-fairy-tales-41','Coppelia','Coppelia','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_041.mp3',NULL,'00:00:06.460','00:15:07.690','english-fairy-tales',0,0,41) */
 	('Coppelia','Coppelia','00:00:06.460','00:00:13.900','english-fairy-tales-41'),
 	('Once upon a time, in a beautiful town of Balletville, there lived a handsome young boy named Franz','Ngày xưa, tại một thị trấn đẹp tên Balletville, có một chàng trai trẻ đẹp tên Franz','00:00:06.460','00:00:15.580','english-fairy-tales-41'),
 	('Franz was a ballet dancer, and had a beautiful partner and best friend named Swan','Franz là một vũ công ballet, và có một người bạn nhảy xinh đẹp và thân thiết tên Swan','00:00:16.120','00:00:23.540','english-fairy-tales-41'),
@@ -8493,7 +8493,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And for Swan, she was in love with Jacob','Và đối với Swan, cô ấy đang yêu Jacob','00:15:00.770','00:15:03.350','english-fairy-tales-41'),
 	('Coppelia and Franz then lived happily ever after','Coppelia và Franz sau đó sống hạnh phúc mãi mãi','00:15:05.050','00:15:07.690','english-fairy-tales-41'),
 
-	/* (UUID(),'english-fairy-tales-42','Super Chef Princess','Công chúa Siêu Đầu Bếp','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_042.mp3',NULL,'00:00:04.380','00:13:44.570','english-fairy-tales','NO',42) */
+	/* (UUID(),'english-fairy-tales-42','Super Chef Princess','Công chúa Siêu Đầu Bếp','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_042.mp3',NULL,'00:00:04.380','00:13:44.570','english-fairy-tales',0,0,42) */
 	('Super Chef Princess','Công chúa Siêu Đầu Bếp','00:00:04.380','00:00:10.060','english-fairy-tales-42'),
 	('In a forgotten era, within the grandeur of Bellefleur, there was a princess who answered to the name of Sarah','Vào một thời kỳ xa xôi, trong sự hoành tráng của Bellefleur, có một nàng công chúa tên là Sarah','00:00:04.380','00:00:17.700','english-fairy-tales-42'),
 	('She was a bright little thing, loved and adored by everyone in the palace','Cô ấy là một cô gái sáng dạ, được mọi người trong cung điện yêu mến và ngưỡng mộ','00:00:18.380','00:00:22.900','english-fairy-tales-42'),
@@ -8762,7 +8762,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And so Sarah\'s name spread far and wide, and Chef Crestwater\'s reputation began to grow again, too','Và thế là tên tuổi của Sarah lan rộng khắp nơi, và danh tiếng của đầu bếp Crestwater cũng bắt đầu phát triển trở lại','00:13:25.080','00:13:32.040','english-fairy-tales-42'),
 	('It just shows that with determination, bravery, and a little bit of culinary magic, anything is possible','Điều đó chỉ ra rằng với sự quyết tâm, dũng cảm và một chút ma thuật ẩm thực, mọi thứ đều có thể xảy ra','00:13:32.820','00:13:44.570','english-fairy-tales-42'),
 
-	/* (UUID(),'english-fairy-tales-43','The Courtyard Princess','Công chúa trong sân','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_043.mp3',NULL,'00:00:05.140','00:15:17.460','english-fairy-tales','NO',43) */
+	/* (UUID(),'english-fairy-tales-43','The Courtyard Princess','Công chúa trong sân','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_043.mp3',NULL,'00:00:05.140','00:15:17.460','english-fairy-tales',0,0,43) */
 	('The Courtyard Princess','Công chúa trong sân','00:00:05.140','00:00:26.920','english-fairy-tales-43'),
 	('Princess Annis','Công chúa Annis','00:00:26.920','00:00:27.820','english-fairy-tales-43'),
 	('Breakfast','Bữa sáng','00:00:28.080','00:00:28.680','english-fairy-tales-43'),
@@ -9025,7 +9025,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Will you be my friend?','Bạn sẽ làm bạn với tôi chứ?','00:15:14.880','00:15:16.420','english-fairy-tales-43'),
 	('Absolutely','Chắc chắn rồi','00:15:16.820','00:15:17.460','english-fairy-tales-43'),
 
-	/* (UUID(),'english-fairy-tales-44','Hamlet','Hamlet','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_044.mp3',NULL,'00:00:05.400','00:12:57.090','english-fairy-tales','NO',44) */
+	/* (UUID(),'english-fairy-tales-44','Hamlet','Hamlet','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_044.mp3',NULL,'00:00:05.400','00:12:57.090','english-fairy-tales',0,0,44) */
 	('Hamlet','Hamlet','00:00:05.400','00:00:06.120','english-fairy-tales-44'),
 	('Once upon a time, far upon a steep cliff overlooking the glorious Green Sea, stood a magnificent palace','Ngày xửa ngày xưa, xa xa trên một vách đá dốc nhìn ra Biển Xanh huy hoàng, có một cung điện tráng lệ','00:00:06.860','00:00:14.600','english-fairy-tales-44'),
 	('It was a college where young heirs, both princes and princesses from distant lands, came to learn the skills of ruling as future kings and queens','Nơi đó là một trường học nơi các hoàng tử, công chúa trẻ tuổi từ những vùng đất xa xôi đến để học các kỹ năng cai trị như những vị vua, hoàng hậu tương lai','00:00:15.480','00:00:24.600','english-fairy-tales-44'),
@@ -9232,7 +9232,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'english-fairy-tales-44','Hamlet','Hamlet','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_044.mp3',NULL,'00:00:05.400','00:12:57.090','english-fairy-tales','NO',44) */
+	/* (UUID(),'english-fairy-tales-44','Hamlet','Hamlet','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_044.mp3',NULL,'00:00:05.400','00:12:57.090','english-fairy-tales',0,0,44) */
 	('I\'m grateful he built it, because I\'m going to rule it','Tôi biết ơn vì ông ấy đã xây dựng nó, vì tôi sẽ cai trị nó','00:09:18.850','00:09:22.710','english-fairy-tales-44'),
 	('Take him away','Đưa anh ta đi','00:09:23.670','00:09:24.450','english-fairy-tales-44'),
 	('In a few days, I\'ll require him for a very special appointment','Trong vài ngày tới, tôi sẽ cần anh ta cho một cuộc hẹn rất đặc biệt','00:09:24.710','00:09:28.770','english-fairy-tales-44'),
@@ -9313,7 +9313,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Now it\'s really all right','Giờ thì mọi thứ thật sự ổn rồi','00:12:53.770','00:12:55.750','english-fairy-tales-44'),
 	('It sure was','Đúng vậy','00:12:56.010','00:12:57.090','english-fairy-tales-44'),
 
-	/* (UUID(),'english-fairy-tales-45','Princess Lumina','Công chúa Lumina','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_045.mp3',NULL,'00:00:04.810','00:14:56.480','english-fairy-tales','NO',45) */
+	/* (UUID(),'english-fairy-tales-45','Princess Lumina','Công chúa Lumina','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_045.mp3',NULL,'00:00:04.810','00:14:56.480','english-fairy-tales',0,0,45) */
 	('Princess Lumina','Công chúa Lumina','00:00:04.810','00:00:12.010','english-fairy-tales-45'),
 	('In a distant kingdom, shaded by the sun-kissed mountains of Lumiere, and protected by the dense woods of the Forgotten Ages, sits the Kingdom of Light','Tại một vương quốc xa xôi, được che phủ bởi những ngọn núi Lumiere ngập nắng và được bảo vệ bởi khu rừng rậm của Thời đại Bị lãng quên, có Vương quốc Ánh Sáng','00:00:04.810','00:00:18.350','english-fairy-tales-45'),
 	('A day, seemingly like any other, brought about the news of a new beauty for the kingdom, the birth of Princess Lumina','Một ngày tưởng chừng như mọi ngày khác, nhưng lại mang đến tin vui về vẻ đẹp mới cho vương quốc, sự ra đời của Công chúa Lumina','00:00:19.630','00:00:27.750','english-fairy-tales-45'),
@@ -9539,7 +9539,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('We love you so much, Lumina','Chúng tôi yêu bạn rất nhiều, Lumina','00:14:53.160','00:14:55.020','english-fairy-tales-45'),
 	('I love you, too','Con cũng yêu các bạn','00:14:55.500','00:14:56.480','english-fairy-tales-45'),
 
-	/* (UUID(),'english-fairy-tales-46','The Beggar Prince','Hoàng Tử Lang Thang','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_046.mp3',NULL,'00:00:04.640','00:13:18.360','english-fairy-tales','NO',46) */
+	/* (UUID(),'english-fairy-tales-46','The Beggar Prince','Hoàng Tử Lang Thang','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_046.mp3',NULL,'00:00:04.640','00:13:18.360','english-fairy-tales',0,0,46) */
 	('The Beggar Prince','Hoàng Tử Lang Thang','00:00:04.640','00:00:11.080','english-fairy-tales-46'),
 	('Once upon a time, in a prosperous and harmonious kingdom, there lived a kind and generous king','Ngày xưa, trong một vương quốc thịnh vượng và hòa thuận, có một vị vua tốt bụng và hào phóng','00:00:04.640','00:00:13.720','english-fairy-tales-46'),
 	('But our story is not about him','Nhưng câu chuyện của chúng ta không phải về ông ấy','00:00:14.220','00:00:16.100','english-fairy-tales-46'),
@@ -9746,7 +9746,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The people loved him with all their hearts','Nhân dân yêu mến anh ấy bằng cả trái tim','00:13:10.460','00:13:12.700','english-fairy-tales-46'),
 	('Years later, when he became the king, he was the best ruler the kingdom had ever seen','Nhiều năm sau, khi anh trở thành vua, anh là vị vua tốt nhất mà vương quốc từng có','00:13:13.180','00:13:18.360','english-fairy-tales-46'),
 
-	/* (UUID(),'english-fairy-tales-47','Wings of hope','Đôi cánh hy vọng','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_047.mp3',NULL,'00:00:06.010','00:15:42.840','english-fairy-tales','NO',47) */
+	/* (UUID(),'english-fairy-tales-47','Wings of hope','Đôi cánh hy vọng','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_047.mp3',NULL,'00:00:06.010','00:15:42.840','english-fairy-tales',0,0,47) */
 	('Wings of Hope','Đôi cánh hy vọng','00:00:06.010','00:00:13.930','english-fairy-tales-47'),
 	('Deep inside a beautiful forest, a husband eagerly approached his dear wife','Sâu trong khu rừng xinh đẹp, một người chồng háo hức tiến đến bên người vợ thân yêu','00:00:06.010','00:00:14.690','english-fairy-tales-47'),
 	('Are they hatched yet?','Chúng đã nở chưa?','00:00:15.610','00:00:17.410','english-fairy-tales-47'),
@@ -9991,7 +9991,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Not bad at all','Không tệ chút nào','00:15:33.890','00:15:35.490','english-fairy-tales-47'),
 	('What we do have is much, much bigger than what we don\'t','Những gì chúng ta có luôn lớn lao hơn rất nhiều so với những gì chúng ta không có','00:15:38.560','00:15:42.840','english-fairy-tales-47'),
 
-	/* (UUID(),'english-fairy-tales-48','Princess Kainiska','Công chúa Kainiska','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_048.mp3',NULL,'00:00:05.260','00:13:07.420','english-fairy-tales','NO',48) */
+	/* (UUID(),'english-fairy-tales-48','Princess Kainiska','Công chúa Kainiska','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_048.mp3',NULL,'00:00:05.260','00:13:07.420','english-fairy-tales',0,0,48) */
 	('Princess Kainiska','Công chúa Kainiska','00:00:05.260','00:00:12.620','english-fairy-tales-48'),
 	('A long time ago in Greece, lived an extraordinary and audacious young woman named Kainiska','Ngày xưa ở Hy Lạp, có một cô gái trẻ xuất sắc và táo bạo tên là Kainiska','00:00:05.260','00:00:15.520','english-fairy-tales-48'),
 	('She was born in a family of great wealth and prestige in the city of Sparta, which was renowned for its fierce warriors and equestrian traditions','Cô sinh ra trong một gia đình giàu có và uy tín ở thành phố Sparta, nổi tiếng với những chiến binh dũng mãnh và truyền thống cưỡi ngựa','00:00:16.640','00:00:25.240','english-fairy-tales-48'),
@@ -10197,7 +10197,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'english-fairy-tales-49','The flower legend','Huyền thoại về hoa','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_049.mp3',NULL,'00:00:05.900','00:13:18.100','english-fairy-tales','NO',49) */
+	/* (UUID(),'english-fairy-tales-49','The flower legend','Huyền thoại về hoa','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_049.mp3',NULL,'00:00:05.900','00:13:18.100','english-fairy-tales',0,0,49) */
 	('The Flower Legend','Huyền thoại về Hoa','00:00:05.900','00:00:13.620','english-fairy-tales-49'),
 	('This is a legend about Biomy, the great spirit of creation that protected those of the Hunter Valley in Australia','Đây là một huyền thoại về Biomy, linh hồn vĩ đại của sự sáng tạo bảo vệ những người ở Thung lũng Hunter tại Úc','00:00:05.900','00:00:17.180','english-fairy-tales-49'),
 	('Biomy would orchestrate the many other spirits and in turn was respected and adored by the people','Biomy sẽ điều khiển nhiều linh hồn khác và được người dân tôn trọng và yêu mến','00:00:19.100','00:00:25.800','english-fairy-tales-49'),
@@ -10395,7 +10395,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('We all have our own responsibilities to take care of that','Chúng ta đều có trách nhiệm của riêng mình để chăm sóc điều đó','00:13:10.480','00:13:13.440','english-fairy-tales-49'),
 	('Little by little adds up to a whole and beautiful world','Từng chút một sẽ tạo nên một thế giới trọn vẹn và đẹp đẽ','00:13:14.140','00:13:18.100','english-fairy-tales-49'),
 
-	/* (UUID(),'english-fairy-tales-50','The girls and the Puma','Các cô gái và con Puma','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_050.mp3',NULL,'00:00:04.990','00:14:58.050','english-fairy-tales','NO',50) */
+	/* (UUID(),'english-fairy-tales-50','The girls and the Puma','Các cô gái và con Puma','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_050.mp3',NULL,'00:00:04.990','00:14:58.050','english-fairy-tales',0,0,50) */
 	('The Girls and the Puma','Các Cô Gái và Con Puma','00:00:04.990','00:00:14.170','english-fairy-tales-50'),
 	('Deep within a lush, dense forest, nestled a picturesque village that had been home to the revered Oha tribe for generations','Sâu trong một khu rừng rậm rạp, ẩn mình là một ngôi làng xinh đẹp, nơi sinh sống của bộ tộc Oha được kính trọng qua nhiều thế hệ','00:00:04.990','00:00:18.450','english-fairy-tales-50'),
 	('Oh, we\'re a month away from seeing the migration of the birds','Ôi, chúng ta còn một tháng nữa mới thấy sự di cư của những chú chim','00:00:20.130','00:00:24.310','english-fairy-tales-50'),
@@ -10637,7 +10637,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The villagers took care of them very well and fed them delicious food','Những người dân làng chăm sóc họ rất chu đáo và đã cho họ những món ăn ngon','00:14:48.750','00:14:53.410','english-fairy-tales-50'),
 	('The Pumas lived harmoniously with them and happily ever after','Những con Puma sống hòa thuận với họ và sống hạnh phúc mãi mãi về sau','00:14:53.930','00:14:58.050','english-fairy-tales-50'),
 
-	/* (UUID(),'english-fairy-tales-51','Wedding Necklace','Chiếc vòng cưới','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_051.mp3',NULL,'00:00:06.200','00:11:26.300','english-fairy-tales','NO',51) */
+	/* (UUID(),'english-fairy-tales-51','Wedding Necklace','Chiếc vòng cưới','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_051.mp3',NULL,'00:00:06.200','00:11:26.300','english-fairy-tales',0,0,51) */
 	('Once upon a time, in a town called Delarisa, there lived a widow Helga with her daughter Helena','Ngày xửa ngày xưa, ở một thị trấn gọi là Delarisa, có một góa phụ Helga cùng cô con gái Helena','00:00:06.200','00:00:13.900','english-fairy-tales-51'),
 	('They were a wealthy family that lived there for generations and were loved by all the town\'s people','Họ là một gia đình giàu có đã sống ở đó qua nhiều thế hệ và được mọi người trong thị trấn yêu mến','00:00:15.120','00:00:22.100','english-fairy-tales-51'),
 	('Helga loved Helena and would always give her daughter whatever it was she desired, not realizing that Helena was being spoiled','Bà Helga hết mực yêu thương Helena và luôn cho cô bé bất cứ thứ gì cô bé muốn, mà không nhận ra rằng Helena đang dần hư hỏng','00:00:22.400','00:00:32.000','english-fairy-tales-51'),
@@ -10786,7 +10786,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Helena would always tell the story of the emerald necklace to the kids of the town, teaching them the importance of cherishing what you have','Helena luôn kể lại câu chuyện chiếc vòng ngọc lục với lũ trẻ trong thị trấn, dạy chúng về tầm quan trọng của việc trân trọng những gì mình đang có','00:11:10.200','00:11:19.300','english-fairy-tales-51'),
 	('And most importantly, if you are kind and helpful to others, kindness will find a way back to you','Và quan trọng nhất là, nếu chúng ta tử tế và sẵn sàng giúp đỡ người khác, lòng tốt sẽ tìm đường quay lại với chúng ta','00:11:19.400','00:11:26.300','english-fairy-tales-51'),
 
-	/* (UUID(),'english-fairy-tales-52','Hachiko - A Heart Touching Tale','Chú chó Hachiko','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_052',NULL,'null','null','english-fairy-tales','NO',52) */
+	/* (UUID(),'english-fairy-tales-52','Hachiko - A Heart Touching Tale','Chú chó Hachiko','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_052',NULL,'null','null','english-fairy-tales',0,0,52) */
 	('Once upon a time, during the year of 1923, one simple creature that would hold a magnificent legacy was born to Japan amidst the cool season of November','Ngày xửa ngày xưa, trong năm 1923, một sinh vật đơn giản sẽ mang trong mình một di sản tuyệt vời đã ra đời tại Nhật Bản trong mùa thu mát mẻ của tháng 11','00:00:06.110','00:00:19.450','english-fairy-tales-52'),
 	('Somewhere on a quiet farm in Odate, Akita, a sprightly little puppy tried to waddle around, along with his other siblings of the infamous Akita breed','Ở một nơi nào đó trên một trang trại yên tĩnh ở Odate, Akita, một chú cún con nhanh nhẹn cố gắng đi lại, cùng với các anh chị em của nó thuộc giống chó Akita nổi tiếng','00:00:20.730','00:00:32.330','english-fairy-tales-52'),
 	('Oh, kawaii! Anata, we must find good homes for them','Ôi, dễ thương quá! Anata, chúng ta phải tìm những gia đình tốt cho chúng','NULL','NULL','english-fairy-tales-52'),
@@ -10973,7 +10973,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And so, when the winter ended, the tale of his loyalty spread like a flame, tugging at hearts around the world indiscriminately','Và như vậy, khi mùa đông kết thúc, câu chuyện về lòng trung thành của anh lan tỏa như ngọn lửa, kéo dài trái tim mọi người trên khắp thế giới mà không phân biệt','00:14:32.460','00:14:42.400','english-fairy-tales-52'),
 	('In Japan, he is used as a strong example of loyalty and love to each one\'s family, but throughout the world, till today, his story lives in our hearts, teaching us that being faithful to our loved ones is always the right path in life','Tại Nhật Bản, anh được dùng như một ví dụ mạnh mẽ về lòng trung thành và tình yêu dành cho gia đình mỗi người, nhưng trên khắp thế giới, cho đến hôm nay, câu chuyện của anh sống trong trái tim chúng ta, dạy chúng ta rằng trung thành với những người yêu thương luôn là con đường đúng đắn trong cuộc sống','00:14:43.400','00:15:01.680','english-fairy-tales-52'),
 
-	/* (UUID(),'english-fairy-tales-53','Wishing Upon a star','Ước nguyện dưới các vì sao','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_053',NULL,'null','null','english-fairy-tales','NO',53) */
+	/* (UUID(),'english-fairy-tales-53','Wishing Upon a star','Ước nguyện dưới các vì sao','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_053',NULL,'null','null','english-fairy-tales',0,0,53) */
 	('Wishing upon a star','Ước nguyện dưới các vì sao','00:00:05.060','00:00:07.060','english-fairy-tales-53'),
 	('Wishing upon a star','Ước nguyện dưới các vì sao','00:00:05.060','00:00:07.060','english-fairy-tales-53'),
 	('Meet Mr. Wish','Gặp Mr. Wish','00:00:08.820','00:00:10.620','english-fairy-tales-53'),
@@ -11181,7 +11181,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'english-fairy-tales-54','Full throttle','Chạy hết tốc lực','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_054.mp3',NULL,'00:00:04.680','00:15:19.940','english-fairy-tales','NO',54) */
+	/* (UUID(),'english-fairy-tales-54','Full throttle','Chạy hết tốc lực','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_054.mp3',NULL,'00:00:04.680','00:15:19.940','english-fairy-tales',0,0,54) */
 	('Full throttle','Tăng tốc hết cỡ','00:00:04.680','00:00:06.020','english-fairy-tales-54'),
 	('This is the quiet town of Autoville, and it houses a certain car who will test the bonds of friendship','Đây là thị trấn yên bình Autoville, nơi có một chiếc xe sẽ thử thách sự gắn kết của tình bạn','00:00:07.420','00:00:14.040','english-fairy-tales-54'),
 	('Look at her go','Nhìn cô ấy đi kìa','00:00:23.100','00:00:25.060','english-fairy-tales-54'),
@@ -11465,7 +11465,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('True champions aren\'t just the fastest on the track, but those who race with integrity and support their friends','Những nhà vô địch thực sự không chỉ là những người nhanh nhất trên đường đua, mà còn là những người đua xe với phẩm giá và hỗ trợ bạn bè của họ','00:15:04.640','00:15:12.720','english-fairy-tales-54'),
 	('Real victory lies in how we play the game and the legacy we leave behind on the road of life','Chiến thắng thực sự nằm ở cách chúng ta chơi trò chơi và di sản mà chúng ta để lại trên con đường cuộc sống','00:15:13.500','00:15:19.940','english-fairy-tales-54'),
 
-	/* (UUID(),'english-fairy-tales-55','Me and another me','Tôi và một tôi khác','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_055.mp3',NULL,'00:00:04.540','00:12:27.570','english-fairy-tales','NO',55) */
+	/* (UUID(),'english-fairy-tales-55','Me and another me','Tôi và một tôi khác','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_055.mp3',NULL,'00:00:04.540','00:12:27.570','english-fairy-tales',0,0,55) */
 	('Me and another me','Tôi và một tôi khác','00:00:04.540','00:00:06.720','english-fairy-tales-55'),
 	('All right, gather around for a tale','Được rồi, tập trung lại để nghe kể chuyện','00:00:07.900','00:00:10.100','english-fairy-tales-55'),
 	('Picture this','Hãy hình dung thế này','00:00:10.620','00:00:11.600','english-fairy-tales-55'),
@@ -11705,7 +11705,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Alternate universe','Vũ trụ song song','00:12:17.670','00:12:18.650','english-fairy-tales-55'),
 	('Alternate universe','Vũ trụ song song','00:12:27.150','00:12:27.570','english-fairy-tales-55'),
 
-	/* (UUID(),'english-fairy-tales-56','Lottery Millionaire','Tỷ phú xổ số','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_056.mp3',NULL,'00:00:05.260','00:12:27.570','english-fairy-tales','NO',56) */
+	/* (UUID(),'english-fairy-tales-56','Lottery Millionaire','Tỷ phú xổ số','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_056.mp3',NULL,'00:00:05.260','00:12:27.570','english-fairy-tales',0,0,56) */
 	('Lottery Millionaire','Tỷ phú xổ số','00:00:05.260','00:00:14.700','english-fairy-tales-56'),
 	('Once upon a time, as the alarm clock blared, Tom, a scruffy and groggy mess, wrestled it into silence','Ngày xửa ngày xưa, khi đồng hồ báo thức kêu vang, Tom, một chàng trai lôi thôi và buồn ngủ, đã vật lộn để tắt nó','00:00:05.260','00:00:17.400','english-fairy-tales-56'),
 	('He knocked over a stack of old pizza boxes in the process','Trong quá trình đó, anh đã làm đổ một chồng hộp pizza cũ','00:00:18.200','00:00:21.540','english-fairy-tales-56'),
@@ -11928,7 +11928,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Tom understood that real contentment wasn\'t in chasing the thrill of fleeting fortune, but in living each day bravely, truthfully, and with purpose','Tom hiểu rằng hạnh phúc thực sự không nằm trong việc theo đuổi cảm giác hồi hộp của sự giàu có phù du, mà là sống mỗi ngày một cách dũng cảm, chân thật và có mục đích','00:12:38.650','00:12:49.310','english-fairy-tales-56'),
 	('And that was the beginning of Tom and Casey\'s happily ever after','Và đó là khởi đầu cho cuộc sống hạnh phúc mãi mãi của Tom và Casey','00:12:49.310','00:12:54.090','english-fairy-tales-56'),
 
-	/* (UUID(),'english-fairy-tales-57','Joy of Little Things','Niềm Vui Những Điều Nhỏ Bé','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_057.mp3',NULL,'00:00:05.260','00:13:07.380','english-fairy-tales','NO',57) */
+	/* (UUID(),'english-fairy-tales-57','Joy of Little Things','Niềm Vui Những Điều Nhỏ Bé','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_057.mp3',NULL,'00:00:05.260','00:13:07.380','english-fairy-tales',0,0,57) */
 	('Joy of Little Things','Niềm Vui Những Điều Nhỏ Bé','00:00:04.280','00:01:12.440','english-fairy-tales-57'),
 	('That\'s not what I feel like eating today','Hôm nay tôi không muốn ăn thứ đó','00:01:12.440','00:01:14.680','english-fairy-tales-57'),
 	('Your health scan shows that your calcium and mineral count is below normal','Kiểm tra sức khỏe cho thấy lượng canxi và khoáng chất của bạn dưới mức bình thường','00:01:15.160','00:01:19.340','english-fairy-tales-57'),
@@ -12142,7 +12142,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Sometimes, when we lose technology, we find togetherness, love, laughter','Đôi khi, khi chúng ta không có công nghệ, chúng ta lại tìm thấy sự gắn kết, tình yêu, tiếng cười','00:12:53.300','00:12:59.560','english-fairy-tales-57'),
 	('What will really matter in life are not the games we played on our phones, but the memories we shared with the ones we loved','Điều thực sự quan trọng trong cuộc sống không phải là những trò chơi chúng ta đã chơi trên điện thoại, mà là những kỷ niệm chúng ta đã chia sẻ với những người thân yêu','00:13:00.020','00:13:07.380','english-fairy-tales-57'),
 
-	/* (UUID(),'english-fairy-tales-58','Mr. Villain returns','Ông Vllain trở về','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_058.mp3',NULL,'00:00:03.850','00:12:24.770','english-fairy-tales','NO',58) */
+	/* (UUID(),'english-fairy-tales-58','Mr. Villain returns','Ông Vllain trở về','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_058.mp3',NULL,'00:00:03.850','00:12:24.770','english-fairy-tales',0,0,58) */
 	('Mr. Villain returns','Ông Phản Diện trở lại','00:00:03.850','00:00:14.030','english-fairy-tales-58'),
 	('Good morning, Mr. Villain, er, Caleb','Chào buổi sáng, Ông Phản Diện, à, Caleb','00:00:03.850','00:00:15.350','english-fairy-tales-58'),
 	('Haha, good morning, Max','Haha, chào buổi sáng, Max','00:00:16.410','00:00:18.450','english-fairy-tales-58'),
@@ -12194,7 +12194,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'english-fairy-tales-58','Mr. Villain returns','Ông Vllain trở về','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_058.mp3',NULL,'00:00:03.850','00:12:24.770','english-fairy-tales','NO',58) */
+	/* (UUID(),'english-fairy-tales-58','Mr. Villain returns','Ông Vllain trở về','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_058.mp3',NULL,'00:00:03.850','00:12:24.770','english-fairy-tales',0,0,58) */
 	('You think I\'m the only one who knows how you are fooling these people?','Cậu nghĩ chỉ mình tôi biết cậu lừa dối những người này sao?','00:02:58.760','00:03:03.160','english-fairy-tales-58'),
 	('Our entire gang knows this','Cả băng nhóm của chúng ta đều biết điều này','00:03:03.840','00:03:05.940','english-fairy-tales-58'),
 	('And now that you have gained the trust of Cocosa, you will obviously help your pals','Và bây giờ cậu đã giành được lòng tin của Cocosa, cậu sẽ giúp đồng bọn của mình chứ','00:03:06.340','00:03:12.720','english-fairy-tales-58'),
@@ -12345,7 +12345,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('You don\'t need a hero','Các ngươi không cần một anh hùng','00:12:20.770','00:12:21.890','english-fairy-tales-58'),
 	('You need Mr. Villain','Các ngươi cần Ngài Villain','00:12:22.250','00:12:24.770','english-fairy-tales-58'),
 
-	/* (UUID(),'english-fairy-tales-59','Detective Ace','Thám Tử Ace','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_059.mp3',NULL,'00:00:05.380','00:14:40.880','english-fairy-tales','NO',59) */
+	/* (UUID(),'english-fairy-tales-59','Detective Ace','Thám Tử Ace','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_059.mp3',NULL,'00:00:05.380','00:14:40.880','english-fairy-tales',0,0,59) */
 	('Detective Ace','Thám Tử Ace','00:00:05.380','00:00:15.120','english-fairy-tales-59'),
 	('Cyberchase going home?','Cyberchase về nhà à?','00:00:15.120','00:00:15.980','english-fairy-tales-59'),
 	('Yay, I\'m finally going','Yeah, cuối cùng thì ta cũng về','00:00:16.560','00:00:19.080','english-fairy-tales-59'),
@@ -12605,7 +12605,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('See you next time','Hẹn gặp lại các bạn lần sau','00:14:36.700','00:14:37.680','english-fairy-tales-59'),
 	('Until then, be sensible, be safe','Cho đến lúc đó, hãy tỉnh táo và an toàn','00:14:38.000','00:14:40.880','english-fairy-tales-59'),
 
-	/* (UUID(),'english-fairy-tales-60','Yin and Yang','Âm Dương','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_060.mp3',NULL,'00:00:05.890','00:13:29.170','english-fairy-tales','NO',60) */
+	/* (UUID(),'english-fairy-tales-60','Yin and Yang','Âm Dương','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_060.mp3',NULL,'00:00:05.890','00:13:29.170','english-fairy-tales',0,0,60) */
 	('Yin and Yang','Âm Dương','00:00:05.890','00:00:13.210','english-fairy-tales-60'),
 	('Once upon a time, on the plains, there was a town named Qi','Ngày xưa, trên đồng bằng, có một thị trấn tên là Qi','00:00:05.890','00:00:13.210','english-fairy-tales-60'),
 	('This was a town of harmony and balance','Đây là một thị trấn hòa hợp và cân bằng','00:00:14.030','00:00:16.650','english-fairy-tales-60'),
@@ -12814,7 +12814,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And so were Yin and Yang','Và Âm Dương cũng vậy','00:13:24.350','00:13:25.490','english-fairy-tales-60'),
 	('Who were on to other adventures with their new friends','Họ tiếp tục những cuộc phiêu lưu khác cùng những người bạn mới','00:13:26.410','00:13:29.170','english-fairy-tales-60'),
 
-	/* (UUID(),'english-fairy-tales-61','Starstruck','Ngôi Sao Lấp Lánh','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_061.mp3',NULL,'00:00:07.220','00:18:29.800','english-fairy-tales','NO',61) */
+	/* (UUID(),'english-fairy-tales-61','Starstruck','Ngôi Sao Lấp Lánh','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_061.mp3',NULL,'00:00:07.220','00:18:29.800','english-fairy-tales',0,0,61) */
 	('Starstruck','Ngôi Sao Lấp Lánh','00:00:07.220','00:00:27.260','english-fairy-tales-61'),
 	('Is it dinner time already, Blake?','Là giờ ăn tối rồi sao, Blake?','00:00:27.260','00:00:28.860','english-fairy-tales-61'),
 	('Well, you\'re the boss','Ừ, bạn là ông chủ mà','00:00:29.180','00:00:30.520','english-fairy-tales-61'),
@@ -13175,7 +13175,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('You crashed again','Bạn lại bị rơi nữa rồi','00:18:24.740','00:18:26.240','english-fairy-tales-61'),
 	('No, I fell for you','Không, tôi đã yêu bạn','00:18:27.820','00:18:29.800','english-fairy-tales-61'),
 
-	/* (UUID(),'english-fairy-tales-62','Straw Millionaire','Tỷ Phú Rơm','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_062.mp3',NULL,'00:00:04.460','00:12:55.040','english-fairy-tales','NO',62) */
+	/* (UUID(),'english-fairy-tales-62','Straw Millionaire','Tỷ Phú Rơm','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_062.mp3',NULL,'00:00:04.460','00:12:55.040','english-fairy-tales',0,0,62) */
 	('Straw Millionaire','Tỷ Phú Rơm','00:00:04.460','00:00:10.500','english-fairy-tales-62'),
 	('Once upon a time, in Japan, there lived a wealthy family','Ngày xưa, ở Nhật Bản, có một gia đình giàu có','00:00:04.460','00:00:10.500','english-fairy-tales-62'),
 	('They were well-respected, and they, in turn, respected their workers','Họ được kính trọng, và ngược lại, họ cũng tôn trọng những người lao động của mình','00:00:11.040','00:00:14.660','english-fairy-tales-62'),
@@ -13207,7 +13207,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'english-fairy-tales-62','Straw Millionaire','Tỷ Phú Rơm','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_062.mp3',NULL,'00:00:04.460','00:12:55.040','english-fairy-tales','NO',62) */
+	/* (UUID(),'english-fairy-tales-62','Straw Millionaire','Tỷ Phú Rơm','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_062.mp3',NULL,'00:00:04.460','00:12:55.040','english-fairy-tales',0,0,62) */
 	('What?','Cái gì?','00:01:10.740','00:01:11.060','english-fairy-tales-62'),
 	('Why not?','Tại sao không?','00:01:11.280','00:01:12.060','english-fairy-tales-62'),
 	('Hiroshi, we\'ve been thinking for some time','Hiroshi, chúng ta đã suy nghĩ một thời gian rồi','00:01:13.860','00:01:16.860','english-fairy-tales-62'),
@@ -13426,7 +13426,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Hmm','Ừm','00:12:51.520','00:12:51.880','english-fairy-tales-62'),
 	('It\'s the little things that go a long way','Những điều nhỏ bé có thể tạo ra sự khác biệt lớn','00:12:52.360','00:12:55.040','english-fairy-tales-62'),
 
-	/* (UUID(),'english-fairy-tales-63','The Proposal Plan','Kế Hoạch Cầu Hôn','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_063.mp3',NULL,'00:00:04.780','00:11:08.100','english-fairy-tales','NO',63) */
+	/* (UUID(),'english-fairy-tales-63','The Proposal Plan','Kế Hoạch Cầu Hôn','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_063.mp3',NULL,'00:00:04.780','00:11:08.100','english-fairy-tales',0,0,63) */
 	('The Proposal Plan','Kế Hoạch Cầu Hôn','00:00:04.780','00:00:12.240','english-fairy-tales-63'),
 	('Once upon a time, in the 19th century to be precise, a young woman was enjoying the warmth and beauty of a lovely summer day','Ngày xửa ngày xưa, vào thế kỷ 19, một người phụ nữ trẻ đang tận hưởng sự ấm áp và vẻ đẹp của một ngày hè tuyệt vời','00:00:04.780','00:00:15.660','english-fairy-tales-63'),
 	('Can you guess who she was?','Bạn có đoán được cô ấy là ai không?','00:00:16.460','00:00:18.140','english-fairy-tales-63'),
@@ -13617,7 +13617,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('When we are given opportunities or chances, we must take them','Khi chúng ta được trao cơ hội, chúng ta phải nắm lấy','00:10:58.760','00:11:02.620','english-fairy-tales-63'),
 	('Or else, the things and people we love may just be taken away from us','Nếu không, những thứ và người mà chúng ta yêu quý có thể sẽ bị lấy đi khỏi chúng ta','00:11:02.940','00:11:08.100','english-fairy-tales-63'),
 
-	/* (UUID(),'english-fairy-tales-64','Swiss Family Robinson','Swiss Family Robinson','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_064.mp3',NULL,'00:00:03.050','00:14:18.950','english-fairy-tales','NO',64) */
+	/* (UUID(),'english-fairy-tales-64','Swiss Family Robinson','Swiss Family Robinson','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_064.mp3',NULL,'00:00:03.050','00:14:18.950','english-fairy-tales',0,0,64) */
 	('Swiss Family Robinson','Gia đình Robinson người Thụy Sĩ','00:00:03.050','00:00:07.410','english-fairy-tales-64'),
 	('The year was 1812','Năm đó là 1812','00:00:03.050','00:00:07.410','english-fairy-tales-64'),
 	('Our ship was on its way to Australia from Switzerland and was caught in a terrible storm','Con tàu của chúng tôi đang trên đường đến Australia từ Thụy Sĩ và bị bắt gặp trong một cơn bão lớn','00:00:07.990','00:00:13.270','english-fairy-tales-64'),
@@ -13838,7 +13838,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('This story is the victory of the human spirit that can survive and make the best of any circumstance, problem, or trouble','Câu chuyện này là chiến thắng của tinh thần con người có thể sống sót và tận dụng tốt nhất mọi hoàn cảnh, vấn đề, hoặc rắc rối','00:14:06.110','00:14:14.170','english-fairy-tales-64'),
 	('Remember, we are stronger than anything that can ever happen to us','Hãy nhớ rằng, chúng ta mạnh mẽ hơn bất cứ điều gì có thể xảy ra với chúng ta','00:14:14.690','00:14:18.950','english-fairy-tales-64'),
 
-	/* (UUID(),'english-fairy-tales-65','A Magical Winter','Một Mùa Đông Kỳ Diệu','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_065.mp3',NULL,'00:00:05.360','00:15:43.730','english-fairy-tales','NO',65) */
+	/* (UUID(),'english-fairy-tales-65','A Magical Winter','Một Mùa Đông Kỳ Diệu','STORIES_FAIRY_TALE_STORY_01_ENGLISH_FAIRY_TALE_065.mp3',NULL,'00:00:05.360','00:15:43.730','english-fairy-tales',0,0,65) */
 	('A Magical Winter','Một Mùa Đông Kỳ Diệu','00:00:05.360','00:00:12.180','english-fairy-tales-65'),
 	('Once upon a time, in a realm of snowflakes and magic, snow fairies were readying themselves to travel to different dimensions','Ngày xửa ngày xưa, trong một vương quốc đầy tuyết và ma thuật, những nàng tiên tuyết đang chuẩn bị để du hành đến những chiều không gian khác nhau','00:00:05.360','00:00:15.920','english-fairy-tales-65'),
 	('The giants are roaring, saying it\'s not cold enough','Những con quái vật gầm rú, nói rằng trời chưa đủ lạnh','00:00:23.040','00:00:26.840','english-fairy-tales-65'),

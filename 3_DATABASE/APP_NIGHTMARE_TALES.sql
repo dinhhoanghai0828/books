@@ -1,5 +1,5 @@
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'nightmare-tales-1','The Writer','Nhà Văn','STORIES_HORROR_STORY_01_NIGHTMARE_TALE_001.mp3',NULL,'00:00:00.000','00:05:45.000','nightmare-tales','NO',1) */
+	/* (UUID(),'nightmare-tales-1','The Writer','Nhà Văn','STORIES_HORROR_STORY_01_NIGHTMARE_TALE_001.mp3',NULL,'00:00:00.000','00:05:45.000','nightmare-tales',0,0,1) */
 	('Several years ago, a young writer rented a remote lakeside cabin in the mountains, so he could free himself of distractions and interruptions while he worked on his next novel','Vài năm trước, một nhà văn trẻ đã thuê một căn nhà gỗ nhỏ hẻo lánh ven hồ ở trong ngọn núi, để anh ấy có thể tránh xa các sao nhãng và gián đoạn trong lúc sáng tác cuốn tiểu thuyết sắp tới của mình','00:00:01.029','00:00:12.200','nightmare-tales-1'),
 	('In his first week, he managed to accomplish an impressive amount of work and even though the feelings of being isolated and lonely were ever-present, he still felt as if someone was there watching him','Vào tuần đầu tiên, anh ta đã hoàn thành được một khối lượng công việc khá ấn tượng, và mặc dù cảm giác bị cô lập và cô đơn luôn hiện hữu, anh vẫn cảm thấy như có ai đó đang theo dõi mình','00:00:12.800','00:00:24.990','nightmare-tales-1'),
 	('Then, late on a Sunday afternoon, he heard what he thought was someone calling his name','Rồi, vào cuối chiều Chủ Nhật, anh nghe thấy một chuyện mà anh nghĩ là ai đó đang gọi tên mình','00:00:26.100','00:00:32.950','nightmare-tales-1'),
@@ -58,7 +58,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('They would never find him','Họ sẽ không bao giờ tìm thấy anh','00:05:34.200','00:05:35.500','nightmare-tales-1'),
 	('What became of him is only known by the eyes that watch over the cabin and your every move','Điều gì đã xảy ra với anh chỉ được biết bởi những đôi mắt đang giám sát căn nhà gỗ, và từng hành động của bạn','00:05:36.200','00:05:44.500','nightmare-tales-1'),
 
-	/* (UUID(),'nightmare-tales-2','The bus stop','Trạm xe buýt','STORIES_HORROR_STORY_01_NIGHTMARE_TALE_002.mp3',NULL,'00:00:00.000','00:02:58.720','nightmare-tales','NO',2) */
+	/* (UUID(),'nightmare-tales-2','The bus stop','Trạm xe buýt','STORIES_HORROR_STORY_01_NIGHTMARE_TALE_002.mp3',NULL,'00:00:00.000','00:02:58.720','nightmare-tales',0,0,2) */
 	('On a dark autumn night, a lady who had just finished conducting a training session at a factory in the countryside stood alone at a bus stop, patiently waiting for the bus to arrive and take her back into the city','Vào một đêm mùa thu tăm tối, một người phụ nữ vừa hoàn thành một buổi huấn luyện tại nhà máy ở vùng nông thôn, đứng một mình tại trạm xe buýt, kiên nhẫn chờ xe đến để đưa cô quay lại thành phố','00:00:07.880','00:00:23.300','nightmare-tales-2'),
 	('Ten minutes had passed','Mười phút đã trôi qua','00:00:24.820','00:00:26.380','nightmare-tales-2'),
 	('The bus should have arrived by now, she thought to herself','Xe buýt đáng lẽ phải đến rồi, cô nghĩ thầm','00:00:27.400','00:00:30.160','nightmare-tales-2'),
@@ -96,7 +96,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The driver replied, three dollars','Người lái xe trả lời, ba đô la','00:02:47.460','00:02:50.460','nightmare-tales-2'),
 	('As he knocked her unconscious, switched out the lights, and then drove away, off, into the night','Khi ông ta đánh cô ngất đi, tắt đèn, rồi lái xe đi, mất hút trong màn đêm','00:02:51.460','00:02:58.720','nightmare-tales-2'),
 
-	/* (UUID(),'nightmare-tales-3','The park','Công Viên','STORIES_HORROR_STORY_01_NIGHTMARE_TALE_003.mp3',NULL,'00:00:00.000','00:03:16.870','nightmare-tales','NO',3) */
+	/* (UUID(),'nightmare-tales-3','The park','Công Viên','STORIES_HORROR_STORY_01_NIGHTMARE_TALE_003.mp3',NULL,'00:00:00.000','00:03:16.870','nightmare-tales',0,0,3) */
 	('The day was warm and the weather was perfect','Ngày hôm đó trời ấm áp và thời tiết hoàn hảo','00:00:04.870','00:00:07.590','nightmare-tales-3'),
 	('Perfect for a day in the park','Hoàn hảo cho một ngày ở công viên','00:00:08.330','00:00:10.270','nightmare-tales-3'),
 	('A young mother and her little girl relaxed contentedly on the lush green grass, breathed in the fresh summer air and listened to the world go by','Một người mẹ trẻ và cô con gái nhỏ thư giãn thoải mái trên thảm cỏ xanh mượt, hít thở không khí mùa hè trong lành và lắng nghe thế giới xung quanh','00:00:11.010','00:00:19.710','nightmare-tales-3'),
@@ -138,7 +138,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The girl looked up and a deathly chill ran through the little girl as she looked into her own eyes, which was followed by a chilling, I\'m you','Cô bé ngước nhìn lên và một cảm giác lạnh lẽo chết chóc chạy qua khi cô bé nhìn vào đôi mắt của chính mình, rồi tiếp theo là tiếng thì thầm rùng rợn: Ta là ngươi','00:02:56.690','00:03:06.710','nightmare-tales-3'),
 	('She grabbed the little girl by the neck and although there was a struggle, there was no way she could stop being dragged down into the depths of the earth and into the afterlife','Cô bé nắm lấy cổ của chính mình và dù có vùng vẫy, không đời nào cô bé có thể ngăn cản bị kéo xuống sâu dưới lòng đất và vào cõi chết','00:03:07.510','00:03:16.870','nightmare-tales-3'),
 
-	/* (UUID(),'nightmare-tales-4','The hotel','Khách sạn','STORIES_HORROR_STORY_01_NIGHTMARE_TALE_004.mp3',NULL,'00:00:06.020','00:04:57.620','nightmare-tales','NO',4) */
+	/* (UUID(),'nightmare-tales-4','The hotel','Khách sạn','STORIES_HORROR_STORY_01_NIGHTMARE_TALE_004.mp3',NULL,'00:00:06.020','00:04:57.620','nightmare-tales',0,0,4) */
 	('On a cold and dark Friday night, a young couple had just completed their long journey into the mountains, for a weekend away at an extremely secluded and exclusive resort hotel','Vào một đêm thứ Sáu lạnh lẽo và tối tăm, một đôi trẻ vừa hoàn thành chuyến đi dài vào núi, để tận hưởng cuối tuần tại một khách sạn khu nghỉ dưỡng cực kỳ hẻo lánh và độc quyền','00:00:06.020','00:00:17.280','nightmare-tales-4'),
 	('Earlier that day, the man had surprised his girlfriend by picking her up from work with her bags already packed','Trước đó trong ngày, người đàn ông đã gây bất ngờ cho bạn gái mình khi đến đón cô từ chỗ làm với hành lý của cô đã được sắp xếp sẵn','00:00:18.600','00:00:24.280','nightmare-tales-4'),
 	('The girl was very impressed and was excited to stay at what looked like a beautiful and luxurious hotel','Cô gái rất ấn tượng và háo hức ở lại một khách sạn trông có vẻ đẹp và sang trọng','00:00:25.020','00:00:30.900','nightmare-tales-4'),
@@ -194,7 +194,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('They accepted, and then they set up a stay at the hotel to make it happen','Họ đã chấp nhận, rồi sắp xếp cho họ nghỉ tại khách sạn để thực hiện kế hoạch','00:04:43.070','00:04:48.070','nightmare-tales-4'),
 	('Dave left the hotel, relieved that his debt was clear, without a hint of guilt at what he\'d just done','Dave rời khỏi khách sạn, nhẹ nhõm vì đã trả xong nợ, mà không hề cảm thấy tội lỗi về những gì vừa làm','00:04:50.240','00:04:57.620','nightmare-tales-4'),
 
-	/* (UUID(),'nightmare-tales-5','The Nanny','Người Giữ Trẻ','STORIES_HORROR_STORY_01_NIGHTMARE_TALE_005.mp3',NULL,'00:00:06.020','00:04:57.620','nightmare-tales','NO',5) */
+	/* (UUID(),'nightmare-tales-5','The Nanny','Người Giữ Trẻ','STORIES_HORROR_STORY_01_NIGHTMARE_TALE_005.mp3',NULL,'00:00:06.020','00:04:57.620','nightmare-tales',0,0,5) */
 	('A young family in midtown New York had employed a nanny to help care for their young child and she did so ever since the day he was born','Một gia đình trẻ ở trung tâm New York đã thuê một bảo mẫu để giúp chăm sóc con nhỏ của họ, và cô đã làm điều đó từ ngày cậu bé chào đời','00:00:06.020','00:00:15.760','nightmare-tales-5'),
 	('The nanny would pamper him and love him as if he was her own','Người bảo mẫu luôn nuông chiều và yêu thương cậu bé như con đẻ của mình','00:00:16.780','00:00:20.740','nightmare-tales-5'),
 	('He was a strange boy and over the years a fierce mean streak began to develop in him','Cậu bé là một đứa trẻ kỳ lạ và theo thời gian, một tính cách hung ác dần hình thành trong cậu','00:00:21.700','00:00:26.920','nightmare-tales-5'),
@@ -232,7 +232,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'nightmare-tales-6','The dinner','Quán ăn','STORIES_HORROR_STORY_01_NIGHTMARE_TALE_006.mp3',NULL,'00:00:06.020','00:04:57.620','nightmare-tales','NO',6) */
+	/* (UUID(),'nightmare-tales-6','The dinner','Quán ăn','STORIES_HORROR_STORY_01_NIGHTMARE_TALE_006.mp3',NULL,'00:00:06.020','00:04:57.620','nightmare-tales',0,0,6) */
 	('On a cold dark night, around two in the morning, a young man and his father sat in a remote 24-hour diner, waiting to be served','Vào một đêm lạnh lẽo và tối tăm, khoảng hai giờ sáng, một chàng trai trẻ và cha mình ngồi trong một quán ăn 24 giờ hẻo lánh, chờ được phục vụ','00:00:09.610','00:00:18.470','nightmare-tales-6'),
 	('The older man, who was sadly slowly going senile, had insisted on going out for some soup','Người đàn ông lớn tuổi, thật đáng buồn là người đó đang dần lú lẫn, kiên quyết muốn ra ngoài để ăn một ít súp','00:00:19.430','00:00:25.310','nightmare-tales-6'),
 	('Not having the energy to argue, the son took him out, for at least this way his father would be happy, and then he could get some peace and quiet','Không còn sức để tranh cãi, người con đã dẫn ông ra ngoài, vì ít nhất theo cách này cha anh sẽ vui và anh sẽ có một chút yên bình','00:00:26.030','00:00:33.630','nightmare-tales-6'),

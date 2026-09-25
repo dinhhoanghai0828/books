@@ -1,8 +1,8 @@
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'your-animated-story-show-1','My incredible story of getting married 11 times at 17','Câu chuyện khó tin kết hôn 11 lần ở tuổi 17 của tôi','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_001.mp3',NULL,'00:00:00.120','00:00:04.860','your-animated-story-show','NO',1) */
+	/* (UUID(),'your-animated-story-show-1','My incredible story of getting married 11 times at 17','Câu chuyện khó tin kết hôn 11 lần ở tuổi 17 của tôi','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_001.mp3',NULL,'00:00:00.120','00:00:04.860','your-animated-story-show',0,0,1) */
 	('Your Animated Story Show - Lesson 1: My Incredible Story of Getting Married 11 Times At 17','Chương trình truyện tranh hoạt hình - Bài 1: Câu chuyện khó tin kết hôn 11 lần ở tuổi 17 của tôi','00:00:00.120','00:00:04.860','your-animated-story-show-1'),
-	('Hi, I\'m Celine and I\'ve called the Saint Augustine orphanage home since I was six',' Chào, tôi là Celine và tôi đã coi trại trẻ mồ côi Saint Augustine là nhà kể từ khi tôi 6 tuổi','00:00:00.120','00:00:04.530','your-animated-story-show-1'),
-	('But I\'m not actually an orphan','Nhưng tôi thực ra không phải là trẻ mồ côi','00:00:04.900','00:00:06.330','your-animated-story-show-1'),
+	('Hi, I\'m Celine and I\'ve called the Saint Augustine orphanage home since I was six',' Chào, tôi là Celine và tôi đã coi trại trẻ mồ côi Saint Augustine là nhà kể từ khi tôi 6 tuổi','00:00:00.120','00:00:04.700','your-animated-story-show-1'),
+	('But I\'m not actually an orphan','Nhưng tôi thực ra không phải là trẻ mồ côi','00:00:04.900','00:00:06.500','your-animated-story-show-1'),
 	('You see, my parents are special agents with secret identities','Bạn thấy đấy, cha mẹ tôi là những đặc vụ đặc biệt với các danh tính bí mật','00:00:06.620','00:00:10.100','your-animated-story-show-1'),
 	('Sweetie, if one day someone suspicious asks you about your parents, run for your life','Con yêu, nếu một ngày có ai đó đáng ngờ hỏi về cha mẹ, hãy chạy trốn vì mạng sống của mình','00:00:10.500','00:00:15.400','your-animated-story-show-1'),
 	('I was used to these fleeting ghost-like visits from my parents','Tôi đã quen với những cuộc thăm viếng thoáng qua như bóng ma của cha mẹ tôi','00:00:15.700','00:00:19.000','your-animated-story-show-1'),
@@ -266,7 +266,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And I get to date this cute, caring Chef','Và tôi còn được hẹn hò với một đầu bếp vừa dễ thương lại vừa quan tâm nữa chứ','00:13:15.120','00:13:17.459','your-animated-story-show-1'),
 	('The best part is, I can finally stop running for my life and just enjoy the people I love most','Điều tuyệt vời nhất là cuối cùng tôi cũng có thể ngừng chạy trốn để bảo toàn mạng sống và chỉ đơn giản là tận hưởng cuộc sống bên những người mình yêu thương nhất','00:13:17.459','00:13:23.279','your-animated-story-show-1'),
 
-	/* (UUID(),'your-animated-story-show-2','Only 14 days to make a guy fall for me - I have no choice','Chỉ 14 ngày để khiến một chàng trai phải lòng tôi - Tôi không có lựa chọn khác','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_002.mp3',NULL,'00:00:00.120','00:15:06.170','your-animated-story-show','NO',2) */
+	/* (UUID(),'your-animated-story-show-2','Only 14 days to make a guy fall for me - I have no choice','Chỉ 14 ngày để khiến một chàng trai phải lòng tôi - Tôi không có lựa chọn khác','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_002.mp3',NULL,'00:00:00.120','00:15:06.170','your-animated-story-show',0,0,2) */
 	('I was walking down the hallway to see the infamous dude standing there, doing his old trick to pick on some shy student','Tôi đang đi dọc hành lang thì thấy tên nổi tiếng xấu xa đứng đó, thực hiện trò cũ để bắt nạt một học sinh nhút nhát','00:00:00.170','00:00:05.970','your-animated-story-show-2'),
 	('Get that filthy hand off him now','Bỏ ngay cái bàn tay bẩn thỉu đó ra khỏi người cậu ấy','00:00:06.450','00:00:08.830','your-animated-story-show-2'),
 	('Then I grabbed him and threw him away like a piece of paper','Sau đó tôi túm lấy hắn và quăng đi như một tờ giấy','00:00:09.110','00:00:12.050','your-animated-story-show-2'),
@@ -662,7 +662,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('So of course I can wait for you','Vậy nên tất nhiên tôi có thể đợi cậu','00:15:03.230','00:15:04.870','your-animated-story-show-2'),
 	('Come back soon, Akira','Hãy trở về sớm, Akira','00:15:05.150','00:15:06.170','your-animated-story-show-2'),
 
-	/* (UUID(),'your-animated-story-show-3','I was called a Jinx for being too nice','Tôi bị gọi là người đem lại xui xẻo vì quá tốt bụng','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_003.mp3',NULL,'00:00:00.120','00:14:29.180','your-animated-story-show','NO',3) */
+	/* (UUID(),'your-animated-story-show-3','I was called a Jinx for being too nice','Tôi bị gọi là người đem lại xui xẻo vì quá tốt bụng','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_003.mp3',NULL,'00:00:00.120','00:14:29.180','your-animated-story-show',0,0,3) */
 	('My precious Sunday is ruined because of my not-so-precious sister, Emma, who insisted on dragging me to church for some sister time','Ngày Chủ Nhật quý báu của tôi đã bị phá hỏng bởi cô em gái không mấy quý báu của tôi, Emma, người nhất quyết kéo tôi đi nhà thờ để dành thời gian chị em','00:00:00.430','00:00:07.189','your-animated-story-show-3'),
 	('We walked in to see the priest rushing over','Chúng tôi bước vào và thấy vị linh mục vội vàng tiến đến','00:00:07.470','00:00:09.350','your-animated-story-show-3'),
 	('Welcome in','Chào mừng đến đây','00:00:09.730','00:00:10.350','your-animated-story-show-3'),
@@ -1008,7 +1008,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'your-animated-story-show-3','I was called a Jinx for being too nice','Tôi bị gọi là người đem lại xui xẻo vì quá tốt bụng','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_003.mp3',NULL,'00:00:00.120','00:14:29.180','your-animated-story-show','NO',3) */
+	/* (UUID(),'your-animated-story-show-3','I was called a Jinx for being too nice','Tôi bị gọi là người đem lại xui xẻo vì quá tốt bụng','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_003.mp3',NULL,'00:00:00.120','00:14:29.180','your-animated-story-show',0,0,3) */
 	('You got it','Cậu yên tâm','00:13:29.080','00:13:29.700','your-animated-story-show-3'),
 	('The next morning, our parents arrived all angry','Sáng hôm sau, cha mẹ chúng tôi đến và đều giận dữ','00:13:30.120','00:13:32.640','your-animated-story-show-3'),
 	('We were so ready for a long-term grounding','Chúng tôi đã chuẩn bị sẵn sàng cho việc bị cấm túc lâu dài','00:13:32.900','00:13:35.160','your-animated-story-show-3'),
@@ -1043,7 +1043,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And don\'t you think that it barely missing us means I\'m good luck?','Và cậu không nghĩ rằng việc nó suýt nữa đụng chúng ta là tôi may mắn sao?','00:14:25.120','00:14:28.160','your-animated-story-show-3'),
 	('I\'m just kidding','Tôi chỉ đùa thôi mà','00:14:28.360','00:14:29.180','your-animated-story-show-3'),
 
-	/* (UUID(),'your-animated-story-show-4','My unique beauty made me a billionaire\'s daughter','Vẻ đẹp độc đáo đã khiến tôi trở thành con gái của tỷ phú','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_004.mp3',NULL,'00:00:00.120','00:13:59.840','your-animated-story-show','NO',4) */
+	/* (UUID(),'your-animated-story-show-4','My unique beauty made me a billionaire\'s daughter','Vẻ đẹp độc đáo đã khiến tôi trở thành con gái của tỷ phú','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_004.mp3',NULL,'00:00:00.120','00:13:59.840','your-animated-story-show',0,0,4) */
 	('Aha, A snowstorm\'s coming','Aha, một cơn bão tuyết sắp đến rồi','00:00:03.980','00:00:06.520','your-animated-story-show-4'),
 	('Perfect for a race','Hoàn hảo để đua rồi','00:00:06.880','00:00:08.300','your-animated-story-show-4'),
 	('Let\'s go, my loyal soldiers','Đi thôi, các chiến binh trung thành của tôi','00:00:08.680','00:00:10.400','your-animated-story-show-4'),
@@ -1362,7 +1362,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The day we stop being friends','Ngày chúng ta không còn là bạn nữa','00:13:55.080','00:13:56.380','your-animated-story-show-4'),
 	('Brunna, what do you say if we become more than friends?','Brunna, cậu nghĩ sao nếu chúng ta trở thành hơn cả bạn bè?','00:13:56.720','00:13:59.840','your-animated-story-show-4'),
 
-	/* (UUID(),'your-animated-story-show-5','My crazy story as the only rebel in an elite school','Câu chuyện điên rồ của tôi khi là kẻ nổi loạn duy nhất trong trường danh giá','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_005.mp3',NULL,'00:00:00.120','00:13:51.190','your-animated-story-show','NO',5) */
+	/* (UUID(),'your-animated-story-show-5','My crazy story as the only rebel in an elite school','Câu chuyện điên rồ của tôi khi là kẻ nổi loạn duy nhất trong trường danh giá','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_005.mp3',NULL,'00:00:00.120','00:13:51.190','your-animated-story-show',0,0,5) */
 	('Hi, My name is Danielle, Dani for short, and this is Not Exactly a Good Time','Chào, tôi là Danielle, gọi tắt là Dani, và đây không phải là thời điểm tốt lắm','00:00:00.000','00:00:05.070','your-animated-story-show-5'),
 	('Smile, Dani','Cười lên, Dani','00:00:05.690','00:00:06.510','your-animated-story-show-5'),
 	('Don\'t make us feel bad','Đừng làm chúng tôi cảm thấy tội lỗi','00:00:06.770','00:00:07.990','your-animated-story-show-5'),
@@ -1661,7 +1661,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And someone, too','Và một ai đó nữa','00:13:47.490','00:13:48.530','your-animated-story-show-5'),
 	('We\'re finally going on our long-awaited date','Chúng tôi cuối cùng cũng sẽ có cuộc hẹn mà chúng tôi đã chờ đợi từ lâu','00:13:48.870','00:13:51.190','your-animated-story-show-5'),
 
-	/* (UUID(),'your-animated-story-show-6','I was punished for whatever my angel sister did','Tôi bị phạt vì bất cứ điều gì chị gái thiên thần của tôi làm','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_006.mp3',NULL,'00:00:00.120','00:15:00.090','your-animated-story-show','NO',6) */
+	/* (UUID(),'your-animated-story-show-6','I was punished for whatever my angel sister did','Tôi bị phạt vì bất cứ điều gì chị gái thiên thần của tôi làm','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_006.mp3',NULL,'00:00:00.120','00:15:00.090','your-animated-story-show',0,0,6) */
 	('Hi everyone, I\'m Lydia and I\'m gonna tell you my amazing but totally bizarre story','Chào mọi người, tôi là Lydia và tôi sẽ kể cho các bạn nghe câu chuyện kỳ lạ nhưng tuyệt vời của mình','00:00:00.210','00:00:05.210','your-animated-story-show-6'),
 	('But before I do, please like and subscribe','Nhưng trước khi tôi bắt đầu, đừng quên thích và đăng ký kênh nhé','00:00:05.530','00:00:07.650','your-animated-story-show-6'),
 	('I have a big sister, Gwen, who\'s two years older than me, and she\'s basically a genius','Tôi có một chị gái, Gwen, hơn tôi hai tuổi, và cô ấy gần như là một thiên tài','00:00:08.270','00:00:12.490','your-animated-story-show-6'),
@@ -2019,7 +2019,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'your-animated-story-show-6','I was punished for whatever my angel sister did','Tôi bị phạt vì bất cứ điều gì chị gái thiên thần của tôi làm','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_006.mp3',NULL,'00:00:00.120','00:15:00.090','your-animated-story-show','NO',6) */
+	/* (UUID(),'your-animated-story-show-6','I was punished for whatever my angel sister did','Tôi bị phạt vì bất cứ điều gì chị gái thiên thần của tôi làm','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_006.mp3',NULL,'00:00:00.120','00:15:00.090','your-animated-story-show',0,0,6) */
 	('And my marketing and branding expert, aka my soulmate, is this guy','Và chuyên gia marketing và thương hiệu của tôi, tức là người bạn tâm giao của tôi, chính là anh chàng này','00:14:43.070','00:14:47.430','your-animated-story-show-6'),
 	('Oh, of course, my family was also here','Ồ, tất nhiên là gia đình tôi cũng có mặt ở đây','00:14:47.650','00:14:49.950','your-animated-story-show-6'),
 	('Mom','Mẹ','00:14:49.950','00:14:50.810','your-animated-story-show-6'),
@@ -2029,7 +2029,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Three, two, one','Ba, hai, một','00:14:57.330','00:14:59.070','your-animated-story-show-6'),
 	('Oh no, sweetie','Ôi không, con yêu','00:14:59.310','00:15:00.090','your-animated-story-show-6'),
 
-	/* (UUID(),'your-animated-story-show-7','My life as a highschool girl with agent skills','Cuộc sống của tôi là nữ sinh trung học với kỹ năng điệp viên','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_007.mp3',NULL,'00:00:00.120','00:12:39.950','your-animated-story-show','NO',7) */
+	/* (UUID(),'your-animated-story-show-7','My life as a highschool girl with agent skills','Cuộc sống của tôi là nữ sinh trung học với kỹ năng điệp viên','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_007.mp3',NULL,'00:00:00.120','00:12:39.950','your-animated-story-show',0,0,7) */
 	('Augustine and I almost took down this fake Roblox plushie smuggling empire when the gang leader suddenly turned vigilant and ordered his members to armlock us','Augustine và tôi suýt nữa đã phá vỡ đế chế buôn lậu thú nhồi bông Roblox giả khi thủ lĩnh băng nhóm bỗng nhiên cảnh giác và ra lệnh cho các thành viên khóa tay chúng tôi','00:00:00.010','00:00:08.210','your-animated-story-show-7'),
 	('Pablo, you got it all wrong','Pablo, cậu hiểu sai hết rồi','00:00:08.470','00:00:10.130','your-animated-story-show-7'),
 	('We\'re here to make a business deal','Chúng tôi đến đây để thỏa thuận làm ăn','00:00:10.350','00:00:11.710','your-animated-story-show-7'),
@@ -2330,7 +2330,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Yeah, Augustine?','Ừ, Augustine?','00:12:36.150','00:12:36.950','your-animated-story-show-7'),
 	('If anything happens, I would die for you','Nếu có chuyện gì xảy ra, tôi sẽ chết vì bạn','00:12:37.310','00:12:39.950','your-animated-story-show-7'),
 
-	/* (UUID(),'your-animated-story-show-8','He\'s the school genius - I\'m a slacker','Anh ấy là thiên tài của trường - Tôi chỉ là kẻ lười biếng','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_008.mp3',NULL,'00:00:00.120','00:13:54.050','your-animated-story-show','NO',8) */
+	/* (UUID(),'your-animated-story-show-8','He\'s the school genius - I\'m a slacker','Anh ấy là thiên tài của trường - Tôi chỉ là kẻ lười biếng','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_008.mp3',NULL,'00:00:00.120','00:13:54.050','your-animated-story-show',0,0,8) */
 	('The bell had already rung, but here I was, still stuck in chemistry class','Chuông đã reo rồi, nhưng tôi vẫn bị kẹt lại trong lớp hóa','00:00:00.310','00:00:03.930','your-animated-story-show-8'),
 	('Mr. Evans won\'t stop droning on about the big test coming up','Thầy Evans không ngừng nói về bài kiểm tra lớn sắp tới','00:00:04.170','00:00:07.170','your-animated-story-show-8'),
 	('Abigail','Abigail','00:00:07.510','00:00:07.810','your-animated-story-show-8'),
@@ -2697,7 +2697,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('What do you mean?','Em có ý gì?','00:13:50.770','00:13:51.510','your-animated-story-show-8'),
 	('I mean, I think I\'ve fallen for you','Ý em là, em nghĩ em đã phải lòng anh rồi','00:13:51.850','00:13:54.050','your-animated-story-show-8'),
 
-	/* (UUID(),'your-animated-story-show-9','My face is updated everyday','Khuôn mặt của tôi thay đổi mỗi ngày','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_009.mp3',NULL,'00:00:00.120','00:14:13.160','your-animated-story-show','NO',9) */
+	/* (UUID(),'your-animated-story-show-9','My face is updated everyday','Khuôn mặt của tôi thay đổi mỗi ngày','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_009.mp3',NULL,'00:00:00.120','00:14:13.160','your-animated-story-show',0,0,9) */
 	('Hey, I\'m Madison, and I was born into a well-off family','Chào, tôi là Madison, và tôi sinh ra trong một gia đình khá giả','00:00:00.560','00:00:02.960','your-animated-story-show-9'),
 	('My parents are successful entrepreneurs who always fulfill their dearest daughter\'s wishes','Bố mẹ tôi là những doanh nhân thành đạt, luôn thực hiện mọi ước nguyện của cô con gái yêu quý','00:00:03.400','00:00:07.380','your-animated-story-show-9'),
 	('Beautiful face, supermodel figure, I have both','Gương mặt đẹp, thân hình siêu mẫu, tôi có cả hai','00:00:07.800','00:00:10.500','your-animated-story-show-9'),
@@ -3030,10 +3030,10 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'your-animated-story-show-9','My face is updated everyday','Khuôn mặt của tôi thay đổi mỗi ngày','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_009.mp3',NULL,'00:00:00.120','00:14:13.160','your-animated-story-show','NO',9) */
+	/* (UUID(),'your-animated-story-show-9','My face is updated everyday','Khuôn mặt của tôi thay đổi mỗi ngày','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_009.mp3',NULL,'00:00:00.120','00:14:13.160','your-animated-story-show',0,0,9) */
 	('You\'ve always been different in my eyes','Bạn luôn khác biệt trong mắt tôi','00:14:11.400','00:14:13.160','your-animated-story-show-9'),
 
-	/* (UUID(),'your-animated-story-show-10','My life as a mafia princess','Cuộc sống của tôi là công chúa mafia','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_010.mp3',NULL,'00:00:00.120','00:12:41.820','your-animated-story-show','NO',10) */
+	/* (UUID(),'your-animated-story-show-10','My life as a mafia princess','Cuộc sống của tôi là công chúa mafia','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_010.mp3',NULL,'00:00:00.120','00:12:41.820','your-animated-story-show',0,0,10) */
 	('It\'s the country\'s fair day today, or as I like to call it, my winning day','Hôm nay là ngày hội của đất nước, hay như tôi thích gọi, là ngày chiến thắng của tôi','00:00:00.600','00:00:04.920','your-animated-story-show-10'),
 	('See that huge plushie over there?','Nhìn cái gấu bông to kia không?','00:00:05.320','00:00:06.940','your-animated-story-show-10'),
 	('It\'s about to become mine','Sắp trở thành của tôi rồi','00:00:07.260','00:00:08.980','your-animated-story-show-10'),
@@ -3292,7 +3292,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Hmm, you do deserve a promotion','Hmm, bạn xứng đáng được thăng chức','00:12:36.080','00:12:38.300','your-animated-story-show-10'),
 	('How does vice leader and boyfriend sound?','Chức phó trưởng nhóm và bạn trai nghe thế nào?','00:12:38.800','00:12:41.820','your-animated-story-show-10'),
 
-	/* (UUID(),'your-animated-story-show-11','I experienced the most dramatic prom ever','Tôi đã trải qua một buổi prom kịch tính nhất','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_011.mp3',NULL,'00:00:00.120','00:14:00.390','your-animated-story-show','NO',11) */
+	/* (UUID(),'your-animated-story-show-11','I experienced the most dramatic prom ever','Tôi đã trải qua một buổi prom kịch tính nhất','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_011.mp3',NULL,'00:00:00.120','00:14:00.390','your-animated-story-show',0,0,11) */
 	('Hey, I\'m Esther, of the rising TikTok channel, Aesthetic, where I share my passion for fashion','Xin chào, tôi là Esther, chủ kênh TikTok đang lên "Aesthetic", nơi tôi chia sẻ đam mê thời trang của mình','00:00:00.770','00:00:06.110','your-animated-story-show-11'),
 	('Look at my newest design','Hãy nhìn thiết kế mới nhất của tôi','00:00:06.630','00:00:08.170','your-animated-story-show-11'),
 	('Cool, huh?','Ngầu chứ?','00:00:08.490','00:00:09.070','your-animated-story-show-11'),
@@ -3608,7 +3608,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('This dress right here, it\'s what I wore to senior prom','Chiếc váy này, chính là thứ tôi đã mặc trong buổi dạ hội của lớp 12','00:13:52.930','00:13:56.170','your-animated-story-show-11'),
 	('Darlene, I\'m doing a face reveal and storytime video today','Darlene, hôm nay tôi sẽ làm một video tiết lộ khuôn mặt và kể chuyện','00:13:56.170','00:14:00.390','your-animated-story-show-11'),
 
-	/* (UUID(),'your-animated-story-show-12','I used to think money can buy anything','Tôi Từng Nghĩ Tiền Có Thể Mua Được Mọi Thứ','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_012.mp3',NULL,'00:00:00.120','00:13:45.120','your-animated-story-show','NO',12) */
+	/* (UUID(),'your-animated-story-show-12','I used to think money can buy anything','Tôi Từng Nghĩ Tiền Có Thể Mua Được Mọi Thứ','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_012.mp3',NULL,'00:00:00.120','00:13:45.120','your-animated-story-show',0,0,12) */
 	('Blue sky, white clouds, golden sand..','Bầu trời xanh, mây trắng, cát vàng..','00:00:00.660','00:00:03.340','your-animated-story-show-12'),
 	('Such a perfect day for sunbathing on this luxury Hawaiian beach','Một ngày hoàn hảo để tắm nắng trên bãi biển Hawaii sang trọng này','00:00:03.340','00:00:07.039','your-animated-story-show-12'),
 	('While being served by Kirby, my arch-enemy','Trong khi bị phục vụ bởi Kirby, kẻ thù của tôi','00:00:07.280','00:00:10.540','your-animated-story-show-12'),
@@ -3930,7 +3930,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('My hard work has really paid off because they just sent me an acceptance letter','Nỗ lực của tôi đã thực sự được đền đáp vì họ vừa gửi cho tôi một lá thư chấp nhận','00:13:35.280','00:13:39.460','your-animated-story-show-12'),
 	('I might not be rich, but in all honesty, it doesn\'t matter, as I couldn\'t be happier','Tôi có thể không giàu có, nhưng thực lòng mà nói, điều đó không quan trọng, vì tôi không thể hạnh phúc hơn nữa','00:13:40.100','00:13:45.120','your-animated-story-show-12'),
 
-	/* (UUID(),'your-animated-story-show-13','My amazing life as a native American','Cuộc Sống Tuyệt Vời Của Tôi Là Một Người Mỹ Bản Địa','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_013.mp3',NULL,'00:00:00.120','00:13:47.780','your-animated-story-show','NO',13) */
+	/* (UUID(),'your-animated-story-show-13','My amazing life as a native American','Cuộc Sống Tuyệt Vời Của Tôi Là Một Người Mỹ Bản Địa','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_013.mp3',NULL,'00:00:00.120','00:13:47.780','your-animated-story-show',0,0,13) */
 	('I was walking through the forest when a scream startled me','Tôi đang đi bộ trong rừng thì một tiếng thét khiến tôi giật mình','00:00:00.340','00:00:03.660','your-animated-story-show-13'),
 	('A man running in horror from a pack of wolves','Một người đàn ông chạy trốn trong hoảng sợ khỏi một bầy sói','00:00:03.860','00:00:06.420','your-animated-story-show-13'),
 	('I quickly howled at them, then crouched down','Tôi nhanh chóng hú lên với chúng rồi crouch xuống','00:00:06.780','00:00:09.340','your-animated-story-show-13'),
@@ -4043,7 +4043,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'your-animated-story-show-13','My amazing life as a native American','Cuộc Sống Tuyệt Vời Của Tôi Là Một Người Mỹ Bản Địa','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_013.mp3',NULL,'00:00:00.120','00:13:47.780','your-animated-story-show','NO',13) */
+	/* (UUID(),'your-animated-story-show-13','My amazing life as a native American','Cuộc Sống Tuyệt Vời Của Tôi Là Một Người Mỹ Bản Địa','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_013.mp3',NULL,'00:00:00.120','00:13:47.780','your-animated-story-show',0,0,13) */
 	('Something weird is going on between these two','Có điều gì đó kỳ lạ đang xảy ra giữa hai người này','00:04:43.840','00:04:45.960','your-animated-story-show-13'),
 	('I went and met Jade, our coach','Tôi đi gặp Jade, huấn luyện viên của chúng ta','00:04:46.300','00:04:47.980','your-animated-story-show-13'),
 	('She told me about the role and introduced me to Nathan, my actor partner, which happened to be the guy I just met','Cô ấy nói về vai diễn và giới thiệu tôi với Nathan, đối tác diễn viên của tôi, người mà tình cờ là người tôi vừa gặp','00:04:48.320','00:04:54.240','your-animated-story-show-13'),
@@ -4233,7 +4233,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('I don\'t know','Tớ không biết','00:13:44.200','00:13:44.840','your-animated-story-show-13'),
 	('But wherever you are, that\'s where I\'ll be','Nhưng dù bạn ở đâu, tôi sẽ ở đó','00:13:45.180','00:13:47.780','your-animated-story-show-13'),
 
-	/* (UUID(),'your-animated-story-show-14','My biggest fears are water and... my cousin','Nỗi Sợ Lớn Nhất Của Tôi Là Nước Và... Anh Họ Tôi','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_014.mp3',NULL,'00:00:00.120','00:12:28.910','your-animated-story-show','NO',14) */
+	/* (UUID(),'your-animated-story-show-14','My biggest fears are water and... my cousin','Nỗi Sợ Lớn Nhất Của Tôi Là Nước Và... Anh Họ Tôi','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_014.mp3',NULL,'00:00:00.120','00:12:28.910','your-animated-story-show',0,0,14) */
 	('I arrived home in really good spirits after an exciting training session and my mood took an instant nosedive to see my devious cousin Caitlin holding my diary','Tôi về nhà trong tâm trạng rất vui vẻ sau một buổi huấn luyện đầy hứng khởi, nhưng tâm trạng đó ngay lập tức tụt dốc khi thấy người chị họ tinh quái Caitlin đang cầm nhật ký của tôi','00:00:00.440','00:00:10.500','your-animated-story-show-14'),
 	('Oh wow, so your crush is Leo, the swimming club captain, huh?','Ồ wow, vậy người cậu thích là Leo, đội trưởng câu lạc bộ bơi lội, đúng không?','00:00:10.880','00:00:14.600','your-animated-story-show-14'),
 	('Give me it back','Trả nó lại cho tôi','00:00:14.920','00:00:15.720','your-animated-story-show-14'),
@@ -4507,7 +4507,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('To make things right, I decided to go back to where I started','Để sửa chữa mọi thứ, tôi quyết định quay lại nơi tôi bắt đầu','00:12:17.830','00:12:21.070','your-animated-story-show-14'),
 	('I realized nothing is impossible when you believe in yourself and when you have a perfect companion to give you the gentle nudge you need','Tôi nhận ra rằng không có gì là không thể khi bạn tin vào chính mình và khi bạn có một người bạn đồng hành hoàn hảo để thúc đẩy bạn đúng lúc','00:12:21.470','00:12:28.910','your-animated-story-show-14'),
 
-	/* (UUID(),'your-animated-story-show-15','Witches are real, I know because I am one','Phù Thủy Có Thật, Tôi Biết Vì Tôi Là Một Người Trong Số Họ','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_015.mp3',NULL,'00:00:00.120','00:11:25.580','your-animated-story-show','NO',15) */
+	/* (UUID(),'your-animated-story-show-15','Witches are real, I know because I am one','Phù Thủy Có Thật, Tôi Biết Vì Tôi Là Một Người Trong Số Họ','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_015.mp3',NULL,'00:00:00.120','00:11:25.580','your-animated-story-show',0,0,15) */
 	('Hey, I\'m Sage','Chào, tôi là Sage','00:00:00.680','00:00:01.200','your-animated-story-show-15'),
 	('But you can call me...Witch','Nhưng bạn có thể gọi tôi là...Phù thủy','00:00:01.560','00:00:03.640','your-animated-story-show-15'),
 	('That\'s what all the townspeople call me anyway','Dù sao thì, tất cả mọi người trong thị trấn gọi tôi như vậy','00:00:04.080','00:00:05.840','your-animated-story-show-15'),
@@ -4757,7 +4757,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Not only did I find my sister, but also three good friends','Không chỉ tìm được chị gái tôi, mà còn ba người bạn tốt','00:11:17.120','00:11:20.380','your-animated-story-show-15'),
 	('Well, maybe two good friends, and one more than just a friend','Chà, có thể là hai người bạn tốt, và một người hơn cả bạn','00:11:20.880','00:11:25.580','your-animated-story-show-15'),
 
-	/* (UUID(),'your-animated-story-show-16','I fell in love with my ex boyfriend\'s Enemy','Tôi Đã Yêu Kẻ Thù Của Người Yêu Cũ','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_016.mp3',NULL,'00:00:00.120','00:11:09.880','your-animated-story-show','NO',16) */
+	/* (UUID(),'your-animated-story-show-16','I fell in love with my ex boyfriend\'s Enemy','Tôi Đã Yêu Kẻ Thù Của Người Yêu Cũ','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_016.mp3',NULL,'00:00:00.120','00:11:09.880','your-animated-story-show',0,0,16) */
 	('I was at a bustling party, waiting for the one who would decide whether I\'d won my cousin\'s bet or not','Tôi đang ở một bữa tiệc nhộn nhịp, chờ người sẽ quyết định liệu tôi có thắng cược với anh họ tôi hay không','00:00:00.440','00:00:06.100','your-animated-story-show-16'),
 	('Forget your dumb ex','Quên cái người yêu ngu ngốc của bạn đi','00:00:06.400','00:00:07.600','your-animated-story-show-16'),
 	('50 bucks if you get the number of the next guy walking through that door','50 đô la nếu bạn đoán đúng số của người tiếp theo đi qua cửa đó','00:00:07.840','00:00:10.920','your-animated-story-show-16'),
@@ -5017,7 +5017,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He then grabbed my face and pressed his lips against mine','Anh ta sau đó nắm lấy mặt tôi và đặt môi mình lên môi tôi','00:11:01.740','00:11:05.220','your-animated-story-show-16'),
 	('Finally, we had a legit kiss, and it was magical','Cuối cùng, chúng tôi có một nụ hôn thực sự, và nó thật kỳ diệu','00:11:05.700','00:11:09.880','your-animated-story-show-16'),
 
-	/* (UUID(),'your-animated-story-show-17','No one can touch him but me','Không Ai Được Đụng Đến Anh Ấy Ngoài Tôi','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_017.mp3',NULL,'00:00:00.120','00:10:26.310','your-animated-story-show','NO',17) */
+	/* (UUID(),'your-animated-story-show-17','No one can touch him but me','Không Ai Được Đụng Đến Anh Ấy Ngoài Tôi','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_017.mp3',NULL,'00:00:00.120','00:10:26.310','your-animated-story-show',0,0,17) */
 	('How\'s it possible that I\'ve never set foot in a place this close to me before?','Sao có thể nào mà tôi chưa từng đặt chân đến một nơi gần thế này trước đây?','00:00:00.430','00:00:03.850','your-animated-story-show-17'),
 	('It\'s kind of dark and eerie','Nơi này có vẻ tối tăm và rùng rợn','00:00:04.250','00:00:05.890','your-animated-story-show-17'),
 	('If only it was covered in flowers, then it\'d totally be a Disney castle','Giá mà nơi này được phủ đầy hoa, thì chắc chắn trông giống như một lâu đài Disney','00:00:06.390','00:00:09.630','your-animated-story-show-17'),
@@ -5056,7 +5056,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'your-animated-story-show-17','No one can touch him but me','Không Ai Được Đụng Đến Anh Ấy Ngoài Tôi','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_017.mp3',NULL,'00:00:00.120','00:10:26.310','your-animated-story-show','NO',17) */
+	/* (UUID(),'your-animated-story-show-17','No one can touch him but me','Không Ai Được Đụng Đến Anh Ấy Ngoài Tôi','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_017.mp3',NULL,'00:00:00.120','00:10:26.310','your-animated-story-show',0,0,17) */
 	('Oh master, you\'re worrying over nothing','Ồ thưa ông chủ, ông đang lo lắng vô ích thôi','00:01:22.590','00:01:24.410','your-animated-story-show-17'),
 	('I wouldn\'t even care about you','Tôi thậm chí sẽ chẳng bận tâm đến ông','00:01:24.650','00:01:26.170','your-animated-story-show-17'),
 	('But turns out, he wasn\'t worrying over nothing','Nhưng hóa ra, ông ấy không lo lắng vô ích','00:01:26.170','00:01:28.590','your-animated-story-show-17'),
@@ -5270,7 +5270,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Before you came, I really never thought I\'d ever have the courage to face moonlight','Trước khi em đến, anh chưa bao giờ nghĩ mình sẽ có đủ can đảm đối mặt với ánh trăng','00:10:17.990','00:10:22.130','your-animated-story-show-17'),
 	('But Jocasta, with you by my side now, anything feels possible','Nhưng Jocasta, có em bên cạnh giờ đây, mọi thứ đều trở nên khả thi','00:10:22.510','00:10:26.310','your-animated-story-show-17'),
 
-	/* (UUID(),'your-animated-story-show-18','I\'m a normal girl who has the face of a celebrity','Tôi Là Một Cô Gái Bình Thường Với Khuôn Mặt Của Người Nổi Tiếng','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_018.mp3',NULL,'00:00:00.120','00:14:10.860','your-animated-story-show','NO',18) */
+	/* (UUID(),'your-animated-story-show-18','I\'m a normal girl who has the face of a celebrity','Tôi Là Một Cô Gái Bình Thường Với Khuôn Mặt Của Người Nổi Tiếng','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_018.mp3',NULL,'00:00:00.120','00:14:10.860','your-animated-story-show',0,0,18) */
 	('Hey guys, my name is Leah','Chào các bạn, tôi là Leah','00:00:00.420','00:00:01.860','your-animated-story-show-18'),
 	('A typical nerdy girl and a huge fan of Ace','Một cô gái nerd điển hình và là fan cuồng của Ace','00:00:02.220','00:00:04.760','your-animated-story-show-18'),
 	('The most talented, brilliant, incredible actor ever','Diễn viên tài năng, xuất sắc và tuyệt vời nhất từ trước đến nay','00:00:04.940','00:00:08.360','your-animated-story-show-18'),
@@ -5575,7 +5575,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And our one month anniversary as well','Và kỷ niệm một tháng của chúng tôi nữa','00:14:08.220','00:14:09.940','your-animated-story-show-18'),
 	('What do you think?','Cậu nghĩ sao?','00:14:10.300','00:14:10.860','your-animated-story-show-18'),
 
-	/* (UUID(),'your-animated-story-show-19','I don\'t believe real love exists on this planet','Tôi Không Tin Tình Yêu Đích Thực Tồn Tại Trên Thế Giới Này','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_019.mp3',NULL,'00:00:00.120','00:14:50.890','your-animated-story-show','NO',19) */
+	/* (UUID(),'your-animated-story-show-19','I don\'t believe real love exists on this planet','Tôi Không Tin Tình Yêu Đích Thực Tồn Tại Trên Thế Giới Này','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_019.mp3',NULL,'00:00:00.120','00:14:50.890','your-animated-story-show',0,0,19) */
 	('How long is this gonna take?','Mất bao lâu vậy?','00:00:00.010','00:00:01.870','your-animated-story-show-19'),
 	('So much for taking care of me','Chăm sóc tôi kiểu gì thế này','00:00:02.070','00:00:03.890','your-animated-story-show-19'),
 	('Lex, starting today, I\'m locking your phone and laptop away','Lex, từ hôm nay, tôi sẽ cất điện thoại và laptop của con đi','00:00:04.350','00:00:07.830','your-animated-story-show-19'),
@@ -5888,7 +5888,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('I\'m not sure myself, but who cares?','Tôi cũng không chắc, nhưng ai quan tâm?','00:14:46.330','00:14:48.710','your-animated-story-show-19'),
 	('Alex and Timothy, signing off','Alex và Timothy, kết thúc','00:14:49.030','00:14:50.890','your-animated-story-show-19'),
 
-	/* (UUID(),'your-animated-story-show-20','An annoying handsome dormmate? I can deal with it','Bạn Cùng Ký Túc Xá Đẹp Trai Nhưng Phiền Phức? Tôi Có Thể Xử Lý Được','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_020.mp3',NULL,'00:00:00.120','00:13:16.140','your-animated-story-show','NO',20) */
+	/* (UUID(),'your-animated-story-show-20','An annoying handsome dormmate? I can deal with it','Bạn Cùng Ký Túc Xá Đẹp Trai Nhưng Phiền Phức? Tôi Có Thể Xử Lý Được','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_020.mp3',NULL,'00:00:00.120','00:13:16.140','your-animated-story-show',0,0,20) */
 	('It was the middle of the night, when flickering lights and clattering sounds awoke me from the most wonderful dream','Giữa đêm, những ánh đèn chập chờn và âm thanh lạ đánh thức tôi khỏi giấc mơ tuyệt vời nhất','00:00:00.100','00:00:06.350','your-animated-story-show-20'),
 	('Through bleary eyes, I saw my frantic parents peering over me','Qua đôi mắt mờ, tôi thấy cha mẹ tôi lo lắng nhìn tôi','00:00:06.600','00:00:09.860','your-animated-story-show-20'),
 	('Sweetie, you have to leave England right now','Cưng à, con phải rời khỏi Anh ngay bây giờ','00:00:10.080','00:00:12.240','your-animated-story-show-20'),
@@ -6067,7 +6067,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'your-animated-story-show-20','An annoying handsome dormmate? I can deal with it','Bạn Cùng Ký Túc Xá Đẹp Trai Nhưng Phiền Phức? Tôi Có Thể Xử Lý Được','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_020.mp3',NULL,'00:00:00.120','00:13:16.140','your-animated-story-show','NO',20) */
+	/* (UUID(),'your-animated-story-show-20','An annoying handsome dormmate? I can deal with it','Bạn Cùng Ký Túc Xá Đẹp Trai Nhưng Phiền Phức? Tôi Có Thể Xử Lý Được','STORIES_TEEN_STORY_02_YOUR_ANIMATED_STORY_SHOW_020.mp3',NULL,'00:00:00.120','00:13:16.140','your-animated-story-show',0,0,20) */
 	('Why\'d you say that?','Tại sao cậu lại nói vậy?','00:06:43.440','00:06:44.460','your-animated-story-show-20'),
 	('Think of it as a thank you for letting me have the balcony','Coi đó như một lời cảm ơn vì cậu đã cho tôi sử dụng ban công','00:06:45.140','00:06:47.480','your-animated-story-show-20'),
 	('It actually means a lot to me right now','Thực sự điều đó có ý nghĩa rất lớn với tôi lúc này','00:06:47.980','00:06:49.480','your-animated-story-show-20'),

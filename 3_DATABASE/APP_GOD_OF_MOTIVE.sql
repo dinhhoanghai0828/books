@@ -1,5 +1,5 @@
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'god-of-motive-1','The art of presence: a Zen master\'s lesson on presence','Nghệ thuật của sự hiện diện: Bài học của một thiền sư về sự hiện diện','STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE_001.mp3',NULL,'00:00:00.000','00:03:52.200','god-of-motive','NO',1) */
+	/* (UUID(),'god-of-motive-1','The art of presence: a Zen master\'s lesson on presence','Nghệ thuật của sự hiện diện: Bài học của một thiền sư về sự hiện diện','STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE_001.mp3',NULL,'00:00:00.000','00:03:52.200','god-of-motive',0,0,1) */
 	('The young boy approached the wise Zen master with a troubled heart','Có một cậu bé nhỏ tuổi tới gần một thiền sư thông thái với một trái tim đầy ưu tư','00:00:02.000','00:00:06.200','god-of-motive-1'),
 	('"Master," he said, I feel lost','"Thưa thầy", cậu bé nói, con cảm thấy mất phương hướng','00:00:06.900','00:00:09.400','god-of-motive-1'),
 	('"My mind is always racing and I can never find peace"','"Tâm trí con luôn quay cuồng và con không thể nào thấy bình yên"','00:00:10.100','00:00:13.700','god-of-motive-1'),
@@ -58,7 +58,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('This is God of Motive','Đây là Thần của Động lực','00:03:48.100','00:03:49.400','god-of-motive-1'),
 	('Thanks for watching and stay focused','Cảm ơn đã xem và hãy giữ tập trung','00:03:50.100','00:03:52.200','god-of-motive-1'),
 
-	/* (UUID(),'god-of-motive-2','This way you can achieve happiness in life','Cách bạn có thể đạt được hạnh phúc','STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE_002.mp3',NULL,'00:00:00.000','00:03:52.100','god-of-motive','NO',2) */
+	/* (UUID(),'god-of-motive-2','This way you can achieve happiness in life','Cách bạn có thể đạt được hạnh phúc','STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE_002.mp3',NULL,'00:00:00.000','00:03:52.100','god-of-motive',0,0,2) */
 	('The young boy sat at the edge of the river, his heart heavy with the troubles of life','Cậu bé ngồi bên bờ sông, lòng nặng trĩu với những khó khăn trong cuộc sống','00:00:02.120','00:00:07.320','god-of-motive-2'),
 	('He had heard stories of the wise Zen master who lived in the mountains, a man said to possess the secrets of happiness and peace','Cậu bé đã nghe những câu chuyện về vị Thiền sư thông thái sống trên núi, người được cho là nắm giữ những bí quyết của hạnh phúc và bình yên','00:00:08.140','00:00:15.760','god-of-motive-2'),
 	('Desperate for answers, the boy decided to seek him out','Khao khát có được câu trả lời, cậu bé quyết định đi tìm Thiền sư','00:00:16.680','00:00:19.840','god-of-motive-2'),
@@ -125,7 +125,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('This is God of Motive','Đây là Chúa Tể Động Lực','00:04:55.840','00:04:57.060','god-of-motive-2'),
 	('Thanks for watching and stay focused','Cảm ơn bạn đã xem và hãy giữ sự tập trung','00:04:57.980','00:04:59.940','god-of-motive-2'),
 
-	/* (UUID(),'god-of-motive-3','Empty your mind','Làm trống tâm trí của bạn','STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE_003.mp3',NULL,'00:00:00.000','00:03:52.100','god-of-motive','NO',3) */
+	/* (UUID(),'god-of-motive-3','Empty your mind','Làm trống tâm trí của bạn','STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE_003.mp3',NULL,'00:00:00.000','00:03:52.100','god-of-motive',0,0,3) */
 	('The young boy, brimming with curiosity, approached the wise Zen master who sat calmly by the flowing river','Cậu bé trẻ tuổi, tràn đầy sự tò mò, tiếp cận vị Thiền sư khôn ngoan, người đang ngồi yên tĩnh bên dòng sông chảy','00:00:02.120','00:00:09.420','god-of-motive-3'),
 	('The master\'s eyes were closed, and his face wore a serene expression as if he were one with the universe','Đôi mắt của Thiền sư nhắm lại, và khuôn mặt của ông toát lên vẻ bình yên như thể ông hòa làm một với vũ trụ','00:00:10.320','00:00:16.880','god-of-motive-3'),
 	('The boy, filled with questions and a desire to understand the mysteries of life, sat down beside him','Cậu bé, đầy những câu hỏi và mong muốn hiểu được những bí ẩn của cuộc sống, ngồi xuống bên cạnh ông','00:00:17.780','00:00:24.400','god-of-motive-3'),
@@ -191,7 +191,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('This is God of Motive','Đây là Chúa Tể của Động Lực','00:04:48.720','00:04:49.900','god-of-motive-3'),
 	('Thanks for watching and stay focused','Cảm ơn bạn đã xem và hãy luôn tập trung','00:04:50.880','00:04:52.740','god-of-motive-3'),
 
-	/* (UUID(),'god-of-motive-4','How to renew your mind','Làm thế nào để đổi mới tâm trí của bạn','STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE_004.mp3',NULL,'00:00:00.000','00:05:22.440','god-of-motive','NO',4) */
+	/* (UUID(),'god-of-motive-4','How to renew your mind','Làm thế nào để đổi mới tâm trí của bạn','STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE_004.mp3',NULL,'00:00:00.000','00:05:22.440','god-of-motive',0,0,4) */
 	('In a tranquil village, nestled between towering mountains and lush forests, lived a wise Zen master named Kai','Trong một ngôi làng yên bình, nằm giữa những ngọn núi cao vút và rừng cây xanh tươi, sống một thầy thiền uyên thâm tên là Kai','00:00:02.060','00:00:09.760','god-of-motive-4'),
 	('His serene presence and profound wisdom made him a beacon of peace and understanding for all who sought his guidance','Sự hiện diện bình yên và trí tuệ sâu sắc của ông đã làm cho ông trở thành ngọn hải đăng của hòa bình và sự thấu hiểu cho tất cả những ai tìm kiếm sự chỉ dẫn của ông','00:00:10.360','00:00:17.440','god-of-motive-4'),
 	('Among his many followers was a curious young boy named Hiro, who was eager to learn the secrets of a peaceful and enlightened mind','Giữa những người theo ông có một cậu bé tò mò tên là Hiro, người rất háo hức học những bí mật về một tâm trí bình an và khai sáng','00:00:18.400','00:00:26.340','god-of-motive-4'),
@@ -257,7 +257,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('This is God of Motive','Đây là God of Motive','00:05:18.220','00:05:19.600','god-of-motive-4'),
 	('Thanks for watching and stay focused','Cảm ơn các bạn đã xem và hãy giữ vững sự tập trung','00:05:20.480','00:05:22.440','god-of-motive-4'),
 
-	/* (UUID(),'god-of-motive-5','The wooden bowl','Chiếc bát gỗ','STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE_005.mp3',NULL,'00:00:00.000','00:04:39.000','god-of-motive','NO',5) */
+	/* (UUID(),'god-of-motive-5','The wooden bowl','Chiếc bát gỗ','STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE_005.mp3',NULL,'00:00:00.000','00:04:39.000','god-of-motive',0,0,5) */
 	('Once upon a time, in a serene village nestled among rolling hills, there lived a wise Zen master','Ngày xưa, ở một ngôi làng yên bình giữa những ngọn đồi nhấp nhô, có một vị thầy Zen thông thái','00:00:02.180','00:00:08.880','god-of-motive-5'),
 	('His wisdom was known far and wide, and people came from distant lands to seek his guidance','Sự khôn ngoan của thầy được biết đến rộng rãi, và mọi người từ các vùng đất xa xôi đến để tìm kiếm sự hướng dẫn của thầy','00:00:09.800','00:00:15.340','god-of-motive-5'),
 	('The master lived a simple life in a small hut by the edge of the village, where he tended to a beautiful garden filled with vibrant flowers and ancient trees','Thầy sống một cuộc đời giản dị trong một túp lều nhỏ bên rìa làng, nơi thầy chăm sóc một khu vườn đẹp với những bông hoa rực rỡ và những cây cổ thụ','00:00:16.240','00:00:25.340','god-of-motive-5'),
@@ -315,7 +315,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'god-of-motive-6','The empty boat','Chiếc thuyền trống','STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE_006.mp3',NULL,'00:00:00.000','00:04:47.860','god-of-motive','NO',6) */
+	/* (UUID(),'god-of-motive-6','The empty boat','Chiếc thuyền trống','STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE_006.mp3',NULL,'00:00:00.000','00:04:47.860','god-of-motive',0,0,6) */
 	('God Of Motive - Lesson 6: The empty boat','Thần Động Lực - Bài 6: Chiếc thuyền trống','00:00:00.000','00:04:47.860','god-of-motive-6'),
 	('Once, in a quiet village nestled at the foot of a serene mountain, lived a wise Zen master','Ngày xưa, trong một ngôi làng yên tĩnh nằm dưới chân một ngọn núi thanh bình, có một vị thiền sư khôn ngoan','00:00:02.180','00:00:08.320','god-of-motive-6'),
 	('His wisdom was known far and wide, and people traveled from distant lands to seek his guidance','Trí tuệ của thầy được biết đến rộng rãi, và mọi người từ khắp nơi đã đi xa để tìm kiếm sự hướng dẫn của thầy','00:00:09.060','00:00:15.000','god-of-motive-6'),
@@ -372,7 +372,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('This is God of Motive','Đây là Thần Động Lực','00:04:43.780','00:04:45.000','god-of-motive-6'),
 	('Thanks for watching and stay focused','Cảm ơn bạn đã xem và hãy tập trung','00:04:45.960','00:04:47.860','god-of-motive-6'),
 
-	/* (UUID(),'god-of-motive-7','The art of compassion','Nghệ thuật của lòng từ bi','STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE_007.mp3',NULL,'00:00:00.000','00:05:13.420','god-of-motive','NO',7) */
+	/* (UUID(),'god-of-motive-7','The art of compassion','Nghệ thuật của lòng từ bi','STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE_007.mp3',NULL,'00:00:00.000','00:05:13.420','god-of-motive',0,0,7) */
 	('Once upon a time in a small village nestled among the hills, there was a wise Zen master known for his deep wisdom and boundless compassion','Ngày xửa ngày xưa, trong một ngôi làng nhỏ nằm giữa những ngọn đồi, có một vị thiền sư thông thái nổi tiếng với trí tuệ sâu sắc và lòng từ bi vô bờ bến','00:00:02.180','00:00:11.100','god-of-motive-7'),
 	('One day, a young boy named Taro came to him, seeking guidance','Một ngày nọ, cậu bé tên Taro đến gặp ngài, tìm kiếm sự hướng dẫn','00:00:12.160','00:00:16.520','god-of-motive-7'),
 	('Taro was curious and full of questions about life, but he often felt overwhelmed by the challenges he faced','Taro rất tò mò và đầy câu hỏi về cuộc sống, nhưng cậu thường cảm thấy choáng ngợp bởi những thử thách mà mình phải đối mặt','00:00:17.460','00:00:24.220','god-of-motive-7'),
@@ -434,7 +434,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('This is God of Motive','Đây là Chúa Tể của Động Lực','00:05:09.340','00:05:10.660','god-of-motive-7'),
 	('Thanks for watching and stay focused','Cảm ơn các bạn đã xem và hãy luôn tập trung','00:05:10.660','00:05:13.420','god-of-motive-7'),
 
-	/* (UUID(),'god-of-motive-8','Let go of worries','Hãy buông bỏ những lo lắng','STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE_008.mp3',NULL,'00:00:00.000','00:04:04.460','god-of-motive','NO',8) */
+	/* (UUID(),'god-of-motive-8','Let go of worries','Hãy buông bỏ những lo lắng','STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE_008.mp3',NULL,'00:00:00.000','00:04:04.460','god-of-motive',0,0,8) */
 	('Once upon a time in a small village nestled between rolling hills, there lived a wise Zen master renowned for his tranquility and wisdom','Ngày xưa, trong một ngôi làng nhỏ nằm giữa những đồi núi xanh tươi, có một vị thiền sư nổi tiếng với sự bình an và trí tuệ của mình','00:00:02.180','00:00:10.980','god-of-motive-8'),
 	('One day, a young boy from the village, burdened by worries and anxieties, approached the Zen master seeking guidance','Một ngày nọ, một cậu bé trong làng, mang nặng những lo âu và phiền muộn, đã đến gặp vị thiền sư cầu xin sự chỉ dạy','00:00:11.960','00:00:19.660','god-of-motive-8'),
 	('The boy asked, Master, how can I let go of my worries?','Cậu bé hỏi, Thưa thầy, làm thế nào để con có thể buông bỏ những lo âu của mình?','00:00:20.560','00:00:24.360','god-of-motive-8'),
@@ -470,7 +470,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('This is God of Motive','Đây là Thần Động Lực','00:04:00.440','00:04:01.660','god-of-motive-8'),
 	('Thanks for watching and stay focused','Cảm ơn các bạn đã xem và hãy giữ sự tập trung','00:04:02.580','00:04:04.460','god-of-motive-8'),
 
-	/* (UUID(),'god-of-motive-9','How to get peace of mind','Làm thế nào để đạt được sự bình an trong tâm hồn','STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE_009.mp3',NULL,'00:00:00.000','00:04:40.820','god-of-motive','NO',9) */
+	/* (UUID(),'god-of-motive-9','How to get peace of mind','Làm thế nào để đạt được sự bình an trong tâm hồn','STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE_009.mp3',NULL,'00:00:00.000','00:04:40.820','god-of-motive',0,0,9) */
 	('Once upon a time, in a serene village nestled at the foot of a great mountain, there lived a wise Zen master','Ngày xưa, trong một ngôi làng yên bình nằm dưới chân một ngọn núi lớn, có một vị thiền sư thông thái','00:00:02.180','00:00:09.340','god-of-motive-9'),
 	('His wisdom was renowned far and wide, and many sought his guidance','Sự thông thái của ông được biết đến rộng rãi, và nhiều người tìm đến để nhận lời khuyên từ ông','00:00:10.240','00:00:14.320','god-of-motive-9'),
 	('One day, a young boy named Taro came to him with a heavy heart','Một ngày nọ, một cậu bé tên là Taro đến gặp ông với trái tim nặng trĩu','00:00:15.280','00:00:19.280','god-of-motive-9'),
@@ -533,7 +533,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('This is God of Motive','Đây là Thần Động Lực','00:04:36.840','00:04:38.020','god-of-motive-9'),
 	('Thanks for watching and stay focused','Cảm ơn bạn đã xem và hãy luôn tập trung','00:04:38.900','00:04:40.820','god-of-motive-9'),
 
-	/* (UUID(),'god-of-motive-10','Find mental refreshment','Tìm kiếm sự làm mới tinh thần','STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE_010.mp3',NULL,'00:00:00.000','00:04:04.500','god-of-motive','NO',10) */
+	/* (UUID(),'god-of-motive-10','Find mental refreshment','Tìm kiếm sự làm mới tinh thần','STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE_010.mp3',NULL,'00:00:00.000','00:04:04.500','god-of-motive',0,0,10) */
 	('Once, in a quiet village nestled among rolling hills, there lived a wise Zen master renowned for his profound teachings and gentle demeanor','Ngày xưa, trong một ngôi làng yên bình nằm giữa những ngọn đồi, có một vị thầy Thiền sáng suốt nổi tiếng với những lời dạy sâu sắc và phong thái nhẹ nhàng','00:00:02.120','00:00:11.180','god-of-motive-10'),
 	('Every day, villagers would gather around him, eager to absorb his wisdom like parched earth soaking in rain','Mỗi ngày, những người dân trong làng tụ tập quanh ông, háo hức hấp thụ những lời dạy của ông như đất khô uống nước mưa','00:00:12.060','00:00:19.280','god-of-motive-10'),
 	('One day, a young boy, curious and full of energy, approached the master with a question burning in his mind','Một ngày, một cậu bé trẻ tuổi, tò mò và đầy năng lượng, tiếp cận thầy với một câu hỏi cháy bỏng trong lòng','00:00:20.220','00:00:27.080','god-of-motive-10'),
@@ -576,7 +576,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'god-of-motive-11','Accepting the good in every moment','Chấp nhận điều tốt trong mỗi khoảnh khắc',NULL,NULL,'00:00:00.000','00:05:33.040','god-of-motive','NO',11) */
+	/* (UUID(),'god-of-motive-11','Accepting the good in every moment','Chấp nhận điều tốt trong mỗi khoảnh khắc',NULL,NULL,'00:00:00.000','00:05:33.040','god-of-motive',0,0,11) */
 	('Once upon a time, in a quaint village nestled between rolling hills and whispering streams, there lived a wise Zen master known for his deep understanding of life\'s mysteries','Ngày xửa ngày xưa, trong một ngôi làng nhỏ nằm giữa những ngọn đồi xanh và dòng suối thì thầm, có một thầy Thiền khôn ngoan nổi tiếng với sự hiểu biết sâu sắc về những bí ẩn của cuộc sống','00:00:02.180','00:00:13.040','god-of-motive-11'),
 	('His name was Master Koji, and his reputation extended far and wide, drawing seekers from distant lands who yearned for his teachings','Tên ông là Thầy Koji, và danh tiếng của ông đã vang xa, thu hút những người tìm kiếm từ những vùng đất xa xôi, những người khao khát học hỏi những bài học của ông','00:00:13.740','00:00:22.540','god-of-motive-11'),
 	('One summer day, as Master Koji sat under the shade of a blossoming cherry tree, contemplating the dance of sunlight on the leaves, a young boy named Takeshi approached him','Vào một ngày hè, khi Thầy Koji ngồi dưới bóng mát của cây anh đào đang nở hoa, chiêm nghiệm về vũ điệu của ánh sáng mặt trời trên lá cây, một cậu bé tên Takeshi tiếp cận ông','00:00:23.520','00:00:34.420','god-of-motive-11'),
@@ -627,7 +627,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('As we conclude this tale, let us carry forth the wisdom of Master Koji and young Takeshi a reminder to seek the good in every moment, to cherish the beauty that surrounds us, and to embrace life\'s journey with courage and grace','Khi chúng ta kết thúc câu chuyện này, hãy mang theo sự khôn ngoan của Thầy Koji và Takeshi trẻ như một lời nhắc nhở để tìm kiếm điều tốt trong mỗi khoảnh khắc, trân trọng vẻ đẹp xung quanh chúng ta, và ôm lấy hành trình cuộc sống với lòng dũng cảm và sự duyên dáng','00:05:16.500','00:05:30.840','god-of-motive-11'),
 	('This is God of Motive','Đây là Chúa Tể của Động Lực','00:05:31.660','00:05:33.040','god-of-motive-11'),
 
-	/* (UUID(),'god-of-motive-12','The still flame','Ngọn Lửa Tĩnh Lặng','STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE_012.mp3',NULL,'00:00:00.000','00:05:01.460','god-of-motive','NO',12) */
+	/* (UUID(),'god-of-motive-12','The still flame','Ngọn Lửa Tĩnh Lặng','STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE_012.mp3',NULL,'00:00:00.000','00:05:01.460','god-of-motive',0,0,12) */
 	('Once upon a time, in a serene village nestled between towering mountains and whispering rivers, there lived a wise Zen master known as the Still Flame','Ngày xưa, trong một ngôi làng yên bình nằm giữa những ngọn núi cao chọc trời và những con sông thì thầm, có một vị Thầy Thiền uyên bác được gọi là Ngọn Lửa Tĩnh Lặng','00:00:02.180','00:00:12.320','god-of-motive-12'),
 	('His presence was like a gentle breeze that calmed troubled minds, and his wisdom flowed as steadily as the stream that ran through the heart of the village','Sự hiện diện của ông giống như một làn gió nhẹ nhàng làm dịu tâm trí xáo động, và trí tuệ của ông chảy đều đặn như dòng suối xuyên qua trung tâm của ngôi làng','00:00:13.200','00:00:21.840','god-of-motive-12'),
 	('One summer day, a young boy named Koji wandered into the Zen master\'s garden','Vào một ngày hè, một cậu bé tên Koji đã lang thang vào khu vườn của Thầy Thiền','00:00:22.840','00:00:27.940','god-of-motive-12'),
@@ -670,7 +670,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('This is God of Motive','Đây là Thần Cảm Hứng','00:04:57.460','00:04:58.700','god-of-motive-12'),
 	('Thanks for watching and stay focused','Cảm ơn bạn đã xem và hãy giữ vững sự tập trung','00:04:59.520','00:05:01.460','god-of-motive-12'),
 
-	/* (UUID(),'god-of-motive-13','Life\'s secrets','Bí mật cuộc sống','STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE_013.mp3',NULL,'00:00:00.000','00:05:11.380','god-of-motive','NO',13) */
+	/* (UUID(),'god-of-motive-13','Life\'s secrets','Bí mật cuộc sống','STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE_013.mp3',NULL,'00:00:00.000','00:05:11.380','god-of-motive',0,0,13) */
 	('Once upon a time in a quiet village nestled amidst towering mountains, there lived a wise Zen master renowned for his profound teachings, and a young boy known for his curiosity and eagerness to learn','Ngày xửa ngày xưa, trong một ngôi làng yên bình nằm giữa những ngọn núi cao chót vót, có một vị thiền sư thông thái nổi tiếng với những lời dạy sâu sắc và một cậu bé được biết đến bởi sự tò mò và ham học hỏi','00:00:02.180','00:00:14.800','god-of-motive-13'),
 	('Their paths crossed one crisp autumn day, when the boy, wandering through the woods, stumbled upon the master meditating under a majestic old oak tree','Đường đời của họ giao nhau vào một ngày thu mát mẻ, khi cậu bé lang thang trong rừng, tình cờ bắt gặp vị thiền sư đang thiền định dưới một cây sồi cổ thụ uy nghi','00:00:15.620','00:00:24.960','god-of-motive-13'),
 	('The boy, intrigued by the peaceful aura surrounding the master, approached him with wide eyes and asked, Master, what is the secret to a happy life?','Cậu bé, bị cuốn hút bởi bầu không khí yên bình xung quanh vị thiền sư, tiến lại gần với đôi mắt mở to và hỏi: Thưa thầy, bí mật của cuộc sống hạnh phúc là gì?','00:00:25.740','00:00:35.920','god-of-motive-13'),
@@ -713,7 +713,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('This is God of Motive','Đây là Thần của Động Lực','00:05:07.320','00:05:08.520','god-of-motive-13'),
 	('Thanks for watching and stay focused','Cảm ơn đã theo dõi và luôn tập trung','00:05:09.420','00:05:11.380','god-of-motive-13'),
 
-	/* (UUID(),'god-of-motive-14','The broken staff','Nhân viên hư hỏng','STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE_014.mp3',NULL,'00:00:00.000','00:06:01.060','god-of-motive','NO',14) */
+	/* (UUID(),'god-of-motive-14','The broken staff','Nhân viên hư hỏng','STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE_014.mp3',NULL,'00:00:00.000','00:06:01.060','god-of-motive',0,0,14) */
 	('Once, in a tranquil village, nestled between rolling hills and whispering pines, there lived a wise Zen master known simply as Master Wu','Ngày xưa, trong một ngôi làng yên bình, nằm giữa những ngọn đồi uốn lượn và rừng thông rì rào, có một vị thiền sư thông thái được biết đến với cái tên đơn giản là Sư Phụ Wu','00:00:02.120','00:00:11.700','god-of-motive-14'),
 	('His wisdom was as vast as the sky, and his teachings touched the hearts of all who sought enlightenment','Trí tuệ của ông bao la như bầu trời, và những lời dạy của ông chạm đến trái tim của tất cả những ai tìm kiếm sự giác ngộ','00:00:12.300','00:00:18.700','god-of-motive-14'),
 	('Master Wu was renowned not only for his profound insights, but also for his kindness and patience in guiding others towards the path of inner peace','Sư Phụ Wu nổi tiếng không chỉ bởi những hiểu biết sâu sắc, mà còn bởi lòng nhân từ và sự kiên nhẫn trong việc hướng dẫn người khác trên con đường tìm kiếm sự bình yên nội tâm','00:00:19.760','00:00:28.640','god-of-motive-14'),
@@ -764,7 +764,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('This is God of Motive','Đây là Thần Động Cơ','00:05:57.020','00:05:58.220','god-of-motive-14'),
 	('Thanks for watching and stay focused','Cảm ơn vì đã theo dõi và hãy giữ sự tập trung','00:05:59.080','00:06:01.060','god-of-motive-14'),
 
-	/* (UUID(),'god-of-motive-15','Overcoming life\'s obstacles','Vượt qua trở ngại cuộc sống','STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE_015.mp3',NULL,'00:00:00.000','00:04:10.360','god-of-motive','NO',15) */
+	/* (UUID(),'god-of-motive-15','Overcoming life\'s obstacles','Vượt qua trở ngại cuộc sống','STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE_015.mp3',NULL,'00:00:00.000','00:04:10.360','god-of-motive',0,0,15) */
 	('Once upon a time in a quiet village nestled among rolling hills, there lived a wise Zen master renowned for his wisdom and compassion','Ngày xửa ngày xưa ở một ngôi làng yên bình nằm giữa những ngọn đồi uốn lượn, có một thiền sư nổi tiếng với trí tuệ và lòng từ bi','00:00:02.120','00:00:10.840','god-of-motive-15'),
 	('People from far and wide sought his counsel, hoping to find clarity and peace in their turbulent lives','Người từ khắp nơi tìm đến ông để xin lời khuyên, hy vọng tìm thấy sự sáng suốt và bình yên trong cuộc sống đầy biến động','00:00:11.600','00:00:17.980','god-of-motive-15'),
 	('Among the villagers was a young boy named Kai, whose curiosity and enthusiasm were boundless','Trong số dân làng có một cậu bé tên là Kai, người có tính tò mò và nhiệt huyết không giới hạn','00:00:18.860','00:00:25.020','god-of-motive-15'),
@@ -807,7 +807,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'god-of-motive-16','The floating cloud','Đám Mây Trôi','STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE_016.mp3',NULL,'00:00:00.000','00:05:10.640','god-of-motive','NO',16) */
+	/* (UUID(),'god-of-motive-16','The floating cloud','Đám Mây Trôi','STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE_016.mp3',NULL,'00:00:00.000','00:05:10.640','god-of-motive',0,0,16) */
 	('Once upon a time in ancient Japan, nestled deep in the mountains, there lived a wise Zen master renowned for his profound wisdom and gentle nature','Ngày xửa ngày xưa tại Nhật Bản cổ đại, nằm sâu trong những ngọn núi, sống một vị thiền sư thông thái nổi tiếng với trí tuệ sâu sắc và bản tính hiền hòa','00:00:02.180','00:00:11.540','god-of-motive-16'),
 	('He was known simply as Master Kajiro','Ông được biết đến đơn giản với tên gọi Thầy Kajiro','00:00:12.420','00:00:14.620','god-of-motive-16'),
 	('People from far and wide sought his counsel, eager to gain insights that could illuminate their paths in life','Người từ khắp nơi tìm đến để xin lời khuyên, háo hức nhận được những bài học có thể soi sáng con đường đời họ','00:00:15.520','00:00:22.120','god-of-motive-16'),
@@ -859,7 +859,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('This is God of Motive','Đây là Thần Động Lực','00:05:06.660','00:05:07.860','god-of-motive-16'),
 	('Thanks for watching and stay focused','Cảm ơn vì đã theo dõi và hãy luôn tập trung','00:05:08.800','00:05:10.640','god-of-motive-16'),
 
-	/* (UUID(),'god-of-motive-17','Wisdom by the moonlit pond','Trí Tuệ Bên Hồ Ánh Trăng','STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE_017.mp3',NULL,'00:00:00.000','00:04:21.280','god-of-motive','NO',17) */
+	/* (UUID(),'god-of-motive-17','Wisdom by the moonlit pond','Trí Tuệ Bên Hồ Ánh Trăng','STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE_017.mp3',NULL,'00:00:00.000','00:04:21.280','god-of-motive',0,0,17) */
 	('Once upon a time in a small village nestled among mist-covered mountains, there lived a wise Zen master known for his profound wisdom and a young boy named Kai, who had a heart as pure as the mountain spring','Ngày xưa, tại một ngôi làng nhỏ nằm giữa những ngọn núi phủ sương mù, có một vị thiền sư thông thái nổi tiếng với trí tuệ sâu sắc và một cậu bé tên Kai, người có trái tim trong sáng như suối nguồn trên núi','00:00:02.120','00:00:15.640','god-of-motive-17'),
 	('Their paths crossed one serene evening by a moonlit pond, where the reflection of the full moon shimmered like a silver coin tossed by the gods','Con đường của họ giao nhau vào một buổi tối tĩnh lặng bên hồ ánh trăng, nơi ánh trăng tròn phản chiếu lung linh như đồng xu bạc do các vị thần ném xuống','00:00:16.540','00:00:25.140','god-of-motive-17'),
 	('The Zen master, with his weathered face and gentle eyes, often sought solitude by the pond to meditate and contemplate the mysteries of life','Vị thiền sư, với gương mặt già nua và đôi mắt hiền từ, thường tìm sự tĩnh lặng bên hồ để thiền định và suy ngẫm về những bí ẩn của cuộc sống','00:00:25.960','00:00:34.760','god-of-motive-17'),
@@ -903,7 +903,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('This is God of Motive','Đây là God of Motive','00:05:36.860','00:05:38.280','god-of-motive-17'),
 	('Thanks for watching and stay focused','Cảm ơn vì đã xem và hãy giữ sự tập trung','00:05:39.220','00:05:41.140','god-of-motive-17'),
 
-	/* (UUID(),'god-of-motive-18','Accept the good','Chấp nhận điều tốt','STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE_018.mp3',NULL,'00:00:00.000','00:04:36.540','god-of-motive','NO',18) */
+	/* (UUID(),'god-of-motive-18','Accept the good','Chấp nhận điều tốt','STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE_018.mp3',NULL,'00:00:00.000','00:04:36.540','god-of-motive',0,0,18) */
 	('Once upon a time, in a serene village nestled between rolling hills and whispering streams, there lived a wise Zen master','Ngày xửa ngày xưa, trong một ngôi làng thanh bình nằm giữa những ngọn đồi thoai thoải và những dòng suối thì thầm, có một thiền sư thông thái','00:00:02.120','00:00:10.360','god-of-motive-18'),
 	('His presence was like a gentle breeze that calmed the hearts of those who sought his guidance','Sự hiện diện của ông như làn gió nhẹ xoa dịu tâm hồn của những người tìm kiếm sự hướng dẫn của ông','00:00:11.140','00:00:16.140','god-of-motive-18'),
 	('One day, a young boy from the village approached him with a troubled expression on his face','Một ngày nọ, một cậu bé trong làng đã tìm đến ông với vẻ mặt đầy lo âu','00:00:17.100','00:00:22.520','god-of-motive-18'),
@@ -950,7 +950,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('This is God of Motive','Đây là "God of Motive"','00:04:32.580','00:04:33.700','god-of-motive-18'),
 	('Thanks for watching and stay focused','Cảm ơn vì đã xem và hãy luôn tập trung','00:04:34.600','00:04:36.540','god-of-motive-18'),
 
-	/* (UUID(),'god-of-motive-19','The breath of wind','Hơi thở của gió','STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE_019.mp3',NULL,'00:00:00.000','00:05:31.060','god-of-motive','NO',19) */
+	/* (UUID(),'god-of-motive-19','The breath of wind','Hơi thở của gió','STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE_019.mp3',NULL,'00:00:00.000','00:05:31.060','god-of-motive',0,0,19) */
 	('Once upon a time, in a quiet village nestled among rolling hills and whispering pines, there lived a wise Zen master known simply as Master Wu','Ngày xửa ngày xưa, trong một ngôi làng yên tĩnh nép mình giữa những ngọn đồi nhấp nhô và rừng thông thì thầm, có một vị thiền sư thông thái được gọi đơn giản là Thiền sư Wu','00:00:02.180','00:00:11.960','god-of-motive-19'),
 	('His reputation for profound wisdom and compassionate teaching spread far and wide, drawing seekers from distant lands','Danh tiếng của ông về trí tuệ sâu sắc và sự dạy dỗ đầy lòng trắc ẩn đã lan rộng khắp nơi, thu hút những người tìm kiếm từ phương xa','00:00:12.640','00:00:20.200','god-of-motive-19'),
 	('One summer morning, as Master Wu sat beneath a towering oak tree, a young boy named Kai approached him timidly','Một buổi sáng mùa hè, khi Thiền sư Wu ngồi dưới gốc cây sồi cao lớn, một cậu bé tên Kai rụt rè tiến lại gần ông','00:00:21.120','00:00:28.700','god-of-motive-19'),
@@ -995,7 +995,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('This is God of Motive','Đây là Chúa tể của Động lực','00:05:26.000','00:05:28.200','god-of-motive-19'),
 	('Thanks for watching and stay focused','Cảm ơn đã xem và hãy luôn tập trung','00:05:29.120','00:05:31.060','god-of-motive-19'),
 
-	/* (UUID(),'god-of-motive-20','The closed fist','Nắm Đấm Khép','STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE_020.mp3',NULL,'00:00:00.000','00:04:19.839','god-of-motive','NO',20) */
+	/* (UUID(),'god-of-motive-20','The closed fist','Nắm Đấm Khép','STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE_020.mp3',NULL,'00:00:00.000','00:04:19.839','god-of-motive',0,0,20) */
 	('Once upon a time, in a tranquil village nestled amidst rolling hills, there lived a revered Zen master known as Master Hakuen','Ngày xửa ngày xưa, tại một ngôi làng yên bình nằm giữa những ngọn đồi nhấp nhô, có một vị thiền sư được tôn kính tên là Hakuen','00:00:02.180','00:00:10.820','god-of-motive-20'),
 	('He was renowned throughout the land for his wisdom and profound teachings on life, spirituality, and the path to enlightenment','Ông nổi tiếng khắp vùng về trí tuệ và những lời dạy sâu sắc về cuộc sống, tâm linh và con đường giác ngộ','00:00:11.700','00:00:19.320','god-of-motive-20'),
 	('Many seekers journeyed from far and wide to seek his guidance and learn from his deep reservoir of knowledge','Nhiều người tìm kiếm đã vượt đường xa để đến học hỏi và nhận được sự chỉ dẫn từ kho tri thức sâu rộng của ông','00:00:20.320','00:00:26.680','god-of-motive-20'),
@@ -1039,7 +1039,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'god-of-motive-21','Wish for a Good life','Mong Ước Một Cuộc Sống Tốt Đẹp','STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE_021.mp3',NULL,'00:00:00.000','00:04:52.720','god-of-motive','NO',21) */
+	/* (UUID(),'god-of-motive-21','Wish for a Good life','Mong Ước Một Cuộc Sống Tốt Đẹp','STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE_021.mp3',NULL,'00:00:00.000','00:04:52.720','god-of-motive',0,0,21) */
 	('Once upon a time, in a tranquil village nestled amidst the rolling hills of ancient Japan, there lived a wise Zen master renowned for his profound wisdom and compassionate heart','Ngày xưa, trong một ngôi làng yên bình nép mình giữa những ngọn đồi của Nhật Bản cổ đại, có một thiền sư thông thái nổi tiếng với sự thông tuệ sâu sắc và trái tim đầy từ bi','00:00:02.180','00:00:13.680','god-of-motive-21'),
 	('His name was Master Taikshi, and his presence was like a gentle breeze that brought peace to all who encountered him','Tên ông là Thiền Sư Taikshi, sự hiện diện của ông như làn gió nhẹ mang lại sự bình yên cho tất cả những ai gặp ông','00:00:14.560','00:00:21.340','god-of-motive-21'),
 	('One crisp morning, as Master Taikshi meditated under the shade of a majestic cherry blossom tree, a curious young boy named Kenta approached him','Một buổi sáng se lạnh, khi Thiền Sư Taikshi đang thiền định dưới bóng cây hoa anh đào hùng vĩ, một cậu bé tò mò tên là Kenta tiến lại gần ông','00:00:22.220','00:00:31.619','god-of-motive-21'),
@@ -1080,7 +1080,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('This is God of Motive','Đây là Thần động lực','00:04:48.680','00:04:49.860','god-of-motive-21'),
 	('Thanks for watching and stay focused','Cảm ơn bạn đã xem và hãy giữ sự tập trung','00:04:50.860','00:04:52.720','god-of-motive-21'),
 
-	/* (UUID(),'god-of-motive-22','The Zen Archer','Cung Thủ Thiền','STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE_022.mp3',NULL,'00:00:00.000','00:05:48.080','god-of-motive','NO',22) */
+	/* (UUID(),'god-of-motive-22','The Zen Archer','Cung Thủ Thiền','STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE_022.mp3',NULL,'00:00:00.000','00:05:48.080','god-of-motive',0,0,22) */
 	('Once upon a time in a small village nestled amidst misty mountains, there lived a renowned Zen archer known simply as Master Koji','Ngày xưa, trong một ngôi làng nhỏ nằm giữa những ngọn núi mờ sương, có một cung thủ thiền nổi tiếng, chỉ được gọi đơn giản là Thầy Koji','00:00:02.180','00:00:10.900','god-of-motive-22'),
 	('He was revered not only for his unmatched skill with a bow, but also for his wisdom and compassion that seemed to touch everyone who crossed his path','Ông được kính trọng không chỉ vì tài năng vô song với cung tên, mà còn vì trí tuệ và lòng từ bi của ông, dường như đã chạm đến mọi người gặp ông','00:00:11.620','00:00:21.100','god-of-motive-22'),
 	('One crisp autumn morning, as the village began to stir with the first light of dawn, Master Koji was found sitting under the ancient oak tree at the edge of the village','Một buổi sáng thu se lạnh, khi làng bắt đầu thức dậy với ánh sáng đầu tiên của bình minh, Thầy Koji được tìm thấy đang ngồi dưới gốc cây sồi cổ thụ bên rìa làng','00:00:21.920','00:00:32.200','god-of-motive-22'),
@@ -1128,7 +1128,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('This is God of Motive','Đây là Chúa Tể của Động lực','00:05:43.940','00:05:45.240','god-of-motive-22'),
 	('Thanks for watching and stay focused','Cảm ơn bạn đã xem và giữ sự tập trung','00:05:45.960','00:05:48.080','god-of-motive-22'),
 
-	/* (UUID(),'god-of-motive-23','Life can be arranged this way','Cuộc sống có thể được sắp xếp theo cách này','STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE_023.mp3',NULL,'00:00:00.000','00:04:21.280','god-of-motive','NO',23) */
+	/* (UUID(),'god-of-motive-23','Life can be arranged this way','Cuộc sống có thể được sắp xếp theo cách này','STORIES_INSPIRATIONAL_STORY_02_GOD_OF_MOTIVE_023.mp3',NULL,'00:00:00.000','00:04:21.280','god-of-motive',0,0,23) */
 	('Once, in a quiet village nestled among towering mountains, there lived a wise Zen master renowned for his profound wisdom and unwavering compassion','Một lần, trong một ngôi làng yên bình nằm giữa những ngọn núi cao, có một vị thiền sư thông thái nổi tiếng với trí tuệ sâu sắc và lòng từ bi kiên định','00:00:02.120','00:00:11.900','god-of-motive-23'),
 	('People from far and wide sought his guidance','Mọi người từ khắp nơi đã tìm đến để nhờ sự chỉ dẫn của ông','00:00:12.800','00:00:15.180','god-of-motive-23'),
 	('But he was particularly fond of a young boy named Kai, who was known for his curiosity and eagerness to learn','Nhưng ông đặc biệt yêu thích một cậu bé tên là Kai, người nổi tiếng với sự tò mò và khao khát học hỏi','00:00:15.900','00:00:22.700','god-of-motive-23'),
