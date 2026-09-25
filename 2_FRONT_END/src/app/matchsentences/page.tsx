@@ -53,17 +53,17 @@ const shuffleArray = <T,>(arr: T[]): T[] => [...arr].sort(() => Math.random() - 
 // Chuyen doi thoi gian tu format HH:MM:SS.mmm sang milliseconds
 const parseTimeToMs = (timeStr: string): number => {
   if (!timeStr) return 0;
-  
+
   // Format: HH:MM:SS.mmm
   const parts = timeStr.split(':');
   if (parts.length !== 3) return 0;
-  
+
   const hours = parseInt(parts[0], 10) || 0;
   const minutes = parseInt(parts[1], 10) || 0;
   const secondsParts = parts[2].split('.');
   const seconds = parseInt(secondsParts[0], 10) || 0;
   const milliseconds = secondsParts.length > 1 ? parseInt(secondsParts[1], 10) || 0 : 0;
-  
+
   return (hours * 3600 + minutes * 60 + seconds) * 1000 + milliseconds;
 };
 
@@ -90,7 +90,7 @@ const MatchSentencesPage = () => {
   const [confirmLoading, setConfirmLoading] = useState(false);
   const [openResultModal, setOpenResultModal] = useState(false);
   const [limit] = useState(DEFAULT_LIMIT);
-  
+
   const containerRef = useRef<HTMLDivElement>(null);
   const enRefs = useRef<Record<string, HTMLDivElement>>({});
   const viRefs = useRef<Record<string, HTMLDivElement>>({});
@@ -146,9 +146,9 @@ const MatchSentencesPage = () => {
       window.speechSynthesis.cancel();
 
       const cleanedText = text
-        .replace(/\s+/g, ' ')
-        .replace(/[\u200B-\u200D\uFEFF]/g, '')
-        .trim();
+          .replace(/\s+/g, ' ')
+          .replace(/[\u200B-\u200D\uFEFF]/g, '')
+          .trim();
 
       try {
         const utterance = new SpeechSynthesisUtterance(cleanedText);
@@ -182,11 +182,11 @@ const MatchSentencesPage = () => {
     try {
       const response = await getTests(volumeSlug, limitValue);
       setSentences(response);
-      
+
       // Tạo bản sao xáo trộn cho EN và VI
       const shuffledEn = shuffleArray(response);
       const shuffledVi = shuffleArray(response);
-      
+
       setShuffledEn(shuffledEn);
       setShuffledVi(shuffledVi);
     } catch (error) {
@@ -206,18 +206,18 @@ const MatchSentencesPage = () => {
 
   const handleEnClick = (id: string) => {
     if (isChecked) return;
-    
+
     // Nếu đã match rồi, không cho chọn lại
     if (matchedPairs.some(p => p.enId === id)) return;
-    
+
     // Nếu click lại vào item đã chọn, bỏ chọn
     if (selectedEn === id) {
       setSelectedEn(null);
       return;
     }
-    
+
     setSelectedEn(id);
-    
+
     // Nếu đã chọn VI, thực hiện match ngay
     if (selectedVi) {
       handleMatch(id, selectedVi);
@@ -226,18 +226,18 @@ const MatchSentencesPage = () => {
 
   const handleViClick = (id: string) => {
     if (isChecked) return;
-    
+
     // Nếu đã match rồi, không cho chọn lại
     if (matchedPairs.some(p => p.viId === id)) return;
-    
+
     // Nếu click lại vào item đã chọn, bỏ chọn
     if (selectedVi === id) {
       setSelectedVi(null);
       return;
     }
-    
+
     setSelectedVi(id);
-    
+
     // Nếu đã chọn EN, thực hiện match ngay
     if (selectedEn) {
       handleMatch(selectedEn, id);
@@ -288,15 +288,15 @@ const MatchSentencesPage = () => {
       audioRef.current = null;
     }
     setPlayingAudioId(null);
-    
+
     try {
       const audio = new Audio(formattedAudioUrl);
       audioRef.current = audio;
-      
+
       // Parse time strings to milliseconds
       const validStartTime = parseTimeToMs(startTime);
       const validEndTime = parseTimeToMs(endTime);
-      
+
       const handleTimeUpdate = () => {
         const currentTime = audio.currentTime * 1000;
         if (isFinite(validEndTime) && validEndTime > 0 && currentTime >= validEndTime) {
@@ -306,7 +306,7 @@ const MatchSentencesPage = () => {
           setPlayingAudioId(null);
         }
       };
-      
+
       const handleError = (e: Event) => {
         console.error('Audio error:', e);
         message.error('Không thể phát audio. File có thể không tồn tại hoặc định dạng không được hỗ trợ.');
@@ -315,24 +315,24 @@ const MatchSentencesPage = () => {
         audioRef.current = null;
         setPlayingAudioId(null);
       };
-      
+
       const handleEnded = () => {
         audioRef.current = null;
         setPlayingAudioId(null);
         audio.removeEventListener('ended', handleEnded);
       };
-      
+
       audio.addEventListener('timeupdate', handleTimeUpdate);
       audio.addEventListener('error', handleError);
       audio.addEventListener('ended', handleEnded);
-      
+
       // Set start time before playing
       if (isFinite(validStartTime) && validStartTime > 0) {
         audio.currentTime = validStartTime / 1000;
       }
-      
+
       setPlayingAudioId(itemId);
-      
+
       audio.play().catch(err => {
         console.error('Error playing audio:', err);
         message.error('Không thể phát audio. Vui lòng thử lại sau.');
@@ -351,55 +351,55 @@ const MatchSentencesPage = () => {
   // ============================================================
 
   const handleGetMeaning = useMemo(
-    () =>
-      debounce(async () => {
-        try {
-          const selection = window.getSelection();
-          const searchValue = selection?.toString().trim();
-          if (!searchValue) {
-            setMeaningEnKeywords([]);
-            setMeaningViKeywords([]);
-            setSelectedText('');
-            return;
-          }
+      () =>
+          debounce(async () => {
+            try {
+              const selection = window.getSelection();
+              const searchValue = selection?.toString().trim();
+              if (!searchValue) {
+                setMeaningEnKeywords([]);
+                setMeaningViKeywords([]);
+                setSelectedText('');
+                return;
+              }
 
-          setSelectedText(searchValue);
+              setSelectedText(searchValue);
 
-          const alreadyShown =
-            searchValue === meaningEnRef.current.join(' ') ||
-            searchValue === meaningViRef.current.join(' ');
-          if (alreadyShown) return;
+              const alreadyShown =
+                  searchValue === meaningEnRef.current.join(' ') ||
+                  searchValue === meaningViRef.current.join(' ');
+              if (alreadyShown) return;
 
-          const isEng = /^[a-zA-Z ]+$/.test(searchValue);
-          const res = isEng
-            ? await getMeaningWords(searchValue, null)
-            : await getMeaningWords(null, searchValue);
+              const isEng = /^[a-zA-Z ]+$/.test(searchValue);
+              const res = isEng
+                  ? await getMeaningWords(searchValue, null)
+                  : await getMeaningWords(null, searchValue);
 
-          if (res.length > 0) {
-            setMeaningEnKeywords(res.map((w) => w.eng));
-            setMeaningViKeywords(res.map((w) => w.vi));
-          } else {
-            setMeaningEnKeywords([]);
-            setMeaningViKeywords([]);
-          }
+              if (res.length > 0) {
+                setMeaningEnKeywords(res.map((w) => w.eng));
+                setMeaningViKeywords(res.map((w) => w.vi));
+              } else {
+                setMeaningEnKeywords([]);
+                setMeaningViKeywords([]);
+              }
 
-          if (selection?.rangeCount) {
-            const rect = selection.getRangeAt(0).getBoundingClientRect();
-            setTooltipPosition({
-              x: Math.min(rect.left, window.innerWidth - 380),
-              y: rect.bottom + 8,
-            });
-          }
+              if (selection?.rangeCount) {
+                const rect = selection.getRangeAt(0).getBoundingClientRect();
+                setTooltipPosition({
+                  x: Math.min(rect.left, window.innerWidth - 380),
+                  y: rect.bottom + 8,
+                });
+              }
 
-          // Auto-read if enabled
-          if (autoRead) {
-            speakText(searchValue);
-          }
-        } catch (e) {
-          console.error(e);
-        }
-      }, 300),
-    [autoRead, selectedVoice, speakText]
+              // Auto-read if enabled
+              if (autoRead) {
+                speakText(searchValue);
+              }
+            } catch (e) {
+              console.error(e);
+            }
+          }, 300),
+      [autoRead, selectedVoice, speakText]
   );
 
   useEffect(() => {
@@ -462,77 +462,77 @@ const MatchSentencesPage = () => {
     const sel = window.getSelection()?.toString().trim() || '';
     const isEng = /^[a-zA-Z ]+$/.test(sel);
     return createPortal(
-      <div style={{ ...TOOLTIP_STYLE, left: tooltipPosition.x, top: tooltipPosition.y }}>
-        <div style={TOOLTIP_BODY_STYLE}>
-          <div style={{ marginBottom: 12, paddingBottom: 8, borderBottom: '1px solid rgba(255,255,255,0.2)' }}>
-            <div style={{ marginBottom: 8 }}>
-              <Select
-                value={selectedVoice}
-                onChange={setSelectedVoice}
-                style={{ width: '100%' }}
-                placeholder="Chon giọng đọc"
-                size="small"
-                getPopupContainer={(triggerNode) => triggerNode.parentElement as HTMLElement}
-                dropdownStyle={{ zIndex: 10001 }}
-                options={availableVoices.map(voice => ({
-                  value: voice.name,
-                  label: `${voice.name} (${voice.lang})`
-                }))}
-              />
-            </div>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
-              <Button
-                type="link"
-                icon={<SoundOutlined />}
-                onClick={() => speakText(selectedText)}
-                style={{ color: '#7dd3fc', padding: 0, height: 'auto' }}
-              >
-                Đọc từ đã chọn
-              </Button>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                <span style={{ fontSize: 12, opacity: 0.8 }}>Tự động đọc</span>
-                <Switch
-                  size="small"
-                  checked={autoRead}
-                  onChange={setAutoRead}
+        <div style={{ ...TOOLTIP_STYLE, left: tooltipPosition.x, top: tooltipPosition.y }}>
+          <div style={TOOLTIP_BODY_STYLE}>
+            <div style={{ marginBottom: 12, paddingBottom: 8, borderBottom: '1px solid rgba(255,255,255,0.2)' }}>
+              <div style={{ marginBottom: 8 }}>
+                <Select
+                    value={selectedVoice}
+                    onChange={setSelectedVoice}
+                    style={{ width: '100%' }}
+                    placeholder="Chon giọng đọc"
+                    size="small"
+                    getPopupContainer={(triggerNode) => triggerNode.parentElement as HTMLElement}
+                    dropdownStyle={{ zIndex: 10001 }}
+                    options={availableVoices.map(voice => ({
+                      value: voice.name,
+                      label: `${voice.name} (${voice.lang})`
+                    }))}
                 />
               </div>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
+                <Button
+                    type="link"
+                    icon={<SoundOutlined />}
+                    onClick={() => speakText(selectedText)}
+                    style={{ color: '#7dd3fc', padding: 0, height: 'auto' }}
+                >
+                  Đọc từ đã chọn
+                </Button>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                  <span style={{ fontSize: 12, opacity: 0.8 }}>Tự động đọc</span>
+                  <Switch
+                      size="small"
+                      checked={autoRead}
+                      onChange={setAutoRead}
+                  />
+                </div>
+              </div>
             </div>
+            {meaningEnKeywords.length > 0 && meaningViKeywords.length > 0 && (
+                <>
+                  {isEng ? (
+                      <>
+                        <div style={{ fontSize: 11, opacity: 0.65, marginBottom: 4, letterSpacing: 1 }}>
+                          EN → VI
+                        </div>
+                        {meaningEnKeywords.map((word, i) => (
+                            <div key={i}>
+                              <strong style={{ color: '#7dd3fc' }}>{word}</strong>
+                              <span style={{ opacity: 0.8 }}> : </span>
+                              {meaningViKeywords[i]}
+                            </div>
+                        ))}
+                      </>
+                  ) : (
+                      <>
+                        <div style={{ fontSize: 11, opacity: 0.65, marginBottom: 4, letterSpacing: 1 }}>
+                          VI → EN
+                        </div>
+                        {meaningViKeywords.map((word, i) => (
+                            <div key={i}>
+                              <strong style={{ color: '#7dd3fc' }}>{word}</strong>
+                              <span style={{ opacity: 0.8 }}> : </span>
+                              {meaningEnKeywords[i]}
+                            </div>
+                        ))}
+                      </>
+                  )}
+                </>
+            )}
           </div>
-          {meaningEnKeywords.length > 0 && meaningViKeywords.length > 0 && (
-            <>
-              {isEng ? (
-                <>
-                  <div style={{ fontSize: 11, opacity: 0.65, marginBottom: 4, letterSpacing: 1 }}>
-                    EN → VI
-                  </div>
-                  {meaningEnKeywords.map((word, i) => (
-                    <div key={i}>
-                      <strong style={{ color: '#7dd3fc' }}>{word}</strong>
-                      <span style={{ opacity: 0.8 }}> : </span>
-                      {meaningViKeywords[i]}
-                    </div>
-                  ))}
-                </>
-              ) : (
-                <>
-                  <div style={{ fontSize: 11, opacity: 0.65, marginBottom: 4, letterSpacing: 1 }}>
-                    VI → EN
-                  </div>
-                  {meaningViKeywords.map((word, i) => (
-                    <div key={i}>
-                      <strong style={{ color: '#7dd3fc' }}>{word}</strong>
-                      <span style={{ opacity: 0.8 }}> : </span>
-                      {meaningEnKeywords[i]}
-                    </div>
-                  ))}
-                </>
-              )}
-            </>
-          )}
-        </div>
-      </div>,
-      document.body
+        </div>,
+        document.body
     );
   }, [selectedText, selectedVoice, availableVoices, autoRead, meaningEnKeywords, meaningViKeywords, tooltipPosition, speakText]);
 
@@ -588,7 +588,7 @@ const MatchSentencesPage = () => {
       const enEl = enRefs.current[selectedEn];
       const viEl = viRefs.current[selectedVi];
       const containerRect = containerRef.current?.getBoundingClientRect();
-      
+
       if (!enEl || !viEl || !containerRect) {
         setSelectedLinePath('');
         return;
@@ -596,7 +596,7 @@ const MatchSentencesPage = () => {
 
       const enRect = enEl.getBoundingClientRect();
       const viRect = viEl.getBoundingClientRect();
-      
+
       // Calculate positions relative to container
       // Subtract header offset (title + back button + margin)
       const headerOffset = 135; // Approximate height of header elements
@@ -605,11 +605,11 @@ const MatchSentencesPage = () => {
       const enY = enRect.top + enRect.height / 2 - containerRect.top - headerOffset;
       const viX = viRect.left - containerRect.left - xOffset;
       const viY = viRect.top + viRect.height / 2 - containerRect.top - headerOffset;
-      
+
       // Draw bezier curve
       const midX = (enX + viX) / 2;
       const path = `M ${enX} ${enY} C ${midX} ${enY}, ${midX} ${viY}, ${viX} ${viY}`;
-      
+
       setSelectedLinePath(path);
     };
 
@@ -617,7 +617,7 @@ const MatchSentencesPage = () => {
     const timeout1 = setTimeout(calculatePath, 0);
     const timeout2 = setTimeout(calculatePath, 50);
     const timeout3 = setTimeout(calculatePath, 100);
-    
+
     return () => {
       clearTimeout(timeout1);
       clearTimeout(timeout2);
@@ -642,23 +642,23 @@ const MatchSentencesPage = () => {
       const lines = matchedPairs.map((pair) => {
         const enEl = enRefs.current[pair.enId];
         const viEl = viRefs.current[pair.viId];
-        
+
         if (!enEl || !viEl) return null;
-        
+
         const enRect = enEl.getBoundingClientRect();
         const viRect = viEl.getBoundingClientRect();
-        
+
         const enX = enRect.right - containerRect.left - xOffset;
         const enY = enRect.top + enRect.height / 2 - containerRect.top - headerOffset;
         const viX = viRect.left - containerRect.left - xOffset;
         const viY = viRect.top + viRect.height / 2 - containerRect.top - headerOffset;
-        
+
         const isCorrect = checkedResults[pair.enId];
         const color = isCorrect === true ? '#52c41a' : isCorrect === false ? '#ff4d4f' : '#1890ff';
-        
+
         const midX = (enX + viX) / 2;
         const path = `M ${enX} ${enY} C ${midX} ${enY}, ${midX} ${viY}, ${viX} ${viY}`;
-        
+
         return { enId: pair.enId, viId: pair.viId, path, color };
       }).filter((line): line is { enId: string; viId: string; path: string; color: string } => line !== null);
 
@@ -668,7 +668,7 @@ const MatchSentencesPage = () => {
     const timeout1 = setTimeout(calculateMatchedPaths, 0);
     const timeout2 = setTimeout(calculateMatchedPaths, 50);
     const timeout3 = setTimeout(calculateMatchedPaths, 100);
-    
+
     return () => {
       clearTimeout(timeout1);
       clearTimeout(timeout2);
@@ -681,347 +681,343 @@ const MatchSentencesPage = () => {
   // ============================================================
 
   return (
-    <div className="test-container" style={{ marginTop: 50, marginBottom: 70 }} ref={containerRef}>
-      <Typography.Title level={3} className="test-title">
-        Ghép câu
-      </Typography.Title>
+      <div className="test-container" style={{ marginTop: 50, marginBottom: 70 }} ref={containerRef}>
+        <Typography.Title level={3} className="test-title">
+          Ghép câu
+        </Typography.Title>
 
-      <div className="back-button-container">
-        <Button onClick={() => router.back()} className="back-btn">
-          ⬅ Quay lại
-        </Button>
-      </div>
-
-      {loading ? (
-        <Spin size="large" />
-      ) : meaningEnKeywords.length === 0 && meaningViKeywords.length === 0 ? (
-        <div style={{ textAlign: 'center', marginTop: 50 }}>
-          <Text style={{ fontSize: 18, color: '#999' }}>Không có bài kiểm tra</Text>
+        <div className="back-button-container">
+          <Button onClick={() => router.back()} className="back-btn">
+            ⬅ Quay lại
+          </Button>
         </div>
-      ) : (
-        <div style={{ display: 'flex', gap: 100, marginTop: 30, position: 'relative' }}>
-          {/* SVG overlay for connection line */}
-          <svg
-            style={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              width: '100%',
-              height: '100%',
-              pointerEvents: 'none',
-              zIndex: 10,
-            }}
+
+        {loading ? (
+            <Spin size="large" />
+        ) : (
+            <div style={{ display: 'flex', gap: 100, marginTop: 30, position: 'relative' }}>
+              {/* SVG overlay for connection line */}
+              <svg
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    pointerEvents: 'none',
+                    zIndex: 10,
+                  }}
+              >
+                {/* Matched pairs lines */}
+                {matchedLinePaths.map((line) => (
+                    <path
+                        key={`${line.enId}-${line.viId}`}
+                        d={line.path}
+                        stroke={line.color}
+                        strokeWidth="4"
+                        fill="none"
+                    />
+                ))}
+                {/* Currently selected line */}
+                {selectedLinePath && (
+                    <path
+                        d={selectedLinePath}
+                        stroke="#fa8c16"
+                        strokeWidth="4"
+                        fill="none"
+                    />
+                )}
+              </svg>
+
+              {/* Cột tiếng Anh */}
+              <div style={{ flex: 1, overflow: 'visible' }}>
+                <Text strong style={{ fontSize: 18, marginBottom: 20, display: 'block', color: '#1890ff' }}>
+                  <span style={{ marginRight: 8 }}>🇬🇧</span>Tiếng Anh
+                </Text>
+                {shuffledEn.map((item) => {
+                  const isMatched = matchedPairs.some(p => p.enId === item.id);
+                  const match = matchedPairs.find(p => p.enId === item.id);
+                  const isCorrect = match ? checkedResults[match.enId] : undefined;
+                  const isSelected = selectedEn === item.id;
+                  const isUnselected = isChecked && !isMatched;
+                  const bothSelected = selectedEn && selectedVi;
+
+                  return (
+                      <div
+                          key={item.id}
+                          ref={(el) => { if (el) enRefs.current[item.id] = el; }}
+                          onClick={() => handleEnClick(item.id)}
+                          style={{
+                            padding: 16,
+                            marginBottom: 12,
+                            border: `2px solid ${
+                                isSelected ? '#fa8c16' :
+                                    isUnselected ? '#ff4d4f' :
+                                        isMatched ? (isCorrect === true ? '#52c41a' : isCorrect === false ? '#ff4d4f' : '#d9d9d9') : '#e8e8e8'
+                            }`,
+                            borderRadius: 12,
+                            cursor: isChecked || isMatched ? 'default' : 'pointer',
+                            backgroundColor: isSelected ? '#fff7e6' :
+                                isUnselected ? '#fff2f0' :
+                                    isMatched ? (isCorrect === true ? '#f6ffed' : isCorrect === false ? '#fff2f0' : '#fafafa') : '#fff',
+                            boxShadow: isSelected ? '0 4px 12px rgba(250, 140, 22, 0.3)' :
+                                isMatched ? '0 2px 8px rgba(0, 0, 0, 0.1)' : '0 2px 4px rgba(0, 0, 0, 0.05)',
+                            transition: 'all 0.3s ease',
+                            position: 'relative',
+                          }}
+                      >
+                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                          <Text
+                              style={{ fontSize: 15, flex: 1, userSelect: 'text' }}
+                          >{item.eng}</Text>
+                          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                            {item.audio && (
+                                <Button
+                                    type="link"
+                                    icon={playingAudioId === item.id ? <PauseOutlined style={{ color: '#1677ff' }} /> : <PlayCircleOutlined />}
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      handlePlayAudio(item.audio, item.startTime || '0', item.endTime || '0', item.id);
+                                    }}
+                                    style={{
+                                      padding: 0,
+                                      height: 'auto',
+                                    }}
+                                />
+                            )}
+                            {isMatched && match && (
+                                <div style={{
+                                  backgroundColor: isCorrect === true ? '#52c41a' : isCorrect === false ? '#ff4d4f' : '#1890ff',
+                                  color: '#fff',
+                                  borderRadius: '50%',
+                                  width: 28,
+                                  height: 28,
+                                  display: 'flex',
+                                  alignItems: 'center',
+                                  justifyContent: 'center',
+                                  fontWeight: 'bold',
+                                  fontSize: 14,
+                                }}>
+                                  {match.matchNumber}
+                                </div>
+                            )}
+                          </div>
+                        </div>
+                        {isMatched && !isChecked && (
+                            <Button
+                                type="link"
+                                size="small"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  handleUnmatch(item.id);
+                                }}
+                                style={{
+                                  marginTop: 8,
+                                  padding: 0,
+                                  color: '#ff4d4f',
+                                  fontSize: 12
+                                }}
+                            >
+                              Hủy ghép
+                            </Button>
+                        )}
+                        {isChecked && isCorrect !== undefined && (
+                            <span style={{ float: 'right', fontSize: 18 }}>
+                      {isCorrect ? '✅' : '❌'}
+                    </span>
+                        )}
+                      </div>
+                  );
+                })}
+              </div>
+
+              {/* Cột tiếng Việt */}
+              <div style={{ flex: 1, overflow: 'visible' }}>
+                <Text strong style={{ fontSize: 18, marginBottom: 20, display: 'block', color: '#52c41a' }}>
+                  <TranslationOutlined style={{ marginRight: 8 }} />Tiếng Việt
+                </Text>
+                {shuffledVi.map((item) => {
+                  const isMatched = matchedPairs.some(p => p.viId === item.id);
+                  const match = matchedPairs.find(p => p.viId === item.id);
+                  const isCorrect = match ? checkedResults[match.enId] : undefined;
+                  const isSelected = selectedVi === item.id;
+                  const isUnselected = isChecked && !isMatched;
+                  const bothSelected = selectedEn && selectedVi;
+
+                  return (
+                      <div
+                          key={item.id}
+                          ref={(el) => { if (el) viRefs.current[item.id] = el; }}
+                          onClick={() => handleViClick(item.id)}
+                          style={{
+                            padding: 16,
+                            marginBottom: 12,
+                            border: `2px solid ${
+                                isSelected ? '#fa8c16' :
+                                    isUnselected ? '#ff4d4f' :
+                                        isMatched ? (isCorrect === true ? '#52c41a' : isCorrect === false ? '#ff4d4f' : '#d9d9d9') : '#e8e8e8'
+                            }`,
+                            borderRadius: 12,
+                            cursor: isChecked || isMatched ? 'default' : 'pointer',
+                            backgroundColor: isSelected ? '#fff7e6' :
+                                isUnselected ? '#fff2f0' :
+                                    isMatched ? (isCorrect === true ? '#f6ffed' : isCorrect === false ? '#fff2f0' : '#fafafa') : '#fff',
+                            boxShadow: isSelected ? '0 4px 12px rgba(250, 140, 22, 0.3)' :
+                                isMatched ? '0 2px 8px rgba(0, 0, 0, 0.1)' : '0 2px 4px rgba(0, 0, 0, 0.05)',
+                            transition: 'all 0.3s ease',
+                            position: 'relative',
+                          }}
+                      >
+                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                          <Text
+                              style={{ fontSize: 15, flex: 1, userSelect: 'text' }}
+                              onMouseUp={(e) => { e.stopPropagation(); }}
+                              onTouchEnd={(e) => { e.stopPropagation(); }}
+                          >{item.vi}</Text>
+                          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                            {item.audio && (
+                                <Button
+                                    type="link"
+                                    icon={playingAudioId === item.id ? <PauseOutlined style={{ color: '#1677ff' }} /> : <PlayCircleOutlined />}
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      handlePlayAudio(item.audio, item.startTime || '0', item.endTime || '0', item.id);
+                                    }}
+                                    style={{
+                                      padding: 0,
+                                      height: 'auto',
+                                    }}
+                                />
+                            )}
+                            {isMatched && match && (
+                                <div style={{
+                                  backgroundColor: isCorrect === true ? '#52c41a' : isCorrect === false ? '#ff4d4f' : '#1890ff',
+                                  color: '#fff',
+                                  borderRadius: '50%',
+                                  width: 28,
+                                  height: 28,
+                                  display: 'flex',
+                                  alignItems: 'center',
+                                  justifyContent: 'center',
+                                  fontWeight: 'bold',
+                                  fontSize: 14,
+                                }}>
+                                  {match.matchNumber}
+                                </div>
+                            )}
+                          </div>
+                        </div>
+                        {isChecked && isCorrect !== undefined && (
+                            <span style={{ float: 'right', fontSize: 18 }}>
+                      {isCorrect ? '✅' : '❌'}
+                    </span>
+                        )}
+                      </div>
+                  );
+                })}
+              </div>
+            </div>
+        )}
+
+        <div className="button-container" style={{ marginTop: 40 }}>
+          <Button
+              type="primary"
+              size="large"
+              onClick={() => setOpenConfirmModal(true)}
+              className="check-btn"
+              disabled={isChecked || matchedPairs.length === 0}
+              style={{
+                height: 45,
+                fontSize: 16,
+                borderRadius: 8,
+                boxShadow: '0 4px 12px rgba(24, 144, 255, 0.3)'
+              }}
           >
-            {/* Matched pairs lines */}
-            {matchedLinePaths.map((line) => (
-              <path
-                key={`${line.enId}-${line.viId}`}
-                d={line.path}
-                stroke={line.color}
-                strokeWidth="4"
-                fill="none"
-              />
-            ))}
-            {/* Currently selected line */}
-            {selectedLinePath && (
-              <path
-                d={selectedLinePath}
-                stroke="#fa8c16"
-                strokeWidth="4"
-                fill="none"
-              />
-            )}
-          </svg>
-          
-          {/* Cột tiếng Anh */}
-          <div style={{ flex: 1, overflow: 'visible' }}>
-            <Text strong style={{ fontSize: 18, marginBottom: 20, display: 'block', color: '#1890ff' }}>
-              <span style={{ marginRight: 8 }}>🇬🇧</span>Tiếng Anh
-            </Text>
-            {shuffledEn.map((item) => {
-              const isMatched = matchedPairs.some(p => p.enId === item.id);
-              const match = matchedPairs.find(p => p.enId === item.id);
-              const isCorrect = match ? checkedResults[match.enId] : undefined;
-              const isSelected = selectedEn === item.id;
-              const isUnselected = isChecked && !isMatched;
-              const bothSelected = selectedEn && selectedVi;
-              
-              return (
-                <div
-                  key={item.id}
-                  ref={(el) => { if (el) enRefs.current[item.id] = el; }}
-                  onClick={() => handleEnClick(item.id)}
-                  style={{
-                    padding: 16,
-                    marginBottom: 12,
-                    border: `2px solid ${
-                      isSelected ? '#fa8c16' : 
-                      isUnselected ? '#ff4d4f' :
-                      isMatched ? (isCorrect === true ? '#52c41a' : isCorrect === false ? '#ff4d4f' : '#d9d9d9') : '#e8e8e8'
-                    }`,
-                    borderRadius: 12,
-                    cursor: isChecked || isMatched ? 'default' : 'pointer',
-                    backgroundColor: isSelected ? '#fff7e6' : 
-                      isUnselected ? '#fff2f0' :
-                      isMatched ? (isCorrect === true ? '#f6ffed' : isCorrect === false ? '#fff2f0' : '#fafafa') : '#fff',
-                    boxShadow: isSelected ? '0 4px 12px rgba(250, 140, 22, 0.3)' : 
-                      isMatched ? '0 2px 8px rgba(0, 0, 0, 0.1)' : '0 2px 4px rgba(0, 0, 0, 0.05)',
-                    transition: 'all 0.3s ease',
-                    position: 'relative',
-                  }}
-                >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                    <Text 
-                      style={{ fontSize: 15, flex: 1, userSelect: 'text' }}
-                    >{item.eng}</Text>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                      {item.audio && (
-                        <Button
-                          type="link"
-                          icon={playingAudioId === item.id ? <PauseOutlined style={{ color: '#1677ff' }} /> : <PlayCircleOutlined />}
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            handlePlayAudio(item.audio, item.startTime || '0', item.endTime || '0', item.id);
-                          }}
-                          style={{ 
-                            padding: 0,
-                            height: 'auto',
-                          }}
-                        />
-                      )}
-                      {isMatched && match && (
-                        <div style={{
-                          backgroundColor: isCorrect === true ? '#52c41a' : isCorrect === false ? '#ff4d4f' : '#1890ff',
-                          color: '#fff',
-                          borderRadius: '50%',
-                          width: 28,
-                          height: 28,
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          fontWeight: 'bold',
-                          fontSize: 14,
-                        }}>
-                          {match.matchNumber}
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                  {isMatched && !isChecked && (
-                    <Button
-                      type="link"
-                      size="small"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        handleUnmatch(item.id);
-                      }}
-                      style={{ 
-                        marginTop: 8, 
-                        padding: 0,
-                        color: '#ff4d4f',
-                        fontSize: 12
-                      }}
-                    >
-                      Hủy ghép
-                    </Button>
-                  )}
-                  {isChecked && isCorrect !== undefined && (
-                    <span style={{ float: 'right', fontSize: 18 }}>
-                      {isCorrect ? '✅' : '❌'}
-                    </span>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-
-          {/* Cột tiếng Việt */}
-          <div style={{ flex: 1, overflow: 'visible' }}>
-            <Text strong style={{ fontSize: 18, marginBottom: 20, display: 'block', color: '#52c41a' }}>
-              <TranslationOutlined style={{ marginRight: 8 }} />Tiếng Việt
-            </Text>
-            {shuffledVi.map((item) => {
-              const isMatched = matchedPairs.some(p => p.viId === item.id);
-              const match = matchedPairs.find(p => p.viId === item.id);
-              const isCorrect = match ? checkedResults[match.enId] : undefined;
-              const isSelected = selectedVi === item.id;
-              const isUnselected = isChecked && !isMatched;
-              const bothSelected = selectedEn && selectedVi;
-              
-              return (
-                <div
-                  key={item.id}
-                  ref={(el) => { if (el) viRefs.current[item.id] = el; }}
-                  onClick={() => handleViClick(item.id)}
-                  style={{
-                    padding: 16,
-                    marginBottom: 12,
-                    border: `2px solid ${
-                      isSelected ? '#fa8c16' : 
-                      isUnselected ? '#ff4d4f' :
-                      isMatched ? (isCorrect === true ? '#52c41a' : isCorrect === false ? '#ff4d4f' : '#d9d9d9') : '#e8e8e8'
-                    }`,
-                    borderRadius: 12,
-                    cursor: isChecked || isMatched ? 'default' : 'pointer',
-                    backgroundColor: isSelected ? '#fff7e6' : 
-                      isUnselected ? '#fff2f0' :
-                      isMatched ? (isCorrect === true ? '#f6ffed' : isCorrect === false ? '#fff2f0' : '#fafafa') : '#fff',
-                    boxShadow: isSelected ? '0 4px 12px rgba(250, 140, 22, 0.3)' : 
-                      isMatched ? '0 2px 8px rgba(0, 0, 0, 0.1)' : '0 2px 4px rgba(0, 0, 0, 0.05)',
-                    transition: 'all 0.3s ease',
-                    position: 'relative',
-                  }}
-                >
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                    <Text 
-                      style={{ fontSize: 15, flex: 1, userSelect: 'text' }}
-                      onMouseUp={(e) => { e.stopPropagation(); }}
-                      onTouchEnd={(e) => { e.stopPropagation(); }}
-                    >{item.vi}</Text>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                      {item.audio && (
-                        <Button
-                          type="link"
-                          icon={playingAudioId === item.id ? <PauseOutlined style={{ color: '#1677ff' }} /> : <PlayCircleOutlined />}
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            handlePlayAudio(item.audio, item.startTime || '0', item.endTime || '0', item.id);
-                          }}
-                          style={{ 
-                            padding: 0,
-                            height: 'auto',
-                          }}
-                        />
-                      )}
-                      {isMatched && match && (
-                        <div style={{
-                          backgroundColor: isCorrect === true ? '#52c41a' : isCorrect === false ? '#ff4d4f' : '#1890ff',
-                          color: '#fff',
-                          borderRadius: '50%',
-                          width: 28,
-                          height: 28,
-                          display: 'flex',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          fontWeight: 'bold',
-                          fontSize: 14,
-                        }}>
-                          {match.matchNumber}
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                  {isChecked && isCorrect !== undefined && (
-                    <span style={{ float: 'right', fontSize: 18 }}>
-                      {isCorrect ? '✅' : '❌'}
-                    </span>
-                  )}
-                </div>
-              );
-            })}
-          </div>
+            <LinkOutlined /> Kiểm tra kết quả
+          </Button>
+          <Button
+              onClick={reloadTest}
+              className="reload-btn"
+              size="large"
+              style={{
+                height: 45,
+                fontSize: 16,
+                borderRadius: 8
+              }}
+          >
+            <ReloadOutlined /> Làm lại
+          </Button>
         </div>
-      )}
 
-      <div className="button-container" style={{ marginTop: 40 }}>
-        <Button
-          type="primary"
-          size="large"
-          onClick={() => setOpenConfirmModal(true)}
-          className="check-btn"
-          disabled={isChecked || matchedPairs.length === 0}
-          style={{ 
-            height: 45, 
-            fontSize: 16,
-            borderRadius: 8,
-            boxShadow: '0 4px 12px rgba(24, 144, 255, 0.3)'
-          }}
-        >
-          <LinkOutlined /> Kiểm tra kết quả
-        </Button>
-        <Button 
-          onClick={reloadTest} 
-          className="reload-btn"
-          size="large"
-          style={{ 
-            height: 45, 
-            fontSize: 16,
-            borderRadius: 8
-          }}
-        >
-          <ReloadOutlined /> Làm lại
-        </Button>
-      </div>
-
-      <Modal
-        title="Xác nhận"
-        open={openConfirmModal}
-        onOk={handleCheckResults}
-        confirmLoading={confirmLoading}
-        onCancel={() => setOpenConfirmModal(false)}
-        centered
-        okText="Kiểm tra"
-        cancelText="Hủy"
-      >
-        <p style={{ fontSize: 16 }}>Bạn có chắc chắn muốn kiểm tra kết quả?</p>
-      </Modal>
-
-      {isChecked && (
         <Modal
-          title={
-            <div style={{ textAlign: 'center', fontSize: 28, fontWeight: 'bold' }}>
-              Kết quả
-            </div>
-          }
-          open={openResultModal}
-          onOk={() => setOpenResultModal(false)}
-          onCancel={() => setOpenResultModal(false)}
-          width={600}
-          centered
-          footer={
-            <div style={{ textAlign: 'center' }}>
-              <Button type="primary" onClick={() => setOpenResultModal(false)} size="large">
-                OK
-              </Button>
-              <Button onClick={() => setOpenResultModal(false)} style={{ marginLeft: 10 }} size="large">
-                Hủy
-              </Button>
-            </div>
-          }
+            title="Xác nhận"
+            open={openConfirmModal}
+            onOk={handleCheckResults}
+            confirmLoading={confirmLoading}
+            onCancel={() => setOpenConfirmModal(false)}
+            centered
+            okText="Kiểm tra"
+            cancelText="Hủy"
         >
-          <div style={{ textAlign: 'center', fontSize: 24, padding: '20px 0' }}>
-            {score === matchedPairs.length ? (
-              <CheckCircleOutlined style={{ color: '#52c41a', fontSize: 80 }} />
-            ) : (
-              <CloseCircleOutlined style={{ color: '#ff4d4f', fontSize: 80 }} />
-            )}
-          </div>
-          <Text
-            className="score"
-            style={{
-              display: 'block',
-              textAlign: 'center',
-              marginTop: 20,
-              fontSize: 24,
-              fontWeight: 'bold',
-              color: score === matchedPairs.length ? '#52c41a' : '#ff4d4f'
-            }}
-          >
-            Điểm: {score} / {matchedPairs.length}
-          </Text>
+          <p style={{ fontSize: 16 }}>Bạn có chắc chắn muốn kiểm tra kết quả?</p>
         </Modal>
-      )}
 
-      {/* Tooltip for word meaning */}
-      {renderTooltip()}
-    </div>
+        {isChecked && (
+            <Modal
+                title={
+                  <div style={{ textAlign: 'center', fontSize: 28, fontWeight: 'bold' }}>
+                    Kết quả
+                  </div>
+                }
+                open={openResultModal}
+                onOk={() => setOpenResultModal(false)}
+                onCancel={() => setOpenResultModal(false)}
+                width={600}
+                centered
+                footer={
+                  <div style={{ textAlign: 'center' }}>
+                    <Button type="primary" onClick={() => setOpenResultModal(false)} size="large">
+                      OK
+                    </Button>
+                    <Button onClick={() => setOpenResultModal(false)} style={{ marginLeft: 10 }} size="large">
+                      Hủy
+                    </Button>
+                  </div>
+                }
+            >
+              <div style={{ textAlign: 'center', fontSize: 24, padding: '20px 0' }}>
+                {score === matchedPairs.length ? (
+                    <CheckCircleOutlined style={{ color: '#52c41a', fontSize: 80 }} />
+                ) : (
+                    <CloseCircleOutlined style={{ color: '#ff4d4f', fontSize: 80 }} />
+                )}
+              </div>
+              <Text
+                  className="score"
+                  style={{
+                    display: 'block',
+                    textAlign: 'center',
+                    marginTop: 20,
+                    fontSize: 24,
+                    fontWeight: 'bold',
+                    color: score === matchedPairs.length ? '#52c41a' : '#ff4d4f'
+                  }}
+              >
+                Điểm: {score} / {matchedPairs.length}
+              </Text>
+            </Modal>
+        )}
+
+        {/* Tooltip for word meaning */}
+        {renderTooltip()}
+      </div>
   );
 };
 
 const MatchSentencesPageWrapper = () => (
-  <Suspense fallback={<Spin size="large" />}>
-    <MatchSentencesPage />
-  </Suspense>
+    <Suspense fallback={<Spin size="large" />}>
+      <MatchSentencesPage />
+    </Suspense>
 );
 
 export default MatchSentencesPageWrapper;

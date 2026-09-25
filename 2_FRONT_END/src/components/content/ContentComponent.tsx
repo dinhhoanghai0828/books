@@ -913,6 +913,8 @@ const ContentComponent = ({
         onMatchSentences={() => router.push(`/matchsentences?volumeSlug=${volumeSlug}`)}
         onFillBlanks={() => router.push(`/fillblanks?volumeSlug=${volumeSlug}`)}
         onMultipleChoice={() => router.push(`/multiple-choice?volumeSlug=${volumeSlug}`)}
+        onDictation={() => router.push(`/dictation?volumeSlug=${volumeSlug}`)}
+        onTranslation={() => router.push(`/translation?volumeSlug=${volumeSlug}`)}
         onInsertWord={handleOpenInsert}
         volumeSlug={volumeSlug}
       />
