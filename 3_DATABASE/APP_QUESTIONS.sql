@@ -354,16 +354,90 @@ INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_
     ('Q-esl-fast-beginner-1-11-030', 'esl-fast-beginner-1-11', 'How does the story end?', 'Câu chuyện kết thúc như thế nào?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	
 	/* (UUID(),'esl-fast-beginner-1-12','Group Project','Dự án nhóm','BEGINNER_01_ESL_FAST_CHILDREN_012.mp3',NULL,'00:00:00.000','00:00:34.000','esl-fast-children-1',1,1,1,12), */
+	('Q-esl-fast-beginner-1-12-001', 'esl-fast-beginner-1-12', 'What does Ms. Howard assign?', 'Cô Howard giao bài gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-12-002', 'esl-fast-beginner-1-12', 'Who assigns the project?', 'Ai giao dự án?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-12-003', 'esl-fast-beginner-1-12', 'Who does Ms. Howard want to work in groups?', 'Cô Howard muốn ai làm việc theo nhóm?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-12-004', 'esl-fast-beginner-1-12', 'How does Ms. Howard want the students to work?', 'Cô Howard muốn các học sinh làm việc như thế nào?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-12-005', 'esl-fast-beginner-1-12', 'Who works with Joe and Bill?', 'Ai làm việc cùng Joe và Bill?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-12-006', 'esl-fast-beginner-1-12', 'Who is in Adam''s group?', 'Ai ở trong nhóm của Adam?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-12-007', 'esl-fast-beginner-1-12', 'What is Adam like?', 'Adam là người như thế nào?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-12-008', 'esl-fast-beginner-1-12', 'Who is smart?', 'Ai thông minh?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-12-009', 'esl-fast-beginner-1-12', 'What can Joe do well?', 'Joe có thể làm tốt việc gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-12-010', 'esl-fast-beginner-1-12', 'Who draws well?', 'Ai vẽ đẹp?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-12-011', 'esl-fast-beginner-1-12', 'What is Bill like?', 'Bill là người như thế nào?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-12-012', 'esl-fast-beginner-1-12', 'Who is cooperative?', 'Ai là người hợp tác?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-12-013', 'esl-fast-beginner-1-12', 'What kind of group do Adam, Joe, and Bill make?', 'Adam, Joe và Bill tạo thành nhóm như thế nào?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-12-014', 'esl-fast-beginner-1-12', 'Do Adam, Joe, and Bill make a good group?', 'Adam, Joe và Bill có tạo thành một nhóm tốt không?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-12-015', 'esl-fast-beginner-1-12', 'What do they turn in?', 'Họ nộp cái gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-12-016', 'esl-fast-beginner-1-12', 'Who turns in the project?', 'Ai nộp dự án?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-12-017', 'esl-fast-beginner-1-12', 'Does Ms. Howard like the project?', 'Cô Howard có thích bài dự án không?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-12-018', 'esl-fast-beginner-1-12', 'Who likes the project?', 'Ai thích bài dự án?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-12-019', 'esl-fast-beginner-1-12', 'What does Ms. Howard give them?', 'Cô Howard cho họ cái gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-12-020', 'esl-fast-beginner-1-12', 'What kind of grade does Ms. Howard give them?', 'Cô Howard cho họ điểm như thế nào?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-12-021', 'esl-fast-beginner-1-12', 'Are Adam, Joe, and Bill happy at the end?', 'Cuối cùng Adam, Joe và Bill có vui không?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-12-022', 'esl-fast-beginner-1-12', 'Who is joyful at the end?', 'Cuối cùng ai rất vui?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-12-023', 'esl-fast-beginner-1-12', 'Why are Adam, Joe, and Bill joyful?', 'Tại sao Adam, Joe và Bill rất vui?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-12-024', 'esl-fast-beginner-1-12', 'How many students are in Adam''s group?', 'Có bao nhiêu học sinh trong nhóm của Adam?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-12-025', 'esl-fast-beginner-1-12', 'Which student is smart?', 'Học sinh nào thông minh?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-12-026', 'esl-fast-beginner-1-12', 'Which student draws well?', 'Học sinh nào vẽ đẹp?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-12-027', 'esl-fast-beginner-1-12', 'Which student is cooperative?', 'Học sinh nào hợp tác tốt?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-12-028', 'esl-fast-beginner-1-12', 'What do the three students work on together?', 'Ba học sinh cùng nhau làm gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-12-029', 'esl-fast-beginner-1-12', 'What happens after they turn in their project?', 'Điều gì xảy ra sau khi họ nộp dự án?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-12-030', 'esl-fast-beginner-1-12', 'What makes the three students joyful?', 'Điều gì khiến ba học sinh vui mừng?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	
 	/* (UUID(),'esl-fast-beginner-1-13','A Cat and A Mouse','Một con mèo và một con chuột','BEGINNER_01_ESL_FAST_CHILDREN_013.mp3',NULL,'00:00:00.000','00:00:40.000','esl-fast-children-1',1,1,1,13), */
+	('Q-esl-fast-beginner-1-13-001','esl-fast-beginner-1-13','How does the cat feel at the beginning?','Con mèo cảm thấy thế nào lúc đầu?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-13-002','esl-fast-beginner-1-13','What does the cat try to do?','Con mèo cố làm gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-13-003','esl-fast-beginner-1-13','What does the cat play with?','Con mèo chơi với cái gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-13-004','esl-fast-beginner-1-13','What does the cat scratch?','Con mèo gãi cái gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-13-005','esl-fast-beginner-1-13','What does the cat do after scratching his tummy?','Con mèo làm gì sau khi gãi bụng?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-13-006','esl-fast-beginner-1-13','What does the cat drink?','Con mèo uống gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-13-007','esl-fast-beginner-1-13','Is the cat still bored after drinking milk?','Con mèo có vẫn chán sau khi uống sữa không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-13-008','esl-fast-beginner-1-13','What does the cat see?','Con mèo nhìn thấy gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-13-009','esl-fast-beginner-1-13','What is the mouse eating?','Con chuột đang ăn gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-13-010','esl-fast-beginner-1-13','What does the cat steal?','Con mèo cướp cái gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-13-011','esl-fast-beginner-1-13','How does the mouse feel after the cat steals the cheese?','Con chuột cảm thấy thế nào sau khi con mèo cướp phô mai?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-13-012','esl-fast-beginner-1-13','Who chases the cat?','Ai đuổi theo con mèo?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-13-013','esl-fast-beginner-1-13','Who is eating cheese?','Ai đang ăn phô mai?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-13-014','esl-fast-beginner-1-13','Who steals the cheese?','Ai cướp phô mai?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-13-015','esl-fast-beginner-1-13','Who is angry?','Ai đang tức giận?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-13-016','esl-fast-beginner-1-13','What does the cat do with the yarn?','Con mèo làm gì với cuộn len?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-13-017','esl-fast-beginner-1-13','What does the cat do with his tummy?','Con mèo làm gì với bụng của mình?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-13-018','esl-fast-beginner-1-13','Does the cat take a nap?','Con mèo có chợp mắt không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-13-019','esl-fast-beginner-1-13','Does the cat drink milk?','Con mèo có uống sữa không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-13-020','esl-fast-beginner-1-13','What happens after the cat sees the mouse?','Điều gì xảy ra sau khi con mèo nhìn thấy con chuột?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-13-021','esl-fast-beginner-1-13','What happens after the mouse gets angry?','Điều gì xảy ra sau khi con chuột tức giận?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-13-022','esl-fast-beginner-1-13','What makes the mouse angry?','Điều gì khiến con chuột tức giận?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-13-023','esl-fast-beginner-1-13','Why does the cat have fun at the end?','Tại sao con mèo vui thích ở cuối câu chuyện?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-13-024','esl-fast-beginner-1-13','How many times does the cat try to have fun before seeing the mouse?','Con mèo cố tìm cách giải trí bao nhiêu hoạt động trước khi nhìn thấy chuột?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-13-025','esl-fast-beginner-1-13','Which animal is bored at the beginning?','Con vật nào buồn chán lúc đầu?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-13-026','esl-fast-beginner-1-13','Which animal is angry?','Con vật nào tức giận?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-13-027','esl-fast-beginner-1-13','Which animal chases another animal?','Con vật nào đuổi theo con vật khác?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-13-028','esl-fast-beginner-1-13','What does the mouse eat before the cat steals it?','Con chuột ăn gì trước khi con mèo cướp nó?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-13-029','esl-fast-beginner-1-13','What is the cat like at the end?','Con mèo cảm thấy thế nào ở cuối câu chuyện?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-13-030','esl-fast-beginner-1-13','What does the cat do before seeing the mouse?','Con mèo làm gì trước khi nhìn thấy con chuột?','ACTIVE',NULL,NULL,NULL,NULL),
+	
 	/* (UUID(),'esl-fast-beginner-1-14','Lemonade Stand','Quầy nước chanh','BEGINNER_01_ESL_FAST_CHILDREN_014.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-children-1',1,1,1,14), */
+	
+	
 	/* (UUID(),'esl-fast-beginner-1-15','New and Old','Mới và cũ','BEGINNER_01_ESL_FAST_CHILDREN_015.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,1,1,15), */
+	
+	
 	/* (UUID(),'esl-fast-beginner-1-16','The Kind Dentist','Nha sĩ tốt bụng','BEGINNER_01_ESL_FAST_CHILDREN_016.mp3',NULL,'00:00:00.000','00:00:40.000','esl-fast-children-1',1,1,1,16), */
+	
+	
 	/* (UUID(),'esl-fast-beginner-1-17','A Trip to the Library','Chuyến đi đến thư viện','BEGINNER_01_ESL_FAST_CHILDREN_017.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1',1,1,1,17), */
+	
+	
 	/* (UUID(),'esl-fast-beginner-1-18','A Lot of Ants','Rất nhiều con kiến','BEGINNER_01_ESL_FAST_CHILDREN_018.mp3',NULL,'00:00:00.000','00:00:28.000','esl-fast-children-1',1,1,1,18), */
+	
+	
 	/* (UUID(),'esl-fast-beginner-1-19','Picking a Costume','Chọn trang phục','BEGINNER_01_ESL_FAST_CHILDREN_019.mp3',NULL,'00:00:00.000','00:00:32.500','esl-fast-children-1',1,1,1,19), */
+	
+	
 	/* (UUID(),'esl-fast-beginner-1-20','Petting Zoo','Vườn thú cưng','BEGINNER_01_ESL_FAST_CHILDREN_020.mp3',NULL,'00:00:00.000','00:00:40.000','esl-fast-children-1',1,1,1,20), */
-		
+	
+	
 	/* (UUID(),'esl-fast-beginner-1-21','Mom is Mad','Mẹ đang tức giận','BEGINNER_01_ESL_FAST_CHILDREN_021.mp3',NULL,'00:00:00.000','00:00:35.500','esl-fast-children-1',1,1,1,21, */
     ('Q-esl-fast-beginner-1-21-001', 'esl-fast-beginner-1-21', 'Whose room is messy?', 'Phòng của ai rất bừa bộn?', 'ACTIVE', NULL, NULL, NULL, NULL),
     ('Q-esl-fast-beginner-1-21-002', 'esl-fast-beginner-1-21', 'What is under Robert''s bed?', 'Có gì ở dưới gầm giường của Robert?', 'ACTIVE', NULL, NULL, NULL, NULL),
