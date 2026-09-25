@@ -99,6 +99,9 @@ const MultipleChoicePage = () => {
     // Số câu muốn làm (0 = tất cả)
     const [questionLimit, setQuestionLimit] = useState<number>(10);
 
+    // Thứ tự câu hỏi: 'random' | 'default'
+    const [questionOrder, setQuestionOrder] = useState<'random' | 'default'>('default');
+
     // Toggle hiển thị nghĩa tiếng Việt
     // key: questionCode → hiện/ẩn nghĩa câu hỏi
     // key: `${questionCode}-${answerCode}` → hiện/ẩn nghĩa từng đáp án
@@ -173,13 +176,14 @@ const MultipleChoicePage = () => {
     // DATA FETCHING
     // ============================================================
 
-    const fetchData = async (limit?: number) => {
+    const fetchData = async (limit?: number, order?: 'random' | 'default') => {
         setLoading(true);
         try {
             const response = await getQuestionsWithAnswersByVolumeSlug(volumeSlug);
-            const shuffled = shuffleArray(response);
+            const resolvedOrder = order ?? questionOrder;
+            const arranged = resolvedOrder === 'random' ? shuffleArray(response) : [...response];
             const cap = limit ?? questionLimit;
-            setQuestions(cap > 0 ? shuffled.slice(0, cap) : shuffled);
+            setQuestions(cap > 0 ? arranged.slice(0, cap) : arranged);
         } catch (error) {
             console.error('Lỗi khi lấy dữ liệu câu hỏi:', error);
             message.error('Không thể tải dữ liệu câu hỏi');
@@ -646,7 +650,7 @@ const MultipleChoicePage = () => {
         setUserAnswers({});
         setIsChecked(false);
         setQuizResult(null);
-        await fetchData(questionLimit);
+        await fetchData(questionLimit, questionOrder);
     };
 
     // ============================================================
@@ -710,7 +714,7 @@ const MultipleChoicePage = () => {
                                 setIsChecked(false);
                                 setQuizResult({} as QuizResultType);
                                 setQuizResult(null);
-                                fetchData(val);
+                                fetchData(val, questionOrder);
                             }}
                             size="small"
                             style={{width: 100}}
@@ -721,6 +725,30 @@ const MultipleChoicePage = () => {
                                 {value: 15, label: '15 câu'},
                                 {value: 20, label: '20 câu'},
                                 {value: 30, label: '30 câu'},
+                            ]}
+                        />
+                    </div>
+
+                    {/* Thứ tự câu hỏi */}
+                    <div style={{display: 'flex', alignItems: 'center', gap: 8}}>
+                        <span style={{fontSize: 14, color: '#555', whiteSpace: 'nowrap'}}>Thứ tự:</span>
+                        <Select
+                            value={questionOrder}
+                            onChange={(val: 'random' | 'default') => {
+                                setQuestionOrder(val);
+                                stopSpeaking();
+                                setShownVi({});
+                                setShowAllVi(false);
+                                setUserAnswers({});
+                                setIsChecked(false);
+                                setQuizResult(null);
+                                fetchData(questionLimit, val);
+                            }}
+                            size="small"
+                            style={{width: 110}}
+                            options={[
+                                {value: 'random',  label: 'Ngẫu nhiên'},
+                                {value: 'default', label: 'Mặc định'},
                             ]}
                         />
                     </div>
