@@ -1,0 +1,39 @@
+1
+00:00:00,010 --> 00:00:02,210
+(Được chép bởi TurboScribe. Nâng cấp lên Không giới hạn để gỡ bỏ thông báo này.) She is a doctor.
+
+2
+00:00:03,370 --> 00:00:05,090
+She treats children.
+
+3
+00:00:06,310 --> 00:00:08,230
+She takes care of them.
+
+4
+00:00:09,270 --> 00:00:12,190
+She asks them what is wrong.
+
+5
+00:00:13,310 --> 00:00:16,310
+She tells them everything is going to be
+
+6
+00:00:16,310 --> 00:00:17,070
+okay.
+
+7
+00:00:18,150 --> 00:00:21,570
+She gives them candy at the end.
+
+8
+00:00:22,550 --> 00:00:24,290
+The children love her.
+
+9
+00:00:25,130 --> 00:00:28,270
+She gives the prescription to the parents.
+
+10
+00:00:28,270 --> 00:00:28,390
+Thanks.
