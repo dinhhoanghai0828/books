@@ -791,3 +791,406 @@ INSERT INTO QUESTIONS (QUESTION_CODE,VOLUME_SLUG,QUESTION_TEXT,QUESTION_TEXT_VI,
     ('Q-esl-fast-beginner-1-25-028', 'esl-fast-beginner-1-25', 'What happens before he goes to school?', 'Điều gì xảy ra trước khi cậu bé đến trường?', 'ACTIVE', NULL, NULL, NULL, NULL),
     ('Q-esl-fast-beginner-1-25-029', 'esl-fast-beginner-1-25', 'What happens at the end of the story?', 'Điều gì xảy ra ở cuối câu chuyện?', 'ACTIVE', NULL, NULL, NULL, NULL),
     ('Q-esl-fast-beginner-1-25-030', 'esl-fast-beginner-1-25', 'What is the main idea of the story?', 'Ý chính của câu chuyện là gì?', 'ACTIVE', NULL, NULL, NULL, NULL);
+
+INSERT INTO QUESTIONS (QUESTION_CODE,VOLUME_SLUG,QUESTION_TEXT,QUESTION_TEXT_VI,STATUS,CREATED_AT,UPDATED_AT,CREATED_BY,UPDATED_BY) VALUES
+	/* (UUID(),'esl-fast-beginner-1-26','Chris and His Fish','Chris và những chú cá của cậu ấy','BEGINNER_01_ESL_FAST_CHILDREN_026.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,0,0,26), */
+	('Q-esl-fast-beginner-1-26-001','esl-fast-beginner-1-26','What does Christopher want?','Christopher muốn gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-26-002','esl-fast-beginner-1-26','What kind of pet does Christopher want?','Christopher muốn loại thú cưng nào?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-26-003','esl-fast-beginner-1-26','What does Christopher like?','Christopher thích gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-26-004','esl-fast-beginner-1-26','Are fish easy to take care of?','Cá có dễ chăm sóc không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-26-005','esl-fast-beginner-1-26','What are fish like?','Cá như thế nào?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-26-006','esl-fast-beginner-1-26','Why does Christopher like fish?','Tại sao Christopher thích cá?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-26-007','esl-fast-beginner-1-26','What does Christopher think about himself?','Christopher nghĩ gì về bản thân mình?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-26-008','esl-fast-beginner-1-26','Does Christopher think he is responsible enough?','Christopher có nghĩ mình đủ trách nhiệm không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-26-009','esl-fast-beginner-1-26','Where does Christopher decide to go?','Christopher quyết định đi đâu?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-26-010','esl-fast-beginner-1-26','Does Christopher go to the pet store himself?','Christopher có tự mình đến cửa hàng thú cưng không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-26-011','esl-fast-beginner-1-26','What does Christopher buy?','Christopher mua gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-26-012','esl-fast-beginner-1-26','How many fish does Christopher buy?','Christopher mua bao nhiêu con cá?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-26-013','esl-fast-beginner-1-26','What is the fish like?','Con cá như thế nào?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-26-014','esl-fast-beginner-1-26','Is the fish big or small?','Con cá to hay nhỏ?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-26-015','esl-fast-beginner-1-26','What color is the fish?','Con cá có màu gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-26-016','esl-fast-beginner-1-26','Is the fish red and black?','Con cá có màu đỏ và đen không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-26-017','esl-fast-beginner-1-26','How does the fish swim?','Con cá bơi như thế nào?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-26-018','esl-fast-beginner-1-26','Does the fish swim slowly?','Con cá có bơi chậm không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-26-019','esl-fast-beginner-1-26','What does Christopher put in a tank?','Christopher thả gì vào bể?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-26-020','esl-fast-beginner-1-26','Where does Christopher put the fish?','Christopher thả con cá vào đâu?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-26-021','esl-fast-beginner-1-26','Who wants a pet?','Ai muốn một con thú cưng?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-26-022','esl-fast-beginner-1-26','Who likes fish?','Ai thích cá?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-26-023','esl-fast-beginner-1-26','Who goes to the pet store?','Ai đến cửa hàng thú cưng?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-26-024','esl-fast-beginner-1-26','Who buys a fish?','Ai mua một con cá?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-26-025','esl-fast-beginner-1-26','What is easy to take care of?','Cái gì dễ chăm sóc?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-26-026','esl-fast-beginner-1-26','What does Christopher think is pretty?','Christopher nghĩ cái gì đẹp?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-26-027','esl-fast-beginner-1-26','What does Christopher decide to do?','Christopher quyết định làm gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-26-028','esl-fast-beginner-1-26','What color is the small fish?','Con cá nhỏ có màu gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-26-029','esl-fast-beginner-1-26','What does the fish do slowly?','Con cá làm gì một cách chậm rãi?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-26-030','esl-fast-beginner-1-26','What does Christopher put the fish in?','Christopher thả con cá vào đâu?','ACTIVE',NULL,NULL,NULL,NULL),
+	
+	/* (UUID(),'esl-fast-beginner-1-27','The Oldest Brother','Anh cả','BEGINNER_01_ESL_FAST_CHILDREN_027.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,0,0,27), */
+	('Q-esl-fast-beginner-1-27-001','esl-fast-beginner-1-27','Who is the oldest brother?','Ai là anh cả?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-27-002','esl-fast-beginner-1-27','How many younger brothers does Brian have?','Brian có bao nhiêu em trai?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-27-003','esl-fast-beginner-1-27','Who does Brian help around the house?','Brian giúp ai làm việc nhà?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-27-004','esl-fast-beginner-1-27','What does Brian help his parents do?','Brian giúp bố mẹ làm gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-27-005','esl-fast-beginner-1-27','What does Brian wash?','Brian rửa gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-27-006','esl-fast-beginner-1-27','Does Brian wash the dishes?','Brian có rửa bát đĩa không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-27-007','esl-fast-beginner-1-27','What does Brian mop?','Brian lau gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-27-008','esl-fast-beginner-1-27','Does Brian mop the floor?','Brian có lau nhà không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-27-009','esl-fast-beginner-1-27','Where does Brian pick up his younger brothers?','Brian đón các em trai ở đâu?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-27-010','esl-fast-beginner-1-27','Who does Brian pick up from school?','Brian đón ai từ trường?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-27-011','esl-fast-beginner-1-27','What does Brian teach his brothers?','Brian dạy các em trai điều gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-27-012','esl-fast-beginner-1-27','Does Brian teach his brothers to do the right thing?','Brian có dạy các em làm điều đúng đắn không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-27-013','esl-fast-beginner-1-27','What does Brian tell his brothers to be?','Brian dặn các em phải như thế nào?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-27-014','esl-fast-beginner-1-27','Does Brian tell his brothers to be honest?','Brian có dặn các em phải thật thà không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-27-015','esl-fast-beginner-1-27','Does Brian tell his brothers to be kind?','Brian có dặn các em phải tốt bụng không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-27-016','esl-fast-beginner-1-27','Does Brian tell his brothers to be friendly?','Brian có dặn các em phải thân thiện không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-27-017','esl-fast-beginner-1-27','Who is kind to his family?','Ai tốt bụng với gia đình mình?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-27-018','esl-fast-beginner-1-27','Who loves his family?','Ai yêu gia đình mình?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-27-019','esl-fast-beginner-1-27','How many brothers does Brian have?','Brian có bao nhiêu người em trai?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-27-020','esl-fast-beginner-1-27','Is Brian the oldest brother?','Brian có phải là anh cả không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-27-021','esl-fast-beginner-1-27','What does Brian do at home?','Brian làm gì ở nhà?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-27-022','esl-fast-beginner-1-27','What does Brian do with the dishes?','Brian làm gì với bát đĩa?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-27-023','esl-fast-beginner-1-27','What does Brian do with the floor?','Brian làm gì với sàn nhà?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-27-024','esl-fast-beginner-1-27','Where are Brian''s younger brothers when he picks them up?','Các em trai của Brian ở đâu khi cậu đến đón?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-27-025','esl-fast-beginner-1-27','Who does Brian teach to be honest?','Brian dạy ai phải thật thà?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-27-026','esl-fast-beginner-1-27','What three qualities does Brian teach his brothers?','Brian dạy các em ba đức tính nào?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-27-027','esl-fast-beginner-1-27','What kind of brother is Brian?','Brian là người anh như thế nào?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-27-028','esl-fast-beginner-1-27','Does Brian help his parents around the house?','Brian có giúp bố mẹ làm việc nhà không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-27-029','esl-fast-beginner-1-27','What does Brian do for his younger brothers?','Brian làm gì cho các em trai?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-27-030','esl-fast-beginner-1-27','How does Brian feel about his family?','Brian cảm thấy thế nào về gia đình mình?','ACTIVE',NULL,NULL,NULL,NULL),
+	
+	/* (UUID(),'esl-fast-beginner-1-28','A Successful Trade','Một giao dịch thành công','BEGINNER_01_ESL_FAST_CHILDREN_028.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-children-1',1,0,0,28), */
+	('Q-esl-fast-beginner-1-28-001','esl-fast-beginner-1-28','What time is it?','Đến giờ gì rồi?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-28-002','esl-fast-beginner-1-28','What do the kids do?','Bọn trẻ làm gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-28-003','esl-fast-beginner-1-28','Where do the kids go?','Bọn trẻ đi đâu?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-28-004','esl-fast-beginner-1-28','How do the kids feel?','Bọn trẻ cảm thấy thế nào?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-28-005','esl-fast-beginner-1-28','Are the kids hungry?','Bọn trẻ có đói không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-28-006','esl-fast-beginner-1-28','Who has a ham sandwich?','Ai có bánh mì kẹp giăm bông?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-28-007','esl-fast-beginner-1-28','What kind of sandwich does Paul have?','Paul có loại bánh mì kẹp gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-28-008','esl-fast-beginner-1-28','Does Paul like ham?','Paul có thích thịt nguội không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-28-009','esl-fast-beginner-1-28','What does Paul want?','Paul muốn gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-28-010','esl-fast-beginner-1-28','What kind of sandwich does Paul want?','Paul muốn loại bánh mì kẹp gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-28-011','esl-fast-beginner-1-28','Who has a tuna sandwich?','Ai có bánh mì kẹp cá ngừ?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-28-012','esl-fast-beginner-1-28','What kind of sandwich does Sarah have?','Sarah có loại bánh mì kẹp gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-28-013','esl-fast-beginner-1-28','Does Sarah like tuna?','Sarah có thích cá ngừ không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-28-014','esl-fast-beginner-1-28','What does Sarah think about tuna?','Sarah nghĩ gì về cá ngừ?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-28-015','esl-fast-beginner-1-28','What does Sarah want?','Sarah muốn gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-28-016','esl-fast-beginner-1-28','What kind of sandwich does Sarah want?','Sarah muốn loại bánh mì kẹp gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-28-017','esl-fast-beginner-1-28','Who meets up?','Ai gặp nhau?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-28-018','esl-fast-beginner-1-28','What do Paul and Sarah trade?','Paul và Sarah đổi gì cho nhau?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-28-019','esl-fast-beginner-1-28','Do Paul and Sarah trade their sandwiches?','Paul và Sarah có đổi bánh mì cho nhau không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-28-020','esl-fast-beginner-1-28','What do they get after trading?','Sau khi đổi, họ có được gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-28-021','esl-fast-beginner-1-28','Who wants a tuna sandwich?','Ai muốn bánh mì kẹp cá ngừ?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-28-022','esl-fast-beginner-1-28','Who wants a ham sandwich?','Ai muốn bánh mì kẹp giăm bông?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-28-023','esl-fast-beginner-1-28','Who thinks tuna is smelly?','Ai nghĩ cá ngừ rất hôi?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-28-024','esl-fast-beginner-1-28','What does Paul not like?','Paul không thích gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-28-025','esl-fast-beginner-1-28','What does Sarah not like?','Sarah không thích gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-28-026','esl-fast-beginner-1-28','Where do the kids go to eat?','Bọn trẻ đi đâu để ăn?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-28-027','esl-fast-beginner-1-28','Why does Paul want a tuna sandwich?','Tại sao Paul muốn bánh mì kẹp cá ngừ?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-28-028','esl-fast-beginner-1-28','Why does Sarah want a ham sandwich?','Tại sao Sarah muốn bánh mì kẹp giăm bông?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-28-029','esl-fast-beginner-1-28','What happens when Paul and Sarah meet?','Điều gì xảy ra khi Paul và Sarah gặp nhau?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-28-030','esl-fast-beginner-1-28','Are Paul and Sarah happy with the trade?','Paul và Sarah có hài lòng với việc đổi bánh mì không?','ACTIVE',NULL,NULL,NULL,NULL),
+	
+	/* (UUID(),'esl-fast-beginner-1-29','Making a Snowman','Đắp người tuyết','BEGINNER_01_ESL_FAST_CHILDREN_029.mp3',NULL,'00:00:00.000','00:00:38.000','esl-fast-children-1',1,0,0,29), */
+	('Q-esl-fast-beginner-1-29-001','esl-fast-beginner-1-29','What does she want to make?','Cô bé muốn làm gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-29-002','esl-fast-beginner-1-29','What does she make?','Cô bé làm gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-29-003','esl-fast-beginner-1-29','What does she roll first?','Đầu tiên cô bé lăn gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-29-004','esl-fast-beginner-1-29','How big is the first ball of snow?','Quả cầu tuyết đầu tiên lớn cỡ nào?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-29-005','esl-fast-beginner-1-29','What does she roll second?','Tiếp theo cô bé lăn gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-29-006','esl-fast-beginner-1-29','How big is the second ball of snow?','Quả cầu tuyết thứ hai lớn cỡ nào?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-29-007','esl-fast-beginner-1-29','What does she roll finally?','Cuối cùng cô bé lăn gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-29-008','esl-fast-beginner-1-29','How big is the last ball of snow?','Quả cầu tuyết cuối cùng nhỏ cỡ nào?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-29-009','esl-fast-beginner-1-29','What is the small ball for?','Quả cầu tuyết nhỏ dùng để làm gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-29-010','esl-fast-beginner-1-29','What does she stack up?','Cô bé chồng những gì lên nhau?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-29-011','esl-fast-beginner-1-29','How does she arrange the snowballs?','Cô bé sắp xếp các quả cầu tuyết như thế nào?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-29-012','esl-fast-beginner-1-29','Which ball is on the bottom?','Quả cầu nào ở dưới cùng?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-29-013','esl-fast-beginner-1-29','Where is the largest ball?','Quả cầu lớn nhất ở đâu?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-29-014','esl-fast-beginner-1-29','What does she use for the nose?','Cô bé dùng gì làm mũi?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-29-015','esl-fast-beginner-1-29','What vegetable does she use for the nose?','Cô bé dùng loại rau củ nào làm mũi?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-29-016','esl-fast-beginner-1-29','What does she use for the eyes?','Cô bé dùng gì làm mắt?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-29-017','esl-fast-beginner-1-29','What does she use for the mouth?','Cô bé dùng gì làm miệng?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-29-018','esl-fast-beginner-1-29','What do the buttons make?','Những chiếc cúc áo làm gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-29-019','esl-fast-beginner-1-29','What is the last thing she adds?','Thứ cuối cùng cô bé thêm vào là gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-29-020','esl-fast-beginner-1-29','What does she add last to the snowman?','Cô bé thêm gì cuối cùng vào người tuyết?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-29-021','esl-fast-beginner-1-29','How many snowballs does she make?','Cô bé làm bao nhiêu quả cầu tuyết?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-29-022','esl-fast-beginner-1-29','How many sizes of snowballs does she make?','Cô bé làm các quả cầu tuyết với bao nhiêu kích cỡ?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-29-023','esl-fast-beginner-1-29','What is the largest snowball used for?','Quả cầu tuyết lớn nhất dùng để làm gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-29-024','esl-fast-beginner-1-29','What is the medium snowball used for?','Quả cầu tuyết cỡ vừa dùng để làm gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-29-025','esl-fast-beginner-1-29','What is the small snowball used for?','Quả cầu tuyết nhỏ dùng để làm gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-29-026','esl-fast-beginner-1-29','Does she stack the snowballs?','Cô bé có chồng các quả cầu tuyết lên nhau không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-29-027','esl-fast-beginner-1-29','Does she use a carrot for the nose?','Cô bé có dùng cà rốt làm mũi không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-29-028','esl-fast-beginner-1-29','Does she use buttons for the eyes and mouth?','Cô bé có dùng cúc áo làm mắt và miệng không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-29-029','esl-fast-beginner-1-29','Does she add a scarf at the end?','Cô bé có thêm khăn quàng cổ vào cuối cùng không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-29-030','esl-fast-beginner-1-29','What does the finished snowman have?','Người tuyết hoàn thành có những gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	
+	/* (UUID(),'esl-fast-beginner-1-30','English Skills','Kỹ năng tiếng Anh','BEGINNER_01_ESL_FAST_CHILDREN_030.mp3',NULL,'00:00:00.000','00:00:26.000','esl-fast-children-1',1,0,0,30), */
+	('Q-esl-fast-beginner-1-30-001','esl-fast-beginner-1-30','What grade is Donald in?','Donald đang học lớp mấy?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-30-002','esl-fast-beginner-1-30','What is Donald''s reading level like?','Trình độ đọc của Donald như thế nào?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-30-003','esl-fast-beginner-1-30','Who is in the second grade?','Ai đang học lớp hai?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-30-004','esl-fast-beginner-1-30','Does Donald''s reading level compare well with the other students?','Trình độ đọc của Donald có tốt bằng các bạn khác không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-30-005','esl-fast-beginner-1-30','What does Donald want to improve?','Donald muốn cải thiện điều gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-30-006','esl-fast-beginner-1-30','What kind of skills does Donald want to improve?','Donald muốn cải thiện loại kỹ năng nào?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-30-007','esl-fast-beginner-1-30','What language skills does Donald want to improve?','Donald muốn cải thiện kỹ năng ngôn ngữ nào?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-30-008','esl-fast-beginner-1-30','What does Donald start to do more?','Donald bắt đầu làm gì nhiều hơn?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-30-009','esl-fast-beginner-1-30','Does Donald start to read more?','Donald có bắt đầu đọc nhiều hơn không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-30-010','esl-fast-beginner-1-30','Who starts to read more?','Ai bắt đầu đọc nhiều hơn?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-30-011','esl-fast-beginner-1-30','What does Donald use when he does not know a word?','Donald dùng gì khi không biết một từ?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-30-012','esl-fast-beginner-1-30','Where does Donald look up words?','Donald tra từ ở đâu?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-30-013','esl-fast-beginner-1-30','What does Donald look up in the dictionary?','Donald tra cứu điều gì trong từ điển?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-30-014','esl-fast-beginner-1-30','Does Donald use a dictionary?','Donald có sử dụng từ điển không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-30-015','esl-fast-beginner-1-30','What kind of words does Donald look up?','Donald tra cứu những loại từ nào?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-30-016','esl-fast-beginner-1-30','What does Donald do with the meanings of the words?','Donald làm gì với nghĩa của các từ?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-30-017','esl-fast-beginner-1-30','Does Donald write down what the words mean?','Donald có ghi lại nghĩa của các từ không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-30-018','esl-fast-beginner-1-30','What does Donald write down?','Donald ghi lại điều gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-30-019','esl-fast-beginner-1-30','Who writes down the meanings of the words?','Ai ghi lại nghĩa của các từ?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-30-020','esl-fast-beginner-1-30','What does Donald read again?','Donald đọc lại điều gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-30-021','esl-fast-beginner-1-30','When does Donald read the book again?','Khi nào Donald đọc lại cuốn sách?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-30-022','esl-fast-beginner-1-30','Does Donald read the book again afterwards?','Sau đó Donald có đọc lại cuốn sách không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-30-023','esl-fast-beginner-1-30','Who reads the book again?','Ai đọc lại cuốn sách?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-30-024','esl-fast-beginner-1-30','What does Donald do after writing down the meanings?','Donald làm gì sau khi ghi lại nghĩa của các từ?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-30-025','esl-fast-beginner-1-30','Why does Donald look up words in the dictionary?','Tại sao Donald tra các từ trong từ điển?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-30-026','esl-fast-beginner-1-30','What does Donald do when he does not know a word?','Donald làm gì khi không biết một từ?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-30-027','esl-fast-beginner-1-30','What does Donald do before reading the book again?','Donald làm gì trước khi đọc lại cuốn sách?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-30-028','esl-fast-beginner-1-30','What does Donald want to get better at?','Donald muốn trở nên tốt hơn ở điều gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-30-029','esl-fast-beginner-1-30','How does Donald work on his English skills?','Donald cải thiện kỹ năng tiếng Anh của mình bằng cách nào?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-30-030','esl-fast-beginner-1-30','What does Donald do after he looks up the words?','Donald làm gì sau khi tra các từ?','ACTIVE',NULL,NULL,NULL,NULL);
+	
+INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_VI, STATUS, CREATED_AT, UPDATED_AT, CREATED_BY, UPDATED_BY) VALUES
+	/* (UUID(),'esl-fast-beginner-1-31','Practicing Drawing','Luyện tập vẽ','BEGINNER_01_ESL_FAST_CHILDREN_031.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,0,0,31), */
+	('Q-esl-fast-beginner-1-31-001', 'esl-fast-beginner-1-31', 'What am I practicing?', 'Tôi đang luyện tập điều gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-31-002', 'esl-fast-beginner-1-31', 'When do I practice drawing?', 'Tôi luyện vẽ khi nào?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-31-003', 'esl-fast-beginner-1-31', 'How often do I practice drawing?', 'Tôi luyện vẽ thường xuyên như thế nào?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-31-004', 'esl-fast-beginner-1-31', 'Who shows me new things?', 'Ai chỉ cho tôi những điều mới?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-31-005', 'esl-fast-beginner-1-31', 'What does my teacher show me?', 'Thầy cô chỉ cho tôi điều gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-31-006', 'esl-fast-beginner-1-31', 'What can I draw now?', 'Bây giờ tôi có thể vẽ gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-31-007', 'esl-fast-beginner-1-31', 'Can I draw people now?', 'Bây giờ tôi có thể vẽ người không?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-31-008', 'esl-fast-beginner-1-31', 'Can I draw animals now?', 'Bây giờ tôi có thể vẽ động vật không?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-31-009', 'esl-fast-beginner-1-31', 'Can I draw objects now?', 'Bây giờ tôi có thể vẽ đồ vật không?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-31-010', 'esl-fast-beginner-1-31', 'Why do I practice every day?', 'Tại sao tôi luyện tập mỗi ngày?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-31-011', 'esl-fast-beginner-1-31', 'Do I want to get better?', 'Tôi có muốn giỏi hơn không?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-31-012', 'esl-fast-beginner-1-31', 'How often do I practice?', 'Tôi luyện tập thường xuyên như thế nào?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-31-013', 'esl-fast-beginner-1-31', 'What do my parents tell me?', 'Bố mẹ nói gì với tôi?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-31-014', 'esl-fast-beginner-1-31', 'Do my parents think I am a good artist?', 'Bố mẹ có nghĩ tôi là một họa sĩ giỏi không?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-31-015', 'esl-fast-beginner-1-31', 'Who thinks I am a good artist?', 'Ai nghĩ tôi là một họa sĩ giỏi?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-31-016', 'esl-fast-beginner-1-31', 'What job do my parents think I can do?', 'Bố mẹ nghĩ tôi có thể làm nghề gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-31-017', 'esl-fast-beginner-1-31', 'Do my parents think I can work as an artist?', 'Bố mẹ có nghĩ tôi có thể làm nghề họa sĩ không?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-31-018', 'esl-fast-beginner-1-31', 'What do I practice?', 'Tôi luyện tập điều gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-31-019', 'esl-fast-beginner-1-31', 'What do I practice every Saturday?', 'Tôi luyện tập gì vào mỗi thứ bảy?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-31-020', 'esl-fast-beginner-1-31', 'What do I practice every Sunday?', 'Tôi luyện tập gì vào mỗi chủ nhật?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-31-021', 'esl-fast-beginner-1-31', 'Who teaches me new things?', 'Ai chỉ cho tôi những điều mới?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-31-022', 'esl-fast-beginner-1-31', 'What have I learned to draw?', 'Tôi đã học vẽ được những gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-31-023', 'esl-fast-beginner-1-31', 'Do I practice only on weekends?', 'Tôi có chỉ luyện tập vào cuối tuần không?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-31-024', 'esl-fast-beginner-1-31', 'When do I practice?', 'Tôi luyện tập khi nào?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-31-025', 'esl-fast-beginner-1-31', 'What do I want to get better at?', 'Tôi muốn giỏi hơn về điều gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-31-026', 'esl-fast-beginner-1-31', 'What do my parents think about my art?', 'Bố mẹ nghĩ gì về việc vẽ của tôi?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-31-027', 'esl-fast-beginner-1-31', 'What does my teacher help me learn?', 'Thầy cô giúp tôi học điều gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-31-028', 'esl-fast-beginner-1-31', 'Why do I practice drawing every day?', 'Tại sao tôi luyện vẽ mỗi ngày?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-31-029', 'esl-fast-beginner-1-31', 'What do I want to become better at?', 'Tôi muốn trở nên giỏi hơn về điều gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-31-030', 'esl-fast-beginner-1-31', 'What do my parents think I can do as a job?', 'Bố mẹ nghĩ tôi có thể làm nghề gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
+		
+	/* (UUID(),'esl-fast-beginner-1-32','A Day for Ice Cream','Một ngày dành cho kem','BEGINNER_01_ESL_FAST_CHILDREN_032.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-children-1',1,0,0,32), */
+	('Q-esl-fast-beginner-1-32-001','esl-fast-beginner-1-32','What kind of day is it?','Hôm nay là một ngày như thế nào?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-32-002','esl-fast-beginner-1-32','How does she feel?','Cô bé cảm thấy thế nào?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-32-003','esl-fast-beginner-1-32','Why does she feel hot?','Tại sao cô bé cảm thấy nóng?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-32-004','esl-fast-beginner-1-32','What does she use to fan herself?','Cô bé dùng gì để tự quạt?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-32-005','esl-fast-beginner-1-32','Does the book make her feel cool?','Quyển sách có giúp cô bé cảm thấy mát không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-32-006','esl-fast-beginner-1-32','Is it still hot?','Trời vẫn nóng phải không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-32-007','esl-fast-beginner-1-32','What does she turn on?','Cô bé bật gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-32-008','esl-fast-beginner-1-32','Does the air conditioner cool her down?','Điều hòa có làm cô bé mát hơn không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-32-009','esl-fast-beginner-1-32','What does she do after turning on the air conditioner?','Cô bé làm gì sau khi bật điều hòa?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-32-010','esl-fast-beginner-1-32','Where does she jump?','Cô bé nhảy xuống đâu?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-32-011','esl-fast-beginner-1-32','Does she jump into a pool?','Cô bé có nhảy xuống hồ bơi không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-32-012','esl-fast-beginner-1-32','Is she still hot after swimming?','Sau khi bơi cô bé vẫn nóng phải không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-32-013','esl-fast-beginner-1-32','Who has an idea?','Ai nảy ra một ý tưởng?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-32-014','esl-fast-beginner-1-32','Who takes her to the ice cream shop?','Ai đưa cô bé đến tiệm kem?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-32-015','esl-fast-beginner-1-32','Where does her dad take her?','Bố cô bé đưa cô bé đi đâu?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-32-016','esl-fast-beginner-1-32','What does her dad want to get?','Bố cô bé muốn lấy gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-32-017','esl-fast-beginner-1-32','What do they share?','Họ chia sẻ món gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-32-018','esl-fast-beginner-1-32','What kind of ice cream do they share?','Họ chia nhau loại kem gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-32-019','esl-fast-beginner-1-32','Does she feel hot anymore?','Cô bé còn cảm thấy nóng nữa không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-32-020','esl-fast-beginner-1-32','How does she feel at the end?','Cuối cùng cô bé cảm thấy thế nào?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-32-021','esl-fast-beginner-1-32','What does she do with the book?','Cô bé làm gì với quyển sách?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-32-022','esl-fast-beginner-1-32','What does she turn on because she feels hot?','Cô bé bật gì vì cảm thấy nóng?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-32-023','esl-fast-beginner-1-32','What does she do to try to cool down?','Cô bé làm gì để cố gắng làm mát cơ thể?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-32-024','esl-fast-beginner-1-32','Does the pool make her feel cool?','Hồ bơi có làm cô bé thấy mát không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-32-025','esl-fast-beginner-1-32','Who is with her at the ice cream shop?','Ai ở cùng cô bé tại tiệm kem?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-32-026','esl-fast-beginner-1-32','What does her dad have?','Bố cô bé có gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-32-027','esl-fast-beginner-1-32','Where do they go for ice cream?','Họ đi đâu để ăn kem?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-32-028','esl-fast-beginner-1-32','Do they share the banana split?','Họ có chia nhau phần kem chuối không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-32-029','esl-fast-beginner-1-32','What happens after they eat ice cream?','Điều gì xảy ra sau khi họ ăn kem?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-32-030','esl-fast-beginner-1-32','Why does she stop feeling hot?','Tại sao cô bé không còn cảm thấy nóng nữa?','ACTIVE',NULL,NULL,NULL,NULL),
+		
+	/* (UUID(),'esl-fast-beginner-1-33','Taking Tests','Làm bài kiểm tra','BEGINNER_01_ESL_FAST_CHILDREN_033.mp3',NULL,'00:00:00.000','00:00:25.000','esl-fast-children-1',1,0,0,33), */
+	('Q-esl-fast-beginner-1-33-001','esl-fast-beginner-1-33','What does he have tomorrow?','Ngày mai cậu bé có gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-33-002','esl-fast-beginner-1-33','When does he have a test?','Khi nào cậu bé có bài kiểm tra?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-33-003','esl-fast-beginner-1-33','Does he want to study?','Cậu bé có muốn học bài không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-33-004','esl-fast-beginner-1-33','What does he not want to do?','Cậu bé không muốn làm gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-33-005','esl-fast-beginner-1-33','What does he play instead of studying?','Thay vì học bài, cậu bé chơi gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-33-006','esl-fast-beginner-1-33','Does he study before the test?','Cậu bé có học bài trước bài kiểm tra không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-33-007','esl-fast-beginner-1-33','What does he do instead of studying?','Thay vì học bài, cậu bé làm gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-33-008','esl-fast-beginner-1-33','When does he take the test?','Khi nào cậu bé làm bài kiểm tra?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-33-009','esl-fast-beginner-1-33','What does he take the next day?','Hôm sau cậu bé làm gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-33-010','esl-fast-beginner-1-33','Is the test easy?','Bài kiểm tra có dễ không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-33-011','esl-fast-beginner-1-33','How is the test?','Bài kiểm tra như thế nào?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-33-012','esl-fast-beginner-1-33','Does he think the test is easy?','Cậu bé có thấy bài kiểm tra dễ không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-33-013','esl-fast-beginner-1-33','Does he know anything?','Cậu bé có biết gì không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-33-014','esl-fast-beginner-1-33','What does he know about the test?','Cậu bé biết gì về bài kiểm tra?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-33-015','esl-fast-beginner-1-33','What does he turn in?','Cậu bé nộp gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-33-016','esl-fast-beginner-1-33','Is his test blank?','Bài kiểm tra của cậu bé có bị bỏ trắng không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-33-017','esl-fast-beginner-1-33','What does he turn in blank?','Cậu bé nộp bài gì bị bỏ trắng?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-33-018','esl-fast-beginner-1-33','Who scolds him?','Ai mắng cậu bé?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-33-019','esl-fast-beginner-1-33','What does the teacher do?','Giáo viên làm gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-33-020','esl-fast-beginner-1-33','What grade does the teacher give him?','Giáo viên cho cậu bé điểm gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-33-021','esl-fast-beginner-1-33','Does the teacher scold him?','Giáo viên có mắng cậu bé không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-33-022','esl-fast-beginner-1-33','Who gives him an F?','Ai cho cậu bé điểm F?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-33-023','esl-fast-beginner-1-33','What does he play before the test?','Trước bài kiểm tra, cậu bé chơi gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-33-024','esl-fast-beginner-1-33','What happens the next day?','Điều gì xảy ra vào hôm sau?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-33-025','esl-fast-beginner-1-33','What happens when he takes the test?','Điều gì xảy ra khi cậu bé làm bài kiểm tra?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-33-026','esl-fast-beginner-1-33','Does he know the answers?','Cậu bé có biết các câu trả lời không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-33-027','esl-fast-beginner-1-33','What is the test like?','Bài kiểm tra như thế nào?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-33-028','esl-fast-beginner-1-33','What does he do with his test?','Cậu bé làm gì với bài kiểm tra của mình?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-33-029','esl-fast-beginner-1-33','What happens after he turns in the test?','Điều gì xảy ra sau khi cậu bé nộp bài?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-33-030','esl-fast-beginner-1-33','What grade does he receive?','Cậu bé nhận được điểm gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	
+	/* (UUID(),'esl-fast-beginner-1-34','Helen is Busy','Helen đang bận rộn','BEGINNER_01_ESL_FAST_CHILDREN_034.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1',1,0,0,34), */
+	('Q-esl-fast-beginner-1-34-001','esl-fast-beginner-1-34','What does Helen want to do well on?','Helen muốn làm tốt bài gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-34-002','esl-fast-beginner-1-34','When is the math test?','Bài kiểm tra Toán diễn ra khi nào?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-34-003','esl-fast-beginner-1-34','What subject is the test?','Bài kiểm tra là môn gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-34-004','esl-fast-beginner-1-34','What does Helen take out?','Helen lấy gì ra?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-34-005','esl-fast-beginner-1-34','What does Helen do with her book?','Helen làm gì với quyển sách?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-34-006','esl-fast-beginner-1-34','Does Helen study?','Helen có học bài không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-34-007','esl-fast-beginner-1-34','Who comes into Helen''s room?','Ai bước vào phòng của Helen?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-34-008','esl-fast-beginner-1-34','Who comes into her room first?','Ai bước vào phòng của cô bé trước?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-34-009','esl-fast-beginner-1-34','What does Helen''s brother start doing?','Em trai của Helen bắt đầu làm gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-34-010','esl-fast-beginner-1-34','Does her brother make loud noises?','Em trai của Helen có làm ồn không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-34-011','esl-fast-beginner-1-34','How are the noises?','Những tiếng động như thế nào?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-34-012','esl-fast-beginner-1-34','What does Helen do when her brother makes noise?','Helen làm gì khi em trai làm ồn?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-34-013','esl-fast-beginner-1-34','Who does Helen yell at?','Helen quát ai?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-34-014','esl-fast-beginner-1-34','Who comes into Helen''s room after her brother?','Ai bước vào phòng Helen sau em trai?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-34-015','esl-fast-beginner-1-34','Who is Helen''s mother?','Mẹ của Helen là ai?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-34-016','esl-fast-beginner-1-34','What does Helen''s mother ask her to do?','Mẹ Helen nhờ cô bé làm gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-34-017','esl-fast-beginner-1-34','What does Helen need to cook?','Helen cần nấu gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-34-018','esl-fast-beginner-1-34','Does Helen want to cook dinner?','Helen có muốn nấu bữa tối không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-34-019','esl-fast-beginner-1-34','What does Helen do to her mother?','Helen làm gì với mẹ?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-34-020','esl-fast-beginner-1-34','Who does Helen yell at after her brother?','Sau em trai, Helen lớn tiếng với ai?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-34-021','esl-fast-beginner-1-34','What does Helen finally tell her family?','Cuối cùng Helen nói gì với gia đình?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-34-022','esl-fast-beginner-1-34','Is Helen busy?','Helen có bận không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-34-023','esl-fast-beginner-1-34','Why does Helen study?','Helen học bài để làm gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-34-024','esl-fast-beginner-1-34','What does Helen want to do on the math test?','Helen muốn làm gì trong bài kiểm tra Toán?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-34-025','esl-fast-beginner-1-34','What is Helen doing when her brother enters?','Helen đang làm gì khi em trai bước vào?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-34-026','esl-fast-beginner-1-34','What happens while Helen is studying?','Điều gì xảy ra khi Helen đang học?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-34-027','esl-fast-beginner-1-34','Who asks Helen to cook dinner?','Ai nhờ Helen nấu bữa tối?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-34-028','esl-fast-beginner-1-34','What does Helen say about herself at the end?','Cuối cùng Helen nói gì về mình?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-34-029','esl-fast-beginner-1-34','Who does Helen tell that she is busy?','Helen nói với ai rằng mình đang bận?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-34-030','esl-fast-beginner-1-34','What does Helen do before her family interrupts her?','Helen làm gì trước khi gia đình làm gián đoạn việc học?','ACTIVE',NULL,NULL,NULL,NULL),
+	
+	/* (UUID(),'esl-fast-beginner-1-35','Messing Up','Làm hỏng việc','BEGINNER_01_ESL_FAST_CHILDREN_035.mp3',NULL,'00:00:00.000','00:00:28.000','esl-fast-children-1',1,0,1,35), */
+	('Q-esl-fast-beginner-1-35-001','esl-fast-beginner-1-35','What does he pour for himself?','Cậu bé rót gì cho mình?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-35-002','esl-fast-beginner-1-35','What does he pour into a glass?','Cậu bé rót gì vào cốc?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-35-003','esl-fast-beginner-1-35','Who does he pour the soda for?','Cậu bé rót nước ngọt cho ai?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-35-004','esl-fast-beginner-1-35','What does he accidentally spill?','Cậu bé vô tình làm đổ gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-35-005','esl-fast-beginner-1-35','Where does he spill the soda?','Cậu bé làm đổ nước ngọt ở đâu?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-35-006','esl-fast-beginner-1-35','Does he spill some soda on his shirt?','Cậu bé có làm đổ nước ngọt lên áo không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-35-007','esl-fast-beginner-1-35','What does he say after spilling the soda?','Cậu bé nói gì sau khi làm đổ nước ngọt?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-35-008','esl-fast-beginner-1-35','How does his mom feel about the accident?','Mẹ cậu bé sẽ cảm thấy thế nào về sự cố?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-35-009','esl-fast-beginner-1-35','Will his mom get mad?','Mẹ cậu bé có nổi giận không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-35-010','esl-fast-beginner-1-35','What is expensive?','Cái gì đắt tiền?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-35-011','esl-fast-beginner-1-35','How is his shirt?','Chiếc áo của cậu bé như thế nào?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-35-012','esl-fast-beginner-1-35','What does he try to do?','Cậu bé cố làm gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-35-013','esl-fast-beginner-1-35','What does he try to clean?','Cậu bé cố làm sạch cái gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-35-014','esl-fast-beginner-1-35','What does he pour on the shirt?','Cậu bé đổ gì lên áo?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-35-015','esl-fast-beginner-1-35','Does he pour water on the shirt?','Cậu bé có đổ nước lên áo không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-35-016','esl-fast-beginner-1-35','What does he use to clean the shirt?','Cậu bé dùng gì để làm sạch áo?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-35-017','esl-fast-beginner-1-35','Does he use a stain remover?','Cậu bé có dùng chất tẩy vết bẩn không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-35-018','esl-fast-beginner-1-35','Where does he take the shirt?','Cậu bé mang chiếc áo đi đâu?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-35-019','esl-fast-beginner-1-35','Who does he take the shirt to?','Cậu bé mang chiếc áo đến cho ai?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-35-020','esl-fast-beginner-1-35','What kind of cleaner does he visit?','Cậu bé đến tiệm giặt loại gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-35-021','esl-fast-beginner-1-35','Does the dry cleaner fix the shirt?','Tiệm giặt khô có làm sạch được áo không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-35-022','esl-fast-beginner-1-35','What happens after he takes the shirt to the dry cleaner?','Điều gì xảy ra sau khi cậu bé mang áo đến tiệm giặt khô?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-35-023','esl-fast-beginner-1-35','Does anything work?','Có cách nào hiệu quả không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-35-024','esl-fast-beginner-1-35','What happens to the stain?','Vết bẩn như thế nào?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-35-025','esl-fast-beginner-1-35','Why is he worried about his mom?','Tại sao cậu bé lo mẹ mình?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-35-026','esl-fast-beginner-1-35','What does he accidentally spill on his expensive shirt?','Cậu bé vô tình làm đổ gì lên chiếc áo đắt tiền?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-35-027','esl-fast-beginner-1-35','What does he do first to clean the shirt?','Cậu bé làm gì đầu tiên để làm sạch áo?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-35-028','esl-fast-beginner-1-35','What does he do after pouring water on the shirt?','Sau khi đổ nước lên áo, cậu bé làm gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-35-029','esl-fast-beginner-1-35','What does he do after using stain remover?','Sau khi dùng chất tẩy vết bẩn, cậu bé làm gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-35-030','esl-fast-beginner-1-35','What is the final result?','Kết quả cuối cùng là gì?','ACTIVE',NULL,NULL,NULL,NULL);
+	
+	/* (UUID(),'esl-fast-beginner-1-36','Introducing Myself','Giới thiệu bản thân','BEGINNER_01_ESL_FAST_CHILDREN_036.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,0,0,36), */
+	
+	
+	/* (UUID(),'esl-fast-beginner-1-37','A Long Wait','Chờ lâu','BEGINNER_01_ESL_FAST_CHILDREN_037.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,0,0,37), */
+	
+	
+	/* (UUID(),'esl-fast-beginner-1-38','The Teacher Takes Away His Phone','Giáo viên tịch thu điện thoại của cậu ấy','BEGINNER_01_ESL_FAST_CHILDREN_038.mp3',NULL,'00:00:00.000','00:00:29.000','esl-fast-children-1',1,0,0,38), */
+	
+	
+	/* (UUID(),'esl-fast-beginner-1-39','No One Likes the Flu','Không ai thích bị cúm','BEGINNER_01_ESL_FAST_CHILDREN_039.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,0,0,39), */
+	
+	
+	/* (UUID(),'esl-fast-beginner-1-40','The Circus','Rạp xiếc','BEGINNER_01_ESL_FAST_CHILDREN_040.mp3',NULL,'00:00:00.000','00:00:38.000','esl-fast-children-1',1,0,0,40), */
+	
+	
+	/* (UUID(),'esl-fast-beginner-1-41','An Unhealthy Boy','Một cậu bé không khỏe mạnh','BEGINNER_01_ESL_FAST_CHILDREN_041.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-children-1',1,0,0,41), */
+	
+	
+	/* (UUID(),'esl-fast-beginner-1-42','Ferris Wheel','Vòng đu quay','BEGINNER_01_ESL_FAST_CHILDREN_042.mp3',NULL,'00:00:00.000','00:00:39.000','esl-fast-children-1',1,0,0,42), */
+	
+	
+	/* (UUID(),'esl-fast-beginner-1-43','More Money','Nhiều tiền hơn','BEGINNER_01_ESL_FAST_CHILDREN_043.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,0,0,43), */
+	
+	
+	/* (UUID(),'esl-fast-beginner-1-44','Loving Dance','Yêu thích khiêu vũ','BEGINNER_01_ESL_FAST_CHILDREN_044.mp3',NULL,'00:00:00.000','00:00:29.000','esl-fast-children-1',1,0,0,44), */
+	
+	
+	/* (UUID(),'esl-fast-beginner-1-45','A Fun Sleepover','Một buổi ngủ qua đêm vui vẻ','BEGINNER_01_ESL_FAST_CHILDREN_045.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,0,0,45), */
+	
+	
+	/* (UUID(),'esl-fast-beginner-1-46','Apology','Lời xin lỗi','BEGINNER_01_ESL_FAST_CHILDREN_046.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,0,0,46), */
+	
+	
+	/* (UUID(),'esl-fast-beginner-1-47','Glass of Milk on the Desk','Ly sữa trên bàn học','BEGINNER_01_ESL_FAST_CHILDREN_047.mp3',NULL,'00:00:00.000','00:00:34.000','esl-fast-children-1',1,0,0,47), */
+	/* (UUID(),'esl-fast-beginner-1-48','A Simple Gift','Một món quà đơn giản','BEGINNER_01_ESL_FAST_CHILDREN_048.mp3',NULL,'00:00:00.000','00:00:25.000','esl-fast-children-1',1,0,0,48), */
+	/* (UUID(),'esl-fast-beginner-1-49','Hide-and-Seek','Trò chơi trốn tìm','BEGINNER_01_ESL_FAST_CHILDREN_049.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,0,0,49), */
+	/* (UUID(),'esl-fast-beginner-1-50','Excited for the Mail','Hồi hộp chờ thư','BEGINNER_01_ESL_FAST_CHILDREN_050.mp3',NULL,'00:00:00.000','00:00:28.000','esl-fast-children-1',1,0,0,50), */
+	/* (UUID(),'esl-fast-beginner-1-51','Having Fun on a Swing','Vui chơi trên xích đu','BEGINNER_01_ESL_FAST_CHILDREN_051.mp3',NULL,'00:00:00.000','00:00:28.000','esl-fast-children-1',1,0,0,51), */
+	/* (UUID(),'esl-fast-beginner-1-52','He Walks His Dogs','Cậu ấy dắt chó đi dạo','BEGINNER_01_ESL_FAST_CHILDREN_052.mp3',NULL,'00:00:00.000','00:00:34.000','esl-fast-children-1',1,0,0,52), */
+	/* (UUID(),'esl-fast-beginner-1-53','A Pencil for Everything','Một cây bút chì cho mọi việc','BEGINNER_01_ESL_FAST_CHILDREN_053.mp3',NULL,'00:00:00.000','00:00:26.000','esl-fast-children-1',1,0,0,53), */
+	/* (UUID(),'esl-fast-beginner-1-54','Being Careless','Sự bất cẩn','BEGINNER_01_ESL_FAST_CHILDREN_054.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1',1,0,0,54), */
+	/* (UUID(),'esl-fast-beginner-1-55','Fluffy the Rabbit','Fluffy chú thỏ nhỏ','BEGINNER_01_ESL_FAST_CHILDREN_055.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-children-1',1,0,0,55), */
+	/* (UUID(),'esl-fast-beginner-1-56','Three Friends and a Jump Rope','Ba người bạn và dây nhảy','BEGINNER_01_ESL_FAST_CHILDREN_056.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,0,0,56), */
+	/* (UUID(),'esl-fast-beginner-1-57','He Plays with the Ladybug','Cậu ấy chơi với bọ rùa','BEGINNER_01_ESL_FAST_CHILDREN_057.mp3',NULL,'00:00:00.000','00:00:38.000','esl-fast-children-1',1,0,0,57), */
+	/* (UUID(),'esl-fast-beginner-1-58','The Dog That Digs','Con chó hay đào đất','BEGINNER_01_ESL_FAST_CHILDREN_058.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-children-1',1,0,0,58), */
+	/* (UUID(),'esl-fast-beginner-1-59','Playing with the Monkey Bars','Chơi xà đơn trong sân chơi','BEGINNER_01_ESL_FAST_CHILDREN_059.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,0,0,59), */
+	/* (UUID(),'esl-fast-beginner-1-60','Playing a Doctor','Đóng vai bác sĩ','BEGINNER_01_ESL_FAST_CHILDREN_060.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-children-1',1,0,0,60), */
+	/* (UUID(),'esl-fast-beginner-1-61','Art Class','Giờ học mỹ thuật','BEGINNER_01_ESL_FAST_CHILDREN_061.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-children-1',1,0,0,61), */
+	/* (UUID(),'esl-fast-beginner-1-62','Getting Ready for Soccer Practice','Chuẩn bị cho buổi tập bóng đá','BEGINNER_01_ESL_FAST_CHILDREN_062.mp3',NULL,'00:00:00.000','00:00:27.000','esl-fast-children-1',1,0,0,62), */
+	/* (UUID(),'esl-fast-beginner-1-63','The Pouch of a Kangaroo','Túi của con chuột túi','BEGINNER_01_ESL_FAST_CHILDREN_063.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1',1,0,0,63), */
+	/* (UUID(),'esl-fast-beginner-1-64','Aunt and Uncle','Dì và chú','BEGINNER_01_ESL_FAST_CHILDREN_064.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,64), */
+	/* (UUID(),'esl-fast-beginner-1-65','A Busy Boy','Một cậu bé bận rộn','BEGINNER_01_ESL_FAST_CHILDREN_065.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,65), */
+	/* (UUID(),'esl-fast-beginner-1-66','Fruit Salad','Salad trái cây','BEGINNER_01_ESL_FAST_CHILDREN_066.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,66), */
+	/* (UUID(),'esl-fast-beginner-1-67','He Takes His Test','Cậu ấy làm bài kiểm tra','BEGINNER_01_ESL_FAST_CHILDREN_067.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,67), */
+	/* (UUID(),'esl-fast-beginner-1-68','Parent-teacher Conference','Buổi họp phụ huynh và giáo viên','BEGINNER_01_ESL_FAST_CHILDREN_068.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,68), */
+	/* (UUID(),'esl-fast-beginner-1-69','The Second Dog','Con chó thứ hai','BEGINNER_01_ESL_FAST_CHILDREN_069.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,69), */
+	/* (UUID(),'esl-fast-beginner-1-70','A Cat and a Ball of Yarn','Một con mèo và cuộn len','BEGINNER_01_ESL_FAST_CHILDREN_070.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,70), */
+	/* (UUID(),'esl-fast-beginner-1-71','Taking Care of His Orange Tree','Chăm sóc cây cam của cậu ấy','BEGINNER_01_ESL_FAST_CHILDREN_071.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,71), */
+	/* (UUID(),'esl-fast-beginner-1-72','The Missing Notebook','Cuốn vở bị mất','BEGINNER_01_ESL_FAST_CHILDREN_072.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,72), */
+	/* (UUID(),'esl-fast-beginner-1-73','Tag, You\'re It!','Trò chơi đuổi bắt, đến lượt bạn rồi!','BEGINNER_01_ESL_FAST_CHILDREN_073.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,73), */
+	/* (UUID(),'esl-fast-beginner-1-74','Different Flavors','Những hương vị khác nhau','BEGINNER_01_ESL_FAST_CHILDREN_074.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,74), */
+	/* (UUID(),'esl-fast-beginner-1-75','Daydreaming at School','Mơ mộng trong giờ học','BEGINNER_01_ESL_FAST_CHILDREN_075.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,75), */
+	/* (UUID(),'esl-fast-beginner-1-76','A Pet for Dad','Một thú cưng dành cho bố','BEGINNER_01_ESL_FAST_CHILDREN_076.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,76), */
+	/* (UUID(),'esl-fast-beginner-1-77','Too Sick','Bị ốm nặng','BEGINNER_01_ESL_FAST_CHILDREN_077.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,77), */
+	/* (UUID(),'esl-fast-beginner-1-78','The Worst Student','Học sinh tệ nhất','BEGINNER_01_ESL_FAST_CHILDREN_078.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,78), */
+	/* (UUID(),'esl-fast-beginner-1-79','Bad Manners','Cư xử không đúng mực','BEGINNER_01_ESL_FAST_CHILDREN_079.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,79), */
+	/* (UUID(),'esl-fast-beginner-1-80','Transferring to Another Class','Chuyển sang lớp khác','BEGINNER_01_ESL_FAST_CHILDREN_080.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,80), */
+	/* (UUID(),'esl-fast-beginner-1-81','Good Manners','Cư xử lịch sự','BEGINNER_01_ESL_FAST_CHILDREN_081.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,81), */
+	/* (UUID(),'esl-fast-beginner-1-82','The Trouble with Braces','Rắc rối với niềng răng','BEGINNER_01_ESL_FAST_CHILDREN_082.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,82), */
+	/* (UUID(),'esl-fast-beginner-1-83','Lost on the First Day','Lạc trong ngày đầu tiên','BEGINNER_01_ESL_FAST_CHILDREN_083.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,83), */
+	/* (UUID(),'esl-fast-beginner-1-84','Stealing is Bad','Ăn cắp là xấu','BEGINNER_01_ESL_FAST_CHILDREN_084.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,84), */
+	/* (UUID(),'esl-fast-beginner-1-85','Picking Her Up','Đón cô ấy','BEGINNER_01_ESL_FAST_CHILDREN_085.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,85), */
+	/* (UUID(),'esl-fast-beginner-1-86','Saving the Princess','Giải cứu công chúa','BEGINNER_01_ESL_FAST_CHILDREN_086.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,86), */
+	/* (UUID(),'esl-fast-beginner-1-87','Make It Hot, Make It Cold','Làm nóng lên, làm lạnh đi','BEGINNER_01_ESL_FAST_CHILDREN_087.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,87), */
+	/* (UUID(),'esl-fast-beginner-1-88','A Good Shower','Một buổi tắm sảng khoái','BEGINNER_01_ESL_FAST_CHILDREN_088.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,88), */
+	/* (UUID(),'esl-fast-beginner-1-89','The Wrong Color','Màu sắc bị chọn sai','BEGINNER_01_ESL_FAST_CHILDREN_089.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,89), */
+	/* (UUID(),'esl-fast-beginner-1-90','Forgetting Her Glasses','Quên kính của cô ấy','BEGINNER_01_ESL_FAST_CHILDREN_090.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,90), */
+	/* (UUID(),'esl-fast-beginner-1-91','Quitting His Job','Nghỉ việc','BEGINNER_01_ESL_FAST_CHILDREN_091.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,91), */
+	/* (UUID(),'esl-fast-beginner-1-92','Future Goals','Mục tiêu tương lai','BEGINNER_01_ESL_FAST_CHILDREN_092.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,92), */
+	/* (UUID(),'esl-fast-beginner-1-93','A Kind Stranger','Một người lạ tốt bụng','BEGINNER_01_ESL_FAST_CHILDREN_093.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,93); */
