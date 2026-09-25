@@ -187,12 +187,19 @@ const HomeContent = React.memo(({
 
         // Select default voice based on language if no voice is selected
         if (!selectedVoice) {
-          const isEnglish = /^[a-zA-Z ]+$/.test(selectedText);
-          const defaultVoice = voices.find(voice =>
-            isEnglish ? voice.lang.startsWith('en') : voice.lang.startsWith('vi')
-          );
-          if (defaultVoice) {
-            setSelectedVoice(defaultVoice.name);
+          // Select Microsoft Zira - English (United States) as default
+          const ziraVoice = voices.find(v => v.name.includes('Microsoft Zira') && v.lang === 'en-US');
+          if (ziraVoice) {
+            setSelectedVoice(ziraVoice.name);
+          } else {
+            // Fallback to language-based selection if Zira is not available
+            const isEnglish = /^[a-zA-Z ]+$/.test(selectedText);
+            const defaultVoice = voices.find(voice =>
+              isEnglish ? voice.lang.startsWith('en') : voice.lang.startsWith('vi')
+            );
+            if (defaultVoice) {
+              setSelectedVoice(defaultVoice.name);
+            }
           }
         }
       };

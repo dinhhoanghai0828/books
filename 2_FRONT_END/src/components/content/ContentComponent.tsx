@@ -276,11 +276,18 @@ const ContentComponent = ({
 
         // Select default voice if none selected
         if (!selectedVoice && voices.length > 0) {
-          const defaultVoice = voices.find(voice => voice.lang.startsWith('en'));
-          if (defaultVoice) {
-            setSelectedVoice(defaultVoice.name);
+          // Select Microsoft Zira - English (United States) as default
+          const ziraVoice = voices.find(v => v.name.includes('Microsoft Zira') && v.lang === 'en-US');
+          if (ziraVoice) {
+            setSelectedVoice(ziraVoice.name);
           } else {
-            setSelectedVoice(voices[0].name);
+            // Fallback to any English voice if Zira is not available
+            const defaultVoice = voices.find(voice => voice.lang.startsWith('en'));
+            if (defaultVoice) {
+              setSelectedVoice(defaultVoice.name);
+            } else {
+              setSelectedVoice(voices[0].name);
+            }
           }
         }
       };

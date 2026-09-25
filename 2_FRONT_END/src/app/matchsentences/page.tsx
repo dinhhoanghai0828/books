@@ -118,13 +118,19 @@ const MatchSentencesPage = () => {
       const loadVoices = () => {
         const voices = window.speechSynthesis.getVoices();
         setAvailableVoices(voices);
-        // Select default English voice
-        const enVoice = voices.find(v => v.lang.startsWith('en'));
-        if (enVoice) {
-          setSelectedVoice(enVoice.name);
+        // Select Microsoft Zira - English (United States) as default
+        const ziraVoice = voices.find(v => v.name.includes('Microsoft Zira') && v.lang === 'en-US');
+        if (ziraVoice) {
+          setSelectedVoice(ziraVoice.name);
+        } else {
+          // Fallback to any English voice if Zira is not available
+          const enVoice = voices.find(v => v.lang.startsWith('en'));
+          if (enVoice) {
+            setSelectedVoice(enVoice.name);
+          }
         }
       };
-      
+
       loadVoices();
       window.speechSynthesis.onvoiceschanged = loadVoices;
     }
