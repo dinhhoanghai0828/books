@@ -22,18 +22,18 @@ echo ===============================
 echo Starting Frontend...
 echo ===============================
 
-start "Frontend" cmd /k "cd /d D:\20_PROJECT\books\2_FRONT_END && npm run dev"
+start "Frontend" cmd /k "cd /d E:\books\2_FRONT_END && npm run dev"
 
 echo.
 echo ===============================
 echo Starting Backend...
 echo ===============================
 
-start "Backend" cmd /k "cd /d D:\20_PROJECT\books\1_BACK_END && echo BUILD PROJECT && call mvn clean install -DskipTests && echo. && echo RUN WAR/JAR && java -jar target\demo.war"
+start "Backend" cmd /k "cd /d E:\books\1_BACK_END && echo BUILD PROJECT && call mvn clean install -DskipTests && echo. && echo RUN WAR/JAR && java -jar target\demo.war"
 
 echo.
 echo ===============================
 echo Starting Cloudflared...
 echo ===============================
 
-powershell -NoExit -Command "cloudflared tunnel --url http://192.168.1.7:80"
+powershell -NoExit -Command "cloudflared tunnel --url http://10.247.198.95:80"

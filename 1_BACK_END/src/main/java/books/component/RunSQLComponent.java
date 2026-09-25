@@ -29,7 +29,7 @@ public class RunSQLComponent {
     @Autowired(required = false)
     private DataSource dataSource;
 
-    String path = "D:\\20_PROJECT\\books\\3_DATABASE\\";
+    String path = "E:\\books\\3_DATABASE\\";
 
     /** Pool nhe (1-2 connection) chi dung khi chay main() standalone, tranh khoi tao DBUtils pool lon. */
     private static volatile DataSource standaloneDataSource;
