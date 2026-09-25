@@ -2132,7 +2132,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('It takes time and consistency to build a stable of clients','Sẽ cần khoảng thời gian dài để xây 1 tệp khách hàng ổn định','00:03:00.843','00:03:03.846','tedtalks-31'),
 	('Put your focus on building a reputation for good work and you\'ll eventually have to turn down more jobs than you can accept','Hãy tập trung vào việc xây dựng danh tiếng tốt trong công việc và rồi sẽ đến lúc bạn phải từ chối vài công việc vì không đủ thời gian','00:03:03.888','00:03:10.269','tedtalks-31'),
 	('Step five: Join a freelance community','Bước 5: Tham gia cộng đồng làm việc freelance','00:03:10.311','00:03:12.480','tedtalks-31'),
-	('Whatever type of freelancer you are, find ways to connect with others in your field','Dẫu cho bạn là freelancer loại nào, hãy kết nối với những người trong cùng lĩnh vực','00:03:12.521','00:03:16.651','tedtalks-31'),
+	('Whatever type of freelancer you are, find ways to connect with others in your field','Dẫu cho bạn là freelancer loại nào, hãy tìm cách kết nối với những người trong cùng lĩnh vực','00:03:12.521','00:03:16.420','tedtalks-31'),
 	('What are the LinkedIn or Facebook groups to join?','Nhóm nào cần vào trên Linkedln hay Facebook?','00:03:16.692','00:03:18.986','tedtalks-31'),
 	('Which events to go to and which podcasts to listen to?','Sự kiện nào nên đến và podcasts nào nên nghe?','00:03:19.028','00:03:21.614','tedtalks-31'),
 	('This community will not only help you learn and give you leads on work, but it will also contain peers that you can vent to when you need it','Cộng đồng này không chỉ giúp bạn học và hướng dẫn bạn trong công việc, mà còn sẽ có những đồng nghiệp mà bạn có thể tâm sự khi cần','00:03:21.614','00:03:29.247','tedtalks-31'),

@@ -1159,7 +1159,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('For his birthday, Cody wanted to have a party','Cody muốn có một bữa tiệc trong ngày sinh nhật của mình','00:00:11.800','00:00:15.000','4000-essential-english-words-28'),
 	('His dad said, "Yes, we could even have a band play"','Cha cậu bé nói rằng: "Được thôi, chúng ta thậm chí mời cả ban nhạc đến biểu diễn nữa cơ"','00:00:15.000','00:00:19.500','4000-essential-english-words-28'),
 	('On the day of the party, Cody woke up and rushed to get ready','Vào ngày sinh nhật, Cody thức dậy rồi vội vã chuẩn bị mọi thứ','00:00:19.500','00:00:23.600','4000-essential-english-words-28'),
-	('He started to check his list of things to do','Cậu bé bắt đầu liệt kê danh sách những việc cần làm','00:00:23.600','00:00:26.600','4000-essential-english-words-28'),
+	('He started to check his list of things to do','Cậu bé bắt đầu kiểm tra danh sách những việc cần làm','00:00:23.600','00:00:26.600','4000-essential-english-words-28'),
 	('He was so excited','Cậu bé vô cùng hào hứng','00:00:26.600','00:00:28.600','4000-essential-english-words-28'),
 	('But then he noticed something terrible','Nhưng sau đó Cody nhận thấy có điều gì đó rất tệ','00:00:28.600','00:00:30.800','4000-essential-english-words-28'),
 	('There was snow on the ground and lots of it','Ở ngoài sân có rất nhiều tuyết','00:00:30.800','00:00:34.700','4000-essential-english-words-28'),
