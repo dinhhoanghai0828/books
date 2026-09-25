@@ -158,8 +158,43 @@ INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_
 	('Q-esl-fast-beginner-1-5-028','esl-fast-beginner-1-5','What does he have to do with the floors?','Cậu bé phải làm gì với sàn nhà?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-5-029','esl-fast-beginner-1-5','What does he have to do with the dishes?','Cậu bé phải làm gì với bát đĩa?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-5-030','esl-fast-beginner-1-5','What does he do after looking at the list?','Sau khi nhìn vào danh sách, cậu bé làm gì?','ACTIVE',NULL,NULL,NULL,NULL);
+
+INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_VI, STATUS, CREATED_AT, UPDATED_AT, CREATED_BY, UPDATED_BY) VALUES
+	/* (UUID(),'esl-fast-beginner-1-6','The First Song','Bài hát đầu tiên','BEGINNER_01_ESL_FAST_CHILDREN_006.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1',1,1,1,6), */
+	('Q-esl-fast-beginner-1-6-001', 'esl-fast-beginner-1-6', 'Where does she sit?', 'Cô bé ngồi ở đâu?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-6-002', 'esl-fast-beginner-1-6', 'Who turns on the radio?', 'Ai bật radio?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-6-003', 'esl-fast-beginner-1-6', 'What does her dad turn on?', 'Bố cô bé bật gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-6-004', 'esl-fast-beginner-1-6', 'What plays on the radio?', 'Điều gì phát trên radio?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-6-005', 'esl-fast-beginner-1-6', 'What does she tap?', 'Cô bé gõ nhịp bằng gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-6-006', 'esl-fast-beginner-1-6', 'What does she do with her feet?', 'Cô bé làm gì bằng chân?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-6-007', 'esl-fast-beginner-1-6', 'What does she sway?', 'Cô bé lắc lư cái gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-6-008', 'esl-fast-beginner-1-6', 'Who laughs at her?', 'Ai bật cười với cô bé?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-6-009', 'esl-fast-beginner-1-6', 'Why does her dad laugh?', 'Tại sao bố cô bé bật cười?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-6-010', 'esl-fast-beginner-1-6', 'Does her dad like the song?', 'Bố cô bé có thích bài hát không?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-6-011', 'esl-fast-beginner-1-6', 'Who likes the song, too?', 'Ai cũng thích bài hát?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-6-012', 'esl-fast-beginner-1-6', 'What happens after the song plays?', 'Điều gì xảy ra sau khi bài hát phát?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-6-013', 'esl-fast-beginner-1-6', 'What happens to the song?', 'Điều gì xảy ra với bài hát?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-6-014', 'esl-fast-beginner-1-6', 'What does the radio play next?', 'Sau đó radio phát gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-6-015', 'esl-fast-beginner-1-6', 'Is the second song the same song?', 'Bài hát thứ hai có giống bài hát trước không?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-6-016', 'esl-fast-beginner-1-6', 'Does she like the new song?', 'Cô bé có thích bài hát mới không?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-6-017', 'esl-fast-beginner-1-6', 'What does she do when she does not like the new song?', 'Cô bé làm gì khi không thích bài hát mới?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-6-018', 'esl-fast-beginner-1-6', 'Where is she when her dad turns on the radio?', 'Cô bé ở đâu khi bố bật radio?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-6-019', 'esl-fast-beginner-1-6', 'What does she do when the first song plays?', 'Cô bé làm gì khi bài hát đầu tiên phát?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-6-020', 'esl-fast-beginner-1-6', 'Does she sit quietly at the beginning?', 'Lúc đầu cô bé có ngồi im lặng không?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-6-021', 'esl-fast-beginner-1-6', 'What does her dad do when he sees her?', 'Bố cô bé làm gì khi nhìn thấy cô bé?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-6-022', 'esl-fast-beginner-1-6', 'How does she move to the first song?', 'Cô bé chuyển động theo bài hát đầu tiên như thế nào?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-6-023', 'esl-fast-beginner-1-6', 'What does she tap while listening to the song?', 'Cô bé gõ nhịp bằng gì khi nghe bài hát?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-6-024', 'esl-fast-beginner-1-6', 'What does she sway while listening to the song?', 'Cô bé lắc lư cái gì khi nghe bài hát?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-6-025', 'esl-fast-beginner-1-6', 'What does her dad think about the first song?', 'Bố cô bé nghĩ gì về bài hát đầu tiên?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-6-026', 'esl-fast-beginner-1-6', 'What happens after her dad laughs?', 'Điều gì xảy ra sau khi bố cô bé bật cười?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-6-027', 'esl-fast-beginner-1-6', 'What happens after the first song is over?', 'Điều gì xảy ra sau khi bài hát đầu tiên kết thúc?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-6-028', 'esl-fast-beginner-1-6', 'How does she feel about the new song?', 'Cô bé cảm thấy thế nào về bài hát mới?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-6-029', 'esl-fast-beginner-1-6', 'What does she do at the end?', 'Cuối cùng cô bé làm gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
+	('Q-esl-fast-beginner-1-6-030', 'esl-fast-beginner-1-6', 'What does she do after the radio plays a different song?', 'Cô bé làm gì sau khi radio phát một bài hát khác?', 'ACTIVE', NULL, NULL, NULL, NULL),
+
+	/* (UUID(),'esl-fast-beginner-1-7','Visiting the Doctor','Đi khám bác sĩ','BEGINNER_01_ESL_FAST_CHILDREN_007.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-children-1',1,1,1,7), */
 	
-INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_VI, STATUS, CREATED_AT, UPDATED_AT, CREATED_BY, UPDATED_BY) VALUES	
+	
 	/* (UUID(),'esl-fast-beginner-1-21','Mom is Mad','Mẹ đang tức giận','BEGINNER_01_ESL_FAST_CHILDREN_021.mp3',NULL,'00:00:00.000','00:00:35.500','esl-fast-children-1',1,1,1,21, */
     ('Q-esl-fast-beginner-1-21-001', 'esl-fast-beginner-1-21', 'Whose room is messy?', 'Phòng của ai rất bừa bộn?', 'ACTIVE', NULL, NULL, NULL, NULL),
     ('Q-esl-fast-beginner-1-21-002', 'esl-fast-beginner-1-21', 'What is under Robert''s bed?', 'Có gì ở dưới gầm giường của Robert?', 'ACTIVE', NULL, NULL, NULL, NULL),

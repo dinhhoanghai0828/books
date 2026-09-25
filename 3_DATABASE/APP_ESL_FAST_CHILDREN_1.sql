@@ -70,7 +70,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'esl-fast-beginner-1-6','The First Song','Bài hát đầu tiên','BEGINNER_01_ESL_FAST_CHILDREN_006.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1','YES',6) */
+	/* (UUID(),'esl-fast-beginner-1-6','The First Song','Bài hát đầu tiên','BEGINNER_01_ESL_FAST_CHILDREN_006.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1',1,1,1,6), */
 	('She sits in the car','Cô bé ngồi trong xe','00:00:00.390','00:00:02.870','esl-fast-beginner-1-6'),
 	('Her dad turns on the radio','Bố cô bé bật radio','00:00:03.550','00:00:05.710','esl-fast-beginner-1-6'),
 	('A song plays','Một bài hát vang lên','00:00:06.450','00:00:07.930','esl-fast-beginner-1-6'),
