@@ -781,6 +781,10 @@ const MultipleChoicePage = () => {
                 <div style={{textAlign: 'center', padding: '50px'}}>
                     <Spin size="large"/>
                 </div>
+            ) : questions.length === 0 ? (
+                <div style={{textAlign: 'center', padding: '100px'}}>
+                    <Text style={{fontSize: 50, color: '#999'}}>Không có bài kiểm tra</Text>
+                </div>
             ) : (
                 <div>
                     {questions.map((question, index) => {
@@ -1014,32 +1018,34 @@ const MultipleChoicePage = () => {
                 </div>
             )}
 
-            {/* Nút nộp bài, làm lại, xuất Word */}
-            <div style={{display: 'flex', justifyContent: 'center', gap: '16px', marginTop: '32px'}}>
-                <Button
-                    type="primary" size="large"
-                    onClick={() => setOpenConfirmModal(true)}
-                    disabled={isChecked}
-                    style={{minWidth: '120px', height: '44px', fontSize: '20px'}}
-                >
-                    Nộp bài
-                </Button>
-                <Button
-                    size="large" onClick={reloadQuiz} icon={<ReloadOutlined/>}
-                    style={{minWidth: '120px', height: '44px', fontSize: '20px'}}
-                >
-                    Làm lại
-                </Button>
-                <Button
-                    size="large"
-                    icon={<FileWordOutlined/>}
-                    onClick={exportToWord}
-                    disabled={questions.length === 0}
-                    style={{minWidth: '120px', height: '44px', fontSize: '20px', color: '#1D6FDE', borderColor: '#1D6FDE'}}
-                >
-                    Xuất Word
-                </Button>
-            </div>
+            {/* Nút nộp bài, làm lại, xuất Word - chỉ hiển thị khi có câu hỏi */}
+            {questions.length > 0 && (
+                <div style={{display: 'flex', justifyContent: 'center', gap: '16px', marginTop: '32px'}}>
+                    <Button
+                        type="primary" size="large"
+                        onClick={() => setOpenConfirmModal(true)}
+                        disabled={isChecked}
+                        style={{minWidth: '120px', height: '44px', fontSize: '20px'}}
+                    >
+                        Nộp bài
+                    </Button>
+                    <Button
+                        size="large" onClick={reloadQuiz} icon={<ReloadOutlined/>}
+                        style={{minWidth: '120px', height: '44px', fontSize: '20px'}}
+                    >
+                        Làm lại
+                    </Button>
+                    <Button
+                        size="large"
+                        icon={<FileWordOutlined/>}
+                        onClick={exportToWord}
+                        disabled={questions.length === 0}
+                        style={{minWidth: '120px', height: '44px', fontSize: '20px', color: '#1D6FDE', borderColor: '#1D6FDE'}}
+                    >
+                        Xuất Word
+                    </Button>
+                </div>
+            )}
 
             {/* Modal xác nhận nộp bài */}
             <Modal

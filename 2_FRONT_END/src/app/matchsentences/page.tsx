@@ -694,6 +694,10 @@ const MatchSentencesPage = () => {
 
       {loading ? (
         <Spin size="large" />
+      ) : meaningEnKeywords.length === 0 && meaningViKeywords.length === 0 ? (
+        <div style={{ textAlign: 'center', marginTop: 50 }}>
+          <Text style={{ fontSize: 18, color: '#999' }}>Không có bài kiểm tra</Text>
+        </div>
       ) : (
         <div style={{ display: 'flex', gap: 100, marginTop: 30, position: 'relative' }}>
           {/* SVG overlay for connection line */}
