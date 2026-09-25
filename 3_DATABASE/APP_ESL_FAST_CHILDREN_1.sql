@@ -183,7 +183,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The mouse chases the cat','Con chuột đuổi theo con mèo','00:00:34.170','00:00:36.910','esl-fast-beginner-1-13'),
 	('The cat is having fun','Con mèo đang rất thích thú','00:00:37.510','00:00:40.000','esl-fast-beginner-1-13'),
 
-	/* (UUID(),'esl-fast-beginner-1-14','Lemonade Stand','Quầy nước chanh','BEGINNER_01_ESL_FAST_CHILDREN_014.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-children-1','YES',14) */
+	/* (UUID(),'esl-fast-beginner-1-14','Lemonade Stand','Quầy nước chanh','BEGINNER_01_ESL_FAST_CHILDREN_014.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-children-1',1,1,1,14), */
 	('John wants to go to his school field trip','John muốn tham gia chuyến dã ngoại của trường','00:00:00.580','00:00:04.660','esl-fast-beginner-1-14'),
 	('He needs fifty dollars','Cậu bé cần 50 đô la','00:00:05.240','00:00:07.100','esl-fast-beginner-1-14'),
 	('He wants to earn it himself','Cậu bé muốn tự mình kiếm tiền','00:00:07.460','00:00:10.180','esl-fast-beginner-1-14'),
@@ -197,7 +197,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('His lemonade stand is a success','Quầy bán nước chanh của cậu bé rất thành công','00:00:31.500','00:00:34.640','esl-fast-beginner-1-14'),
 	('He makes enough money','Cậu bé kiếm đủ tiền','00:00:35.100','00:00:37.000','esl-fast-beginner-1-14'),
 
-	/* (UUID(),'esl-fast-beginner-1-15','New and Old','Mới và cũ','BEGINNER_01_ESL_FAST_CHILDREN_015.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1','YES',15) */
+	/* (UUID(),'esl-fast-beginner-1-15','New and Old','Mới và cũ','BEGINNER_01_ESL_FAST_CHILDREN_015.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,1,1,15), */
 	('Tomorrow is the first day of school','Ngày mai là ngày đầu tiên đi học','00:00:00.330','00:00:03.430','esl-fast-beginner-1-15'),
 	('Barbara looks at her backpack','Barbara nhìn chiếc ba lô của mình','00:00:03.800','00:00:05.970','esl-fast-beginner-1-15'),
 	('It has holes','Nó bị thủng lỗ','00:00:06.750','00:00:08.210','esl-fast-beginner-1-15'),
@@ -214,7 +214,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'esl-fast-beginner-1-16','The Kind Dentist','Nha sĩ tốt bụng','BEGINNER_01_ESL_FAST_CHILDREN_016.mp3',NULL,'00:00:00.000','00:00:40.000','esl-fast-children-1','YES',16) */
+	/* (UUID(),'esl-fast-beginner-1-16','The Kind Dentist','Nha sĩ tốt bụng','BEGINNER_01_ESL_FAST_CHILDREN_016.mp3',NULL,'00:00:00.000','00:00:40.000','esl-fast-children-1',1,1,1,16), */
 	('Maria feels pain in her teeth','Maria bị đau răng','00:00:00.460','00:00:04.440','esl-fast-beginner-1-16'),
 	('She tells her mom','Cô bé nói với mẹ','00:00:05.120','00:00:06.660','esl-fast-beginner-1-16'),
 	('Her mom takes her to the dentist','Mẹ đưa cô bé đến nha sĩ','00:00:07.340','00:00:09.780','esl-fast-beginner-1-16'),
@@ -229,7 +229,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He gives her a new toothbrush','Ông tặng cô bé một chiếc bàn chải đánh răng mới','00:00:34.600','00:00:37.160','esl-fast-beginner-1-16'),
 	('Maria feels good','Maria cảm thấy dễ chịu hơn','00:00:37.600','00:00:39.500','esl-fast-beginner-1-16'),
 
-	/* (UUID(),'esl-fast-beginner-1-17','A Trip to the Library','Chuyến đi đến thư viện','BEGINNER_01_ESL_FAST_CHILDREN_017.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1','YES',17) */
+	/* (UUID(),'esl-fast-beginner-1-17','A Trip to the Library','Chuyến đi đến thư viện','BEGINNER_01_ESL_FAST_CHILDREN_017.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1',1,1,1,17), */
 	('Mark needs a book','Mark cần một quyển sách','00:00:00.200','00:00:02.480','esl-fast-beginner-1-17'),
 	('He does not have money','Cậu bé không có tiền','00:00:02.960','00:00:05.220','esl-fast-beginner-1-17'),
 	('His mom takes him to the library','Mẹ đưa cậu đến thư viện','00:00:05.920','00:00:08.360','esl-fast-beginner-1-17'),
@@ -241,7 +241,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('There are books about science','Có những quyển sách về khoa học','00:00:24.020','00:00:26.520','esl-fast-beginner-1-17'),
 	('Mark borrows them all','Mark mượn toàn bộ sách','00:00:27.100','00:00:29.280','esl-fast-beginner-1-17'),
 
-	/* (UUID(),'esl-fast-beginner-1-18','A Lot of Ants','Rất nhiều con kiến','BEGINNER_01_ESL_FAST_CHILDREN_018.mp3',NULL,'00:00:00.000','00:00:28.000','esl-fast-children-1','YES',18) */
+	/* (UUID(),'esl-fast-beginner-1-18','A Lot of Ants','Rất nhiều con kiến','BEGINNER_01_ESL_FAST_CHILDREN_018.mp3',NULL,'00:00:00.000','00:00:28.000','esl-fast-children-1',1,1,1,18), */
 	('She eats a slice of cake','Cô ấy ăn một miếng bánh ngọt','00:00:00.460','00:00:03.359','esl-fast-beginner-1-18'),
 	('She drops a crumb','Cô ấy làm rơi một vụn bánh','00:00:04.000','00:00:05.740','esl-fast-beginner-1-18'),
 	('The ants can smell it','Đàn kiến ngửi thấy mùi vụn bánh','00:00:06.440','00:00:08.480','esl-fast-beginner-1-18'),
