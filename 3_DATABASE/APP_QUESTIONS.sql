@@ -480,7 +480,8 @@ INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_
 	('Q-esl-fast-beginner-1-15-028','esl-fast-beginner-1-15','Does Barbara choose a backpack with stars?','Barbara có chọn chiếc ba lô có ngôi sao không?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-15-029','esl-fast-beginner-1-15','What does Barbara buy?','Barbara mua gì?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-15-030','esl-fast-beginner-1-15','Who buys the new backpack?','Ai mua chiếc ba lô mới?','ACTIVE',NULL,NULL,NULL,NULL);
-	
+
+INSERT INTO QUESTIONS (QUESTION_CODE,VOLUME_SLUG,QUESTION_TEXT,QUESTION_TEXT_VI,STATUS,CREATED_AT,UPDATED_AT,CREATED_BY,UPDATED_BY) VALUES	
 	/* (UUID(),'esl-fast-beginner-1-16','The Kind Dentist','Nha sĩ tốt bụng','BEGINNER_01_ESL_FAST_CHILDREN_016.mp3',NULL,'00:00:00.000','00:00:40.000','esl-fast-children-1',1,1,1,16), */
 	('Q-esl-fast-beginner-1-16-001','esl-fast-beginner-1-16','What is wrong with Maria?','Maria bị làm sao?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-16-002','esl-fast-beginner-1-16','Where does Maria feel pain?','Maria cảm thấy đau ở đâu?','ACTIVE',NULL,NULL,NULL,NULL),
@@ -511,7 +512,7 @@ INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_
 	('Q-esl-fast-beginner-1-16-027','esl-fast-beginner-1-16','What does Maria receive from the dentist?','Maria nhận được gì từ nha sĩ?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-16-028','esl-fast-beginner-1-16','Who helps Maria when her teeth hurt?','Ai giúp Maria khi răng cô bé bị đau?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-16-029','esl-fast-beginner-1-16','What is the story mainly about?','Câu chuyện chủ yếu nói về điều gì?','ACTIVE',NULL,NULL,NULL,NULL),
-	('Q-esl-fast-beginner-1-16-030','esl-fast-beginner-1-16','What happens at the end of the story?','Điều gì xảy ra ở cuối câu chuyện?','ACTIVE',NULL,NULL,NULL,NULL);
+	('Q-esl-fast-beginner-1-16-030','esl-fast-beginner-1-16','What happens at the end of the story?','Điều gì xảy ra ở cuối câu chuyện?','ACTIVE',NULL,NULL,NULL,NULL),
 		
 	/* (UUID(),'esl-fast-beginner-1-17','A Trip to the Library','Chuyến đi đến thư viện','BEGINNER_01_ESL_FAST_CHILDREN_017.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1',1,1,1,17), */
 	('Q-esl-fast-beginner-1-17-001','esl-fast-beginner-1-17','What does Mark need?','Mark cần gì?','ACTIVE',NULL,NULL,NULL,NULL),

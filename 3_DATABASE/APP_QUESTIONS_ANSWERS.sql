@@ -1830,7 +1830,8 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE, ANSWER_TEXT, ANSWER_TEXT_VI, IS_
     ('Q-esl-fast-beginner-1-15-030','B','Her teacher','Giáo viên của cô bé','N',2,NULL,NULL,NULL,NULL),
     ('Q-esl-fast-beginner-1-15-030','C','Her friend','Bạn của cô bé','N',3,NULL,NULL,NULL,NULL),
     ('Q-esl-fast-beginner-1-15-030','D','The store owner','Chủ cửa hàng','N',4,NULL,NULL,NULL,NULL);
-	
+
+INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE, ANSWER_TEXT, ANSWER_TEXT_VI, IS_CORRECT,DISPLAY_ORDER,CREATED_AT,UPDATED_AT,CREATED_BY,UPDATED_BY) VALUES
 	/* (UUID(),'esl-fast-beginner-1-16','The Kind Dentist','Nha sĩ tốt bụng','BEGINNER_01_ESL_FAST_CHILDREN_016.mp3',NULL,'00:00:00.000','00:00:40.000','esl-fast-children-1',1,1,1,16), */
 	('Q-esl-fast-beginner-1-16-001','A','Her teeth hurt','Răng cô bé bị đau','Y',1,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-16-001','B','Her stomach hurts','Bụng cô bé bị đau','N',2,NULL,NULL,NULL,NULL),
