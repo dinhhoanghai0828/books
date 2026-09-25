@@ -1,5 +1,5 @@
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'voa-1','Teachers Use Games for More Enjoyable Learning','Giáo viên sử dụng trò chơi để việc học trở nên thú vị hơn','NEWS_DAILY_NEW_02_VOA_001.mp3',NULL,'00:00:00.000','00:05:08.900','voa','YES',1) */
+	/* (UUID(),'voa-1','Teachers Use Games for More Enjoyable Learning','Giáo viên sử dụng trò chơi để việc học trở nên thú vị hơn','NEWS_DAILY_NEW_02_VOA_001.mp3',NULL,'00:00:00.000','00:05:08.900','voa',1,0,1) */
 	('Wordle has become one of the most popular online games in the United States since it came out last October','Wordle đã trở thành một trong những trò chơi trực tuyến phổ biến nhất ở Hoa Kỳ kể từ khi ra mắt vào tháng Mười năm ngoái','00:00:00.970','00:00:08.710','voa-1'),
 	('Players get six chances to guess and learn a five-letter word for the day','Người chơi có sáu lượt đoán để tìm ra và học một từ gồm năm chữ cái trong ngày','00:00:10.110','00:00:15.270','voa-1'),
 	('Many are sharing their game results on social media, adding more interest in the game','Nhiều người chia sẻ kết quả chơi của mình trên mạng xã hội, làm trò chơi càng thêm hấp dẫn','00:00:16.770','00:00:22.310','voa-1'),
@@ -50,7 +50,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And the team with the most correct guesses wins the game','Và nhóm nào đoán đúng nhiều nhất sẽ chiến thắng trò chơi','00:05:01.910','00:05:05.870','voa-1'),
 	('I\'m Jill Robbins','Tôi là Jill Robbins','00:05:07.050','00:05:08.470','voa-1'),
 
-	/* (UUID(),'voa-2','UN Says 250 million Students Missed School in 024 Because of Weather','Liên Hợp Quốc cho biết: 250 triệu học sinh bị gián đoạn việc học trong năm 2024 do thời tiết cực đoan','NEWS_DAILY_NEW_02_VOA_002.mp3',NULL,'00:00:00.000','00:05:08.900','voa','YES',2) */
+	/* (UUID(),'voa-2','UN Says 250 million Students Missed School in 024 Because of Weather','Liên Hợp Quốc cho biết: 250 triệu học sinh bị gián đoạn việc học trong năm 2024 do thời tiết cực đoan','NEWS_DAILY_NEW_02_VOA_002.mp3',NULL,'00:00:00.000','00:05:08.900','voa',1,0,2) */
 	('A United Nations report has found that extreme weather interrupted the schooling of at least 242 million children last year','Một báo cáo của Liên Hợp Quốc cho thấy thời tiết khắc nghiệt đã làm gián đoạn việc học của ít nhất 242 triệu trẻ em trong năm ngoái','00:00:00.270','00:00:14.190','voa-2'),
 	('The weather included severe events such as heatwaves, cyclones, and extreme dryness and flooding, the U.N.\'s Children\'s Fund (UNICEF) said','Quỹ Nhi đồng Liên Hợp Quốc (UNICEF) cho biết thời tiết bao gồm các hiện tượng nghiêm trọng như nắng nóng gay gắt, lốc xoáy, hạn hán và lũ lụt nghiêm trọng','00:00:15.210','00:00:30.230','voa-2'),
 	('Students in 85 nations were affected','Học sinh tại 85 quốc gia đã bị ảnh hưởng','00:00:31.110','00:00:34.770','voa-2'),

@@ -1,5 +1,5 @@
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'animatters-1','I fell in love with the man who robbed me','Tôi đã yêu người đàn ông cướp của mình','STORIES_ADULT_STORY_01_ANIMATERS_001.mp3',NULL,'00:00:00.120','00:10:10.000','animatters','NO',1) */
+	/* (UUID(),'animatters-1','I fell in love with the man who robbed me','Tôi đã yêu người đàn ông cướp của mình','STORIES_ADULT_STORY_01_ANIMATERS_001.mp3',NULL,'00:00:00.120','00:10:10.000','animatters',0,0,1) */
 	('A thief broke into the gas station, where I worked, in the middle of the night','Một tên trộm đã đột nhập vào trạm xăng nơi tôi làm việc giữa đêm khuya','00:00:00.120','00:00:05.359','animatters-1'),
 	('Fortunately, I managed to discreetly press the emergency button','May mắn thay, tôi đã kịp lén nhấn nút báo động','00:00:05.359','00:00:11.960','animatters-1'),
 	('But regretted it almost immediately','Nhưng tôi gần như lập tức hối hận','00:00:12.639','00:00:16.920','animatters-1'),
@@ -107,7 +107,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('I had a wonderful family, plus an incredible house, which my amazing husband built with his own two hands','Tôi có một gia đình tuyệt vời và một ngôi nhà đáng kinh ngạc do chính tay chồng tôi xây dựng','00:09:34.000','00:09:43.920','animatters-1'),
 	('Remember, true love can come into your life when you least expect it','Hãy nhớ rằng, tình yêu đích thực có thể đến vào lúc bạn không ngờ nhất','00:09:56.160','00:10:02.680','animatters-1'),
 
-	/* (UUID(),'animatters-2','I arrested my future wife after our first night together','Tôi đã bắt giữ vợ tương lai sau đêm đầu tiên chúng tôi ở bên nhau','STORIES_ADULT_STORY_01_ANIMATERS_002.mp3',NULL,'00:00:00.120','00:10:10.000','animatters','NO',2) */
+	/* (UUID(),'animatters-2','I arrested my future wife after our first night together','Tôi đã bắt giữ vợ tương lai sau đêm đầu tiên chúng tôi ở bên nhau','STORIES_ADULT_STORY_01_ANIMATERS_002.mp3',NULL,'00:00:00.120','00:10:10.000','animatters',0,0,2) */
 	('A woman demanded me to pay her for our first night together','Người phụ nữ yêu cầu tôi phải trả tiền cho cô ấy cho đêm đầu tiên bên nhau','00:00:00.000','00:00:04.400','animatters-2'),
 	('Instead of doing it, I arrested the call girl','Thay vì làm điều đó, tôi bắt cô gái gọi ấy','00:00:05.779','00:00:09.800','animatters-2'),
 	('You chose the wrong guy to make money off','Cô chọn nhầm người để kiếm tiền rồi','00:00:10.400','00:00:13.000','animatters-2'),
@@ -196,7 +196,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('I\'ll sacrifice everything for it if I have to','Anh sẽ hy sinh tất cả nếu cần','00:09:40.400','00:09:44.000','animatters-2'),
 	('The power of love lies in its ability to rewrite destiny and free us from the shackles of the past','Sức mạnh của tình yêu nằm ở khả năng viết lại số phận và giải thoát chúng ta khỏi những xiềng xích của quá khứ','00:09:48.000','00:09:56.000','animatters-2'),
 
-	/* (UUID(),'animatters-3','I accidentally sent an embarrassing photo to my CEO','Tôi vô tình gửi một bức ảnh đáng xấu hổ cho CEO của mình','STORIES_ADULT_STORY_01_ANIMATERS_003.mp3',NULL,'00:00:00.120','00:10:10.000','animatters','NO',3) */
+	/* (UUID(),'animatters-3','I accidentally sent an embarrassing photo to my CEO','Tôi vô tình gửi một bức ảnh đáng xấu hổ cho CEO của mình','STORIES_ADULT_STORY_01_ANIMATERS_003.mp3',NULL,'00:00:00.120','00:10:10.000','animatters',0,0,3) */
 	('I accidentally sent a shameful selfie to my boss','Tôi vô tình gửi một bức ảnh tự sướng đáng xấu hổ cho sếp của mình','00:00:00.000','00:00:04.000','animatters-3'),
 	('So, I snuck into MrCole\'s office at night to delete the photo','Nên, tôi lẻn vào văn phòng ông Cole vào ban đêm để xóa bức ảnh đó','00:00:09.000','00:00:14.150','animatters-3'),
 	('Suddenly, I heard his voice','Đột nhiên, tôi nghe thấy giọng của ông ấy','00:00:14.150','00:00:18.300','animatters-3'),
@@ -323,7 +323,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Because true love brings out the best in people','Vì tình yêu đích thực bộc lộ ra điều tốt đẹp nhất trong con người','00:11:27.900','00:11:31.280','animatters-3'),
 	('Plus, it is always ready to give them a second chance','Thêm vào đó, nó luôn sẵn sàng cho họ một cơ hội thứ hai','00:11:31.300','00:11:36.400','animatters-3'),
 
-	/* (UUID(),'animatters-4','I fell in love with my husband\'s best friend','Tôi đã yêu người bạn thân nhất của chồng tôi','STORIES_ADULT_STORY_01_ANIMATERS_004.mp3',NULL,'00:00:00.120','00:10:10.000','animatters','NO',4) */
+	/* (UUID(),'animatters-4','I fell in love with my husband\'s best friend','Tôi đã yêu người bạn thân nhất của chồng tôi','STORIES_ADULT_STORY_01_ANIMATERS_004.mp3',NULL,'00:00:00.120','00:10:10.000','animatters',0,0,4) */
 	('I fell in love with my husband\'s best friend','Tôi đã yêu người bạn thân nhất của chồng tôi','00:00:00.000','00:00:03.400','animatters-4'),
 	('And it became more and more difficult to control that attraction','Và ngày càng khó để kiểm soát sự cuốn hút đó','00:00:03.400','00:00:08.400','animatters-4'),
 	('That\'s why I asked Luke to stop inviting him over','Đó là lý do tôi yêu cầu Luke ngừng mời anh ấy đến','00:00:11.600','00:00:15.600','animatters-4'),
@@ -441,7 +441,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Remember, it\'s never too late to create the life you want','Hãy nhớ rằng, không bao giờ là quá muộn để tạo ra cuộc sống mà bạn muốn','00:10:55.800','00:11:00.000','animatters-4'),
 	('Just follow your heart and listen when it speaks to you','Hãy theo đuổi trái tim của bạn và lắng nghe khi nó nói với bạn','00:11:00.000','00:11:05.200','animatters-4'),
 
-	/* (UUID(),'animatters-5','I Went To A Millionaire\'s Bedroom To Save The Love Of My Life','Tôi đã vào phòng ngủ của một triệu phú để cứu tình yêu của đời mình','STORIES_ADULT_STORY_01_ANIMATERS_005.mp3',NULL,'00:00:00.120','00:10:15.300','animatters','NO',5) */
+	/* (UUID(),'animatters-5','I Went To A Millionaire\'s Bedroom To Save The Love Of My Life','Tôi đã vào phòng ngủ của một triệu phú để cứu tình yêu của đời mình','STORIES_ADULT_STORY_01_ANIMATERS_005.mp3',NULL,'00:00:00.120','00:10:15.300','animatters',0,0,5) */
 	('﻿I got a job as a babysitter for an insufferable millionaire\'s child','Tôi nhận được công việc làm bảo mẫu cho đứa con của một triệu phú khó chịu','00:00:00.000','00:00:05.790','animatters-5'),
 	('40 nannies ran away from him in just a month, and his wife mysteriously disappeared earlier','40 bảo mẫu đã bỏ chạy khỏi ông ta chỉ trong vòng một tháng, và vợ ông ta thì biến mất một cách bí ẩn trước đó','00:00:08.200','00:00:15.900','animatters-5'),
 	('Looks like the agency is doing really bad','Có vẻ như công ty môi giới đang làm ăn rất tệ','00:00:16.800','00:00:19.290','animatters-5'),

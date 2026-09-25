@@ -278,6 +278,10 @@ const FillBlanksPage = () => {
 
       {loading ? (
         <Spin size="large" />
+      ) : sentences.length === 0 ? (
+        <div style={{ textAlign: 'center', marginTop: 50 }}>
+          <Text style={{ fontSize: 18, color: '#999' }}>Không có bài kiểm tra</Text>
+        </div>
       ) : (
         sentences.map((sentence) => {
           const blanks = blanksData[sentence.id];
@@ -379,19 +383,22 @@ const FillBlanksPage = () => {
         })
       )}
 
-      <div className="button-container">
-        <Button
-          type="primary"
-          onClick={() => setOpenConfirmModal(true)}
-          className="check-btn"
-          disabled={isChecked}
-        >
-          Ket qua
-        </Button>
-        <Button onClick={reloadTest} className="reload-btn">
-          <ReloadOutlined /> Lam lai
-        </Button>
-      </div>
+      {/* Nut kiem tra ket qua va lam lai - chi hien khi co du lieu */}
+      {sentences.length > 0 && (
+        <div className="button-container">
+          <Button
+            type="primary"
+            onClick={() => setOpenConfirmModal(true)}
+            className="check-btn"
+            disabled={isChecked}
+          >
+            Ket qua
+          </Button>
+          <Button onClick={reloadTest} className="reload-btn">
+            <ReloadOutlined /> Lam lai
+          </Button>
+        </div>
+      )}
 
       <Modal
         title="Xac nhan"

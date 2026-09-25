@@ -31,6 +31,8 @@ export interface ContentToolbarProps {
   onMatchSentences: () => void;
   onFillBlanks: () => void;
   onMultipleChoice: () => void;
+  onDictation: () => void;
+  onTranslation: () => void;
   onInsertWord: () => void;
   volumeSlug: string | string[];
 }
@@ -53,6 +55,8 @@ const ContentToolbar: React.FC<ContentToolbarProps> = ({
   onMatchSentences,
   onFillBlanks,
   onMultipleChoice,
+  onDictation,
+  onTranslation,
   onInsertWord,
   volumeSlug,
 }) => {
@@ -240,23 +244,33 @@ const ContentToolbar: React.FC<ContentToolbarProps> = ({
           menu={{
             items: [
               {
-                key: 'sắp xếp câu',
-                label: 'Sắp xếp câu',
-                onClick: onTest,
-              },
-              {
                 key: 'ghép câu',
-                label: 'Ghép câu',
+                label: '1. Ghép câu',
                 onClick: onMatchSentences,
               },
               {
+                key: 'sắp xếp câu',
+                label: '2. Sắp xếp câu',
+                onClick: onTest,
+              },
+              {
                 key: 'điền từ',
-                label: 'Điền từ còn thiếu',
+                label: '3. Điền từ còn thiếu',
                 onClick: onFillBlanks,
               },
               {
+                key: 'nghe viết',
+                label: '4. Nghe viết toàn bộ câu',
+                onClick: onDictation,
+              },
+              {
+                key: 'dịch thuật',
+                label: '5. Dịch thuật',
+                onClick: onTranslation,
+              },
+              {
                 key: 'lựa chọn đáp án',
-                label: 'Lựa chọn đáp án đúng',
+                label: '6. Lựa chọn đáp án đúng',
                 onClick: onMultipleChoice,
               },
             ],

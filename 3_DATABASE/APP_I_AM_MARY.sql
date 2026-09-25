@@ -1,5 +1,5 @@
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'I-am-Mary-1','The Value of Gratitude','Giá trị của lòng biết ơn','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_001.mp3',NULL,'00:00:00.000','00:04:31.630','I-am-Mary','NO',1) */
+	/* (UUID(),'I-am-Mary-1','The Value of Gratitude','Giá trị của lòng biết ơn','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_001.mp3',NULL,'00:00:00.000','00:04:31.630','I-am-Mary',0,0,1) */
 	('The Value of Gratitude','Giá trị của lòng biết ơn','00:00:00.010','00:00:06.190','I-am-Mary-1'),
 	('Good values always exist everywhere around us','Những giá trị tốt luôn tồn tại xung quanh chúng ta','00:00:00.010','00:00:06.190','I-am-Mary-1'),
 	('It is an indispensable spice for human life','Đó là gia vị không thể thiếu trong cuộc sống con người','00:00:06.810','00:00:09.990','I-am-Mary-1'),
@@ -44,7 +44,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Marcus Tullius Cicero once said, Gratitude is not only the greatest of virtues, but the parent of all others','Marcus Tullius Cicero đã từng nói, Lòng biết ơn không chỉ là đức tính vĩ đại nhất, mà còn là cha đẻ của tất cả các đức tính khác','00:04:19.050','00:04:26.950','I-am-Mary-1'),
 	('That\'s right, without gratitude, it is no longer human','Đúng vậy, không có lòng biết ơn, con người không còn là con người nữa','00:04:26.950','00:04:31.630','I-am-Mary-1'),
 
-	/* (UUID(),'I-am-Mary-2','Stop your habit of procrastination','Ngừng thói quen trì hoãn của bạn','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_002.mp3',NULL,'00:00:00.000','00:09:15.700','I-am-Mary','NO',2) */
+	/* (UUID(),'I-am-Mary-2','Stop your habit of procrastination','Ngừng thói quen trì hoãn của bạn','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_002.mp3',NULL,'00:00:00.000','00:09:15.700','I-am-Mary',0,0,2) */
 	('Stop your habit of procrastination','Ngừng thói quen trì hoãn của bạn','00:00:00.070','00:00:06.730','I-am-Mary-2'),
 	('Almost everyone has been afflicted by procrastination at one time or another, that nagging menace that compels us to put things off for another day, another time','Hầu như ai cũng từng bị trì hoãn vào một lúc nào đó, một mối đe dọa dai dẳng khiến chúng ta trì hoãn công việc sang ngày khác, thời điểm khác','00:00:00.070','00:00:15.110','I-am-Mary-2'),
 	('For some people, it appears in only some areas of their lives, and for others, it is a persistent problem','Đối với một số người, nó chỉ xuất hiện trong một vài khía cạnh của cuộc sống, còn với những người khác, nó là một vấn đề dai dẳng','00:00:15.730','00:00:22.870','I-am-Mary-2'),
@@ -136,7 +136,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('You can change uncomfortable patterns of behavior, and procrastination, fortunately, is one of those habits most amenable to change','Bạn có thể thay đổi những hành vi khó chịu, và may mắn thay, trì hoãn là một trong những thói quen dễ thay đổi nhất','00:09:04.400','00:09:12.820','I-am-Mary-2'),
 	('But don\'t put it off, just do it','Nhưng đừng trì hoãn, hãy làm ngay','00:09:13.520','00:09:15.700','I-am-Mary-2'),
 
-	/* (UUID(),'I-am-Mary-3','How to build self-discipline?','Làm thế nào để xây dựng tính kỷ luật tự giác?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_003.mp3',NULL,'00:00:00.000','00:06:11.110','I-am-Mary','NO',3) */
+	/* (UUID(),'I-am-Mary-3','How to build self-discipline?','Làm thế nào để xây dựng tính kỷ luật tự giác?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_003.mp3',NULL,'00:00:00.000','00:06:11.110','I-am-Mary',0,0,3) */
 	('How to build self-discipline?','Làm thế nào để xây dựng tính kỷ luật tự giác?','00:00:00.650','00:00:02.750','I-am-Mary-3'),
 	('You always want to get what you want, but don\'t have the patience to do it','Bạn luôn muốn đạt được điều bạn muốn, nhưng lại không đủ kiên nhẫn để làm điều đó','00:00:03.450','00:00:07.890','I-am-Mary-3'),
 	('It\'s not that you don\'t have a desire, it\'s that you are too easy on yourself','Không phải bạn không có khát khao, mà là bạn quá dễ dãi với bản thân','00:00:08.570','00:00:13.010','I-am-Mary-3'),
@@ -198,7 +198,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Success is based on your own efforts','Thành công phụ thuộc vào nỗ lực của chính bạn','00:06:07.090','00:06:09.310','I-am-Mary-3'),
 	('Never give up','Đừng bao giờ từ bỏ','00:06:10.050','00:06:11.110','I-am-Mary-3'),
 
-	/* (UUID(),'I-am-Mary-4','Learning to say "NO"','Học cách nói "KHÔNG"','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_004.mp3',NULL,'00:00:00.000','00:05:29.510','I-am-Mary','NO',4) */
+	/* (UUID(),'I-am-Mary-4','Learning to say "NO"','Học cách nói "KHÔNG"','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_004.mp3',NULL,'00:00:00.000','00:05:29.510','I-am-Mary',0,0,4) */
 	('Learning to say "NO"','Học cách nói "KHÔNG"','00:00:01.100','00:00:02.620','I-am-Mary-4'),
 	('Suggestions and requests from people can appear at any time and in any forum','Những đề nghị và yêu cầu từ mọi người có thể xuất hiện bất cứ lúc nào và ở bất kỳ diễn đàn nào','00:00:05.170','00:00:09.850','I-am-Mary-4'),
 	('In fact, it\'s always easier to say yes than to say no','Thực tế, luôn dễ dàng nói "Có" hơn là nói "Không"','00:00:10.590','00:00:14.310','I-am-Mary-4'),
@@ -260,7 +260,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('It\'s not always possible to accept refusal with a cheerful attitude','Không phải lúc nào cũng có thể chấp nhận sự từ chối với thái độ vui vẻ','00:05:17.860','00:05:21.950','I-am-Mary-4'),
 	('Although you can\'t completely change the way they feel, you can reduce frustration by using the methods above','Mặc dù bạn không thể hoàn toàn thay đổi cảm xúc của họ, nhưng bạn có thể giảm bớt sự bực bội bằng cách sử dụng các phương pháp trên','00:05:22.790','00:05:29.510','I-am-Mary-4'),
 
-	/* (UUID(),'I-am-Mary-5','When you lose motivation','Khi bạn mất động lực','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_005.mp3',NULL,'00:00:00.000','00:05:30.920','I-am-Mary','NO',5) */
+	/* (UUID(),'I-am-Mary-5','When you lose motivation','Khi bạn mất động lực','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_005.mp3',NULL,'00:00:00.000','00:05:30.920','I-am-Mary',0,0,5) */
 	('When you lose motivation','Khi bạn mất động lực','00:00:01.100','00:00:03.120','I-am-Mary-5'),
 	('There will be moments when you feel you\'ve lost your motivation and don\'t want to do anything','Sẽ có những lúc bạn cảm thấy mất động lực và không muốn làm gì cả','00:00:03.520','00:00:08.940','I-am-Mary-5'),
 	('Even people who are successful in life and work fall into the state','Ngay cả những người thành công trong cuộc sống và công việc cũng rơi vào trạng thái này','00:00:09.680','00:00:13.860','I-am-Mary-5'),
@@ -326,7 +326,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'I-am-Mary-6','If you had one day left to live, what would you do?','Nếu bạn còn một ngày để sống, bạn sẽ làm gì?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_006.mp3',NULL,'00:00:00.000','00:03:53.950','I-am-Mary','NO',6) */
+	/* (UUID(),'I-am-Mary-6','If you had one day left to live, what would you do?','Nếu bạn còn một ngày để sống, bạn sẽ làm gì?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_006.mp3',NULL,'00:00:00.000','00:03:53.950','I-am-Mary',0,0,6) */
 	('If you had one day left to live, what would you do?','Nếu bạn còn một ngày để sống, bạn sẽ làm gì?','00:00:03.910','00:00:07.350','I-am-Mary-6'),
 	('I do not know who you are','Tôi không biết bạn là ai','00:00:07.970','00:00:09.570','I-am-Mary-6'),
 	('How do you live?','Bạn sống như thế nào?','00:00:09.970','00:00:10.990','I-am-Mary-6'),
@@ -369,7 +369,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('So live slowly, smile and forgive if you can','Vậy hãy sống chậm lại, cười và tha thứ nếu bạn có thể','00:03:48.730','00:03:51.910','I-am-Mary-6'),
 	('Live today to the fullest','Hãy sống trọn vẹn ngày hôm nay','00:03:52.590','00:03:53.950','I-am-Mary-6'),
 
-	/* (UUID(),'I-am-Mary-7','You only live once (YOLO)','Bạn chỉ sống một lần','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_007.mp3',NULL,'00:00:00.000','00:04:12.680','I-am-Mary','NO',7) */
+	/* (UUID(),'I-am-Mary-7','You only live once (YOLO)','Bạn chỉ sống một lần','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_007.mp3',NULL,'00:00:00.000','00:04:12.680','I-am-Mary',0,0,7) */
 	('You only live once','Chỉ sống một lần thôi','00:00:00.900','00:00:02.520','I-am-Mary-7'),
 	('Surely the term YOLO is no stranger to us','Chắc chắn rằng thuật ngữ YOLO không còn xa lạ với chúng ta','00:00:03.300','00:00:06.200','I-am-Mary-7'),
 	('It\'s in our social media posts','Nó có trong các bài đăng trên mạng xã hội của chúng ta','00:00:06.900','00:00:08.840','I-am-Mary-7'),
@@ -422,7 +422,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Allocate your time and energy to your goals in work, relationships, hobbies, etc','Phân bổ thời gian và năng lượng của bạn cho các mục tiêu trong công việc, mối quan hệ, sở thích, v.v','00:04:01.220','00:04:07.280','I-am-Mary-7'),
 	('with a positive and serious attitude to get the most effective results from this lifestyle','Với thái độ tích cực và nghiêm túc để có được kết quả hiệu quả nhất từ lối sống này','00:04:07.520','00:04:12.680','I-am-Mary-7'),
 
-	/* (UUID(),'I-am-Mary-8','Fix your focus','Khắc phục sự mất tập trung','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_008.mp3',NULL,'00:00:00.000','00:04:27.880','I-am-Mary','NO',8) */
+	/* (UUID(),'I-am-Mary-8','Fix your focus','Khắc phục sự mất tập trung','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_008.mp3',NULL,'00:00:00.000','00:04:27.880','I-am-Mary',0,0,8) */
 	('Do you know what the biggest enemy of being productive is?','Bạn có biết kẻ thù lớn nhất của sự năng suất là gì không?','00:00:00.360','00:00:03.520','I-am-Mary-8'),
 	('That is a distraction','Đó chính là sự xao lãng','00:00:03.860','00:00:05.320','I-am-Mary-8'),
 	('It must have caused a lot of trouble for us','Nó chắc hẳn đã gây ra rất nhiều rắc rối cho chúng ta','00:00:05.960','00:00:08.620','I-am-Mary-8'),
@@ -470,7 +470,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('When starting work, prioritize quietness and comfort for yourself, so that everything gets done effectively','Khi bắt đầu làm việc, ưu tiên sự yên tĩnh và thoải mái cho bản thân, để mọi thứ được hoàn thành hiệu quả','00:04:05.940','00:04:13.060','I-am-Mary-8'),
 	('In addition, you should know how to take breaks, exercise, get enough sleep, limit stress, breathe deeply, eat healthily or use functional foods to improve your focus, and work in the most productivity','Ngoài ra, bạn cần biết cách nghỉ ngơi, tập thể dục, ngủ đủ giấc, hạn chế căng thẳng, thở sâu, ăn uống lành mạnh hoặc sử dụng thực phẩm chức năng để cải thiện khả năng tập trung, và làm việc hiệu quả nhất','00:04:13.860','00:04:27.880','I-am-Mary-8'),
 
-	/* (UUID(),'I-am-Mary-9','You\'re really happy','Bạn có thực sự hạnh phúc','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_009.mp3',NULL,'00:00:00.000','00:03:31.140','I-am-Mary','NO',9) */
+	/* (UUID(),'I-am-Mary-9','You\'re really happy','Bạn có thực sự hạnh phúc','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_009.mp3',NULL,'00:00:00.000','00:03:31.140','I-am-Mary',0,0,9) */
 	('You\'re really happy','Bạn thực sự hạnh phúc','00:00:00.900','00:00:02.380','I-am-Mary-9'),
 	('Why do we always complain, get upset, and suffer, because of the unfulfilled things in life?','Tại sao chúng ta luôn phàn nàn, buồn bã, và chịu đựng, vì những điều chưa thực hiện được trong cuộc sống?','00:00:04.360','00:00:11.320','I-am-Mary-9'),
 	('We always see our difficulties, and always think that we are the poorest, the most pitiable in every situation','Chúng ta luôn thấy khó khăn của mình, và luôn nghĩ rằng mình là người nghèo nhất, đáng thương nhất trong mọi tình huống','00:00:11.940','00:00:19.440','I-am-Mary-9'),
@@ -500,7 +500,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And finally, if you read this message, you are happier than 0-2 billion people in this world, who can\'t read anything','Và cuối cùng, nếu bạn đọc được thông điệp này, bạn hạnh phúc hơn từ 0 đến 2 tỷ người trên thế giới này, những người không thể đọc được gì','00:03:15.740','00:03:24.020','I-am-Mary-9'),
 	('Then cherish what is in your arms, because many people in this world are dreaming of being like you','Vậy thì hãy trân trọng những gì bạn đang có trong tay, vì nhiều người trên thế giới này đang mơ ước được như bạn','00:03:24.740','00:03:31.140','I-am-Mary-9'),
 
-	/* (UUID(),'I-am-Mary-10','Don\'t be afraid to fail','Đừng sợ thất bại','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_010.mp3',NULL,'00:00:00.000','00:03:08.900','I-am-Mary','NO',10) */
+	/* (UUID(),'I-am-Mary-10','Don\'t be afraid to fail','Đừng sợ thất bại','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_010.mp3',NULL,'00:00:00.000','00:03:08.900','I-am-Mary',0,0,10) */
 	('Is failure scary?','Liệu thất bại có đáng sợ không?','00:00:03.980','00:00:05.460','I-am-Mary-10'),
 	('Your test scores were low','Điểm kiểm tra của bạn thấp','00:00:06.000','00:00:07.520','I-am-Mary-10'),
 	('You failed a National University exam','Bạn đã thi rớt kỳ thi Đại học Quốc gia','00:00:08.240','00:00:10.520','I-am-Mary-10'),
@@ -549,7 +549,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'I-am-Mary-11','Habits of failures','Những thói quen thất bại','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_011.mp3',NULL,'00:00:00.000','00:05:05.270','I-am-Mary','NO',11) */
+	/* (UUID(),'I-am-Mary-11','Habits of failures','Những thói quen thất bại','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_011.mp3',NULL,'00:00:00.000','00:05:05.270','I-am-Mary',0,0,11) */
 	('Bad habits are often difficult to break, but that doesn\'t mean it\'s impossible','Những thói quen xấu thường khó bỏ, nhưng điều đó không có nghĩa là không thể','00:00:04.230','00:00:09.390','I-am-Mary-11'),
 	('But actually, it\'s just a habit, you can completely replace it with another habit','Nhưng thực ra, đó chỉ là một thói quen, bạn hoàn toàn có thể thay thế nó bằng một thói quen khác','00:00:10.350','00:00:15.630','I-am-Mary-11'),
 	('Avoid, or give up, if you already have the following success blocking habits','Hãy tránh hoặc từ bỏ nếu bạn đã có những thói quen cản trở thành công sau đây','00:00:16.510','00:00:21.890','I-am-Mary-11'),
@@ -611,7 +611,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('So creating positive habits for yourself can bring you closer to your dreams and more successful in life','Vì vậy, tạo thói quen tích cực cho bản thân có thể giúp bạn tiến gần hơn đến ước mơ và thành công hơn trong cuộc sống','00:04:57.090','00:05:04.670','I-am-Mary-11'),
 	('If you are a daydreamer or lack focus, you should set a reminder on your phone or set a schedule for yourself','Nếu bạn là người hay mơ mộng hoặc thiếu tập trung, bạn nên đặt lời nhắc trên điện thoại hoặc lập lịch trình cho bản thân','00:05:05.070','00:05:05.270','I-am-Mary-11'),
 
-	/* (UUID(),'I-am-Mary-12','Peer pressure','Áp lực đồng trang lứa','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_012.mp3',NULL,'00:00:00.000','00:03:34.320','I-am-Mary','NO',12) */
+	/* (UUID(),'I-am-Mary-12','Peer pressure','Áp lực đồng trang lứa','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_012.mp3',NULL,'00:00:00.000','00:03:34.320','I-am-Mary',0,0,12) */
 	('Peer pressure sounds very childish, but is a very adult problem','Áp lực đồng trang lứa nghe có vẻ trẻ con, nhưng lại là một vấn đề rất người lớn','00:00:03.980','00:00:08.240','I-am-Mary-12'),
 	('Have you ever felt lost, depressed, and disappointed in yourself when your friends all had direction, goals, and future stability for themselves, while you were still struggling to find them?','Bạn đã bao giờ cảm thấy lạc lõng, chán nản và thất vọng về bản thân khi bạn bè đều có định hướng, mục tiêu và sự ổn định cho tương lai, trong khi bạn vẫn đang chật vật tìm kiếm chúng?','00:00:09.180','00:00:20.120','I-am-Mary-12'),
 	('Peer pressure is about the influence that these peers can have on each other','Áp lực đồng trang lứa là về ảnh hưởng mà những người đồng trang lứa có thể tác động lẫn nhau','00:00:20.680','00:00:24.440','I-am-Mary-12'),
@@ -648,7 +648,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('You shouldn\'t just feel pressured or regretful, because of what your peers have achieved, and you haven\'t','Bạn không nên chỉ cảm thấy áp lực hay hối tiếc vì những gì đồng trang lứa của bạn đã đạt được, mà bạn thì chưa','00:03:24.620','00:03:30.420','I-am-Mary-12'),
 	('You just need to do what\'s best, and just enough for you','Bạn chỉ cần làm những gì tốt nhất và đủ cho bản thân','00:03:31.020','00:03:34.320','I-am-Mary-12'),
 
-	/* (UUID(),'I-am-Mary-13','Stop over thinking','Ngừng suy nghĩ quá mức','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_013.mp3',NULL,'00:00:00.000','00:05:41.080','I-am-Mary','NO',13) */
+	/* (UUID(),'I-am-Mary-13','Stop over thinking','Ngừng suy nghĩ quá mức','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_013.mp3',NULL,'00:00:00.000','00:05:41.080','I-am-Mary',0,0,13) */
 	('Although society is increasingly developed, and equipment, machines are born to serve people, young people every day have to spin to take part in many fierce races of life','Mặc dù xã hội ngày càng phát triển, và thiết bị, máy móc ra đời để phục vụ con người, nhưng giới trẻ mỗi ngày vẫn phải quay cuồng tham gia vào nhiều cuộc đua khốc liệt của cuộc sống','00:00:04.620','00:00:15.160','I-am-Mary-13'),
 	('When faced with so many problems from work to daily life, many people fall into a state of overthinking','Khi phải đối mặt với quá nhiều vấn đề từ công việc đến cuộc sống hàng ngày, nhiều người rơi vào trạng thái suy nghĩ quá mức','00:00:16.100','00:00:22.380','I-am-Mary-13'),
 	('So what is overthinking, what is the cause, and how can this problem be prevented?','Vậy suy nghĩ quá mức là gì, nguyên nhân là gì, và làm sao để ngăn chặn vấn đề này?','00:00:23.240','00:00:28.220','I-am-Mary-13'),
@@ -718,7 +718,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Overthinking will gradually affect our psyche and the way we work','Suy nghĩ quá mức sẽ dần dần ảnh hưởng đến tâm lý và cách làm việc của chúng ta','00:05:30.000','00:05:33.940','I-am-Mary-13'),
 	('Therefore, it is extremely necessary to recognize that you are in this situation and prevent it on time','Vì vậy, rất cần thiết phải nhận ra rằng bạn đang ở trong tình trạng này và ngăn ngừa kịp thời','00:05:34.460','00:05:41.080','I-am-Mary-13'),
 
-	/* (UUID(),'I-am-Mary-14','Virtual effort','Nỗ lực ảo','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_014.mp3',NULL,'00:00:00.000','00:04:31.630','I-am-Mary','NO',14) */
+	/* (UUID(),'I-am-Mary-14','Virtual effort','Nỗ lực ảo','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_014.mp3',NULL,'00:00:00.000','00:04:31.630','I-am-Mary',0,0,14) */
 	('There are always people in the world who, looking at him, seem to put in a lot of effort to study and work, but their achievements never show any progress','Trên thế giới luôn có những người nhìn vào họ có vẻ đã bỏ ra rất nhiều nỗ lực để học tập và làm việc, nhưng thành tựu của họ không bao giờ có tiến triển','00:00:02.890','00:00:11.770','I-am-Mary-14'),
 	('Talk all day about how eager to learn, how enthusiastic and hard-working, thinking like a great man, but the results are absent','Nói suốt cả ngày về việc háo hức học hỏi, nhiệt tình và chăm chỉ, suy nghĩ như một người vĩ đại, nhưng kết quả lại vắng bóng','00:00:12.830','00:00:20.510','I-am-Mary-14'),
 	('You know all the great book deals, collect a bunch of books discount codes','Bạn biết tất cả các chương trình giảm giá sách tuyệt vời, thu thập một đống mã giảm giá sách','00:00:21.490','00:00:26.050','I-am-Mary-14'),
@@ -770,7 +770,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Remember that two things in this world cannot be taken back, time and opportunity','Hãy nhớ rằng có hai điều trong cuộc sống này không thể lấy lại được, đó là thời gian và cơ hội','00:04:20.870','00:04:25.510','I-am-Mary-14'),
 	('That\'s why don\'t let the so-called virtual effort rule your development','Đó là lý do tại sao đừng để cái gọi là nỗ lực ảo chi phối sự phát triển của bạn','00:04:26.470','00:04:30.130','I-am-Mary-14'),
 
-	/* (UUID(),'I-am-Mary-15','Don\'t judge people by their appearance','Đừng đánh giá người khác qua vẻ bề ngoài','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_015.mp3',NULL,'00:00:00.000','00:03:40.210','I-am-Mary','NO',15) */
+	/* (UUID(),'I-am-Mary-15','Don\'t judge people by their appearance','Đừng đánh giá người khác qua vẻ bề ngoài','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_015.mp3',NULL,'00:00:00.000','00:03:40.210','I-am-Mary',0,0,15) */
 	('In this world, everyone has a different body, a different personality or a different family background','Trong thế giới này, mỗi người có một cơ thể khác nhau, một tính cách khác nhau hoặc một hoàn cảnh gia đình khác nhau','00:00:03.910','00:00:10.430','I-am-Mary-15'),
 	('Not everyone is fortunate to have a beautiful body, outstanding beauty or rich family background','Không phải ai cũng may mắn có được một cơ thể đẹp, vẻ đẹp nổi bật hoặc gia cảnh giàu có','00:00:11.330','00:00:17.310','I-am-Mary-15'),
 	('If there is a good person, there will definitely be a bad person','Nếu có người tốt, thì chắc chắn sẽ có người xấu','00:00:17.830','00:00:21.570','I-am-Mary-15'),
@@ -805,7 +805,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'I-am-Mary-16','Don\'t waste Your Time','Đừng lãng phí thời gian nữa','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_016.mp3',NULL,'00:00:00.000','00:03:51.310','I-am-Mary','NO',16) */
+	/* (UUID(),'I-am-Mary-16','Don\'t waste Your Time','Đừng lãng phí thời gian nữa','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_016.mp3',NULL,'00:00:00.000','00:03:51.310','I-am-Mary',0,0,16) */
 	('We don\'t realize the value of time until the time is gone','Chúng ta không nhận ra giá trị của thời gian cho đến khi thời gian đã qua','00:00:03.850','00:00:07.810','I-am-Mary-16'),
 	('Life seems long, but it actually goes by very quickly','Cuộc sống có vẻ dài, nhưng thực tế lại trôi qua rất nhanh','00:00:08.730','00:00:12.470','I-am-Mary-16'),
 	('Sometimes, we inadvertently waste precious time on meaningless things','Đôi khi, chúng ta vô tình lãng phí thời gian quý báu vào những điều vô nghĩa','00:00:13.230','00:00:18.070','I-am-Mary-16'),
@@ -846,7 +846,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Life is impermanent','Cuộc sống là vô thường','00:03:46.850','00:03:48.270','I-am-Mary-16'),
 	('Don\'t waste your time and youth to regret it later','Đừng lãng phí thời gian và tuổi trẻ rồi hối tiếc sau này','00:03:48.270','00:03:51.310','I-am-Mary-16'),
 
-	/* (UUID(),'I-am-Mary-17','Don\'t copy others','Đừng là bản sao của người khác','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_017.mp3',NULL,'00:00:00.000','00:03:55.260','I-am-Mary','NO',17) */
+	/* (UUID(),'I-am-Mary-17','Don\'t copy others','Đừng là bản sao của người khác','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_017.mp3',NULL,'00:00:00.000','00:03:55.260','I-am-Mary',0,0,17) */
 	('Don\'t make yourself a copy','Đừng tạo bản sao của chính mình','00:00:04.040','00:00:05.840','I-am-Mary-17'),
 	('Someone said, when you live according to other people\'s point of view, you are dead','Có người đã nói, khi bạn sống theo quan điểm của người khác, bạn là người đã chết','00:00:06.400','00:00:10.840','I-am-Mary-17'),
 	('In life, each of us has our own views and thoughts','Trong cuộc sống, mỗi người trong chúng ta đều có quan điểm và suy nghĩ riêng','00:00:11.640','00:00:14.740','I-am-Mary-17'),
@@ -897,7 +897,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Live by your own point of view, and believe that, as long as you live and be happy with that point of view, your life is really happy','Hãy sống theo quan điểm của chính mình, và tin rằng, miễn là bạn sống và hạnh phúc với quan điểm đó, cuộc sống của bạn sẽ thật sự hạnh phúc','00:03:45.400','00:03:52.740','I-am-Mary-17'),
 	('Because your life is up to you','Vì cuộc sống của bạn là do bạn quyết định','00:03:53.480','00:03:55.260','I-am-Mary-17'),
 
-	/* (UUID(),'I-am-Mary-18','Fear of missing out - FOMO','Hội chứng sợ bỏ lỡ','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_018.mp3',NULL,'00:00:00.000','00:04:01.260','I-am-Mary','NO',18) */
+	/* (UUID(),'I-am-Mary-18','Fear of missing out - FOMO','Hội chứng sợ bỏ lỡ','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_018.mp3',NULL,'00:00:00.000','00:04:01.260','I-am-Mary',0,0,18) */
 	('FOMO, or fear of missing out, is a concept that directs people to believe that they are always missing out on things and events, and that others are always happier than they are','FOMO, hay nỗi sợ bị bỏ lỡ, là một khái niệm khiến mọi người tin rằng họ luôn bị bỏ lỡ những điều và sự kiện, và rằng người khác luôn hạnh phúc hơn họ','00:00:04.300','00:00:14.740','I-am-Mary-18'),
 	('Social media grows, and the insecurity comes from when you miss something','Mạng xã hội phát triển, và sự bất an đến khi bạn bỏ lỡ điều gì đó','00:00:16.000','00:00:20.120','I-am-Mary-18'),
 	('You don\'t understand your group\'s joke','Bạn không hiểu câu chuyện đùa của nhóm mình','00:00:20.480','00:00:22.380','I-am-Mary-18'),
@@ -949,7 +949,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('You are jealous of other people\'s lives, but you don\'t know that other people are jealous of you','Bạn ghen tị với cuộc sống của người khác, nhưng bạn không biết rằng người khác cũng đang ghen tị với bạn','00:03:53.900','00:03:58.420','I-am-Mary-18'),
 	('So don\'t bury your life in this vicious circle','Vì vậy đừng chôn vùi cuộc sống của bạn trong vòng xoáy tồi tệ này','00:03:58.700','00:04:01.260','I-am-Mary-18'),
 
-	/* (UUID(),'I-am-Mary-19','Why is it so hard to say sorry?','Vì sao nói lời xin lỗi lại khó đến vậy?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_019.mp3',NULL,'00:00:00.000','00:04:31.630','I-am-Mary','NO',19) */
+	/* (UUID(),'I-am-Mary-19','Why is it so hard to say sorry?','Vì sao nói lời xin lỗi lại khó đến vậy?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_019.mp3',NULL,'00:00:00.000','00:04:31.630','I-am-Mary',0,0,19) */
 	('Why is it so hard to say sorry?','Tại sao lại khó khăn như vậy khi nói lời xin lỗi?','00:00:04.170','00:00:06.490','I-am-Mary-19'),
 	('Apologies are always something we are taught, from a very young age','Lời xin lỗi luôn là điều chúng ta được dạy, từ khi còn rất nhỏ','00:00:07.410','00:00:11.170','I-am-Mary-19'),
 	('A sincere apology has the effect of expressing regret, for causing trouble, hurt, or damage to another person','Một lời xin lỗi chân thành có tác dụng bày tỏ sự hối tiếc, vì đã gây rắc rối, tổn thương, hay thiệt hại cho người khác','00:00:12.030','00:00:19.810','I-am-Mary-19'),
@@ -997,7 +997,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('When we admit we\'re wrong, and overcome our fear, and resistance to apologizing, we develop a deep respect for ourselves','Khi chúng ta thừa nhận mình sai, và vượt qua nỗi sợ hãi, cùng sự chống cự khi xin lỗi, chúng ta sẽ phát triển sự tôn trọng sâu sắc đối với bản thân mình','00:03:42.370','00:03:49.790','I-am-Mary-19'),
 	('An apology is also a way for people to show each other respect, for the relationship, and generously give both sides one more chance','Lời xin lỗi cũng là một cách để mọi người thể hiện sự tôn trọng lẫn nhau, cho mối quan hệ và rộng lượng trao cho cả hai bên một cơ hội nữa','00:03:51.030','00:03:58.550','I-am-Mary-19'),
 
-	/* (UUID(),'I-am-Mary-20','Have you really matured?','Bạn đã thực sự trưởng thành chưa?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_020.mp3',NULL,'00:00:00.000','00:05:05.540','I-am-Mary','NO',20) */
+	/* (UUID(),'I-am-Mary-20','Have you really matured?','Bạn đã thực sự trưởng thành chưa?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_020.mp3',NULL,'00:00:00.000','00:05:05.540','I-am-Mary',0,0,20) */
 	('What is maturity?','Trưởng thành là gì?','00:00:04.040','00:00:05.380','I-am-Mary-20'),
 	('For someone, people who reach the age of 18 are called an adult','Đối với một số người, những người đạt đến tuổi 18 được gọi là người trưởng thành','00:00:05.760','00:00:09.540','I-am-Mary-20'),
 	('But that\'s just biological maturity','Nhưng đó chỉ là sự trưởng thành về mặt sinh học','00:00:10.180','00:00:12.540','I-am-Mary-20'),
@@ -1055,7 +1055,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'I-am-Mary-21','Stop blaming circumstances','Ngừng đổ lỗi cho hoàn cảnh','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_021.mp3',NULL,'00:00:00.000','00:04:31.630','I-am-Mary','NO',21) */
+	/* (UUID(),'I-am-Mary-21','Stop blaming circumstances','Ngừng đổ lỗi cho hoàn cảnh','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_021.mp3',NULL,'00:00:00.000','00:04:31.630','I-am-Mary',0,0,21) */
 	('99% of the failures come from people who have the habit of making excuses','99% thất bại đến từ những người có thói quen biện hộ','00:00:04.370','00:00:09.310','I-am-Mary-21'),
 	('George Washington Carver asserted, If you want to create the life that you dream of, you have to be 100% responsible for your life','George Washington Carver đã khẳng định, nếu bạn muốn tạo ra cuộc sống mà bạn mơ ước, bạn phải chịu trách nhiệm 100% về cuộc đời mình','00:00:09.850','00:00:18.390','I-am-Mary-21'),
 	('This means giving up all justification, defences, excuses why you can\'t or haven\'t done something, and the habit of blaming events','Điều này có nghĩa là từ bỏ tất cả sự biện minh, phòng thủ, lý do vì sao bạn không thể hoặc chưa làm được điều gì đó, và thói quen đổ lỗi cho các sự kiện','00:00:19.110','00:00:27.130','I-am-Mary-21'),
@@ -1098,7 +1098,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('So stop blaming circumstances and change your attitude and actions','Vì vậy, hãy ngừng đổ lỗi cho hoàn cảnh và thay đổi thái độ cùng hành động của bạn','00:03:15.410','00:03:19.890','I-am-Mary-21'),
 	('Remember, only you are in control of your destiny','Hãy nhớ, chỉ có bạn mới kiểm soát được số phận của mình','00:03:19.890','00:03:23.330','I-am-Mary-21'),
 
-	/* (UUID(),'I-am-Mary-22','Ignore the world','Mặc kệ thiên hạ','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_022.mp3',NULL,'00:00:00.000','00:04:31.680','I-am-Mary','NO',22) */
+	/* (UUID(),'I-am-Mary-22','Ignore the world','Mặc kệ thiên hạ','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_022.mp3',NULL,'00:00:00.000','00:04:31.680','I-am-Mary',0,0,22) */
 	('What you like, what you eat, where you go, what you do, and who you want to be.','Bạn thích gì, ăn gì, đi đâu, làm gì, và bạn muốn trở thành ai.','00:00:04.100','00:00:09.480','I-am-Mary-22'),
 	('How many times have you been influenced by other people, and not really what you want?','Có bao nhiêu lần bạn bị ảnh hưởng bởi người khác, và không phải là điều bạn thực sự muốn?','00:00:09.480','00:00:13.520','I-am-Mary-22'),
 	('How many times have you tried to find sympathy and comfort from others, but in the end, the problem is still there, and you get hurt even more?','Có bao nhiêu lần bạn tìm kiếm sự đồng cảm và an ủi từ người khác, nhưng cuối cùng, vấn đề vẫn còn đó và bạn còn bị tổn thương nhiều hơn?','00:00:14.020','00:00:21.960','I-am-Mary-22'),
@@ -1151,7 +1151,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Discover your life the way you want','Khám phá cuộc sống của bạn theo cách bạn muốn','00:04:27.460','00:04:29.360','I-am-Mary-22'),
 	('It\'s yours and no one else\'s','Nó là của bạn và không phải của ai khác','00:04:29.860','00:04:31.680','I-am-Mary-22'),
 
-	/* (UUID(),'I-am-Mary-23','Expectations or Pressure?','Đừng để kỳ vọng trở thành áp lực','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_023.mp3',NULL,'00:00:00.000','00:05:27.440','I-am-Mary','NO',23) */
+	/* (UUID(),'I-am-Mary-23','Expectations or Pressure?','Đừng để kỳ vọng trở thành áp lực','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_023.mp3',NULL,'00:00:00.000','00:05:27.440','I-am-Mary',0,0,23) */
 	('Every person born into this life carries on his shoulders an invisible but formidable weight, which is the expectations of others for him','Mỗi người sinh ra trong cuộc đời này đều mang trên vai một gánh nặng vô hình nhưng rất lớn, đó là những kỳ vọng của người khác dành cho mình','00:00:04.360','00:00:12.660','I-am-Mary-23'),
 	('Parents give birth to a child, raise a child, and everyone expects their children to live a life worth living in the future','Cha mẹ sinh ra một đứa trẻ, nuôi dưỡng một đứa trẻ, và mọi người đều mong đợi con cái mình sống một cuộc đời đáng sống trong tương lai','00:00:13.600','00:00:20.640','I-am-Mary-23'),
 	('Maybe the children don\'t become some big shots, but at least, they have to do something useful in life','Có thể con cái không trở thành những người quan trọng, nhưng ít nhất, chúng phải làm được điều gì đó hữu ích trong cuộc sống','00:00:21.560','00:00:27.380','I-am-Mary-23'),
@@ -1225,7 +1225,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('No one has the right to decide the fate of another, when that person does not meet his expectations','Không ai có quyền quyết định số phận của người khác, khi người đó không đáp ứng được kỳ vọng của mình','00:05:15.080','00:05:20.480','I-am-Mary-23'),
 	('Love and expectations, should be accompanied by faith, sympathy, and tolerance with all your heart','Tình yêu và kỳ vọng, nên đi kèm với niềm tin, sự cảm thông, và lòng khoan dung với tất cả trái tim của bạn','00:05:21.500','00:05:27.440','I-am-Mary-23'),
 
-	/* (UUID(),'I-am-Mary-24','Perseverance - The key to success','Sự kiên trì - Chìa khoá để thành công','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_024.mp3',NULL,'00:00:00.000','00:04:21.730','I-am-Mary','NO',24) */
+	/* (UUID(),'I-am-Mary-24','Perseverance - The key to success','Sự kiên trì - Chìa khoá để thành công','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_024.mp3',NULL,'00:00:00.000','00:04:21.730','I-am-Mary',0,0,24) */
 	('There will be certain stages in your life where you face many difficulties, challenges, and pressures and want to give it all up','Sẽ có những giai đoạn trong cuộc đời bạn phải đối mặt với nhiều khó khăn, thử thách và áp lực, khiến bạn muốn từ bỏ tất cả','00:00:04.170','00:00:11.350','I-am-Mary-24'),
 	('However, giving up would not be the right choice','Tuy nhiên, từ bỏ sẽ không phải là lựa chọn đúng đắn','00:00:12.110','00:00:14.810','I-am-Mary-24'),
 	('You cannot easily give up on the important goals of your life, which you have spent a lot of time and effort to get to today','Bạn không thể dễ dàng từ bỏ những mục tiêu quan trọng của cuộc đời mình, những thứ bạn đã dành rất nhiều thời gian và công sức để đạt được cho đến hôm nay','00:00:15.770','00:00:22.390','I-am-Mary-24'),
@@ -1275,7 +1275,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Don\'t just be satisfied with the present without the will to rise, the will to strive','Đừng chỉ hài lòng với hiện tại mà không có ý chí vươn lên, ý chí phấn đấu','00:04:13.370','00:04:18.149','I-am-Mary-24'),
 	('Always strive and constantly develop yourself','Hãy luôn cố gắng và không ngừng phát triển bản thân','00:04:19.070','00:04:21.730','I-am-Mary-24'),
 
-	/* (UUID(),'I-am-Mary-25','Protecting the environment','Hãy bảo vệ môi trường','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_025.mp3',NULL,'00:00:00.000','00:03:22.220','I-am-Mary','NO',25) */
+	/* (UUID(),'I-am-Mary-25','Protecting the environment','Hãy bảo vệ môi trường','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_025.mp3',NULL,'00:00:00.000','00:03:22.220','I-am-Mary',0,0,25) */
 	('What is the environment?','Môi trường là gì?','00:00:04.040','00:00:05.500','I-am-Mary-25'),
 	('The environment is the air we breathe, and the water we drink, and it is everything we need for our life','Môi trường là không khí chúng ta hít thở, nước chúng ta uống và là tất cả những gì chúng ta cần cho cuộc sống','00:00:06.000','00:00:11.500','I-am-Mary-25'),
 	('Environment plays a crucial part in our life','Môi trường đóng vai trò rất quan trọng trong cuộc sống của chúng ta','00:00:12.520','00:00:15.120','I-am-Mary-25'),
@@ -1319,7 +1319,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'I-am-Mary-26','If one day you wanna give up','Nếu một ngày bạn muốn bỏ cuộc','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_026.mp3',NULL,'00:00:00.000','00:03:57.030','I-am-Mary','NO',26) */
+	/* (UUID(),'I-am-Mary-26','If one day you wanna give up','Nếu một ngày bạn muốn bỏ cuộc','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_026.mp3',NULL,'00:00:00.000','00:03:57.030','I-am-Mary',0,0,26) */
 	('Before life, you feel small','Trước cuộc đời, bạn cảm thấy mình thật nhỏ bé','00:00:04.230','00:00:06.710','I-am-Mary-26'),
 	('Stop to see how wide the sky is, where your feet can go and where you should stop on this long arduous journey to find some peace for yourself','Dừng lại để thấy bầu trời rộng lớn bao la, nơi đôi chân bạn có thể đi và nơi bạn nên dừng lại trên hành trình dài gian nan này để tìm kiếm chút bình yên cho bản thân','00:00:07.270','00:00:15.050','I-am-Mary-26'),
 	('If one day, you feel alone, know how to wait patiently and turn your own loneliness into strength to become stronger','Nếu một ngày, bạn cảm thấy cô đơn, hãy biết chờ đợi kiên nhẫn và biến sự cô đơn của mình thành sức mạnh để trở nên mạnh mẽ hơn','00:00:16.030','00:00:24.310','I-am-Mary-26'),
@@ -1357,7 +1357,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Try to look at the unfortunate people, the homeless children, the lonely old people, the disabled, all those who have been dreaming of a perfect body, and a home like other ordinary people','Hãy thử nhìn vào những người không may, những đứa trẻ vô gia cư, những người già cô đơn, những người khuyết tật, tất cả những người đã mơ về một cơ thể hoàn hảo, và một mái nhà như những người bình thường khác','00:03:41.790','00:03:52.850','I-am-Mary-26'),
 	('Finally, think carefully to know what you should live for','Cuối cùng, hãy suy nghĩ kỹ để biết bạn nên sống vì điều gì','00:03:53.970','00:03:57.030','I-am-Mary-26'),
 
-	/* (UUID(),'I-am-Mary-27','Winter is coming','Xin chào mùa đông','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_027.mp3',NULL,'00:00:00.000','00:04:45.940','I-am-Mary','NO',27) */
+	/* (UUID(),'I-am-Mary-27','Winter is coming','Xin chào mùa đông','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_027.mp3',NULL,'00:00:00.000','00:04:45.940','I-am-Mary',0,0,27) */
 	('There are four seasons in a year, each with its beauty','Có bốn mùa trong một năm, mỗi mùa đều có vẻ đẹp riêng','00:00:04.420','00:00:07.820','I-am-Mary-27'),
 	('Some people love the sprawling of spring, some like the vibrant summer, and some glamour the charming beauty of autumn','Một số người yêu thích sự sinh sôi nảy nở của mùa xuân, một số thích sự sôi động của mùa hè, và một số mê đắm vẻ đẹp quyến rũ của mùa thu','00:00:08.680','00:00:15.300','I-am-Mary-27'),
 	('What about winter?','Vậy còn mùa đông thì sao?','00:00:16.220','00:00:17.240','I-am-Mary-27'),
@@ -1413,7 +1413,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And so that each person enriches their emotions','Và để mỗi người làm phong phú thêm cảm xúc của mình','00:04:39.860','00:04:42.720','I-am-Mary-27'),
 	('Wishing you a warm and happy winter','Chúc bạn một mùa đông ấm áp và hạnh phúc','00:04:43.860','00:04:45.940','I-am-Mary-27'),
 
-	/* (UUID(),'I-am-Mary-28','Have you found your soulmate?','Bạn đã tìm thấy tri kỷ của mình chưa?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_028.mp3',NULL,'00:00:00.000','00:12:47.220','I-am-Mary','NO',28) */
+	/* (UUID(),'I-am-Mary-28','Have you found your soulmate?','Bạn đã tìm thấy tri kỷ của mình chưa?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_028.mp3',NULL,'00:00:00.000','00:12:47.220','I-am-Mary',0,0,28) */
 	('Hi, I\'m Lani','Xin chào, tôi là Lani','00:00:00.760','00:00:01.300','I-am-Mary-28'),
 	('I just transferred schools and I\'m looking forward to meeting many new friends','Tôi vừa chuyển trường và đang mong chờ được gặp gỡ nhiều bạn mới','00:00:01.580','00:00:05.800','I-am-Mary-28'),
 	('Please like, subscribe to Life Diary and come to school with me','Hãy like, đăng ký kênh Life Diary và đến trường cùng tôi nhé','00:00:06.200','00:00:09.500','I-am-Mary-28'),
@@ -1646,7 +1646,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('I winked and sent him a kiss','Tôi nháy mắt và gửi anh ấy một nụ hôn','00:12:41.660','00:12:43.100','I-am-Mary-28'),
 	('His face started to turn as red as his hair','Khuôn mặt anh ấy bắt đầu đỏ lên như mái tóc của anh ấy','00:12:43.520','00:12:47.220','I-am-Mary-28'),
 
-	/* (UUID(),'I-am-Mary-29','Ways to deal with exam stress','Cách vượt qua áp lực thi cử','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_029.mp3',NULL,'00:00:00.000','00:04:21.350','I-am-Mary','NO',29) */
+	/* (UUID(),'I-am-Mary-29','Ways to deal with exam stress','Cách vượt qua áp lực thi cử','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_029.mp3',NULL,'00:00:00.000','00:04:21.350','I-am-Mary',0,0,29) */
 	('The tests pile up, the exams are coming up, everything was so overwhelming that it made you nervous','Các bài kiểm tra chồng chất, các kỳ thi đang đến gần, mọi thứ quá áp lực khiến bạn cảm thấy lo lắng','00:00:04.230','00:00:10.230','I-am-Mary-29'),
 	('In life, people will have to go through exams, school exams, driver\'s license exams, work competitions, etc','Trong cuộc sống, con người phải trải qua các kỳ thi, kỳ thi ở trường, thi lấy bằng lái xe, các cuộc thi công việc, v.v','00:00:11.390','00:00:18.950','I-am-Mary-29'),
 	('No matter how many exams you pass, pressure from exams is inevitable','Dù bạn vượt qua bao nhiêu kỳ thi, áp lực từ các kỳ thi là điều không thể tránh khỏi','00:00:19.710','00:00:23.930','I-am-Mary-29'),
@@ -1694,7 +1694,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('That\'s the key point, not perfection','Đó là điều quan trọng nhất, không phải sự hoàn hảo','00:04:12.030','00:04:14.290','I-am-Mary-29'),
 	('Wish you overcome the exam stress, be well equipped with all the knowledge, and conquer the exam satisfactorily','Chúc bạn vượt qua căng thẳng kỳ thi, trang bị đầy đủ kiến thức và chinh phục kỳ thi một cách hài lòng','00:04:15.010','00:04:21.350','I-am-Mary-29'),
 
-	/* (UUID(),'I-am-Mary-30','How to respect yourself','Hãy tôn trọng bản thân','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_030.mp3',NULL,'00:00:00.000','00:13:56.680','I-am-Mary','NO',30) */
+	/* (UUID(),'I-am-Mary-30','How to respect yourself','Hãy tôn trọng bản thân','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_030.mp3',NULL,'00:00:00.000','00:13:56.680','I-am-Mary',0,0,30) */
 	('I covered my mouth, stunned speechless, looking at the two bodies entwined on the other bed','Tôi che miệng lại, sửng sốt không nói nên lời, nhìn vào hai cơ thể quấn chặt nhau trên chiếc giường kia','00:00:00.340','00:00:06.040','I-am-Mary-30'),
 	('One is my boyfriend and one is my best friend','Một người là bạn trai tôi và một người là bạn thân của tôi','00:00:06.560','00:00:09.340','I-am-Mary-30'),
 	('I felt that my world started crashing down','Tôi cảm thấy thế giới của mình bắt đầu sụp đổ','00:00:10.020','00:00:12.680','I-am-Mary-30'),
@@ -1898,7 +1898,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'I-am-Mary-31','How to cure laziness','Cách chữa bệnh lười','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_031.mp3',NULL,'00:00:00.000','00:12:09.240','I-am-Mary','NO',31) */
+	/* (UUID(),'I-am-Mary-31','How to cure laziness','Cách chữa bệnh lười','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_031.mp3',NULL,'00:00:00.000','00:12:09.240','I-am-Mary',0,0,31) */
 	('I\'m Zelda','Mình là Zelda','00:00:00.370','00:00:00.730','I-am-Mary-31'),
 	('People around often call me Unlucky Girl, but I don\'t think so','Mọi người xung quanh thường gọi tôi là Cô Gái Xui Xẻo, nhưng tôi không nghĩ vậy','00:00:01.290','00:00:04.870','I-am-Mary-31'),
 	('I\'m just a little unlucky','Tôi chỉ hơi xui xẻo một chút','00:00:05.350','00:00:06.590','I-am-Mary-31'),
@@ -2082,7 +2082,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And meeting someone who appreciates me like Cindy, perhaps those are the two greatest blessings that I have','Và gặp được ai đó như Cindy, người trân trọng tôi, có lẽ đó là hai điều may mắn lớn nhất mà tôi có','00:11:52.460','00:11:59.160','I-am-Mary-31'),
 	('Sometimes life doesn\'t turn out the way we want it, but just smile and face it, because bad luck and luck always go hand in hand','Đôi khi cuộc sống không diễn ra như chúng ta mong muốn, nhưng chỉ cần mỉm cười và đối mặt với nó, vì xui xẻo và may mắn luôn đi đôi với nhau','00:11:59.700','00:12:09.240','I-am-Mary-31'),
 
-	/* (UUID(),'I-am-Mary-32','6 habits that make people like you','6 thói quen khiến mọi người yêu mến bạn','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_032.mp3',NULL,'00:00:00.000','00:13:54.370','I-am-Mary','NO',32) */
+	/* (UUID(),'I-am-Mary-32','6 habits that make people like you','6 thói quen khiến mọi người yêu mến bạn','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_032.mp3',NULL,'00:00:00.000','00:13:54.370','I-am-Mary',0,0,32) */
 	('Hi, I\'m Diona, the daughter of an extremely wealthy family','Chào, tôi là Diona, con gái của một gia đình cực kỳ giàu có','00:00:00.010','00:00:04.390','I-am-Mary-32'),
 	('My father owns a large hotel chain while my mother owns a luxury cosmetic brand','Cha tôi sở hữu một chuỗi khách sạn lớn, còn mẹ tôi sở hữu một thương hiệu mỹ phẩm cao cấp','00:00:05.210','00:00:09.790','I-am-Mary-32'),
 	('My brother Harry is apprenticed to follow in his father\'s footsteps, and I am inferior to none','Anh trai tôi, Harry, đang học việc để nối nghiệp cha, còn tôi thì không thua kém ai cả','00:00:10.650','00:00:16.490','I-am-Mary-32'),
@@ -2331,7 +2331,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Harry is happy with Juliet, and his parents get along well','Harry hạnh phúc bên Juliet, và bố mẹ anh ấy sống hòa thuận','00:13:43.910','00:13:47.830','I-am-Mary-32'),
 	('I couldn\'t ask for anything more than to continue living with a truly perfect family','Tôi không thể yêu cầu gì hơn ngoài việc tiếp tục sống với một gia đình thực sự hoàn hảo','00:13:48.330','00:13:54.370','I-am-Mary-32'),
 
-	/* (UUID(),'I-am-Mary-33','Looking back at 2022','Cùng nhìn lại 2022','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_033.mp3',NULL,'00:00:00.000','00:12:50.620','I-am-Mary','NO',33) */
+	/* (UUID(),'I-am-Mary-33','Looking back at 2022','Cùng nhìn lại 2022','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_033.mp3',NULL,'00:00:00.000','00:12:50.620','I-am-Mary',0,0,33) */
 	('I\'m Emily, a cute girl with long brown hair and beautiful blue eyes','Mình là Emily, một cô gái dễ thương với mái tóc nâu dài và đôi mắt xanh đẹp','00:00:00.570','00:00:05.870','I-am-Mary-33'),
 	('I\'ll turn 16 this year','Năm nay mình sẽ tròn 16 tuổi','00:00:06.290','00:00:08.150','I-am-Mary-33'),
 	('A few weeks ago, because of work reasons, my family decided to move to a new city','Cách đây vài tuần, vì lý do công việc, gia đình mình quyết định chuyển đến một thành phố mới','00:00:09.010','00:00:14.850','I-am-Mary-33'),
@@ -2495,7 +2495,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('I happily thought and continued to imagine what would happen next','Tôi vui vẻ nghĩ và tiếp tục tưởng tượng điều gì sẽ xảy ra tiếp theo','00:12:40.100','00:12:44.500','I-am-Mary-33'),
 	('One day, under the starry sky, he and I will be together','Một ngày nào đó, dưới bầu trời đầy sao, anh ấy và tôi sẽ ở bên nhau','00:12:45.140','00:12:50.620','I-am-Mary-33'),
 
-	/* (UUID(),'I-am-Mary-34','How to stop shopping addiction','Cách cai "nghiện" mua sắm','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_034.mp3',NULL,'00:00:00.000','00:12:57.890','I-am-Mary','NO',34) */
+	/* (UUID(),'I-am-Mary-34','How to stop shopping addiction','Cách cai "nghiện" mua sắm','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_034.mp3',NULL,'00:00:00.000','00:12:57.890','I-am-Mary',0,0,34) */
 	('Hi, I\'m Daniel','Chào, tôi là Daniel','00:00:00.530','00:00:01.130','I-am-Mary-34'),
 	('I\'m pretty sure I\'m the perfect type of guy that every girl\'s looking for','Tôi khá chắc chắn rằng tôi là mẫu đàn ông hoàn hảo mà mọi cô gái đều tìm kiếm','00:00:01.390','00:00:04.730','I-am-Mary-34'),
 	('I was born into a wealthy family','Tôi được sinh ra trong một gia đình giàu có','00:00:05.050','00:00:06.950','I-am-Mary-34'),
@@ -2677,7 +2677,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('But maybe because of past mistakes, she still doesn\'t agree with me','Nhưng có lẽ vì những sai lầm trong quá khứ, cô ấy vẫn không đồng ý với tôi','00:12:50.890','00:12:55.690','I-am-Mary-34'),
 	('Please, wish me luck','Làm ơn, hãy chúc tôi may mắn','00:12:56.270','00:12:57.890','I-am-Mary-34'),
 
-	/* (UUID(),'I-am-Mary-35','Control your emotions','Hãy biết cách kiểm soát cảm xúc','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_035.mp3',NULL,'00:00:00.000','00:04:37.790','I-am-Mary','NO',35) */
+	/* (UUID(),'I-am-Mary-35','Control your emotions','Hãy biết cách kiểm soát cảm xúc','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_035.mp3',NULL,'00:00:00.000','00:04:37.790','I-am-Mary',0,0,35) */
 	('In reality, it\'s not easy to control your emotions, because emotions are instinctive','Trên thực tế, việc kiểm soát cảm xúc không hề dễ dàng, vì cảm xúc là bản năng','00:00:04.230','00:00:09.890','I-am-Mary-35'),
 	('Emotions are an essential factor that affects the way we see life','Cảm xúc là yếu tố quan trọng ảnh hưởng đến cách chúng ta nhìn nhận cuộc sống','00:00:10.730','00:00:14.270','I-am-Mary-35'),
 	('Therefore, using emotional intelligence effectively will contribute to, guiding, us to success','Do đó, việc sử dụng trí tuệ cảm xúc một cách hiệu quả sẽ góp phần dẫn dắt chúng ta đến thành công','00:00:15.650','00:00:21.350','I-am-Mary-35'),
@@ -2727,7 +2727,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'I-am-Mary-36','Tet holiday past and present','Tết xưa và nay','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_036.mp3',NULL,'00:00:00.000','00:05:02.280','I-am-Mary','NO',36) */
+	/* (UUID(),'I-am-Mary-36','Tet holiday past and present','Tết xưa và nay','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_036.mp3',NULL,'00:00:00.000','00:05:02.280','I-am-Mary',0,0,36) */
 	('The thing is, the Lunar New Year has been imprinted in the subconscious of every Vietnamese person, because it is a sacred time, marking the beginning of a spring full of life','Thực tế là, Tết Nguyên Đán đã in sâu trong tiềm thức của mỗi người Việt Nam, bởi đây là thời khắc thiêng liêng, đánh dấu sự khởi đầu của một mùa xuân tràn đầy sức sống','00:00:05.000','00:00:14.740','I-am-Mary-36'),
 	('In the minds of the Vietnamese people, Tet is always a cheerful and colourful image, a warm reunion family image','Trong tâm trí người Việt, Tết luôn là hình ảnh vui tươi, rực rỡ màu sắc, một hình ảnh gia đình đoàn tụ ấm áp','00:00:15.660','00:00:22.480','I-am-Mary-36'),
 	('However, does modern life and hustle make people live more and more quickly, and forget the sacred moments of reunion on Tet holidays?','Tuy nhiên, liệu cuộc sống hiện đại và hối hả có khiến con người sống ngày càng nhanh, quên đi những khoảnh khắc thiêng liêng của sự đoàn tụ vào ngày Tết?','00:00:23.400','00:00:30.860','I-am-Mary-36'),
@@ -2775,7 +2775,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Family','Gia đình','00:04:59.940','00:05:00.320','I-am-Mary-36'),
 	('Let\'s go back home','Hãy trở về nhà','00:05:01.100','00:05:02.280','I-am-Mary-36'),
 
-	/* (UUID(),'I-am-Mary-37','Plan with me','Lên kế hoạch phát triển bản thân năm 2023','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_037.mp3',NULL,'00:00:00.000','00:06:04.220','I-am-Mary','NO',37) */
+	/* (UUID(),'I-am-Mary-37','Plan with me','Lên kế hoạch phát triển bản thân năm 2023','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_037.mp3',NULL,'00:00:00.000','00:06:04.220','I-am-Mary',0,0,37) */
 	('The end of the year is an opportunity for everyone to look back on a year\'s journey with what was done in the previous year','Cuối năm là cơ hội để mọi người nhìn lại hành trình một năm với những gì đã làm trong năm trước','00:00:05.320','00:00:12.120','I-am-Mary-37'),
 	('The transition between the moment of the old year and the new year is always the most emotional time to describe','Khoảnh khắc chuyển giao giữa năm cũ và năm mới luôn là thời điểm đầy cảm xúc khó tả','00:00:12.980','00:00:19.140','I-am-Mary-37'),
 	('You say goodbye to a year of events that happened to you, and you also bring hope for the new year\'s moment to come with a greater desire to continue life\'s journey','Bạn nói lời tạm biệt với một năm đầy sự kiện đã xảy ra với mình, và mang theo hy vọng cho khoảnh khắc của năm mới với mong muốn lớn lao tiếp tục hành trình cuộc sống','00:00:20.080','00:00:29.000','I-am-Mary-37'),
@@ -2843,7 +2843,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Whether it is possible or not is up to you, keep yourself steadfast and have a conquering attitude','Việc có thể hay không là tùy thuộc vào bạn, hãy giữ vững bản thân và có thái độ chinh phục','00:05:56.540','00:06:01.720','I-am-Mary-37'),
 	('Your success will not be far away','Thành công của bạn sẽ không xa','00:06:02.360','00:06:04.220','I-am-Mary-37'),
 
-	/* (UUID(),'I-am-Mary-38','Attract positive energy into your life','Cách thu hút năng lượng tích cực vào cuộc sống','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_038.mp3',NULL,'00:00:00.000','00:05:52.810','I-am-Mary','NO',38) */
+	/* (UUID(),'I-am-Mary-38','Attract positive energy into your life','Cách thu hút năng lượng tích cực vào cuộc sống','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_038.mp3',NULL,'00:00:00.000','00:05:52.810','I-am-Mary',0,0,38) */
 	('We always face problems in life','Chúng ta luôn đối mặt với những vấn đề trong cuộc sống','00:00:04.810','00:00:07.170','I-am-Mary-38'),
 	('The pressure comes from the material to the mental side that makes us always use our best to think and find a solution','Áp lực đến từ vật chất đến tinh thần khiến chúng ta luôn phải dùng khả năng tốt nhất để suy nghĩ và tìm ra giải pháp','00:00:07.690','00:00:13.710','I-am-Mary-38'),
 	('Sometimes pressure and fatigue make us want to let go','Đôi khi áp lực và mệt mỏi khiến chúng ta muốn buông bỏ','00:00:14.710','00:00:17.630','I-am-Mary-38'),
@@ -2909,7 +2909,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Change your mindset to be more positive','Hãy thay đổi tư duy của bạn để trở nên tích cực hơn','00:05:44.190','00:05:46.330','I-am-Mary-38'),
 	('You will feel life is meaningful and happy, and from your energy, the lives of people around will become more colorful','Bạn sẽ cảm thấy cuộc sống có ý nghĩa và hạnh phúc, và từ năng lượng của bạn, cuộc sống của những người xung quanh sẽ trở nên nhiều màu sắc hơn','00:05:46.810','00:05:52.810','I-am-Mary-38'),
 
-	/* (UUID(),'I-am-Mary-39','You deserve to love yourself','Bạn có đang yêu bản thân đúng cách','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_039.mp3',NULL,'00:00:00.000','00:05:38.450','I-am-Mary','NO',39) */
+	/* (UUID(),'I-am-Mary-39','You deserve to love yourself','Bạn có đang yêu bản thân đúng cách','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_039.mp3',NULL,'00:00:00.000','00:05:38.450','I-am-Mary',0,0,39) */
 	('When you think of the people you love, who comes to mind first?','Khi bạn nghĩ về những người bạn yêu thương, ai xuất hiện trong tâm trí bạn đầu tiên?','00:00:04.810','00:00:08.530','I-am-Mary-39'),
 	('Is that your family member, your best friend, or a significant other?','Đó có phải là thành viên trong gia đình bạn, người bạn thân nhất hay một người đặc biệt khác?','00:00:09.170','00:00:13.250','I-am-Mary-39'),
 	('So what about you?','Vậy còn bạn thì sao?','00:00:14.070','00:00:15.090','I-am-Mary-39'),
@@ -2974,7 +2974,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('If not, let\'s start the journey of loving yourself every day','Nếu không, hãy bắt đầu hành trình yêu thương bản thân mỗi ngày','00:05:31.990','00:05:35.310','I-am-Mary-39'),
 	('I\'m sure you will be surprised by the results','Tôi chắc rằng bạn sẽ ngạc nhiên với những kết quả đạt được','00:05:36.070','00:05:38.450','I-am-Mary-39'),
 
-	/* (UUID(),'I-am-Mary-40','The First 13 Money Lessons','Những điều cơ bản phải biết về tiền','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_040.mp3',NULL,'00:00:00.000','00:06:02.730','I-am-Mary','NO',40) */
+	/* (UUID(),'I-am-Mary-40','The First 13 Money Lessons','Những điều cơ bản phải biết về tiền','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_040.mp3',NULL,'00:00:00.000','00:06:02.730','I-am-Mary',0,0,40) */
 	('Are you sure you\'re managing your money well?','Bạn có chắc mình đang quản lý tiền bạc tốt không?','00:00:05.830','00:00:08.070','I-am-Mary-40'),
 	('Are you sure you\'re protecting your wallet well?','Bạn có chắc mình đang bảo vệ ví tiền cẩn thận không?','00:00:08.650','00:00:10.750','I-am-Mary-40'),
 	('And if you are starting to master your money, here are the first money lessons you should not ignore','Và nếu bạn bắt đầu làm chủ tiền bạc của mình, đây là những bài học đầu tiên về tiền bạc mà bạn không nên bỏ qua','00:00:11.330','00:00:16.010','I-am-Mary-40'),
@@ -3039,7 +3039,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'I-am-Mary-41','Habits to live a happy life','Thói quen để sống hạnh phúc hơn','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_041.mp3',NULL,'00:00:00.000','00:07:20.470','I-am-Mary','NO',41) */
+	/* (UUID(),'I-am-Mary-41','Habits to live a happy life','Thói quen để sống hạnh phúc hơn','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_041.mp3',NULL,'00:00:00.000','00:07:20.470','I-am-Mary',0,0,41) */
 	('Happiness is simply a state of mind in which our thinking is pleasant a good share of the time','Hạnh phúc chỉ đơn giản là một trạng thái tâm trí trong đó suy nghĩ của chúng ta hầu hết thời gian là dễ chịu','00:00:05.130','00:00:10.570','I-am-Mary-41'),
 	('Maxwell Maltz','Maxwell Maltz','00:00:11.650','00:00:12.690','I-am-Mary-41'),
 	('I want to say a happy life, because life is full of ups and downs','Tôi muốn nói về một cuộc sống hạnh phúc, vì cuộc sống đầy những thăng trầm','00:00:13.590','00:00:18.030','I-am-Mary-41'),
@@ -3117,7 +3117,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('If any thought occurs in your head, which is not in alignment with what you want in life, you disregard it and reinforce your mind, with the thoughts that support you','Nếu có bất kỳ suy nghĩ nào xuất hiện trong đầu bạn không phù hợp với những gì bạn muốn trong cuộc sống, bạn hãy bỏ qua nó và củng cố tâm trí của mình bằng những suy nghĩ hỗ trợ bạn','00:07:04.310','00:07:13.310','I-am-Mary-41'),
 	('To think consciously will help you consider things more rationally, instead of making emotional decisions','Suy nghĩ có ý thức sẽ giúp bạn cân nhắc mọi thứ một cách hợp lý hơn thay vì đưa ra các quyết định cảm tính','00:07:14.470','00:07:20.470','I-am-Mary-41'),
 
-	/* (UUID(),'I-am-Mary-42','Happy International Women\'s Day','Chúc mừng ngày Quốc tế Phụ nữ','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_042.mp3',NULL,'00:00:00.000','00:04:04.660','I-am-Mary','NO',42) */
+	/* (UUID(),'I-am-Mary-42','Happy International Women\'s Day','Chúc mừng ngày Quốc tế Phụ nữ','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_042.mp3',NULL,'00:00:00.000','00:04:04.660','I-am-Mary',0,0,42) */
 	('A world without women would become bland and boring like a play without conflicts, like an empty cake, like a tale without humor','Một thế giới không có phụ nữ sẽ trở nên nhạt nhẽo và tẻ nhạt như một vở kịch không có xung đột, như một chiếc bánh trống rỗng, như một câu chuyện không có sự hài hước','00:00:04.680','00:00:12.220','I-am-Mary-42'),
 	('It is true that, if this world only had men, then, happiness would never come','Đúng vậy, nếu thế giới này chỉ có đàn ông, thì hạnh phúc sẽ không bao giờ đến','00:00:13.080','00:00:17.540','I-am-Mary-42'),
 	('Our life today is truly happy','Cuộc sống của chúng ta ngày hôm nay thật sự hạnh phúc','00:00:18.780','00:00:20.980','I-am-Mary-42'),
@@ -3157,7 +3157,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('May our half of the world always be happy, peaceful and respected','Mong một nửa thế giới của chúng ta luôn hạnh phúc, bình yên và được tôn trọng','00:03:57.560','00:04:01.480','I-am-Mary-42'),
 	('And our women deserve to be loved and honored','Và những người phụ nữ của chúng ta xứng đáng được yêu thương và tôn vinh','00:04:02.300','00:04:04.660','I-am-Mary-42'),
 
-	/* (UUID(),'I-am-Mary-43','The law of attraction: Get anything you want','Luật hấp dẫn - Thu hút mọi điều bạn muốn','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_043.mp3',NULL,'00:00:00.000','00:05:07.320','I-am-Mary','NO',43) */
+	/* (UUID(),'I-am-Mary-43','The law of attraction: Get anything you want','Luật hấp dẫn - Thu hút mọi điều bạn muốn','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_043.mp3',NULL,'00:00:00.000','00:05:07.320','I-am-Mary',0,0,43) */
 	('The law of attraction is the law that makes all our wishes come true','Luật hấp dẫn là luật khiến tất cả những ước muốn của chúng ta trở thành hiện thực','00:00:04.680','00:00:08.680','I-am-Mary-43'),
 	('The law says that we are like a magnet that attracts everything from the mind','Luật này nói rằng chúng ta giống như một nam châm thu hút tất cả mọi thứ từ tâm trí','00:00:09.580','00:00:13.460','I-am-Mary-43'),
 	('That is, when emotions, wills, beliefs, desires, and dreams are repeated over and over','Cụ thể, khi cảm xúc, ý chí, niềm tin, khát vọng và ước mơ được lặp đi lặp lại','00:00:14.340','00:00:21.040','I-am-Mary-43'),
@@ -3218,7 +3218,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Practicing the law of attraction will help you overcome all difficulties easily and improve your life','Thực hành luật hấp dẫn sẽ giúp bạn vượt qua mọi khó khăn một cách dễ dàng và cải thiện cuộc sống của bạn','00:04:55.480','00:05:02.440','I-am-Mary-43'),
 	('Try to practice the law of attraction, and you will surely get everything you desire','Hãy cố gắng thực hành luật hấp dẫn, và bạn chắc chắn sẽ có được mọi thứ bạn mong muốn','00:05:02.800','00:05:07.320','I-am-Mary-43'),
 
-	/* (UUID(),'I-am-Mary-44','What are you living for?','Bạn đang sống vì điều gì?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_044.mp3',NULL,'00:00:00.000','00:05:20.980','I-am-Mary','NO',44) */
+	/* (UUID(),'I-am-Mary-44','What are you living for?','Bạn đang sống vì điều gì?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_044.mp3',NULL,'00:00:00.000','00:05:20.980','I-am-Mary',0,0,44) */
 	('Have you ever felt uncertain in your life?','Bạn đã bao giờ cảm thấy không chắc chắn trong cuộc sống chưa?','00:00:04.870','00:00:07.550','I-am-Mary-44'),
 	('You do not know what you like, what passion, and what the future will be','Bạn không biết mình thích gì, đam mê gì, và tương lai sẽ ra sao','00:00:08.070','00:00:12.110','I-am-Mary-44'),
 	('You do not have a specific plan for the road ahead','Bạn không có một kế hoạch cụ thể cho con đường phía trước','00:00:12.890','00:00:15.650','I-am-Mary-44'),
@@ -3277,7 +3277,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('You always have choices and choose to be a person who has goals and dreams and believes in your success','Bạn luôn có sự lựa chọn và hãy chọn trở thành một người có mục tiêu, ước mơ và tin vào thành công của mình','00:05:10.460','00:05:17.480','I-am-Mary-44'),
 	('So, you have chosen to be the winner','Vậy nên, bạn đã chọn trở thành người chiến thắng','00:05:18.260','00:05:20.980','I-am-Mary-44'),
 
-	/* (UUID(),'I-am-Mary-45','Do you step out of your SAFE ZONE?','Bạn có dám bước ra khỏi VÙNG AN TOÀN?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_045.mp3',NULL,'00:00:00.000','00:06:08.260','I-am-Mary','NO',45) */
+	/* (UUID(),'I-am-Mary-45','Do you step out of your SAFE ZONE?','Bạn có dám bước ra khỏi VÙNG AN TOÀN?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_045.mp3',NULL,'00:00:00.000','00:06:08.260','I-am-Mary',0,0,45) */
 	('Every day, we face many decisions in life','Mỗi ngày, chúng ta đối mặt với nhiều quyết định trong cuộc sống','00:00:04.940','00:00:08.460','I-am-Mary-45'),
 	('And those decisions mostly depend on, whether you want to step out of your comfort zone or not','Và những quyết định đó chủ yếu phụ thuộc vào việc bạn có muốn bước ra khỏi vùng an toàn của mình hay không','00:00:08.980','00:00:14.400','I-am-Mary-45'),
 	('Our big challenge is that we feel safe in a familiar environment','Thử thách lớn của chúng ta là cảm thấy an toàn trong một môi trường quen thuộc','00:00:15.059','00:00:18.700','I-am-Mary-45'),
@@ -3349,7 +3349,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'I-am-Mary-46','Minimalist living - Less is more','Sống Tối Giản - bớt đi để có nhiều hơn','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_046.mp3',NULL,'00:00:00.000','00:05:50.170','I-am-Mary','NO',46) */
+	/* (UUID(),'I-am-Mary-46','Minimalist living - Less is more','Sống Tối Giản - bớt đi để có nhiều hơn','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_046.mp3',NULL,'00:00:00.000','00:05:50.170','I-am-Mary',0,0,46) */
 	('Have you ever wondered why people travel around the world with only one backpack?','Bạn có bao giờ tự hỏi tại sao những người du lịch vòng quanh thế giới chỉ mang theo một chiếc ba lô?','00:00:04.870','00:00:09.490','I-am-Mary-46'),
 	('Have you ever thought, if you have to move to another place, how much time will it take you to arrange and move your furniture?','Bạn có bao giờ nghĩ rằng nếu phải chuyển đến nơi khác, bạn sẽ mất bao lâu để sắp xếp và chuyển đồ đạc?','00:00:10.630','00:00:17.530','I-am-Mary-46'),
 	('If your boss wanted you to move abroad to live and work, would you be willing to move everything and go within a week?','Nếu sếp của bạn yêu cầu bạn chuyển ra nước ngoài để sống và làm việc, bạn có sẵn sàng chuyển hết đồ đạc và đi trong vòng một tuần?','00:00:18.830','00:00:25.470','I-am-Mary-46'),
@@ -3420,7 +3420,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Enjoy it','Hãy tận hưởng nó','00:05:47.010','00:05:47.650','I-am-Mary-46'),
 	('It\'s also a way of living a simple life','Nó cũng là một cách sống một cuộc sống đơn giản','00:05:47.950','00:05:50.170','I-am-Mary-46'),
 
-	/* (UUID(),'I-am-Mary-47','Your choice determines your life','Sướng hay khổ quyết định là ở bạn','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_047.mp3',NULL,'00:00:00.000','00:06:57.670','I-am-Mary','NO',47) */
+	/* (UUID(),'I-am-Mary-47','Your choice determines your life','Sướng hay khổ quyết định là ở bạn','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_047.mp3',NULL,'00:00:00.000','00:06:57.670','I-am-Mary',0,0,47) */
 	('Positive people are always happy, optimistic and ready to face all difficulties, while negative people live forever in a gloomy and self-deprecating feeling','Những người tích cực luôn vui vẻ, lạc quan và sẵn sàng đối mặt với mọi khó khăn, trong khi những người tiêu cực mãi sống trong cảm giác u ám và tự ti','00:00:05.060','00:00:19.780','I-am-Mary-47'),
 	('Everyone\'s life, too, is always a collection of unpredictable surprises, changes, and ups and downs','Cuộc sống của mọi người cũng vậy, luôn là tập hợp của những bất ngờ, thay đổi và thăng trầm không thể đoán trước','00:00:21.600','00:00:32.220','I-am-Mary-47'),
 	('However, in the same life, some people always feel happy, cheerful, and ready to face everything so that from there, they achieve success and are loved by many people','Tuy nhiên, trong cùng một cuộc sống, có những người luôn cảm thấy hạnh phúc, vui vẻ và sẵn sàng đối mặt với mọi thứ để từ đó đạt được thành công và được nhiều người yêu mến','00:00:32.220','00:00:48.300','I-am-Mary-47'),
@@ -3473,7 +3473,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('They choose to move forward, taking every opportunity to better themselves','Họ chọn tiến lên phía trước, nắm bắt mọi cơ hội để cải thiện bản thân','00:06:42.190','00:06:48.050','I-am-Mary-47'),
 	('Life isn\'t always rosy, so stay positive through challenges, because better things are waiting for you','Cuộc sống không phải lúc nào cũng tươi đẹp, vì vậy hãy giữ thái độ tích cực qua mọi thử thách, vì những điều tốt đẹp hơn đang chờ đón bạn','00:06:48.050','00:06:57.670','I-am-Mary-47'),
 
-	/* (UUID(),'I-am-Mary-48','Are you living with passion?','Bạn có đang sống với đam mê?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_048.mp3',NULL,'00:00:00.000','00:05:35.900','I-am-Mary','NO',48) */
+	/* (UUID(),'I-am-Mary-48','Are you living with passion?','Bạn có đang sống với đam mê?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_048.mp3',NULL,'00:00:00.000','00:05:35.900','I-am-Mary',0,0,48) */
 	('We often hear people say, I work for passion, so those people or we really understand what passion is, or have we ever wondered why some people choose jobs they are passionate about, even though their income is not enough to meet their living needs','Chúng ta thường nghe mọi người nói, Tôi làm việc vì đam mê, vậy những người đó hoặc chúng ta thực sự hiểu đam mê là gì, hay chúng ta đã từng tự hỏi tại sao một số người chọn những công việc họ đam mê, mặc dù thu nhập không đủ đáp ứng nhu cầu sống','00:00:05.260','00:00:20.460','I-am-Mary-48'),
 	('If dreams are the compass for all actions, then passion is the key that helps us approach the door to success','Nếu giấc mơ là chiếc la bàn cho mọi hành động, thì đam mê chính là chìa khóa giúp chúng ta tiếp cận cánh cửa thành công','00:00:21.460','00:00:28.180','I-am-Mary-48'),
 	('A Danish poet said, it is impossible to exist without passion','Một nhà thơ người Đan Mạch đã nói, không thể tồn tại mà không có đam mê','00:00:28.860','00:00:33.080','I-am-Mary-48'),
@@ -3526,7 +3526,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Having identified your passion, persevere to pursue it and believe in yourself','Sau khi xác định được đam mê của mình, hãy kiên trì theo đuổi nó và tin tưởng vào bản thân','00:05:25.100','00:05:30.320','I-am-Mary-48'),
 	('As long as the passion is positive, your life will be more successful and meaningful','Miễn là đam mê đó tích cực, cuộc sống của bạn sẽ thành công và ý nghĩa hơn','00:05:30.900','00:05:35.900','I-am-Mary-48'),
 
-	/* (UUID(),'I-am-Mary-49','Night owl addiction','Liệu thức khuya có giúp ta thành công?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_049.mp3',NULL,'00:00:00.000','00:04:31.630','I-am-Mary','NO',49) */
+	/* (UUID(),'I-am-Mary-49','Night owl addiction','Liệu thức khuya có giúp ta thành công?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_049.mp3',NULL,'00:00:00.000','00:04:31.630','I-am-Mary',0,0,49) */
 	('Currently, the trend of night activities among young people is becoming increasingly popular','Hiện nay, xu hướng hoạt động về đêm trong giới trẻ ngày càng trở nên phổ biến','00:00:04.870','00:00:10.770','I-am-Mary-49'),
 	('Young people are dedicating the time, that the previous generation used for relaxation to work and entertainment','Giới trẻ đang dành thời gian mà thế hệ trước dùng để thư giãn vào công việc và giải trí','00:00:11.830','00:00:18.750','I-am-Mary-49'),
 	('They are living in an age of beauty and health, and the organs of the body are functioning well, so they often forget the advice of experts and doctors on the harmful effects of staying up late','Họ đang sống trong thời kỳ của sắc đẹp và sức khỏe, cơ thể hoạt động tốt nên thường quên lời khuyên của chuyên gia và bác sĩ về tác hại của việc thức khuya','00:00:19.850','00:00:32.310','I-am-Mary-49'),
@@ -3575,7 +3575,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Staying up late is a worrying problem for young people today, but it will no longer be scary if we dare to replace it with better habits','Thức khuya là một vấn đề đáng lo ngại đối với giới trẻ ngày nay, nhưng nó sẽ không còn đáng sợ nếu chúng ta dám thay thế bằng những thói quen tốt hơn','00:06:00.690','00:06:09.670','I-am-Mary-49'),
 	('Let\'s create a balanced and healthy living environment together to enjoy a better life, not always in the cycle of staying up late and stressed','Hãy cùng nhau tạo ra một môi trường sống cân bằng và lành mạnh để tận hưởng một cuộc sống tốt đẹp hơn, không phải luôn trong vòng lặp của thức khuya và căng thẳng','00:06:10.870','00:06:19.290','I-am-Mary-49'),
 
-	/* (UUID(),'I-am-Mary-50','Change your perspective, and life will be happier','Thay đổi góc nhìn, cuộc sống sẽ hạnh phúc hơn','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_050.mp3',NULL,'00:00:00.000','00:04:53.900','I-am-Mary','NO',50) */
+	/* (UUID(),'I-am-Mary-50','Change your perspective, and life will be happier','Thay đổi góc nhìn, cuộc sống sẽ hạnh phúc hơn','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_050.mp3',NULL,'00:00:00.000','00:04:53.900','I-am-Mary',0,0,50) */
 	('Our life is like a long journey with many stages','Cuộc sống của chúng ta giống như một hành trình dài với nhiều giai đoạn','00:00:03.980','00:00:07.320','I-am-Mary-50'),
 	('Depending on maturity, experience, and perception, you will realize at some point in life that you need a new perspective to have a better direction and a fuller experience','Tùy vào sự trưởng thành, kinh nghiệm và nhận thức, bạn sẽ nhận ra ở một thời điểm nào đó trong cuộc đời rằng bạn cần một góc nhìn mới để có một hướng đi tốt hơn và trải nghiệm trọn vẹn hơn','00:00:07.940','00:00:18.200','I-am-Mary-50'),
 	('Sometimes in the most difficult or failed situations, where there seems to be no way out, be brave to overcome, try to reconsider yourself, and accept and change your perspective, you will feel more comfortable and discover new meanings of life','Đôi khi trong những tình huống khó khăn nhất hoặc thất bại, nơi dường như không có lối thoát, hãy dũng cảm vượt qua, cố gắng xem xét lại bản thân, chấp nhận và thay đổi góc nhìn, bạn sẽ cảm thấy thoải mái hơn và khám phá ý nghĩa mới của cuộc sống','00:00:19.480','00:00:34.460','I-am-Mary-50'),
@@ -3621,7 +3621,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'I-am-Mary-51','What is real success?','Thành công thực sự là gì?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_051.mp3',NULL,'00:00:00.000','00:03:55.810','I-am-Mary','NO',51) */
+	/* (UUID(),'I-am-Mary-51','What is real success?','Thành công thực sự là gì?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_051.mp3',NULL,'00:00:00.000','00:03:55.810','I-am-Mary',0,0,51) */
 	('We often hear that, I have to be successful, or hear wishes for each other success in life, determinations to become successful people, examples of success','Chúng ta thường nghe rằng, tôi phải thành công, hoặc nghe những lời chúc nhau thành công trong cuộc sống, quyết tâm trở thành những người thành công, những tấm gương thành công','00:00:04.230','00:00:14.110','I-am-Mary-51'),
 	('But have you ever asked yourself what true success is?','Nhưng bạn đã bao giờ tự hỏi bản thân rằng thành công thực sự là gì chưa?','00:00:15.050','00:00:18.410','I-am-Mary-51'),
 	('Or do you just think, ah, you have to be rich to be successful, owning the economy is called success, must have a car, a house, fame, a position, and, must have this degree, that degree','Hay bạn chỉ nghĩ rằng, à, phải giàu có mới được gọi là thành công, sở hữu kinh tế gọi là thành công, phải có xe, có nhà, danh tiếng, địa vị, và phải có bằng cấp này, bằng cấp kia','00:00:18.790','00:00:31.130','I-am-Mary-51'),
@@ -3656,7 +3656,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Sometimes happiness is just being able to live a simple, peaceful life and pursue simple ideals','Đôi khi hạnh phúc chỉ là có thể sống một cuộc sống đơn giản, bình yên và theo đuổi những lý tưởng giản đơn','00:03:42.390','00:03:48.250','I-am-Mary-51'),
 	('Success does not mean you will be happy, but when you are happy, you are already successful in your life','Thành công không có nghĩa là bạn sẽ hạnh phúc, nhưng khi bạn hạnh phúc, bạn đã thành công trong cuộc sống','00:03:50.030','00:03:55.810','I-am-Mary-51'),
 
-	/* (UUID(),'I-am-Mary-52','Mommy, I Love You - Happy Mother\'s Day','Mẹ ơi con yêu mẹ - Chúc mừng ngày của mẹ','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_052.mp3',NULL,'00:00:00.000','00:03:59.060','I-am-Mary','NO',52) */
+	/* (UUID(),'I-am-Mary-52','Mommy, I Love You - Happy Mother\'s Day','Mẹ ơi con yêu mẹ - Chúc mừng ngày của mẹ','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_052.mp3',NULL,'00:00:00.000','00:03:59.060','I-am-Mary',0,0,52) */
 	('If you want to know, what is the eternity in life?','Nếu bạn muốn biết, điều gì là vĩnh cửu trong cuộc sống?','00:00:05.000','00:00:08.760','I-am-Mary-52'),
 	('Only the answer is the sacrifice of the mother','Chỉ có câu trả lời là sự hy sinh của người mẹ','00:00:09.380','00:00:12.360','I-am-Mary-52'),
 	('Today, the entire world looks forward to an anniversary, to honor all mothers around the world','Hôm nay, cả thế giới mong chờ một dịp kỷ niệm để tôn vinh tất cả những người mẹ trên khắp thế giới','00:00:13.420','00:00:20.260','I-am-Mary-52'),
@@ -3700,7 +3700,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Bursit said, there are many wonders in the world, but the most beautiful wonder is a mother\'s heart','Bursit đã nói, có rất nhiều kỳ quan trên thế giới, nhưng kỳ quan đẹp nhất là trái tim của một người mẹ','00:03:46.560','00:03:52.820','I-am-Mary-52'),
 	('So always love your mother and don\'t make her cry, because you will never get another','Vì vậy, hãy luôn yêu thương mẹ và đừng làm mẹ khóc, vì bạn sẽ không bao giờ có một người mẹ khác','00:03:53.820','00:03:59.060','I-am-Mary-52'),
 
-	/* (UUID(),'I-am-Mary-53','Are young people living passively?','Giới trẻ có đang sống thụ động?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_053.mp3',NULL,'00:00:00.000','00:05:20.700','I-am-Mary','NO',53) */
+	/* (UUID(),'I-am-Mary-53','Are young people living passively?','Giới trẻ có đang sống thụ động?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_053.mp3',NULL,'00:00:00.000','00:05:20.700','I-am-Mary',0,0,53) */
 	('Life is more and more developed, people gradually simplify everything with modern machines','Cuộc sống ngày càng phát triển, con người dần đơn giản hóa mọi thứ bằng những cỗ máy hiện đại','00:00:04.940','00:00:10.780','I-am-Mary-53'),
 	('The lives of young people today are also more than those of previous generations','Cuộc sống của giới trẻ ngày nay cũng đầy đủ hơn so với các thế hệ trước','00:00:11.680','00:00:16.220','I-am-Mary-53'),
 	('However, the availability and convenience have made some young people passive in a world that is constantly moving and developing','Tuy nhiên, sự sẵn có và tiện lợi đã khiến một số bạn trẻ trở nên thụ động trong một thế giới không ngừng vận động và phát triển','00:00:17.440','00:00:25.320','I-am-Mary-53'),
@@ -3758,7 +3758,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('We only live one life','Chúng ta chỉ sống một cuộc đời','00:05:13.900','00:05:15.540','I-am-Mary-53'),
 	('Let\'s cherish every moment, to look back on our hard and beautiful life with pride','Hãy trân trọng từng khoảnh khắc, để nhìn lại cuộc đời vất vả nhưng tươi đẹp của mình với niềm tự hào','00:05:16.020','00:05:20.700','I-am-Mary-53'),
 
-	/* (UUID(),'I-am-Mary-54','Forgive to heal yourself','Tha thứ để chữa lành chính mình','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_054.mp3',NULL,'00:00:00.000','00:04:46.650','I-am-Mary','NO',54) */
+	/* (UUID(),'I-am-Mary-54','Forgive to heal yourself','Tha thứ để chữa lành chính mình','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_054.mp3',NULL,'00:00:00.000','00:04:46.650','I-am-Mary',0,0,54) */
 	('In life, many times we have to experience the feeling of hope and disappointment because of someone','Trong cuộc sống, nhiều lần chúng ta phải trải qua cảm giác hy vọng rồi thất vọng vì một ai đó','00:00:04.810','00:00:10.930','I-am-Mary-54'),
 	('The pain and hurt caused by betrayal make us feel miserable and resentful','Nỗi đau và tổn thương do sự phản bội gây ra khiến chúng ta cảm thấy khổ sở và oán giận','00:00:11.790','00:00:16.410','I-am-Mary-54'),
 	('So how to overcome this?','Vậy làm sao để vượt qua điều này?','00:00:17.550','00:00:19.470','I-am-Mary-54'),
@@ -3816,7 +3816,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Forgiveness feels liberating','Tha thứ mang lại cảm giác giải thoát','00:04:41.650','00:04:43.950','I-am-Mary-54'),
 	('Start to forgive now for a happier life','Hãy bắt đầu tha thứ ngay bây giờ để có một cuộc sống hạnh phúc hơn','00:04:44.370','00:04:46.650','I-am-Mary-54'),
 
-	/* (UUID(),'I-am-Mary-55','What will happen if there is no love in the world?','Nếu thế giới không có tình yêu?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_055.mp3',NULL,'00:00:00.000','00:04:47.470','I-am-Mary','NO',55) */
+	/* (UUID(),'I-am-Mary-55','What will happen if there is no love in the world?','Nếu thế giới không có tình yêu?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_055.mp3',NULL,'00:00:00.000','00:04:47.470','I-am-Mary',0,0,55) */
 	('What will happen if there is no love in the world?','Chuyện gì sẽ xảy ra nếu không có tình yêu trên thế giới?','00:00:04.870','00:00:07.570','I-am-Mary-55'),
 	('Surely there will be no sadness, hate, and pain like a heart cut with a knife','Chắc chắn sẽ không có nỗi buồn, sự căm ghét và đau đớn như một trái tim bị cắt bằng dao','00:00:08.150','00:00:12.830','I-am-Mary-55'),
 	('There will not be times when we find ourselves alone or lost','Sẽ không có lúc chúng ta cảm thấy mình cô đơn hay lạc lõng','00:00:13.670','00:00:17.250','I-am-Mary-55'),
@@ -3865,7 +3865,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'I-am-Mary-56','How to bridge the generation gap?','Làm sao để thu hẹp khoảng cách thế hệ?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_056.mp3',NULL,'00:00:00.000','00:05:05.790','I-am-Mary','NO',56) */
+	/* (UUID(),'I-am-Mary-56','How to bridge the generation gap?','Làm sao để thu hẹp khoảng cách thế hệ?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_056.mp3',NULL,'00:00:00.000','00:05:05.790','I-am-Mary',0,0,56) */
 	('The generation gap has always existed in every family, and in modern life, its effects on family relationships are becoming more and more obvious and noticeable','Khoảng cách thế hệ luôn tồn tại trong mỗi gia đình, và trong cuộc sống hiện đại, tác động của nó lên các mối quan hệ gia đình ngày càng rõ ràng và dễ nhận thấy','00:00:04.810','00:00:14.930','I-am-Mary-56'),
 	('Many people think that the generation gap is like a ghost that destroys understanding in the family, but is that true?','Nhiều người nghĩ rằng khoảng cách thế hệ như một bóng ma hủy hoại sự hiểu biết trong gia đình, nhưng điều đó có đúng không?','00:00:15.830','00:00:23.410','I-am-Mary-56'),
 	('Distance, of course, it must be made up of differences','Khoảng cách, tất nhiên, phải được tạo ra từ những sự khác biệt','00:00:24.250','00:00:27.690','I-am-Mary-56'),
@@ -3900,7 +3900,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Instead, let the next generation catch up with new trends, to easily empathize and communicate, so that it will be easy to educate future generations','Thay vào đó, hãy để thế hệ tiếp theo theo kịp các xu hướng mới, để dễ dàng cảm thông và giao tiếp, từ đó dễ dàng giáo dục các thế hệ tương lai','00:04:52.550','00:05:01.770','I-am-Mary-56'),
 	('Let\'s make the generation gap no longer our fear','Hãy biến khoảng cách thế hệ không còn là nỗi sợ của chúng ta nữa','00:05:02.730','00:05:05.790','I-am-Mary-56'),
 
-	/* (UUID(),'I-am-Mary-57','Everything Happens For A Reason','Mọi chuyện xảy ra đều có lý do của nó','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_057.mp3',NULL,'00:00:00.000','00:05:03.520','I-am-Mary','NO',57) */
+	/* (UUID(),'I-am-Mary-57','Everything Happens For A Reason','Mọi chuyện xảy ra đều có lý do của nó','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_057.mp3',NULL,'00:00:00.000','00:05:03.520','I-am-Mary',0,0,57) */
 	('In life, everything comes to us as if by chance, but it is not by accident','Trong cuộc sống, mọi thứ đến với chúng ta như thể tình cờ, nhưng không phải là ngẫu nhiên','00:00:05.260','00:00:10.540','I-am-Mary-57'),
 	('All those people we meet on the road of life are the teachers who give us invaluable lessons to grow up and understand better the meaning of human life','Tất cả những người mà chúng ta gặp trên con đường cuộc sống đều là những người thầy trao cho chúng ta những bài học vô giá để trưởng thành và hiểu rõ hơn ý nghĩa của cuộc sống con người','00:00:11.540','00:00:20.600','I-am-Mary-57'),
 	('No matter who you meet, they are the people who need to be in your life','Dù gặp ai đi chăng nữa, họ là những người cần có mặt trong cuộc sống của bạn','00:00:21.640','00:00:25.480','I-am-Mary-57'),
@@ -3946,7 +3946,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Always live happily, because all difficulties are just tests','Hãy sống vui vẻ, vì mọi khó khăn chỉ là những bài kiểm tra','00:04:52.820','00:04:56.820','I-am-Mary-57'),
 	('All losses will be compensated at some point, and only believe in yourself, so that time will not leave you','Mọi mất mát sẽ được đền đáp vào một lúc nào đó, và chỉ cần tin tưởng vào chính mình, để thời gian không bỏ rơi bạn','00:04:56.820','00:05:03.520','I-am-Mary-57'),
 
-	/* (UUID(),'I-am-Mary-58','No one is born perfect','Không ai sinh ra là hoàn hảo','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_058.mp3',NULL,'00:00:00.000','00:03:59.110','I-am-Mary','NO',58) */
+	/* (UUID(),'I-am-Mary-58','No one is born perfect','Không ai sinh ra là hoàn hảo','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_058.mp3',NULL,'00:00:00.000','00:03:59.110','I-am-Mary',0,0,58) */
 	('We are not born perfect, and each of us often asks ourselves countless times in our lives about our weaknesses','Chúng ta không sinh ra đã hoàn hảo, và mỗi người trong chúng ta thường tự hỏi vô số lần trong cuộc sống về những điểm yếu của mình','00:00:05.450','00:00:12.530','I-am-Mary-58'),
 	('But how many of us dare to frankly admit our weaknesses, then overcome them and move on in life?','Nhưng có bao nhiêu người trong chúng ta dám thừa nhận thẳng thắn điểm yếu của mình, rồi vượt qua chúng và tiến bước trong cuộc sống?','00:00:13.330','00:00:19.190','I-am-Mary-58'),
 	('How many times do we try to blame everyone for our weaknesses, when in fact we don\'t dare to face it?','Có bao nhiêu lần chúng ta cố gắng đổ lỗi cho mọi người vì những điểm yếu của mình, trong khi thực tế chúng ta không dám đối mặt với chúng?','00:00:20.250','00:00:26.710','I-am-Mary-58'),
@@ -3983,7 +3983,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Hope you stay optimistic and overcome your weaknesses','Hy vọng bạn sẽ giữ vững tinh thần lạc quan và vượt qua những yếu điểm của mình','00:03:51.670','00:03:54.870','I-am-Mary-58'),
 	('Because I know good results are witnessing our efforts','Vì tôi biết kết quả tốt là minh chứng cho những nỗ lực của chúng ta','00:03:55.510','00:03:59.110','I-am-Mary-58'),
 
-	/* (UUID(),'I-am-Mary-59','The success of everything depends on endurance','Kẻ chịu đựng giỏi là kẻ mạnh nhất','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_059.mp3',NULL,'00:00:00.000','00:04:20.959','I-am-Mary','NO',59) */
+	/* (UUID(),'I-am-Mary-59','The success of everything depends on endurance','Kẻ chịu đựng giỏi là kẻ mạnh nhất','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_059.mp3',NULL,'00:00:00.000','00:04:20.959','I-am-Mary',0,0,59) */
 	('The greatest success of each person is to keep himself completely, without turning to changes in life','Thành công lớn nhất của mỗi người là giữ vững bản thân hoàn toàn, không thay đổi khi cuộc sống thay đổi','00:00:06.020','00:00:12.300','I-am-Mary-59'),
 	('It also means becoming stronger and better to endure','Điều đó cũng có nghĩa là trở nên mạnh mẽ hơn và tốt hơn để chịu đựng','00:00:13.240','00:00:16.460','I-am-Mary-59'),
 	('Maturity means constant efforts in each of us','Sự trưởng thành có nghĩa là những nỗ lực liên tục trong mỗi chúng ta','00:00:17.720','00:00:20.880','I-am-Mary-59'),
@@ -4028,7 +4028,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Your world is created by you','Thế giới của bạn được tạo ra bởi chính bạn','00:04:16.740','00:04:18.640','I-am-Mary-59'),
 	('All yours is created by you','Tất cả những gì của bạn đều được tạo ra bởi bạn','00:04:19.079','00:04:20.959','I-am-Mary-59'),
 
-	/* (UUID(),'I-am-Mary-60','The courage to make changes','Dũng cảm đương đầu phép màu sẽ đến','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_060.mp3',NULL,'00:00:00.000','00:04:53.310','I-am-Mary','NO',60) */
+	/* (UUID(),'I-am-Mary-60','The courage to make changes','Dũng cảm đương đầu phép màu sẽ đến','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_060.mp3',NULL,'00:00:00.000','00:04:53.310','I-am-Mary',0,0,60) */
 	('Goethe said, if there is something stronger than fate, it is courage, and nothing can change that courage','Goethe đã nói, nếu có điều gì mạnh mẽ hơn số phận, đó là lòng can đảm, và không có gì có thể thay đổi được lòng can đảm đó','00:00:05.770','00:00:12.470','I-am-Mary-60'),
 	('Truly, everyone has dreams and lofty ideals, but to change fate and achieve those things, we must have courage ourselves','Thực sự, ai cũng có những ước mơ và lý tưởng cao đẹp, nhưng để thay đổi số phận và đạt được những điều đó, chúng ta phải có lòng can đảm','00:00:13.130','00:00:21.550','I-am-Mary-60'),
 	('Courage does not mean, not being afraid of anything','Lòng can đảm không có nghĩa là không sợ hãi điều gì','00:00:23.090','00:00:26.330','I-am-Mary-60'),
@@ -4079,7 +4079,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'I-am-Mary-61','No man is an island','Không ai là một hòn đảo','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_061.mp3',NULL,'00:00:00.000','00:03:40.440','I-am-Mary','NO',61) */
+	/* (UUID(),'I-am-Mary-61','No man is an island','Không ai là một hòn đảo','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_061.mp3',NULL,'00:00:00.000','00:03:40.440','I-am-Mary',0,0,61) */
 	('No one is born perfect','Không ai sinh ra là hoàn hảo','00:00:05.380','00:00:07.460','I-am-Mary-61'),
 	('Everyone has both good qualities and bad habits','Mọi người đều có cả những phẩm chất tốt và thói quen xấu','00:00:08.080','00:00:11.160','I-am-Mary-61'),
 	('One of the worst human qualities is selfishness','Một trong những phẩm chất xấu nhất của con người là sự ích kỷ','00:00:11.780','00:00:14.740','I-am-Mary-61'),
@@ -4114,7 +4114,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And we can receive help and share from everyone in return','Và chúng ta có thể nhận sự giúp đỡ và chia sẻ từ mọi người để đáp lại','00:03:30.540','00:03:33.860','I-am-Mary-61'),
 	('And if you keep your selfish nature and live only for yourself, you will soon be excluded from society','Và nếu bạn cứ giữ bản tính ích kỷ và chỉ sống cho bản thân, bạn sẽ sớm bị loại bỏ khỏi xã hội','00:03:34.380','00:03:40.440','I-am-Mary-61'),
 
-	/* (UUID(),'I-am-Mary-62','Happy is being understood','Hạnh phúc khi được thấu hiểu','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_062.mp3',NULL,'00:00:00.000','00:04:31.480','I-am-Mary','NO',62) */
+	/* (UUID(),'I-am-Mary-62','Happy is being understood','Hạnh phúc khi được thấu hiểu','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_062.mp3',NULL,'00:00:00.000','00:04:31.480','I-am-Mary',0,0,62) */
 	('There is a classic quote, there are two types of people in the world that don\'t need the explanation, the one who understands you, the other who doesn\'t understand you','Có một câu nói kinh điển, có hai loại người trên thế giới không cần giải thích, một là người hiểu bạn, còn lại là người không hiểu bạn','00:00:05.640','00:00:14.880','I-am-Mary-62'),
 	('Those who understand you though without needing to explain, will understand','Những người hiểu bạn mà không cần giải thích, sẽ hiểu','00:00:16.060','00:00:20.240','I-am-Mary-62'),
 	('For those who don\'t understand you, explanations are useless','Còn với những người không hiểu bạn, giải thích là vô ích','00:00:21.200','00:00:24.700','I-am-Mary-62'),
@@ -4160,7 +4160,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Being loved, understood, and remembered is the greatest happiness and meaning','Được yêu thương, hiểu và nhớ đến là hạnh phúc và ý nghĩa lớn nhất','00:04:19.339','00:04:24.080','I-am-Mary-62'),
 	('May the rest of your life, no matter what difficulties you face, there will always be someone who will never leave you','Chúc bạn phần còn lại của cuộc đời, dù gặp khó khăn gì, sẽ luôn có một người không bao giờ rời xa bạn','00:04:25.260','00:04:31.480','I-am-Mary-62'),
 
-	/* (UUID(),'I-am-Mary-63','Do you love yourself in a right way?','Bạn đã yêu bản thân đúng cách?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_063.mp3',NULL,'00:00:00.000','00:05:07.180','I-am-Mary','NO',63) */
+	/* (UUID(),'I-am-Mary-63','Do you love yourself in a right way?','Bạn đã yêu bản thân đúng cách?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_063.mp3',NULL,'00:00:00.000','00:05:07.180','I-am-Mary',0,0,63) */
 	('Most of us are told to love ourselves before we love others, but not everyone understands what it means','Chúng ta thường được dạy phải yêu bản thân mình trước khi yêu người khác, nhưng không phải ai cũng hiểu điều đó có nghĩa là gì','00:00:05.260','00:00:11.620','I-am-Mary-63'),
 	('Are you loving yourself the right way?','Bạn có đang yêu bản thân mình đúng cách không?','00:00:12.760','00:00:14.660','I-am-Mary-63'),
 	('A simple question, but some people spend their whole life trying to find the answer','Một câu hỏi đơn giản, nhưng có người dành cả đời để tìm kiếm câu trả lời','00:00:15.100','00:00:19.920','I-am-Mary-63'),
@@ -4215,7 +4215,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('If your answer is not yet, start learning to change and appreciate yourself','Nếu câu trả lời của bạn là chưa, hãy bắt đầu học cách thay đổi và trân trọng bản thân','00:04:56.280','00:05:00.960','I-am-Mary-63'),
 	('Because, more than anyone else, you deserve unconditional love that no one can take away','Bởi vì, hơn bất kỳ ai khác, bạn xứng đáng với tình yêu vô điều kiện mà không ai có thể lấy đi','00:05:01.720','00:05:07.180','I-am-Mary-63'),
 
-	/* (UUID(),'I-am-Mary-64','Live life to the fullest','Bạn có đang sống hết mình?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_064.mp3',NULL,'00:00:00.000','00:04:51.280','I-am-Mary','NO',64) */
+	/* (UUID(),'I-am-Mary-64','Live life to the fullest','Bạn có đang sống hết mình?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_064.mp3',NULL,'00:00:00.000','00:04:51.280','I-am-Mary',0,0,64) */
 	('Each person\'s actions and thoughts create the meaning of this life','Mỗi hành động và suy nghĩ của mỗi người tạo ra ý nghĩa của cuộc sống này','00:00:05.260','00:00:09.220','I-am-Mary-64'),
 	('Have you ever asked yourself what you have learned, how you are improving through each day, and how you can live to the fullest?','Bạn đã bao giờ tự hỏi mình đã học được gì, mình đang cải thiện như thế nào mỗi ngày, và làm thế nào để sống trọn vẹn?','00:00:09.760','00:00:16.640','I-am-Mary-64'),
 	('A scientist has proved that the probability that every human being is born into this world is 1 in 7 billion','Một nhà khoa học đã chứng minh rằng xác suất mỗi con người được sinh ra trên thế giới này là 1 trên 7 tỷ','00:00:17.900','00:00:24.820','I-am-Mary-64'),
@@ -4280,7 +4280,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('It will guide us in the right direction','Nó sẽ dẫn dắt chúng ta đi đúng hướng','00:04:40.720','00:04:42.800','I-am-Mary-64'),
 	('Hope the above sharing will help you have a more comprehensive view of how to live to the fullest, so that you can determine the right purpose in life','Hy vọng những chia sẻ trên sẽ giúp bạn có cái nhìn tổng quát hơn về cách sống trọn vẹn cuộc sống, để bạn có thể xác định được mục đích đúng đắn trong cuộc sống','00:04:42.800','00:04:51.280','I-am-Mary-64'),
 
-	/* (UUID(),'I-am-Mary-65','The perfect heart','Trái tim hoàn hảo','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_065.mp3',NULL,'00:00:00.000','00:04:23.880','I-am-Mary','NO',65) */
+	/* (UUID(),'I-am-Mary-65','The perfect heart','Trái tim hoàn hảo','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_065.mp3',NULL,'00:00:00.000','00:04:23.880','I-am-Mary',0,0,65) */
 	('When it comes to the word, perfect, what do you think?','Khi nhắc đến từ "hoàn hảo", bạn nghĩ gì?','00:00:05.380','00:00:08.700','I-am-Mary-65'),
 	('Perhaps many people will think of an event, a person, or a beautiful dream, completely without blemish, without mistakes, with no bad points in general','Có lẽ nhiều người sẽ nghĩ đến một sự kiện, một người, hay một giấc mơ đẹp, hoàn hảo không tì vết, không có sai lầm, không có điểm xấu nói chung','00:00:09.540','00:00:18.700','I-am-Mary-65'),
 	('Perfect is everything is great','Hoàn hảo là mọi thứ đều tuyệt vời','00:00:20.220','00:00:22.040','I-am-Mary-65'),
@@ -4331,7 +4331,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'I-am-Mary-66','The burnt toast','Miếng bánh mì cháy','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_066.mp3',NULL,'00:00:00.000','00:03:12.970','I-am-Mary','NO',66) */
+	/* (UUID(),'I-am-Mary-66','The burnt toast','Miếng bánh mì cháy','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_066.mp3',NULL,'00:00:00.000','00:03:12.970','I-am-Mary',0,0,66) */
 	('If you ask where happiness is, listen to this story','Nếu bạn hỏi hạnh phúc ở đâu, hãy lắng nghe câu chuyện này','00:00:04.950','00:00:08.390','I-am-Mary-66'),
 	('When I was about 8 or 9, my mom liked to cook food, and every now and then I remember she used to cook for us','Khi tôi khoảng 8 hoặc 9 tuổi, mẹ tôi thích nấu ăn, và thỉnh thoảng tôi nhớ mẹ thường nấu cho chúng tôi','00:00:09.130','00:00:16.230','I-am-Mary-66'),
 	('One night that stood out in my mind is when she had made dinner for us, after a very long and rough day at work','Một buổi tối khiến tôi nhớ mãi là khi mẹ nấu bữa tối cho chúng tôi, sau một ngày làm việc rất dài và mệt mỏi','00:00:17.310','00:00:23.750','I-am-Mary-66'),
@@ -4363,7 +4363,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Happiness does not come to you, but yourself, to reach happiness','Hạnh phúc không tự tìm đến bạn, mà chính bạn phải tìm đến hạnh phúc','00:03:01.330','00:03:05.250','I-am-Mary-66'),
 	('The art of finding happiness lies in the power, when you know how to harness joy, in the little things in everyday life','Nghệ thuật tìm kiếm hạnh phúc nằm ở sức mạnh khi bạn biết tận dụng niềm vui từ những điều nhỏ bé trong cuộc sống hàng ngày','00:03:06.060','00:03:12.970','I-am-Mary-66'),
 
-	/* (UUID(),'I-am-Mary-67','Where is the happiness?','Hạnh phúc ở đâu?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_067.mp3',NULL,'00:00:00.000','00:03:32.970','I-am-Mary','NO',67) */
+	/* (UUID(),'I-am-Mary-67','Where is the happiness?','Hạnh phúc ở đâu?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_067.mp3',NULL,'00:00:00.000','00:03:32.970','I-am-Mary',0,0,67) */
 	('If you are still struggling to find happiness, then I think this will be a meaningful story for you','Nếu bạn vẫn đang vật lộn để tìm kiếm hạnh phúc, thì tôi nghĩ đây sẽ là một câu chuyện ý nghĩa dành cho bạn','00:00:05.350','00:00:11.130','I-am-Mary-67'),
 	('Let\'s listen and think together','Hãy cùng lắng nghe và suy ngẫm','00:00:11.930','00:00:13.530','I-am-Mary-67'),
 	('An old man lives in a small village','Có một ông lão sống trong một ngôi làng nhỏ','00:00:14.870','00:00:17.350','I-am-Mary-67'),
@@ -4403,7 +4403,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('So, come back to the present moment, realize that, in the present moment, you have too many precious and happy things','Vậy nên, hãy trở về với hiện tại, nhận ra rằng, trong khoảnh khắc hiện tại, bạn có quá nhiều điều quý giá và hạnh phúc','00:03:23.650','00:03:30.750','I-am-Mary-67'),
 	('The present is a present','Hiện tại là một món quà','00:03:31.550','00:03:32.970','I-am-Mary-67'),
 
-	/* (UUID(),'I-am-Mary-68','Control your temper story','Câu chuyện về những vết đinh','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_068.mp3',NULL,'00:00:00.000','00:04:31.630','I-am-Mary','NO',68) */
+	/* (UUID(),'I-am-Mary-68','Control your temper story','Câu chuyện về những vết đinh','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_068.mp3',NULL,'00:00:00.000','00:04:31.630','I-am-Mary',0,0,68) */
 	('There once was a little boy who had a very bad temper','Ngày xưa, có một cậu bé nhỏ tuổi nhưng tính khí rất nóng nảy','00:00:05.150','00:00:08.410','I-am-Mary-68'),
 	('His father decided to hand him a bag of nails and said that every time the boy lost his temper, he had to hammer a nail into the fence','Cha của cậu quyết định đưa cho cậu một túi đinh và nói rằng mỗi khi cậu mất bình tĩnh, cậu phải đóng một chiếc đinh vào hàng rào','00:00:09.110','00:00:17.050','I-am-Mary-68'),
 	('On the first day, the boy hammered 37 nails into that fence','Vào ngày đầu tiên, cậu bé đã đóng 37 chiếc đinh vào hàng rào đó','00:00:18.230','00:00:22.650','I-am-Mary-68'),
@@ -4431,7 +4431,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Let\'s know how to correct mistakes, do better things to compensate for the losses caused','Hãy biết cách sửa sai, làm những điều tốt đẹp hơn để bù đắp những mất mát đã gây ra','00:02:47.470','00:02:53.290','I-am-Mary-68'),
 	('And especially, always be open to learning how to share, and be tolerant of getting the simple but wonderful things in life','Và đặc biệt, luôn sẵn lòng học cách sẻ chia và biết khoan dung để nhận được những điều giản dị nhưng tuyệt vời trong cuộc sống','00:02:54.210','00:03:02.850','I-am-Mary-68'),
 
-	/* (UUID(),'I-am-Mary-69','The value of being busy','Giá trị của sự bận rộn','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_069.mp3',NULL,'00:00:00.000','00:04:31.630','I-am-Mary','NO',69) */
+	/* (UUID(),'I-am-Mary-69','The value of being busy','Giá trị của sự bận rộn','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_069.mp3',NULL,'00:00:00.000','00:04:31.630','I-am-Mary',0,0,69) */
 	('Busy people are always full of life','Người bận rộn luôn tràn đầy sức sống','00:00:05.000','00:00:07.720','I-am-Mary-69'),
 	('Idle people not only wear sad faces, but also sluggish spirits','Người nhàn rỗi không chỉ mang vẻ mặt buồn bã mà còn có tinh thần uể oải','00:00:08.160','00:00:12.580','I-am-Mary-69'),
 	('Illness comes gradually','Bệnh tật đến từ từ','00:00:12.880','00:00:14.200','I-am-Mary-69'),
@@ -4461,7 +4461,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Just like a meal after a hard working session will become delicious and meaningful','Giống như một bữa ăn sau một phiên làm việc vất vả sẽ trở nên ngon miệng và ý nghĩa','00:02:59.000','00:03:04.200','I-am-Mary-69'),
 	('Hopefully, each of us knows how to make the most of our time, so that each passing day is a day you create value for yourself, for society','Hy vọng rằng, mỗi người trong chúng ta biết cách tận dụng tối đa thời gian, để mỗi ngày trôi qua là một ngày bạn tạo ra giá trị cho bản thân, cho xã hội','00:03:05.560','00:03:15.000','I-am-Mary-69'),
 
-	/* (UUID(),'I-am-Mary-70','Don\'t look for happiness from outside','Đừng tìm kiếm hạnh phúc từ bên ngoài','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_070.mp3',NULL,'00:00:00.000','00:04:31.630','I-am-Mary','NO',70) */
+	/* (UUID(),'I-am-Mary-70','Don\'t look for happiness from outside','Đừng tìm kiếm hạnh phúc từ bên ngoài','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_070.mp3',NULL,'00:00:00.000','00:04:31.630','I-am-Mary',0,0,70) */
 	('Have you ever wondered why some people always feel happy in life?','Bạn có bao giờ tự hỏi tại sao một số người luôn cảm thấy hạnh phúc trong cuộc sống?','00:00:05.260','00:00:09.260','I-am-Mary-70'),
 	('It seems they always feel at peace and good things happen around them','Có vẻ như họ luôn cảm thấy bình yên và những điều tốt đẹp xảy ra xung quanh họ','00:00:09.500','00:00:14.100','I-am-Mary-70'),
 	('You never see them worrying about small things or getting into any trouble','Bạn không bao giờ thấy họ lo lắng về những điều nhỏ nhặt hay gặp rắc rối gì','00:00:14.500','00:00:19.040','I-am-Mary-70'),
@@ -4506,7 +4506,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'I-am-Mary-71','Why are rich people humble?','Tại sao người giàu có thường khiêm tốn?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_071.mp3',NULL,'00:00:00.000','00:05:08.520','I-am-Mary','NO',71) */
+	/* (UUID(),'I-am-Mary-71','Why are rich people humble?','Tại sao người giàu có thường khiêm tốn?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_071.mp3',NULL,'00:00:00.000','00:05:08.520','I-am-Mary',0,0,71) */
 	('Why is it that some people who have a lot of money are more modest, while many people who have no money, the more they like to brag?','Tại sao có những người có nhiều tiền lại khiêm tốn hơn, trong khi nhiều người không có tiền thì càng thích khoe khoang?','00:00:04.940','00:00:12.760','I-am-Mary-71'),
 	('The heavier the head of rice, the deeper it bows','Hạt lúa càng nặng, đầu càng cúi thấp','00:00:13.640','00:00:16.600','I-am-Mary-71'),
 	('In society today, people with more money are humble, and people without money like to brag','Trong xã hội ngày nay, những người có nhiều tiền thì khiêm tốn, còn những người không có tiền thì thích khoe khoang','00:00:17.880','00:00:23.840','I-am-Mary-71'),
@@ -4554,7 +4554,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Being human requires modesty','Làm người cần có sự khiêm tốn','00:04:59.980','00:05:02.180','I-am-Mary-71'),
 	('Modesty always makes you respected by others, and modesty always makes people feel secure','Sự khiêm tốn luôn khiến bạn được người khác tôn trọng, và khiêm tốn luôn làm cho mọi người cảm thấy an tâm','00:05:02.180','00:05:08.520','I-am-Mary-71'),
 
-	/* (UUID(),'I-am-Mary-72','If tomorrow never comes','Nếu ngày mai không bao giờ tới','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_072.mp3',NULL,'00:00:00.000','00:04:20.240','I-am-Mary','NO',72) */
+	/* (UUID(),'I-am-Mary-72','If tomorrow never comes','Nếu ngày mai không bao giờ tới','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_072.mp3',NULL,'00:00:00.000','00:04:20.240','I-am-Mary',0,0,72) */
 	('How do you feel when you realize you may not have a tomorrow, but today, you still don\'t know what you want?','Bạn cảm thấy thế nào khi nhận ra có thể ngày mai bạn không còn, nhưng hôm nay bạn vẫn chưa biết mình muốn gì?','00:00:04.940','00:00:11.560','I-am-Mary-72'),
 	('What is important to you?','Điều gì quan trọng đối với bạn?','00:00:12.420','00:00:13.920','I-am-Mary-72'),
 	('Have you ever realized how much, today, you have wasted on frivolous things?','Bạn đã bao giờ nhận ra hôm nay mình đã lãng phí bao nhiêu vào những điều vô bổ chưa?','00:00:14.360','00:00:19.220','I-am-Mary-72'),
@@ -4605,7 +4605,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Life is inherently short','Cuộc sống vốn dĩ ngắn ngủi','00:04:17.019','00:04:18.820','I-am-Mary-72'),
 	('Live meaningfully','Hãy sống một cách ý nghĩa','00:04:19.200','00:04:20.240','I-am-Mary-72'),
 
-	/* (UUID(),'I-am-Mary-73','Why don\'t you allow yourself to rest?','Đừng ngại cho phép bản thân được nghỉ ngơi','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_073.mp3',NULL,'00:00:00.000','00:03:29.370','I-am-Mary','NO',73) */
+	/* (UUID(),'I-am-Mary-73','Why don\'t you allow yourself to rest?','Đừng ngại cho phép bản thân được nghỉ ngơi','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_073.mp3',NULL,'00:00:00.000','00:03:29.370','I-am-Mary',0,0,73) */
 	('In a rapidly developing society with rat races, it is not known when resting has become an action that is judged as lazy and sinful','Trong một xã hội phát triển nhanh với những cuộc đua, không ai biết từ khi nào việc nghỉ ngơi lại bị coi là lười biếng và tội lỗi','00:00:04.810','00:00:13.970','I-am-Mary-73'),
 	('Everyone tries to run as fast as they can, with the fear that if they slow down a little, the world will leave behind them','Mọi người đều cố gắng chạy nhanh nhất có thể, sợ rằng nếu họ chậm lại một chút, thế giới sẽ bỏ lại họ phía sau','00:00:15.070','00:00:22.610','I-am-Mary-73'),
 	('So do I sometimes, I blame myself when I have to rest because I\'m too tired','Thỉnh thoảng tôi cũng vậy, tôi tự trách mình khi phải nghỉ ngơi vì quá mệt mỏi','00:00:23.410','00:00:28.650','I-am-Mary-73'),
@@ -4655,7 +4655,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('If you feel tired, hurt, failed, or love has left','Nếu bạn cảm thấy mệt mỏi, đau đớn, thất bại, hoặc tình yêu đã ra đi','00:04:34.770','00:04:38.730','I-am-Mary-73'),
 	('Give yourself a break in the middle of the long journey called life','Hãy cho mình nghỉ ngơi giữa hành trình dài mang tên cuộc sống','00:04:39.550','00:04:43.370','I-am-Mary-73'),
 
-	/* (UUID(),'I-am-Mary-74','Life is impermanent','Cuộc Đời Vô Thường Lắm','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_074.mp3',NULL,'00:00:00.000','00:03:29.370','I-am-Mary','NO',74) */
+	/* (UUID(),'I-am-Mary-74','Life is impermanent','Cuộc Đời Vô Thường Lắm','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_074.mp3',NULL,'00:00:00.000','00:03:29.370','I-am-Mary',0,0,74) */
 	('Life and everything around us, every hour and every minute, always changes over space and time','Cuộc sống và mọi thứ xung quanh chúng ta, từng giờ từng phút, luôn thay đổi theo không gian và thời gian','00:00:04.810','00:00:11.430','I-am-Mary-74'),
 	('Nothing lasts forever, that is, impermanence','Không có gì tồn tại mãi mãi, đó chính là vô thường','00:00:12.370','00:00:15.810','I-am-Mary-74'),
 	('Life is impermanent, but one must live responsibly','Cuộc sống là vô thường, nhưng mỗi người phải sống có trách nhiệm','00:00:16.990','00:00:20.730','I-am-Mary-74'),
@@ -4703,7 +4703,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('This life is very short','Cuộc sống này rất ngắn ngủi','00:03:20.310','00:03:22.450','I-am-Mary-74'),
 	('Living happily and living meaningfully is our responsibility and right in this impermanent world, right?','Sống hạnh phúc và sống có ý nghĩa là trách nhiệm và quyền của chúng ta trong thế giới vô thường này, đúng không?','00:03:22.990','00:03:29.370','I-am-Mary-74'),
 
-	/* (UUID(),'I-am-Mary-75','How to deal with burnout','Bạn có đang kiệt sức?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_075.mp3',NULL,'00:00:00.000','00:04:58.400','I-am-Mary','NO',75) */
+	/* (UUID(),'I-am-Mary-75','How to deal with burnout','Bạn có đang kiệt sức?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_075.mp3',NULL,'00:00:00.000','00:04:58.400','I-am-Mary',0,0,75) */
 	('First, you start work with a lot of goals and expectations','Đầu tiên, bạn bắt đầu công việc với rất nhiều mục tiêu và kỳ vọng','00:00:04.940','00:00:08.660','I-am-Mary-75'),
 	('Every day you go to work is always full of excitement and enthusiasm','Mỗi ngày bạn đi làm luôn tràn đầy sự hào hứng và nhiệt huyết','00:00:09.420','00:00:12.880','I-am-Mary-75'),
 	('But after a year, every time you wake up, you wonder if this job is still meaningful','Nhưng sau một năm, mỗi lần thức dậy, bạn tự hỏi công việc này có còn ý nghĩa không','00:00:13.660','00:00:18.540','I-am-Mary-75'),
@@ -4758,7 +4758,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'I-am-Mary-76','Stay calm, everything will pass','Bình tĩnh rồi mọi chuyện sẽ qua','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_076.mp3',NULL,'00:00:00.000','00:04:07.290','I-am-Mary','NO',76) */
+	/* (UUID(),'I-am-Mary-76','Stay calm, everything will pass','Bình tĩnh rồi mọi chuyện sẽ qua','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_076.mp3',NULL,'00:00:00.000','00:04:07.290','I-am-Mary',0,0,76) */
 	('Life is a journey of difficulties, but also extremely interesting','Cuộc sống là một hành trình đầy khó khăn, nhưng cũng cực kỳ thú vị','00:00:04.870','00:00:09.010','I-am-Mary-76'),
 	('The road we are walking on is not only full of velvet, but also countless pebbles, rocks, and scattered nails','Con đường chúng ta đang đi không chỉ toàn nhung lụa, mà còn vô số sỏi đá, đá tảng và đinh rải rác','00:00:09.410','00:00:16.230','I-am-Mary-76'),
 	('We cannot avoid the sad and happy emotions that life brings','Chúng ta không thể tránh được những cảm xúc buồn và vui mà cuộc sống mang lại','00:00:17.330','00:00:21.210','I-am-Mary-76'),
@@ -4803,7 +4803,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('If life deceives you, don\'t be sad or hasty, you need calmness to confront it','Nếu cuộc sống lừa dối bạn, đừng buồn hay vội vàng, bạn cần sự bình tĩnh để đối diện với nó','00:03:55.810','00:04:01.130','I-am-Mary-76'),
 	('Believe in what is happening before your eyes, and one day happiness will come looking for you','Hãy tin vào những gì đang xảy ra trước mắt bạn, và một ngày nào đó, hạnh phúc sẽ đến tìm bạn','00:04:01.990','00:04:07.290','I-am-Mary-76'),
 
-	/* (UUID(),'I-am-Mary-77','Why are we always dissatisfied?','Tại sao chúng ta luôn cảm thấy không hài lòng?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_077.mp3',NULL,'00:00:00.000','00:04:40.720','I-am-Mary','NO',77) */
+	/* (UUID(),'I-am-Mary-77','Why are we always dissatisfied?','Tại sao chúng ta luôn cảm thấy không hài lòng?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_077.mp3',NULL,'00:00:00.000','00:04:40.720','I-am-Mary',0,0,77) */
 	('In a world constantly driven by consumerism, we begin to define our happiness by the things in our shopping carts','Trong một thế giới luôn bị thúc đẩy bởi chủ nghĩa tiêu dùng, chúng ta bắt đầu định nghĩa hạnh phúc của mình qua những thứ trong giỏ hàng của mình','00:00:04.940','00:00:12.300','I-am-Mary-77'),
 	('However, the things we pursue eventually fade and pass, and those who seek more will never feel satisfied','Tuy nhiên, những thứ chúng ta theo đuổi cuối cùng sẽ phai mờ và trôi qua, và những người tìm kiếm nhiều hơn sẽ không bao giờ cảm thấy hài lòng','00:00:13.220','00:00:20.060','I-am-Mary-77'),
 	('Many of us make the mistake of not knowing how to be satisfied with our own lives','Nhiều người trong chúng ta mắc phải sai lầm khi không biết cách hài lòng với cuộc sống của chính mình','00:00:21.280','00:00:26.360','I-am-Mary-77'),
@@ -4848,7 +4848,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Life has nothing eternal, even those seemingly endless moments in our lives','Cuộc sống không có gì là vĩnh cửu, ngay cả những khoảnh khắc dường như vô tận trong cuộc sống của chúng ta','00:04:28.400','00:04:33.240','I-am-Mary-77'),
 	('When we come into this world, we bring nothing, and when we depart, we cannot take anything with us','Khi chúng ta đến với thế giới này, chúng ta không mang theo gì, và khi ra đi, chúng ta cũng không thể mang theo bất cứ điều gì','00:04:34.360','00:04:40.720','I-am-Mary-77'),
 
-	/* (UUID(),'I-am-Mary-78','What to do when everyone around you is excellent','Khi quanh bạn là những người ưu tú?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_078.mp3',NULL,'00:00:00.000','00:05:00.900','I-am-Mary','NO',78) */
+	/* (UUID(),'I-am-Mary-78','What to do when everyone around you is excellent','Khi quanh bạn là những người ưu tú?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_078.mp3',NULL,'00:00:00.000','00:05:00.900','I-am-Mary',0,0,78) */
 	('People of talent and excellence are always present around us','Những người tài năng và xuất sắc luôn có mặt xung quanh chúng ta','00:00:04.940','00:00:09.000','I-am-Mary-78'),
 	('Knowing them, individuals often experience two emotional states, admiration and inferiority complex','Khi biết đến họ, con người thường trải qua hai trạng thái cảm xúc, ngưỡng mộ và mặc cảm tự ti','00:00:09.520','00:00:16.860','I-am-Mary-78'),
 	('Yet, most of us tend to feel inferior, considering ourselves less capable, and wondering why we cannot excel like them','Tuy nhiên, hầu hết chúng ta có xu hướng cảm thấy mình kém cỏi, cho rằng mình ít khả năng hơn, và tự hỏi tại sao mình không thể xuất sắc như họ','00:00:18.220','00:00:25.880','I-am-Mary-78'),
@@ -4900,7 +4900,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And like a tree, growing takes several months or even years','Và giống như một cái cây, sự phát triển cần vài tháng hoặc thậm chí nhiều năm','00:04:55.320','00:04:59.280','I-am-Mary-78'),
 	('Be patient','Hãy kiên nhẫn','00:05:00.180','00:05:00.900','I-am-Mary-78'),
 
-	/* (UUID(),'I-am-Mary-79','What did I do last year?','Năm qua tôi đã làm gì?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_079.mp3',NULL,'00:00:00.000','00:03:51.450','I-am-Mary','NO',79) */
+	/* (UUID(),'I-am-Mary-79','What did I do last year?','Năm qua tôi đã làm gì?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_079.mp3',NULL,'00:00:00.000','00:03:51.450','I-am-Mary',0,0,79) */
 	('The last days of the year are always special in a year','Những ngày cuối năm luôn là khoảng thời gian đặc biệt trong một năm','00:00:04.870','00:00:08.250','I-am-Mary-79'),
 	('This is the time when all of us seem to slow down, to make room for reflections and orientations for the future','Đây là lúc tất cả chúng ta dường như chậm lại, để nhường chỗ cho những suy tư và định hướng cho tương lai','00:00:08.770','00:00:15.110','I-am-Mary-79'),
 	('If you had to express your feelings about the past year, what would you say?','Nếu bạn phải diễn đạt cảm xúc của mình về năm vừa qua, bạn sẽ nói gì?','00:00:16.010','00:00:20.330','I-am-Mary-79'),
@@ -4945,7 +4945,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Smile to say goodbye to 2023 and welcome 2024 with beautiful hopes','Hãy mỉm cười để nói lời tạm biệt năm 2023 và chào đón năm 2024 với những hy vọng đẹp đẽ','00:03:40.970','00:03:47.010','I-am-Mary-79'),
 	('Wishing everyone a peaceful, healthy, and happy new year','Chúc mọi người một năm mới bình an, khỏe mạnh và hạnh phúc','00:03:47.890','00:03:51.450','I-am-Mary-79'),
 
-	/* (UUID(),'I-am-Mary-80','How do you spend your time?','Bạn đã sử dụng thời gian như thế nào?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_080.mp3',NULL,'00:00:00.000','00:03:16.720','I-am-Mary','NO',80) */
+	/* (UUID(),'I-am-Mary-80','How do you spend your time?','Bạn đã sử dụng thời gian như thế nào?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_080.mp3',NULL,'00:00:00.000','00:03:16.720','I-am-Mary',0,0,80) */
 	('With money, we can buy material things but cannot buy time','Với tiền bạc, chúng ta có thể mua được những thứ vật chất nhưng không thể mua được thời gian','00:00:04.940','00:00:09.320','I-am-Mary-80'),
 	('The value of time lies in how we use our lives','Giá trị của thời gian nằm ở cách chúng ta sử dụng cuộc sống của mình','00:00:10.240','00:00:13.420','I-am-Mary-80'),
 	('Even if you work hard and earn a lot of money, if you don\'t know how to use them for good purposes, the time you spend becomes useless','Dù bạn làm việc chăm chỉ và kiếm được nhiều tiền, nếu không biết sử dụng chúng vào mục đích tốt đẹp thì thời gian bạn bỏ ra sẽ trở nên vô nghĩa','00:00:14.000','00:00:21.800','I-am-Mary-80'),
@@ -4974,7 +4974,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'I-am-Mary-81','The importance of rest','Tầm quan trọng của nghỉ ngơi','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_081.mp3',NULL,'00:00:00.000','00:03:57.080','I-am-Mary','NO',81) */
+	/* (UUID(),'I-am-Mary-81','The importance of rest','Tầm quan trọng của nghỉ ngơi','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_081.mp3',NULL,'00:00:00.000','00:03:57.080','I-am-Mary',0,0,81) */
 	('Rest is the starting point, the birthplace of great achievements, and a necessary condition for the happiness of everyone','Nghỉ ngơi là điểm khởi đầu, là nơi sinh ra những thành tựu lớn lao và là điều kiện cần thiết cho hạnh phúc của mọi người','00:00:04.940','00:00:12.800','I-am-Mary-81'),
 	('It is easy to get lost in a busy world, working long hours and making seemingly endless efforts','Thật dễ dàng để lạc lối trong một thế giới bận rộn, làm việc nhiều giờ và nỗ lực không ngừng','00:00:13.320','00:00:19.700','I-am-Mary-81'),
 	('Gradually, this exhausts you physically, socially, and psychologically','Dần dần, điều này khiến bạn kiệt sức về thể chất, xã hội và tâm lý','00:00:21.220','00:00:26.000','I-am-Mary-81'),
@@ -5020,7 +5020,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Expand your self-awareness, acknowledging the reality within a world of endless possibilities','Mở rộng nhận thức về bản thân, thừa nhận thực tế trong một thế giới với vô vàn khả năng','00:03:45.660','00:03:51.640','I-am-Mary-81'),
 	('Don\'t turn rest into a luxury, as it is an essential part of human life','Đừng biến việc nghỉ ngơi thành xa xỉ, vì đó là một phần thiết yếu của cuộc sống con người','00:03:52.340','00:03:57.080','I-am-Mary-81'),
 
-	/* (UUID(),'I-am-Mary-82','Stop being emotionally dependent on others','Hạnh phúc của mình đừng phụ thuộc người khác','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_082.mp3',NULL,'00:00:00.000','00:03:49.290','I-am-Mary','NO',82) */
+	/* (UUID(),'I-am-Mary-82','Stop being emotionally dependent on others','Hạnh phúc của mình đừng phụ thuộc người khác','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_082.mp3',NULL,'00:00:00.000','00:03:49.290','I-am-Mary',0,0,82) */
 	('One of our fundamental needs is to connect with others','Một trong những nhu cầu cơ bản của chúng ta là kết nối với người khác','00:00:05.450','00:00:08.610','I-am-Mary-82'),
 	('In this sense, we all rely on emotions','Theo nghĩa này, tất cả chúng ta đều dựa vào cảm xúc','00:00:09.230','00:00:11.830','I-am-Mary-82'),
 	('However, dependence becomes unhealthy when we cannot control our emotions ourselves, but are passively controlled by others','Tuy nhiên, sự phụ thuộc trở nên không lành mạnh khi chúng ta không tự kiểm soát được cảm xúc của mình mà bị người khác chi phối một cách thụ động','00:00:12.590','00:00:20.130','I-am-Mary-82'),
@@ -5055,7 +5055,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The best path to healing is to repair and reconnect with yourself','Con đường tốt nhất để chữa lành là sửa chữa và kết nối lại với chính bản thân','00:03:37.870','00:03:42.170','I-am-Mary-82'),
 	('Only then can you stop depending on others for emotions, and live life confidently and independently','Chỉ khi đó, bạn mới có thể ngừng phụ thuộc vào người khác về mặt cảm xúc và sống cuộc sống tự tin, độc lập','00:03:43.230','00:03:49.290','I-am-Mary-82'),
 
-	/* (UUID(),'I-am-Mary-83','Tet Reunion 2024','Tết là để sum vầy','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_083.mp3',NULL,'00:00:00.000','00:03:11.690','I-am-Mary','NO',83) */
+	/* (UUID(),'I-am-Mary-83','Tet Reunion 2024','Tết là để sum vầy','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_083.mp3',NULL,'00:00:00.000','00:03:11.690','I-am-Mary',0,0,83) */
 	('In modern society, where everyone is busy with daily life, returning to family to celebrate Tet brings warmth to each person\'s soul when spring comes','Trong xã hội hiện đại, nơi mọi người đều bận rộn với cuộc sống thường nhật, trở về bên gia đình để đón Tết mang lại sự ấm áp cho tâm hồn mỗi người khi xuân về','00:00:05.640','00:00:15.820','I-am-Mary-83'),
 	('Every spring, Vietnamese people often have the habit of returning to their hometown to reunite, review memories, and share joys and sorrows together','Mỗi dịp xuân về, người Việt Nam thường có thói quen trở về quê hương để đoàn tụ, ôn lại kỷ niệm và chia sẻ những niềm vui nỗi buồn cùng nhau','00:00:16.980','00:00:26.160','I-am-Mary-83'),
 	('Until today, the meaning of Tet reunion and warmth is still intact in the minds of the Vietnamese people','Cho đến ngày nay, ý nghĩa của sự đoàn tụ và ấm áp ngày Tết vẫn còn nguyên vẹn trong tâm trí người Việt Nam','00:00:27.140','00:00:33.920','I-am-Mary-83'),
@@ -5077,7 +5077,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The atmosphere to welcome the new spring is bustling and spreading everywhere','Không khí đón xuân mới rộn ràng và lan tỏa khắp mọi nơi','00:03:01.090','00:03:05.410','I-am-Mary-83'),
 	('Wishing everyone a happy, warm, and meaningful Tet holiday with family and relatives','Chúc mọi người một mùa Tết vui vẻ, ấm áp và ý nghĩa bên gia đình và người thân','00:03:06.490','00:03:11.690','I-am-Mary-83'),
 
-	/* (UUID(),'I-am-Mary-84','Never too late to start','Không bao giờ quá trễ để bắt đầu','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_084.mp3',NULL,'00:00:00.000','00:03:38.860','I-am-Mary','NO',84) */
+	/* (UUID(),'I-am-Mary-84','Never too late to start','Không bao giờ quá trễ để bắt đầu','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_084.mp3',NULL,'00:00:00.000','00:03:38.860','I-am-Mary',0,0,84) */
 	('If we compare the human lifespan with a 24-hour clock, assuming that each of us lives until 80, if we are aged 25, it means our life clock is at 7 am','Nếu chúng ta so sánh tuổi thọ con người với đồng hồ 24 giờ, giả sử mỗi người sống đến 80 tuổi, nếu chúng ta 25 tuổi, điều đó có nghĩa là đồng hồ cuộc đời của chúng ta ở 7 giờ sáng','00:00:05.260','00:00:16.180','I-am-Mary-84'),
 	('That\'s when we get ready to leave the house, go to school, go to work, and some people are not even awake','Đó là khi chúng ta chuẩn bị rời khỏi nhà, đi học, đi làm, và một số người thậm chí còn chưa thức dậy','00:00:17.440','00:00:24.180','I-am-Mary-84'),
 	('It\'s never too late','Không bao giờ là quá muộn','00:00:24.980','00:00:26.300','I-am-Mary-84'),
@@ -5117,7 +5117,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Never stop dreaming, never stop hoping, just live your life to the fullest and believe in yourself','Đừng bao giờ ngừng mơ ước, đừng bao giờ ngừng hy vọng, chỉ cần sống hết mình và tin tưởng vào bản thân','00:03:26.660','00:03:33.300','I-am-Mary-84'),
 	('Even if you don\'t reach the intended finish line, you still have a great journey, right?','Ngay cả khi bạn không đến được đích như dự định, bạn vẫn có một hành trình tuyệt vời, đúng không?','00:03:33.900','00:03:38.860','I-am-Mary-84'),
 
-	/* (UUID(),'I-am-Mary-85','Overcome challenges in life','Tại sao cuộc sống luôn có khó khăn?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_085.mp3',NULL,'00:00:00.000','00:03:10.060','I-am-Mary','NO',85) */
+	/* (UUID(),'I-am-Mary-85','Overcome challenges in life','Tại sao cuộc sống luôn có khó khăn?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_085.mp3',NULL,'00:00:00.000','00:03:10.060','I-am-Mary',0,0,85) */
 	('There is a truth that we must admit','Có một sự thật mà chúng ta phải thừa nhận','00:00:05.380','00:00:07.480','I-am-Mary-85'),
 	('Life\'s difficulties are inevitable, and everyone must experience ups and downs','Những khó khăn trong cuộc sống là không thể tránh khỏi, và mọi người đều phải trải qua thăng trầm','00:00:08.080','00:00:12.740','I-am-Mary-85'),
 	('Throughout one\'s lifetime, you will taste exquisite beauty and indescribable joy, but there will be countless obstacles and sorrows','Trong suốt cuộc đời, bạn sẽ cảm nhận vẻ đẹp tuyệt mỹ và niềm vui khó tả, nhưng cũng sẽ có vô số khó khăn và nỗi buồn','00:00:14.140','00:00:22.240','I-am-Mary-85'),
@@ -5146,7 +5146,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'I-am-Mary-86','Is outer beauty really important?','Vẻ bề ngoài có thực sự quan trọng?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_086.mp3',NULL,'00:00:00.000','00:03:53.860','I-am-Mary','NO',86) */
+	/* (UUID(),'I-am-Mary-86','Is outer beauty really important?','Vẻ bề ngoài có thực sự quan trọng?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_086.mp3',NULL,'00:00:00.000','00:03:53.860','I-am-Mary',0,0,86) */
 	('Is outer beauty really important?','Liệu vẻ đẹp bên ngoài có thực sự quan trọng không?','00:00:04.940','00:00:07.320','I-am-Mary-86'),
 	('Our self-image is how we perceive ourselves','Hình ảnh bản thân là cách chúng ta nhìn nhận chính mình','00:00:07.900','00:00:10.700','I-am-Mary-86'),
 	('When we feel comfortable within ourselves, our work efficiency increases and both work and family relationships improve','Khi chúng ta cảm thấy thoải mái với chính mình, hiệu quả công việc tăng lên và các mối quan hệ công việc cũng như gia đình được cải thiện','00:00:11.320','00:00:19.080','I-am-Mary-86'),
@@ -5185,7 +5185,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('You cannot use external appearance as a measure','Bạn không thể dùng ngoại hình làm thước đo','00:03:50.280','00:03:53.260','I-am-Mary-86'),
 	('To evaluate the value of each individual in life, only intellect plays an extremely important role, and decisively determines the success or failure of individuals','Để đánh giá giá trị của mỗi cá nhân trong cuộc sống, chỉ có trí tuệ mới đóng vai trò cực kỳ quan trọng và quyết định sự thành công hay thất bại của mỗi người','00:03:53.860','00:04:05.200','I-am-Mary-86'),
 
-	/* (UUID(),'I-am-Mary-87','Is being selfish always bad?','Ích kỷ có thực sự xấu?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_087.mp3',NULL,'00:00:00.000','00:04:31.630','I-am-Mary','NO',87) */
+	/* (UUID(),'I-am-Mary-87','Is being selfish always bad?','Ích kỷ có thực sự xấu?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_087.mp3',NULL,'00:00:00.000','00:04:31.630','I-am-Mary',0,0,87) */
 	('We often despise and condemn selfish people, who only care and calculate for their benefit without caring about those around them','Chúng ta thường khinh miệt và chỉ trích những người ích kỷ, những người chỉ quan tâm và tính toán vì lợi ích của họ mà không quan tâm đến những người xung quanh','00:00:05.000','00:00:12.280','I-am-Mary-87'),
 	('But sometimes living selfishly is not a bad thing','Nhưng đôi khi sống ích kỷ không phải là điều xấu','00:00:13.000','00:00:16.260','I-am-Mary-87'),
 	('There are times when being selfish is necessary for your health and happiness','Có những lúc ích kỷ là cần thiết cho sức khỏe và hạnh phúc của bạn','00:00:16.740','00:00:20.600','I-am-Mary-87'),
@@ -5213,7 +5213,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('But remember that everything has both positive and negative aspects, and living selfishly is no exception','Nhưng hãy nhớ rằng mọi thứ đều có cả mặt tích cực và tiêu cực, và sống ích kỷ cũng không ngoại lệ','00:02:46.500','00:02:52.560','I-am-Mary-87'),
 	('Sometimes selfishness is the right thing to do, to give yourself time to take care of yourself and regain balance in life, ensuring your safety and that of those around you','Đôi khi ích kỷ là điều đúng đắn để làm, để dành thời gian chăm sóc bản thân và lấy lại cân bằng trong cuộc sống, đảm bảo an toàn cho bạn và những người xung quanh','00:02:53.640','00:03:03.380','I-am-Mary-87'),
 
-	/* (UUID(),'I-am-Mary-88','Turn envy into inspiration','Biến ghen tị thành động lực','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_088.mp3',NULL,'00:00:00.000','00:04:31.630','I-am-Mary','NO',88) */
+	/* (UUID(),'I-am-Mary-88','Turn envy into inspiration','Biến ghen tị thành động lực','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_088.mp3',NULL,'00:00:00.000','00:04:31.630','I-am-Mary',0,0,88) */
 	('Imagine, on a beautiful day, you discover that your ex has found new love','Hãy tưởng tượng, vào một ngày đẹp trời, bạn phát hiện ra rằng người yêu cũ của mình đã tìm được tình yêu mới','00:00:04.870','00:00:09.310','I-am-Mary-88'),
 	('This person is beautiful, and talented, and surpasses you in every aspect','Người này xinh đẹp, tài năng và vượt trội hơn bạn về mọi mặt','00:00:09.990','00:00:14.030','I-am-Mary-88'),
 	('If you\'re young and haven\'t had much experience, you might feel envious to some extent, or you might feel inferior','Nếu bạn còn trẻ và chưa có nhiều kinh nghiệm, bạn có thể cảm thấy ghen tị ở một mức độ nào đó hoặc cảm thấy tự ti','00:00:14.970','00:00:20.830','I-am-Mary-88'),
@@ -5252,7 +5252,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The important thing about progress is what we\'ve learned','Điều quan trọng trong sự tiến bộ là những gì chúng ta đã học được','00:03:17.830','00:03:21.070','I-am-Mary-88'),
 	('Gates said, When we use envy to focus more on what we truly desire, we\'re motivated to pursue a better version of ourselves','Gates nói: Khi chúng ta sử dụng sự ghen tị để tập trung nhiều hơn vào điều mình thực sự khao khát, chúng ta sẽ có động lực để theo đuổi một phiên bản tốt hơn của chính mình','00:03:21.070','00:03:29.150','I-am-Mary-88'),
 
-	/* (UUID(),'I-am-Mary-89','Self care is important before care other','Chăm sóc bản thân rất quan trọng','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_089.mp3',NULL,'00:00:00.000','00:04:31.630','I-am-Mary','NO',89) */
+	/* (UUID(),'I-am-Mary-89','Self care is important before care other','Chăm sóc bản thân rất quan trọng','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_089.mp3',NULL,'00:00:00.000','00:04:31.630','I-am-Mary',0,0,89) */
 	('Life is busy, with many worries that put a lot of pressure on you','Cuộc sống bận rộn với nhiều lo toan, gây nhiều áp lực cho bạn','00:00:04.940','00:00:09.000','I-am-Mary-89'),
 	('Take the time to love and care for yourself, as it is essential','Hãy dành thời gian để yêu thương và chăm sóc bản thân vì điều đó rất cần thiết','00:00:09.780','00:00:13.140','I-am-Mary-89'),
 	('Because the simple truth is that, if you don\'t know how to take care of yourself, you can\'t take good care of others either','Bởi sự thật đơn giản là nếu bạn không biết chăm sóc bản thân, bạn cũng không thể chăm sóc tốt cho người khác','00:00:14.320','00:00:20.980','I-am-Mary-89'),
@@ -5290,7 +5290,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('You are a precious gift of life','Bạn là một món quà quý giá của cuộc sống','00:03:14.700','00:03:16.880','I-am-Mary-89'),
 	('You deserve to be cared for and looked after','Bạn xứng đáng được quan tâm và chăm sóc','00:03:17.340','00:03:19.420','I-am-Mary-89'),
 
-	/* (UUID(),'I-am-Mary-90','Treat others as you want to be treated','Cách Bạn Đối Xử Là Những Gì Bạn Nhận Lại','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_090.mp3',NULL,'00:00:00.000','00:04:31.630','I-am-Mary','NO',90) */
+	/* (UUID(),'I-am-Mary-90','Treat others as you want to be treated','Cách Bạn Đối Xử Là Những Gì Bạn Nhận Lại','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_090.mp3',NULL,'00:00:00.000','00:04:31.630','I-am-Mary',0,0,90) */
 	('In the lobby of a hospital, a pregnant woman seemed to be in a hurry, so she asked a man if she could move ahead in line','Tại sảnh bệnh viện, một phụ nữ mang thai có vẻ đang vội nên đã hỏi một người đàn ông liệu cô có thể xếp lên phía trước không','00:00:04.870','00:00:11.310','I-am-Mary-90'),
 	('Upon hearing the request, the man without hesitation told the pregnant woman to take his place','Khi nghe yêu cầu, người đàn ông không do dự đã nhường chỗ cho người phụ nữ mang thai','00:00:12.110','00:00:16.890','I-am-Mary-90'),
 	('At the same time, to avoid affecting those behind him, he moved to the end of the line to start over','Đồng thời, để tránh ảnh hưởng đến những người đứng sau, anh đã chuyển xuống cuối hàng để bắt đầu lại','00:00:18.290','00:00:23.350','I-am-Mary-90'),
@@ -5323,7 +5323,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'I-am-Mary-91','Trust issues','Vấn đề niềm tin','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_091.mp3',NULL,'00:00:00.000','00:04:31.630','I-am-Mary','NO',91) */
+	/* (UUID(),'I-am-Mary-91','Trust issues','Vấn đề niềm tin','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_091.mp3',NULL,'00:00:00.000','00:04:31.630','I-am-Mary',0,0,91) */
 	('Trust is an essential factor in building a solid foundation for relationships','Niềm tin là yếu tố quan trọng trong việc xây dựng nền tảng vững chắc cho các mối quan hệ','00:00:04.940','00:00:09.260','I-am-Mary-91'),
 	('When you trust someone, you can easily share all your thoughts and feelings openly and sincerely','Khi bạn tin tưởng một ai đó, bạn có thể dễ dàng chia sẻ mọi suy nghĩ và cảm xúc một cách cởi mở và chân thành','00:00:10.240','00:00:14.880','I-am-Mary-91'),
 	('However, it is difficult to open up when you have experienced many unpleasant memories in the past, which causes feelings of insecurity, fear of being hurt, and difficulty in completely letting go of your guard in relationships','Tuy nhiên, thật khó để mở lòng khi bạn đã trải qua nhiều ký ức không vui trong quá khứ, điều này gây ra cảm giác bất an, sợ bị tổn thương và khó lòng buông bỏ hoàn toàn sự phòng bị trong các mối quan hệ','00:00:16.260','00:00:28.500','I-am-Mary-91'),
@@ -5350,7 +5350,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Continuously dwelling on past events only brings more pain, immersing yourself in the past and preventing you from moving forward','Liên tục đắm chìm vào những sự kiện trong quá khứ chỉ mang lại nhiều đau khổ hơn, khiến bạn đắm chìm trong quá khứ và ngăn cản bạn tiến về phía trước','00:02:40.920','00:02:47.420','I-am-Mary-91'),
 	('Hopefully, each of us, when faced with trust issues, can find ways to overcome them and see that there are many good people around us whom we can trust','Hy vọng rằng mỗi người trong chúng ta, khi đối mặt với những vấn đề về lòng tin, có thể tìm ra cách để vượt qua và nhận ra rằng có rất nhiều người tốt xung quanh mà chúng ta có thể tin tưởng','00:02:48.500','00:02:56.320','I-am-Mary-91'),
 
-	/* (UUID(),'I-am-Mary-92','Does running away solve problems?','Chạy trốn có giải quyết được vấn đề?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_092.mp3',NULL,'00:00:00.000','00:04:31.630','I-am-Mary','NO',92) */
+	/* (UUID(),'I-am-Mary-92','Does running away solve problems?','Chạy trốn có giải quyết được vấn đề?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_092.mp3',NULL,'00:00:00.000','00:04:31.630','I-am-Mary',0,0,92) */
 	('The more we avoid problems, the more they accumulate, eventually, we still have to face them, which only makes us more exhausted','Càng tránh né vấn đề, chúng càng tích tụ, cuối cùng, chúng ta vẫn phải đối mặt, điều này chỉ khiến chúng ta kiệt sức hơn','00:00:05.320','00:00:12.520','I-am-Mary-92'),
 	('The Zhuangzi told a story','Trang Tử đã kể một câu chuyện','00:00:13.740','00:00:15.540','I-am-Mary-92'),
 	('Long ago, there was a person who was as timid as a mouse','Ngày xưa, có một người nhút nhát như chuột','00:00:15.960','00:00:19.000','I-am-Mary-92'),
@@ -5389,7 +5389,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('In this world, everyone is like a newborn baby, unable to predict what lies ahead or guarantee that life will always be smooth','Trong thế giới này, ai cũng giống như một đứa trẻ sơ sinh, không thể dự đoán điều gì sẽ xảy ra phía trước hay đảm bảo rằng cuộc sống sẽ luôn suôn sẻ','00:03:14.660','00:03:22.780','I-am-Mary-92'),
 	('Therefore, those worthy of praise are the ones who dare to overcome storms, not those who avoid and wait for the storms to pass','Vì vậy, những người đáng được khen ngợi là những người dám vượt qua cơn bão, chứ không phải những người né tránh và chờ đợi cơn bão qua đi','00:03:23.560','00:03:30.500','I-am-Mary-92'),
 
-	/* (UUID(),'I-am-Mary-93','Live every day to the fullest','Thời gian vô hạn, đời người hữu hạn','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_093.mp3',NULL,'00:00:00.000','00:04:31.630','I-am-Mary','NO',93) */
+	/* (UUID(),'I-am-Mary-93','Live every day to the fullest','Thời gian vô hạn, đời người hữu hạn','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_093.mp3',NULL,'00:00:00.000','00:04:31.630','I-am-Mary',0,0,93) */
 	('Our life cannot escape the laws','Cuộc sống của chúng ta không thể thoát khỏi những quy luật','00:00:04.940','00:00:07.080','I-am-Mary-93'),
 	('Birth, old age, sickness, death','Sinh, lão, bệnh, tử','00:00:07.520','00:00:09.720','I-am-Mary-93'),
 	('Time is infinite, but a person\'s life is finite','Thời gian là vô hạn, nhưng đời người thì hữu hạn','00:00:10.520','00:00:12.940','I-am-Mary-93'),
@@ -5434,7 +5434,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('There will be difficult and hopeless times, no matter how harsh reality is, as long as you remember the true meaning of your life','Sẽ có những lúc khó khăn và tuyệt vọng, bất kể thực tế khắc nghiệt đến đâu, miễn là bạn nhớ ý nghĩa thực sự của cuộc sống mình','00:03:29.640','00:03:36.460','I-am-Mary-93'),
 	('Life is like a journey, do not let time pass in regret','Cuộc sống giống như một hành trình, đừng để thời gian trôi qua trong hối tiếc','00:03:37.180','00:03:40.080','I-am-Mary-93'),
 
-	/* (UUID(),'I-am-Mary-94','Navigating the uncertainties of your 20s','Những bấp bênh của tuổi 20','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_094.mp3',NULL,'00:00:00.000','00:04:31.630','I-am-Mary','NO',94) */
+	/* (UUID(),'I-am-Mary-94','Navigating the uncertainties of your 20s','Những bấp bênh của tuổi 20','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_094.mp3',NULL,'00:00:00.000','00:04:31.630','I-am-Mary',0,0,94) */
 	('At the age of 20, the world seems to offer an abundance of choices, but I often feel anxious','Ở tuổi 20, thế giới dường như mang lại vô số lựa chọn, nhưng tôi thường cảm thấy lo lắng','00:00:04.940','00:00:10.420','I-am-Mary-94'),
 	('Everyone at this age is full of curiosity about the world and eager to try everything','Mọi người ở độ tuổi này đều đầy tò mò về thế giới và háo hức thử mọi thứ','00:00:11.320','00:00:15.580','I-am-Mary-94'),
 	('However, this is not necessarily the way to find one\'s direction','Tuy nhiên, đây không nhất thiết là cách để tìm ra hướng đi của mình','00:00:16.600','00:00:19.740','I-am-Mary-94'),
@@ -5491,7 +5491,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('You will be okay','Bạn sẽ ổn thôi','00:03:44.860','00:03:45.720','I-am-Mary-94'),
 	('Trust me','Hãy tin tôi','00:03:46.040','00:03:46.560','I-am-Mary-94'),
 
-	/* (UUID(),'I-am-Mary-95','Are you a Workaholic?','Bạn có phải là người nghiện công việc?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_095.mp3',NULL,'00:00:00.000','00:04:27.310','I-am-Mary','NO',95) */
+	/* (UUID(),'I-am-Mary-95','Are you a Workaholic?','Bạn có phải là người nghiện công việc?','BOOKS_PHILOSOPHY_BOOK_01_4000_I_AM_MARY_095.mp3',NULL,'00:00:00.000','00:04:27.310','I-am-Mary',0,0,95) */
 	('In a culture that encourages ambition, to ensure a stable income, workers often devote all their time, including time for self-care, to handle an enormous workload','Trong một nền văn hóa khuyến khích sự cầu tiến, để đảm bảo thu nhập ổn định, người lao động thường dành toàn bộ thời gian của họ, bao gồm cả thời gian chăm sóc bản thân, để xử lý khối lượng công việc khổng lồ','00:00:05.359','00:00:16.300','I-am-Mary-95'),
 	('This phenomenon is particularly noticeable among the younger generation','Hiện tượng này đặc biệt đáng chú ý ở thế hệ trẻ','00:00:16.300','00:00:21.000','I-am-Mary-95'),
 	('Many young people today prefer to be seen as "Workaholics" because the feeling of being busy makes them feel like they are creating value for themselves and society','Nhiều bạn trẻ hiện nay thích được xem là "những người nghiện công việc" vì cảm giác bận rộn khiến họ cảm thấy như mình đang tạo ra giá trị cho bản thân và xã hội','00:00:21.200','00:00:32.000','I-am-Mary-95'),

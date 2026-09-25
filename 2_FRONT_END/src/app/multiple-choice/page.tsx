@@ -99,6 +99,9 @@ const MultipleChoicePage = () => {
     // Số câu muốn làm (0 = tất cả)
     const [questionLimit, setQuestionLimit] = useState<number>(10);
 
+    // Thứ tự câu hỏi: 'random' | 'default'
+    const [questionOrder, setQuestionOrder] = useState<'random' | 'default'>('default');
+
     // Toggle hiển thị nghĩa tiếng Việt
     // key: questionCode → hiện/ẩn nghĩa câu hỏi
     // key: `${questionCode}-${answerCode}` → hiện/ẩn nghĩa từng đáp án
@@ -154,8 +157,15 @@ const MultipleChoicePage = () => {
             const voices = window.speechSynthesis.getVoices();
             setAvailableVoices(voices);
             if (!selectedVoice && voices.length > 0) {
-                const def = voices.find(v => v.lang.startsWith('en')) ?? voices[0];
-                setSelectedVoice(def.name);
+                // Select Microsoft Zira - English (United States) as default
+                const ziraVoice = voices.find(v => v.name.includes('Microsoft Zira') && v.lang === 'en-US');
+                if (ziraVoice) {
+                    setSelectedVoice(ziraVoice.name);
+                } else {
+                    // Fallback to any English voice if Zira is not available
+                    const def = voices.find(v => v.lang.startsWith('en')) ?? voices[0];
+                    setSelectedVoice(def.name);
+                }
             }
         };
         loadVoices();
@@ -173,13 +183,14 @@ const MultipleChoicePage = () => {
     // DATA FETCHING
     // ============================================================
 
-    const fetchData = async (limit?: number) => {
+    const fetchData = async (limit?: number, order?: 'random' | 'default') => {
         setLoading(true);
         try {
             const response = await getQuestionsWithAnswersByVolumeSlug(volumeSlug);
-            const shuffled = shuffleArray(response);
+            const resolvedOrder = order ?? questionOrder;
+            const arranged = resolvedOrder === 'random' ? shuffleArray(response) : [...response];
             const cap = limit ?? questionLimit;
-            setQuestions(cap > 0 ? shuffled.slice(0, cap) : shuffled);
+            setQuestions(cap > 0 ? arranged.slice(0, cap) : arranged);
         } catch (error) {
             console.error('Lỗi khi lấy dữ liệu câu hỏi:', error);
             message.error('Không thể tải dữ liệu câu hỏi');
@@ -646,7 +657,7 @@ const MultipleChoicePage = () => {
         setUserAnswers({});
         setIsChecked(false);
         setQuizResult(null);
-        await fetchData(questionLimit);
+        await fetchData(questionLimit, questionOrder);
     };
 
     // ============================================================
@@ -710,7 +721,7 @@ const MultipleChoicePage = () => {
                                 setIsChecked(false);
                                 setQuizResult({} as QuizResultType);
                                 setQuizResult(null);
-                                fetchData(val);
+                                fetchData(val, questionOrder);
                             }}
                             size="small"
                             style={{width: 100}}
@@ -721,6 +732,30 @@ const MultipleChoicePage = () => {
                                 {value: 15, label: '15 câu'},
                                 {value: 20, label: '20 câu'},
                                 {value: 30, label: '30 câu'},
+                            ]}
+                        />
+                    </div>
+
+                    {/* Thứ tự câu hỏi */}
+                    <div style={{display: 'flex', alignItems: 'center', gap: 8}}>
+                        <span style={{fontSize: 14, color: '#555', whiteSpace: 'nowrap'}}>Thứ tự:</span>
+                        <Select
+                            value={questionOrder}
+                            onChange={(val: 'random' | 'default') => {
+                                setQuestionOrder(val);
+                                stopSpeaking();
+                                setShownVi({});
+                                setShowAllVi(false);
+                                setUserAnswers({});
+                                setIsChecked(false);
+                                setQuizResult(null);
+                                fetchData(questionLimit, val);
+                            }}
+                            size="small"
+                            style={{width: 110}}
+                            options={[
+                                {value: 'random',  label: 'Ngẫu nhiên'},
+                                {value: 'default', label: 'Mặc định'},
                             ]}
                         />
                     </div>
@@ -745,6 +780,10 @@ const MultipleChoicePage = () => {
             {loading ? (
                 <div style={{textAlign: 'center', padding: '50px'}}>
                     <Spin size="large"/>
+                </div>
+            ) : questions.length === 0 ? (
+                <div style={{textAlign: 'center', padding: '100px'}}>
+                    <Text style={{fontSize: 50, color: '#999'}}>Không có bài kiểm tra</Text>
                 </div>
             ) : (
                 <div>
@@ -979,32 +1018,34 @@ const MultipleChoicePage = () => {
                 </div>
             )}
 
-            {/* Nút nộp bài, làm lại, xuất Word */}
-            <div style={{display: 'flex', justifyContent: 'center', gap: '16px', marginTop: '32px'}}>
-                <Button
-                    type="primary" size="large"
-                    onClick={() => setOpenConfirmModal(true)}
-                    disabled={isChecked}
-                    style={{minWidth: '120px', height: '44px', fontSize: '20px'}}
-                >
-                    Nộp bài
-                </Button>
-                <Button
-                    size="large" onClick={reloadQuiz} icon={<ReloadOutlined/>}
-                    style={{minWidth: '120px', height: '44px', fontSize: '20px'}}
-                >
-                    Làm lại
-                </Button>
-                <Button
-                    size="large"
-                    icon={<FileWordOutlined/>}
-                    onClick={exportToWord}
-                    disabled={questions.length === 0}
-                    style={{minWidth: '120px', height: '44px', fontSize: '20px', color: '#1D6FDE', borderColor: '#1D6FDE'}}
-                >
-                    Xuất Word
-                </Button>
-            </div>
+            {/* Nút nộp bài, làm lại, xuất Word - chỉ hiển thị khi có câu hỏi */}
+            {questions.length > 0 && (
+                <div style={{display: 'flex', justifyContent: 'center', gap: '16px', marginTop: '32px'}}>
+                    <Button
+                        type="primary" size="large"
+                        onClick={() => setOpenConfirmModal(true)}
+                        disabled={isChecked}
+                        style={{minWidth: '120px', height: '44px', fontSize: '20px'}}
+                    >
+                        Nộp bài
+                    </Button>
+                    <Button
+                        size="large" onClick={reloadQuiz} icon={<ReloadOutlined/>}
+                        style={{minWidth: '120px', height: '44px', fontSize: '20px'}}
+                    >
+                        Làm lại
+                    </Button>
+                    <Button
+                        size="large"
+                        icon={<FileWordOutlined/>}
+                        onClick={exportToWord}
+                        disabled={questions.length === 0}
+                        style={{minWidth: '120px', height: '44px', fontSize: '20px', color: '#1D6FDE', borderColor: '#1D6FDE'}}
+                    >
+                        Xuất Word
+                    </Button>
+                </div>
+            )}
 
             {/* Modal xác nhận nộp bài */}
             <Modal

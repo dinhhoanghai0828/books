@@ -1,5 +1,5 @@
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'tedtalks-1','What do all languages have in common?','Tất cả các ngôn ngữ có điểm chung gì?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_001.mp3',NULL,'00:00:06.000','00:05:01.121','tedtalks','NO',1) */
+	/* (UUID(),'tedtalks-1','What do all languages have in common?','Tất cả các ngôn ngữ có điểm chung gì?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_001.mp3',NULL,'00:00:06.000','00:05:01.121','tedtalks',0,0,1) */
 	('Language is endlessly variable','Ngôn ngữ biến đổi không ngừng','00:00:06.800','00:00:09.300','tedtalks-1'),
 	('Each of us can come up with an infinite number of sentences in our native language, and we\'re able to do so from an early age, almost as soon as we start to communicate in sentences','Mỗi người chúng ta có thể tạo ra vô số câu trong tiếng mẹ đẻ của mình, và chúng ta có thể làm điều đó ngay từ nhỏ, gần như ngay từ khi chúng ta bắt đầu giao tiếp bằng câu','00:00:09.579','00:00:20.200','tedtalks-1'),
 	('How is this possible?','Sao có thể như vậy?','00:00:20.371','00:00:21.800','tedtalks-1'),
@@ -34,7 +34,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The theory of universal grammar prompted the documentation and study of many languages that hadn\'t been studied before','Lý thuyết ngữ pháp chung đã thúc đẩy việc ghi chép và nghiên cứu nhiều ngôn ngữ chưa từng được nghiên cứu trước đây','00:04:44.996','00:04:52.246','tedtalks-1'),
 	('It also caused an old idea to be reevaluated and eventually overthrown to make room for our growing understanding of the human brain','Nó cũng khiến một quan điểm cũ được đánh giá lại và cuối cùng bị lật đổ để nhường chỗ cho sự hiểu biết không ngừng của chúng ta về bộ não con người','00:04:52.246','00:05:01.121','tedtalks-1'),
 
-	/* (UUID(),'tedtalks-2','The medical potential of AI and metabolites','Tiềm năng y học và các chất chuyển hóa','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_002.mp3',NULL,'00:00:13.507','00:05:08.900','tedtalks','NO',2) */
+	/* (UUID(),'tedtalks-2','The medical potential of AI and metabolites','Tiềm năng y học và các chất chuyển hóa','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_002.mp3',NULL,'00:00:13.507','00:05:08.900','tedtalks',0,0,2) */
 	('In 2003, when we sequenced the human genome, we thought we would have the answer to treat many diseases','Vào năm 2003, khi chúng ta giải mã trình tự bộ gen người, chúng ta nghĩ rằng mình sẽ có câu trả lời cho việc điều trị nhiều loại bệnh','00:00:13.507','00:00:22.279','tedtalks-2'),
 	('But the reality is far from that, because in addition to our genes, our environment and lifestyle could have a significant role in developing many major diseases','Nhưng thực tế thì khác xa, bởi ngoài gen, môi trường và lối sống của chúng ta có thể đóng một vai trò quan trọng trong sự phát triển nhiều loại bệnh nặng','00:00:22.974','00:00:35.700','tedtalks-2'),
 	('One example is fatty liver disease, which is affecting over 20 percent of the population globally, and it has no treatment and leads to liver cancer or liver failure','Một ví dụ là bệnh gan nhiễm mỡ, ảnh hưởng đến hơn 20% dân số toàn cầu, và chưa có cách điều trị, và dẫn đến ung thư gan hoặc suy gan','00:00:35.893','00:00:48.085','tedtalks-2'),
@@ -76,7 +76,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And we will get closer to reach our vision of saving lives with every line of code','Và chúng tôi sẽ tiến gần hơn đến tầm nhìn là cứu sống con người qua từng dòng code','00:05:00.522','00:05:07.800','tedtalks-2'),
 	('Thank you','Xin cảm ơn','00:05:07.900','00:05:08.900','tedtalks-2'),
 
-	/* (UUID(),'tedtalks-3','Can machines read your emotions?','Máy móc có thể đọc được cảm xúc của các bạn không?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_003.mp3',NULL,'00:00:06.600','00:04:16.887','tedtalks','NO',3) */
+	/* (UUID(),'tedtalks-3','Can machines read your emotions?','Máy móc có thể đọc được cảm xúc của các bạn không?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_003.mp3',NULL,'00:00:06.600','00:04:16.887','tedtalks',0,0,3) */
 	('With every year, machines surpass humans in more and more activities we once thought only we were capable of','Mỗi năm, máy móc vượt qua con người trong ngày càng nhiều hoạt động mà chúng ta từng nghĩ chỉ có chúng ta mới có thể làm được','00:00:06.600','00:00:14.400','tedtalks-3'),
 	('Today\'s computers can beat us in complex board games, transcribe speech in dozens of languages, and instantly identify almost any object','Ngày nay, máy tính có thể đánh bại chúng ta trong các trò trơi cờ phức tạp, dịch giọng nói sang hàng chục ngôn ngữ và ngay lập tức nhận diện hầu hết mọi đối tượng','00:00:14.848','00:00:24.246','tedtalks-3'),
 	('But the robots of tomorrow may go futher by learning to figure out what we\'re feeling','Nhưng robot trong tương lai có thể tiến xa hơn bằng việc học cách hiểu những gì mà chúng ta đang cảm nhận','00:00:24.746','00:00:30.243','tedtalks-3'),
@@ -109,7 +109,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Nonetheless, they may eventually be able to accurately read our emotions and respond to them','Dù sao đi nữa, chúng cuối cùng có thể đọc chính xác cảm xúc của chúng ta và phản hồi cho chúng','00:04:04.758','00:04:10.400','tedtalks-3'),
 	('Whether they can empathize with our fear of unwanted intrusion, however, that\'s another story','Liệu chúng có thể đồng cảm với nỗi sợ của chúng ta vì xâm nhập ngoài ý muốn hay không thì đó lại là một câu chuyện khác','00:04:11.000','00:04:16.887','tedtalks-3'),
 
-	/* (UUID(),'tedtalks-4','How AI can help shatter barriers to equality?','Làm cách nào trí tuệ nhân tạo có thể giúp phá vỡ những rào cản bất bình đẳng?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_004.mp3',NULL,'00:00:13.240','00:05:53.866','tedtalks','NO',4) */
+	/* (UUID(),'tedtalks-4','How AI can help shatter barriers to equality?','Làm cách nào trí tuệ nhân tạo có thể giúp phá vỡ những rào cản bất bình đẳng?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_004.mp3',NULL,'00:00:13.240','00:05:53.866','tedtalks',0,0,4) */
 	('My father used to call me Jamila "Gabar Nasiib Nasiib Badan," which means Jamila "The Lucky, Lucky Girl"','Cha tôi thường gọi tôi là Jamilia "Gabar Nasiib Nasiib Badan," nghĩa là Jamilia "Cô bé may mắn"','00:00:13.240','00:00:21.420','tedtalks-4'),
 	('And I have been very fortunate in my life','Và tôi đã rất may mắn trong cuộc đời mình','00:00:21.440','00:00:23.793','tedtalks-4'),
 	('My family were originally nomads','Gia đình tôi vốn dĩ là du mục','00:00:24.760','00:00:27.510','tedtalks-4'),
@@ -149,7 +149,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Now AI can deliver this world','Giờ đây, AI có thể giải cứu thế giới này','00:05:49.520','00:05:51.853','tedtalks-4'),
 	('Thank you','Cảm ơn','00:05:52.853','00:05:53.866','tedtalks-4'),
 
-	/* (UUID(),'tedtalks-5','How will AI change the world?','Trí tuệ nhân tạo sẽ thay đổi thế giới như thế nào?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_005.mp3',NULL,'00:00:06.335','00:05:39.085','tedtalks','NO',5) */
+	/* (UUID(),'tedtalks-5','How will AI change the world?','Trí tuệ nhân tạo sẽ thay đổi thế giới như thế nào?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_005.mp3',NULL,'00:00:06.335','00:05:39.085','tedtalks',0,0,5) */
 	('In the coming years, artificial intelligence is probably going to change your life, and likely the entire world','Trong những năm tới, trí tuệ nhân tạo có thể sẽ thay đổi cuộc đời bạn, và có thể là cả thế giới','00:00:06.335','00:00:12.508','tedtalks-5'),
 	('But people have a hard time agreeing on exactly how','Nhưng mọi người gặp khó khăn trong việc thống nhất cách thức chính xác','00:00:12.592','00:00:15.720','tedtalks-5'),
 	('The following are excerpts from a World Economic Forum interview where renowned computer science professor and AI expert Stuart Russell helps separate the sense from the nonsense','Sau đây là trích đoạn một bài phỏng vấn từ Diễn đàn Kinh tế Thế giới nơi mà giáo sư khoa học máy tính và chuyên gia AI nổi tiếng Stuart Russell giúp tách biệt điều có nghĩa từ điều vô nghĩa','00:00:15.720','00:00:25.313','tedtalks-5'),
@@ -211,7 +211,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'tedtalks-6','The vital data you flush down the toilet','Dữ liệu quan trọng bạn xả xuống bồn cầu','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_006.mp3',NULL,'00:00:04.251','00:09:33.000','tedtalks','NO',6) */
+	/* (UUID(),'tedtalks-6','The vital data you flush down the toilet','Dữ liệu quan trọng bạn xả xuống bồn cầu','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_006.mp3',NULL,'00:00:04.251','00:09:33.000','tedtalks',0,0,6) */
 	('Has it ever occurred to you, as you walk down the street, just how much data is flowing beneath your feet? ','Bạn đã từng bước xuống phố và nghĩ rằng có bao nhiêu dữ liệu đang chảy trôi dưới chân mình chưa?','00:00:04.251','00:00:11.424','tedtalks-6'),
 	('A wealth of information on our health and our well-being is running through our city sewers, and we\'re all contributing to it every single time we use the toilet',' Rất nhiều thông tin về sức khỏe và thể trạng của chúng ta đang đi qua hệ thống cống trong thành phố, và tất cả chúng ta đều đóng góp cho dòng chảy này mỗi khi đi vệ sinh','00:00:12.175','00:00:21.351','tedtalks-6'),
 	('Think about it','Nghĩ kỹ mà xem','00:00:22.561','00:00:23.728','tedtalks-6'),
@@ -292,7 +292,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And next time you use the toilet, just remember, you\'re doing your civic duty','Và lần tới khi bạn dùng toilet, hãy nhớ rằng bạn đang thực hiện nghĩa vụ công dân của mình','00:09:24.685','00:09:30.608','tedtalks-6'),
 	('Thank you',' Xin cảm ơn','00:09:32.000','00:09:33.000','tedtalks-6'),
 
-	/* (UUID(),'tedtalks-7','Inside your computer','Bên trong chiếc máy tính của bạn','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_007.mp3',NULL,'00:00:15.353','00:03:56.133','tedtalks','NO',7) */
+	/* (UUID(),'tedtalks-7','Inside your computer','Bên trong chiếc máy tính của bạn','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_007.mp3',NULL,'00:00:15.353','00:03:56.133','tedtalks',0,0,7) */
 	('Do you remember when you first realized that your computer was more than just a monitor and keyboard? ','Bạn còn nhớ lần đầu tiên bạn nhận ra rằng chiếc máy tính của mình không chỉ đơn thuần là màn hình và bàn phím không? ','00:00:15.353','00:00:20.718','tedtalks-7'),
 	('That between the mouse click and the video playing, there was something that captured your intention, understood it, and made it real? ','Và rằng giữa cú nhấp chuột và trình phát video có thứ gì đó đã bắt lấy ý định của bạn, hiểu nó và biến nó trở thành thực tế? ','00:00:20.742','00:00:27.880','tedtalks-7'),
 	('What is that something? ','Vậy nó là gì? ','00:00:28.650','00:00:30.246','tedtalks-7'),
@@ -328,7 +328,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And let\'s just say there are a lot of programs involved before you even see the button on the screen light up when you clicked it','Tóm lại là có rất nhiều chương trình liên quan thậm chí trước khi bạn thấy nút bấm trên màn hình sáng lên khi bạn nhấp chuột vào nó','00:03:34.742','00:03:41.355','tedtalks-7'),
 	('So, just the simple task of clicking your mouse means visiting all of the critical components of your computer\'s architecture: peripherals, the basic input-output system, the CPU, programs, and memory, and not one gremlin','Vì vậy, một nhiệm vụ đơn giản như nhấp chuột cần tới tất cả các bộ phận quan trọng trong cấu trúc máy tính: thiết bị ngoại vi, hệ thống vào ra căn bản, CPU, chương trình, và bộ nhớ, chứ không phải sinh vật giả tưởng nào','00:03:41.379','00:03:56.133','tedtalks-7'),
 
-	/* (UUID(),'tedtalks-8','Open-source cancer research','Nghiên cứu ung thư mã nguồn mở','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_008.mp3',NULL,'00:00:15.353','00:12:36.988','tedtalks','NO',8) */
+	/* (UUID(),'tedtalks-8','Open-source cancer research','Nghiên cứu ung thư mã nguồn mở','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_008.mp3',NULL,'00:00:15.353','00:12:36.988','tedtalks',0,0,8) */
 	('I moved to Boston 10 years ago, from Chicago, with an interest in cancer and in chemistry','Tôi chuyển đến Boston 10 năm trước, từ Chicago, với sở thích nghiên cứu về ung thư và hóa học','00:00:16.228','00:00:22.140','tedtalks-8'),
 	('You might know that chemistry is the science of making molecules or, to my taste, new drugs for cancer','Bạn có thể đã biết Hóa Học là môn khoa học về chế tạo phân tử, hoặc đối với tôi, chế tạo thuốc chữa ung thư mới','00:00:22.633','00:00:28.923','tedtalks-8'),
 	('And you might also know that, for science and medicine, Boston is a bit of a candy store','Và bạn cũng có thể đã biết rằng, đối với khoa học và y học, Boston hơi giống như một cửa hàng kẹo','00:00:29.439','00:00:34.668','tedtalks-8'),
@@ -441,7 +441,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('I\'ve never seen, really, anywhere, this unique support for cancer research',' Tôi chưa bao giờ thấy sự ủng hộ đặc biệt này cho việc nghiên cứu ung thư ở đâu cả','00:12:21.020','00:12:28.743','tedtalks-8'),
 	('And so I want to thank you for your participation, your collaboration and most of all, for your confidence in our ideas','Vậy nên, tôi muốn cảm ơn các bạn vì đã tham gia, hợp tác và trên hết tin tưởng vào những ý tưởng của chúng tôi','00:12:28.767','00:12:36.988','tedtalks-8'),
 
-	/* (UUID(),'tedtalks-9','The reporting system that sexual assault survivors want','Hệ thống báo cáo mà những nạn nhân cưỡng bức mong muốn','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_009.mp3',NULL,'00:00:13.520','00:05:50.336','tedtalks','NO',9) */
+	/* (UUID(),'tedtalks-9','The reporting system that sexual assault survivors want','Hệ thống báo cáo mà những nạn nhân cưỡng bức mong muốn','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_009.mp3',NULL,'00:00:13.520','00:05:50.336','tedtalks',0,0,9) */
 	('Hannah is excited to be going to college','Hannah phấn khích khi chuẩn bị vào ĐH','00:00:13.520','00:00:16.700','tedtalks-9'),
 	('She couldn\'t wait to get out of her parents\' house, to prove to them that she\'s an adult, and to prove to her new friends that she belongs','cô bé không thể chờ tới ngày rời khỏi cha mẹ mình để chứng minh cô đã trưởng thành, và khẳng định bản thân với bạn bè mới','00:00:16.960','00:00:24.480','tedtalks-9'),
 	('She heads to a campus party where she sees a guy that she has a crush on','Cô bé đến buổi tiệc ở kí túc xá, nơi cô gặp 1 chàng trai và cảm nắng ngay lập tức','00:00:25.360','00:00:29.496','tedtalks-9'),
@@ -485,7 +485,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('We can create one where those who do wrong are held accountable, where survivors get the support and justice they deserve, where the authorities get the information they need, and where there\'s a real deterrent to violating the rights of another human being','Ta có thể chung tay tạo ra nơi mà phạm nhân phải bị trừng trị thích đáng, nơi mà nạn nhân lẽ ra có được sự ủng hộ và công lý, nơi mà các nhà chức trách có được thông tin cần, và nơi có một biện pháp triệt để đối với sự vi phạm quyền nhân phẩm con người','00:05:32.120','00:05:48.440','tedtalks-9'),
 	('Thank you','Cảm ơn vì đã lắng nghe','00:05:49.120','00:05:50.336','tedtalks-9'),
 
-	/* (UUID(),'tedtalks-10','How exactly does binary code work?','Chính xác thì mã nhị phân hoạt động như thế nào?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_010.mp3',NULL,'00:00:06.777','00:04:25.371','tedtalks','NO',10) */
+	/* (UUID(),'tedtalks-10','How exactly does binary code work?','Chính xác thì mã nhị phân hoạt động như thế nào?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_010.mp3',NULL,'00:00:06.777','00:04:25.371','tedtalks',0,0,10) */
 	('Imagine trying to use words to describe every scene in a film, every note in your favorite song, or every street in your town','Tưởng tượng bạn dùng từ ngữ để mô tả từng cảnh trong phim ảnh từng nốt nhạc trong bài hát yêu thích, hay từng con đường trong thị trấn','00:00:06.777','00:00:16.035','tedtalks-10'),
 	('Now imagine trying to do it using only the numbers 1 and 0','Bây giờ, hãy tưởng tượng bạn làm điều đó chỉ với số 1 và 0','00:00:16.035','00:00:20.859','tedtalks-10'),
 	('Every time you use the Internet to watch a movie, listen to music, or check directions, that\'s exactly what your device is doing, using the language of binary code','Mỗi lần lên mạng để xem phim nghe nhạc, hay tìm đường đó chính xác là những điều mà máy tính của bạn đang làm, sử dụng ngôn ngữ mã nhị phân','00:00:20.859','00:00:31.812','tedtalks-10'),
@@ -528,7 +528,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'tedtalks-11','How to fix the bugs in the net zero code','Làm thế nào để khắc phục sự cố trong chương trình phi khí thải','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_011.mp3',NULL,'00:00:04.180','00:10:26.060','tedtalks','NO',11) */
+	/* (UUID(),'tedtalks-11','How to fix the bugs in the net zero code','Làm thế nào để khắc phục sự cố trong chương trình phi khí thải','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_011.mp3',NULL,'00:00:04.180','00:10:26.060','tedtalks',0,0,11) */
 	('When I was a kid, I lived in a pretty analog world','Khi còn nhỏ, tôi có một cuộc sống bình thường','00:00:04.180','00:00:07.580','tedtalks-11'),
 	('But then, that all started to quickly change','Rồi thì, mọi thứ bắt đầu thay đổi nhanh chóng','00:00:07.580','00:00:09.740','tedtalks-11'),
 	('My music, my communications, my social networks - everything started to become digital','Từ âm nhạc, giao tiếp tới các mối quan hệ xã hội - mọi thứ bắt đầu chuyển qua kĩ thuật số','00:00:09.740','00:00:15.340','tedtalks-11'),
@@ -598,7 +598,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Because if we can do that, then we can be confident in our ability to pull off the most seemingly magical feat of all: a recoding of our current course on climate change and a promise for a more sustainable future to generations to come','Vì nếu làm được vậy, chúng ta có thể tự tin vào khả năng để chiến thắng nhiệm vụ dường như kì diệu nhất trong tất cả: một bản mã hóa tiến trình hiện tại về biến đổi khí hậu và hứa hẹn về một tương lai bền vững hơn cho thế hệ mai sau','00:10:07.300','00:10:23.780','tedtalks-11'),
 	('Thank you','Cảm ơn mọi người','00:10:24.940','00:10:26.060','tedtalks-11'),
 
-	/* (UUID(),'tedtalks-12','4 Lessons from robots about being human','4 bài học làm người từ robot','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_012.mp3',NULL,'00:00:12.500','00:16:59.200','tedtalks','NO',12) */
+	/* (UUID(),'tedtalks-12','4 Lessons from robots about being human','4 bài học làm người từ robot','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_012.mp3',NULL,'00:00:12.500','00:16:59.200','tedtalks',0,0,12) */
 	('I know this is going to sound strange, but I think robots can inspire us to be better humans','Tôi biết điều này nghe có vẻ kỳ lạ, nhưng tôi nghĩ là robot có thể truyền cảm hứng cho chúng ta để trở thành người tốt hơn','00:00:12.500','00:00:20.365','tedtalks-12'),
 	('See, I grew up in Bethlehem, Pennsylvania, the home of Bethlehem Steel','Bạn thấy đấy, tôi lớn lên ở Bethlehem, Pennsylvania, nơi đặt trụ sở công ty Bethlehem Steel','00:00:21.245','00:00:26.200','tedtalks-12'),
 	('My father was an engineer, and when I was growing up, he would teach me how things worked','Cha tôi là một kỹ sư, và khi tôi lớn lên, ông ấy dạy tôi cách mọi thứ vận hành','00:00:26.991','00:00:33.100','tedtalks-12'),
@@ -735,7 +735,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Because I have a hunch that many of our technological innovations, the devices we dream about, can inspire us to be better humans','Vì tôi có linh cảm là rất nhiều phát minh công nghệ của ta, những thiết bị chúng ta mơ thấy, truyền cảm hứng ta trở nên tốt hơn','00:16:46.800','00:16:57.015','tedtalks-12'),
 	('Thank you','Cảm ơn các bạn','00:16:58.015','00:16:59.200','tedtalks-12'),
 
-	/* (UUID(),'tedtalks-13','Teach girl bravery not perfection','Dạy con gái lòng dũng cảm thay vì sự hoàn hảo','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_013.mp3',NULL,'00:00:13.040','00:12:33.000','tedtalks','NO',13) */
+	/* (UUID(),'tedtalks-13','Teach girl bravery not perfection','Dạy con gái lòng dũng cảm thay vì sự hoàn hảo','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_013.mp3',NULL,'00:00:13.040','00:12:33.000','tedtalks',0,0,13) */
 	('So a few years ago, I did something really brave, or some would say really stupid','Một vài năm trước, tôi đã làm một việc rất dũng cảm, hoặc vài người có thể nói rất ngốc nghếch','00:00:13.040','00:00:20.360','tedtalks-13'),
 	('I ran for Congress','Tôi ứng cử vào Quốc hội','00:00:20.840','00:00:22.160','tedtalks-13'),
 	('For years, I had existed safely behind the scenes in politics as a fundraiser, as an organizer, but in my heart, I always wanted to run','Trong nhiều năm, tôi đã được an toàn về chính trị như một người gây quỹ, một người tổ chức','00:00:23.040','00:00:33.080','tedtalks-13'),
@@ -838,7 +838,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('More power to you','Rất nhiều sức mạnh cho chị','00:12:31.000','00:12:32.100','tedtalks-13'),
 	('Thank you','Cảm ơn','00:12:32.100','00:12:33.000','tedtalks-13'),
 
-	/* (UUID(),'tedtalks-14','Online video annotated remixed and popped','Video trực tuyến được chú thích, phối lại và nổi bật','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_014.mp3',NULL,'00:00:16.804','00:04:20.081','tedtalks','NO',14) */
+	/* (UUID(),'tedtalks-14','Online video annotated remixed and popped','Video trực tuyến được chú thích, phối lại và nổi bật','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_014.mp3',NULL,'00:00:16.804','00:04:20.081','tedtalks',0,0,14) */
 	('To understand the world that live in, we tell stories','Để hiểu thế giới mình đang sống, chúng ta kể những câu chuyện','00:00:16.804','00:00:20.773','tedtalks-14'),
 	('And while remixing and sharing have come to define the web as we know it, all of us can now be part of that story through simple tools that allow us to make things online','Và trong khi sự pha trộn và chia sẻ đưa đến việc định nghĩa được web [mạng] như chúng ta đã biết, tất cả chúng ta giờ đây có thể trở thành một phần của câu chuyện nhờ các công cụ đơn giản cho phép chúng ta làm việc trực tuyến','00:00:20.773','00:00:32.124','tedtalks-14'),
 	('But video has been left out','Nhưng khi video đã được lọt ra ngoài','00:00:32.124','00:00:36.206','tedtalks-14'),
@@ -880,7 +880,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('I think Popcorn could change the way that we tell stories on the web, and the way we understand the world we live in','Tôi nghĩ rằng Popcorn có thể thay đổi cách mà chúng ta thuật chuyện trên web, và cách chúng ta hiểu thế giới mình đang sống','00:04:09.021','00:04:14.395','tedtalks-14'),
 	('Thank you','Xin cảm ơn','00:04:14.395','00:04:20.081','tedtalks-14'),
 
-	/* (UUID(),'tedtalks-15','The wonders of the molecular world animated','Kỳ quan của thế giới vi mô được mô phỏng','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_015.mp3',NULL,'00:00:14.417','00:06:00.643','tedtalks','NO',15) */
+	/* (UUID(),'tedtalks-15','The wonders of the molecular world animated','Kỳ quan của thế giới vi mô được mô phỏng','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_015.mp3',NULL,'00:00:14.417','00:06:00.643','tedtalks',0,0,15) */
 	('I live in Utah, a place known for having some of the most awe-inspiring natural landscapes on this planet','Tôi sống ở Utah, nơi được biết tới bởi một số cảnh quan thiên nhiên hùng vĩ bật nhất nhất thế giới','00:00:14.417','00:00:21.143','tedtalks-15'),
 	('It\'s easy to be overwhelmed by these amazing views, and to be really fascinated by these sometimes alien-looking formations','Ta dễ bị choáng ngợp bởi những khung cảnh tuyệt vời này, và thật sự bị mê hoặc bởi những hình thể trông giống như người ngoài hành tinh','00:00:21.167','00:00:28.518','tedtalks-15'),
 	('As a scientist, I love observing the natural world','Là một nhà khoa học, tôi thích ngắm nhìn thế giới tự nhiên','00:00:28.542','00:00:32.184','tedtalks-15'),
@@ -941,7 +941,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'tedtalks-16','What do we do with all this big data','Chúng ta sẽ làm gì với tất cả dữ liệu khổng lồ này?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_016.mp3',NULL,'00:00:13.354','00:12:19.840','tedtalks','NO',16) */
+	/* (UUID(),'tedtalks-16','What do we do with all this big data','Chúng ta sẽ làm gì với tất cả dữ liệu khổng lồ này?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_016.mp3',NULL,'00:00:13.354','00:12:19.840','tedtalks',0,0,16) */
 	('Technology has brought us so much: the moon landing, the Internet, the ability to sequence the human genome','Công nghệ mang lại cho chúng ta rất nhiều: đặt chân lên mặt trăng, mạng Internet, khả năng lập trình bộ gen của con người','00:00:13.354','00:00:21.133','tedtalks-16'),
 	('But it also taps into a lot of our deepest fears, and about 30 years ago, the culture critic Neil Postman wrote a book called "Amusing Ourselves to Death," which lays this out really brilliantly','Nhưng nó cũng động chạm đến nỗi sợ hãi lớn nhất của loài người, và vào khoảng 30 năm trước, nhà phê bình văn hóa Neil Postman tựa đề "Amusing Ourselves to Death," viết vô cùng thông minh về vấn đề này','00:00:21.133','00:00:34.140','tedtalks-16'),
 	('And here\'s what he said, comparing the dystopian visions of George Orwell and Aldous Huxley','Ông đã so sánh giữa hai nhà tư tưởng George Orwell và Aldous Huxley','00:00:34.140','00:00:41.626','tedtalks-16'),
@@ -1014,7 +1014,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('What we have to do is treat critical thinking with respect and be inspired by examples like the Health Media Collaboratory, and as they say in the superhero movies, let\'s use our powers for good','Điều ta cần làm là tư duy phản biện kèm theo sự tôn trọng và nhận cảm hứng từ những gương đi trước như Nhóm nghiên cứu Truyền thông Sức khỏe hay như lời nhân vật trong phim anh hùng: Hãy tận dụng sức mạnh để làm điều tốt','00:12:03.603','00:12:17.489','tedtalks-16'),
 	('Thank you','Cảm ơn','00:12:17.489','00:12:19.840','tedtalks-16'),
 
-	/* (UUID(),'tedtalks-17','Could human civilization spread across the whole galaxy?','Nền văn minh nhân loại có thể lan rộng khắp thiên hà?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_017.mp3',NULL,'00:00:06.659','00:04:17.115','tedtalks','NO',17) */
+	/* (UUID(),'tedtalks-17','Could human civilization spread across the whole galaxy?','Nền văn minh nhân loại có thể lan rộng khắp thiên hà?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_017.mp3',NULL,'00:00:06.659','00:04:17.115','tedtalks',0,0,17) */
 	('Could human civilization eventually spread across the whole Milky Way galaxy?','Nền văn minh nhân loại rốt cuộc có thể trải rộng khắp dải Ngân Hà hay không?','00:00:06.659','00:00:12.099','tedtalks-17'),
 	('Could we move beyond our small blue planet to establish colonies in the multitude of star systems out there?','Chúng ta liệu có thể vượt ra khỏi hành tinh xanh nhỏ bé của mình để xây dựng các thuộc địa trên vô số hệ thống sao ngoài kia?','00:00:12.099','00:00:19.699','tedtalks-17'),
 	('This question\'s a pretty daunting one','Đây là một câu hỏi khá khó khăn','00:00:19.699','00:00:21.957','tedtalks-17'),
@@ -1048,7 +1048,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('But the next time you look at the night sky, consider that billions of self-replicating machines could be advancing between stars in our galaxy right now','Nhưng lần tới khi bạn ngắm bầu trời đêm, thử nghĩ xem hàng tỷ máy tự nhân bản đang chuyển động giữa các vì sao ngoài dải ngân hà ngay bây giờ','00:03:59.026','00:04:09.515','tedtalks-17'),
 	('If they exist, one of them will eventually land on Earth, or maybe, just maybe, they\'re already here','Nếu chúng có thật, một trong số chúng rốt cuộc cũng sẽ đáp xuống Trái Đất, hoặc có thể, chỉ là có thể, chúng đã đáp xuống đây rồi','00:04:09.515','00:04:17.115','tedtalks-17'),
 
-	/* (UUID(),'tedtalks-18','My underwater robot','Robot dưới nước của tôi','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_018.mp3',NULL,'00:00:20.811','00:04:17.707','tedtalks','NO',18) */
+	/* (UUID(),'tedtalks-18','My underwater robot','Robot dưới nước của tôi','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_018.mp3',NULL,'00:00:20.811','00:04:17.707','tedtalks',0,0,18) */
 	('So this video was taken at Aquarius undersea laboratory four miles off the coast of Key Largo, about 60 feet below the surface','Vậy là video này đã được thực hiện tại phòng thí nghiệm dưới biển Aquarius bốn dặm ngoài khơi bờ biển Key Largo, khoảng 18 mét dưới mặt biển','00:00:20.811','00:00:29.577','tedtalks-18'),
 	('NASA uses this extreme environment to train astronauts and aquanauts, and last year, they invited us along for the ride','NASA sử dụng môi trường khắc nghiệt này để đào tạo các phi hành gia và nhà khoa học lặn , và năm ngoái, họ đã mời chúng tôi tham gia chuyến đi này','00:00:29.577','00:00:37.087','tedtalks-18'),
 	('All the footage was taken from our open ROV, which is a robot that we built in our garage','Tất cả các đoạn phim được lấy từ ROV mở của chúng tôi, đó là một robot mà chúng tôi tạo ra trong nhà để xe của mình','00:00:37.087','00:00:44.458','tedtalks-18'),
@@ -1094,7 +1094,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('It\'s an underwater world we\'re all exploring together','Đó là cả một thế giới dưới nước mà chúng ta đang cùng nhau thám hiểm','00:04:11.688','00:04:15.532','tedtalks-18'),
 	('Thank you','Xin cảm ơn','00:04:15.532','00:04:17.707','tedtalks-18'),
 
-	/* (UUID(),'tedtalks-19','How the hyperlink changed everything?','Làm thế nào siêu liên kết đã thay đổi mọi thứ?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_019.mp3',NULL,'00:00:12.121','00:03:30.704','tedtalks','NO',19) */
+	/* (UUID(),'tedtalks-19','How the hyperlink changed everything?','Làm thế nào siêu liên kết đã thay đổi mọi thứ?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_019.mp3',NULL,'00:00:12.121','00:03:30.704','tedtalks',0,0,19) */
 	('I remember thinking to myself, "This is going to change everything about how we communicate"','Tôi nhớ từng tự nhủ: "Điều này sẽ thay đổi toàn bộ cách chúng ta giao tiếp"','00:00:12.121','00:00:17.371','tedtalks-19'),
 	('A hyperlink is an interface element, and what I mean by that is, when you\'re using software on your phone or your computer, there\'s a lot of code behind the interface that\'s giving all the instructions for the computer on how to manage it, but that interface is the thing that humans interact with: when we press on this, then something happens','Hyperlink (đường dẫn) là một yếu tố của giao diện, và điều tôi muốn nói là, khi bạn dùng phần mềm trên điện thoại hoặc máy tính, có rất nhiều mã đằng sau giao diện cung cấp tất cả những hướng dẫn để máy tính hoạt động, nhưng giao diện là cái mà con người tương tác: Khi ta nhấn vào đây, điều gì đó sẽ xảy ra','00:00:23.579','00:00:42.579','tedtalks-19'),
 	('When they first came around, they were pretty simple and not particularly glamorous','Khi lần đầu tiên xuất hiện, chúng khá là đơn giản, và không có vẻ gì hào nhoáng','00:00:42.621','00:00:47.496','tedtalks-19'),
@@ -1124,7 +1124,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Because of the way that hyperlinks were first constructed, they were intended to be not only used by many people, but created by many people','Nhờ cách Hyperlink được tạo ra lần đầu, chúng hướng tới không chỉ sử dụng bởi nhiều người, mà còn được tạo ra bởi nhiều người','00:03:17.829','00:03:26.538','tedtalks-19'),
 	('To me, it\'s one of the most democratic designs ever created','Với tôi, đây là một trong những thiết kế dân chủ nhất từ trước tới nay','00:03:26.538','00:03:30.704','tedtalks-19'),
 
-	/* (UUID(),'tedtalks-20','What makes the great wall of china so extraordinary?','Điều gì khiến Vạn Lý Trường Thành của Trung Quốc trở nên phi thường?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_020.mp3',NULL,'00:00:06.561','00:04:12.857','tedtalks','NO',20) */
+	/* (UUID(),'tedtalks-20','What makes the great wall of china so extraordinary?','Điều gì khiến Vạn Lý Trường Thành của Trung Quốc trở nên phi thường?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_020.mp3',NULL,'00:00:06.561','00:04:12.857','tedtalks',0,0,20) */
 	('A 13,000 mile dragon of earth and stone winds its way through the countryside of China with a history almost as long and serpentine as the structure','Một con rồng dài 13,000 dặm làm từ đất và đá trải dài xuyên suốt đất nước Trung Hoa và lịch sử của nó có lẽ cũng dài và phức tạp như chính kết cấu của mình','00:00:06.561','00:00:16.423','tedtalks-20'),
 	('The Great Wall began as multiple walls of rammed earth built by individual feudal states during the Chunqiu period to protect against nomadic raiders north of China and each other','Vạn Lý Trường Thành ban đầu chỉ là những bức tường đất nện được xây bởi các nước phong kiến trong giai đoạn Xuân Thu Chiến Quốc để bảo vệ khỏi sự xâm lược từ những đoàn binh du mục phương Bắc và các nước khác','00:00:16.447','00:00:27.386','tedtalks-20'),
 	('When Emperor Qin Shi Huang unified the states in 221 BCE, the Tibetan Plateau and Pacific Ocean became natural barriers, but the mountains in the north remained vulnerable to Mongol, Turkish, and Xiongnu invasions','Khi Tần Thủy Hoàng thống nhất Trung Quốc vào năm 221 trước Công nguyên, Cao nguyên Tây Tạng và Thái Bình Dương trở thành rào chắn bảo vệ cho đại lục nhưng quân Mông Cổ, Thổ Nhĩ Kỳ và Hung Nô vẫn có thể dễ dàng xâm lược từ vùng núi phía Bắc','00:00:27.410','00:00:42.145','tedtalks-20'),
@@ -1161,7 +1161,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'tedtalks-21','How to keep AI under control?','Làm thế nào để kiểm soát AI?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_021.mp3',NULL,'00:00:03.833','00:12:03.970','tedtalks','NO',21) */
+	/* (UUID(),'tedtalks-21','How to keep AI under control?','Làm thế nào để kiểm soát AI?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_021.mp3',NULL,'00:00:03.833','00:12:03.970','tedtalks',0,0,21) */
 	('Five years ago, I stood on the TED stage and warned about the dangers of superintelligence','Cách đây 5 năm, tôi đứng trên sân khấu TED và cảnh báo về những hiểm nguy của Siêu trí tuệ','00:00:03.833','00:00:12.425','tedtalks-21'),
 	('I was wrong','Những cảnh báo của tôi đã sai','00:00:13.051','00:00:14.761','tedtalks-21'),
 	('It went even worse than I thought','Nó thậm chí còn tồi tệ hơn tôi nghĩ','00:00:16.513','00:00:18.265','tedtalks-21'),
@@ -1264,7 +1264,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Because artificial intelligence is giving us incredible intellectual wings with which we can do things beyond our wildest dreams if we stop obsessively trying to fly to the sun','Bởi vì Trí tuệ Nhân tạo đang mang đến cho chúng ta những đôi cánh trí tuệ đáng kinh ngạc để chúng ta có thể làm những điều ngoài những giấc mơ hoang dã nhất của mình nếu chúng ta ngừng ám ảnh cố gắng bay về phía mặt trời','00:11:46.702','00:12:02.426','tedtalks-21'),
 	('Thank you','Cảm ơn bạn','00:12:02.802','00:12:03.970','tedtalks-21'),
 
-	/* (UUID(),'tedtalks-22','The best computer interface? Maybe... your hands','Giao diện máy tính tốt nhất? Có thể... là đôi tay của bạn','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_022.mp3',NULL,'00:00:12.721','00:06:05.026','tedtalks','NO',22) */
+	/* (UUID(),'tedtalks-22','The best computer interface? Maybe... your hands','Giao diện máy tính tốt nhất? Có thể... là đôi tay của bạn','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_022.mp3',NULL,'00:00:12.721','00:06:05.026','tedtalks',0,0,22) */
 	('A computer is an incredibly powerful means of creative expression, but for the most part, that expression is confined to the screens of our laptops and mobile phones','Máy tính là một công cụ đầy quyền lực để thể hiện óc sáng tạo, nhưng hầu hết, lại bị giới hạn bởi màn hình máy tính và điện thoại','00:00:12.721','00:00:23.196','tedtalks-22'),
 	('And I\'d like to tell you a story about bringing this power of the computer to move things around and interact with us off of the screen and into the physical world in which we live','Tôi muốn kể cho các bạn một câu chuyện về việc dùng sức mạnh của máy tính để di chuyển đồ vật và tương tác với chúng vượt khỏi màn hình đi vào thế giới thật','00:00:23.196','00:00:33.824','tedtalks-22'),
 	('A few years ago, I got a call from a luxury fashion store called Barneys New York, and the next thing I knew, I was designing storefront kinetic sculptures for their window displays','Vài năm trước, tôi nhận được một cuộc gọi từ cửa hàng thời trang cao cấp Barneys New York người ta yêu cầu tôi thiết kế một tác phẩm trưng bày','00:00:33.824','00:00:43.277','tedtalks-22'),
@@ -1309,7 +1309,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('But when we want to have a video chat or play a game or lay out the slides to our next TED Talk, the objects on the table come alive','Nhưng khi muốn trò chuyện bằng video chơi một trò chơi, hay trình chiếu bài nói chuyện tiếp theo trên TED, các vật thể trên bàn trở nên sống động','00:05:55.383','00:06:03.674','tedtalks-22'),
 	('Thank you','Xin cảm ơn','00:06:03.674','00:06:05.026','tedtalks-22'),
 
-	/* (UUID(),'tedtalks-23','The dark side of competition in AI','Mặt tối của cạnh tranh trong ngành công nghiệp AI','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_023.mp3',NULL,'00:00:04.000','00:12:00.299','tedtalks','NO',23) */
+	/* (UUID(),'tedtalks-23','The dark side of competition in AI','Mặt tối của cạnh tranh trong ngành công nghiệp AI','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_023.mp3',NULL,'00:00:04.000','00:12:00.299','tedtalks',0,0,23) */
 	('Competition','Sự cạnh tranh','00:00:04.000','00:00:05.502','tedtalks-23'),
 	('It\'s a fundamental part of human nature','Nó là căn bản trong bản tính con người','00:00:05.502','00:00:08.505','tedtalks-23'),
 	('I was a professional poker player for 10 years, so I\'ve very much seen all the good, bad and ugly ways it can manifest','Tôi là một tay chơi poker chuyên nghiệp trong 10 năm, vậy nên tôi đã thấy rất nhiều điều tốt đẹp, tệ hại và xấu xí mà nó thể hiện ra','00:00:09.047','00:00:16.096','tedtalks-23'),
@@ -1411,7 +1411,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Not any individual CEO or company, and certainly not one another','Không phải bất kỳ vị CEO hay công ty nào, và chắc chắn không phải lẫn nhau','00:11:52.208','00:11:56.587','tedtalks-23'),
 	('So don\'t hate the players, change the game','Vì vậy, đừng ghét bỏ người chơi, hãy thay đổi trò chơi','00:11:57.255','00:12:00.299','tedtalks-23'),
 
-	/* (UUID(),'tedtalks-24','How to make learning as addictive as social media?','Cách để nghiện học như nghiện mạng xã hội?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_024.mp3',NULL,'00:00:04.209','00:12:52.268','tedtalks','NO',24) */
+	/* (UUID(),'tedtalks-24','How to make learning as addictive as social media?','Cách để nghiện học như nghiện mạng xã hội?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_024.mp3',NULL,'00:00:04.209','00:12:52.268','tedtalks',0,0,24) */
 	('So, I\'m from Guatemala','Thì, tôi đến từ Guatemala','00:00:04.209','00:00:07.128','tedtalks-24'),
 	('This is a public service announcement, that is where Guatemala is','Trân trọng thông báo với toàn thể quý vị là Guatemala nằm đây','00:00:07.504','00:00:10.715','tedtalks-24'),
 	('Also, that is not where they keep the prisoners','Nói luôn, đó không phải nơi giam giữ mấy tù nhân','00:00:10.757','00:00:15.887','tedtalks-24'),
@@ -1566,7 +1566,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Sal Khan is doing a really good job with that','Sal Khan đang làm điều đó rất tốt','00:12:46.095','00:12:48.264','tedtalks-24'),
 	('But for things that require a lot of repetition, I think we can use the same methods','Nhưng với các môn đòi hỏi sự lặp lại cao, ta có thể dùng biện pháp tương tự','00:12:48.264','00:12:52.268','tedtalks-24'),
 
-	/* (UUID(),'tedtalks-25','Are insect brains the secret to great AI?','Liệu não bộ của côn trùng có phải là công thức bí mật cho siêu trí tuệ nhân tạo?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_025.mp3',NULL,'00:00:05.210','00:09:26.729','tedtalks','NO',25) */
+	/* (UUID(),'tedtalks-25','Are insect brains the secret to great AI?','Liệu não bộ của côn trùng có phải là công thức bí mật cho siêu trí tuệ nhân tạo?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_025.mp3',NULL,'00:00:05.210','00:09:26.729','tedtalks',0,0,25) */
 	('Creating intelligence on a computer','Tạo nên trí thông minh trên máy tính','00:00:05.210','00:00:07.587','tedtalks-25'),
 	('This has been the Holy Grail for artificial intelligence for quite some time','Đây đã là một điều rất khó khăn cho trí tuệ nhân tạo trong một thời gian dài','00:00:08.129','00:00:12.384','tedtalks-25'),
 	('But how do we get there?','Nhưng làm thế nào chúng ta đạt được điều đó?','00:00:12.968','00:00:14.636','tedtalks-25'),
@@ -1658,7 +1658,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'tedtalks-26','The high stakes race to make quantum computers work','Cuộc đua đầy rủi ro để làm cho máy tính lượng tử hoạt động','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_026.mp3',NULL,'00:00:06.914','00:05:02.960','tedtalks','NO',26) */
+	/* (UUID(),'tedtalks-26','The high stakes race to make quantum computers work','Cuộc đua đầy rủi ro để làm cho máy tính lượng tử hoạt động','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_026.mp3',NULL,'00:00:06.914','00:05:02.960','tedtalks',0,0,26) */
 	('The contents of this metal cylinder could either revolutionize technology or be completely useless - it all depends on whether we can harness the strange physics of matter at very, very small scales','Thứ chứa trong xi lanh kim loại này có thể tạo ra một cuộc cách mạng công nghệ hoặc hoàn toàn vô dụng - tùy thuộc vào khả năng chúng ta tận dụng các tính chất vật lý kỳ lạ của vật chất ở phạm vi rất nhỏ','00:00:06.914','00:00:18.644','tedtalks-26'),
 	('To have even a chance of doing so, we have to control the environment precisely: the thick tabletop and legs guard against vibrations from footsteps, nearby elevators, and opening or closing doors','Muốn vậy, cần phải kiểm soát chặt chẽ môi trường xung quanh: sử dụng mặt bàn dày và đế chống rung để bảo vệ giúp cản trở chấn động phát ra từ bước chân, thang máy lân cận và việc đóng mở cửa','00:00:18.644','00:00:30.244','tedtalks-26'),
 	('The cylinder is a vacuum chamber, devoid of all the gases in air','Xi lanh là một buồng chân không, không chứa khí','00:00:30.244','00:00:34.734','tedtalks-26'),
@@ -1701,7 +1701,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And as quantum computers advance, they will still be subject to the environmental constraints needed to preserve quantum states','Và trong quá trình phát triển, vẫn cần kiểm soát chặt chẽ môi trường xung quanh để duy trì trạng thái lượng tử','00:04:47.800','00:04:55.140','tedtalks-26'),
 	('But in spite of all these obstacles, we\'ve already succeeded at making computations in a realm we can\'t enter or even observe','Nhưng bất chấp những khó khăn này, chúng ta đã thành công trong việc tạo ra chiếc máy tính ngay cả khi ta không thể quan sát hay chạm đến các hạt lượng tử','00:04:55.140','00:05:02.960','tedtalks-26'),
 
-	/* (UUID(),'tedtalks-27','3 ways to make better decisions - by thinking like a computer','3 cách để đưa ra quyết định tốt hơn - bằng cách suy nghĩ như chiếc máy','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_027.mp3',NULL,'00:00:13.407','00:11:41.984','tedtalks','NO',27) */
+	/* (UUID(),'tedtalks-27','3 ways to make better decisions - by thinking like a computer','3 cách để đưa ra quyết định tốt hơn - bằng cách suy nghĩ như chiếc máy','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_027.mp3',NULL,'00:00:13.407','00:11:41.984','tedtalks',0,0,27) */
 	('If there\'s one city in the world where it\'s hard to find a place to buy or rent, it\'s Sydney','Nếu có một thành phố trên thế giới mà rất khó để tìm một chỗ để mua hay thuê thì đó chính là Sydney','00:00:13.407','00:00:18.519','tedtalks-27'),
 	('And if you\'ve tried to find a home here recently, you\'re familiar with the problem','Và nếu bạn đã từng thử tìm nhà ở đây thì bạn sẽ quen với vấn đề này','00:00:19.043','00:00:23.274','tedtalks-27'),
 	('Every time you walk into an open house, you get some information about what\'s out there and what\'s on the market, but every time you walk out, you\'re running the risk of the very best place passing you by','Mỗi lần bạn tham quan căn nhà mình định thuê, bạn sẽ có một vài thông tin về những gì bên ngoài và những gì diễn ra thị trường, nhưng mỗi lần bạn bước ra, bạn có nguy cơ bỏ lỡ nơi tốt nhất bạn vừa đi qua','00:00:23.298','00:00:33.636','tedtalks-27'),
@@ -1808,7 +1808,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('These aren\'t the concessions that we make when we can\'t be rational - they\'re what being rational means','Đây không phải là nhượng bộ khi chúng ta không hợp lí - Chúng chính là hợp lí','00:11:35.430','00:11:40.433','tedtalks-27'),
 	('Thank you','Cảm ơn','00:11:40.833','00:11:41.984','tedtalks-27'),
 
-	/* (UUID(),'tedtalks-28','Technology that knows what you\'re feeling?','Công nghệ có biết được bạn đang cảm thấy gì?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_028.mp3',NULL,'00:00:12.881','00:12:36.258','tedtalks','NO',28) */
+	/* (UUID(),'tedtalks-28','Technology that knows what you\'re feeling?','Công nghệ có biết được bạn đang cảm thấy gì?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_028.mp3',NULL,'00:00:12.881','00:12:36.258','tedtalks',0,0,28) */
 	('What happens when technology knows more about us than we do?','Chuyện gì sẽ xảy ra khi công nghệ hiểu biết con người hơn chính họ?','00:00:12.881','00:00:17.337','tedtalks-28'),
 	('A computer now can detect our slightest facial microexpressions and be able to tell the difference between a real smile and a fake one','Máy tính giờ đây có thể chỉ ra những cử chỉ nhỏ thoáng qua trên khuôn mặt và sự khác nhau giữa nụ cười thật và biểu hiện giả tạo','00:00:17.992','00:00:25.299','tedtalks-28'),
 	('That\'s only the beginning','Và đó chỉ là sự khởi đầu','00:00:25.323','00:00:27.057','tedtalks-28'),
@@ -1918,7 +1918,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And if we don\'t, there are too many opportunities and feelings we\'re going to be missing out on','Còn nếu không làm gì, thì sẽ có nhiều cơ hội và cảm xúc mà chúng ta sẽ bỏ lỡ','00:12:29.315','00:12:35.059','tedtalks-28'),
 	('Thank you','Cảm ơn mọi người','00:12:35.083','00:12:36.258','tedtalks-28'),
 
-	/* (UUID(),'tedtalks-29','How the blockchain will radically transform the economy','Cách thức blockchain làm biến đổi tận gốc rễ nền kinh tế','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_029.mp3',NULL,'00:00:13.000','00:14:52.465','tedtalks','NO',29) */
+	/* (UUID(),'tedtalks-29','How the blockchain will radically transform the economy','Cách thức blockchain làm biến đổi tận gốc rễ nền kinh tế','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_029.mp3',NULL,'00:00:13.000','00:14:52.465','tedtalks',0,0,29) */
 	('Economists have been exploring people\'s behavior for hundreds of yeahow we make decisions, how we act individually and in groups, how we exchange value','Các nhà kinh tế đã tiến hành khám phá hành vi của con người từ hàng trăm năm nay: cách ta đưa ra các quyết định, cách ta hành động theo từng cá nhân và theo nhóm, và cách ta trao đổi những giá trị','00:00:13.000','00:00:25.280','tedtalks-29'),
 	('They\'ve studied the institutions that facilitate our trade, like legal systems, corporations, marketplaces','Họ nghiên cứu các tổ chức thiết chế tạo thuận lợi cho thương mại, như hệ thống pháp luật, sự hợp tác, và các khu thương mại','00:00:26.760','00:00:34.720','tedtalks-29'),
 	('But there is a new, technological institution that will fundamentally change how we exchange value, and it\'s called the blockchain','Nhưng có một thiết chế công nghệ mới sẽ làm thay đổi cách thức ta trao đổi, buôn bán, và đó được gọi là "blockchain"','00:00:35.600','00:00:44.600','tedtalks-29'),
@@ -2019,7 +2019,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('But you use it every day, so I think we\'re sort of facing the same John Sculley idea of technology should either be invisible or beautiful, and blockchain is kind of neither of those things right now, so it\'s better suited for either really early adopters who kind of get it and can tinker around or for finding those best use cases like identity or asset tracking or smart contracts that can be used at that level of an enterprise or government','Nhưng bạn vẫn dùng nó mỗi ngày đó thôi, vậy tôi nghĩ chúng ta dường như đối mặt với ý tưởng của John Sculley: công nghệ nên là bí ẩn hoặc là thứ đẹp đẽ, và "blockchain" cũng không phải luôn như bây giờ, mà nó sẽ được thay đổi để mọi người tiếp cận sớm hơn họ sẽ dùng và chơi với nó hay tìm được những thứ hay nhất như việc theo dõi thông tin cá nhân, tài sản hay những hợp đồng thông minh nó được dùng ở mức độ của công ty hay chính phủ','00:14:21.040','00:14:50.536','tedtalks-29'),
 	('Thank you, Thanks for coming to TED','Cảm ơn, Cảm ơn đã đến với TED','00:14:50.560','00:14:52.465','tedtalks-29'),
 
-	/* (UUID(),'tedtalks-30','Your smartphone is a civil rights issue','Điện thoại thông minh của bạn là một vấn đề về quyền công dân','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_030.mp3',NULL,'00:00:12.499','00:07:40.100','tedtalks','NO',30) */
+	/* (UUID(),'tedtalks-30','Your smartphone is a civil rights issue','Điện thoại thông minh của bạn là một vấn đề về quyền công dân','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_030.mp3',NULL,'00:00:12.499','00:07:40.100','tedtalks',0,0,30) */
 	('In the spring of 2016, a legal battle between Apple and the Federal Bureau of Investigation captured the world\'s attention','Vào mùa xuân năm 2016, Một cuộc chiến pháp lí giữa Apple và cục Điều tra Liên bang đã thu hút sự chú ý của thế giới','00:00:12.499','00:00:21.152','tedtalks-30'),
 	('Apple has built security features into its mobile products which protect data on its devices from everyone but the owner','Apple đã xây dựng một tính năng bảo mật vào sản phẩm điện thoại của họ để bảo vệ dữ liệu trong thiết bị khỏi tầm tay của bất cứ ai trừ người sở hữu nó','00:00:21.633','00:00:28.829','tedtalks-30'),
 	('That means that criminals, hackers and yes, even governments are all locked out','Điều đó có nghĩa là tội phạm, hacker và vâng, kể cả chính phủ đều bị khóa ngoài','00:00:28.853','00:00:34.842','tedtalks-30'),
@@ -2088,7 +2088,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'tedtalks-31','How to build a freelancer career that works for you?','Làm sao để xây dựng một sự nghiệp freelance hiệu quả cho riêng bạn?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_031.mp3',NULL,'00:00:00.000','00:03:53.271','tedtalks','NO',31) */
+	/* (UUID(),'tedtalks-31','How to build a freelancer career that works for you?','Làm sao để xây dựng một sự nghiệp freelance hiệu quả cho riêng bạn?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_031.mp3',NULL,'00:00:00.000','00:03:53.271','tedtalks',0,0,31) */
 	('What does job security really mean?','Một công việc ổn định thật sự là gì?','00:00:00.000','00:00:01.789','tedtalks-31'),
 	('It means financial stability','Đó là sự ổn định tài chính','00:00:01.831','00:00:03.249','tedtalks-31'),
 	('Waking up and knowing "I can provide for myself and my family"','Thức dậy và biết rằng "Tôi có thể trợ cấp cho bản thân và gia đình mình"','00:00:03.249','00:00:06.711','tedtalks-31'),
@@ -2141,7 +2141,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('But by building your freelance capabilities, you\'ll have the power to decide not only who you want to work with, but when and in what capacity','Nhưng với việc xây dựng kỹ năng làm freelance, bạn sẽ không chỉ có quyền quyết định xem ai làm việc cùng mình, mà còn là khi nào và với vai trò gì','00:03:39.090','00:03:46.931','tedtalks-31'),
 	('And when downturns come, you\'ll be better able to withstand them with a network of people who are excited to work with you','Và khi suy thoái tới, bạn sẽ có thể vững vàng hơn trước chúng với một mạng lưới gồm những người luôn hào hứng mời bạn làm việc','00:03:46.931','00:03:53.271','tedtalks-31'),
 
-	/* (UUID(),'tedtalks-32','4 tips to future-proof your career','4 gợi ý để đảm bảo tương lai sự nghiệp của bạn','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_032.mp3',NULL,'00:00:00.079','00:04:17.420','tedtalks','NO',32) */
+	/* (UUID(),'tedtalks-32','4 tips to future-proof your career','4 gợi ý để đảm bảo tương lai sự nghiệp của bạn','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_032.mp3',NULL,'00:00:00.079','00:04:17.420','tedtalks',0,0,32) */
 	('How many jobs have you had?','Bạn đã từng có bao nhiêu công việc?','00:00:00.079','00:00:01.956','tedtalks-32'),
 	('How many do you expect to have over the course of your career?','Bạn mong đợi có bao nhiêu trong suốt sự nghiệp?','00:00:01.998','00:00:05.126','tedtalks-32'),
 	('Well, the scary thing is that number has historically been around 12','Thực tế, điều đáng sợ nhất là con số được lịch sử ghi nhận là khoảng 12','00:00:05.168','00:00:08.921','tedtalks-32'),
@@ -2189,7 +2189,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('You can show employers new ways to think about why they should hire you','Bạn có thể cho người chủ thấy những phương cách mới để nghĩ tại sao họ nên thuê bạn','00:04:03.990','00:04:08.244','tedtalks-32'),
 	('And when you do, all of those lane changes ahead will feel a whole lot less intimidating and maybe even a little exciting','Và khi bạn làm, tất cả những thay đổi phía trước đó sẽ trở nên ít đáng sợ hơn rất nhiều, và có thể thậm chí có đôi chút thú vị','00:04:08.244','00:04:17.420','tedtalks-32'),
 
-	/* (UUID(),'tedtalks-33','How do hard drives work?','Ổ cứng làm việc như thế nào?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_033.mp3',NULL,'00:00:07.246','00:04:55.829','tedtalks','NO',33) */
+	/* (UUID(),'tedtalks-33','How do hard drives work?','Ổ cứng làm việc như thế nào?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_033.mp3',NULL,'00:00:07.246','00:04:55.829','tedtalks',0,0,33) */
 	('Imagine an airplane flying one millimeter above the ground and circling the Earth once every 25 seconds while counting every blade of grass','Tưởng tượng rằng một máy bay bay cách mặt đất 1 milimet và vòng quanh Trái Đất mỗi 25 giây và đếm từng ngọn cỏ','00:00:07.246','00:00:17.329','tedtalks-33'),
 	('Shrink all that down so that it fits in the palm of your hand, and you\'d have something equivalent to a modern hard drive, an object that can likely hold more information than your local library','Co tất cả chúng lại cho vừa lòng bàn tay bạn, và bạn sẽ có một thứ tương đương với một ổ cứng hiện đại, cái mà có thể lưu giữ nhiều thông tin hơn cả một thư viện địa phương','00:00:17.329','00:00:28.454','tedtalks-33'),
 	('So how does it store so much information in such a small space?','Vậy làm thế nào mà lưu trữ rất nhiều thông tin trong một không gian nhỏ như thế?','00:00:28.454','00:00:32.912','tedtalks-33'),
@@ -2219,7 +2219,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And while those drives are currently in the prototype stage, scientists already have the next potential trick up their sleeves: bit-patterned media, where bit locations are arranged in separate, nano-sized structures, potentially allowing for areal densities of twenty terabits per square inch or more','Và trong khi những ổ cứng này hiện tại đang trong thời kỳ nguyên mẫu, các nhà khoa học cũng đã có kế hoạch sử dụng chúng: môi trường dạng bit, ở đó vị trí các bit được sắp xếp riêng biệt, cấu trúc kích thước nano, có khả năng cho phép mật độ diện tích lên tới 20 Terabit trên inch vuông hoặc hơn nữa','00:04:20.538','00:04:41.788','tedtalks-33'),
 	('So it\'s thanks to the combined efforts of generations of engineers, material scientists, and quantum physicists that this tool of incredible power and precision can spin in the palm of your hand','Vậy nên nhờ vào việc kết hợp những nỗ lực của nhiều thế hệ kỹ sư, các nhà khoa học vật liệu, và các nhà vật lý lượng tử mà công cụ của sức mạnh kỳ diệu và chính xác này có thể nằm gọn trong lòng bàn tay bạn','00:04:41.788','00:04:55.829','tedtalks-33'),
 
-	/* (UUID(),'tedtalks-34','This is what happens when you hit the gas','Điều gì sẽ xảy ra khi bạn đạp ga tăng tốc?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_034.mp3',NULL,'00:00:07.420','00:05:42.546','tedtalks','NO',34) */
+	/* (UUID(),'tedtalks-34','This is what happens when you hit the gas','Điều gì sẽ xảy ra khi bạn đạp ga tăng tốc?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_034.mp3',NULL,'00:00:07.420','00:05:42.546','tedtalks',0,0,34) */
 	('In 2015, two men drove a Volkswagen across the continental United States on just over 100 gallons of fuel','Năm 2015, hai người đàn ông đã lái chiếc Volkswagen đi khắp lục địa Mỹ chỉ với hơn 378 lít nhiên liệu','00:00:07.420','00:00:16.220','tedtalks-34'),
 	('Their 81-mile-per-gallon performance doubled the car\'s estimated fuel rating, and set the record for the lowest fuel consumption ride of a diesel car','Hiệu suất 35km/lít của họ đã tăng gấp đôi mức nhiên liệu ước tính của chiếc xe và đạt kỷ lục mức tiêu thụ nhiên liệu thấp nhất đối với xe chạy động cơ diesel','00:00:16.888','00:00:27.315','tedtalks-34'),
 	('The duo call themselves hypermilers and are experts in techniques that maximize a car\'s fuel efficiency, such as the pulse-and-glide','Cả hai tự gọi bản thân là "Siêu tiết kiệm" và họ là chuyên gia tối đa hóa hiệu quả nhiên liệu của ô tô, chẳng hạn như tăng và nhả ga','00:00:27.899','00:00:38.618','tedtalks-34'),
@@ -2264,7 +2264,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('EVs require regular charging of their batteries, meaning their emission profile is only as clean as the electric utility they plug into','Xe điện cần phải sạc pin thường xuyên, nghĩa là mức độ phát thải khí của chúng sẽ dựa vào nguồn điện mà xe điện kết nối','00:05:22.068','00:05:30.701','tedtalks-34'),
 	('So as global grids continue to shift towards renewable sources, EVs are also becoming greener, making them an even more attractive, hyper-efficient option','Vì vậy khi mạng lưới điện toàn cầu dần chuyển sang nguồn tài nguyên tái tạo, xe điện cũng dần trở nên thân thiện với môi trường hơn, giúp chúng trở thành một lựa chọn vừa hấp dẫn mà còn hiệu quả hơn','00:05:30.951','00:05:42.546','tedtalks-34'),
 
-	/* (UUID(),'tedtalks-35','How the water you flush becomes the water you drink?','Làm cách nào để biến nước thải thành nước uống?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_035.mp3',NULL,'00:00:07.003','00:05:00.838','tedtalks','NO',35) */
+	/* (UUID(),'tedtalks-35','How the water you flush becomes the water you drink?','Làm cách nào để biến nước thải thành nước uống?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_035.mp3',NULL,'00:00:07.003','00:05:00.838','tedtalks',0,0,35) */
 	('In 2003, Singapore\'s national water agency launched an unprecedented program','Năm 2003, công ty cấp nước quốc gia của Singapore đã ra mắt một chương trình chưa từng có từ trước đến nay','00:00:07.003','00:00:12.717','tedtalks-35'),
 	('Using two new facilities, they planned to provide more than 50% of their nation\'s water supply by recycling wastewater','Với việc sử dụng hai cơ sở mới, họ đã lên kế hoạch cấp hơn 50% lượng cung nước của quốc gia bằng việc tái chế nước thải','00:00:12.800','00:00:20.558','tedtalks-35'),
 	('And yes, we do mean that wastewater','Và vâng, ý tôi là nước thải thật sự luôn đấy','00:00:20.808','00:00:23.603','tedtalks-35'),
@@ -2304,7 +2304,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'tedtalks-36','How to get better at video games according to babies?','Bí quyết chơi game giỏi hơn của trẻ sơ sinh','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_036.mp3',NULL,'00:00:08.871','00:04:51.788','tedtalks','NO',36) */
+	/* (UUID(),'tedtalks-36','How to get better at video games according to babies?','Bí quyết chơi game giỏi hơn của trẻ sơ sinh','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_036.mp3',NULL,'00:00:08.871','00:04:51.788','tedtalks',0,0,36) */
 	('In 2013, a group of researchers at DeepMind in London had set their sights on a grand challenge','Năm 2013, một nhóm các nhà nghiên cứu của DeepMind tại Luân Đôn quyết định đối diện một thử thách lớn','00:00:08.871','00:00:15.829','tedtalks-36'),
 	('They wanted to create an AI system that could beat, not just a single Atari game, but every Atari game','Họ muốn tạo ra một hệ thống trí tuệ nhân tạo (AI) có thể thắng không chỉ một mà mọi tựa game của Atari','00:00:15.996','00:00:24.121','tedtalks-36'),
 	('They developed a system they called Deep Q Networks, or DQN, and less than two years later, it was superhuman','Họ phát triển một hệ thống tên Deep Q Networks, hay DQN, và chưa đầy hai năm sau, nó đã vượt qua con người','00:00:24.663','00:00:33.496','tedtalks-36'),
@@ -2347,7 +2347,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('AI researchers stuck on a practical problem, like how to get DQN to beat a difficult game, are turning increasingly to experts in human intelligence for ideas','Khi các nhà nghiên cứu AI mức kẹt một vấn đề thực tế – như phải làm sao để giúp DQN thắng một trò chơi khó – họ ngày càng tham khảo nhiều ý tưởng của các chuyên gia về trí tuệ con người','00:04:27.079','00:04:38.538','tedtalks-36'),
 	('At the same time, AI is giving us new insights into the ways we get stuck and unstuck: into boredom, depression, and addiction, along with curiosity, creativity, and play','Đồng thời, AI đang mang đến cho chúng ta những hiểu biết mới về cách chúng ta mắc kẹt và thoát khỏi tình trạng bế tắc: buồn chán, trầm cảm và nghiện ngập, cùng với sự tò mò, sáng tạo và vui chơi.','00:04:38.788','00:04:51.788','tedtalks-36'),
 
-	/* (UUID(),'tedtalks-37','How does artificial intelligence learn?','Trí tuệ nhân tạo học như thế nào?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_037.mp3',NULL,'00:00:09.829','00:04:34.288','tedtalks','NO',37) */
+	/* (UUID(),'tedtalks-37','How does artificial intelligence learn?','Trí tuệ nhân tạo học như thế nào?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_037.mp3',NULL,'00:00:09.829','00:04:34.288','tedtalks',0,0,37) */
 	('Today, artificial intelligence helps doctors diagnose patients, pilots fly commercial aircraft, and city planners predict traffic','Ngày nay, trí tuệ nhân tạo đang giúp đỡ các bác sĩ trong việc chẩn đoán bệnh cho bệnh nhân, giúp các phi công thực hiện các chuyến bay thương mại, và giúp các nhà quy hoạch thành phố dự đoán giao thông','00:00:09.829','00:00:20.038','tedtalks-37'),
 	('But no matter what these AIs are doing, the computer scientists who designed them likely don\'t know exactly how they\'re doing it','Nhưng cho dù những AI này đang làm gì, các nhà khoa học máy tính đã thiết kế chúng có thể không biết chính xác cách họ đang làm','00:00:20.038','00:00:27.038','tedtalks-37'),
 	('This is because artificial intelligence is often self-taught, working off a simple set of instructions to create a unique array of rules and strategies','Điều này là do tính tự học của trí tuệ nhân tạo, khi chúng thực hiện một tập hợp các hướng dẫn đơn giản để tạo một chuỗi độc nhất bao gồm các quy tắc và chiến lược','00:00:27.038','00:00:36.871','tedtalks-37'),
@@ -2386,7 +2386,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('But as AI becomes more involved in our everyday lives, these enigmatic decisions have increasingly large impacts on our work, health, and safety','Nhưng khi AI tham gia nhiều hơn vào cuộc sống của chúng ta, những quyết định bí ẩn này có tác động ngày càng lớn tới công việc, sức khỏe và sự an toàn của chúng ta','00:04:15.538','00:04:24.121','tedtalks-37'),
 	('So as machines continue learning to investigate, negotiate and communicate, we must also consider how to teach them to teach each other to operate ethically','Vì vậy, khi máy móc tiếp tục học để điều tra, thương lượng và giao tiếp, chúng ta cũng phải xem xét cách dạy chúng để chúng dạy nhau hoạt động có đạo đức','00:04:24.121','00:04:34.288','tedtalks-37'),
 
-	/* (UUID(),'tedtalks-38','Can you predict human behavior?','Bạn có thể dự đoán hành vi của con người không?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_038.mp3',NULL,'00:00:06.646','00:04:37.813','tedtalks','NO',38) */
+	/* (UUID(),'tedtalks-38','Can you predict human behavior?','Bạn có thể dự đoán hành vi của con người không?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_038.mp3',NULL,'00:00:06.646','00:04:37.813','tedtalks',0,0,38) */
 	('A few months ago we posed a challenge to our community','Vài tháng trước, chúng tôi đăng tải một thử thách dành cho cộng đồng','00:00:06.646','00:00:10.302','tedtalks-38'),
 	('We asked everyone: given a range of integers from 0 to 100, guess the whole number closest to 2/3 of the average of all numbers guessed','Chúng tôi yêu cầu mọi người: trong khoảng từ 0 đến 100, hãy dự đoán số có giá trị gần nhất với 2/3','00:00:10.302','00:00:22.056','tedtalks-38'),
 	('So if the average of all guesses is 60, the correct guess will be 40','Vậy, nếu trung bình cộng của các số được dự đoán là 60, thì số lần đoán chính xác sẽ là 40','00:00:22.056','00:00:26.776','tedtalks-38'),
@@ -2427,7 +2427,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('For instance, what would happen if people played the 2/3 game after understanding the difference between the most logical approach and the most common?','Chẳng hạn như điều gì sẽ xảy ra nếu người chơi trò 2/3 này sau khi hiểu sự khác biệt giữa cách tiếp cận hợp lý nhất và cách phổ biến nhất?','00:04:20.345','00:04:29.850','tedtalks-38'),
 	('Submit your own guess at what 2/3 of the new average will be by using the form below, and we\'ll find out','Hãy gửi dự đoán của bạn về 2/3 trung bình cộng mới sử dụng mẫu dưới đây, và ta sẽ tìm ra câu trả lời','00:04:29.850','00:04:37.813','tedtalks-38'),
 
-	/* (UUID(),'tedtalks-39','The hidden network that makes the internet possible','Mạng lưới ngầm giúp cho internet hoạt động','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_039.mp3',NULL,'00:00:07.016','00:05:02.882','tedtalks','NO',39) */
+	/* (UUID(),'tedtalks-39','The hidden network that makes the internet possible','Mạng lưới ngầm giúp cho internet hoạt động','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_039.mp3',NULL,'00:00:07.016','00:05:02.882','tedtalks',0,0,39) */
 	('In 2012, a team of Japanese and Danish researchers set a world record, transmitting 1 petabit of data - that\'s 10,000 hours of high-def video - over a fifty-kilometer cable, in a second','Vào năm 2012, một nhóm các nhà nghiên cứu Nhật Bản và Đan Mạch đã lập kỷ lục thế giới, truyền một petabit dữ liệu, tương đương 10,000 giờ HD video (video có độ phân giải cao) - chỉ trong một giây qua đoạn cáp dài 50 ki-lô-mét','00:00:07.016','00:00:22.526','tedtalks-39'),
 	('This wasn\'t just any cable','Không phải cáp thường','00:00:22.526','00:00:24.426','tedtalks-39'),
 	('It was a souped-up version of fiber optics - the hidden network that links our planet and makes the internet possible','Họ sử dụng một loại cáp quang đặc biệt, một mạng lưới ngầm kết nối toàn thế giới giúp internet hoạt động','00:00:24.426','00:00:32.235','tedtalks-39'),
@@ -2465,7 +2465,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('For all of human history, light has gifted us with sight and heat, serving as a steady companion while we explored and settled the physical world','Xuyên suốt lịch sử nhân loại, ánh sáng đã ban tặng cho ta tầm nhìn và nhiệt lượng, là người bạn trung thành trong quá trình khám phá và hiểu biết thế giới','00:04:39.429','00:04:49.183','tedtalks-39'),
 	('Now, we\'ve saddled light with information and redirected it to run along a fiber optic superhighway - with many different integrated photonic exits - to build an even more expansive, virtual world','Hiện nay, ta dùng ánh sáng để mã hóa thông tin và điều hướng nó chạy dọc theo dây cáp quang siêu tốc với nhiều ngõ ra quang tử tích hợp để xây dựng thế giới ảo ngày một rộng lớn','00:04:49.183','00:05:02.882','tedtalks-39'),
 
-	/* (UUID(),'tedtalks-40','How to manage your time more effectively?','Làm thế nào để quản lý thời gian hiệu quả hơn?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_040.mp3',NULL,'00:00:13.962','00:04:44.644','tedtalks','NO',40) */
+	/* (UUID(),'tedtalks-40','How to manage your time more effectively?','Làm thế nào để quản lý thời gian hiệu quả hơn?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_040.mp3',NULL,'00:00:13.962','00:04:44.644','tedtalks',0,0,40) */
 	('In the summer of 1997, NASA\'s Pathfinder spacecraft landed on the surface of Mars, and began transmitting incredible, iconic images back to Earth','Mùa hè năm 1997, tàu vũ trụ Pathfinder của NASA hạ cánh trên bề mặt sao Hỏa, và bắt đầu truyền đi những hình ảnh đầy ấn tượng về Trái Đất','00:00:13.962','00:00:25.241','tedtalks-40'),
 	('But several days in, something went terribly wrong','Nhưng sau vài ngày, con tàu gặp phải một sự cố nghiêm trọng','00:00:25.241','00:00:28.480','tedtalks-40'),
 	('The transmissions stopped','Việc truyền tín hiệu bị ngừng lại','00:00:28.480','00:00:30.662','tedtalks-40'),
@@ -2518,7 +2518,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'tedtalks-41-01','Think like a coder - The prison break','Hãy suy nghĩ như một lập trình viên - Vượt ngục','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_041_01.mp3',NULL,'00:00:29.937','00:06:25.455','tedtalks','NO',41) */
+	/* (UUID(),'tedtalks-41-01','Think like a coder - The prison break','Hãy suy nghĩ như một lập trình viên - Vượt ngục','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_041_01.mp3',NULL,'00:00:29.937','00:06:25.455','tedtalks',0,0,41) */
 	('Upon emerging from stasis, Ethic is the unfortunate recipient of three surprises','Sau khi thoát khỏi tình trạng bất động (trạng thái ngưng trệ), Ethic không may nhận được ba điều bất ngờ','00:00:29.937','00:00:36.900','tedtalks-41-01'),
 	('The first: a prison cell','Đầu tiên: là một phòng giam','00:00:37.377','00:00:40.000','tedtalks-41-01'),
 	('The second: complete amnesia','Thứ hai: là hoàn toàn mất trí nhớ','00:00:40.339','00:00:43.100','tedtalks-41-01'),
@@ -2573,7 +2573,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Only then can Ethic return to the world machine - that giant crystal - to set things right','Chỉ khi đó Ethic mới có thể trở về cỗ máy thế giới - để đưa thế giới trở lại như xưa','00:06:01.623','00:06:07.471','tedtalks-41-01'),
 	('Ethic may have escaped the prison... but what has she gotten herself into?','Ethic có thể đã vượt ngục... nhưng tại sao cô ấy lại tự đưa mình vào trong nhà tù đó?','00:06:19.685','00:06:25.455','tedtalks-41-01'),
 
-	/* (UUID(),'tedtalks-41-02','Think like a coder - The resistance','Hãy suy nghĩ như một lập trình viên - Kháng cự','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_041_02.mp3',NULL,'00:00:22.038','00:05:51.129','tedtalks','NO',41) */
+	/* (UUID(),'tedtalks-41-02','Think like a coder - The resistance','Hãy suy nghĩ như một lập trình viên - Kháng cự','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_041_02.mp3',NULL,'00:00:22.038','00:05:51.129','tedtalks',0,0,41) */
 	('After breaking Ethic out of prison, Hedge flies them both towards a frontier settlement in the shadow of the Bradbarrier, the great wall that encircles the nation','Sau khi cứu Ethic ra khỏi nhà tù, Hedge đưa cả hai tới khu định cư gần biên giới nằm dưới bóng của Bradbarrier, một bức tường lớn bao quanh đất nước','00:00:22.038','00:00:34.641','tedtalks-41-02'),
 	('All the settlers there will soon gather for the monthly feeding','Tất cả cư dân ở đây sẽ sớm tụ họp vào một ngày mỗi tháng để trao đổi thức ăn','00:00:34.641','00:00:38.973','tedtalks-41-02'),
 	('The people of the wall spend their days gathering up works of art and literature, from all across the land','Mọi người ở đây bỏ ra nhiều ngày để thu thập các tác phẩm nghệ thuật và văn học, từ khắp mọi nơi','00:00:38.973','00:00:45.788','tedtalks-41-02'),
@@ -2631,7 +2631,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Adila agrees to help them steal the first artifact - the node of power - but under one condition: that Ethic and Hedge jump-start the revolution by reprogramming the furnace-bots that terrorize the town','Adila đồng ý giúp họ đánh cắp hiện vật đầu tiên - Viên Đá Sức Mạnh - nhưng với điều kiện: đó là Ethic và Hedge phải gấp rút tiến hành cuộc cách mạng bằng việc lập trình lại những người máy tiêu hủy đang đe dọa thị trấn','00:05:33.785','00:05:48.349','tedtalks-41-02'),
 	('And right on cue, the robots descend','Và cũng đúng lúc đó, những người máy đã xuất hiện','00:05:48.349','00:05:51.129','tedtalks-41-02'),
 
-	/* (UUID(),'tedtalks-41-03','Think like a coder - The furnace bots','Hãy suy nghĩ như một lập trình viên - Người Máy Tiêu Hủy','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_041_03.mp3',NULL,'00:00:35.753','00:05:51.806','tedtalks','NO',41) */
+	/* (UUID(),'tedtalks-41-03','Think like a coder - The furnace bots','Hãy suy nghĩ như một lập trình viên - Người Máy Tiêu Hủy','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_041_03.mp3',NULL,'00:00:35.753','00:05:51.806','tedtalks',0,0,41) */
 	('Ethic and her robot Hedge agree to help the resistance leader, Adila, sabotage the art-incinerating furnace-bots','Ethic và Hedge đồng ý giúp đỡ người lãnh đạo phong trào nổi dậy, Adila, phá hủy người máy chuyên thiêu hủy các tác phẩm nghệ thuật','00:00:35.753','00:00:44.566','tedtalks-41-03'),
 	('In exchange, Adila promises to lead them to the first object of Ethic\'s quest, an artifact called the Node of Power','Đổi lại, Adila hứa sẽ đưa Ethic và Hedge tới chỗ hiện vật mà cả hai đang tìm kiếm, đó chính là Viên Đá Sức Mạnh','00:00:44.566','00:00:54.677','tedtalks-41-03'),
 	('Years ago, there was just one furnace-bot','Trước đây, chỉ có duy nhất một người máy tiêu hủy','00:00:54.677','00:00:57.728','tedtalks-41-03'),
@@ -2679,7 +2679,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She leads Ethic and Hedge to the location of the first artifact, the Node of Power','Cô ấy đưa Ethic và Hedge tới nơi cất giữ hiện vật đầu tiên, Viên Đá Sức Mạnh','00:05:38.500','00:05:44.980','tedtalks-41-03'),
 	('There, one thing is immediately clear: they\'ll have to steal it','Khi đến đó, một điều rõ ràng ngay lập tức: họ sẽ phải đánh cắp viên đá','00:05:44.980','00:05:51.806','tedtalks-41-03'),
 
-	/* (UUID(),'tedtalks-41-04','Think like a coder - The train heist','Hãy suy nghĩ như một lập trình viên - Đánh Cắp Viên Đá Sức Mạnh','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_041_04.mp3',NULL,'00:00:21.570','00:05:40.755','tedtalks','NO',41) */
+	/* (UUID(),'tedtalks-41-04','Think like a coder - The train heist','Hãy suy nghĩ như một lập trình viên - Đánh Cắp Viên Đá Sức Mạnh','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_041_04.mp3',NULL,'00:00:21.570','00:05:40.755','tedtalks',0,0,41) */
 	('Ethic, Hedge, and Adila, the leader of the revolution, plot out how they can steal an artifact called the Node of Power','Ethic cùng Hedge và Adila, người lãnh đạo của phong trào, lên kế hoạch chi tiết để đánh cắp Viên Đá Sức Mạnh','00:00:21.570','00:00:30.539','tedtalks-41-04'),
 	('It\'s being used to run a heavily fortified train that runs all around the country, providing supplies to settlements and facilities','Viên đá này được dùng để vận hành một đoàn tàu kiên cố chạy xung quanh đất nước, vận chuyển nguồn tiếp tế cho các khu dân cư và các phương tiện','00:00:30.539','00:00:39.826','tedtalks-41-04'),
 	('This armored behemoth undergoes a complex and unpredictable unloading procedure - a procedure which is displayed, in detail, on a screen within the engine car','Đoàn tàu khổng lồ này có thủ tục dỡ hàng phức tạp và không theo lộ trình nhất định - thông tin chi tiết sẽ hiển thị ở trên màn hình bên trong khoang máy','00:00:39.826','00:00:50.826','tedtalks-41-04'),
@@ -2732,7 +2732,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Luckily, the train is going there next, and has just enough reserve fuel for the trip','May thay, đó sẽ là điểm đến tiếp theo của con tàu, và nhiên liệu cũng vừa đủ cho chuyến đi','00:05:29.270','00:05:34.640','tedtalks-41-04'),
 	('Ethic and Hedge smuggle themselves aboard and find a hiding spot for the long journey ahead','Ethic và Hedge đã lén lút lên tàu và tìm một chỗ trốn ở trên toa cho hành trình dài phía trước','00:05:34.640','00:05:40.755','tedtalks-41-04'),
 
-	/* (UUID(),'tedtalks-41-05','Think like a coder - The artists','Hãy suy nghĩ như một lập trình viên - Những người họa sĩ','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_041_05.mp3',NULL,'00:00:22.840','00:06:22.887','tedtalks','NO',41) */
+	/* (UUID(),'tedtalks-41-05','Think like a coder - The artists','Hãy suy nghĩ như một lập trình viên - Những người họa sĩ','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_041_05.mp3',NULL,'00:00:22.840','00:06:22.887','tedtalks',0,0,41) */
 	('Dawn and the train are both breaking when Ethic and Hedge arrive in the woods','Bình minh ló rạng và chiếu sáng đoàn tàu khi Ethic và Hedge vừa tới được khu rừng','00:00:22.840','00:00:28.328','tedtalks-41-05'),
 	('The adventurers have recovered the first artifact - the Node of Power - and have come to the 198forest in search of the second','Họ đã lấy lại được hiện vật đầu tiên - Viên Đá Sức Mạnh - và đi tới khu rừng 198 để tìm kiếm hiện vật thứ hai','00:00:28.328','00:00:36.735','tedtalks-41-05'),
 	('Here they\'re welcomed by the director of the colony, Octavia','Tại đây họ được đón chào bởi người chỉ huy ở đó, Octavia','00:00:36.735','00:00:41.846','tedtalks-41-05'),
@@ -2799,7 +2799,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'tedtalks-41-06','Think like a coder - The chasm','Hãy suy nghĩ như một lập trình viên - Vực Thẳm','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_041_06.mp3',NULL,'00:00:21.937','00:06:22.000','tedtalks','NO',41) */
+	/* (UUID(),'tedtalks-41-06','Think like a coder - The chasm','Hãy suy nghĩ như một lập trình viên - Vực Thẳm','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_041_06.mp3',NULL,'00:00:21.937','00:06:22.000','tedtalks',0,0,41) */
 	('Ethic, Hedge, and Octavia stand on the edge of a bottomless ravine','Ethic, Hedge, và Octavia đứng trước bờ vực thẳm','00:00:21.937','00:00:26.612','tedtalks-41-06'),
 	('It\'s the only thing between them and the tower that houses the second of three powerful artifacts','Đó là thứ duy nhất ngăn cách họ tiến tới tòa tháp mà cất giấu hiện vật thứ hai trong số ba hiện vật','00:00:26.612','00:00:32.950','tedtalks-41-06'),
 	('They\'ve got a brief window of time to get across before the guards return','Họ chỉ có khoảng thời gian ít ỏi để vượt qua bên đó trước khi lũ người máy quay trở lại','00:00:32.950','00:00:37.930','tedtalks-41-06'),
@@ -2856,7 +2856,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Ethic and Hedge are safe','Ethic và Hedge đã may mắn thoát được','00:06:17.897','00:06:19.577','tedtalks-41-06'),
 	('But Octavia is not so lucky','Nhưng Octavia thì không được may mắn như vậy','00:06:19.577','00:06:22.000','tedtalks-41-06'),
 
-	/* (UUID(),'tedtalks-41-07','Think like a coder - The tower of epiphany','Hãy suy nghĩ như một lập trình viên - Tháp Epiphany','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_041_07.mp3',NULL,'00:00:31.587','00:07:55.631','tedtalks','NO',41) */
+	/* (UUID(),'tedtalks-41-07','Think like a coder - The tower of epiphany','Hãy suy nghĩ như một lập trình viên - Tháp Epiphany','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_041_07.mp3',NULL,'00:00:31.587','00:07:55.631','tedtalks',0,0,41) */
 	('Ethic and Hedge are on the ground floor of a massive tower','Ethic và Hedge đang đứng ở tầng một của tòa tháp','00:00:31.587','00:00:37.288','tedtalks-41-07'),
 	('Barriers of energy separate them from their quest\'s second goal: the Node of Creation','Những rào chắn năng lượng ngăn cách họ đến với mục tiêu thứ hai: Viên Đá Sáng Tạo','00:00:37.288','00:00:43.945','tedtalks-41-07'),
 	('To reach it, Ethic must use three energy streams to climb the tower','Để tới đó, Ethic buộc phải dùng ba nấc năng lượng để trèo lên ngọn tháp','00:00:52.667','00:00:57.409','tedtalks-41-07'),
@@ -2918,7 +2918,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She named her creation Hedge','Cô ấy đã đặt tên cho người máy đó là Hedge','00:07:42.329','00:07:44.743','tedtalks-41-07'),
 	('Without warning, the energy lift flickers, then fizzles out','Rồi đột ngột, bệ nâng nhấp nháy, và mọi thứ vụt tắt','00:07:51.801','00:07:55.631','tedtalks-41-07'),
 
-	/* (UUID(),'tedtalks-41-08','Think like a coder - The gauntlet','Hãy suy nghĩ như một lập trình viên - Mạng lưới','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_041_08.mp3',NULL,'00:00:21.734','00:07:43.821','tedtalks','NO',41) */
+	/* (UUID(),'tedtalks-41-08','Think like a coder - The gauntlet','Hãy suy nghĩ như một lập trình viên - Mạng lưới','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_041_08.mp3',NULL,'00:00:21.734','00:07:43.821','tedtalks',0,0,41) */
 	('Their fall from the tower sends Ethic and Hedge spinning into the rapids of a river of pure energy','Cú ngã từ ngọn tháp đưa Ethic và Hedge cuốn theo con thác nằm trên một con sông năng lượng','00:00:21.734','00:00:29.024','tedtalks-41-08'),
 	('This torrent flows from the Bradbarrier all the way to Huxenborg','Dòng năng lượng chảy xiết này dẫn từ bức tường Bradbarrier về tới tận Huxenborg','00:00:30.944','00:00:36.881','tedtalks-41-08'),
 	('There an entire city\'s worth of factories build the robots and house the Node of Memory, the last of the three powerful artifacts Ethic needs to collect','Đó là cả một thành phố với những nhà máy lắp ráp người máy đáng giá và cũng là nơi cất giấu Viên Đá Ký Ức, mảnh ghép cuối cùng của ba hiện vật quyền năng mà Ethic cần phải cóp nhặt','00:00:36.881','00:00:47.433','tedtalks-41-08'),
@@ -2974,7 +2974,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Finally, Hedge\'s radio crackles to life with a series of directions','Cuối cùng, tín hiệu radio của Hedge vang lên với một loạt hướng','00:07:31.473','00:07:36.251','tedtalks-41-08'),
 	('The three dive onto the conveyor and flee for their lives, with a squadron of enforcer bots in hot pursuit','Cả ba nhảy xuống băng chuyển và chạy bán mạng, cùng với cả một đội quân đang truy đuổi gắt gao','00:07:36.251','00:07:43.821','tedtalks-41-08'),
 
-	/* (UUID(),'tedtalks-41-09','Think like a coder - The factory','Hãy suy nghĩ như một lập trình viên - Nhà Máy','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_041_09.mp3',NULL,'00:00:32.447','00:00:44.506','tedtalks','NO',41) */
+	/* (UUID(),'tedtalks-41-09','Think like a coder - The factory','Hãy suy nghĩ như một lập trình viên - Nhà Máy','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_041_09.mp3',NULL,'00:00:32.447','00:00:44.506','tedtalks',0,0,41) */
 	('After a harrowing chase, Ethic, Hedge, and their new ally Lemma find themselves in a cavernous control room','Sau một cuộc rượt đuổi đầy đau thương, Ethic, Hedge, và đồng minh mới Lemma đang thấy mình trong một căn phòng điều khiển rất lớn','00:00:32.447','00:00:44.506','tedtalks-41-09'),
 	('Here the last artifact - the Node of Memory - is suspended within a force field and powering a supercomputer','Đây là hiện vật cuối - Viên Đá Ký Ức - bị tạm dừng bên trong một tia trường lực và cung cấp năng lượng cho một siêu máy tính','00:00:44.506','00:00:52.664','tedtalks-41-09'),
 	('Ethic is about to deactivate the force field when Lemma stops her','Khi Ethic sắp vô hiệu hóa tia trường lực thì Lemma đã ngăn cô ấy','00:00:52.664','00:00:57.473','tedtalks-41-09'),
@@ -3051,7 +3051,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('But if Hedge could find the right human and manipulate her with the promise of a heroic quest... well that would be a different story','Nhưng nếu Hedge có thể tìm đúng người và thao túng họ với lời hứa hẹn về một cuộc tìm kiếm vẻ vang... chà đó sẽ là một câu chuyện khác','00:09:15.419','00:09:24.479','tedtalks-41-09'),
 	('A very different story','Một câu chuyện hoàn toàn khác','00:09:24.479','00:09:27.039','tedtalks-41-09'),
 
-	/* (UUID(),'tedtalks-41-10','Think like a coder - The world machine','Hãy suy nghĩ như một lập trình viên - Thế giới máy móc','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_041_09.mp3',NULL,'00:00:22.146','00:00:25.006','tedtalks','NO',41) */
+	/* (UUID(),'tedtalks-41-10','Think like a coder - The world machine','Hãy suy nghĩ như một lập trình viên - Thế giới máy móc','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_041_09.mp3',NULL,'00:00:22.146','00:00:25.006','tedtalks',0,0,41) */
 	('As Ethic falls, she remembers','Trong lúc rơi xuống, kí ức chợt hiện về','00:00:22.146','00:00:25.006','tedtalks-41-10'),
 	('She remembers the world before they unearthed the crystal','Ethic đã nhớ lại thế giới trước khi người ta khai quật khối tinh thể','00:00:25.006','00:00:29.006','tedtalks-41-10'),
 	('She remembers the glee she felt when she built her first robot','Cô nhớ lại niềm hân hoan cô đã từng cảm nhận khi cô tạo ra người máy đầu tiên','00:00:29.006','00:00:32.500','tedtalks-41-10'),
@@ -3131,7 +3131,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'tedtalks-42','Forget shopping. Soon you\'ll download your new clothes','Quên chuyện mua sắm đi! Chẳng mấy chốc bạn sẽ tải được quần áo mới về','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_042.mp3',NULL,'00:00:13.157','00:06:13.429','tedtalks','NO',42) */
+	/* (UUID(),'tedtalks-42','Forget shopping. Soon you\'ll download your new clothes','Quên chuyện mua sắm đi! Chẳng mấy chốc bạn sẽ tải được quần áo mới về','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_042.mp3',NULL,'00:00:13.157','00:06:13.429','tedtalks',0,0,42) */
 	('In the past few months, I\'ve been traveling for weeks at a time with only one suitcase of clothes','Trong vài tháng vừa qua, tôi đã có những chuyến đi kéo dài nhiều tuần liền chỉ với một va li quần áo','00:00:13.157','00:00:18.563','tedtalks-42'),
 	('One day, I was invited to an important event, and I wanted to wear something special and new for it','Một ngày, tôi được mời đến một sự kiện quan trọng và tôi muốn mặc bộ nào đó mới và đặc biệt cho dịp này','00:00:18.892','00:00:23.749','tedtalks-42'),
 	('So I looked through my suitcase and I couldn\'t find anything to wear','Nên tôi bới tung va li lên nhưng chẳng tìm được bộ nào thích hợp cả','00:00:24.140','00:00:27.553','tedtalks-42'),
@@ -3196,7 +3196,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And I wonder what our world will look like when our clothes will be digital, just like this skirt is','Và tôi tự hỏi thế giới của chúng ta sẽ nhìn như thế nào khi quần áo của ta ở dạng số, giống như chiếc váy này vậy','00:06:05.300','00:06:11.550','tedtalks-42'),
 	('Thank you so much','Xin cảm ơn rất nhiều','00:06:12.056','00:06:13.429','tedtalks-42'),
 
-	/* (UUID(),'tedtalks-43','How pig parts make the world turn?','Bộ phận của con lợn khiến thế giới quay cuồng như thế nào?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_043.mp3',NULL,'00:00:16.260','00:08:45.260','tedtalks','NO',43) */
+	/* (UUID(),'tedtalks-43','How pig parts make the world turn?','Bộ phận của con lợn khiến thế giới quay cuồng như thế nào?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_043.mp3',NULL,'00:00:16.260','00:08:45.260','tedtalks',0,0,43) */
 	('Hello, I would like to start my talk with actually two questions, and the first one is: How many people here actually eat pig meat?','Xin chào, Tôi muốn bắt đầu buổi nói chuyện này với hai câu hỏi, và câu đầu là: Có bao nhiêu người ở đây ăn thịt lợn nào?','00:00:16.260','00:00:23.260','tedtalks-43'),
 	('Please raise your hand','Xin hãy giơ tay lên','00:00:23.260','00:00:25.260','tedtalks-43'),
 	('Oh, that\'s a lot','ồ, nhiều thật đấy','00:00:25.260','00:00:27.260','tedtalks-43'),
@@ -3275,7 +3275,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And I think that, in order to take better care of what\'s behind our products, so, the livestock, the crops, the plants, the non-renewable materials, but also the people that produce these products, the first step would actually be to know that they are there','Và tôi nghĩ rằng, để chăm chút tốt hơn những gì phía sau các sản phẩm của chúng ta, vậy nên vật nuôi, cây trồng, cây cối, vật liệu không tái phục hồi được, nhưng còn cả những con người sản xuất ra những sản phẩm ấy nữa, bước đầu tiên, thật ra là, phải biết là có họ ở đó','00:08:27.260','00:08:43.260','tedtalks-43'),
 	('Thank you very much','Xin cảm ơn các bạn rất nhiều','00:08:43.260','00:08:45.260','tedtalks-43'),
 
-	/* (UUID(),'tedtalks-44','How AI could empower any business?','AI có thể hỗ trợ doanh nghiệp như thế nào?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_044.mp3',NULL,'00:00:04.376','00:11:11.209','tedtalks','NO',44) */
+	/* (UUID(),'tedtalks-44','How AI could empower any business?','AI có thể hỗ trợ doanh nghiệp như thế nào?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_044.mp3',NULL,'00:00:04.376','00:11:11.209','tedtalks',0,0,44) */
 	('When I think about the rise of AI, I\'m reminded by the rise of literacy','Khi tôi nghĩ đến sự trỗi dậy của trí tuệ nhân tạo, tôi được nhắc nhở bởi sự nổi lên của khả năng đọc - viết','00:00:04.376','00:00:10.674','tedtalks-44'),
 	('A few hundred years ago, many people in society thought that maybe not everyone needed to be able to read and write','Vài trăm năm trước, nhiều người trong xã hội nghĩ rằng có lẽ không phải ai cũng cần biết đọc và viết','00:00:10.715','00:00:17.472','tedtalks-44'),
 	('Back then, many people were tending fields or herding sheep, so maybe there was less need for written communication','Khi đó, nhiều người đang chăm sóc ruộng hoặc chăn cừu, nên có lẽ ít có nhu cầu giao tiếp bằng cách viết','00:00:17.514','00:00:23.103','tedtalks-44'),
@@ -3357,7 +3357,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('In the coming era for AI, we\'ll empower everyone to build AI systems for themselves, and I think that will be incredibly exciting future','Trong kỷ nguyên tiếp theo của AI, chúng ta sẽ cho mọi người khả năng xây dựng những hệ thống AI cho riêng họ, và tôi nghĩ rằng điều đó sẽ là một tương lai vô cùng thú vị','00:11:01.199','00:11:09.999','tedtalks-44'),
 	('Thank you very much','Xin cảm ơn','00:11:10.041','00:11:11.209','tedtalks-44'),
 
-	/* (UUID(),'tedtalks-45','What you need to know about carbon removal?','Những điều cần biết về việc loại bỏ carbon?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_045.mp3',NULL,'00:00:08.436','00:12:31.716','tedtalks','NO',45) */
+	/* (UUID(),'tedtalks-45','What you need to know about carbon removal?','Những điều cần biết về việc loại bỏ carbon?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_045.mp3',NULL,'00:00:08.436','00:12:31.716','tedtalks',0,0,45) */
 	('So I\'m going to talk to you about carbon removals, and I\'m going to start with this','Được rồi tôi sẽ nói về việc loại bỏ carbon, và sẽ bắt đầu bằng bức hình này','00:00:08.436','00:00:13.556','tedtalks-45'),
 	('This is a woolly pig','Đây là một chú lợn lông xoăn','00:00:14.796','00:00:17.156','tedtalks-45'),
 	('She\'s gorgeous, obviously, and she\'s also one part in a whole new set of approaches for dealing with climate change','Nó có bộ lông óng mượt, và rõ ràng, nó là một phần trong toàn bộ kĩ thuật tiếp cận mới cho việc xử lý biến đổi khí hậu','00:00:17.396','00:00:26.196','tedtalks-45'),
@@ -3482,7 +3482,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('I felt hope','Tôi cảm nhận được niềm tin','00:12:27.076','00:12:29.356','tedtalks-45'),
 	('Thank you','Cảm ơn mọi người','00:12:30.716','00:12:31.716','tedtalks-45'),
 
-	/* (UUID(),'tedtalks-46','Why a sausage can do what your gloves cannot?','Vì sao xúc xích kích hoạt được điện thoại còn găng tay lại không?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_046.mp3',NULL,'00:00:07.628','00:04:46.741','tedtalks','NO',46) */
+	/* (UUID(),'tedtalks-46','Why a sausage can do what your gloves cannot?','Vì sao xúc xích kích hoạt được điện thoại còn găng tay lại không?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_046.mp3',NULL,'00:00:07.628','00:04:46.741','tedtalks',0,0,46) */
 	('In 2010, South Korea experienced a particularly cold winter','Vào năm 2010, Hàn Quốc trải qua một mùa đông khắc nghiệt','00:00:07.628','00:00:12.675','tedtalks-46'),
 	('People couldn\'t activate their smartphones while wearing gloves, so they began wielding snack sausages - causing one company to see a 40% rise in sausage sales','Người ta không thể kích hoạt điện thoại khi mang găng tay, nên dùng xúc xích ăn liền để kích hoạt - khiến doanh số xúc xích của một công ty tăng đến 40%','00:00:12.884','00:00:24.479','tedtalks-46'),
 	('So, what could sausages do that gloves couldn\'t?','Vì sao xúc xích kích hoạt được điện thoại còn găng tay lại không?','00:00:24.604','00:00:28.191','tedtalks-46'),
@@ -3531,7 +3531,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'tedtalks-47','The material that could change the world for a third time','Vật liệu có thể làm thay đổi thế giới... lần thứ ba','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_047.mp3',NULL,'00:00:07.829','00:05:05.621','tedtalks','NO',47) */
+	/* (UUID(),'tedtalks-47','The material that could change the world for a third time','Vật liệu có thể làm thay đổi thế giới... lần thứ ba','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_047.mp3',NULL,'00:00:07.829','00:05:05.621','tedtalks',0,0,47) */
 	('Thousands of years ago, the Romans invented a material that allowed them to build much of their sprawling civilization','Hàng nghìn năm trước, người La Mã đã sáng tạo ra một vật liệu cho phép họ dựng nên phần lớn nền văn minh đồ sộ','00:00:07.829','00:00:15.329','tedtalks-47'),
 	('Pliny the Elder praised an imposing sea wall made from the stuff as "impregnable to the waves and every day stronger"','Pliny the Elder từng ca ngợi bức tường chắn sóng vĩ đại được tạo nên từ những thứ này là "sừng sững trước những ngọn sóng và ngày càng kiên cố"','00:00:15.329','00:00:23.913','tedtalks-47'),
 	('He was right: much of this construction still stands, having survived millennia of battering by environmental forces that would topple modern buildings','Ông đã đúng: Phần lớn kiến trúc này vẫn trụ vững sau hàng thiên niên kỷ bị bào mòn bởi các tác động tự nhiên mà lẽ ra đã quật ngã những tòa nhà hiện đại','00:00:23.913','00:00:34.454','tedtalks-47'),
@@ -3574,7 +3574,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('When the ash interacted with seawater, the seawater strengthened it - making their concrete stronger and more long-lasting than any we use today','Khi tro này phản ứng với nước biển, nước biển làm nó vững chắc hơn, khiến bê tông kiên cố hơn và bền hơn so với mọi thứ chúng ta dùng ngày nay','00:04:41.538','00:04:51.621','tedtalks-47'),
 	('By adding these findings to an arsenal of modern innovations, hopefully we can replicate their success - both by making long lasting structures, and ensuring our descendants can admire them thousands of years from now','Bằng việc thêm những phát hiện này vào kho vũ khí của sự đổi mới hiện đại, hi vọng rằng chúng ta có thể lặp lại thành công của họ, vừa tạo nên những cấu trúc bền vững và vừa đảm bảo rằng hậu duệ của chúng ta có thể chiêm ngưỡng hàng ngàn năm về sau','00:04:51.621','00:05:05.621','tedtalks-47'),
 
-	/* (UUID(),'tedtalks-48','How we can curb climate change by sending two percent more on everything?','Làm thế nào để hạn chế biến đổi khí hậu bằng cách chi thêm hai phần trăm cho mọi thứ?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_048.mp3',NULL,'00:00:13.997','00:11:31.830','tedtalks','NO',48) */
+	/* (UUID(),'tedtalks-48','How we can curb climate change by sending two percent more on everything?','Làm thế nào để hạn chế biến đổi khí hậu bằng cách chi thêm hai phần trăm cho mọi thứ?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_048.mp3',NULL,'00:00:13.997','00:11:31.830','tedtalks',0,0,48) */
 	('This is a lump of coal','Đây là một tảng than đá','00:00:13.997','00:00:15.630','tedtalks-48'),
 	('It was mined a while ago in the Ruhr region in Germany, about 50 miles from where I grew up','Nó được khai thác cách đây khá lâu ở vùng Ruhr, Đức, cách quê hương tôi khoảng 50 dặm','00:00:15.663','00:00:20.130','tedtalks-48'),
 	('As coal goes, it\'s actually quite high-end','Dù là than đá nhưng thực tế, nó khá cao cấp đấy','00:00:20.130','00:00:22.563','tedtalks-48'),
@@ -3697,7 +3697,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('But economics don\'t have to be one of them','Nhưng kinh tế không phải một trong số chúng','00:11:27.330','00:11:30.197','tedtalks-48'),
 	('Thank you','Cảm ơn','00:11:30.663','00:11:31.830','tedtalks-48'),
 
-	/* (UUID(),'tedtalks-49','What happened when biology becomes technology?','Điều gì sẽ xảy ra khi sinh học trở thành công nghệ?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_049.mp3',NULL,'00:00:13.365','00:10:55.738','tedtalks','NO',49) */
+	/* (UUID(),'tedtalks-49','What happened when biology becomes technology?','Điều gì sẽ xảy ra khi sinh học trở thành công nghệ?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_049.mp3',NULL,'00:00:13.365','00:10:55.738','tedtalks',0,0,49) */
 	('A briefcase full of poop changed my life','Một va li chứa đầy phân đã thay đổi cuộc đời tôi','00:00:13.365','00:00:16.230','tedtalks-49'),
 	('Ten years ago, I was a graduate student and I was helping judge a genetic engineering competition for undergrads','Mười năm trước, là nghiên cứu sinh, tôi đã giúp đánh giá một cuộc thi kĩ thuật gen cho sinh viên đại học','00:00:16.810','00:00:22.633','tedtalks-49'),
 	('There, I met a British artist and designer named Alexandra Daisy Ginsberg','Tại đó, tôi gặp nhà họa sĩ và thiết kế người Anh tên là Alexandra Daisy Ginsberg','00:00:22.657','00:00:26.598','tedtalks-49'),
@@ -3806,7 +3806,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('How we decide what that future will be is up to all of us','Tương lai ấy sẽ trở nên như thế nào còn tùy thuộc vào chúng ta','00:10:49.696','00:10:53.746','tedtalks-49'),
 	('Thank you','Xin cảm ơn','00:10:54.556','00:10:55.738','tedtalks-49'),
 
-	/* (UUID(),'tedtalks-50','The warmth and wisdom of mud buildings','Sự ấm áp và trí tuệ của tòa nhà bằng bùn','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_050.mp3',NULL,'00:00:13.096','00:12:55.083','tedtalks','NO',50) */
+	/* (UUID(),'tedtalks-50','The warmth and wisdom of mud buildings','Sự ấm áp và trí tuệ của tòa nhà bằng bùn','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_050.mp3',NULL,'00:00:13.096','00:12:55.083','tedtalks',0,0,50) */
 	('It was the end of October in the mountains in Austria','Đó là cuối tháng Mười trên những dãy núi ở Áo','00:00:13.096','00:00:16.453','tedtalks-50'),
 	('I was there on a field trip with my architecture students from Zurich','Tôi đi thực địa với sinh viên kiến trúc của mình từ Zurich','00:00:17.442','00:00:20.878','tedtalks-50'),
 	('And when we reached a high valley, I surprised them with the news that there was no hut or hotel booked for the night','Khi chúng tôi lên đến vùng thung lũng cao, tôi làm họ bất ngờ với tin tức là sẽ không có túp lều nào hay khách sạn cho đêm đó','00:00:21.660','00:00:29.910','tedtalks-50'),
@@ -3902,7 +3902,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And I deeply believe our homes, our work spaces, our cities would become more healthy and sustainable and more humane and beautiful','Tôi thật sự tin rằng những ngôi nhà, không gian làm việc, thành phố sẽ trở nên "lành mạnh" và bền vững hơn nhân văn hơn, và đẹp hơn','00:12:40.221','00:12:53.293','tedtalks-50'),
 	('Thank you','Xin cảm ơn','00:12:53.932','00:12:55.083','tedtalks-50'),
 
-	/* (UUID(),'tedtalks-51','Why glass towers are bad for city life and what we need instead?','Ảnh hưởng của các cao ốc bằng kính tới đô thị?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_051.mp3',NULL,'00:00:12.420','00:12:33.036','tedtalks','NO',51) */
+	/* (UUID(),'tedtalks-51','Why glass towers are bad for city life and what we need instead?','Ảnh hưởng của các cao ốc bằng kính tới đô thị?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_051.mp3',NULL,'00:00:12.420','00:12:33.036','tedtalks',0,0,51) */
 	('Imagine that when you walked in here this evening, you discovered that everybody in the room looked almost exactly the same: ageless, raceless, generically good-looking','Hãy tưởng tượng khi bạn bước vào đây buổi tối, bạn phát hiện ra tất cả mọi người ở đây đều trông giống hệt nhau: không biết tuổi, không biết chủng tộc, trông ưa nhìn giống nhau','00:00:12.420','00:00:23.300','tedtalks-51'),
 	('That person sitting right next to you might have the most idiosyncratic inner life, but you don\'t have a clue because we\'re all wearing the same blank expression all the time','Người ngồi ngay bên cạnh bạn có thể có nội tâm cực kỳ có khí chất, nhưng bạn không hề nhận ra bởi vì chúng ta lúc nào cũng mang vẻ mặt vô cảm như nhau','00:00:24.100','00:00:33.100','tedtalks-51'),
 	('That is the kind of creepy transformation that is taking over cities, only it applies to buildings, not people','Đó chính là sự chuyển biến đáng sợ đang thống trị ở các thành phố, chỉ là nó áp dụng cho các toà nhà, không phải dân cư','00:00:34.780','00:00:41.780','tedtalks-51'),
@@ -3991,7 +3991,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'tedtalks-52','The joy of learning random things on Wikipedia','Niềm vui từ việc tìm hiểu những thông tin ngẫu nhiên trên Wikipedia','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_052.mp3',NULL,'00:00:04.969','00:12:24.608','tedtalks','NO',52) */
+	/* (UUID(),'tedtalks-52','The joy of learning random things on Wikipedia','Niềm vui từ việc tìm hiểu những thông tin ngẫu nhiên trên Wikipedia','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_052.mp3',NULL,'00:00:04.969','00:12:24.608','tedtalks',0,0,52) */
 	('When I was younger, I used to be really into Trivial Pursuit and sometimes I would memorize the backs of the cards so I could win','Khi tôi còn trẻ, tôi đã từng rất thích Trivial Pursuit và đôi khi tôi sẽ ghi nhớ mặt sau của các lá bài để dành chiến thắng','00:00:04.969','00:00:11.842','tedtalks-52'),
 	('And that\'s how I learned some of my favorite trivia','Và đó là cách tôi học câu đố yêu thích của mình','00:00:11.842','00:00:14.378','tedtalks-52'),
 	('Like, there\'s a name for those three asterisks in the book when the vibe changes','Giống như, có một tên cho ba dấu hoa thị đó trong cuốn sách khi sự rung cảm thay đổi','00:00:14.412','00:00:19.083','tedtalks-52'),
@@ -4107,7 +4107,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Whether you\'re looking for fictional worms or non-water floods or more serious things like atmospheric carbon data','Dù bạn đang tìm kiếm những con sâu hư cấu hay lũ lụt không nước hoặc những thứ nghiêm trọng hơn như dữ liệu carbon trong khí quyển','00:12:07.924','00:12:14.798','tedtalks-52'),
 	('If nothing else, trivia reminds you that the world is huge and it\'s amazing and it\'s really interesting and I don\'t think that\'s trivial at all','Nếu không có gì khác, câu đố nhắc nhở bạn rằng thế giới rất rộng lớn và nó thật tuyệt vời và nó thực sự thú vị và tôi không nghĩ điều đó là tầm thường chút nào','00:12:15.966','00:12:24.60800:12:24.608','tedtalks-52'),
 
-	/* (UUID(),'tedtalks-53','Meditation on the intersection of humanity and technology','Những suy ngẫm ở ranh giới giữa nhân loại và công nghệ','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_053.mp3',NULL,'00:00:13.083','00:09:19.417','tedtalks','NO',53) */
+	/* (UUID(),'tedtalks-53','Meditation on the intersection of humanity and technology','Những suy ngẫm ở ranh giới giữa nhân loại và công nghệ','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_053.mp3',NULL,'00:00:13.083','00:09:19.417','tedtalks',0,0,53) */
 	('Like many people who have been fortunate enough to be more or less healthy, I spent most of my life never thinking much about my body','Như phần lớn những người may mắn được khỏe mạnh, suốt cuộc đời tôi đã không quan tâm nhiều đến cơ thể mình','00:00:13.083','00:00:19.851','tedtalks-53'),
 	('Something that I relied on to get me around, not to mind the occasional bash and not to complain too much if I wasn\'t getting enough rest','Thứ tôi phụ thuộc vào để có thể di chuyển không kể đến những cú đánh và không phàn nàn quá nhiều nếu tôi không nghỉ ngơi đầy đủ','00:00:19.875','00:00:26.518','tedtalks-53'),
 	('But that all changed for me when I became pregnant','Nhưng tôi dần thay đổi khi mang thai','00:00:26.542','00:00:28.976','tedtalks-53'),
@@ -4199,7 +4199,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('A point in our evolution before time runs away with us all','Một điểm trong quá trình tiến hóa trước khi thời gian xa rời chúng ta','00:09:13.417','00:09:17.417','tedtalks-53'),
 	('Thank you','Xin cảm ơn','00:09:18.167','00:09:19.417','tedtalks-53'),
 
-	/* (UUID(),'tedtalks-54','How to inspire every child to be a lifelong reader?','Làm cách nào để tạo cảm hứng cho trẻ thành một người đọc sách suốt đời?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_054.mp3',NULL,'00:00:12.857','00:07:20.357','tedtalks','NO',54) */
+	/* (UUID(),'tedtalks-54','How to inspire every child to be a lifelong reader?','Làm cách nào để tạo cảm hứng cho trẻ thành một người đọc sách suốt đời?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_054.mp3',NULL,'00:00:12.857','00:07:20.357','tedtalks',0,0,54) */
 	('As an elementary school teacher, my mom did everything she could to ensure I had good reading skills','Là một giáo viên tiểu học, mẹ tôi đã làm mọi thứ có thể để chắc chắn tôi có kỹ năng đọc tốt','00:00:12.857','00:00:19.948','tedtalks-54'),
 	('This usually consisted of weekend reading lessons at our kitchen table while my friends played outside','Điều này thường gồm các bài học đọc tại bàn bếp vào cuối tuần trong khi các bạn của tôi đang chơi đùa ngoài kia','00:00:20.352','00:00:26.926','tedtalks-54'),
 	('My reading ability improved, but these forced reading lessons didn\'t exactly inspire a love of reading','Khả năng đọc của tôi tiến bộ rõ ràng, nhưng những bài học đọc bị ép buộc không thực sự tạo cảm hứng ham mê đọc sách trong tôi','00:00:26.950','00:00:35.060','tedtalks-54'),
@@ -4262,7 +4262,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Dismantling the savage inequalities that plague American education requires us to create reading experiences that inspire all children to say three words: I\'m a reader','Loại bỏ bất bình đẳng man rợ đang tàn phá nền giáo dục Mỹ yêu cầu ta tạo ra trải nghiệm về việc đọc mà tạo cảm hứng cho trẻ đủ để chúng tự nói ra câu này: Tôi là một độc giả','00:07:05.082','00:07:18.651','tedtalks-54'),
 	('Thank you','Xin cảm ơn','00:07:19.175','00:07:20.357','tedtalks-54'),
 
-	/* (UUID(),'tedtalks-55','3 steps to build peace and create meaningful change','Ba bước để xây dựng hòa bình và tạo lập thay đổi giàu ý nghĩa','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_055.mp3',NULL,'00:00:04.376','00:10:33.296','tedtalks','NO',55) */
+	/* (UUID(),'tedtalks-55','3 steps to build peace and create meaningful change','Ba bước để xây dựng hòa bình và tạo lập thay đổi giàu ý nghĩa','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_055.mp3',NULL,'00:00:04.376','00:10:33.296','tedtalks',0,0,55) */
 	('What happens when a Syrian refugee, an Israeli aid worker and an American Jew walk into a room?','Những gì xảy ra khi người tị nạn Syria, một nhân viên cứu trợ người Israel và người Do Thái Mỹ bước vào căn phòng?','00:00:04.376','00:00:12.884','tedtalks-55'),
 	('No, this is not the start of a really bad joke, I promise','Không, đây không phải phần đầu của của một câu đùa vô cùng tệ hại, tôi hứa','00:00:12.884','00:00:18.223','tedtalks-55'),
 	('This actually happened to me','Nó thực sự đã xảy ra với tôi','00:00:18.640','00:00:21.017','tedtalks-55'),
@@ -4351,7 +4351,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('I hope you will, too','Hy vọng bạn cũng làm như vậy','00:10:29.709','00:10:31.294','tedtalks-55'),
 	('Thank you','Xin cảm ơn','00:10:32.128','00:10:33.296','tedtalks-55'),
 
-	/* (UUID(),'tedtalks-56','A queer journey from shame to self-love','Hành trình vượt qua mặc cảm và tự yêu bản thân của một người đồng tính','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_056.mp3',NULL,'00:00:13.676','00:10:28.796','tedtalks','NO',56) */
+	/* (UUID(),'tedtalks-56','A queer journey from shame to self-love','Hành trình vượt qua mặc cảm và tự yêu bản thân của một người đồng tính','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_056.mp3',NULL,'00:00:13.676','00:10:28.796','tedtalks',0,0,56) */
 	('These days, I find it easy to look in the mirror','Ngày nay, tôi không còn thấy khó khăn khi nhìn vào gương','00:00:13.676','00:00:16.316','tedtalks-56'),
 	('This used to be the case, too, because I learned to be a drag queen alone','Việc này không phải là mới lạ bởi tôi đã phải học cách làm drag queen một mình','00:00:17.356','00:00:21.436','tedtalks-56'),
 	('Back then, in the early noughties, there was no cultural mirror for someone like me','Hồi đó, trong đầu thập niên 2000, không hề có một tấm gương nào để tôi có thể noi theo','00:00:22.676','00:00:26.876','tedtalks-56'),
@@ -4459,7 +4459,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'tedtalks-57','Tracking our online tracker','Theo dõi những kẻ theo dõi','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_057.mp3',NULL,'00:00:15.854','00:06:27.126','tedtalks','NO',57) */
+	/* (UUID(),'tedtalks-57','Tracking our online tracker','Theo dõi những kẻ theo dõi','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_057.mp3',NULL,'00:00:15.854','00:06:27.126','tedtalks',0,0,57) */
 	('I don\'t know why, but I\'m continually amazed to think that two and a half billion of us around the world are connected to each other through the Internet and that at any point in time more than 30 percent of the world\'s population can go online to learn, to create and to share','Tôi không biết vì sao mình luôn luôn ngạc nhiên khi nghĩ rằng 2,5 tỉ người ở khắp mọi nơi trên thế giới kết nối với nhau qua Internet và rằng tại một thời điểm bất kì hơn 30% dân số thế giới có thể lên mạng để học hỏi, sáng tạo và chia sẻ','00:00:15.854','00:00:34.083','tedtalks-57'),
 	('And the amount of time each of us is spending doing all of this is also continuing to go grow','Và lượng thời gian mỗi chúng ta dành ra để làm tất cả những việc này cũng đang tiếp tục tăng','00:00:34.083','00:00:39.427','tedtalks-57'),
 	('A recent study showed that the young generation alone is spending over eight hours a day online','Một nghiên cứu gần đây cho thấy rằng riêng thế hệ trẻ đang dành hơn 8 giờ mỗi ngày để lên mạng','00:00:39.427','00:00:45.656','tedtalks-57'),
@@ -4529,7 +4529,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('It\'s now time for us to watch the watchers','Bây giờ là lúc để chúng ta theo dõi những người theo dõi chúng ta','00:06:23.314','00:06:26.029','tedtalks-57'),
 	('Thank you','Cảm ơn các bạn','00:06:26.029','00:06:27.126','tedtalks-57'),
 
-	/* (UUID(),'tedtalks-58','How we can find ourselves in data?','','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_058.mp3',NULL,'00:00:12.580','00:11:07.916','tedtalks','NO',58) */
+	/* (UUID(),'tedtalks-58','How we can find ourselves in data?','','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_058.mp3',NULL,'00:00:12.580','00:11:07.916','tedtalks',0,0,58) */
 	('This is what my last week looked like','Cuối tuần vừa qua của tôi trông như thế này đây','00:00:12.580','00:00:15.460','tedtalks-58'),
 	('What I did, who I was with, the main sensations I had for every waking hour','Những việc tôi đã làm, những người tôi đã tiếp xúc, cám giác chính của tôi qua mỗi giờ thức giấc','00:00:16.500','00:00:23.000','tedtalks-58'),
 	('If the feeling came as I thought of my dad who recently passed away, or if I could have just definitely avoided the worries and anxieties','Nếu cảm giác xuất hiện khi tôi nghĩ đến cha tôi người mới qua đời gần đây, hoặc nếu tôi đã có thể tránh được những lo lắng và bất an','00:00:23.100','00:00:32.276','tedtalks-58'),
@@ -4618,7 +4618,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('I do see a place where, ultimately, instead of using data only to become more efficient, we will all use data to become more humane','Sau cùng, tôi thấy một nơi, thay vì chỉ sử dụng dữ liệu để trở nên hiệu quả hơn, chúng ta sẽ sử dụng dữ liệu để trở nên nhân đạo hơn','00:10:57.100','00:11:06.260','tedtalks-58'),
 	('Thank you','Cảm ơn','00:11:06.700','00:11:07.916','tedtalks-58'),
 
-	/* (UUID(),'tedtalks-59','What if a single human right could change the world?','Nếu như một quyền con người có thể thay đổi thế giới thì sao?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_059.mp3',NULL,'00:00:12.718','00:08:11.104','tedtalks','NO',59) */
+	/* (UUID(),'tedtalks-59','What if a single human right could change the world?','Nếu như một quyền con người có thể thay đổi thế giới thì sao?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_059.mp3',NULL,'00:00:12.718','00:08:11.104','tedtalks',0,0,59) */
 	('So, when I was 14, my family was in the process of adopting my little brothers from Ethiopia','Khi tôi 14 tuổi, gia đình tôi chuẩn bị nhận nuôi các em trai tôi từ Ethiopia','00:00:12.718','00:00:19.640','tedtalks-59'),
 	('And one day my mom asked, "What day should we put for their birthday?"','Và một hôm mẹ tôi hỏi, "Ta nên chọn ngày nào làm ngày sinh nhật cho bọn trẻ?"','00:00:19.664','00:00:24.483','tedtalks-59'),
 	('"Uh, the day they were born, obviously?"','"Ừ thì, ngày chúng được sinh ra, rõ ràng là thế phải không?"','00:00:25.216','00:00:28.152','tedtalks-59'),
@@ -4695,7 +4695,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Because it\'s not every day you get the opportunity to change the world, but today, you do','Vì không phải ngày nào bạn cũng có cơ hội thay đổi thế giới, nhưng hôm nay bạn có cơ hội ấy','00:08:02.535','00:08:08.888','tedtalks-59'),
 	('Thanks','Xin cảm ơn','00:08:09.944','00:08:11.104','tedtalks-59'),
 
-	/* (UUID(),'tedtalks-60','What I saw in the war?','Những gì tôi đã chứng kiến trong chiến tranh?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_060.mp3',NULL,'00:00:15.963','00:11:40.747','tedtalks','NO',60) */
+	/* (UUID(),'tedtalks-60','What I saw in the war?','Những gì tôi đã chứng kiến trong chiến tranh?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_060.mp3',NULL,'00:00:15.963','00:11:40.747','tedtalks',0,0,60) */
 	('This is how war starts','Đây là cách cuộc chiến bắt đầu','00:00:15.963','00:00:18.775','tedtalks-60'),
 	('One day you\'re living your ordinary life, you\'re planning to go to a party, you\'re taking your children to school, you\'re making a dentist appointment','Vào một ngày bình thường, Bạn có kế hoạch tham dự một bữa tiệc Bạn đưa lũ trẻ đến trường bạn đến gặp nha sĩ','00:00:18.775','00:00:29.654','tedtalks-60'),
 	('The next thing, the telephones go out, the TVs go out, there\'s armed men on the street, there\'s roadblocks','Và điều tiếp theo, điện thoại mất tín hiệu TV mất tín hiệu, những người lính trên đường phố những ba-ri-e','00:00:29.654','00:00:39.533','tedtalks-60'),
@@ -4779,7 +4779,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('But what I do hope is that if you remember anything I said or any of my stories tomorrow morning over breakfast, if you can remember the story of Sarajevo, or the story of Rwanda, then I\'ve done my job','Nhưng tôi hy vọng nếu các bạn nhớ những gì tôi đã nói hoặc bất kì câu chuyện nào và bữa sáng ngày mai, nếu các bạn có thể nhớ câu chuyện về Sarajevo, hay câu chuyện về Rwanda, nghĩa là tôi đã xong việc của mình','00:11:22.193','00:11:38.709','tedtalks-60'),
 	('Thank you very much','Cảm ơn rất nhiều','00:11:38.709','00:11:40.747','tedtalks-60'),
 
-	/* (UUID(),'tedtalks-61','The courage to tell a hidden story','Dũng khí để thuật lại câu chuyện bị chôn giấu','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_061.mp3',NULL,'00:00:12.900','00:04:09.408','tedtalks','NO',61) */
+	/* (UUID(),'tedtalks-61','The courage to tell a hidden story','Dũng khí để thuật lại câu chuyện bị chôn giấu','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_061.mp3',NULL,'00:00:12.900','00:04:09.408','tedtalks',0,0,61) */
 	('When I turned 19, I started my career as the first female photojournalist in the Gaza Strip, Palestine','Khi tôi bước sang tuổi 19, tôi bắt đầu sự nghiệp làm nhà báo ảnh nữ đầu tiên trên dải Gaza, tại Palestine','00:00:12.900','00:00:20.800','tedtalks-61'),
 	('My work as a woman photographer was considered a serious insult to local traditions, and created a lasting stigma for me and my family','Công việc nữ nhiếp ảnh được coi là sự xúc phạm nghiêm trọng tới truyền thống địa phương, tạo ra sự kì thị kéo dài cho tôi và gia đình','00:00:21.180','00:00:32.009','tedtalks-61'),
 	('The male-dominated field made my presence unwelcome by all possible means','Xã hội nam quyền không chào đón sự hiện diện của tôi','00:00:32.009','00:00:38.092','tedtalks-61'),
@@ -4813,7 +4813,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'tedtalks-62','Can you outsmart a troll (by thinking like one)?','Làm thế nào để chiến thắng một kẻ dắt mũi (bằng cách tư duy như họ)?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_062.mp3',NULL,'00:00:07.002','00:04:42.671','tedtalks','NO',62) */
+	/* (UUID(),'tedtalks-62','Can you outsmart a troll (by thinking like one)?','Làm thế nào để chiến thắng một kẻ dắt mũi (bằng cách tư duy như họ)?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_062.mp3',NULL,'00:00:07.002','00:04:42.671','tedtalks',0,0,62) */
 	('Your town is holding a mayoral election and the stakes have never been higher: the outcome will decide the fate of a local movement to rely on 100% renewable energy','Thị trấn của bạn đang tổ chức một cuộc bầu cử thị trưởng và lượng phiếu bầu chưa bao giờ cao đến thế: kết quả sẽ quyết định số phận của một chiến dịch địa phương dựa vào 100% năng lượng tái tạo','00:00:07.002','00:00:18.770','tedtalks-62'),
 	('One mayoral nominee, Joanna B. Greene, is a champion of this movement, while the other, Stannis Quo, staunchly opposes it','Một ứng cử viên thị trưởng, Joanna B. Greene, là người chiến thắng trong chiến dịch này, trong khi người kia, Stannis Quo, kiên quyết phản đối nó','00:00:18.770','00:00:27.698','tedtalks-62'),
 	('He\'s announced he\'ll use whatever tactics are necessary to win the election','Ông ta tuyên bố rằng sẽ dùng bất kỳ thủ đoạn nào cần thiết để dành chiến thắng trong cuộc bầu cử','00:00:27.698','00:00:32.601','tedtalks-62'),
@@ -4853,7 +4853,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('You can\'t personally protect each individual from disinformation, but you can equip them with the insights you have, and encourage them to pass these tools further along','Bạn không thể bảo vệ từng cá nhân khỏi thông tin sai lệch, nhưng bạn có thể trang bị cho họ những hiểu biết sâu sắc mà bạn có, và khuyến khích họ truyền lại những công cụ đó cho người xung quanh','00:04:26.730','00:04:37.631','tedtalks-62'),
 	('After all, community organizing is what elections often call for','Cuối cùng thì, tổ chức cộng đồng là điều mà các cuộc bầu cử thường kêu gọi','00:04:37.631','00:04:42.671','tedtalks-62'),
 
-	/* (UUID(),'tedtalks-63','How to choose your news?','Làm cách nào để chọn lọc tin tức?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_063.mp3',NULL,'00:00:08.138','00:04:31.847','tedtalks','NO',63) */
+	/* (UUID(),'tedtalks-63','How to choose your news?','Làm cách nào để chọn lọc tin tức?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_063.mp3',NULL,'00:00:08.138','00:04:31.847','tedtalks',0,0,63) */
 	('How do you know what\'s happening in your world?','Làm cách nào để biết điều gì diễn ra trên thế giới?','00:00:08.138','00:00:11.122','tedtalks-63'),
 	('The amount of information just a click away may be limitless, but the time and energy we have to absorb and evaluate it is not','Lượng thông tin chỉ cần click chuột để xem có thể là vô hạn, nhưng thời gian và công sức cần để tiếp nhận và đánh giá thì không như vậy','00:00:11.122','00:00:20.233','tedtalks-63'),
 	('All the information in the world won\'t be very useful unless you know how to read the news','Tất cả thông tin trên thế giới sẽ không thực sự hữu ích nếu bạn không biết cách đọc tin tức','00:00:20.233','00:00:25.988','tedtalks-63'),
@@ -4888,7 +4888,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Today, we are more free than ever from the old media gatekeepers who used to control the flow of information','Ngày nay, chúng ta tự do hơn thoát khỏi những người từng kiểm soát dòng chảy thông tin','00:04:13.540','00:04:20.052','tedtalks-63'),
 	('But with freedom comes responsibility: the responsibility to curate our own experience and ensure that this flow does not become a flood, leaving us less informed than before we took the plunge','Nhưng sự tự do mang đến trách nhiệm: trách nhiệm định hướng thông tin của chính mình và đảm bảo dòng chảy ấy không trở thành một trận lũ, khiến ta khó tiếp cận với thông tin chính xác','00:04:20.052','00:04:31.847','tedtalks-63'),
 
-	/* (UUID(),'tedtalks-64','Tiktok Instagram and the rise of bite-sized content','Tiktok Instagram và sự gia tăng của nội dung cỡ nhỏ','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_064.mp3',NULL,'00:00:13.167','00:08:45.125','tedtalks','NO',64) */
+	/* (UUID(),'tedtalks-64','Tiktok Instagram and the rise of bite-sized content','Tiktok Instagram và sự gia tăng của nội dung cỡ nhỏ','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_064.mp3',NULL,'00:00:13.167','00:08:45.125','tedtalks',0,0,64) */
 	('More than 1,5 billion people around the world, over half of them under the age of 24, regularly watch short videos: clips of 60 seconds or less using Snapchat, TikTok, Instagram Stories and other smartphone apps','Hơn 1,5 tỉ người ở khắp mọi nơi trên thế giới, trong đó hơn một nửa dưới 24 tuổi, thường xuyên xem các video ngắn: Những clip dài 60 giây hoặc ngắn hơn trên Snapchat, TikTok, Instagram Stories và các ứng dụng trên điện thoại khác','00:00:13.167','00:00:30.518','tedtalks-64'),
 	('The market barely existed seven years ago, yet today creators are uploading 702 million short videos every day','Những nền tảng này chỉ mới tồn tại từ bảy năm trước, nhưng hiện nay mỗi ngày có 702 triệu video ngắn được đăng tải','00:00:30.542','00:00:39.893','tedtalks-64'),
 	('As our attention span is falling to seconds, short video is not only here to stay but will become the new normal','Khi sự chú ý của chúng ta chỉ còn tính bằng giây, video ngắn không chỉ là hiện tượng mới, mà sẽ trở thành sự bình thường mới','00:00:39.917','00:00:47.684','tedtalks-64'),
@@ -4936,7 +4936,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('It is precisely because of this that we need to find the right way to benefit from this young medium through collaboration among users, platforms and policymakers','Chính vì điều này mà chúng ta cần tìm ra cách phù hợp để thu lợi từ phương tiện trẻ này thông qua sự hợp tác giữa người dùng, nền tảng và các nhà hoạch định chính sách','00:08:31.792','00:08:43.042','tedtalks-64'),
 	('Thank you','Cảm ơn các bạn','00:08:43.875','00:08:45.125','tedtalks-64'),
 
-	/* (UUID(),'tedtalks-65','The new American dream','Giấc mơ mới về Nước Mỹ','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_065.mp3',NULL,'00:00:12.680','00:15:22.052','tedtalks','NO',65) */
+	/* (UUID(),'tedtalks-65','The new American dream','Giấc mơ mới về Nước Mỹ','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_065.mp3',NULL,'00:00:12.680','00:15:22.052','tedtalks',0,0,65) */
 	('I\'m a journalist, so I like to look for the untold stories, the lives that quietly play out under the scream of headlines','Tôi là một nhà báo, vì thế tôi thích được tìm kiếm những câu chuyện chưa được kể, những mảnh đời lặng lẽ sống rời xa khỏi sự ồn ào trên những trang báo','00:00:12.680','00:00:20.396','tedtalks-65'),
 	('I\'ve also been going about the business of putting down roots, choosing a partner, making babies','Tôi cũng đã tiến tới ổn định công việc, tìm kiếm một người chồng, và sinh con','00:00:20.977','00:00:26.762','tedtalks-65'),
 	('So for the last few years, I\'ve been trying to understand what constitutes the 21st-century good life, both because I\'m fascinated by the moral and philosophical implications, but also because I\'m in desperate need of answers myself','Vậy nên vài năm qua, tôi đã cố gắng tìm hiểu điều gì tạo nên cuộc sống tốt đẹp ở thế kỉ 21, vì tôi bị mê hoặc bởi những ý nghĩa về đạo đức và triết học, và cũng bởi vì tôi đang rất cần câu trả lời cho chính bản thân mình','00:00:27.206','00:00:42.799','tedtalks-65'),
@@ -5079,7 +5079,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('That is the beautiful struggle','Đấy là sự vật lộn có ý nghĩa','00:15:16.432','00:15:20.043','tedtalks-65'),
 	('Thank you','Cảm ơn mọi người','00:15:20.861','00:15:22.052','tedtalks-65'),
 
-	/* (UUID(),'tedtalks-66','My escape from North Korea','Hành trình chạy trốn khỏi Bắc Triều Tiên','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_066.mp3',NULL,'00:00:16.244','00:11:57.635','tedtalks','NO',66) */
+	/* (UUID(),'tedtalks-66','My escape from North Korea','Hành trình chạy trốn khỏi Bắc Triều Tiên','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_066.mp3',NULL,'00:00:16.244','00:11:57.635','tedtalks',0,0,66) */
 	('When I was little, I thought my country was the best on the planet','Khi tôi còn nhỏ, Tôi nghĩ rằng Bắc Triều Tiên là đất nước tốt nhất trên thế giới','00:00:16.244','00:00:19.767','tedtalks-66'),
 	('And I grew up singing a song called "Nothing To Envy"','Và tôi thường hát bài hát có tên là "Chúng ta chẳng có gì phải ghen tị"','00:00:20.410','00:00:23.371','tedtalks-66'),
 	('And I was very proud','Tôi đã rất tự hào về đất nước tôi','00:00:24.244','00:00:25.942','tedtalks-66'),
@@ -5187,7 +5187,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'tedtalks-67','What happens to people\'s donated eggs and sperm after they die?','Điều gì xảy ra với trứng và tinh trùng hiến tặng sau khi người hiến tặng qua đời?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_067.mp3',NULL,'00:00:04.292','00:12:39.708','tedtalks','NO',67) */
+	/* (UUID(),'tedtalks-67','What happens to people\'s donated eggs and sperm after they die?','Điều gì xảy ra với trứng và tinh trùng hiến tặng sau khi người hiến tặng qua đời?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_067.mp3',NULL,'00:00:04.292','00:12:39.708','tedtalks',0,0,67) */
 	('Before his death in California in 1991, a man named William Kane wrote a letter to the children from his first marriage and to his fiancee, Deborah','Trước khi qua đời tại California vào năm 1991, người đàn ông tên William Kane đã viết thư cho các đứa con từ cuộc hôn nhân đầu tiên và vị hôn thê của mình, Deborah','00:00:04.292','00:00:15.625','tedtalks-67'),
 	('It read, "I address this to my children because although I have only two of you, Everett and Katie, it may be that Deborah decides, as I hope she will, to have a child by me after my death"','Trong thư viết rằng "Ta viết lá thư này cho các con của ta bởi vì mặc dù hiện tại ta chỉ có hai con, Everett và Katie, nhưng Deborah có thể sẽ thay đổi điều đó, mà ta mong rằng cô ấy sẽ làm thế, quyết định sinh con cho ta sau khi ta qua đời"','00:00:16.042','00:00:31.500','tedtalks-67'),
 	('I have been assiduously generating sperm samples for that eventuality','Ta đã cố gắng lưu trữ các mẫu tinh trùng cho tình huống đó','00:00:31.542','00:00:36.250','tedtalks-67'),
@@ -5303,7 +5303,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('We need to challenge ourselves to think carefully about what these innovations mean to ourselves, to our families, to our children and to future children, whether they\'re genetically related to us or not','Chúng ta cần thử thách bản thân suy nghĩ cẩn trọng hơn về ý nghĩa của sự đổi mới này đối với ta, với gia đình chúng ta, con cái chúng ta và con cái trong tương lai, dù chúng có mang gen của ta hay không','00:12:22.833','00:12:38.166','tedtalks-67'),
 	('Thank you','Xin cảm ơn','00:12:38.541','00:12:39.708','tedtalks-67'),
 
-	/* (UUID(),'tedtalks-68','A second chance for fathers to connect with their kids','Cơ hội khác để những ông bố kết nối với con cái của mình','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_068.mp3',NULL,'00:00:04.834','00:12:45.219','tedtalks','NO',68) */
+	/* (UUID(),'tedtalks-68','A second chance for fathers to connect with their kids','Cơ hội khác để những ông bố kết nối với con cái của mình','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_068.mp3',NULL,'00:00:04.834','00:12:45.219','tedtalks',0,0,68) */
 	('Did you know that an estimated 10 million children in the United States see their fathers less than once a month?','Bạn có biết rằng ước tính có khoảng 10 triệu trẻ em ở Mỹ gặp bố của chúng chưa tới một lần mỗi tháng?','00:00:04.834','00:00:15.845','tedtalks-68'),
 	('Research tells us what happens to boys and girls without dads or stable father figures in their lives','Khảo sát cho thấy những gì xảy ra với những đứa trẻ không có bố hoặc hình mẫu người bố ổn định trong cuộc sống','00:00:17.556','00:00:25.897','tedtalks-68'),
 	('Poverty rates double, emotional and behavioral health issues increase, high school dropout rates increase, as do crime and prison rates','Tỉ lệ nghèo đói cao gấp đôi, các vấn đề về cảm xúc, hành vi và sức khỏe đều tăng, tỉ lệ học sinh trung học bỏ học tăng lên, kéo theo tỉ lệ tội phạm và ngồi tù','00:00:26.982','00:00:39.411','tedtalks-68'),
@@ -5411,7 +5411,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Whoever came to mind, try, just try and be that to someone else','Dù bạn nghĩ đến người nào, cứ cố gắng và cố trở thành người đó đối với cả những người khác nữa nhé','00:12:37.586','00:12:44.051','tedtalks-68'),
 	('Thank you','Xin cảm ơn','00:12:44.051','00:12:45.219','tedtalks-68'),
 
-	/* (UUID(),'tedtalks-69','How moms shape the world?','Cách các bà mẹ nhào nặn nên thế giới','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_069.mp3',NULL,'00:00:03.917','00:12:17.650','tedtalks','NO',69) */
+	/* (UUID(),'tedtalks-69','How moms shape the world?','Cách các bà mẹ nhào nặn nên thế giới','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_069.mp3',NULL,'00:00:03.917','00:12:17.650','tedtalks',0,0,69) */
 	('Every year, around January 15th, the world rightfully celebrates the birth of the great Martin Luther King Jr.Yet, virtually no one has stopped to consider who else was in that room that day in 1929','Hàng năm, vào ngày 15 tháng 1 cả thế giới cùng kỷ niệm ngày sinh của Martin Luther King Jr vĩ đại, Tuy nhiên, hầu như chẳng có ai dừng lại để nghĩ xem còn ai khác trong căn phòng đấy vào đúng ngày hôm đó năm 1929','00:00:03.917','00:00:18.598','tedtalks-69'),
 	('As if somehow MLK Jr birthed himself','Như thể bằng cách nào đó MLK Jr, đã tự hạ sinh chính mình vậy','00:00:19.099','00:00:24.187','tedtalks-69'),
 	('I toured the location where he was born','Tôi đã ghé qua nơi ông được sinh ra','00:00:26.147','00:00:28.525','tedtalks-69'),
@@ -5494,7 +5494,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And when we do, the world will be a much better and equitable place for us all','Và khi ta làm thế, thế giới sẽ trở thành một nơi tốt hơn và công bằng hơn cho tất cả chúng ta','00:12:09.934','00:12:16.482','tedtalks-69'),
 	('Thank you','Xin cảm ơn','00:12:16.482','00:12:17.650','tedtalks-69'),
 
-	/* (UUID(),'tedtalks-70','The need for ted talk reunification to make families whole again','Sự cần thiết của việc đoàn tụ gia đình - để làm cho gia đình trở lại trọn vẹn','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_070.mp3',NULL,'00:00:07.020','00:11:43.220','tedtalks','NO',70) */
+	/* (UUID(),'tedtalks-70','The need for ted talk reunification to make families whole again','Sự cần thiết của việc đoàn tụ gia đình - để làm cho gia đình trở lại trọn vẹn','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_070.mp3',NULL,'00:00:07.020','00:11:43.220','tedtalks',0,0,70) */
 	('My name is Elizabeth','Tôi tên là Elizabeth','00:00:07.020','00:00:08.540','tedtalks-70'),
 	('I am 18 years old, and I am a second-year university student in Dublin','Tôi 18 tuổi, và tôi là sinh viên năm hai Đại học ở Dublin','00:00:08.900','00:00:14.980','tedtalks-70'),
 	('And I would like to share a glimpse into my beginnings','Và tôi muốn kể sơ qua khởi đầu của mình','00:00:14.980','00:00:17.900','tedtalks-70'),
@@ -5569,7 +5569,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And I want all families to be made whole, to be reunified, to be together, as is our right','Và tôi muốn các gia đình cùng nhau đầy đủ, được đoàn tụ, được bên nhau, vì đó là quyền của chúng ta','00:11:27.060','00:11:40.020','tedtalks-70'),
 	('Thank you','Xin cảm ơn','00:11:41.980','00:11:43.220','tedtalks-70'),
 
-	/* (UUID(),'tedtalks-71','The most powerful yet overlooked resource in schools','Nguồn tài nguyên đáng giá nhất nhưng bị xem nhẹ của trường học','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_071.mp3',NULL,'00:00:04.417','00:05:07.679','tedtalks','NO',71) */
+	/* (UUID(),'tedtalks-71','The most powerful yet overlooked resource in schools','Nguồn tài nguyên đáng giá nhất nhưng bị xem nhẹ của trường học','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_071.mp3',NULL,'00:00:04.417','00:05:07.679','tedtalks',0,0,71) */
 	('I\'m eight years old, and it\'s my first day at the new school, but I cannot express myself','Lúc tôi lên tám, và đó là ngày đầu tiên tại ngôi trường mới, nhưng tôi không thể thể hiện bản thân','00:00:04.417','00:00:11.424','tedtalks-71'),
 	('Actually, I don\'t understand a single word of English','Thành thật thì, tôi không hiểu bất kì một từ Tiếng Anh nào','00:00:11.800','00:00:15.178','tedtalks-71'),
 	('My family just moved from Korea to England','Gia đình tôi vừa chuyển từ Hàn Quốc sang Anh','00:00:16.429','00:00:19.349','tedtalks-71'),
@@ -5623,7 +5623,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'tedtalks-72','How to participate in your own legal defense?','Làm thế nào để tham gia bảo vệ pháp lý cho chính bản thân mình?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_072.mp3',NULL,'00:00:03.542','00:06:34.265','tedtalks','NO',72) */
+	/* (UUID(),'tedtalks-72','How to participate in your own legal defense?','Làm thế nào để tham gia bảo vệ pháp lý cho chính bản thân mình?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_072.mp3',NULL,'00:00:03.542','00:06:34.265','tedtalks',0,0,72) */
 	('I\'m a lawyer based in Chicago, and two months ago I represented a Vietnamese immigrant woman in her divorce','Tôi là một luật sư ở Chicago, và hai tháng trước tôi đại diện một phụ nữ Việt Nam nhập cư trong vụ ly dị của cô ấy','00:00:03.542','00:00:11.216','tedtalks-72'),
 	('As she was testifying about how her husband brutally raped her, the judge repeatedly told her to stop speaking','Khi cô ấy đang làm chứng về việc bị chồng cưỡng hiếp một cách tàn bạo, thẩm phán liên tục ngừng không cho cô nói tiếp','00:00:11.258','00:00:18.682','tedtalks-72'),
 	('She should only speak when I asked her a question','Cô ấy chỉ được lên tiếng khi tôi đặt câu hỏi','00:00:18.682','00:00:21.351','tedtalks-72'),
@@ -5678,7 +5678,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('In the meantime, we as lawyers need to make it happen in our work, in our cases right now','Trong thời gian chờ đợi, chúng tôi với tư cách là luật sư cần biến điều đó thành hiện thực trong công việc của mình, trong những vụ việc của chúng ta ngay bây giờ','00:06:25.506','00:06:32.221','tedtalks-72'),
 	('Thank you','Cảm ơn','00:06:33.056','00:06:34.265','tedtalks-72'),
 
-	/* (UUID(),'tedtalks-73','A colorful case for outside the box thinking on identity','Một câu chuyện đầy màu sắc cho suy nghĩ mới lạ về danh tính','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_073.mp3',NULL,'00:00:05.919','00:06:43.942','tedtalks','NO',73) */
+	/* (UUID(),'tedtalks-73','A colorful case for outside the box thinking on identity','Một câu chuyện đầy màu sắc cho suy nghĩ mới lạ về danh tính','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_073.mp3',NULL,'00:00:05.919','00:06:43.942','tedtalks',0,0,73) */
 	('When I was in first grade, I remember learning my colors','Khi tôi học lớp một, tôi nhớ mình học về màu sắc','00:00:05.919','00:00:09.381','tedtalks-73'),
 	('We started by learning about the primary colored, yellow and blue','Chúng tôi đã bắt đầu với những màu cơ bản: đỏ, vàng và xanh dương','00:00:09.422','00:00:15.428','tedtalks-73'),
 	('Our teacher taught us how they were the pure colors of the rainbow','Giáo viên của chúng tôi dạy rằng đó là những màu nguyên gốc của cầu vồng','00:00:16.429','00:00:19.683','tedtalks-73'),
@@ -5748,7 +5748,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('However, the simplicity and ease of an open-ended question could truly lead our society into a more inclusive and accepting world that acknowledges the spectrum of racial identities, a world where all the shades of greens, purples and oranges are just as recognized as the reds, yellows and blues','Dẫu vậy, sự đơn giản và dễ dàng của một câu hỏi mở có thể đưa xã hội chúng ta đến với một thế giới bao hàm và cảm thông hơn nơi công nhận phổ màu sắc của các danh tính chủng tộc, một thế giới nơi mọi sắc xanh lá, tím hay cam cũng được nhìn nhận hệt như những màu đỏ, vàng và lam','00:06:23.004','00:06:42.732','tedtalks-73'),
 	('Thank you','Xin cảm ơn','00:06:42.774','00:06:43.942','tedtalks-73'),
 
-	/* (UUID(),'tedtalks-74','Why doctors are offering free tax prep in their waiting room?','Tại sao các bác sĩ đề xuất giúp khai thuế ngay trong phòng chờ?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_074.mp3',NULL,'00:00:12.987','00:04:48.778','tedtalks','NO',74) */
+	/* (UUID(),'tedtalks-74','Why doctors are offering free tax prep in their waiting room?','Tại sao các bác sĩ đề xuất giúp khai thuế ngay trong phòng chờ?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_074.mp3',NULL,'00:00:12.987','00:04:48.778','tedtalks',0,0,74) */
 	('How many of you have had your doctor ask you about sex?','có bao nhiêu người đã từng được bác sĩ hỏi về tình dục?','00:00:12.987','00:00:16.406','tedtalks-74'),
 	('Your mental health?','Sức khỏe tinh thần?','00:00:16.820','00:00:18.455','tedtalks-74'),
 	('Alcohol use?','Sử dụng rượu bia?','00:00:18.479','00:00:19.748','tedtalks-74'),
@@ -5798,7 +5798,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('We can reimagine health care as a place addressing the causes of poor health, be it infections or finances','Ta có thể biến chăm sóc sức khỏe thành nơi giải quyết nguyên nhân của bệnh tật, cho dù đó là nhiễm trùng hay tài chính','00:04:38.669','00:04:47.138','tedtalks-74'),
 	('Thank you','Xin cảm ơn','00:04:47.567','00:04:48.778','tedtalks-74'),
 
-	/* (UUID(),'tedtalks-75','Why should you read "The joy luck club"?','Tại sao bạn nên đọc "The Joy Luck Club"?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_075.mp3',NULL,'00:00:06.965','00:03:32.308','tedtalks','NO',75) */
+	/* (UUID(),'tedtalks-75','Why should you read "The joy luck club"?','Tại sao bạn nên đọc "The Joy Luck Club"?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_075.mp3',NULL,'00:00:06.965','00:03:32.308','tedtalks',0,0,75) */
 	('In her Auntie An-mei\'s home, Jing-Mei reluctantly takes her seat at the eastern corner of the mahjong table','Trong nhà của dì An-mei, Jing-Mei miễn cưỡng ngồi vào chỗ của mình','00:00:06.965','00:00:12.837','tedtalks-75'),
 	('At the north, south, and west corners are her aunties, long-time members of the Joy Luck Club','Ở phía bắc, nam, và tây là các dì của cô, là các thành viên lâu năm của câu lạc bộ Joy Luck','00:00:12.837','00:00:18.895','tedtalks-75'),
 	('This group of immigrant families comes together weekly to trade gossip, feast on wonton and sweet chaswei, and play mahjong','Các gia đình nhập cư này gặp nhau hàng tuần để tán gẫu, ăn tiệc với hoành thánh, thịt heo nướng ngọt, và chơi mạt chược','00:00:18.895','00:00:26.765','tedtalks-75'),
@@ -5830,7 +5830,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Today, these characters still captivate readers worldwide','Ngày nay, những nhân vật này vẫn thu hút các độc giả trên toàn thế giới','00:03:18.375','00:03:21.868','tedtalks-75'),
 	('Not only for the way they speak to Chinese American and immigrant experiences, but also for uncovering a deeper truth: the need to be seen and understood by the ones you love','Không chỉ bởi vì cách họ nói chuyện với những người Mỹ gốc Hoa và những trải nghiệm nhập cư, mà còn vì họ đã thổ lộ một chân lý sâu sắc: Nhu cầu được người mình yêu thương nhìn nhận và thấu hiểu là rất cần thiết','00:03:21.868','00:03:32.308','tedtalks-75'),
 
-	/* (UUID(),'tedtalks-76','Caregiving is real work - let\'s treat it that way','Chăm sóc người khác cũng là một nghề','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_076.mp3',NULL,'00:00:00.038','00:05:09.722','tedtalks','NO',76) */
+	/* (UUID(),'tedtalks-76','Caregiving is real work - let\'s treat it that way','Chăm sóc người khác cũng là một nghề','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_076.mp3',NULL,'00:00:00.038','00:05:09.722','tedtalks',0,0,76) */
 	('Every day, people around the world spend 16 billion hours on unpaid care work - cooking for their families, cleaning up after them, caring for children and older relatives and all the other routine household tasks','Mỗi ngày, người dân ở khắp mọi nơi trên thế giới dành 16 tỉ giờ để làm công việc không lương, ví dụ như nấu ăn cho gia đình và dọn dẹp, chăm sóc cho con cái, người thân già yếu, cũng như tất cả việc lặt vặt thường ngày khác trong nhà','00:00:00.038','00:00:12.633','tedtalks-76'),
 	('These activities are happening all day, at every hour, in every country around the world','Các hoạt động này vẫn xảy ra cả ngày, vào mọi giờ, tại mọi thành phố ở khắp mọi nơi trên thế giới','00:00:12.675','00:00:17.764','tedtalks-76'),
 	('But because many don\'t get paid for this work, most of us take it for granted','Nhưng do có quá nhiều người làm việc này không lương nên hầu hết chúng ta đều ngộ nhận','00:00:17.805','00:00:21.476','tedtalks-76'),
@@ -5895,7 +5895,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'tedtalks-77','The Chinese zodiac explained','Cái nhìn rõ nét hơn về 12 con giáp','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_077.mp3',NULL,'00:00:12.891','00:06:00.111','tedtalks','NO',77) */
+	/* (UUID(),'tedtalks-77','The Chinese zodiac explained','Cái nhìn rõ nét hơn về 12 con giáp','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_077.mp3',NULL,'00:00:12.891','00:06:00.111','tedtalks',0,0,77) */
 	('Have you ever been asked by your Chinese friend, "What is your zodiac sign?"','Đã bao giờ bạn được một người bạn gốc Hoa hỏi, "Bạn tuổi con gì chưa?"','00:00:12.891','00:00:17.800','tedtalks-77'),
 	('Don\'t think they are making small talk','Đừng cho rằng họ đang chào hỏi xã giao','00:00:17.900','00:00:20.432','tedtalks-77'),
 	('If you say, "I\'m a Monkey," they immediately know you are either 24, 36, 48 or 60 years old','Nếu bạn nói, "Tôi tuổi Thân," họ sẽ biết ngay bạn 24, 36, 48 hoặc 60 tuổi','00:00:20.456','00:00:27.186','tedtalks-77'),
@@ -5955,7 +5955,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Monkeys are clever, curious, creative and mischievous','Khỉ là loài thông minh, hay tò mò, sáng tạo và nghịch ngợm','00:05:53.220','00:05:58.929','tedtalks-77'),
 	('Thank you','Xin Cảm ơn','00:05:58.953','00:06:00.111','tedtalks-77'),
 
-	/* (UUID(),'tedtalks-78','How my son\'s short life made a lasting difference?','Cuộc đời ngắn ngủi của con trai tôi đã mang đến một sự khác biệt trường cửu ra sao?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_078.mp3',NULL,'00:00:13.798','00:10:06.663','tedtalks','NO',78) */
+	/* (UUID(),'tedtalks-78','How my son\'s short life made a lasting difference?','Cuộc đời ngắn ngủi của con trai tôi đã mang đến một sự khác biệt trường cửu ra sao?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_078.mp3',NULL,'00:00:13.798','00:10:06.663','tedtalks',0,0,78) */
 	('I was three months pregnant with twins when my husband Ross and I went to my second sonogram','Khi tôi mang thai sinh đôi được ba tháng, anh Ross chồng tôi và tôi đã đi siêu âm lần thứ hai','00:00:13.798','00:00:19.639','tedtalks-78'),
 	('I was 35 years old at the time, and I knew that that meant we had a higher risk of having a child with a birth defect','Lúc đó tôi 35 tuổi, và tôi biết điều đó có nghĩa là rủi ro chúng tôi có một đứa bé mang dị tật bẩm sinh sẽ cao hơn','00:00:21.221','00:00:28.851','tedtalks-78'),
 	('So, Ross and I researched the standard birth defects, and we felt reasonably prepared','Ross và tôi đã nghiên cứu các dị tật bẩm sinh thường thấy, và chúng tôi cảm thấy khá sẵn sàng','00:00:29.907','00:00:34.989','tedtalks-78'),
@@ -6045,7 +6045,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And I only hope that my life can be as relevant','Và tôi cũng chỉ mong cuộc sống của tôi được ý nghĩa đến vậy mà thôi','00:10:02.224','00:10:04.771','tedtalks-78'),
 	('Thank you','Cảm ơn','00:10:05.512','00:10:06.663','tedtalks-78'),
 
-	/* (UUID(),'tedtalks-79','How students of color confront impostor syndrome?','Các học sinh da màu đối mặt với hội chứng kẻ mạo danh như thế nào?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_079.mp3',NULL,'00:00:13.112','00:10:08.327','tedtalks','NO',79) */
+	/* (UUID(),'tedtalks-79','How students of color confront impostor syndrome?','Các học sinh da màu đối mặt với hội chứng kẻ mạo danh như thế nào?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_079.mp3',NULL,'00:00:13.112','00:10:08.327','tedtalks',0,0,79) */
 	('So, my journey began in the Bronx, New York, in a one-bedroom apartment, with my two sisters and immigrant mother','Câu chuyện của tôi bắt đầu ở phố Bronx, NY, Trong một khu nhà trọ 1phòng Với 2 người chị và người mẹ nuôi của mình','00:00:13.112','00:00:22.561','tedtalks-79'),
 	('I loved our neighborhood','Tôi yêu tất cả hàng xóm của mình','00:00:23.712','00:00:26.519','tedtalks-79'),
 	('It was lively','Mọi thứ ở đó đã từng rất sinh động','00:00:27.382','00:00:28.890','tedtalks-79'),
@@ -6111,7 +6111,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('There is a better way, one that doesn\'t force kids of color into a double bind, a way for them to preserve their ties to their families, homes and communities, a way that teaches them to trust their instincts and to have faith in their own creative genius','Có 1 cách tốt hơn một cách không bắt bọn trẻ phải bó buộc, một cách để họ giữ gìn mối quan hệ của họ với gia đình và xã hội, một cách để dạy họ tin vào bản năng họ và có niềm tin vào thiên bẩm của mình','00:09:42.115','00:10:06.110','tedtalks-79'),
 	('Thank you','Cảm ơn rất nhiều','00:10:07.144','00:10:08.327','tedtalks-79'),
 
-	/* (UUID(),'tedtalks-80','A simple birth kit for mothers in the developing world','Bộ dụng cụ hộ sinh cho bà mẹ ở các nước đang phát triển','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_080.mp3',NULL,'00:00:12.815','00:06:39.046','tedtalks','NO',80) */
+	/* (UUID(),'tedtalks-80','A simple birth kit for mothers in the developing world','Bộ dụng cụ hộ sinh cho bà mẹ ở các nước đang phát triển','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_080.mp3',NULL,'00:00:12.815','00:06:39.046','tedtalks',0,0,80) */
 	('In the next six minutes that you will listen to me, the world will have lost three mothers while delivering their babies: one, because of a severe complication, second, because she will be a teenager and her body will not be prepared for birth, but the third, only because of lack of access to basic clean tools at the time of childbirth','Trong sáu phút tới, khi các bạn đang nghe tôi nói, thế giới sẽ mất đi ba người mẹ khi họ đang sinh con, đầu tiên, vì những biến chứng nghiêm trọng khi sinh nở, thứ hai, vì một vài trong số họ vẫn là trẻ thành niên, nên cơ thể họ chưa sẵn sàng cho việc sinh con, nhưng lý do thứ ba, chỉ do sự thiếu thốn những dụng cụ vệ sinh cơ bản trong quá trình đỡ đẻ','00:00:12.815','00:00:40.432','tedtalks-80'),
 	('She will not be alone','Họ không phải những trường hợp cá biệt','00:00:41.496','00:00:43.779','tedtalks-80'),
 	('Over one million mothers and babies die every single year in the developing world, only because of lack of access to basic cleanliness while giving birth to their babies','Hơn một triệu bà mẹ và trẻ em đã thiệt mạng mỗi năm tại các nước đang phát triển chỉ vì thiếu dụng cụ vệ sinh cơ bản trong khi đang sinh con','00:00:43.803','00:00:55.030','tedtalks-80'),
@@ -6173,7 +6173,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('We should never forget that women are at the center of a sustainable world, and we do not exist without them','Đừng bao giờ quên rằng phụ nữ là trung tâm của một thế giới bền vững, và ta không thể tồn tại thiếu họ','00:06:30.819','00:06:37.863','tedtalks-80'),
 	('Thank you','Cảm ơn','00:06:37.887','00:06:39.046','tedtalks-80'),
 
-	/* (UUID(),'tedtalks-81','The single most important parenting strategy','Một chiến lược dạy con quan trọng nhất','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_081.mp3',NULL,'00:00:04.584','00:13:54.914','tedtalks','NO',81) */
+	/* (UUID(),'tedtalks-81','The single most important parenting strategy','Một chiến lược dạy con quan trọng nhất','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_081.mp3',NULL,'00:00:04.584','00:13:54.914','tedtalks',0,0,81) */
 	('Alright, quick poll - raise your hand if you have a relationship in your life that\'s meaningful to you','Nào, bình chọn nhanh nhé - Hãy giơ tay nếu bạn có một mối quan hệ trong cuộc đời mà có ý nghĩa quan trọng với bạn','00:00:04.584','00:00:11.591','tedtalks-81'),
 	('OK, I assumed, but always good to check our assumptions','Tôi cũng cho là vậy, nhưng vẫn cần hỏi lại cho chắc chắn','00:00:13.760','00:00:16.805','tedtalks-81'),
 	('I\'m saying this because while I\'ll be focusing today on a parent - child relationship, please know that everything I\'m talking about is applicable to any meaningful relationship','Sở dĩ tôi nói vậy là bởi trong khi hôm nay, tôi tập trung vào mối quan hệ cha mẹ - con cái, xin nhớ rằng mọi điều mà tôi chia sẻ đều có thể áp dụng vào bất cứ mọi mối quan hệ quan trọng nào','00:00:16.805','00:00:29.818','tedtalks-81'),
@@ -6319,7 +6319,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'tedtalks-82','Work has changed why haven\'t resumes?','Bản chất công việc thay đổi. Sao ta vẫn duy trì sơ yếu lý lịch?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_082.mp3',NULL,'00:00:03.504','00:10:14.478','tedtalks','NO',82) */
+	/* (UUID(),'tedtalks-82','Work has changed why haven\'t resumes?','Bản chất công việc thay đổi. Sao ta vẫn duy trì sơ yếu lý lịch?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_082.mp3',NULL,'00:00:03.504','00:10:14.478','tedtalks',0,0,82) */
 	('Back in 1482, a young man heard that the region of Milan was looking for an engineer, so he did what job applicants do','Vào năm 1482, một chàng trai trẻ nghe nói tin một khu vực ở Milan đang tuyển dụng một kỹ sư, vì vậy anh ta bắt đầu hành trình tìm việc','00:00:03.504','00:00:12.043','tedtalks-82'),
 	('He wrote down his skills and his objectives and how they related to the role in what is thought to be the first resume ever created','Anh ta viết ra các kỹ năng và mục tiêu nghề nghiệp và mức độ liên quan đến công việc đó theo cách được xem như là bản sơ yếu lý lịch đầu tiên trên thế giới','00:00:12.076','00:00:20.084','tedtalks-82'),
 	('That young man was Leonardo da Vinci','Chàng trai trẻ đó chính là Leonardo da Vinci','00:00:20.484','00:00:23.888','tedtalks-82'),
@@ -6423,7 +6423,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Plus, it will give us enough time to rethink cover letters, because those are really terrible','Thêm nữa, điều này cũng đủ để ta nhìn nhận lại các thư xin việc, vì chúng thật sự chẳng hay ho gì','00:10:08.405','00:10:13.243','tedtalks-82'),
 	('Thank you','Cảm ơn','00:10:13.276','00:10:14.478','tedtalks-82'),
 
-	/* (UUID(),'tedtalks-83','How to have constructive conversations?','Làm thế nào để có cuộc trò chuyện mang tính xây dựng?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_083.mp3',NULL,'00:00:12.997','00:10:38.630','tedtalks','NO',83) */
+	/* (UUID(),'tedtalks-83','How to have constructive conversations?','Làm thế nào để có cuộc trò chuyện mang tính xây dựng?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_083.mp3',NULL,'00:00:12.997','00:10:38.630','tedtalks',0,0,83) */
 	('Three planes, 25 hours, 10,000 miles','Ba chuyến bay, 25 giờ, 10,000 dặm','00:00:12.997','00:00:16.063','tedtalks-83'),
 	('My dad gets off a flight from Australia with one thing in mind and it\'s not a snack or a shower or a nap','Bố tôi từ Úc đáp máy bay xuống với một suy nghĩ trong đầu không phải là tắm, ăn hay ngủ','00:00:16.097','00:00:23.330','tedtalks-83'),
 	('It\'s November 2016 and Dad is here to talk to Americans about the election','Đó là tháng 11 năm 2016 và bố tôi đến để bàn với người Mỹ về cuộc bầu cử','00:00:23.363','00:00:28.930','tedtalks-83'),
@@ -6504,7 +6504,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('It\'s how our world will move forward too','Đó cũng là cách để thế giới tiến bộ','00:10:34.730','00:10:37.463','tedtalks-83'),
 	('Thank you','Xin cảm ơn','00:10:37.463','00:10:38.630','tedtalks-83'),
 
-	/* (UUID(),'tedtalks-84','How to meet your child’s difficult behavior with compassion?','Làm thế nào để đáp ứng hành vi khó khăn của con bạn bằng lòng trắc ẩn?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_084.mp3',NULL,'00:00:04.380','00:17:15.220','tedtalks','NO',84) */
+	/* (UUID(),'tedtalks-84','How to meet your child’s difficult behavior with compassion?','Làm thế nào để đáp ứng hành vi khó khăn của con bạn bằng lòng trắc ẩn?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_084.mp3',NULL,'00:00:04.380','00:17:15.220','tedtalks',0,0,84) */
 	('Tell me, have you ever seen somebody else\'s child behave appallingly in a supermarket?','Cho tôi biết, bạn đã bao giờ nhìn thấy con của ai đó cư xử kinh khủng trong siêu thị chưa?','00:00:04.380','00:00:14.100','tedtalks-84'),
 	('Did you secretly blame the mum for her lack of control?','Bạn đã từng đổ lỗi cho người mẹ vì cô ấy thiếu kiểm soát con mình chưa?','00:00:17.220','00:00:21.060','tedtalks-84'),
 	('Or did you even feel a little bit smug because you knew that your child would never behave like that?','Hay bạn có cảm thấy một chút tự mãn vì bạn biết rằng con của bạn sẽ không bao giờ hành xử như vậy?','00:00:23.140','00:00:29.060','tedtalks-84'),
@@ -6646,7 +6646,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And let\'s be honest, isn\'t that what the NHS is all about?','Và hãy thành thật mà nói, đó không phải là mục đích của Dịch vụ Y tế Quốc gia sao?','00:17:10.060','00:17:13.580','tedtalks-84'),
 	('Thank you','Xin cảm ơn','00:17:14.060','00:17:15.220','tedtalks-84'),
 
-	/* (UUID(),'tedtalks-85','5 steps to fix any problem at work','5 bước sửa chữa mọi vấn đề tại chỗ làm','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_085.mp3',NULL,'00:00:04.292','00:11:45.910','tedtalks','NO',85) */
+	/* (UUID(),'tedtalks-85','5 steps to fix any problem at work','5 bước sửa chữa mọi vấn đề tại chỗ làm','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_085.mp3',NULL,'00:00:04.292','00:11:45.910','tedtalks',0,0,85) */
 	('You\'ve heard the phrase "move fast and break things"','Bạn đã nghe qua câu nói "tiến nhanh và phá vỡ mọi thứ"','00:00:04.292','00:00:07.546','tedtalks-85'),
 	('Facebook made it famous','Facebook đã khiến nó nổi tiếng','00:00:08.213','00:00:09.506','tedtalks-85'),
 	('But really, Mark just made the mistake of saying it out loud and putting it on company posters','Nhưng thật tình, Mark đã phạm sai lầm khi nói to câu đó và viết nó lên áp phích công ty','00:00:09.548','00:00:14.511','tedtalks-85'),
@@ -6778,7 +6778,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Thank you','Xin cảm ơn','00:11:27.725','00:11:28.935','tedtalks-85'),
 	('So whether your name is Mark or Elon or Chris, thank you for having me, or Anne, find out what happens when you move fast and fix things and decide that the moment that matters most is right now','Vậy, dù cho bạn tên là Mark hay Elon hay Chris, cảm ơn bạn vì đã mời tôi, hoặc là Anne, hãy tìm hiểu xem chuyện gì xảy ra khi bạn tiến nhanh và sửa chữa mọi thứ và quyết định rằng bây giờ chính là thời khắc quan trọng nhất','00:11:31.400','00:11:45.910','tedtalks-85'),
 
-	/* (UUID(),'tedtalks-86','What you can learn from people who disagree with you?','Bạn có thể học được gì từ những người có quan điểm trái với bạn?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_086.mp3',NULL,'00:00:03.625','00:10:22.368','tedtalks','NO',86) */
+	/* (UUID(),'tedtalks-86','What you can learn from people who disagree with you?','Bạn có thể học được gì từ những người có quan điểm trái với bạn?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_086.mp3',NULL,'00:00:03.625','00:10:22.368','tedtalks',0,0,86) */
 	('OK, guys, let\'s go back to high school','Được rồi, các bạn, hãy cùng trở về thời trung học nào','00:00:03.625','00:00:07.003','tedtalks-86'),
 	('Does anyone remember that feeling of walking into the school cafeteria with your tray in your hand and not knowing where to sit?','Có ai còn nhớ cảm giác khi bước vào căng tin của trường với chiếc khay trên tay bạn và không biết ngồi ở đâu hay không?','00:00:08.380','00:00:16.972','tedtalks-86'),
 	('Yeah, I see some people nodding, OK, cool','Yeah, tôi thấy một số người gật đầu, Ok, được rồi','00:00:17.931','00:00:20.850','tedtalks-86'),
@@ -6876,7 +6876,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'tedtalks-87','The relationship between sex and imagination','Mối liên hệ giữa tình dục và trí tưởng tượng','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_087.mp3',NULL,'00:00:05.210','00:09:01.704','tedtalks','NO',87) */
+	/* (UUID(),'tedtalks-87','The relationship between sex and imagination','Mối liên hệ giữa tình dục và trí tưởng tượng','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_087.mp3',NULL,'00:00:05.210','00:09:01.704','tedtalks',0,0,87) */
 	('Oh, I\'m not in the mood','Ôi, em đang không có tâm trạng đâu','00:00:05.210','00:00:07.796','tedtalks-87'),
 	('Who here has ever told a partner that before?','Có ai ở đây từng nói vậy với bạn tình chưa?','00:00:09.339','00:00:11.591','tedtalks-87'),
 	('We\'ve all done this','Chúng ta đều từng làm vậy','00:00:16.012','00:00:17.597','tedtalks-87'),
@@ -6980,7 +6980,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('So the next time you notice that you haven\'t been in the mood for a while, carve some time out for yourself and let your imagination tell you a sexy story','Vì vậy, lần sau khi bạn nhận thấy rằng bạn không có hứng trong một khoảng thời gian, thì hãy dành thời gian cho bản thân và để trí tưởng tượng của bạn kể cho bạn nghe một câu chuyện hấp dẫn','00:08:49.150','00:08:59.452','tedtalks-87'),
 	('Thank you','Xin cảm ơn','00:09:00.411','00:09:01.704','tedtalks-87'),
 
-	/* (UUID(),'tedtalks-88','Why we\'re more honest with machines than people?','Tại sao chúng ta tin tưởng máy móc hơn con người?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_088.mp3',NULL,'00:00:12.596','00:11:11.116','tedtalks','NO',88) */
+	/* (UUID(),'tedtalks-88','Why we\'re more honest with machines than people?','Tại sao chúng ta tin tưởng máy móc hơn con người?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_088.mp3',NULL,'00:00:12.596','00:11:11.116','tedtalks',0,0,88) */
 	('Now, a few years back, I was having a barbecue with friends and family','Vài năm trước, tôi dự tiệc thịt nướng cùng gia đình và bạn bè','00:00:12.596','00:00:17.316','tedtalks-88'),
 	('As usual, we talked about the weather, the good food or TV shows to watch','Như mọi khi, chúng tôi nói về thời tiết, đồ ăn hoặc chương trình truyền hình, như những người bình thường','00:00:17.316','00:00:21.836','tedtalks-88'),
 	('So nothing out of the ordinary until one attendee casually mentioned that he and his wife hadn\'t had sex in a long time','Vậy là không có gì bất thường cho đến khi một vị khách tình cờ nhắc tới vợ chồng anh ta đã lâu không quan hệ tình dục','00:00:21.876','00:00:31.996','tedtalks-88'),
@@ -7063,7 +7063,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Many machines do this already, and maybe so should we','Nhiều máy móc đã làm được điều này, và có thể chúng ta nên làm thế','00:11:05.956','00:11:09.836','tedtalks-88'),
 	('Thank you very much','Cảm ơn rất nhiều','00:11:09.876','00:11:11.116','tedtalks-88'),
 
-	/* (UUID(),'tedtalks-89','3 Strategies for effectively talking about climate change','3 chiến lược để ứng phó với biến đổi khí hậu một cách hiệu quả','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_089.mp3',NULL,'00:00:13.038','00:07:49.038','tedtalks','NO',89) */
+	/* (UUID(),'tedtalks-89','3 Strategies for effectively talking about climate change','3 chiến lược để ứng phó với biến đổi khí hậu một cách hiệu quả','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_089.mp3',NULL,'00:00:13.038','00:07:49.038','tedtalks',0,0,89) */
 	('I often have this strange thought that aliens come down to Earth to check us out','Tôi thường có suy nghĩ kỳ quặc như việc người ngoài hành tinh sẽ ghé thăm Trái Đất','00:00:13.038','00:00:17.329','tedtalks-89'),
 	('They beam up a hundred scientists and they ask them, "What\'s going on on your planet?"','Họ đưa hàng trăm nhà khoa học đến để tra khảo: "Chuyện gì đang xảy ra ở hành tinh này?"','00:00:17.371','00:00:21.900','tedtalks-89'),
 	('And the aliens quickly learn something: that all of these scientists have concluded that pollution from our industrial activity is irreversibly heating the earth in a way that will make it very hard for us to live here safely','Và họ nhanh chóng hiểu rằng: tất cả các nhà khoa học đều kết luận sự ô nhiễm đến từ các hoạt động công nghiệp khiến Trái Đất nóng lên là điều dĩ nhiên và ta sẽ khó mà có cuộc sống an toàn khi ở đây','00:00:22.000','00:00:32.996','tedtalks-89'),
@@ -7163,7 +7163,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And when we do, we\'ll achieve the public will necessary to take on this colossal but winnable fight for our future','Và khi hành động, chúng ta sẽ có được ý chí từ mọi người cho vấn đề lớn này và chiến thắng trong cuộc chiến vì tương lai','00:07:40.746','00:07:47.079','tedtalks-89'),
 	('Thank you','Cảm ơn','00:07:47.913','00:07:48.700','tedtalks-89'),
 
-	/* (UUID(),'tedtalks-90','How to lead a conversation between people who disagree?','Làm thế nào để dẫn dắt đối thoại giữa những người đối nghịch?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_090.mp3',NULL,'00:00:13.205','00:09:05.362','tedtalks','NO',90) */
+	/* (UUID(),'tedtalks-90','How to lead a conversation between people who disagree?','Làm thế nào để dẫn dắt đối thoại giữa những người đối nghịch?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_090.mp3',NULL,'00:00:13.205','00:09:05.362','tedtalks',0,0,90) */
 	('So in the run-up to the 2016 election, I was, like most of us, watching the rise in discord and vitriol and nastiness in our public spaces','Nên trong giai đoạn chạy nước rút trước cuộc bầu cử năm 2016, tôi, cũng như phần lớn mọi người, đã chứng kiến ​​ sự gia tăng bất hòa và đả kích và sự xấu xa ở những nơi công cộng','00:00:13.205','00:00:23.090','tedtalks-90'),
 	('It was this crazy uptick in polarization','Tình trạng đó trở nên cực đoan với tốc độ chóng mặt','00:00:23.132','00:00:26.594','tedtalks-90'),
 	('It was both disheartening and distressing','Nó khiến chúng ta chán nản và đau buồn','00:00:26.635','00:00:29.180','tedtalks-90'),

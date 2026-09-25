@@ -1,5 +1,5 @@
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'economist-1','China approves the world\'s most expensive infrastructure project','Trung Quốc phê duyệt dự án cơ sở hạ tầng đắt nhất thế giới','NEWS_DAILY_NEW_01_ECONOMIST_001.mp3',NULL,'00:00:00.000','00:03:29.270','economist','YES',1) */
+	/* (UUID(),'economist-1','China approves the world\'s most expensive infrastructure project','Trung Quốc phê duyệt dự án cơ sở hạ tầng đắt nhất thế giới','NEWS_DAILY_NEW_01_ECONOMIST_001.mp3',NULL,'00:00:00.000','00:03:29.270','economist',1,0,1) */
 	('China','Trung Quốc','00:00:02.400','00:00:04.110','economist-1'),
 	('Hydropower','Thủy điện','00:00:06.190','00:00:07.109','economist-1'),
 	('Dam','Đập thủy điện','00:00:08.250','00:00:08.750','economist-1'),
@@ -28,7 +28,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('It will take at least a decade to complete the new dam','Mất ít nhất một thập kỷ để hoàn thành con đập mới','00:03:21.750','00:03:24.390','economist-1'),
 	('India and Bangladesh might want to use that time working out how to adapt','Ấn Độ và Bangladesh có thể muốn sử dụng khoảng thời gian đó để tìm cách thích ứng','00:03:24.990','00:03:29.270','economist-1'),
 
-	/* (UUID(),'economist-2','Why canada should join EU','Tại sao Canada nên gia nhập EU','NEWS_DAILY_NEW_01_ECONOMIST_002.mp3',NULL,'00:00:00.000','00:07:55.230','economist','NO',2) */
+	/* (UUID(),'economist-2','Why canada should join EU','Tại sao Canada nên gia nhập EU','NEWS_DAILY_NEW_01_ECONOMIST_002.mp3',NULL,'00:00:00.000','00:07:55.230','economist',0,0,2) */
 	('Europe','Châu Âu','00:00:02.540','00:00:03.300','economist-2'),
 	('Charlemagne','Charlemagne','00:00:06.250','00:00:07.010','economist-2'),
 	('The EU\'s newest member, eh?','Thành viên mới nhất của EU, hả?','00:00:07.870','00:00:10.470','economist-2'),
@@ -90,7 +90,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Ten EU countries have yet to ratify its most far-reaching measures','Mười quốc gia EU vẫn chưa phê chuẩn các điều khoản sâu rộng nhất của hiệp định','00:07:42.810','00:07:47.770','economist-2'),
 	('Short of bringing Canada into the club, Europeans could start by getting that deal over the line','Nếu không thể đưa Canada vào khối, châu Âu có thể bắt đầu bằng cách hoàn tất hiệp định này','00:07:48.690','00:07:55.230','economist-2'),
 
-	/* (UUID(),'economist-3','Cancer vaccines are showing promise at last','Vawcs-xin ung thư cuối cùng cũng cho thấy triển vọng','NEWS_DAILY_NEW_01_ECONOMIST_003.mp3',NULL,'00:00:00.000','00:09:16.550','economist','NO',3) */
+	/* (UUID(),'economist-3','Cancer vaccines are showing promise at last','Vawcs-xin ung thư cuối cùng cũng cho thấy triển vọng','NEWS_DAILY_NEW_01_ECONOMIST_003.mp3',NULL,'00:00:00.000','00:09:16.550','economist',0,0,3) */
 	('Science and technology','Khoa học và công nghệ','00:00:02.430','00:00:04.550','economist-3'),
 	('Oncology','Ung thư học','00:00:06.190','00:00:06.950','economist-3'),
 	('The long shots','Những nỗ lực ít có cơ hội thành công','00:00:07.810','00:00:08.990','economist-3'),
@@ -156,7 +156,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('It was not','Câu trả lời là không','00:09:12.070','00:09:12.930','economist-3'),
 	('2025, however, may be a different story','Tuy nhiên, năm 2025 có thể sẽ là một câu chuyện khác','00:09:13.530','00:09:16.550','economist-3'),
 
-	/* (UUID(),'economist-4','Los Angeles against the flames','Los Angeles chống lại ngọn lửa','NEWS_DAILY_NEW_01_ECONOMIST_004.mp3',NULL,'00:00:00.000','00:05:04.920','economist','NO',4) */
+	/* (UUID(),'economist-4','Los Angeles against the flames','Los Angeles chống lại ngọn lửa','NEWS_DAILY_NEW_01_ECONOMIST_004.mp3',NULL,'00:00:00.000','00:05:04.920','economist',0,0,4) */
 	('United States Wild fires','Cháy rừng tại Hoa Kỳ','00:00:02.200','00:00:07.400','economist-4'),
 	('Los Angeles against the flames','Los Angeles chống chọi với ngọn lửa','00:00:08.480','00:00:10.680','economist-4'),
 	('Always vulnerable, the city is increasingly susceptible to fire','Luôn dễ tổn thương, thành phố ngày càng dễ bị ảnh hưởng bởi hỏa hoạn','00:00:11.960','00:00:16.540','economist-4'),
@@ -201,7 +201,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The violent winds affect the entire quality of life in Los Angeles, accentuate its impermanence, its unreliability','Những cơn gió dữ dội ảnh hưởng đến toàn bộ chất lượng cuộc sống ở Los Angeles, làm nổi bật sự tạm bợ và bất ổn của thành phố','00:04:51.910','00:05:00.440','economist-4'),
 	('The wind shows us how close to the edge we are','Những cơn gió cho chúng ta thấy mình đang gần vực thẳm đến mức nào','00:05:01.180','00:05:04.920','economist-4'),
 
-	/* (UUID(),'economist-5','Health warnings about alcohol give only half the story','Cảnh báo sức khỏe về rượu bia chỉ phản ánh một nửa câu chuyện','NEWS_DAILY_NEW_01_ECONOMIST_005.mp3',NULL,'00:00:00.000','00:05:37.000','economist','YES',5) */
+	/* (UUID(),'economist-5','Health warnings about alcohol give only half the story','Cảnh báo sức khỏe về rượu bia chỉ phản ánh một nửa câu chuyện','NEWS_DAILY_NEW_01_ECONOMIST_005.mp3',NULL,'00:00:00.000','00:05:37.000','economist',1,0,5) */
 	('Leaders','Lãnh đạo','00:00:02.570','00:00:03.410','economist-5'),
 	('The risks of alcohol','Những rủi ro của rượu','00:00:05.760','00:00:07.880','economist-5'),
 	('How to think about the demon drink','Cách nhìn nhận về dồ uống của quỷ dữ','00:00:08.420','00:00:11.480','economist-5'),
@@ -250,7 +250,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'economist-6','Do better shoes help you run faster?','Giày tốt hơn có giúp bạn chạy nhanh hơn không?','NEWS_DAILY_NEW_01_ECONOMIST_006.mp3',NULL,'00:00:00.000','00:05:07.000','economist','NO',6) */
+	/* (UUID(),'economist-6','Do better shoes help you run faster?','Giày tốt hơn có giúp bạn chạy nhanh hơn không?','NEWS_DAILY_NEW_01_ECONOMIST_006.mp3',NULL,'00:00:00.000','00:05:07.000','economist',0,0,6) */
 	('Science and technology','Khoa học và công nghệ','00:00:02.330','00:00:04.470','economist-6'),
 	('Well informed','Hiểu biết sâu rộng','00:00:05.910','00:00:07.090','economist-6'),
 	('Do better shoes help you run faster?','Giày tốt hơn có giúp bạn chạy nhanh hơn không?','00:00:07.830','00:00:10.670','economist-6'),

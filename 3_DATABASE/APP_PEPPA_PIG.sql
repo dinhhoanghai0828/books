@@ -1,5 +1,5 @@
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'peppa-pig-1','Muddy Puddles','Vũng Bùn','BASIC_ENGLISH_BASIC_ENGLISH_02_PEPPA_PIG_001.mp3',NULL,'00:00:00.000','00:04:56.100','peppa-pig','YES',1) */
+	/* (UUID(),'peppa-pig-1','Muddy Puddles','Vũng Bùn','BASIC_ENGLISH_BASIC_ENGLISH_02_PEPPA_PIG_001.mp3',NULL,'00:00:00.000','00:04:56.100','peppa-pig',1,0,1) */
 	('I\'m Peppa Pig','Mình là Heo Peppa','00:00:02.350','00:00:03.800','peppa-pig-1'),
 	('This is my little brother George','Đây là em trai nhỏ của mình, Heo George','00:00:05.000','00:00:06.900','peppa-pig-1'),
 	('This is Bobby Pig','Đây là Heo Bobby','00:00:07.300','00:00:08.900','peppa-pig-1'),
@@ -56,7 +56,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Oh, Daddy Pig, look at the mess you\'re in','Ôi bố nó ơi, nhìn xem bố nó bẩn hết cả rồi kìa','00:04:24.300','00:04:28.540','peppa-pig-1'),
 	('It\'s only mud','Chỉ là bùn thôi mà','00:04:29.160','00:04:30.700','peppa-pig-1'),
 
-	/* (UUID(),'peppa-pig-2','Mr Dinosaur Is Lost','Ông khủng long bị lạc','BASIC_ENGLISH_BASIC_ENGLISH_02_PEPPA_PIG_002.mp3',NULL,'00:00:00.000','00:03:56.900','peppa-pig','YES',2) */
+	/* (UUID(),'peppa-pig-2','Mr Dinosaur Is Lost','Ông khủng long bị lạc','BASIC_ENGLISH_BASIC_ENGLISH_02_PEPPA_PIG_002.mp3',NULL,'00:00:00.000','00:03:56.900','peppa-pig',1,0,2) */
 	('I\'m Peppa Pig','Mình là Heo Peppa','00:00:02.500','00:00:04.200','peppa-pig-2'),
 	('This is my little brother George','Đây là em trai nhỏ của mình, Heo George','00:00:05.000','00:00:07.200','peppa-pig-2'),
 	('This is Mummy Pig','Đây là Heo Mẹ','00:00:07.300','00:00:09.100','peppa-pig-2'),
@@ -128,7 +128,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Maybe it isn\'t a good idea to play with dinosaurs near trees','Có lẽ chơi khủng long gần cây không phải là ý hay','00:04:31.920','00:04:36.440','peppa-pig-2'),
 	('Dinosaur','Khủng long','00:04:42.700','00:04:43.700','peppa-pig-2'),
 
-	/* (UUID(),'peppa-pig-3','Best Friend','Bạn thân','BASIC_ENGLISH_BASIC_ENGLISH_02_PEPPA_PIG_003.mp3',NULL,'00:00:00.000','00:03:56.900','peppa-pig','YES',3) */
+	/* (UUID(),'peppa-pig-3','Best Friend','Bạn thân','BASIC_ENGLISH_BASIC_ENGLISH_02_PEPPA_PIG_003.mp3',NULL,'00:00:00.000','00:03:56.900','peppa-pig',1,0,3) */
 	('I\'m Peppa Pig','Mình là Heo Peppa','00:00:02.090','00:00:03.530','peppa-pig-3'),
 	('This is my little brother George','Đây là em trai nhỏ của mình, Heo George','00:00:04.110','00:00:06.350','peppa-pig-3'),
 	('This is Mummy Pig','Đây là Heo Mẹ','00:00:06.990','00:00:08.510','peppa-pig-3'),
@@ -213,7 +213,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('And me','Con nữa','00:04:51.940','00:04:53.080','peppa-pig-3'),
 	('And me','Con nữa','00:04:53.540','00:04:56.740','peppa-pig-3'),
 
-	/* (UUID(),'peppa-pig-4','Polly Parrot','Con vẹt Polly','BASIC_ENGLISH_BASIC_ENGLISH_02_PEPPA_PIG_004.mp3',NULL,'00:00:00.000','00:03:56.900','peppa-pig','YES',4) */
+	/* (UUID(),'peppa-pig-4','Polly Parrot','Con vẹt Polly','BASIC_ENGLISH_BASIC_ENGLISH_02_PEPPA_PIG_004.mp3',NULL,'00:00:00.000','00:03:56.900','peppa-pig',1,0,4) */
 	('I\'m Peppa Pig','','00:00:02.240','00:00:03.640','peppa-pig-4'),
 	('This is my little brother George','','00:00:04.280','00:00:06.480','peppa-pig-4'),
 	('This is Mummy Pig','','00:00:07.119','00:00:08.620','peppa-pig-4'),
@@ -280,7 +280,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Peppa Pig','','00:04:23.740','00:04:44.310','peppa-pig-4'),
 	('Peppa Pig','','00:04:51.730','00:04:53.630','peppa-pig-4'),
 
-	/* (UUID(),'peppa-pig-5','Hide and Seek','Trốn tìm','BASIC_ENGLISH_BASIC_ENGLISH_02_PEPPA_PIG_005.mp3',NULL,'00:00:00.000','00:03:56.900','peppa-pig','YES',5) */
+	/* (UUID(),'peppa-pig-5','Hide and Seek','Trốn tìm','BASIC_ENGLISH_BASIC_ENGLISH_02_PEPPA_PIG_005.mp3',NULL,'00:00:00.000','00:03:56.900','peppa-pig',1,0,5) */
 	('I\'m Peppa Pig','','00:00:02.080','00:00:03.640','peppa-pig-5'),
 	('This is my little brother George','','00:00:04.140','00:00:06.480','peppa-pig-5'),
 	('This is Bobby Pig','','00:00:07.020','00:00:08.640','peppa-pig-5'),

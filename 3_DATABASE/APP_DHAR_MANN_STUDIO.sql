@@ -1,5 +1,5 @@
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'dhar-mann-studio-1','Mean girls reject teen from tiktok dance group, they live to regret their decision','Những cô gái kiêu kỳ từ chối cô thiếu niên tham gia nhóm nhảy TikTok, họ phải hối hận vì quyết định này','CONVERSATIONS_DAILY_CONVERSATION_01_DHAR_MANN_STUDIO_001.mp3',NULL,'00:00:00.000','00:05:24.290','dhar-mann-studio','NO',1) */
+	/* (UUID(),'dhar-mann-studio-1','Mean girls reject teen from tiktok dance group, they live to regret their decision','Những cô gái kiêu kỳ từ chối cô thiếu niên tham gia nhóm nhảy TikTok, họ phải hối hận vì quyết định này','CONVERSATIONS_DAILY_CONVERSATION_01_DHAR_MANN_STUDIO_001.mp3',NULL,'00:00:00.000','00:05:24.290','dhar-mann-studio',0,0,1) */
 	('We\'re in the Lamborghini Forget-a-Cop car','Chúng ta đang ở trong chiếc Lamborghini Forget-a-Cop','00:00:03.520','00:00:05.760','dhar-mann-studio-1'),
 	('With a pistol on my hip like I\'m a cop','Cầm khẩu súng ngắn bên hông như thể tôi là cảnh sát','00:00:05.920','00:00:07.680','dhar-mann-studio-1'),
 	('Have you ever met a..','Cậu đã bao giờ gặp một...','00:00:08.020','00:00:10.740','dhar-mann-studio-1'),
@@ -98,7 +98,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('I appreciate you, and I\'ll see you in the next video','Mình rất trân trọng bạn, và hẹn gặp lại bạn trong video tiếp theo','00:05:00.610','00:05:03.870','dhar-mann-studio-1'),
 	('Thanks for watching','Cảm ơn vì đã xem','00:05:22.170','00:05:24.290','dhar-mann-studio-1'),
 
-	/* (UUID(),'dhar-mann-studio-2','Poor dad can’t buy birthday cake, stranger changes his life forever','Người cha nghèo không thể mua bánh sinh nhật, một người lạ đã thay đổi cuộc đời ông mãi mãi','CONVERSATIONS_DAILY_CONVERSATION_01_DHAR_MANN_STUDIO_002.mp3',NULL,'00:00:00.000','00:07:13.710','dhar-mann-studio','NO',2) */
+	/* (UUID(),'dhar-mann-studio-2','Poor dad can’t buy birthday cake, stranger changes his life forever','Người cha nghèo không thể mua bánh sinh nhật, một người lạ đã thay đổi cuộc đời ông mãi mãi','CONVERSATIONS_DAILY_CONVERSATION_01_DHAR_MANN_STUDIO_002.mp3',NULL,'00:00:00.000','00:07:13.710','dhar-mann-studio',0,0,2) */
 	('Next','Tiếp theo','00:00:00.490','00:00:00.970','dhar-mann-studio-2'),
 	('Okay, the total is $14.87','Tổng cộng là $14.87','00:00:13.150','00:00:24.000','dhar-mann-studio-2'),
 	('This is $6.12','Đây là $6.12','00:00:24.000','00:00:25.000','dhar-mann-studio-2'),
@@ -194,7 +194,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The only way you have a grandchild is because of me','Cách duy nhất để ba có cháu là nhờ con','00:06:49.750','00:06:51.850','dhar-mann-studio-2'),
 	('I\'ll see you in the next video','Tôi sẽ gặp bạn trong video tiếp theo','00:07:12.230','00:07:13.710','dhar-mann-studio-2'),
 
-	/* (UUID(),'dhar-mann-studio-3','Two employees compete for promotion, what happens in the end is shocking','Hai nhân viên cạnh tranh để được thăng chức, điều xảy ra cuối cùng khiến mọi người bất ngờ','CONVERSATIONS_DAILY_CONVERSATION_01_DHAR_MANN_STUDIO_003.mp3',NULL,'00:00:00.000','00:08:15.260','dhar-mann-studio','NO',3) */
+	/* (UUID(),'dhar-mann-studio-3','Two employees compete for promotion, what happens in the end is shocking','Hai nhân viên cạnh tranh để được thăng chức, điều xảy ra cuối cùng khiến mọi người bất ngờ','CONVERSATIONS_DAILY_CONVERSATION_01_DHAR_MANN_STUDIO_003.mp3',NULL,'00:00:00.000','00:08:15.260','dhar-mann-studio',0,0,3) */
 	('Good morning','Chào buổi sáng','00:00:03.460','00:00:05.340','dhar-mann-studio-3'),
 	('There\'s a new senior manager position that just opened up','Có một vị trí quản lý cấp cao mới vừa mở','00:00:06.600','00:00:09.500','dhar-mann-studio-3'),
 	('Oh, get those for you, sir','Ôi, tôi sẽ lấy những thứ đó cho ngài','00:00:09.680','00:00:12.460','dhar-mann-studio-3'),

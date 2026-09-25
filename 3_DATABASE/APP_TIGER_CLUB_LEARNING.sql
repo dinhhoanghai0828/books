@@ -1,5 +1,5 @@
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'tiger-club-learning-1','Farm Fun','Niềm vui từ nông trại','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_001.mp3',NULL,'00:00:00.000','00:04:07.000','tiger-club-learning','YES',1) */
+	/* (UUID(),'tiger-club-learning-1','Farm Fun','Niềm vui từ nông trại','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_001.mp3',NULL,'00:00:00.000','00:04:07.000','tiger-club-learning',1,0,1) */
 	('It\'s Storytime','Đến giờ kể chuyện rồi','00:00:01.930','00:00:03.790','tiger-club-learning-1'),
 	('Farm Fun By Elisa Leung','Niềm vui nông trại - Elisa Leung','00:00:06.240','00:00:10.800','tiger-club-learning-1'),
 	('This is a rooster','Đây là một con gà trống','00:00:12.200','00:00:14.310','tiger-club-learning-1'),
@@ -65,7 +65,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Bird','Con chim','00:03:52.100','00:03:53.100','tiger-club-learning-1'),
 	('The bird is flying','Con chim đang bay','00:03:53.100','00:03:55.400','tiger-club-learning-1'),
 
-	/* (UUID(),'tiger-club-learning-2','Farm Play','Vui chơi cùng nông trại','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_002.mp3',NULL,'00:00:00.000','00:03:56.900','tiger-club-learning','YES',2) */
+	/* (UUID(),'tiger-club-learning-2','Farm Play','Vui chơi cùng nông trại','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_002.mp3',NULL,'00:00:00.000','00:03:56.900','tiger-club-learning',1,0,2) */
 	('It\'s Storytime','Đến giờ kể chuyện rồi','00:00:04.450','00:00:06.610','tiger-club-learning-2'),
 	('Farm Play by Elisa Leung','Trò chơi nông trại của Elisa Leung: Tôi là một chú heo con','00:00:07.250','00:00:12.000','tiger-club-learning-2'),
 	('I am a piglet','Tôi là một chú heo con','00:00:12.700','00:00:15.440','tiger-club-learning-2'),
@@ -109,7 +109,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Puppy. The puppy jumps','Cún con: Chú cún con nhảy lên','00:03:38.920','00:03:41.800','tiger-club-learning-2'),
 	('Piglet. The piglet rolls','Heo con: Chú heo con lăn tròn','00:03:42.700','00:03:45.900','tiger-club-learning-2'),
 
-	/* (UUID(),'tiger-club-learning-3','Big And Little On The Farm','Lớn và nhỏ trong trang trại','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_003.mp3',NULL,'00:00:00.000','00:04:26.000','tiger-club-learning','YES',3) */
+	/* (UUID(),'tiger-club-learning-3','Big And Little On The Farm','Lớn và nhỏ trong trang trại','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_003.mp3',NULL,'00:00:00.000','00:04:26.000','tiger-club-learning',1,0,3) */
 	('It\'s Storytime','Đến giờ kể chuyện rồi','00:00:04.270','00:00:06.610','tiger-club-learning-3'),
 	('Big and Little on the Farm by Elisa Leung','Những con vật to và nhỏ ở trang trại - Elisa Leung','00:00:07.770','00:00:16.300','tiger-club-learning-3'),
 	('I am a big pig','Tớ là một chú lợn to','00:00:17.000','00:00:20.100','tiger-club-learning-3'),
@@ -181,7 +181,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Duckling','Vịt con','00:04:07.740','00:04:09.900','tiger-club-learning-3'),
 	('The little duckling likes little fish','Chú vịt con nhỏ thích những con cá nhỏ','00:04:10.720','00:04:14.700','tiger-club-learning-3'),
 
-	/* (UUID(),'tiger-club-learning-5','Moving Along','Tiếp tục di chuyển','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_005.mp3',NULL,'00:00:00.000','00:04:10.000','tiger-club-learning','YES',5) */
+	/* (UUID(),'tiger-club-learning-5','Moving Along','Tiếp tục di chuyển','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_005.mp3',NULL,'00:00:00.000','00:04:10.000','tiger-club-learning',1,0,5) */
 	('It\'s storytime','Đến giờ kể chuyện rồi','00:00:04.510','00:00:06.270','tiger-club-learning-5'),
 	('Moving Along by Alisa Leung','Đi tiếp - Alisa Leung','00:00:08.010','00:00:14.200','tiger-club-learning-5'),
 	('I am a car','Tớ là ô tô','00:00:15.000','00:00:17.600','tiger-club-learning-5'),
@@ -239,7 +239,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('This is a plane','Đây là máy bay','00:03:55.070','00:03:57.330','tiger-club-learning-5'),
 	('The plane flies in the sky','Máy bay bay trên bầu trời','00:03:57.930','00:04:00.610','tiger-club-learning-5'),
 
-	/* (UUID(),'tiger-club-learning-6','Green, Yellow, Red. Stop!','Đèn xanh, đèn vàng, đèn đỏ. Dừng lại!','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_006.mp3',NULL,'00:00:00.000','00:03:56.900','tiger-club-learning','YES',6) */
+	/* (UUID(),'tiger-club-learning-6','Green, Yellow, Red. Stop!','Đèn xanh, đèn vàng, đèn đỏ. Dừng lại!','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_006.mp3',NULL,'00:00:00.000','00:03:56.900','tiger-club-learning',1,0,6) */
 	('It\'s Storytime','Đến giờ kể chuyện rồi','00:00:04.600','00:00:06.600','tiger-club-learning-6'),
 	('Green, yellow, red, stop by Alisa Leung','Đèn xanh, đèn vàng, đèn đỏ, dừng lại bởi Alisa Leung','00:00:08.240','00:00:16.060','tiger-club-learning-6'),
 	('Green, yellow, red, stop','Đèn xanh, đèn vàng, đèn đỏ – dừng lại','00:00:18.320','00:00:21.060','tiger-club-learning-6'),
@@ -296,7 +296,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'tiger-club-learning-7','Toot! Toot! Mountain Ride!','Bíp bíp! Chuyến đi trên núi!','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_007.mp3',NULL,'00:00:00.000','00:03:56.900','tiger-club-learning','YES',7) */
+	/* (UUID(),'tiger-club-learning-7','Toot! Toot! Mountain Ride!','Bíp bíp! Chuyến đi trên núi!','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_007.mp3',NULL,'00:00:00.000','00:03:56.900','tiger-club-learning',1,0,7) */
 	('It\'s Storytime','Đến giờ kể chuyện rồi','00:00:04.910','00:00:06.630','tiger-club-learning-7'),
 	('Toot! Toot! Mountain Ride by Elisa Leong','Bíp bíp! Chuyến đi trên núi - Elisa Leong','00:00:07.690','00:00:09.230','tiger-club-learning-7'),
 	('I am a little train','Tớ là một đoàn tàu nhỏ','00:00:09.570','00:00:17.350','tiger-club-learning-7'),
@@ -370,7 +370,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The train is going around the mountain','Tàu đang đi vòng quanh núi','00:03:48.920','00:03:52.080','tiger-club-learning-7'),
 	('The train is going through the mountain','Tàu đang đi xuyên qua núi','00:03:53.520','00:03:56.520','tiger-club-learning-7'),
 
-	/* (UUID(),'tiger-club-learning-8','Look What I Do','Nhìn xem tôi làm gì','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_008.mp3',NULL,'00:00:00.000','00:03:56.900','tiger-club-learning','YES',8) */
+	/* (UUID(),'tiger-club-learning-8','Look What I Do','Nhìn xem tôi làm gì','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_008.mp3',NULL,'00:00:00.000','00:03:56.900','tiger-club-learning',1,0,8) */
 	('It\'s Storytime','','00:00:04.740','00:00:06.580','tiger-club-learning-8'),
 	('Look What I Do by Elisa Leung I am a driver','','00:00:07.520','00:00:15.820','tiger-club-learning-8'),
 	('I drive a van','','00:00:16.520','00:00:18.540','tiger-club-learning-8'),
@@ -417,7 +417,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('This is a sailor','','00:04:00.930','00:04:03.170','tiger-club-learning-8'),
 	('He steers a yacht','','00:04:04.010','00:04:05.650','tiger-club-learning-8'),
 
-	/* (UUID(),'tiger-club-learning-9','Look What I Do','Nhìn xem tôi làm gì','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_009.mp3',NULL,'00:00:00.000','00:03:56.900','tiger-club-learning','YES',9) */
+	/* (UUID(),'tiger-club-learning-9','Look What I Do','Nhìn xem tôi làm gì','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_009.mp3',NULL,'00:00:00.000','00:03:56.900','tiger-club-learning',1,0,9) */
 	('It\'s Storytime','','00:00:04.200','00:00:05.960','tiger-club-learning-9'),
 	('Time for Bed by Elisa Leung It is time for bed','','00:00:07.380','00:00:15.110','tiger-club-learning-9'),
 	('I take a bath','','00:00:15.470','00:00:17.190','tiger-club-learning-9'),
@@ -455,7 +455,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('I get a goodnight kiss','','00:03:05.320','00:03:07.460','tiger-club-learning-9'),
 	('I say goodnight','','00:03:08.380','00:03:09.780','tiger-club-learning-9'),
 
-	/* (UUID(),'tiger-club-learning-10','Look What I Do','Nhìn xem tôi làm gì','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_010.mp3',NULL,'00:00:00.000','00:03:56.900','tiger-club-learning','YES',10) */
+	/* (UUID(),'tiger-club-learning-10','Look What I Do','Nhìn xem tôi làm gì','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_010.mp3',NULL,'00:00:00.000','00:03:56.900','tiger-club-learning',1,0,10) */
 	('It\'s Storytime','','00:00:04.740','00:00:06.660','tiger-club-learning-10'),
 	('Bubbles, bubbles in my bath','','00:00:07.620','00:00:10.280','tiger-club-learning-10'),
 	('By Elisa Leong Bubbles, bubbles, bubbles','','00:00:11.120','00:00:17.740','tiger-club-learning-10'),

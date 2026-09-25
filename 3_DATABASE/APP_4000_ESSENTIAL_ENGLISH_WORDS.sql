@@ -1,5 +1,5 @@
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'4000-essential-english-words-1','The lion and the rabbit','Sư tử và thỏ','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_001.mp3',NULL,'00:00:00.000','00:02:11.000','4000-essential-english-words','YES',1) */
+	/* (UUID(),'4000-essential-english-words-1','The lion and the rabbit','Sư tử và thỏ','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_001.mp3',NULL,'00:00:00.000','00:02:11.000','4000-essential-english-words',1,0,1) */
 	('The lion and the rabbit','Sư tử và thỏ','00:00:00.960','00:00:03.800','4000-essential-english-words-1'),
 	('A cruel lion lived in the forest','Một con sư tử hung ác sống trong khu rừng','00:00:03.800','00:00:06.900','4000-essential-english-words-1'),
 	('Every day, he killed and ate a lot of animals','Mỗi ngày, nó giết và ăn thịt rất nhiều loài động vật','00:00:06.900','00:00:11.300','4000-essential-english-words-1'),
@@ -29,7 +29,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He never came out','Nó không bao giờ thoát ra được nữa','00:02:02.500','00:02:04.500','4000-essential-english-words-1'),
 	('All of the other animals in the forest were very pleased with their rabbit\'s clever trick','Tất cả các loài vật khác trong rừng đều rất hài lòng với mưu kế thông minh của thỏ','00:02:04.500','00:02:11.000','4000-essential-english-words-1'),
 
-	/* (UUID(),'4000-essential-english-words-2','The laboratory','Phòng thí nghiệm','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_002.mp3',NULL,'00:00:00.000','00:02:13.800','4000-essential-english-words','YES',2) */
+	/* (UUID(),'4000-essential-english-words-2','The laboratory','Phòng thí nghiệm','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_002.mp3',NULL,'00:00:00.000','00:02:13.800','4000-essential-english-words',1,0,2) */
 	('The laboratory','Phòng thí nghiệm','00:00:00.960','00:00:03.000','4000-essential-english-words-2'),
 	('Mia\'s father had a laboratory, but she had no idea what was in it','Bố của Mia có một phòng thí nghiệm, nhưng cô bé không biết có thứ gì bên trong đó','00:00:03.000','00:00:08.600','4000-essential-english-words-2'),
 	('Her dad always closed and locked the door when he went in','Bố cô ấy luôn đóng và khóa cửa khi ông đi vào','00:00:08.600','00:00:13.000','4000-essential-english-words-2'),
@@ -72,7 +72,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('"I wanted to give it to you then, but you can have it now"','"Bố muốn tặng nó cho con sau, nhưng con có thể nhận nó ngay bây giờ"','00:02:07.300','00:02:11.360','4000-essential-english-words-2'),
 	('"I hope you like it"','"Bố hi vọng con thích nó"','00:02:11.360','00:02:13.800','4000-essential-english-words-2'),
 
-	/* (UUID(),'4000-essential-english-words-3','The report','Báo cáo','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_003.mp3',NULL,'00:00:00.000','00:02:11.000','4000-essential-english-words','YES',3) */
+	/* (UUID(),'4000-essential-english-words-3','The report','Báo cáo','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_003.mp3',NULL,'00:00:00.000','00:02:11.000','4000-essential-english-words',1,0,3) */
 	('The report','Báo cáo','00:00:00.960','00:00:02.800','4000-essential-english-words-3'),
 	('Lee sat among the books at the library and thought about his group project','Lee ngồi giữa những cuốn sách trong thư viện và nghĩ về dự án của nhóm mình','00:00:02.800','00:00:08.700','4000-essential-english-words-3'),
 	('They had to turn it in soon, but he hadn\'t even started his part','Họ phải nộp sớm, nhưng cậu ta thậm chí còn chưa bắt đầu phần của mình','00:00:08.700','00:00:13.700','4000-essential-english-words-3'),
@@ -108,7 +108,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('"My model will be awesome"','"Mô hình của tôi sẽ tuyệt vời"','00:02:03.670','00:02:06.000','4000-essential-english-words-3'),
 	('Then he took his model and said goodbye to his new friend','Sau đó, cậu ấy lấy mô hình của mình và nói lời tạm biệt với người bạn mới','00:02:06.000','00:02:11.000','4000-essential-english-words-3'),
 
-	/* (UUID(),'4000-essential-english-words-4','The dog\'s bell','Chiếc chuông của chú chó','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_004.mp3',NULL,'00:00:00.000','00:02:03.000','4000-essential-english-words','YES',4) */
+	/* (UUID(),'4000-essential-english-words-4','The dog\'s bell','Chiếc chuông của chú chó','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_004.mp3',NULL,'00:00:00.000','00:02:03.000','4000-essential-english-words',1,0,4) */
 	('The dog\'s bell','Chiếc chuông của chú chó','00:00:00.960','00:00:03.000','4000-essential-english-words-4'),
 	('John\'s dog was a bad dog','Chó của John là một con chó tồi tệ','00:00:03.000','00:00:06.000','4000-essential-english-words-4'),
 	('He bit people frequently','Nó thường xuyên cắn người','00:00:06.000','00:00:08.500','4000-essential-english-words-4'),
@@ -145,7 +145,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('"You aren\'t able to bite them anymore"','"Mày không thể cắn họ nữa"','00:01:54.000','00:01:57.000','4000-essential-english-words-4'),
 	('You see, being popular isn\'t something positive when it\'s for the wrong reason','Mày thấy đấy, nổi tiếng không phải là điều gì tích cực khi nó xuất phát từ lý do sai lầm','00:01:57.000','00:02:03.000','4000-essential-english-words-4'),
 
-	/* (UUID(),'4000-essential-english-words-5','The jackal and the sun child','Chú chó rừng và đứa con Mặt trời','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_005.mp3',NULL,'00:00:00.000','00:02:11.600','4000-essential-english-words','YES',5) */
+	/* (UUID(),'4000-essential-english-words-5','The jackal and the sun child','Chú chó rừng và đứa con Mặt trời','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_005.mp3',NULL,'00:00:00.000','00:02:11.600','4000-essential-english-words',1,0,5) */
 	('The Jackal and the Sun Child','Chú chó rừng và đứa con Mặt trời','00:00:00.960','00:00:04.000','4000-essential-english-words-5'),
 	('A jackal is a wild dog with a big black back','Chó rừng là một loài chó hoang dã với cái lưng đen to lớn','00:00:04.000','00:00:08.600','4000-essential-english-words-5'),
 	('It resides in the desert','Nó sinh sống ở sa mạc','00:00:08.600','00:00:10.600','4000-essential-english-words-5'),
@@ -189,7 +189,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'4000-essential-english-words-6','The friendly ghost','Hồn ma thân thiện','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_006.mp3',NULL,'00:00:00.000','00:02:11.300','4000-essential-english-words','YES',6) */
+	/* (UUID(),'4000-essential-english-words-6','The friendly ghost','Hồn ma thân thiện','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_006.mp3',NULL,'00:00:00.000','00:02:11.300','4000-essential-english-words',1,0,6) */
 	('The friendly ghost','Hồn ma thân thiện','00:00:00.960','00:00:03.000','4000-essential-english-words-6'),
 	('A nice woman lived by a large river','Có một người phụ nữ tốt bụng sống bên cạnh một con sông lớn','00:00:03.000','00:00:06.600','4000-essential-english-words-6'),
 	('She loved children','Bà rất yêu trẻ con','00:00:06.600','00:00:08.800','4000-essential-english-words-6'),
@@ -232,7 +232,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Sometimes, meeting a ghost has some advantages','Đôi khi, gặp một hồn ma cũng có một vài lợi thế','00:02:04.800','00:02:08.300','4000-essential-english-words-6'),
 	('A ghost can save your life','Một hồn ma có thể cứu mạng sống của bạn đấy','00:02:08.300','00:02:11.300','4000-essential-english-words-6'),
 
-	/* (UUID(),'4000-essential-english-words-7','The best prince','Chàng hoàng tử tốt nhất','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_007.mp3',NULL,'00:00:00.000','00:02:17.200','4000-essential-english-words','YES',7) */
+	/* (UUID(),'4000-essential-english-words-7','The best prince','Chàng hoàng tử tốt nhất','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_007.mp3',NULL,'00:00:00.000','00:02:17.200','4000-essential-english-words',1,0,7) */
 	('The best prince','Chàng hoàng tử tốt nhất','00:00:00.960','00:00:03.300','4000-essential-english-words-7'),
 	('King Minos was very sick','Vua Minos đang bị ốm nặng','00:00:03.300','00:00:05.700','4000-essential-english-words-7'),
 	('His condition was getting worse','Tình trạng của ông ngày càng xấu hơn','00:00:05.700','00:00:08.200','4000-essential-english-words-7'),
@@ -282,7 +282,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('They agreed to have Jason as their king','Họ đồng ý Jason làm vua','00:02:11.800','00:02:14.800','4000-essential-english-words-7'),
 	('He was the best choice','Chàng là sự lựa chọn tốt nhất','00:02:14.800','00:02:17.200','4000-essential-english-words-7'),
 
-	/* (UUID(),'4000-essential-english-words-8','How the sun and the moon were made?','Mặt trời và mặt trăng được sinh ra bằng cách nào?','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_008.mp3',NULL,'00:00:00.000','00:02:10.000','4000-essential-english-words','YES',8) */
+	/* (UUID(),'4000-essential-english-words-8','How the sun and the moon were made?','Mặt trời và mặt trăng được sinh ra bằng cách nào?','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_008.mp3',NULL,'00:00:00.000','00:02:10.000','4000-essential-english-words',1,0,8) */
 	('How the sun and the moon were made?','Mặt trời và mặt trăng được sinh ra bằng cách nào?','00:00:00.960','00:00:04.000','4000-essential-english-words-8'),
 	('Do you ever wonder where the moon and the sun came from?','Bạn có từng tự hỏi Mặt Trăng và Mặt Trời đến từ đâu không?','00:00:04.000','00:00:08.800','4000-essential-english-words-8'),
 	('The Inuit people of Alaska have a theory','Người dân Inuit ở Alaska có một giả thuyết như thế này','00:00:08.800','00:00:11.650','4000-essential-english-words-8'),
@@ -329,7 +329,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She became the moon, and her brother became the sun','Cô biến thành Mặt Trăng, còn anh trai cô trở thành Mặt Trời','00:02:03.300','00:02:07.000','4000-essential-english-words-8'),
 	('They chase each other forever','Họ cứ đuổi nhau mãi như vậy','00:02:07.000','00:02:10.000','4000-essential-english-words-8'),
 
-	/* (UUID(),'4000-essential-english-words-9','The starfish','Chú sao biển','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_009.mp3',NULL,'00:00:00.000','00:01:52.000','4000-essential-english-words','YES',9) */
+	/* (UUID(),'4000-essential-english-words-9','The starfish','Chú sao biển','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_009.mp3',NULL,'00:00:00.000','00:01:52.000','4000-essential-english-words',1,0,9) */
 	('The starfish','Chú sao biển','00:00:00.960','00:00:02.900','4000-essential-english-words-9'),
 	('Last summer I took a trip to an island','Mùa hè năm ngoái tôi đã đi du lịch đến một hòn đảo','00:00:02.900','00:00:06.300','4000-essential-english-words-9'),
 	('I had a lot of fun','Tôi đã rất vui','00:00:06.300','00:00:08.300','4000-essential-english-words-9'),
@@ -364,7 +364,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Then she picked up a very big starfish and said, "But I can save this one"','Rồi cô nhặt một con sao biển rất lớn lên và nói: "Nhưng cháu có thể cứu sống con này"','00:01:40.520','00:01:45.800','4000-essential-english-words-9'),
 	('And then she smiled and threw the starfish as far as she could into the ocean','Và rồi cô bé mỉm cười và ném con sao biển ấy xa nhất có thể vào đại dương bao la','00:01:45.800','00:01:52.000','4000-essential-english-words-9'),
 
-	/* (UUID(),'4000-essential-english-words-10','The first peacock','Con công đầu tiên','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_010.mp3',NULL,'00:00:00.000','00:02:01.000','4000-essential-english-words','YES',10) */
+	/* (UUID(),'4000-essential-english-words-10','The first peacock','Con công đầu tiên','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_010.mp3',NULL,'00:00:00.000','00:02:01.000','4000-essential-english-words',1,0,10) */
 	('The First Peacock','Con công đầu tiên','00:00:00.960','00:00:03.000','4000-essential-english-words-10'),
 	('Argos lived in Ancient Greece','Argos sống ở Hy Lạp cổ đại','00:00:03.000','00:00:05.900','4000-essential-english-words-10'),
 	('He was a husband and a proud father','Anh ấy là một người chồng và một người cha đáng tự hào','00:00:05.900','00:00:08.900','4000-essential-english-words-10'),
@@ -408,7 +408,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'4000-essential-english-words-11','Princess Rose and the creature','Công chúa Hoa Hồng và các sinh Vật','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_011.mp3',NULL,'00:00:00.000','00:02:04.000','4000-essential-english-words','NO',11) */
+	/* (UUID(),'4000-essential-english-words-11','Princess Rose and the creature','Công chúa Hoa Hồng và các sinh Vật','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_011.mp3',NULL,'00:00:00.000','00:02:04.000','4000-essential-english-words',0,0,11) */
 	('Princess Rose and the Creature','Công chúa Hoa Hồng và Sinh Vật','00:00:00.960','00:00:03.800','4000-essential-english-words-11'),
 	('There was once a beautiful princess named Rose','Thuở xa xưa có một nàng công chúa xinh đẹp tên là Rose','00:00:03.800','00:00:07.400','4000-essential-english-words-11'),
 	('Her mother, the queen, however, was not as beautiful as the princess','Mẹ của nàng, hoàng hậu, trái lại, không xinh đẹp bằng công chúa','00:00:07.400','00:00:12.500','4000-essential-english-words-11'),
@@ -449,7 +449,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Standing in front of her was the man Rose had dreamt about','Đứng trước mặt nàng là người đàn ông mà Rose đã mơ thấy','00:01:55.600','00:02:00.000','4000-essential-english-words-11'),
 	('Rose and Henry were married, and they lived happily','Rose và Henry kết hôn, và họ sống hạnh phúc','00:02:00.000','00:02:04.000','4000-essential-english-words-11'),
 
-	/* (UUID(),'4000-essential-english-words-12','The crazy artist','Người nghệ sĩ điên','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_012.mp3',NULL,'00:00:00.000','00:02:11.500','4000-essential-english-words','NO',12) */
+	/* (UUID(),'4000-essential-english-words-12','The crazy artist','Người nghệ sĩ điên','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_012.mp3',NULL,'00:00:00.000','00:02:11.500','4000-essential-english-words',0,0,12) */
 	('The Crazy Artist','Người nghệ sĩ điên','00:00:00.960','00:00:03.800','4000-essential-english-words-12'),
 	('Frenhofer was the best artist in the world','Frenhofer là nghệ sĩ giỏi nhất thế giới','00:00:03.800','00:00:06.800','4000-essential-english-words-12'),
 	('Everyone loved him','Mọi người đều yêu mến anh ấy','00:00:06.800','00:00:08.800','4000-essential-english-words-12'),
@@ -493,7 +493,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Frenhofer\'s painting reminded everyone that just because something was new didn\'t mean that it was bad','Bức tranh của Frenhofer nhắc nhở mọi người rằng chỉ vì một thứ gì đó mới mẻ thì không có nghĩa là nó tồi tệ','00:01:58.700','00:02:04.900','4000-essential-english-words-12'),
 	('He also helped them to realize that sometimes it takes people a little time to understand great things','Anh cũng giúp họ nhận ra rằng đôi khi cần một chút thời gian để mọi người hiểu những điều tuyệt vời','00:02:04.900','00:02:11.500','4000-essential-english-words-12'),
 
-	/* (UUID(),'4000-essential-english-words-13','The farmer and the cats','Người nông dân và những con mèo','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_013.mp3',NULL,'00:00:00.000','00:02:03.600','4000-essential-english-words','NO',13) */
+	/* (UUID(),'4000-essential-english-words-13','The farmer and the cats','Người nông dân và những con mèo','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_013.mp3',NULL,'00:00:00.000','00:02:03.600','4000-essential-english-words',0,0,13) */
 	('The farmer and the cats','Người nông dân và những con mèo','00:00:00.960','00:00:03.500','4000-essential-english-words-13'),
 	('Arthur was a responsible farmer, and Maria was a nice lady','Arthur là một người nông dân có trách nhiệm, và Maria là một người phụ nữ tốt bụng','00:00:03.600','00:00:09.000','4000-essential-english-words-13'),
 	('But they were poor','Nhưng họ nghèo lắm','00:00:09.000','00:00:10.570','4000-essential-english-words-13'),
@@ -531,7 +531,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The cats had worked at night','Đàn mèo đã làm việc vào ban đêm','00:01:55.800','00:01:57.750','4000-essential-english-words-13'),
 	('After that, Arthur was very nice to his cats and fed them lots of corn','Kể từ đó, Arthur rất tốt với những con mèo của anh và cho chúng ăn rất nhiều ngô','00:01:57.780','00:02:03.600','4000-essential-english-words-13'),
 
-	/* (UUID(),'4000-essential-english-words-14','A magical book','Cuốn sách phép thuật','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_014.mp3',NULL,'00:00:00.000','00:02:12.000','4000-essential-english-words','NO',14) */
+	/* (UUID(),'4000-essential-english-words-14','A magical book','Cuốn sách phép thuật','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_014.mp3',NULL,'00:00:00.000','00:02:12.000','4000-essential-english-words',0,0,14) */
 	('A magical book','Cuốn sách phép thuật','00:00:00.960','00:00:03.000','4000-essential-english-words-14'),
 	('Sarah loved to read','Sarah thích đọc sách','00:00:03.000','00:00:05.100','4000-essential-english-words-14'),
 	('She read novels and poems','Cô bé đọc tiểu thuyết và thơ','00:00:05.100','00:00:08.000','4000-essential-english-words-14'),
@@ -581,7 +581,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She did not want to do bad things with it anymore','Cô bé không muốn làm những điều xấu với nó nữa','00:02:05.800','00:02:09.200','4000-essential-english-words-14'),
 	('She only wanted to do good','Cô chỉ muốn làm những điều tốt mà thôi','00:02:09.200','00:02:12.000','4000-essential-english-words-14'),
 
-	/* (UUID(),'4000-essential-english-words-15','The big race','Cuộc đua lớn','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_015.mp3',NULL,'00:00:00.000','00:02:07.000','4000-essential-english-words','NO',15) */
+	/* (UUID(),'4000-essential-english-words-15','The big race','Cuộc đua lớn','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_015.mp3',NULL,'00:00:00.000','00:02:07.000','4000-essential-english-words',0,0,15) */
 	('The big race','Cuộc đua lớn','00:00:00.960','00:00:03.000','4000-essential-english-words-15'),
 	('A dog saw a group of animals across the road','Một chú chó nhìn thấy một nhóm các loài vật ở bên kia đường','00:00:03.000','00:00:06.500','4000-essential-english-words-15'),
 	('He walked over to meet them','Chú bèn tiến lại để gặp chúng','00:00:06.600','00:00:08.800','4000-essential-english-words-15'),
@@ -627,7 +627,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'4000-essential-english-words-16','Adams county\'s gold','Vàng ở quận Adams','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_016.mp3',NULL,'00:00:00.000','00:02:11.200','4000-essential-english-words','NO',16) */
+	/* (UUID(),'4000-essential-english-words-16','Adams county\'s gold','Vàng ở quận Adams','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_016.mp3',NULL,'00:00:00.000','00:02:11.200','4000-essential-english-words',0,0,16) */
 	('Adams county\'s gold','Vàng ở quận Adams','00:00:00.960','00:00:03.000','4000-essential-english-words-16'),
 	('Adams Academy was a good school','Học viện Adams là một trường học tuyệt vời','00:00:03.000','00:00:06.500','4000-essential-english-words-16'),
 	('Boys lived there and took classes','Các bé trai sống ở đó và tham gia các lớp học','00:00:06.500','00:00:09.500','4000-essential-english-words-16'),
@@ -677,7 +677,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('"Let\'s go"','"Đi thôi"','00:02:06.000','00:02:07.800','4000-essential-english-words-16'),
 	('And they hurried to find the wealth of Adams County','Và chúng vội vã đi tìm số tài sản ở quận Adams','00:02:07.800','00:02:11.200','4000-essential-english-words-16'),
 
-	/* (UUID(),'4000-essential-english-words-17','The race for water','Cuộc đua giành nước','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_017.mp3',NULL,'00:00:00.000','00:02:10.300','4000-essential-english-words','NO',17) */
+	/* (UUID(),'4000-essential-english-words-17','The race for water','Cuộc đua giành nước','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_017.mp3',NULL,'00:00:00.000','00:02:10.300','4000-essential-english-words',0,0,17) */
 	('The race for water','Cuộc đua giành nước','00:00:00.960','00:00:03.400','4000-essential-english-words-17'),
 	('There was a town next to a river','Có một thị trấn nhỏ bên cạnh một dòng sông','00:00:03.400','00:00:06.400','4000-essential-english-words-17'),
 	('The people there had a lot of water','Mọi người ở đây có rất nhiều nước','00:00:06.400','00:00:09.400','4000-essential-english-words-17'),
@@ -722,7 +722,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('"We won\'t waste it"','"Chúng tôi sẽ không phí phạm nó nữa"','00:02:03.400','00:02:04.850','4000-essential-english-words-17'),
 	('That is how a lone boy saved his town and won the race for water','Đó là cách cậu bé đơn độc cứu thị trấn của mình và giành chiến thắng trong cuộc đua giành nước','00:02:04.900','00:02:10.300','4000-essential-english-words-17'),
 
-	/* (UUID(),'4000-essential-english-words-18','The little red chicken','Cô gà đỏ bé nhỏ','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_018.mp3',NULL,'00:00:00.000','00:01:57.200','4000-essential-english-words','NO',18) */
+	/* (UUID(),'4000-essential-english-words-18','The little red chicken','Cô gà đỏ bé nhỏ','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_018.mp3',NULL,'00:00:00.000','00:01:57.200','4000-essential-english-words',0,0,18) */
 	('A little red chicken had a store in a small town','Một con gà đỏ bé nhỏ có một cửa hàng trong một thị trấn nhỏ','00:00:02.800','00:00:07.300','4000-essential-english-words-18'),
 	('She sold many different items to people in the town','Cô ta bán nhiều sản phẩm khác nhau cho mọi người trong thị trấn','00:00:07.300','00:00:11.300','4000-essential-english-words-18'),
 	('The people loved her products','Mọi người đều thích những sản phẩm của cô','00:00:11.300','00:00:13.800','4000-essential-english-words-18'),
@@ -758,7 +758,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('"When it grows big, you can gather it and make your own bread"','"Khi chúng lớn lên, cậu có thể thu hoạch chúng và làm bánh mì của riêng mình"','00:01:49.100','00:01:53.100','4000-essential-english-words-18'),
 	('"You need to learn to do work for what you want"','"Cậu cần học cách làm việc cho những gì cậu muốn"','00:01:53.100','00:01:57.200','4000-essential-english-words-18'),
 
-	/* (UUID(),'4000-essential-english-words-19','Shipwrecked','Đắm tàu','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_019.mp3',NULL,'00:00:00.000','00:02:14.800','4000-essential-english-words','NO',19) */
+	/* (UUID(),'4000-essential-english-words-19','Shipwrecked','Đắm tàu','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_019.mp3',NULL,'00:00:00.000','00:02:14.800','4000-essential-english-words',0,0,19) */
 	('Shipwrecked','Đắm tàu','00:00:00.960','00:00:02.900','4000-essential-english-words-19'),
 	('Simon Yates was a lawyer','Simon Yates là một luật sư','00:00:02.900','00:00:05.000','4000-essential-english-words-19'),
 	('He helped many people','Ông ta giúp đỡ rất nhiều người','00:00:05.300','00:00:06.930','4000-essential-english-words-19'),
@@ -804,7 +804,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He said he wanted to stay','Ông nói ông muốn ở lại','00:02:08.450','00:02:10.500','4000-essential-english-words-19'),
 	('He liked his new, simple life more than his old life','Ông thích cuộc sống mới, đơn giản này hơn cuộc sống trước kia','00:02:10.600','00:02:14.800','4000-essential-english-words-19'),
 
-	/* (UUID(),'4000-essential-english-words-20','The seven cities of gold','Bảy thành phố vàng','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_020.mp3',NULL,'00:00:00.000','00:02:05.000','4000-essential-english-words','NO',20) */
+	/* (UUID(),'4000-essential-english-words-20','The seven cities of gold','Bảy thành phố vàng','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_020.mp3',NULL,'00:00:00.000','00:02:05.000','4000-essential-english-words',0,0,20) */
 	('Many years ago, a Spanish officer named Coronado heard the story of seven great cities','Rất nhiều năm về trước, một sĩ quan Tây Ban Nha tên là Coronado nghe được câu chuyện về bảy thành phố lớn','00:00:03.800','00:00:09.800','4000-essential-english-words-20'),
 	('"The walls of these cities are made of gold," his friends told him','"Những bức tường của những thành phố này được làm bằng vàng," những người bạn đã nói với anh','00:00:09.800','00:00:13.800','4000-essential-english-words-20'),
 	('"The people eat meat from golden plates and dress in nice clothes," they said','Họ nói: "Người dân ăn thịt từ những chiếc đĩa bằng vàng và mặc trang phục đẹp"','00:00:13.800','00:00:18.800','4000-essential-english-words-20'),
@@ -850,7 +850,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'4000-essential-english-words-21','Katy','Katy','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_021.mp3',NULL,'00:00:00.000','00:02:02.000','4000-essential-english-words','NO',21) */
+	/* (UUID(),'4000-essential-english-words-21','Katy','Katy','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_021.mp3',NULL,'00:00:00.000','00:02:02.000','4000-essential-english-words',0,0,21) */
 	('I first met 8-year-old Katy on a rainy afternoon','Tôi gặp cô bé Katy 8 tuổi lần đầu vào một buổi chiều mưa','00:00:02.800','00:00:06.800','4000-essential-english-words-21'),
 	('I was a nurse at a hospital','Lúc đấy tôi là một y tá tại một bệnh viện','00:00:06.800','00:00:09.500','4000-essential-english-words-21'),
 	('The clerk at the desk told me about Katy','Lễ tân tại bàn làm việc đã nói với tôi về Katy','00:00:09.600','00:00:12.800','4000-essential-english-words-21'),
@@ -884,7 +884,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Katy\'s kind heart helped her get better so quickly','Tấm lòng nhân hậu của Katy đã giúp cô ấy hồi phục rất nhanh','00:01:53.300','00:01:56.920','4000-essential-english-words-21'),
 	('She is a hero to me and everyone else at the hospital','Cô ấy là một anh hùng đối với tôi và những người khác ở bệnh viện','00:01:56.920','00:02:01.800','4000-essential-english-words-21'),
 
-	/* (UUID(),'4000-essential-english-words-22','A better reward','Một phần thưởng tuyệt vời hơn','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_022.mp3',NULL,'00:00:00.000','00:02:06.000','4000-essential-english-words','NO',22) */
+	/* (UUID(),'4000-essential-english-words-22','A better reward','Một phần thưởng tuyệt vời hơn','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_022.mp3',NULL,'00:00:00.000','00:02:06.000','4000-essential-english-words',0,0,22) */
 	('Jenny delivered food for a restaurant','Jenny là giao đồ ăn cho một nhà hàng','00:00:03.000','00:00:05.800','4000-essential-english-words-22'),
 	('She read the newspaper and said, "Uh oh"','Một ngày, cô ấy đọc báo và thốt lên: "Ồ"','00:00:05.800','00:00:09.100','4000-essential-english-words-22'),
 	('There was a story about a thief','Đó là câu chuyện về một tên trộm','00:00:09.100','00:00:11.600','4000-essential-english-words-22'),
@@ -933,7 +933,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('"But there\'s no charge for catching this thief" she said','"Nhưng không có thù lao cho việc bắt được tên trộm này cả," cô nói','00:01:58.800','00:02:02.700','4000-essential-english-words-22'),
 	('"My new dog is a better reward"','"Chú chó mới này là phần thưởng tuyệt vời hơn nhiều"','00:02:02.700','00:02:05.700','4000-essential-english-words-22'),
 
-	/* (UUID(),'4000-essential-english-words-23','The camp','Lều trại','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_023.mp3',NULL,'00:00:00.000','00:02:05.000','4000-essential-english-words','NO',23) */
+	/* (UUID(),'4000-essential-english-words-23','The camp','Lều trại','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_023.mp3',NULL,'00:00:00.000','00:02:05.000','4000-essential-english-words',0,0,23) */
 	('Stacie wanted to stay at a nice hotel for vacation','Stacie muốn ở một khách sạn thật đẹp trong kỳ nghỉ này','00:00:03.000','00:00:06.900','4000-essential-english-words-23'),
 	('But her parents sent her to a terrible camp instead','Thế nhưng, thay vào đó bố mẹ cô đã gửi cô đến một trại hè tệ hại','00:00:06.900','00:00:10.800','4000-essential-english-words-23'),
 	('For breakfast, Stacie liked fresh juice and chocolate milk, but she got water at the camp','Bữa sáng, Stacie thích nước ép trái cây và sữa socola, nhưng cô chỉ được uống nước lọc ở trại hè','00:00:10.800','00:00:17.800','4000-essential-english-words-23'),
@@ -973,7 +973,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('For the rest of the week, Stacie had fun','Và từ đó cho tới hết tuần, Stacie đã rất vui vẻ','00:01:59.700','00:02:02.700','4000-essential-english-words-23'),
 	('She even made new friends','Cô bé thậm chí còn kết thêm nhiều bạn mới nữa','00:02:02.700','00:02:05.000','4000-essential-english-words-23'),
 
-	/* (UUID(),'4000-essential-english-words-24','A strong friendship','Tình bạn mạnh mẽ','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_024.mp3',NULL,'00:00:00.000','00:02:05.600','4000-essential-english-words','NO',24) */
+	/* (UUID(),'4000-essential-english-words-24','A strong friendship','Tình bạn mạnh mẽ','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_024.mp3',NULL,'00:00:00.000','00:02:05.600','4000-essential-english-words',0,0,24) */
 	('Tim was the strongest man in the town','Tim là một chàng trai khỏe mạnh nhất trong thị trấn','00:00:03.000','00:00:06.000','4000-essential-english-words-24'),
 	('When he played sports, he always won','Khi anh ấy chơi thể thao, anh ấy luôn luôn giành chiến thắng','00:00:06.000','00:00:09.000','4000-essential-english-words-24'),
 	('He performed and exercised in the public park','Anh ấy biểu diễn và luyện tập ở công viên công cộng','00:00:09.000','00:00:12.800','4000-essential-english-words-24'),
@@ -1019,7 +1019,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He was thinking of something else','Anh đang nghĩ tới điều khác','00:01:55.700','00:01:57.800','4000-essential-english-words-24'),
 	('He said to Tim, "I thought I was smart, but I learned a new term today: friendship"','Anh ta nói với Tim, "Tôi đã nghĩ mình thật thông minh nhưng hôm nay tôi đã học được một bài học mới: Tình bạn"','00:01:57.800','00:02:05.600','4000-essential-english-words-24'),
 
-	/* (UUID(),'4000-essential-english-words-25','Joe\'s pond','Ao của Joe','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_025.mp3',NULL,'00:00:00.000','00:02:02.100','4000-essential-english-words','NO',25) */
+	/* (UUID(),'4000-essential-english-words-25','Joe\'s pond','Ao của Joe','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_025.mp3',NULL,'00:00:00.000','00:02:02.100','4000-essential-english-words',0,0,25) */
 	('Joe made the world a better place','Joe chung tay xây dựng nên một thế giới tốt đẹp hơn','00:00:03.000','00:00:05.900','4000-essential-english-words-25'),
 	('He got the idea to do that at school','Cậu đã có ý tưởng thực hiện việc này khi còn đang đi học','00:00:05.900','00:00:08.900','4000-essential-english-words-25'),
 	('He watched a video there','Cậu đã từng được xem một đoạn phim ngắn lúc đó','00:00:08.900','00:00:11.100','4000-essential-english-words-25'),
@@ -1063,7 +1063,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'4000-essential-english-words-26','Archie and his donkey','Archie và con lừa','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_026.mp3',NULL,'00:00:00.000','00:02:00.700','4000-essential-english-words','NO',26) */
+	/* (UUID(),'4000-essential-english-words-26','Archie and his donkey','Archie và con lừa','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_026.mp3',NULL,'00:00:00.000','00:02:00.700','4000-essential-english-words',0,0,26) */
 	('Old Archie needed some money','Ông già Archie cần ít tiền','00:00:03.000','00:00:05.400','4000-essential-english-words-26'),
 	('He decided to sell his donkey','Ông quyết định bán con lừa của mình đi','00:00:05.400','00:00:07.800','4000-essential-english-words-26'),
 	('So he and his son Tom went to town','Ông và con trai là Tom đi tới thị trấn','00:00:07.800','00:00:10.500','4000-essential-english-words-26'),
@@ -1110,7 +1110,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Prove to everyone that you can make decisions by yoursel','Chứng minh cho mọi người rằng bạn có thể đưa ra quyết định của chính mình','00:01:56.900','00:02:00.700','4000-essential-english-words-26'),
 	('Otherwise, you may end up with nothing at all','Nếu không bạn có thể kết thúc cuộc đời mình với việc chẳng còn gì cả','00:02:00.700','00:02:04.200','4000-essential-english-words-26'),
 
-	/* (UUID(),'4000-essential-english-words-27','The spider and the bird','Con nhện và con chim','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_027.mp3',NULL,'00:00:00.000','00:02:02.000','4000-essential-english-words','NO',27) */
+	/* (UUID(),'4000-essential-english-words-27','The spider and the bird','Con nhện và con chim','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_027.mp3',NULL,'00:00:00.000','00:02:02.000','4000-essential-english-words',0,0,27) */
 	('There was once a very big spider','Thuở xưa có một chú nhện rất lớn','00:00:03.400','00:00:06.300','4000-essential-english-words-27'),
 	('If a bug got into his web, he would examine it','Nếu một con bọ bị rơi vào mạng nhện của chú, chú sẽ cân nhắc','00:00:06.300','00:00:10.100','4000-essential-english-words-27'),
 	('However, he didn\'t eat the bug right away','Nhưng chú không ăn con bọ ngay','00:00:10.100','00:00:13.800','4000-essential-english-words-27'),
@@ -1152,7 +1152,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('From that day on, they were friends','Từ hôm đó trở đi họ là bạn','00:01:55.800','00:01:58.800','4000-essential-english-words-27'),
 	('And they never tried to eat each other again','Và họ không bao giờ cố gắng ăn thịt nhau lần nữa','00:01:58.800','00:02:02.000','4000-essential-english-words-27'),
 
-	/* (UUID(),'4000-essential-english-words-28','The party','Bữa tiệc sinh nhật','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_028.mp3',NULL,'00:00:00.000','00:02:11.000','4000-essential-english-words','NO',28) */
+	/* (UUID(),'4000-essential-english-words-28','The party','Bữa tiệc sinh nhật','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_028.mp3',NULL,'00:00:00.000','00:02:11.000','4000-essential-english-words',0,0,28) */
 	('Cody\'s family moved to a new house','Gia đình của Cody vừa mới chuyển tới ở một ngôi nhà mới','00:00:03.000','00:00:05.000','4000-essential-english-words-28'),
 	('His dad got a new job as a professor','Cha cậu cũng đã bắt đầu một công việc mới là một giáo sư','00:00:05.000','00:00:07.800','4000-essential-english-words-28'),
 	('Cody liked his new town, but he missed his grandparents','Cody thích thị trấn mới này thế nhưng cậu bé lại rất nhớ ông bà','00:00:07.800','00:00:11.800','4000-essential-english-words-28'),
@@ -1198,7 +1198,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Then Cody told his grandparents about the new town','Rồi Cody ngồi kể cho ông bà nghe về thị trấn mới','00:02:04.500','00:02:07.800','4000-essential-english-words-28'),
 	('It was his best birthday ever','Đó thật sự là một ngày sinh nhật tuyệt vời nhất của cậu bé','00:02:07.800','00:02:11.000','4000-essential-english-words-28'),
 
-	/* (UUID(),'4000-essential-english-words-29','How the World got light','Thế giới đã có ánh sáng như thế nào','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_029.mp3',NULL,'00:00:00.000','00:02:03.800','4000-essential-english-words','NO',29) */
+	/* (UUID(),'4000-essential-english-words-29','How the World got light','Thế giới đã có ánh sáng như thế nào','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_029.mp3',NULL,'00:00:00.000','00:02:03.800','4000-essential-english-words',0,0,29) */
 	('The president of Darkland was a pig - a very bad pig','Lãnh chúa của Vùng đất bóng tối là một con lợn - một con lợn cực kỳ xấu tính','00:00:03.800','00:00:08.500','4000-essential-english-words-29'),
 	('He was a pig of major importance','Hắn là một con lợn quan trọng chủ chốt','00:00:08.500','00:00:11.500','4000-essential-english-words-29'),
 	('He was rich, and he had a lot of strength','Hắn rất giàu, và có nhiều sức khỏe','00:00:11.500','00:00:14.800','4000-essential-english-words-29'),
@@ -1240,7 +1240,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('But the other animals were very happy','Nhưng những động vật khác thì lại rất hạnh phúc','00:02:01.800','00:02:03.800','4000-essential-english-words-29'),
 	('At last, they had light - all because of Raven\'s smart thinking','Cuối cùng, họ có ánh sáng - tất cả là nhờ suy nghĩ thông minh của Raven','00:02:03.800','00:02:09.300','4000-essential-english-words-29'),
 
-	/* (UUID(),'4000-essential-english-words-30','Cats and secrets','Con mèo và những bí mật','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_030.mp3',NULL,'00:00:00.000','00:01:57.000','4000-essential-english-words','NO',30) */
+	/* (UUID(),'4000-essential-english-words-30','Cats and secrets','Con mèo và những bí mật','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_030.mp3',NULL,'00:00:00.000','00:01:57.000','4000-essential-english-words',0,0,30) */
 	('In English, there is a common idiom "let the cat out of the bag"','Trong tiếng Anh, có một câu thành ngữ phổ biến "Hãy để con mèo ra khỏi cái túi"','00:00:03.400','00:00:08.800','4000-essential-english-words-30'),
 	('It means to tell a secret','Nó có nghĩa là nói ra điều bí mật','00:00:08.800','00:00:10.700','4000-essential-english-words-30'),
 	('But where did this idiom start?','Nhưng câu thành ngữ này bắt đầu từ đâu?','00:00:10.700','00:00:12.900','4000-essential-english-words-30'),
@@ -1286,7 +1286,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'4000-essential-english-words-31','The twelve months','Mười hai tháng','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_031.mp3',NULL,'00:00:00.000','00:01:52.200','4000-essential-english-words','NO',31) */
+	/* (UUID(),'4000-essential-english-words-31','The twelve months','Mười hai tháng','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_031.mp3',NULL,'00:00:00.000','00:01:52.200','4000-essential-english-words',0,0,31) */
 	('An awful woman lived with her daughter and stepdaughter in her household','Một người phụ nữ đáng sợ sống cùng con gái ruột và đứa con riêng trong một căn nhà','00:00:03.200','00:00:08.600','4000-essential-english-words-31'),
 	('She possessed feelings of hate for her stepdaughter, Anna','Bà có ác cảm với đứa con riêng, Anna','00:00:08.600','00:00:12.900','4000-essential-english-words-31'),
 	('Anna worked while her stepsister did nothing','Anna làm việc trong khi người em không làm gì','00:00:12.900','00:00:16.900','4000-essential-english-words-31'),
@@ -1314,7 +1314,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('They became very lost and never found their way home','Nhưng họ đã bị lạc và không bao giờ tìm thấy đường về nhà','00:01:44.000','00:01:48.800','4000-essential-english-words-31'),
 	('Anna lived happily by herself','Anna sống hạnh phúc một mình','00:01:48.800','00:01:52.200','4000-essential-english-words-31'),
 
-	/* (UUID(),'4000-essential-english-words-32','The dragon','Con rồng','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_032.mp3',NULL,'00:00:00.000','00:01:40.000','4000-essential-english-words','NO',32) */
+	/* (UUID(),'4000-essential-english-words-32','The dragon','Con rồng','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_032.mp3',NULL,'00:00:00.000','00:01:40.000','4000-essential-english-words',0,0,32) */
 	('An evil dragon lived in a castle in the remote southern mountains','Có một con rồng hung ác sống trong một tòa lâu đài trên những ngọn núi phía Nam hẻo lánh','00:00:03.000','00:00:07.900','4000-essential-english-words-32'),
 	('One day the monster landed in a town','Một ngày nọ, con quái vật đã hạ cánh xuống một ngôi làng','00:00:07.900','00:00:10.900','4000-essential-english-words-32'),
 	('The dragon commanded the people, "Give me food now, or I will eat you"','Con rồng đã ra lệnh cho người dân "Hãy mau đưa thức ăn đến đây cho ta, nếu không ta sẽ ăn thịt các ngươi"','00:00:10.900','00:00:16.900','4000-essential-english-words-32'),
@@ -1343,7 +1343,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Then, he took the dragon\'s gold and jewelry and returned to his town','Tiếp đó, cậu lấy vàng và đồ trang sức của con rồng rồi quay trở về ngôi làng của mình','00:01:33.000','00:01:37.300','4000-essential-english-words-32'),
 	('The people were happy','Từ đó mọi người trong làng sống hạnh phúc, bình yên bên nhau','00:01:37.300','00:01:40.000','4000-essential-english-words-32'),
 
-	/* (UUID(),'4000-essential-english-words-33','The battle of Thermopylae','Trận chiến Thermopylae','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_033.mp3',NULL,'00:00:00.000','00:01:41.000','4000-essential-english-words','NO',33) */
+	/* (UUID(),'4000-essential-english-words-33','The battle of Thermopylae','Trận chiến Thermopylae','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_033.mp3',NULL,'00:00:00.000','00:01:41.000','4000-essential-english-words',0,0,33) */
 	('This is a true story','Đây là một câu chuyện có thật','00:00:03.000','00:00:05.800','4000-essential-english-words-33'),
 	('It happened long ago in Greece','Nó xảy ra cách đây rất lâu ở Hy Lạp','00:00:05.800','00:00:08.800','4000-essential-english-words-33'),
 	('"We must fight," the Spartan chief told his small army of brave men','"Chúng ta phải chiến đấu" chỉ huy người Sparta nói với đạo quân nhỏ bé nhưng dũng cảm của ông','00:00:08.800','00:00:14.800','4000-essential-english-words-33'),
@@ -1370,7 +1370,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The chief and all of his men were killed','Chỉ huy và tất cả đoàn quân của ông đã bị giết chết','00:01:30.900','00:01:33.900','4000-essential-english-words-33'),
 	('Even though they lost, the Battle ofThermopylae is one of the most famous battles in history','Mặc dù họ đã thất bại, nhưng trận đánh Thermopylae đã trở thành một trong những trận đánh nổi tiếng nhất trong lịch sử','00:01:33.900','00:01:41.000','4000-essential-english-words-33'),
 
-	/* (UUID(),'4000-essential-english-words-34','The deer and his image','Con huơu và hình tượng của nó','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_034.mp3',NULL,'00:00:00.000','00:01:34.100','4000-essential-english-words','NO',34) */
+	/* (UUID(),'4000-essential-english-words-34','The deer and his image','Con huơu và hình tượng của nó','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_034.mp3',NULL,'00:00:00.000','00:01:34.100','4000-essential-english-words',0,0,34) */
 	('A deer told himself every day, "I am the most handsome deer in the forest"','Có một con hươu ngày ngày ca ngợi với bản thân rằng, "Mình là con hươu đẹp trai nhất trong khu rừng này"','00:00:03.500','00:00:09.900','4000-essential-english-words-34'),
 	('"My large chest is a symbol of my power"','"Bộ ngực lớn là biểu tượng cho sức mạnh"','00:00:09.900','00:00:13.400','4000-essential-english-words-34'),
 	('"And my beautiful horns impress other animals"','"Và cặp sừng tuyệt đẹp này luôn gây ấn tượng với những loài vật khác"','00:00:13.400','00:00:16.900','4000-essential-english-words-34'),
@@ -1397,7 +1397,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('As a consequence, the deer learned to honor his fast legs and have confidence in his strong hooves','Kết quả là, con hươu đã học được cách tôn trọng đôi chân nhanh nhạy và cảm thấy tự tin với bộ móng chắc khỏe của mình','00:01:23.000','00:01:29.900','4000-essential-english-words-34'),
 	('"Pretty things only supplement important things," he thought','"Những thứ đẹp đẽ chỉ bổ sung cho những điều quan trọng mà thôi," nó nghĩ','00:01:29.900','00:01:34.100','4000-essential-english-words-34'),
 
-	/* (UUID(),'4000-essential-english-words-35','May 29,1953','Ngày 29 tháng 5 năm 1953','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_035.mp3',NULL,'00:00:00.000','00:01:35.200','4000-essential-english-words','NO',35) */
+	/* (UUID(),'4000-essential-english-words-35','May 29,1953','Ngày 29 tháng 5 năm 1953','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_035.mp3',NULL,'00:00:00.000','00:01:35.200','4000-essential-english-words',0,0,35) */
 	('Today is the most important day of my life','Hôm nay là ngày vô cùng đặc biệt đối với tôi','00:00:04.800','00:00:08.000','4000-essential-english-words-35'),
 	('I finally climbed Mt.Everest, the tallest mountain in the world','Cuối cùng thì tôi cũng đã leo lên được Đỉnh Everest, đỉnh núi cao nhất thế giới','00:00:08.000','00:00:13.000','4000-essential-english-words-35'),
 	('The top of the mountain was amazing','Đứng trên đỉnh núi cảm giác thật tuyệ','00:00:13.000','00:00:15.700','4000-essential-english-words-35'),
@@ -1428,7 +1428,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'4000-essential-english-words-36','The frog prince','Hoàng tử ếch','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_036.mp3',NULL,'00:00:00.000','00:01:34.000','4000-essential-english-words','NO',36) */
+	/* (UUID(),'4000-essential-english-words-36','The frog prince','Hoàng tử ếch','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_036.mp3',NULL,'00:00:00.000','00:01:34.000','4000-essential-english-words',0,0,36) */
 	('A lovely princess sat by the pool and played with a sculpture of a bear','Một công chúa đáng yêu ngồi bên bể bơi và chơi với bức tượng điêu khắc một con gấu','00:00:03.000','00:00:08.100','4000-essential-english-words-36'),
 	('Suddenly, she dropped it, and it rolled away','Đột nhiên, cô đánh rơi nó, và nó lăn đi','00:00:08.100','00:00:12.100','4000-essential-english-words-36'),
 	('She chased it, but it fell into the water','Cô ấy đã đuổi theo nó, nhưng nó đã rơi xuống nước','00:00:12.100','00:00:15.900','4000-essential-english-words-36'),
@@ -1456,7 +1456,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('"You disappointed me"','"Nàng làm ta thất vọng"','00:01:30.000','00:01:31.800','4000-essential-english-words-36'),
 	('"You didn\'t keep your promise"','"Nàng đã không giữ lời hứa của mình','00:01:31.800','00:01:34.000','4000-essential-english-words-36'),
 
-	/* (UUID(),'4000-essential-english-words-37','A beautiful bird','Chú chim xinh đẹp','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_037.mp3',NULL,'00:00:00.000','00:01:44.000','4000-essential-english-words','NO',37) */
+	/* (UUID(),'4000-essential-english-words-37','A beautiful bird','Chú chim xinh đẹp','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_037.mp3',NULL,'00:00:00.000','00:01:44.000','4000-essential-english-words',0,0,37) */
 	('Dr.Norton\'s occupation was a scholar of biology','Nghề nghiệp của Tiến sĩ Norton là một học giả về sinh học','00:00:03.500','00:00:07.200','4000-essential-english-words-37'),
 	('He learned about all animals on a daily basis','Hàng ngày, ông nghiên cứu về tất cả các loài động vật','00:00:07.200','00:00:11.000','4000-essential-english-words-37'),
 	('One day he met a sailor from a colony overseas','Một ngày nọ, ông đã gặp một thủy thủ từ một thuộc địa nước ngoài','00:00:11.000','00:00:15.000','4000-essential-english-words-37'),
@@ -1485,7 +1485,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Then he returned home','Sau đó ông quay trở về nhà','00:01:38.900','00:01:40.900','4000-essential-english-words-37'),
 	('He had made a significant discovery','Ông đã có một phát hiện quan trọng','00:01:40.900','00:01:44.000','4000-essential-english-words-37'),
 
-	/* (UUID(),'4000-essential-english-words-38','Tricky turtle','Chú rùa khôn lanh','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_038.mp3',NULL,'00:00:00.000','00:01:44.000','4000-essential-english-words','NO',38) */
+	/* (UUID(),'4000-essential-english-words-38','Tricky turtle','Chú rùa khôn lanh','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_038.mp3',NULL,'00:00:00.000','00:01:44.000','4000-essential-english-words',0,0,38) */
 	('Ricky the rabbit and Tera the turtle met by the edge of the river','Thỏ Ricky và rùa Tera gặp nhau ở bờ sông','00:00:03.000','00:00:08.000','4000-essential-english-words-38'),
 	('"No one is capable of beating me in a race" Ricky said','"Không ai có khả năng đánh bại tôi trong cuộc đua" Ricky nói','00:00:08.000','00:00:12.900','4000-essential-english-words-38'),
 	('He was confident, his smile conveyed that','Anh ấy rất tự tin, nụ cười của anh ấy thể hiện điều đó','00:00:12.900','00:00:16.800','4000-essential-english-words-38'),
@@ -1517,7 +1517,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Ricky never suspected','Ricky không nghi ngờ điều gì','00:01:37.800','00:01:40.000','4000-essential-english-words-38'),
 	('He had been tricked by a family of slow turtles','Cậu đã bị lừa bởi một gia đình rùa chậm chạp','00:01:40.000','00:01:44.000','4000-essential-english-words-38'),
 
-	/* (UUID(),'4000-essential-english-words-39','The tale of Bartelby O\'Boyle','Câu chuyện về Bartelby O\'Boyle','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_039.mp3',NULL,'00:00:00.000','00:01:44.000','4000-essential-english-words','NO',39) */
+	/* (UUID(),'4000-essential-english-words-39','The tale of Bartelby O\'Boyle','Câu chuyện về Bartelby O\'Boyle','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_039.mp3',NULL,'00:00:00.000','00:01:44.000','4000-essential-english-words',0,0,39) */
 	('Long ago, there was a clever man by the name of Bartelby O\'Boyle','Thuở xưa, có một chàng trai rất thông minh tên là Bartelby O’Boyle','00:00:04.000','00:00:09.000','4000-essential-english-words-39'),
 	('As a boy, he was kept as a slave by the royal family','Khi còn nhỏ, anh làm nô lệ cho một gia đình hoàng gia','00:00:09.000','00:00:13.800','4000-essential-english-words-39'),
 	('He saw other children play, but he always had to work','Anh thường nhìn những đứa trẻ khác chơi đùa nhưng còn mình thì luôn phải làm việc','00:00:13.800','00:00:18.700','4000-essential-english-words-39'),
@@ -1545,7 +1545,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Because of this, Bartleby gained a reputation across the kingdom','Vì những điều này, danh tiếng của Bartelby vang khắp vương quốc','00:01:34.000','00:01:38.800','4000-essential-english-words-39'),
 	('Even today, many people admire him for helping the poor','Thậm chí đến bây giờ, nhiều người vẫn ngưỡng mộ anh về câu chuyện giúp đỡ những người nghèo khổ','00:01:38.800','00:01:44.000','4000-essential-english-words-39'),
 
-	/* (UUID(),'4000-essential-english-words-40','Blackbeard','Râu đen','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_040.mp3',NULL,'00:00:00.000','00:01:36.700','4000-essential-english-words','NO',40) */
+	/* (UUID(),'4000-essential-english-words-40','Blackbeard','Râu đen','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_040.mp3',NULL,'00:00:00.000','00:01:36.700','4000-essential-english-words',0,0,40) */
 	('A longtime ago, I had my first job','Cách đây rất lâu rồi, tôi đã tìm được công việc đầu tiên của mình','00:00:03.000','00:00:06.900','4000-essential-english-words-40'),
 	('It didn\'t give me much of an income','Nó không mang lại cho tôi nhiều thu nhập','00:00:06.900','00:00:09.000','4000-essential-english-words-40'),
 	('It was on a giant pirate ship','Đó là công việc trên một con tàu cướp biển khổng lồ','00:00:09.000','00:00:12.000','4000-essential-english-words-40'),
@@ -1578,7 +1578,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'4000-essential-english-words-41','Dinosaur drawings','Bức hình khủng long','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_041.mp3',NULL,'00:00:00.000','00:01:39.200','4000-essential-english-words','NO',41) */
+	/* (UUID(),'4000-essential-english-words-41','Dinosaur drawings','Bức hình khủng long','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_041.mp3',NULL,'00:00:00.000','00:01:39.200','4000-essential-english-words',0,0,41) */
 	('It was the worst morning ever','Đó là một buổi sáng tồi tệ nhất từ trước tới giờ','00:00:03.000','00:00:05.800','4000-essential-english-words-41'),
 	('When Carl woke up, he realized that he didn\'t do his astronomy and chemistry homework','Khi tỉnh dậy, Carl nhận ra anh ấy đã không làm bài tập về nhà môn thiên văn học và hóa học','00:00:05.800','00:00:12.200','4000-essential-english-words-41'),
 	('Also, the forecast called for rain and that would affect baseball practice','Hơn thế nữa, dự báo nói rằng trời hôm nay sẽ mưa và điều đó sẽ ảnh hưởng đến giờ thực hành bóng chày','00:00:12.200','00:00:18.200','4000-essential-english-words-41'),
@@ -1606,7 +1606,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Carl looked at his paper','Carl nhìn vào bài thi của anh ấy','00:01:32.300','00:01:34.300','4000-essential-english-words-41'),
 	('As he was dreaming in class, he hadn\'t finished the test','Khi mà anh ấy đang mơ trong lớp thì bài kiểm tra đã không được hoàn thành','00:01:34.300','00:01:39.200','4000-essential-english-words-41'),
 
-	/* (UUID(),'4000-essential-english-words-42','The mean chef','Đầu bếp xấu tính','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_042.mp3',NULL,'00:00:00.000','00:01:29.500','4000-essential-english-words','NO',42) */
+	/* (UUID(),'4000-essential-english-words-42','The mean chef','Đầu bếp xấu tính','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_042.mp3',NULL,'00:00:00.000','00:01:29.500','4000-essential-english-words',0,0,42) */
 	('Once there was a chef, who was mean to his cooks','Ngày xưa có một người bếp trưởng, ông luôn đối xử tệ với các đầu bếp của mình','00:00:03.400','00:00:07.400','4000-essential-english-words-42'),
 	('He was mean to the people who came in to eat','Ông rất khó tính đối với những người tới đây ăn uống','00:00:07.400','00:00:10.800','4000-essential-english-words-42'),
 	('He charged too much for meals','Ông thu phí các món ăn rất cao','00:00:10.800','00:00:13.000','4000-essential-english-words-42'),
@@ -1632,7 +1632,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The chef learned an important lesson','Ông đã học được một bài học quan trọng','00:01:21.000','00:01:24.000','4000-essential-english-words-42'),
 	('The new, generous chef insisted on giving the customers a free meal','Người bếp trưởng mới kiên quyết cho khách một bữa ăn miễn phí','00:01:24.000','00:01:29.500','4000-essential-english-words-42'),
 
-	/* (UUID(),'4000-essential-english-words-43','The Cat and the Fox','Mèo và Cáo','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_043.mp3',NULL,'00:00:00.000','00:01:37.000','4000-essential-english-words','NO',43) */
+	/* (UUID(),'4000-essential-english-words-43','The Cat and the Fox','Mèo và Cáo','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_043.mp3',NULL,'00:00:00.000','00:01:37.000','4000-essential-english-words',0,0,43) */
 	('One day, a cat hiked on a mountain','Một ngày nọ, một con mèo leo lên một ngọn núi','00:00:03.800','00:00:06.700','4000-essential-english-words-43'),
 	('When he reached the peak, he met a fox','Khi nó tới đỉnh núi, nó đã gặp một con cáo','00:00:06.700','00:00:09.800','4000-essential-english-words-43'),
 	('They began talking about how they get away from their enemies','Chúng bắt đầu nói cho nhau nghe về cách để tránh được kẻ thù của mình','00:00:09.800','00:00:13.800','4000-essential-english-words-43'),
@@ -1662,7 +1662,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The cat was full of pride','Mèo thì đầy tự hào','00:01:28.100','00:01:30.400','4000-essential-english-words-43'),
 	('This is proof that having a good plan is better than having many bad plans','Đây là bằng chứng cho thấy có một kế hoạch hay thì tốt hơn là có nhiều kế hoạch không ra gì','00:01:30.400','00:01:37.000','4000-essential-english-words-43'),
 
-	/* (UUID(),'4000-essential-english-words-44','The Good Student','Học sinh giỏi','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_044.mp3',NULL,'00:00:00.000','00:01:38.000','4000-essential-english-words','NO',44) */
+	/* (UUID(),'4000-essential-english-words-44','The Good Student','Học sinh giỏi','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_044.mp3',NULL,'00:00:00.000','00:01:38.000','4000-essential-english-words',0,0,44) */
 	('Sue left her dormitory early that morning','Sue rời kí túc xá từ sáng sớm','00:00:03.000','00:00:06.000','4000-essential-english-words-44'),
 	('She had even washed her uniform the night before','Cô thậm chí đã giặt đồng phục của mình từ đêm hôm trước','00:00:06.000','00:00:09.800','4000-essential-english-words-44'),
 	('She wanted to look nice for the day','Cô muốn trông mình thật xinh đẹp trong ngày hôm nay','00:00:09.800','00:00:12.100','4000-essential-english-words-44'),
@@ -1690,7 +1690,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('When Sue got back to her room, she went right to bed','Khi Sue trở về phòng mình, cô đã đi ngủ ngay','00:01:29.600','00:01:33.600','4000-essential-english-words-44'),
 	('She made sure she got enough rest every night after that','Cô chắc chắn mình sau này sẽ phải luôn nghỉ ngơi đầy đủ vào mọi buổi tối','00:01:33.600','00:01:38.000','4000-essential-english-words-44'),
 
-	/* (UUID(),'4000-essential-english-words-45','The Lucky Knife','Con dao may mắn','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_045.mp3',NULL,'00:00:00.000','00:01:33.000','4000-essential-english-words','NO',45) */
+	/* (UUID(),'4000-essential-english-words-45','The Lucky Knife','Con dao may mắn','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_045.mp3',NULL,'00:00:00.000','00:01:33.000','4000-essential-english-words',0,0,45) */
 	('I\'ve devoted my life to studying past generations','Tôi đã dành cả cuộc đời tôi để nghiên cứu về các thế hệ trước đây','00:00:03.000','00:00:07.200','4000-essential-english-words-45'),
 	('Last year, I had a unique chance to work with my uncle','Năm ngoái, tôi có một cơ hội đặc biệt làm việc cùng với chú tôi','00:00:07.200','00:00:11.500','4000-essential-english-words-45'),
 	('Our job was to find old treasures for a school\'s history foundation','Công việc của chúng tôi là tìm kiếm các kho báu cho một tổ chức nghiên cứu về lịch sử tại một trường học','00:00:11.500','00:00:16.700','4000-essential-english-words-45'),
@@ -1723,7 +1723,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'4000-essential-english-words-46','Prince Sam','Hoàng tử Sam','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_046.mp3',NULL,'00:00:00.000','00:01:50.200','4000-essential-english-words','NO',46) */
+	/* (UUID(),'4000-essential-english-words-46','Prince Sam','Hoàng tử Sam','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_046.mp3',NULL,'00:00:00.000','00:01:50.200','4000-essential-english-words',0,0,46) */
 	('Sam\'s mother cooked at the royal palace','Mẹ của Sam nấu ăn trong một cung điện hoàng gia','00:00:03.000','00:00:06.000','4000-essential-english-words-46'),
 	('One day, he went to work with her','Một ngày nọ, cậu bé đi làm cùng mẹ','00:00:06.000','00:00:08.800','4000-essential-english-words-46'),
 	('She emphasized that he should stay in the kitchen','Bà đã nhấn mạnh rằng cậu chỉ nên ở yên trong bếp','00:00:08.800','00:00:12.000','4000-essential-english-words-46'),
@@ -1760,7 +1760,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('"Being a prince isn\'t fun"','"Làm hoàng tử không vui một chút nào"','00:01:42.100','00:01:44.500','4000-essential-english-words-46'),
 	('So, they both returned to their normal positions and enjoyed their lives more than before','Thế là họ đều quay trở về thân phận ban đầu của mình và yêu thích cuộc sống này hơn bao giờ hết','00:01:44.500','00:01:50.200','4000-essential-english-words-46'),
 
-	/* (UUID(),'4000-essential-english-words-47','Henry Ford\'s Famous Car','Chiếc xe hơi nổi tiếng của Henry Ford','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_047.mp3',NULL,'00:00:00.000','00:01:31.800','4000-essential-english-words','NO',47) */
+	/* (UUID(),'4000-essential-english-words-47','Henry Ford\'s Famous Car','Chiếc xe hơi nổi tiếng của Henry Ford','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_047.mp3',NULL,'00:00:00.000','00:01:31.800','4000-essential-english-words',0,0,47) */
 	('My name is Henry Ford, and I invented a car called the Model T','Tên tôi là Henry Ford, và tôi đã chế tạo ra một chiếc xe hơi có tên gọi là mô hình T','00:00:03.800','00:00:08.300','4000-essential-english-words-47'),
 	('I used to watch carriages on the streets','Tôi từng quan sát những chiếc xe ngựa trên đường phố','00:00:08.300','00:00:11.300','4000-essential-english-words-47'),
 	('They fascinated me','Chúng đã mê hoặc tôi','00:00:11.300','00:00:12.900','4000-essential-english-words-47'),
@@ -1788,7 +1788,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('This sent a signal to other companies','Con số này đã gửi một tín hiệu đến các công ty khác','00:01:24.000','00:01:27.000','4000-essential-english-words-47'),
 	('People would buy cars to commute to work if the price was low enough','Người dân sẽ mua xe để đi làm đều đặn mỗi ngày nếu giá cả thấp và vừa đủ','00:01:27.000','00:01:31.800','4000-essential-english-words-47'),
 
-	/* (UUID(),'4000-essential-english-words-48','The Priest','Vị linh mục','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_048.mp3',NULL,'00:00:00.000','00:01:25.200','4000-essential-english-words','NO',48) */
+	/* (UUID(),'4000-essential-english-words-48','The Priest','Vị linh mục','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_048.mp3',NULL,'00:00:00.000','00:01:25.200','4000-essential-english-words',0,0,48) */
 	('A young priest was always sad','Một vị linh mục trẻ luôn thấy buồn','00:00:03.000','00:00:06.000','4000-essential-english-words-48'),
 	('He was good at his profession, but he still had no joy','Ông giỏi về chuyên môn của mình, nhưng ông vẫn không chút vui vẻ gì','00:00:06.000','00:00:10.200','4000-essential-english-words-48'),
 	('He visited a group of wise monks','Ông đã tới thăm một nhóm các thầy tu thông thái','00:00:10.200','00:00:13.000','4000-essential-english-words-48'),
@@ -1814,7 +1814,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('It is not too hard to be happy after all','Cũng không quá khó để vui vẻ sau tất cả','00:01:17.400','00:01:20.600','4000-essential-english-words-48'),
 	('All one has to do is find things they like doing, and do them','Mọi thứ bạn phải làm là tìm những thứ họ thích làm và làm chúng','00:01:20.600','00:01:25.200','4000-essential-english-words-48'),
 
-	/* (UUID(),'4000-essential-english-words-49','Mrs.May and the Green Girl','Bà May và cô bé màu xanh','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_049.mp3',NULL,'00:00:00.000','00:01:34.200','4000-essential-english-words','NO',49) */
+	/* (UUID(),'4000-essential-english-words-49','Mrs.May and the Green Girl','Bà May và cô bé màu xanh','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_049.mp3',NULL,'00:00:00.000','00:01:34.200','4000-essential-english-words',0,0,49) */
 	('One morning, people from a small town found a little girl by a stream','Một buổi sáng nọ, người dân trong một thị trấn tìm thấy một cô gái nhỏ bên cạnh dòng suối','00:00:03.800','00:00:09.000','4000-essential-english-words-49'),
 	('She seemed to be wearing a green costume','Cô bé dường như đang mặc một bộ đồ có kiểu dáng rất lạ màu xanh lá cây','00:00:09.00','00:00:12.400','4000-essential-english-words-49'),
 	('As the people got closer, they saw that the girl\'s skin was green','Khi mọi người tiến lại gần cô, họ mới biết rằng da của cô cũng có màu xanh lá cây','00:00:12.400','00:00:17.600','4000-essential-english-words-49'),
@@ -1843,7 +1843,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She fed the green girl home-cooked meals, and soon the girl wasn\'t green anymore','Bà ấy nấu những món ăn mà bà thường nấu trong những bữa ăn hàng ngày, và cô gái không còn màu xanh nữa','00:01:23.100','00:01:29.100','4000-essential-english-words-49'),
 	('The people had a huge reception to welcome her as a citizen of the town','Người dân đã có một sự đón nhận to lớn để chào mừng cô bé như một công dân của thị trấn','00:01:29.100','00:01:34.200','4000-essential-english-words-49'),
 
-	/* (UUID(),'4000-essential-english-words-50','Albert Einstein','Albert Einstein','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_050.mp3',NULL,'00:00:00.000','00:01:36.500','4000-essential-english-words','NO',50) */
+	/* (UUID(),'4000-essential-english-words-50','Albert Einstein','Albert Einstein','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_050.mp3',NULL,'00:00:00.000','00:01:36.500','4000-essential-english-words',0,0,50) */
 	('My name is Albert Einstein','Tên tôi là Albert Einstein','00:00:03.000','00:00:05.800','4000-essential-english-words-50'),
 	('Many people know about the great things I\'ve accomplished','Nhiều người biết về những thứ vĩ đại mà tôi đã đạt được','00:00:05.800','00:00:09.800','4000-essential-english-words-50'),
 	('But I had many barriers before I became famous','Nhưng không biết tôi đã phải đối mặt với nhiều khó khăn trước khi trở nên nổi tiếng','00:00:09.800','00:00:13.300','4000-essential-english-words-50'),
@@ -1872,7 +1872,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'4000-essential-english-words-51','From the Earth to the Stars','Từ trái đất đến những vì sao','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_051.mp3',NULL,'00:00:00.000','00:01:41.000','4000-essential-english-words','NO',51) */
+	/* (UUID(),'4000-essential-english-words-51','From the Earth to the Stars','Từ trái đất đến những vì sao','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_051.mp3',NULL,'00:00:00.000','00:01:41.000','4000-essential-english-words',0,0,51) */
 	('Jeremy was from a family of miners','Jeremy đến từ một gia đình có truyền thống làm thợ mỏ','00:00:03.800','00:00:06.700','4000-essential-english-words-51'),
 	('Like them, he worked underground during the day','Giống như những người thợ mỏ khác, anh làm việc dưới lòng đất suốt ngày','00:00:06.700','00:00:10.200','4000-essential-english-words-51'),
 	('His job was to gather raw minerals and jewels','Công việc của anh là thu thập khoáng sản thô và đá quý','00:00:10.200','00:00:13.800','4000-essential-english-words-51'),
@@ -1906,7 +1906,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('For some minutes, Jeremy could not speak','Trong vài phút, Jeremy không thể nói nên lời','00:01:35.200','00:01:38.000','4000-essential-english-words-51'),
 	('Finally, he said, "Thankyou"','Cuối cùng, anh nói, "Cảm ơn"','00:01:38.000','00:01:41.000','4000-essential-english-words-51'),
 
-	/* (UUID(),'4000-essential-english-words-52','The Farm Festival','Lễ hội nông trại','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_052.mp3',NULL,'00:00:00.000','00:01:35.800','4000-essential-english-words','NO',52) */
+	/* (UUID(),'4000-essential-english-words-52','The Farm Festival','Lễ hội nông trại','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_052.mp3',NULL,'00:00:00.000','00:01:35.800','4000-essential-english-words',0,0,52) */
 	('Once there was a farm','Ngày xưa, ở một nông trại nọ','00:00:03.000','00:00:05.200','4000-essential-english-words-52'),
 	('Many animals lived there','Có nhiều con vật cùng nhau sinh sống','00:00:05.200','00:00:07.300','4000-essential-english-words-52'),
 	('One day, they had a contest in the yard','Một ngày nọ, trong sân tổ chức một cuộc thi','00:00:07.300','00:00:10.800','4000-essential-english-words-52'),
@@ -1938,7 +1938,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('"But we had fun"','" Nhưng chúng tôi đã rất vui"','00:01:31.800','00:01:33.000','4000-essential-english-words-52'),
 	('"That is what\'s important"','"Đó mới là điều quan trọng"','00:01:33.000','00:01:35.800','4000-essential-english-words-52'),
 
-	/* (UUID(),'4000-essential-english-words-53','The Clever Thief','Tên trộm thông minh','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_053.mp3',NULL,'00:00:00.000','00:01:33.200','4000-essential-english-words','NO',53) */
+	/* (UUID(),'4000-essential-english-words-53','The Clever Thief','Tên trộm thông minh','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_053.mp3',NULL,'00:00:00.000','00:01:33.200','4000-essential-english-words',0,0,53) */
 	('A new king inherited a lot of gold','Một vị vua mới lên ngôi và được thừa kế rất nhiều vàng','00:00:03.000','00:00:06.200','4000-essential-english-words-53'),
 	('He loved his gold very much','Ông ta rất quý trọng số vàng của mình','00:00:06.200','00:00:08.700','4000-essential-english-words-53'),
 	('He even wanted to keep it after he died','Đến nỗi mà ông còn muốn đem theo số vàng đó xuống mồ','00:00:08.700','00:00:11.700','4000-essential-english-words-53'),
@@ -1965,7 +1965,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('When the builder healed, he explained to the king that he didn\'t keep any of the gold','Khi anh chàng thợ xây bình phục trở lại, anh giải thích với vị vua giàu có kia rằng anh đã không hề giữ bất cứ miếng vàng nào cả','00:01:24.200','00:01:29.800','4000-essential-english-words-53'),
 	('He had given it all away to the poor','Thay vào đó, anh đã chia số vàng mà mình lấy được cho những người nghèo khó hơn','00:01:29.800','00:01:33.200','4000-essential-english-words-53'),
 
-	/* (UUID(),'4000-essential-english-words-54','The Doctor\'s Cure','Việc chữa bệnh của bác sĩ','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_054.mp3',NULL,'00:00:00.000','00:01:38.600','4000-essential-english-words','NO',54) */
+	/* (UUID(),'4000-essential-english-words-54','The Doctor\'s Cure','Việc chữa bệnh của bác sĩ','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_054.mp3',NULL,'00:00:00.000','00:01:38.600','4000-essential-english-words',0,0,54) */
 	('James Fry was a fantastic doctor','James Fry là một bác sĩ tuyệt vời','00:00:03.000','00:00:06.400','4000-essential-english-words-54'),
 	('His surgeries helped many disabled people overcome their injuries','Những ca phẫu thuật của ông đã giúp đỡ cho nhiều người khuyết tật vượt qua những chấn thương','00:00:06.400','00:00:10.700','4000-essential-english-words-54'),
 	('He also wrote for a popular medical journal','Ông cũng viết cho một tạp chí y khoa nổi tiếng','00:00:10.700','00:00:13.800','4000-essential-english-words-54'),
@@ -1998,7 +1998,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('"I\'m going to take a long bath"','"Bố sẽ tắm rửa một chút"','00:01:33.400','00:01:35.600','4000-essential-english-words-54'),
 	('"And then we\'ll watch a movie together"','"Và sau đó chúng ta sẽ cùng xem phim"','00:01:35.600','00:01:38.600','4000-essential-english-words-54'),
 
-	/* (UUID(),'4000-essential-english-words-55','The Criminal','Tên tội phạm','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_055.mp3',NULL,'00:00:00.000','00:01:25.700','4000-essential-english-words','NO',55) */
+	/* (UUID(),'4000-essential-english-words-55','The Criminal','Tên tội phạm','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_055.mp3',NULL,'00:00:00.000','00:01:25.700','4000-essential-english-words',0,0,55) */
 	('A man had been in jail because he stole things','Có một người đàn ông vào tù vì tội ăn cắp','00:00:02.600','00:00:05.800','4000-essential-english-words-55'),
 	('The criminal never felt bad','Tên tội phạm không bao giờ cảm thấy tồi tệ','00:00:05.800','00:00:08.200','4000-essential-english-words-55'),
 	('One day, he escaped and ran into the woods','Một ngày nọ, hắn trốn thoát và chạy vào rừng','00:00:08.200','00:00:11.500','4000-essential-english-words-55'),
@@ -2029,7 +2029,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'4000-essential-english-words-56','The Two Captains','Hai ông thuyền trưởng','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_056.mp3',NULL,'00:00:00.000','00:01:29.800','4000-essential-english-words','NO',56) */
+	/* (UUID(),'4000-essential-english-words-56','The Two Captains','Hai ông thuyền trưởng','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_056.mp3',NULL,'00:00:00.000','00:01:29.800','4000-essential-english-words',0,0,56) */
 	('Once there were two ships','Vào một lần nọ, có hai con tàu','00:00:03.300','00:00:05.400','4000-essential-english-words-56'),
 	('Both ships carried cotton','Trên cả hai con tàu đó đều chở bông','00:00:05.400','00:00:07.600','4000-essential-english-words-56'),
 	('The captains were very different','Hai ông thuyền trưởng này có tính cách trái ngược nhau','00:00:07.600','00:00:09.800','4000-essential-english-words-56'),
@@ -2058,7 +2058,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The loss of the ship taught William a lesson','Mất con tàu đã dạy cho William một bài học','00:01:21.800','00:01:24.800','4000-essential-english-words-56'),
 	('There are times to have fun, but there are also times to be serious','Vui vẻ đúng lúc, nghiêm túc đúng nơi','00:01:24.800','00:01:29.800','4000-essential-english-words-56'),
 
-	/* (UUID(),'4000-essential-english-words-57','The Duke and the Minister','Công tước và bộ trưởng','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_057.mp3',NULL,'00:00:03.800','00:01:35.800','4000-essential-english-words','NO',57) */
+	/* (UUID(),'4000-essential-english-words-57','The Duke and the Minister','Công tước và bộ trưởng','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_057.mp3',NULL,'00:00:03.800','00:01:35.800','4000-essential-english-words',0,0,57) */
 	('A mean duke grew tobacco, and his cardinal rule was to always keep the plants healthy','Có một công tước trồng cây thuốc lá, và một nguyên tắc cốt lõi của ông là luôn giữ cho cây khỏe mạnh','00:00:03.800','00:00:10.800','4000-essential-english-words-57'),
 	('The duke\'s top minister was his twin brother','Ngài bộ trưởng chính là người em trai song sinh của ông','00:00:10.800','00:00:14.000','4000-essential-english-words-57'),
 	('They closely resembled each other','Họ rất giống nhau','00:00:14.000','00:00:16.200','4000-essential-english-words-57'),
@@ -2091,7 +2091,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('But he didn\'t','Nhưng ông ta đã không làm vậy','00:01:30.400','00:01:31.800','4000-essential-english-words-57'),
 	('The duke was too busy trying to preserve his plants','Công tước đang bận rộn cố gắng cứu lấy những cái cây của mình','00:01:31.800','00:01:35.800','4000-essential-english-words-57'),
 
-	/* (UUID(),'4000-essential-english-words-58','The Fisherman','Người ngư dân','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_058.mp3',NULL,'00:00:00.000','00:01:26.900','4000-essential-english-words','NO',58) */
+	/* (UUID(),'4000-essential-english-words-58','The Fisherman','Người ngư dân','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_058.mp3',NULL,'00:00:00.000','00:01:26.900','4000-essential-english-words',0,0,58) */
 	('Every day, a fisherman sat on a bridge','Ngày nào cũng có một người ngư dân ngồi trên cây cầu','00:00:03.000','00:00:06.800','4000-essential-english-words-58'),
 	('He ate apples and spit the seeds into the water','Ông ăn táo và nhổ hạt xuống nước','00:00:06.800','00:00:10.800','4000-essential-english-words-58'),
 	('He had a simple way to catch fish','Ông có một cách đơn giản để bắt cá','00:00:10.800','00:00:13.100','4000-essential-english-words-58'),
@@ -2118,7 +2118,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('"I am patient, and I believe in myself"','"Tôi là người kiên nhẫn và tôi tin vào bản thân mình"','00:01:20.900','00:01:23.900','4000-essential-english-words-58'),
 	('"Take a breath, and try it my way"','"Hãy hít thở và làm theo cách của tôi"','00:01:23.900','00:01:26.900','4000-essential-english-words-58'),
 
-	/* (UUID(),'4000-essential-english-words-59','Osiris and the Nile','Thần Osiris và dòng sông Nile','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_059.mp3',NULL,'00:00:00.000','00:01:38.200','4000-essential-english-words','NO',59) */
+	/* (UUID(),'4000-essential-english-words-59','Osiris and the Nile','Thần Osiris và dòng sông Nile','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_059.mp3',NULL,'00:00:00.000','00:01:38.200','4000-essential-english-words',0,0,59) */
 	('Long ago, Osiris was the king of Egypt, and Isis was the queen','Ngày xưa, Osiris là vua của Ai Cập, còn Isis là nữ hoàng','00:00:03.500','00:00:08.400','4000-essential-english-words-59'),
 	('They ruled the fertile land by the Nile River','Họ cai trị vùng sông Nile màu mỡ','00:00:08.400','00:00:12.100','4000-essential-english-words-59'),
 	('They had great intelligence, and they shared their abstract ideas with everyone','Họ cực kì thông minh và họ chia sẻ những ý tưởng trừu tượng của mình với người dân','00:00:12.100','00:00:17.300','4000-essential-english-words-59'),
@@ -2143,7 +2143,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Osiris returned every spring to help the farmers','Osiris trở lại vào mỗi mùa xuân để giúp đỡ người nông dân','00:01:29.200','00:01:33.200','4000-essential-english-words-59'),
 	('Even nowadays, people say Osiris keeps their crops alive','Thậm chí ngày nay, người ta vẫn tin rằng thần Osiris giúp cho cây trồng của họ luôn tươi tốt','00:01:33.200','00:01:38.200','4000-essential-english-words-59'),
 
-	/* (UUID(),'4000-essential-english-words-60','The Taxi Driver','Tài xế taxi','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_060.mp3',NULL,'00:00:00.000','00:01:32.800','4000-essential-english-words','NO',60) */
+	/* (UUID(),'4000-essential-english-words-60','The Taxi Driver','Tài xế taxi','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_060.mp3',NULL,'00:00:00.000','00:01:32.800','4000-essential-english-words',0,0,60) */
 	('Peter\'s job was driving a taxi downtown','Công việc của Peter là một tài xế taxi ở trung tâm thành phố','00:00:03.500','00:00:06.800','4000-essential-english-words-60'),
 	('He made a small salary','Anh ấy kiếm được một khoản lương nhỏ','00:00:06.800','00:00:08.800','4000-essential-english-words-60'),
 	('But he liked his job because it wasn\'t dull','Tuy nhiên anh thích công việc này vì nó không hề buồn tẻ','00:00:08.800','00:00:12.200','4000-essential-english-words-60'),
@@ -2178,7 +2178,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'4000-essential-english-words-61','The Real St. Nick','Thánh Nick thật sự','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_061.mp3',NULL,'00:00:00.000','00:01:40.700','4000-essential-english-words','NO',61) */
+	/* (UUID(),'4000-essential-english-words-61','The Real St. Nick','Thánh Nick thật sự','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_061.mp3',NULL,'00:00:00.000','00:01:40.700','4000-essential-english-words',0,0,61) */
 	('At Christmas, children wait for Saint Nicholas to bring gifts down the chimney','Vào lễ Giáng sinh, trẻ em chờ đợi Thánh Nicholas mang quà xuống ống khói','00:00:03.000','00:00:08.000','4000-essential-english-words-61'),
 	('But it\'s not just a story','Nhưng nó không chỉ là một câu chuyện','00:00:08.000','00:00:09.300','4000-essential-english-words-61'),
 	('Saint Nicholas was a real person','Thánh Nicholas là một người có thật','00:00:09.300','00:00:11.300','4000-essential-english-words-61'),
@@ -2212,7 +2212,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Even today, people still give secret gifts to children','Thậm chí ngày nay người ta vẫn tặng quà bí mật cho trẻ em','00:01:34.300','00:01:38.000','4000-essential-english-words-61'),
 	('And we say they are from St.Nicholas','Và chúng ta nói rằng món quà đến từ Thánh Nicholas','00:01:38.000','00:01:40.700','4000-essential-english-words-61'),
 
-	/* (UUID(),'4000-essential-english-words-62','The shepherd and the wild sheep','Người chăn cừu và bầy cừu hoang','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_062.mp3',NULL,'00:00:00.000','00:01:36.500','4000-essential-english-words','NO',62) */
+	/* (UUID(),'4000-essential-english-words-62','The shepherd and the wild sheep','Người chăn cừu và bầy cừu hoang','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_062.mp3',NULL,'00:00:00.000','00:01:36.500','4000-essential-english-words',0,0,62) */
 	('Once there was a shepherd','Ngày xưa có một người chăn cừu','00:00:03.900','00:00:05.500','4000-essential-english-words-62'),
 	('Every night he counted and gathered his sheep','Hằng đêm ông ta đếm và tập hợp bầy cừu của mình lại','00:00:05.500','00:00:08.400','4000-essential-english-words-62'),
 	('He was sure never to overlook any of them','Ông ta chắc chắn không bao giờ bỏ qua bất kỳ con nào trong số chúng','00:00:08.400','00:00:11.200','4000-essential-english-words-62'),
@@ -2243,7 +2243,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He was a fake friend to the wild sheep','Ông ta là một người bạn giả dối với lũ cừu hoang','00:01:31.000','00:01:33.500','4000-essential-english-words-62'),
 	('Because of this, he had neglected his own herd','Bởi vì điều này, ông đã lơ là với bầy cừu của mình','00:01:33.500','00:01:36.500','4000-essential-english-words-62'),
 
-	/* (UUID(),'4000-essential-english-words-63','The Boy and his Sled','Cậu bé và chiếc xe trượt tuyết','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_063.mp3',NULL,'00:00:00.000','00:01:27.400','4000-essential-english-words','NO',63) */
+	/* (UUID(),'4000-essential-english-words-63','The Boy and his Sled','Cậu bé và chiếc xe trượt tuyết','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_063.mp3',NULL,'00:00:00.000','00:01:27.400','4000-essential-english-words',0,0,63) */
 	('Mike was the smallest child in school','Mike là cậu bé có dáng người nhỏ bé nhất ở trường học','00:00:03.300','00:00:06.300','4000-essential-english-words-63'),
 	('Another boy, Joe, always teased Mike','Joe, một cậu bé khác, luôn trêu chọc Mike','00:00:06.300','00:00:08.800','4000-essential-english-words-63'),
 	('Joe had a large scar on his face from fighting other children','Một ngày, Joe đã làm tổn thương Mike khi đem thư tình của cậu viết cho Jane ra làm trò đùa','00:00:08.800','00:00:12.900','4000-essential-english-words-63'),
@@ -2271,7 +2271,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('They became friends, and Joe was grateful that Mike was so nice to him','Họ đã trở thành bạn, và Joe rất biết ơn vì Mike đối đãi rất tốt với cậu','00:01:19.000','00:01:23.800','4000-essential-english-words-63'),
 	('He learned that it is more fun to be nice than to be mean','Cậu bé học được rằng trở nên tử tế, tốt đẹp thì vui hơn nhiều so với việc nhỏ nhen, xấu tính','00:01:23.800','00:01:27.400','4000-essential-english-words-63'),
 
-	/* (UUID(),'4000-essential-english-words-64','Tiny Tina','Tina tí hon','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_064.mp3',NULL,'00:00:00.000','00:01:43.000','4000-essential-english-words','NO',64) */
+	/* (UUID(),'4000-essential-english-words-64','Tiny Tina','Tina tí hon','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_064.mp3',NULL,'00:00:00.000','00:01:43.000','4000-essential-english-words',0,0,64) */
 	('In a distant land, there was a kingdom where fairies lived','Ở một vùng đất xa xôi nọ, có một vương quốc là nơi sinh sống của các nàng tiên','00:00:02.800','00:00:06.600','4000-essential-english-words-64'),
 	('Tina was a fairy','Tina là một nàng tiên','00:00:06.600','00:00:07.800','4000-essential-english-words-64'),
 	('She had yellow curls and wore a dress made of wool','Cô ấy có mái tóc vàng xoăn và mặc một chiếc váy len','00:00:07.800','00:00:10.800','4000-essential-english-words-64'),
@@ -2311,7 +2311,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She wasn\'t scared of big people anymore','Tina không còn sợ những người khổng lồ nữa','00:01:36.800','00:01:39.600','4000-essential-english-words-64'),
 	('Wilma and Tina lived happily ever after','Wilma và Tina sống hạnh phúc mãi mãi về sau','00:01:39.600','00:01:43.000','4000-essential-english-words-64'),
 
-	/* (UUID(),'4000-essential-english-words-65','Trick or treat','Xin kẹo hay bị ghẹo','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_065.mp3',NULL,'00:00:00.000','00:01:40.000','4000-essential-english-words','NO',65) */
+	/* (UUID(),'4000-essential-english-words-65','Trick or treat','Xin kẹo hay bị ghẹo','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_065.mp3',NULL,'00:00:00.000','00:01:40.000','4000-essential-english-words',0,0,65) */
 	('Many different cultures have had traditions about the dead','Nhiều nền văn hóa khác nhau có những tín ngưỡng khác nhau về cái chết','00:00:02.800','00:00:06.300','4000-essential-english-words-65'),
 	('People in places like Ireland, China, Egypt and Mexico believed that souls needed food','Chẳng hạn như người Ai-len, Trung Quốc, Ai cập, Mê-xi-cô tin rằng những linh hồn cũng cần đồ ăn','00:00:06.300','00:00:12.500','4000-essential-english-words-65'),
 	('They thought the food nourished them on their journey from cemeteries to heaven','Họ nghĩ rằng thức ăn sẽ nuôi dưỡng những linh hồn trong chuyến đi từ nghĩa địa tới thiên đàng','00:00:12.500','00:00:16.900','4000-essential-english-words-65'),
@@ -2339,7 +2339,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'4000-essential-english-words-66','The Senator and the Worm','Ngài thượng nghị sĩ và con sâu','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_066.mp3',NULL,'00:00:00.000','00:01:34.000','4000-essential-english-words','NO',66) */
+	/* (UUID(),'4000-essential-english-words-66','The Senator and the Worm','Ngài thượng nghị sĩ và con sâu','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_066.mp3',NULL,'00:00:00.000','00:01:34.000','4000-essential-english-words',0,0,66) */
 	('A rich senator lived in a big house','Có một vị thượng nghị sĩ giàu có nọ sống trong một ngôi nhà rất lớn','00:00:03.500','00:00:05.900','4000-essential-english-words-66'),
 	('He had more money than anyone in his district','Ông ta có nhiều tiền hơn bất cứ ai trong quận của mình','00:00:05.900','00:00:08.900','4000-essential-english-words-66'),
 	('One day, he was sitting on a chair listening to a radio broadcast','Một ngày nọ, ông ta ngồi trên ghế và nghe đài phát thanh','00:00:08.900','00:00:13.000','4000-essential-english-words-66'),
@@ -2377,7 +2377,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('"Instead of being nice, he wanted to hurt me"','"Thay vì tỏ ra ngoan ngoãn thì hắn ta lại muốn làm hại mình"','00:01:28.100','00:01:30.900','4000-essential-english-words-66'),
 	('"Now, that man has a big bump on his head"','"Giờ thì hắn có một cái u rất lớn trên đầu rồi nhé"','00:01:30.900','00:01:34.000','4000-essential-english-words-66'),
 
-	/* (UUID(),'4000-essential-english-words-67','Patsy Ann','Patsy Ann','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_067.mp3',NULL,'00:00:00.000','00:01:37.200','4000-essential-english-words','NO',67) */
+	/* (UUID(),'4000-essential-english-words-67','Patsy Ann','Patsy Ann','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_067.mp3',NULL,'00:00:00.000','00:01:37.200','4000-essential-english-words',0,0,67) */
 	('A long time ago in Alaska, a dog named Patsy Ann watched the horizon','Cách đây rất lâu, ở Alaska, có một chú chó tên là Pasty Ann luôn nhìn về phía chân trời','00:00:03.000','00:00:08.100','4000-essential-english-words-67'),
 	('Every day, she waited by the bay for ships returning from an expedition','Hằng ngày, cô đợi những con tàu trở về từ chuyến đi thám hiểm ở vịnh','00:00:08.100','00:00:13.000','4000-essential-english-words-67'),
 	('Patsy Ann was a brilliant dog, and she was very unique','Pasty Ann là một nàng cún rất thông minh, và cô ấy rất đặc biệt','00:00:13.000','00:00:16.300','4000-essential-english-words-67'),
@@ -2410,7 +2410,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He restored the town\'s greeter','Ông đã mang người chào mừng của thị trấn trở lại với mọi người','00:01:30.400','00:01:32.600','4000-essential-english-words-67'),
 	('Now, she sits at the dock forever, waiting for ships to come home','Giờ đây, cô mãi mãi có thể được ngồi ở bến tàu chờ đợi những con tàu trở về nhà','00:01:32.600','00:01:37.200','4000-essential-english-words-67'),
 
-	/* (UUID(),'4000-essential-english-words-68','The Anniversary Gift','Món quà kỷ niệm','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_068.mp3',NULL,'','','4000-essential-english-words','NO',68) */
+	/* (UUID(),'4000-essential-english-words-68','The Anniversary Gift','Món quà kỷ niệm','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_068.mp3',NULL,'','','4000-essential-english-words',0,0,68) */
 	('Joe was a carpenter','Joe là một thợ mộc','','','4000-essential-english-words-68'),
 	('He built houses in the highlands','Anh xây những ngôi nhà trên thảo nguyên','','','4000-essential-english-words-68'),
 	('Joe\'s wife Stella used a needle and thread to sew elegant clothing','Vợ của Joe là Stella thường dùng kim và chỉ để may những bộ quần áo tao nhã','','','4000-essential-english-words-68'),
@@ -2443,7 +2443,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He gave her the brush, and she laughed','Anh ấy đưa cô chiếc lược và cô cười','','','4000-essential-english-words-68'),
 	('They were both willing to give up something very special to make each other happy','Cả hai bọn họ sẵn sàng từ bỏ những thứ quan trọng với mình để khiến người kia hạnh phúc','','','4000-essential-english-words-68'),
 
-	/* (UUID(),'4000-essential-english-words-69','Dalton vs the Bully','Dalton và kẻ thất bại','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_069.mp3',NULL,'','','4000-essential-english-words','NO',69) */
+	/* (UUID(),'4000-essential-english-words-69','Dalton vs the Bully','Dalton và kẻ thất bại','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_069.mp3',NULL,'','','4000-essential-english-words',0,0,69) */
 	('Dalton was a nice boy, but sometimes the other boys made fun of him because he was so tall and skinny','Dalton từng là một cậu bé ngoan, nhưng đôi khi những cậu bé khác chế giễu cậu vì cậu rất cao và gầy','','','4000-essential-english-words-69'),
 	('Dalton\'s biggest problem was Mitch','Vấn đề lớn nhất của Dalton là Mitch','','','4000-essential-english-words-69'),
 	('He was a bully who boasted about his strength','Cậu ấy là một kẻ bắt nạt người khoác lác về sức mạnh của mình','','','4000-essential-english-words-69'),
@@ -2480,7 +2480,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('But the ball bounced off Dalton\'s hands and back into Mitch\'s face','Nhưng quả bóng đã nảy khỏi tay của Dalton và đập trở lại mặt của Mitch','','','4000-essential-english-words-69'),
 	('Finally Mitch was defeated','Cuối cùng Mitch đã bị đánh bại','','','4000-essential-english-words-69'),
 
-	/* (UUID(),'4000-essential-english-words-70','Anna the Babysitter','Cô trông trẻ Anna','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_070.mp3',NULL,'','','4000-essential-english-words','NO',70) */
+	/* (UUID(),'4000-essential-english-words-70','Anna the Babysitter','Cô trông trẻ Anna','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_070.mp3',NULL,'','','4000-essential-english-words',0,0,70) */
 	('Since her parents got a divorce, Anna has had to help her mother','Từ khi ba mẹ ly hôn, Anna đã phải phụ giúp mẹ của mình','','','4000-essential-english-words-70'),
 	('In her mother\'s absence, Anna takes care of Grace, the baby','Trong khi mẹ đi vắng, Anna chăm sóc cho em gái tên là Grace','','','4000-essential-english-words-70'),
 	('At first, Anna thought it was an easy job','Lúc đầu, Anna nghĩ rằng đó là một công việc dễ dàng','','','4000-essential-english-words-70'),
@@ -2517,7 +2517,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'4000-essential-english-words-71','Peter and the Dwarf','Peter và người lùn','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_071.mp3',NULL,'','','4000-essential-english-words','NO',71) */
+	/* (UUID(),'4000-essential-english-words-71','Peter and the Dwarf','Peter và người lùn','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_071.mp3',NULL,'','','4000-essential-english-words',0,0,71) */
 	('Peter was a hunter','Peter là một thợ săn','','','4000-essential-english-words-71'),
 	('One day, he was in pursuit of a deer and became lost','Một ngày nọ, anh ta đang đuổi theo một con hươu thì bị lạc','','','4000-essential-english-words-71'),
 	('He usually carried a compass with him when he went into the wilderness, but that day he left it at home','Anh ta thường mang theo một chiếc la bàn khi đi đến nơi hoang dã, nhưng ngày hôm đó anh ta lại để nó ở nhà','','','4000-essential-english-words-71'),
@@ -2553,7 +2553,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The dwarf was still there','Người lùn vẫn ở đó','','','4000-essential-english-words-71'),
 	('"Here\'s a proverb for you to think about," it said, "When patience is lost, then so are you"','"Ngươi cần phải suy ngẫm về câu tục ngữ này," người lùn nói, "khi sự kiên nhẫn mất đi thì bản thân ngươi cũng sẽ như vậy thôi"','','','4000-essential-english-words-71'),
 
-	/* (UUID(),'4000-essential-english-words-72','The Ice Cream Cone Explosion','Vụ nổ kem ốc quế','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_072.mp3',NULL,'','','4000-essential-english-words','NO',72) */
+	/* (UUID(),'4000-essential-english-words-72','The Ice Cream Cone Explosion','Vụ nổ kem ốc quế','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_072.mp3',NULL,'','','4000-essential-english-words',0,0,72) */
 	('One day, John walked to his uncle\'s ice cream shop','Một ngày nọ, cậu bé Sam đến tiệm kem của bác mình chơi','','','4000-essential-english-words-72'),
 	('When he reached the sidewalk, he caught the scent of ice cream cones and anticipated eating some ice cream','Chưa bước đến cửa thì cậu đã bắt gặp mùi thơm của những cây kem ốc quế ngon lành và như đoán trước được cậu đã thưởng thức vài cây','','','4000-essential-english-words-72'),
 	('Sam opened the door','Sam đẩy cửa vào','','','4000-essential-english-words-72'),
@@ -2588,7 +2588,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He tossed Sam a rag to clean his face and smiled','Bác ném cho Sam một cái giẻ để lau sạch mặt rồi ông mỉm cười','','','4000-essential-english-words-72'),
 	('"I guess we have enough cones now"','"Bác đoán bây giờ chúng ta có đủ bánh ốc quế rồi đấy"','','','4000-essential-english-words-72'),
 
-	/* (UUID(),'4000-essential-english-words-73','Sheriff Dan','Thị trưởng Dan','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_073.mp3',NULL,'','','4000-essential-english-words','NO',73) */
+	/* (UUID(),'4000-essential-english-words-73','Sheriff Dan','Thị trưởng Dan','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_073.mp3',NULL,'','','4000-essential-english-words',0,0,73) */
 	('Dan was the evil sheriff of Oceantown','Dan là một tên thị trưởng xấu xa của thị trấn biển','','','4000-essential-english-words-73'),
 	('Dan was as cruel as the devil','Hắn ta độc ác như một ác quỷ','','','4000-essential-english-words-73'),
 	('He worshipped money','Hắn tôn thờ tiền bạc','','','4000-essential-english-words-73'),
@@ -2619,7 +2619,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The boat drifted out of the port, and Dan was never seen again','Chiếc thuyền trôi dạt ra ngoài bờ cảng, và Dan không bao giờ được nhìn thấy nữa','','','4000-essential-english-words-73'),
 	('The people voted for a new sheriff who was kind and fair','Người dân bầu một thị trưởng mới tốt bụng và công bằng','','','4000-essential-english-words-73'),
 
-	/* (UUID(),'4000-essential-english-words-74','The Helpful Apprentice','Cậu bé học việc hữu ích','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_074.mp3',NULL,'','','4000-essential-english-words','NO',74) */
+	/* (UUID(),'4000-essential-english-words-74','The Helpful Apprentice','Cậu bé học việc hữu ích','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_074.mp3',NULL,'','','4000-essential-english-words',0,0,74) */
 	('There was once a small restaurant','Ngày xưa có một nhà hàng nhỏ','','','4000-essential-english-words-74'),
 	('People said that the best chef in the world worked there','Mọi người nói rằng người đầu bếp giỏi nhất thế giới đang làm việc ở đây','','','4000-essential-english-words-74'),
 	('But the chef was a horrible person to work for','Nhưng người bếp trưởng này lại là một người tệ hại để làm việc cùng','','','4000-essential-english-words-74'),
@@ -2652,7 +2652,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The emperor loved the food','Hoàng đế rất yêu thích món ăn này','','','4000-essential-english-words-74'),
 	('After his departure, the chef was very proud and very thankful to his new friend, the apprentice','Sau khi Người rời đi, bếp trưởng rất tự hào và biết ơn người bạn mới của ông, cậu bé học việc','','','4000-essential-english-words-74'),
 
-	/* (UUID(),'4000-essential-english-words-75','Why Monkey Has No Home','Tại sao khỉ không có nhà','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_075.mp3',NULL,'','','4000-essential-english-words','NO',75) */
+	/* (UUID(),'4000-essential-english-words-75','Why Monkey Has No Home','Tại sao khỉ không có nhà','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_075.mp3',NULL,'','','4000-essential-english-words',0,0,75) */
 	('For five years, there was a famine','Trong 5 năm liền, xảy ra một trận dịch đói','','','4000-essential-english-words-75'),
 	('The farmers asked people to bless them and finally, they had a good harvest','Người nông dân xin mọi người hãy cầu nguyện cho họ và cuối cùng, họ đã có một vụ mùa tốt','','','4000-essential-english-words-75'),
 	('Since there was now plenty of food, the pharaoh decided to have a party','Kể từ đó đến nay có rất nhiều thực phẩm, nên Vua Pha-ra-on đã quyết định tổ chức một bữa tiệc','','','4000-essential-english-words-75'),
@@ -2687,7 +2687,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'4000-essential-english-words-76','Matthew Learns a Lesson','Matthew học được một bài học','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_076.mp3',NULL,'','','4000-essential-english-words','NO',76) */
+	/* (UUID(),'4000-essential-english-words-76','Matthew Learns a Lesson','Matthew học được một bài học','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_076.mp3',NULL,'','','4000-essential-english-words',0,0,76) */
 	('Matthew was a sensible boy','Matthew là một cậu bé nhạy cảm','','','4000-essential-english-words-76'),
 	('He always kept his room tidy and had a natural literary aptitude','Cậu ấy luôn giữ cho căn phòng của mình gọn gàng và có khuynh hướng văn học tự nhiên','','','4000-essential-english-words-76'),
 	('One day, he hoped to have a career in journalism','Một ngày, cậu ấy đã hy vọng sẽ có một sự nghiệp trong ngành báo chí','','','4000-essential-english-words-76'),
@@ -2720,7 +2720,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('But they made Matthew pick up trash as punishment','Nhưng họ ép Matthew đi nhặt rác như một hình phạt','','','4000-essential-english-words-76'),
 	('Much to Matthew\'s surprise, he ended up meeting some new friends','Matthew thật sự rất ngạc nhiên, anh ấy cuối cùng đã gặp được những người bạn mới','','','4000-essential-english-words-76'),
 
-	/* (UUID(),'4000-essential-english-words-77','The Magic Cup','Chiếc cốc thần kỳ','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_077.mp3',NULL,'','','4000-essential-english-words','NO',77) */
+	/* (UUID(),'4000-essential-english-words-77','The Magic Cup','Chiếc cốc thần kỳ','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_077.mp3',NULL,'','','4000-essential-english-words',0,0,77) */
 	('Paul and John were brothers','Paul và John là hai anh em','','','4000-essential-english-words-77'),
 	('They fought all the time because they both wanted to be leaders of the agency they both worked at','Cả hai đấu đá nhau suốt ngày vì hai người đều muốn trở thành lãnh đạo của cơ quan mà họ đang cùng làm','','','4000-essential-english-words-77'),
 	('There was a superstition in their town about a magic cup','Có một điều mê tín về một chiếc cốc thần kì ở nơi mà họ sống','','','4000-essential-english-words-77'),
@@ -2749,7 +2749,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('It was only an ordinary cup','Nó chỉ là một chiếc cốc bình thường','','','4000-essential-english-words-77'),
 	('But the trip to reach the cup taught them to work together and love each other','Nhưng chuyến đi tìm chiếc cốc đã dạy cho họ một bài học về cách làm việc cùng nhau và yêu thương lẫn nhau','','','4000-essential-english-words-77'),
 
-	/* (UUID(),'4000-essential-english-words-78','The Knight\'s Plan','Kế hoạch của hiệp sĩ','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_078.mp3',NULL,'','','4000-essential-english-words','NO',78) */
+	/* (UUID(),'4000-essential-english-words-78','The Knight\'s Plan','Kế hoạch của hiệp sĩ','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_078.mp3',NULL,'','','4000-essential-english-words',0,0,78) */
 	('A town was fighting for their independence from another country','Một thị trấn đang diễn ra chiến tranh để giành lại độc lập từ một quốc gia khác','','','4000-essential-english-words-78'),
 	('Several rebels started a revolution','Một số người nổi loạn bắt đầu thực hiện những cuộc nổi loạn chống đối','','','4000-essential-english-words-78'),
 	('However, they were afraid of an invasion from a lot of troops','Tuy nhiên, họ sợ một cuộc xâm lược đến từ nhiều quân đội','','','4000-essential-english-words-78'),
@@ -2784,7 +2784,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('They ran down the mountain, out of the town, and never returned','Họ chạy về chân núi, rút ra khỏi thị trấn, và không bao giờ quay trở lại nữa','','','4000-essential-english-words-78'),
 	('The knight explained, "With a little luck, a good plan beats even a big army"','Chàng kỵ sĩ đã giải thích thêm rằng, "Nhờ vào một chút may mắn, kế hoạch của chúng ta đã đánh bại một quân đội lớn"','','','4000-essential-english-words-78'),
 
-	/* (UUID(),'4000-essential-english-words-79','The Magic Pear Tree','Cây lê ma thuật','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_079.mp3',NULL,'','','4000-essential-english-words','NO',79) */
+	/* (UUID(),'4000-essential-english-words-79','The Magic Pear Tree','Cây lê ma thuật','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_079.mp3',NULL,'','','4000-essential-english-words',0,0,79) */
 	('It was a cool morning, and the grass was covered in mist','Đó là một buổi sáng mát mẻ, và cỏ được bọc trong sương mù','','','4000-essential-english-words-79'),
 	('The market was full of people','Khu chợ đông kín người','','','4000-essential-english-words-79'),
 	('A mean farmer named Jack yelled, "Pears for sale"','Một người nông dân tên Jack đã hét lên, "Bán lê đây"','','','4000-essential-english-words-79'),
@@ -2821,7 +2821,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The farmer felt ashamed','Người nông dân đã cảm thấy xấu hổ','','','4000-essential-english-words-79'),
 	('The incident taught him to be kinder','Tình tiết đã dạy cho ông trở nên tử tế hơn','','','4000-essential-english-words-79'),
 
-	/* (UUID(),'4000-essential-english-words-80','Little Wolf and Mother Wolf','Sói con và sói mẹ','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_080.mp3',NULL,'','','4000-essential-english-words','NO',80) */
+	/* (UUID(),'4000-essential-english-words-80','Little Wolf and Mother Wolf','Sói con và sói mẹ','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_080.mp3',NULL,'','','4000-essential-english-words',0,0,80) */
 	('Mother Wolf was a magnificent animal','Sói Mẹ là một con thú đẹp lộng lẫy','','','4000-essential-english-words-80'),
 	('She had all the traits of a terrific hunter','Cô ấy có mọi tính cách của một con thú săn mồi đáng sợ','','','4000-essential-english-words-80'),
 	('She was very strong and fast','Cô ấy rất mạnh mẽ và nhanh','','','4000-essential-english-words-80'),
@@ -2858,7 +2858,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'4000-essential-english-words-81','The Old Man with a Bump','Ông già với một cái bướu','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_081.mp3',NULL,'','','4000-essential-english-words','NO',81) */
+	/* (UUID(),'4000-essential-english-words-81','The Old Man with a Bump','Ông già với một cái bướu','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_081.mp3',NULL,'','','4000-essential-english-words',0,0,81) */
 	('An old man had a large bump on his face','Một ông già có một cái bướu lớn trên mặt','','','4000-essential-english-words-81'),
 	('He went to the best physician in town','Ông đi tới gặp một thầy thuốc giỏi nhất trong thị trấn','','','4000-essential-english-words-81'),
 	('He gave the old man tragic news: "I can\'t do anything"','Người thầy thuốc đưa ông một tin buồn: "Tôi không thể làm bất cứ điều gì cả"','','','4000-essential-english-words-81'),
@@ -2892,7 +2892,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He had tricked them','Ông ta đã lừa lũ quái vật','','','4000-essential-english-words-81'),
 	('He never went back, and he never had to worry about his bump again','Ông sẽ không bao giờ quay lại và ông cũng sẽ không bao giờ phải lo lắng về cái bướu nữa','','','4000-essential-english-words-81'),
 
-	/* (UUID(),'4000-essential-english-words-82','The Circus','Rạp xiếc','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_082.mp3',NULL,'','','4000-essential-english-words','NO',82) */
+	/* (UUID(),'4000-essential-english-words-82','The Circus','Rạp xiếc','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_082.mp3',NULL,'','','4000-essential-english-words',0,0,82) */
 	('Ben was unhappy','Ben cảm thấy phiền muộn','','','4000-essential-english-words-82'),
 	('He lived on a ranch near a small town, and he didn\'t have many friends','Anh ta đã sống ở một nông trại gần một thị trấn nhỏ, và anh không có nhiều người bạn','','','4000-essential-english-words-82'),
 	('Then one day a messenger came to the ranch','Sau đó một ngày nọ một tin nhắn tới trang trại','','','4000-essential-english-words-82'),
@@ -2923,7 +2923,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He just wanted to make children happy','Anh chỉ muốn khiến bọn trẻ được vui vẻ thôi','','','4000-essential-english-words-82'),
 	('He knew the circus had changed his life, and he wanted to do the same thing for others','Anh biết rằng gánh xiếc đã thay đổi cuộc đời của mình và anh muốn làm điều tương tự cho những người khác','','','4000-essential-english-words-82'),
 
-	/* (UUID(),'4000-essential-english-words-83','Lazy Hans','Hans lười biếng','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_083.mp3',NULL,'','','4000-essential-english-words','NO',83) */
+	/* (UUID(),'4000-essential-english-words-83','Lazy Hans','Hans lười biếng','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_083.mp3',NULL,'','','4000-essential-english-words',0,0,83) */
 	('Hans was lazy','Hans rất lười biếng','','','4000-essential-english-words-83'),
 	('He seldom helped his mother with anything','Anh ta hiếm khi giúp mẹ bất cứ việc gì','','','4000-essential-english-words-83'),
 	('He didn\'t cook and he never mowed the lawn','Anh ta không nấu ăn và cũng chẳng bao giờ cắt cỏ','','','4000-essential-english-words-83'),
@@ -2957,7 +2957,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('"Do you promise to work?" she asked','"Con có hứa sẽ làm việc không?" bà hỏi','','','4000-essential-english-words-83'),
 	('"Yes" said Hans, "I\'ll never be lazy again"','"Vâng" Hans nói, "Con sẽ không bao giờ lười nhác nữa"','','','4000-essential-english-words-83'),
 
-	/* (UUID(),'4000-essential-english-words-84','The Bremen Town Musicians','Những nhạc sĩ của thị trấn Bremen','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_084.mp3',NULL,'','','4000-essential-english-words','NO',84) */
+	/* (UUID(),'4000-essential-english-words-84','The Bremen Town Musicians','Những nhạc sĩ của thị trấn Bremen','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_084.mp3',NULL,'','','4000-essential-english-words',0,0,84) */
 	('Larry the cow, Harry the rooster and Lester the duck lived on a widow\'s farm','Chú bò Larry, gà trống Harry và chú vịt Lester sống ở trang trại của một góa phụ','','','4000-essential-english-words-84'),
 	('They dreamed of playing music in a parade','Cả ba mơ ước được chơi nhạc trong một cuộc diễu hành','','','4000-essential-english-words-84'),
 	('One day, the widow went to the lawn where her herd of cattle was grazing','Một ngày, người góa phụ xuống đồng cỏ nơi đang chăn thả đàn gia súc','','','4000-essential-english-words-84'),
@@ -2990,7 +2990,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('We can stay here and make music"','"Chúng ta có thể ở đây và tạo ra âm nhạc mà"','','','4000-essential-english-words-84'),
 	('And so they remained there and were quite happy','Và thế là họ ở luôn lại đó và sống khá hạnh phúc','','','4000-essential-english-words-84'),
 
-	/* (UUID(),'4000-essential-english-words-85','How Did Greenland Get Its Name?','Greenland đã có tên gọi như thế nào?','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_085.mp3',NULL,'','','4000-essential-english-words','NO',85) */
+	/* (UUID(),'4000-essential-english-words-85','How Did Greenland Get Its Name?','Greenland đã có tên gọi như thế nào?','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_085.mp3',NULL,'','','4000-essential-english-words',0,0,85) */
 	('The nation of Greenland isn\'t very green','Quốc gia của Vùng đất màu xanh thực ra không quá xanh','','','4000-essential-english-words-85'),
 	('The sun\'s rays don\'t shine there for three whole months','Những tia nắng mặt trời không chiếu ở đó trong 3 tháng ròng','','','4000-essential-english-words-85'),
 	('As a result, it\'s covered with snow, ice and frost','Kết quả là nơi đó bị bao phủ bởi tuyết, băng và sương giá','','','4000-essential-english-words-85'),
@@ -3029,7 +3029,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'4000-essential-english-words-86','Everyone is Special','Mọi người đều đặc biệt','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_086.mp3',NULL,'','','4000-essential-english-words','NO',86) */
+	/* (UUID(),'4000-essential-english-words-86','Everyone is Special','Mọi người đều đặc biệt','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_086.mp3',NULL,'','','4000-essential-english-words',0,0,86) */
 	('When I was young, everything that went wrong in my house seemed to be my fault','Khi tôi còn nhỏ, mọi chuyện xảy ra trong nhà dường như là lỗi của tôi','','','4000-essential-english-words-86'),
 	('Once, my brothers tried to make cookies','Một lần,anh em tôi đã thử làm bánh','','','4000-essential-english-words-86'),
 	('They blended flour and ginger and made a disgusting paste','Họ trộn bột và gừng và tạo nên một thứ bột nhão đáng kinh tởm','','','4000-essential-english-words-86'),
@@ -3062,7 +3062,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('I embraced her','Tôi ôm chặt mẹ','','','4000-essential-english-words-86'),
 	('Now I know that my parents love me just as much as my brothers','Giờ thì tôi biết rằng ba mẹ mình yêu tôi cũng nhiều như các anh trai của mình vậy','','','4000-essential-english-words-86'),
 
-	/* (UUID(),'4000-essential-english-words-87','Pizarro and the Inca Gold','Pizarro và vàng ở Inca','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_087.mp3',NULL,'','','4000-essential-english-words','NO',87) */
+	/* (UUID(),'4000-essential-english-words-87','Pizarro and the Inca Gold','Pizarro và vàng ở Inca','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_087.mp3',NULL,'','','4000-essential-english-words',0,0,87) */
 	('According to rumors, there\'s lots of precious gold hidden in the jungles of Peru','Theo những lời đồn đại, có rất nhiều vàng quý giá được giấu ở trong rừng tại Peru','','','4000-essential-english-words-87'),
 	('It got there when the Spanish conquered parts of South America','Vàng được chôn ở đây khi Tây Ban Nha chinh phạt nhiều lãnh thổ ở Bắc Mỹ','','','4000-essential-english-words-87'),
 	('The Spanish noble, Francisco Pizarro, arrived in Peru in the 1500s','Một quý tộc Tây Ban Nha, Francisco Pizarro, đã đến Peru vào những năm 1500','','','4000-essential-english-words-87'),
@@ -3092,7 +3092,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The Spanish conquerors never found the gold','Người kẻ đô hộ đến từ Tây Ban Nha sẽ không bao giờ tìm thấy vàng nữa','','','4000-essential-english-words-87'),
 	('People think it is still there today','Mọi người nghĩ rằng số vàng đó vẫn còn đến tận ngày hôm nay','','','4000-essential-english-words-87'),
 
-	/* (UUID(),'4000-essential-english-words-88','The Boy Who Saved the Town','Cậu bé cứu tinh của thị trấn','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_088.mp3',NULL,'','','4000-essential-english-words','NO',88) */
+	/* (UUID(),'4000-essential-english-words-88','The Boy Who Saved the Town','Cậu bé cứu tinh của thị trấn','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_088.mp3',NULL,'','','4000-essential-english-words',0,0,88) */
 	('Marcus lived in a small suburb near the sea','Marcus sống ở một vùng ngoại ô nhỏ gần biển','','','4000-essential-english-words-88'),
 	('He was a stubborn boy, and he only cared about himself','Cậu là một chú bé bướng bỉnh, và cậu chỉ quan tâm tới bản thân mình','','','4000-essential-english-words-88'),
 	('His father worked as a chemist for an institution and wanted Marcus to get a job there','Bố của cậu làm việc với tư cách một nhà hóa học trong một viện nghiên cứu và muốn Marcus có một công việc ở đó','','','4000-essential-english-words-88'),
@@ -3122,7 +3122,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The local congress even gave him a gift for saving the town','Hội nghị địa phương thậm chí còn tặng cho cậu một món quà cho việc cứu sống thị trấn','','','4000-essential-english-words-88'),
 	('He was a hero','Cậu là một người anh hùng','','','4000-essential-english-words-88'),
 
-	/* (UUID(),'4000-essential-english-words-89','An Interesting Life','Cuộc sống thú vị','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_089.mp3',NULL,'','','4000-essential-english-words','NO',89) */
+	/* (UUID(),'4000-essential-english-words-89','An Interesting Life','Cuộc sống thú vị','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_089.mp3',NULL,'','','4000-essential-english-words',0,0,89) */
 	('A man looked through some boxes with his grandson','Một người ông cùng đứa cháu nhìn qua vài chiếc hộp','','','4000-essential-english-words-89'),
 	('They were filled with old photographs and objects that portrayed important events from the grandfather\'s life','Những chiếc hộp đầy những bức ảnh và đồ vật cũ tái hiện lại các sự kiện quan trọng trong cuộc đời của người ông','','','4000-essential-english-words-89'),
 	('He wished to share the circumstances behind each event with his grandson','Ông mong muốn chia sẻ hoàn cảnh sau mỗi sự kiện với cháu mình','','','4000-essential-english-words-89'),
@@ -3154,7 +3154,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('"Wow" said the boy','"Wow" cậu thốt lên','','','4000-essential-english-words-89'),
 	('"Granddad, now I know all about your life"','"Giờ thì cháy đã biết tất cả về cuộc đời ông rồi"','','','4000-essential-english-words-89'),
 
-	/* (UUID(),'4000-essential-english-words-90','The Kitten and the Caterpillar','Mèo con và sâu bướm','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_090.mp3',NULL,'','','4000-essential-english-words','NO',90) */
+	/* (UUID(),'4000-essential-english-words-90','The Kitten and the Caterpillar','Mèo con và sâu bướm','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_090.mp3',NULL,'','','4000-essential-english-words',0,0,90) */
 	('Katie the kitten liked to play','Chú mèo con Katie rất thích chơi đùa','','','4000-essential-english-words-90'),
 	('One day, Cory the caterpillar emerged from a hole in the wall while Katie was playing in the living room','Một ngày, chú sâu bướm Cory bò ra từ cái lỗ trong bức tường khi Katie đang chơi đùa ở phòng khách','','','4000-essential-english-words-90'),
 	('"Hey" Katie yelled','"Này" Katie hét lên','','','4000-essential-english-words-90'),
@@ -3194,7 +3194,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'4000-essential-english-words-91','The History of Chocolate','Lịch sử của Socola','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_091.mp3',NULL,'','','4000-essential-english-words','NO',91) */
+	/* (UUID(),'4000-essential-english-words-91','The History of Chocolate','Lịch sử của Socola','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_091.mp3',NULL,'','','4000-essential-english-words',0,0,91) */
 	('Many people believe that chocolate originally came from Europe','Mọi người tin rằng Socola có nguồn gốc từ Châu Âu','','','4000-essential-english-words-91'),
 	('However, chocolate, called the "food of the gods," was first made in the Americas','Tuy nhiên, Socola, được gọi với cái tên "thức ăn của chúa," được ra đời đầu tiên ở Châu Mỹ','','','4000-essential-english-words-91'),
 	('The first chocolate was very different from contemporary chocolate','Socola lúc đầu khác với Socola bây giờ','','','4000-essential-english-words-91'),
@@ -3220,7 +3220,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('True chocolate lovers can tell which is best, though','Tuy vậy, những người thật sự yêu thích Socola có thể cho bạn biết loại nào là ngon nhất','','','4000-essential-english-words-91'),
 	('They will tell you that the flavor of high quality chocolate stays on the palate long after you finish it','Họ sẽ cho bạn biết được rằng hương vị của loại socola chất lượng cao vẫn sẽ lưu lại trên đầu lưỡi dù bạn đã ăn hết từ lâu','','','4000-essential-english-words-91'),
 
-	/* (UUID(),'4000-essential-english-words-92','Monkey Island','Đảo khỉ','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_092.mp3',NULL,'','','4000-essential-english-words','NO',92) */
+	/* (UUID(),'4000-essential-english-words-92','Monkey Island','Đảo khỉ','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_092.mp3',NULL,'','','4000-essential-english-words',0,0,92) */
 	('In the middle of the ocean, there is a small island shaped like an arc','Ở giữa lòng đại dương, có một hòn đảo nhỏ hình dạng như một vòng cung','','','4000-essential-english-words-92'),
 	('Here, monkeys play on the beach and in the trees','Ở đây, những con khỉ cùng nhau chơi đùa trên bãi biển và trèo lên thân cây','','','4000-essential-english-words-92'),
 	('But how did the monkeys get there?','Nhưng làm thế nào mà những con khỉ đến được đây?','','','4000-essential-english-words-92'),
@@ -3254,7 +3254,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('They found the island shaped like an arc','Chúng tìm thấy một hòn đảo hình vòng cung','','','4000-essential-english-words-92'),
 	('They felt so happy to find a new home, and they still live there today','Chúng cảm thấy vô cùng hạnh phúc khi tìm được ngôi nhà mới và chúng vẫn sống ở đó cho đến ngày nay','','','4000-essential-english-words-92'),
 
-	/* (UUID(),'4000-essential-english-words-93','The Young Man and the Old Man','Chàng trai trẻ và ông cụ','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_093.mp3',NULL,'','','4000-essential-english-words','NO',93) */
+	/* (UUID(),'4000-essential-english-words-93','The Young Man and the Old Man','Chàng trai trẻ và ông cụ','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_093.mp3',NULL,'','','4000-essential-english-words',0,0,93) */
 	('A proud young man was looking for a new pastime','Một thanh niên trẻ kiêu ngạo đang tìm kiếm một trò tiêu khiển mới','','','4000-essential-english-words-93'),
 	('He heard about people hiking in the national parks and decided to try it for himself','Anh ta nghe nói về những người đi bộ đường dài trong những công viên quốc gia và quyết định thử thách bản thân','','','4000-essential-english-words-93'),
 	('As he started his stroll, an old man walked up to him','Khi bắt đầu chuyến ngao du của mình, có một ông cụ lại gần anh ta','','','4000-essential-english-words-93'),
@@ -3287,7 +3287,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He realized he was lucky to be alive','Anh ta nhận ra rằng mình thật may mắn khi vẫn còn sống','','','4000-essential-english-words-93'),
 	('He decided to listen to people with more experience than himself','Người thanh niên quyết định từ nay phải biết lắng nghe những người có kinh nghiệm hơn mình','','','4000-essential-english-words-93'),
 
-	/* (UUID(),'4000-essential-english-words-94','The Tricky Fox','Cáo xảo quyệt','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_094.mp3',NULL,'','','4000-essential-english-words','NO',94) */
+	/* (UUID(),'4000-essential-english-words-94','The Tricky Fox','Cáo xảo quyệt','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_094.mp3',NULL,'','','4000-essential-english-words',0,0,94) */
 	('There was a fox that lived in the forest','Xưa có một con cáo sống trong rừng','','','4000-essential-english-words-94'),
 	('Fox loved to play mean tricks on the other animals','Nó thích chơi khăm các loài khác','','','4000-essential-english-words-94'),
 	('One day, he used the sharp rim of a bottle to dig a pit in the ground','Một ngày nọ, chú đã dùng vành chai sắc nhọn để đào một cái hố dưới đất','','','4000-essential-english-words-94'),
@@ -3323,7 +3323,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He was nice to the other animals','Anh ta trở nên tốt bụng với những loài khác','','','4000-essential-english-words-94'),
 	('The animals even bebame fond of Fox, and the forest was a happy place','Con vật khác trở nên yêu mến Cáo và khu rừng đã trở thành một nơi yên bình, hạnh phúc','','','4000-essential-english-words-94'),
 
-	/* (UUID(),'4000-essential-english-words-95','The Magic Computer','Máy tính ma thuật','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_095.mp3',NULL,'','','4000-essential-english-words','NO',95) */
+	/* (UUID(),'4000-essential-english-words-95','The Magic Computer','Máy tính ma thuật','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_095.mp3',NULL,'','','4000-essential-english-words',0,0,95) */
 	('I had a difficult geography project to finish by the end of the semester','Tôi có một bài tập địa lý khó phải hoàn thành vào cuối học kỳ','','','4000-essential-english-words-95'),
 	('My teacher wanted it to be typewritten, so I went to the school computer room','Giáo viên của tôi muốn bài đấy phải được đánh máy, nên tôi đã đến phòng máy tính của trường','','','4000-essential-english-words-95'),
 	('But when I got there, all the computers were turned off','Nhưng khi tôi đến đấy, thì mọi máy tính đã tắt hết','','','4000-essential-english-words-95'),
@@ -3360,7 +3360,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'4000-essential-english-words-96','Jack Frost and the Pudding','Jack Frost và chiếc bánh Pudding','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_096.mp3',NULL,'','','4000-essential-english-words','NO',96) */
+	/* (UUID(),'4000-essential-english-words-96','Jack Frost and the Pudding','Jack Frost và chiếc bánh Pudding','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_096.mp3',NULL,'','','4000-essential-english-words',0,0,96) */
 	('Every winter, a magical boy with a wild spirit named Jack Frost arrives in town','Mỗi một mùa đông, một cậu bé ma thuật với một linh hồn hoang dại tên Jack Frost thường lui tới thị trấn','','','4000-essential-english-words-96'),
 	('He wears a white cape, and his role is to cover everything with frost and ice','Cậu ta mặc một chiếc áo choàng không tay màu trắng, và vai trò của cậu ta là đánh phủ mọi thứ với sương giá và băng','','','4000-essential-english-words-96'),
 	('But Jack Frost also gets pleasure from playing tricks on common folks','Nhưng Jack Frost cũng thích thú từ việc chơi lên những người thân thuộc','','','4000-essential-english-words-96'),
@@ -3397,7 +3397,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He happily took it home for dessert','Anh ấy vui vẻ đưa nó về nhà cho bữa tráng miệng','','','4000-essential-english-words-96'),
 	('Although Jack Frost had tried to make Tom\'s life difficult, Jack had actually made Tom a wonderful pudding','Mặc dù Jack Frost đã cố gắng làm cho cuộc sống của Tom trở nên khó khăn, Jack đã thực sự làm cho Tom một chiếc bánh pudding tuyệt vời ','','','4000-essential-english-words-96'),
 
-	/* (UUID(),'4000-essential-english-words-97','The Architect\'s Plan','Kế hoạch của kiến trúc sư','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_097.mp3',NULL,'','','4000-essential-english-words','NO',97) */
+	/* (UUID(),'4000-essential-english-words-97','The Architect\'s Plan','Kế hoạch của kiến trúc sư','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_097.mp3',NULL,'','','4000-essential-english-words',0,0,97) */
 	('An architect wanted to build a new office building','Một kiến trúc sư muốn xây dựng một tòa văn phòng mới','','','4000-essential-english-words-97'),
 	('He selected some land that seemed perfect','Ông đã chọn một vài khu đất trống hoàn hảo','','','4000-essential-english-words-97'),
 	('He planned to cut down the trees to make room for the building','Ông đã lên kế hoạch chặt bớt cây để xây tòa nhà','','','4000-essential-english-words-97'),
@@ -3430,7 +3430,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The architect did exactly as he promised','Vị kiến trúc sư đã làm đúng theo những gì ông hứa','','','4000-essential-english-words-97'),
 	('He built this new type of building, which was loved by everyone','Ông đã xây dựng một tòa nhà kiểu được tất cả mọi người yêu thích','','','4000-essential-english-words-97'),
 
-	/* (UUID(),'4000-essential-english-words-98','Janie and the Music Player','Janie và chiếc máy nghe nhạc','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_098.mp3',NULL,'','','4000-essential-english-words','NO',98) */
+	/* (UUID(),'4000-essential-english-words-98','Janie and the Music Player','Janie và chiếc máy nghe nhạc','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_098.mp3',NULL,'','','4000-essential-english-words',0,0,98) */
 	('Janie had constant thoughts about getting a music player','Janie suy nghĩ không ngừng về việc có một chiếc máy nghe nhạc','','','4000-essential-english-words-98'),
 	('One day, she was late to class','Một ngày nọ, cô ấy đến lớp trễ','','','4000-essential-english-words-98'),
 	('She hurried down the hall but halted when she saw a backpack on the floor','Cô ấy vội vã đi xuống hành lang nhưng dừng lại khi thấy một chiếc balo nằm trên sàn','','','4000-essential-english-words-98'),
@@ -3469,7 +3469,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('"It will replace the one you broke"','"Nó sẽ thay thế cho cái mà con đã làm hỏng"','','','4000-essential-english-words-98'),
 	('In the end, Janie\'s bad behavior left herwith nothing at all','Sau cùng, hành vi tồi tệ của Janie khiến cô chẳng còn gì cả','','','4000-essential-english-words-98'),
 
-	/* (UUID(),'4000-essential-english-words-99','Growing to be Great','Trưởng thành để trở thành một người vĩ đại','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_099.mp3',NULL,'','','4000-essential-english-words','NO',99) */
+	/* (UUID(),'4000-essential-english-words-99','Growing to be Great','Trưởng thành để trở thành một người vĩ đại','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_099.mp3',NULL,'','','4000-essential-english-words',0,0,99) */
 	('When George was just a boy, he didn\'t have any parents','Khi George còn là một đứa trẻ, anh ấy đã không có bố mẹ','','','4000-essential-english-words-99'),
 	('The rumor was that they died in a car accident','Có tin đồn rằng họ đã mất trong một vụ tai nạn ô tô','','','4000-essential-english-words-99'),
 	('Many bad things could have happened to George, but he was lucky','Rất nhiều thứ tồi tệ có thể xảy ra với George, nhưng anh ấy đã may mắn','','','4000-essential-english-words-99'),
@@ -3503,7 +3503,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('When George got his first job as a baseball player, he gave most of his wages to the people who had helped him as a boy','Khi George bắt đầu công việc đầu tiên như một người chơi bóng chày, anh ấy đã gửi phần lớn tiền lương cho những người đã giúp đỡ mình','','','4000-essential-english-words-99'),
 	('He hoped that other children would also find a way to live happy, successful lives','Anh ấy hi vọng rằng những đứa trẻ khác cũng sẽ tìm ra cách sống hạnh phúc, sống thành công','','','4000-essential-english-words-99'),
 
-	/* (UUID(),'4000-essential-english-words-100','Anton\'s Great Discovery','Khám phá vĩ đại của Anton','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_100.mp3',NULL,'','','4000-essential-english-words','NO',100) */
+	/* (UUID(),'4000-essential-english-words-100','Anton\'s Great Discovery','Khám phá vĩ đại của Anton','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_100.mp3',NULL,'','','4000-essential-english-words',0,0,100) */
 	('Anton Van Leeuwenhoek was a Dutch cloth merchant','Anton Van Leeuwenhoek là một thương nhân buôn vải người Hà Lan','','','4000-essential-english-words-100'),
 	('His life began to change after he got his first microscope in 1653','Cuộc sống của ông bắt đầu thay đổi sau khi ông phát hiện ra kính hiển vi đầu tiên vào năm 1653','','','4000-essential-english-words-100'),
 	('It was a very simple microscope','Kính hiển vi rất đơn giản','','','4000-essential-english-words-100'),
@@ -3543,7 +3543,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'4000-essential-english-words-101','How a Singer Helped Win the War','Làm cách nào mà một ca sĩ có thể giúp giành chiến thắng trong chiến tranh','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_101.mp3',NULL,'','','4000-essential-english-words','NO',101) */
+	/* (UUID(),'4000-essential-english-words-101','How a Singer Helped Win the War','Làm cách nào mà một ca sĩ có thể giúp giành chiến thắng trong chiến tranh','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_101.mp3',NULL,'','','4000-essential-english-words',0,0,101) */
 	('Sometimes famous people are vain','Đôi khi những người nổi tiếng sống rất tự phụ','','','4000-essential-english-words-101'),
 	('They only care about themselves','Họ chỉ quan tâm đến bản thân họ','','','4000-essential-english-words-101'),
 	('But Josephine Baker was an exception','Nhưng Josephine Baker là một ngoại lệ','','','4000-essential-english-words-101'),
@@ -3578,7 +3578,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She got many awards for her help','Bà đã nhận được nhiều giải thưởng về sự giúp đỡ của mình','','','4000-essential-english-words-101'),
 	('When she died, the army had a special ceremony to thank her again for her bravery','Khi bà mất, quân đội đã có một nghi lễ đặc biệt để cảm ơn bà một lần nữa về lòng dũng cảm','','','4000-essential-english-words-101'),
 
-	/* (UUID(),'4000-essential-english-words-102','The Sun and the North Wind','Mặt trời và gió Bắc','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_102.mp3',NULL,'','','4000-essential-english-words','NO',102) */
+	/* (UUID(),'4000-essential-english-words-102','The Sun and the North Wind','Mặt trời và gió Bắc','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_102.mp3',NULL,'','','4000-essential-english-words',0,0,102) */
 	('The Sun and the North Wind were talking to each other in the sky','Mặt trời và gió Bắc đang nói chuyện với nhau trên bầu trời','','','4000-essential-english-words-102'),
 	('The North Wind was saying that he was better than everyone else','Gió Bắc đã nói rằng anh ấy giỏi hơn những người khác','','','4000-essential-english-words-102'),
 	('The Sun listened as the North Wind talked with enthusiasm about how powerful he was and how he could push something from one continent to another with one breath','Mặt trời nghe gió Bắc nói với sự nhiệt tình về sức mạnh của anh ta và cách anh ta có thể đẩy thứ gì đó từ lục địa này sang lục địa khác chỉ bằng một hơi thở','','','4000-essential-english-words-102'),
@@ -3609,7 +3609,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('"You should think of an alternative"','"Bạn nên nghĩ đến một giải pháp thay thế"','','','4000-essential-english-words-102'),
 	('"The strongest people don\'t use force to get what they want"','"Những người mạnh nhất không sử dụng vũ lực để đạt được những gì họ muốn"','','','4000-essential-english-words-102'),
 
-	/* (UUID(),'4000-essential-english-words-103','The Big Race','Cuộc đua lớn','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_103.mp3',NULL,'','','4000-essential-english-words','NO',103) */
+	/* (UUID(),'4000-essential-english-words-103','The Big Race','Cuộc đua lớn','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_103.mp3',NULL,'','','4000-essential-english-words',0,0,103) */
 	('Alex woke up scared because of a nightmare','Alex sợ hãi tỉnh giấc bởi cơn ác mộng','','','4000-essential-english-words-103'),
 	('In it, he was running a race','Trong mơ, cậu đang thi chạy','','','4000-essential-english-words-103'),
 	('Just before he reached the finish line, he fell','Trước khi tới vạch đích, cậu bị ngã','','','4000-essential-english-words-103'),
@@ -3647,7 +3647,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He shouldn\'t have let the nightmare affect him','Cậu không thể để cơn ác mộng ảnh hưởng tới mình','','','4000-essential-english-words-103'),
 	('He should have stayed focused on the race','Cậu nên tập trung vào cuộc đua','','','4000-essential-english-words-103'),
 
-	/* (UUID(),'4000-essential-english-words-104','The Brothers and the Bread','Hai anh em và ổ bánh mì','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_104.mp3',NULL,'','','4000-essential-english-words','NO',104) */
+	/* (UUID(),'4000-essential-english-words-104','The Brothers and the Bread','Hai anh em và ổ bánh mì','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_104.mp3',NULL,'','','4000-essential-english-words',0,0,104) */
 	('Two brothers wanted to go outside and play','Hai anh em muốn ra ngoài chơi','','','4000-essential-english-words-104'),
 	('However, because the only bread in the house was stale, their mother told them they needed to bake fresh bread','Tuy nhiên, vì chiếc bánh mì duy nhất trong nhà bị mốc, nên mẹ của họ bảo họ đi nướng một cái mới','','','4000-essential-english-words-104'),
 	('"I have to have the car repaired," she said','"Mẹ phải đi sửa chiếc xe," bà nói','','','4000-essential-english-words-104'),
@@ -3677,7 +3677,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('But there was no bread, and it was too late to play','Nhưng giờ thì không có bánh mì, và đã quá muộn để đi chơi','','','4000-essential-english-words-104'),
 	('They realized that trying to do something quickly often makes more work','Bọn trẻ nhận ra rằng làm cái gì đó một cách nhanh chóng thường sẽ tạo cho chúng có thêm nhiều công việc khác để làm','','','4000-essential-english-words-104'),
 
-	/* (UUID(),'4000-essential-english-words-105','Laika, the Space Dog','Laika, chú chó vũ trụ','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_105.mp3',NULL,'','','4000-essential-english-words','NO',105) */
+	/* (UUID(),'4000-essential-english-words-105','Laika, the Space Dog','Laika, chú chó vũ trụ','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_105.mp3',NULL,'','','4000-essential-english-words',0,0,105) */
 	('One of the world\'s most beloved space travelers was also the furriest','Một trong những nhà du hành vũ trụ được yêu thích nhất cũng là loài có nhiều lông nhất','','','4000-essential-english-words-105'),
 	('Laika was a little dog living on the streets of Moscow, Russia','Laika là một cô chó nhỏ sinh sống trên những con phố của Moscow, Nga','','','4000-essential-english-words-105'),
 	('She matured on the streets because no one would give her a home','Cô chó đã lớn lên trên đường phố bởi không ai nhận nuôi cô','','','4000-essential-english-words-105'),
@@ -3711,7 +3711,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'4000-essential-english-words-106','Gwen\'s New Friends','Người bạn mới quen của Gwen’s','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_106.mp3',NULL,'','','4000-essential-english-words','NO',106) */
+	/* (UUID(),'4000-essential-english-words-106','Gwen\'s New Friends','Người bạn mới quen của Gwen’s','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_106.mp3',NULL,'','','4000-essential-english-words',0,0,106) */
 	('Gwen walked into the gym for her next class','Gwen bước vào phòng tập thể hình cho lớp học tiếp theo của mình','','','4000-essential-english-words-106'),
 	('Coach Peeves said, "Today, we\'re playing basketball"','Huấn luyện viên Peeves nói: "Hôm nay, chúng ta sẽ chơi bóng rổ"','','','4000-essential-english-words-106'),
 	('"The custom is to let you choose your own teams"','"Cho phép bạn chọn đồng đội của riêng mình"','','','4000-essential-english-words-106'),
@@ -3755,7 +3755,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The victory bound Gwen\'s team together','Chiến thắng đã gắn kết đội của Gwen lại với nhau','','','4000-essential-english-words-106'),
 	('She had made a lot of new friends, and they were a source of happiness for her for many years','Cô ấy đã có rất nhiều người bạn mới, và họ là nguồn hạnh phúc cho cô ấy trong nhiều năm sau','','','4000-essential-english-words-106'),
 
-	/* (UUID(),'4000-essential-english-words-107','Kara Goes Camping','Kara đi cắm trại','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_107.mp3',NULL,'','','4000-essential-english-words','NO',107) */
+	/* (UUID(),'4000-essential-english-words-107','Kara Goes Camping','Kara đi cắm trại','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_107.mp3',NULL,'','','4000-essential-english-words',0,0,107) */
 	('"Kara, would you like to go camping with my family?" asked Tracy','"Kara, cậu có muốn đi cắm trại với gia đình tớ không?" Tracy hỏi','','','4000-essential-english-words-107'),
 	('Kara had never been camping before, but she decided to go anyway','Trước giờ Kara chưa từng đi cắm trại, nhưng dù sao thì cô ấy cũng quyết định đi','','','4000-essential-english-words-107'),
 	('That weekend, they drove to Estes Park','Cuối tuần đó, họ lái xe đến Công viên Estes','','','4000-essential-english-words-107'),
@@ -3796,7 +3796,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She felt sad while they exited the park','Trong khi mọi người rất hào hứng ở công viên thì cô bé lại thấy buồn','','','4000-essential-english-words-107'),
 	('She didn\'t like camping at first, but she learned how fun it could be over the weekend','Ban đầu, cô ấy không thích cắm trại, nhưng cô ấy đã học được rằng cuối tuần có thể thú vị như thế nào','','','4000-essential-english-words-107'),
 
-	/* (UUID(),'4000-essential-english-words-108','The School Play','Vở kịch ở trường','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_108.mp3',NULL,'','','4000-essential-english-words','NO',108) */
+	/* (UUID(),'4000-essential-english-words-108','The School Play','Vở kịch ở trường','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_108.mp3',NULL,'','','4000-essential-english-words',0,0,108) */
 	('Peter was excited','Peter rất hào hứng','','','4000-essential-english-words-108'),
 	('Next week he was going to audition for the school play','Tuần sau cậu ấy sẽ thử vai cho một vở kịch ở trường','','','4000-essential-english-words-108'),
 	('Everybody knew he was a great actor','Tất cả mọi người đều biết rằng cậu ấy là một diễn viên xuất sắc','','','4000-essential-english-words-108'),
@@ -3838,7 +3838,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He earned it by practicing','Bạn ấy đã có được nó bằng cách tập luyện','','','4000-essential-english-words-108'),
 	('Next time, Peter would practice too','Lần sau Peter cũng sẽ tập luyện','','','4000-essential-english-words-108'),
 
-	/* (UUID(),'4000-essential-english-words-109','Isaac\'s First Plane Trip','Chuyến đi bằng máy bay đầu tiên của Isaac','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_109.mp3',NULL,'','','4000-essential-english-words','NO',109) */
+	/* (UUID(),'4000-essential-english-words-109','Isaac\'s First Plane Trip','Chuyến đi bằng máy bay đầu tiên của Isaac','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_109.mp3',NULL,'','','4000-essential-english-words',0,0,109) */
 	('Isaac\'s family was going on vacation','Gia đình Isaac lên kế hoạch cho kỳ nghỉ','','','4000-essential-english-words-109'),
 	('He was excited about the trip except for one thing','Cậu bé rất hào hứng ngoại trừ một chuyện','','','4000-essential-english-words-109'),
 	('He had never been on a plane before','Đó là cậu chưa đi máy bay bao giờ','','','4000-essential-english-words-109'),
@@ -3876,7 +3876,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('After a while, he didn\'t even notice the bad weather','Một lúc sau, cậu không còn chú ý đến thời tiết xấu nữa','','','4000-essential-english-words-109'),
 	('The bad situation didn\'t feel so bad after someone helped him','Tình hình tồi tệ không còn thấy tệ sau khi có người giúp đỡ cậu','','','4000-essential-english-words-109'),
 
-	/* (UUID(),'4000-essential-english-words-110','The Betrayal','Sự phản bội','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_110.mp3',NULL,'','','4000-essential-english-words','NO',110) */
+	/* (UUID(),'4000-essential-english-words-110','The Betrayal','Sự phản bội','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_110.mp3',NULL,'','','4000-essential-english-words',0,0,110) */
 	('A king lived in a fort with his daughter, Clara','Một vị vua sống trong 1 pháo đài cùng với con gái của ông ta, Clara','','','4000-essential-english-words-110'),
 	('The king had founded a great empire, but his land was rife with enemies who wanted to take over the kingdom','Ông vua đã xây dựng 1 đế chế tuyệt vời, nhưng mảnh đất của ông đầy rẫy những kẻ thù những người mà muốn nắm quyền kiểm soát vương quốc','','','4000-essential-english-words-110'),
 	('Because there was so much civil unrest, the king told Clara not to trust anyone','Bởi vì có rất nhiều bạo động quốc gia, vua cha nói với Clara không được tin bất cứ ai','','','4000-essential-english-words-110'),
@@ -3913,7 +3913,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'4000-essential-english-words-111','The Teller and the Thieves','Giao dịch viên và tên trộm','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_111.mp3',NULL,'','','4000-essential-english-words','NO',111) */
+	/* (UUID(),'4000-essential-english-words-111','The Teller and the Thieves','Giao dịch viên và tên trộm','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_111.mp3',NULL,'','','4000-essential-english-words',0,0,111) */
 	('A teller at a bank suspected some of her fellow employees of not being very trustworthy','Một giao dịch viên ở ngân hàng đã nghi ngờ một vài người đồng nghiệp của mình đã không đáng tin cậy','','','4000-essential-english-words-111'),
 	('She thought they were stealing','Cô ấy nghĩ họ đang ăn cắp','','','4000-essential-english-words-111'),
 	('In order to catch them, though, she needed some way to link them to the crime','Để bắt được họ, cô đã cần vài cách để kết nối họ tới con đường phạm tội','','','4000-essential-english-words-111'),
@@ -3940,7 +3940,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Because events from history often repeat, ancient literature had helped the teller solve a crime','Bởi vì những sự kiện từ lịch sử thường xuyên lặp lại, văn học cổ đại giúp giao dịch viên giải quyết vụ án','','','4000-essential-english-words-111'),
 	('She proved that stories from the past still relate with the problems of today, and they can be helpful in solving problems','Cô đã chứng minh các câu chuyện văn học cổ từ trong quá khứ vẫn còn liên quan tới các vấn đề của ngày hôm nay, và chúng có thể giúp ích trong việc giải quyết các vấn đề','','','4000-essential-english-words-111'),
 
-	/* (UUID(),'4000-essential-english-words-112','The Scribe\'s Warning','Lời cảnh báo của nhà luật học và thần học Do thái','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_112.mp3',NULL,'','','4000-essential-english-words','NO',112) */
+	/* (UUID(),'4000-essential-english-words-112','The Scribe\'s Warning','Lời cảnh báo của nhà luật học và thần học Do thái','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_112.mp3',NULL,'','','4000-essential-english-words',0,0,112) */
 	('A great and powerful empire needed the wood from its western areas to build palaces and homes forthe emperor and his friends','Một đế chế vĩ đại và hùng mạnh cần gỗ từ các khu vực phía Tây để xây dựng cung điện và nhà cửa cho hoàng đế và bạn bè của ông','','','4000-essential-english-words-112'),
 	('However, the empire had depleted many of the forests','Tuy nhiên, đế chế đã khiến nhiều khu rừng bị cạn kiệt','','','4000-essential-english-words-112'),
 	('The trees were important to the western areas\' economy','Cây cối rất quan trọng đối với nền kinh tế của các khu vực phía tây','','','4000-essential-english-words-112'),
@@ -3975,7 +3975,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('If he had heeded the words of the scribe, then the citizens might have been the victors','Nếu anh ta đã quan tâm đến những lời của người chép thuê, thì nhân dân có thể là những người chiến thắng','','','4000-essential-english-words-112'),
 	('But because he had treated them badly, they treated him badly in return','Nhưng vì ông đã đối xử tệ với họ, nên họ cũng đối xử như thế với ông','','','4000-essential-english-words-112'),
 
-	/* (UUID(),'4000-essential-english-words-113','How the Dinosaurs Really Died','Khủng long đã thực sự tuyệt chủng như thế nào','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_113.mp3',NULL,'','','4000-essential-english-words','NO',113) */
+	/* (UUID(),'4000-essential-english-words-113','How the Dinosaurs Really Died','Khủng long đã thực sự tuyệt chủng như thế nào','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_113.mp3',NULL,'','','4000-essential-english-words',0,0,113) */
 	('Many scientists and intellectuals think that dinosaurs died when an asteroid smashed into the Earth millions of years ago','Rất nhiều nhà khoa học và trí thức nghĩ rằng khủng long đã tuyệt chủng khi một tiểu hành tinh va mạnh vào Trái đất hàng triệu năm trước đây','','','4000-essential-english-words-113'),
 	('However, recently, there has been some controversy over this theory','Tuy nhiên, gần đây, đã xảy ra một số tranh cãi về giả thuyết này','','','4000-essential-english-words-113'),
 	('Some scientists think that it isn\'t accurate','Một số nhà khoa học cho rằng điều đó là không chính xác','','','4000-essential-english-words-113'),
@@ -4005,7 +4005,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Scientists have analyzed the genomes of birds, and they discovered that birds have identical genetic material to some dinosaurs','Các nhà khoa học đã phân tích những bộ gen của loài chim, và họ phát hiện ra rằng loài chim cũng có vật chất di truyền giống hệt với một số loài khủng long','','','4000-essential-english-words-113'),
 	('So there may still be dinosaurs among us after all','Vậy nên, xét đến cùng thì có thể vẫn còn khủng long tồn tại trong số chúng ta','','','4000-essential-english-words-113'),
 
-	/* (UUID(),'4000-essential-english-words-114','The Traveler and the Innkeeper','Khách du lịch và chủ quán trọ','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_114.mp3',NULL,'','','4000-essential-english-words','NO',114) */
+	/* (UUID(),'4000-essential-english-words-114','The Traveler and the Innkeeper','Khách du lịch và chủ quán trọ','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_114.mp3',NULL,'','','4000-essential-english-words',0,0,114) */
 	('A traveler stopped at an inn','Một khách du lịch dừng chân trước một quán trọ','','','4000-essential-english-words-114'),
 	('He sat and watched people closely, like a predator','Ông ngồi xuống và quan sát mọi người một cách tỉ mỉ, giống như một kẻ có ý đồ xấu','','','4000-essential-english-words-114'),
 	('He heard the old innkeeper talking to a young man in the core of the inn','Ông nghe thấy tiếng người chủ quán trọ già nói chuyện với một thanh niên trẻ ở giữa quán trọ','','','4000-essential-english-words-114'),
@@ -4040,7 +4040,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('"I cherish this coat," responded the innkeeper','"Tôi rất trân trọng chiếc áo khoác này," ông chủ quán trọ đáp lại','','','4000-essential-english-words-114'),
 	('"Well, hopefully this will teach you that you shouldn\'t believe every story that you hear"','"Vâng, hy vọng điều này sẽ dạy cho ông rằng ông không nên tin tưởng vào tất cả những câu chuyện mình được nghe"','','','4000-essential-english-words-114'),
 
-	/* (UUID(),'4000-essential-english-words-115','Gilbert and the Lizard','Gilbert và loài thằn lằn','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_115.mp3',NULL,'','','4000-essential-english-words','NO',115) */
+	/* (UUID(),'4000-essential-english-words-115','Gilbert and the Lizard','Gilbert và loài thằn lằn','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_115.mp3',NULL,'','','4000-essential-english-words',0,0,115) */
 	('Eliza disliked Australia','Eliza không thích nước Úc','','','4000-essential-english-words-115'),
 	('Firstly, she\'d had to spend twenty uncomfortable hours on an aircraft getting here','Trước hết, cô đã phải dành ra hai mươi giờ đồng hồ không thoải mái trên một chiếc máy bay để đến đó','','','4000-essential-english-words-115'),
 	('She wanted to go to the beach, but her husband was a zoology professor and wanted to look for some interesting animals','Cô ấy muốn đến bãi biển, nhưng chồng của cô là một chuyên gia động vật học và ông muốn tìm kiếm một vài loài động vật thú vị','','','4000-essential-english-words-115'),
@@ -4081,7 +4081,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'4000-essential-english-words-116','The Forest People','Người rừng','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_116.mp3',NULL,'','','4000-essential-english-words','NO',116) */
+	/* (UUID(),'4000-essential-english-words-116','The Forest People','Người rừng','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_116.mp3',NULL,'','','4000-essential-english-words',0,0,116) */
 	('Colonel Wilbur and his wife Mary were flying over the tropics in their private plane','Đại tá Wilbur và phu nhân Mary đang bay qua vùng nhiệt đới trong chiếc máy bay riêng của họ','','','4000-essential-english-words-116'),
 	('But suddenly the engine caught fire','Nhưng đột nhiên động cơ bốc cháy','','','4000-essential-english-words-116'),
 	('It was impossible to extinguish the fire, so they were forced to land in the forest','Không thể dập tắt đám cháy, vì vậy họ buộc phải hạ cánh trong rừng','','','4000-essential-english-words-116'),
@@ -4116,7 +4116,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Mary was sorry that she had not trusted the forest people sooner','Bà Mary xin lỗi vì bà đã không tin tưởng những người trong rừng sớm hơn','','','4000-essential-english-words-116'),
 	('She learned the value of not discriminating against people who are different','Bà học được giá trị của việc không phân biệt đối xử với những người khác biệt','','','4000-essential-english-words-116'),
 
-	/* (UUID(),'4000-essential-english-words-117','A Dying Forest','Khu rừng đang hấp hối','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_117.mp3',NULL,'','','4000-essential-english-words','NO',117) */
+	/* (UUID(),'4000-essential-english-words-117','A Dying Forest','Khu rừng đang hấp hối','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_117.mp3',NULL,'','','4000-essential-english-words',0,0,117) */
 	('Rainforests provide much of the world\'s oxygen supply','Rừng mưa nhiệt đới cung cấp phần lớn nguồn cung oxy trên thế giới','','','4000-essential-english-words-117'),
 	('But the forests\' exotic trees and animals are being killed to make room for farmers and roads','Nhưng những loài cây và động vật kỳ lạ trong rừng đang bị giết để nhường chỗ cho người nông dân và làm đường','','','4000-essential-english-words-117'),
 	('People have been trying to conserve rainforests for years','Mọi người đã cố gắng bảo tồn rừng nhiệt đới trong nhiều năm qua','','','4000-essential-english-words-117'),
@@ -4147,7 +4147,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('That, too, has been difficult because the plants are so unique','Điều đó cũng rất khó khăn bởi vì các loài thực vật đều rất độc đáo','','','4000-essential-english-words-117'),
 	('There\'s plenty of work to be done, but saving the cloud forests is still a possibility','Còn rất nhiều việc phải làm, nhưng việc bảo vệ những khu rừng mây mù vẫn còn khả thi','','','4000-essential-english-words-117'),
 
-	/* (UUID(),'4000-essential-english-words-118','Thucydides and the Plague of Athens','Thucydides và dịch bệnh ở Athen','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_118.mp3',NULL,'','','4000-essential-english-words','NO',118) */
+	/* (UUID(),'4000-essential-english-words-118','Thucydides and the Plague of Athens','Thucydides và dịch bệnh ở Athen','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_118.mp3',NULL,'','','4000-essential-english-words',0,0,118) */
 	('Thucydides was the world\'s first historian','Thucydides là một nhà sử học đầu tiên của thế giới','','','4000-essential-english-words-118'),
 	('Presently, we get most of our knowledge about ancient Greece from his writing','Ngày nay, chúng ta có được hầu hết những kiến thức về Hy Lạp cổ đại từ những tác phẩm của ông','','','4000-essential-english-words-118'),
 	('But Thucydides didn\'t just write about history, he lived through it','Thế nhưng Thucydides không chỉ viết về lịch sử, ông đã sống trong nó','','','4000-essential-english-words-118'),
@@ -4178,7 +4178,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('But luckily, Thucydides survived','Nhưng may mắn thay, Thucy­dides đã sống sót','','','4000-essential-english-words-118'),
 	('Without his writing, we would know much less about ancient Greece and the Plague of Athens','Nếu không có bài viết của ông, chúng ta sẽ hiểu biết ít hơn nhiều về Hy Lạp cổ đại và Dịch Bệnh ở Athens','','','4000-essential-english-words-118'),
 
-	/* (UUID(),'4000-essential-english-words-119','The Solar Car Race','Cuộc đua xe năng lượng mặt trời','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_119.mp3',NULL,'','','4000-essential-english-words','NO',119) */
+	/* (UUID(),'4000-essential-english-words-119','The Solar Car Race','Cuộc đua xe năng lượng mặt trời','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_119.mp3',NULL,'','','4000-essential-english-words',0,0,119) */
 	('We live in a mobile society','Chúng ta đang sống trong một xã hội tự động','','','4000-essential-english-words-119'),
 	('But the cars we drive require too much gas, plus they pollute the air','Tuy nhiên, những loại xe hơi mà chúng ta đang lái không chỉ tiêu tốn quá nhiều nhiên liệu mà chúng còn gây ô nhiễm không khí nữa','','','4000-essential-english-words-119'),
 	('Eventually, the natural resources used to make gas will run out','Sau cùng, các nguồn tài nguyên thiên nhiên được sử dụng để tạo ra nhiên liệu sẽ cạn kiệt','','','4000-essential-english-words-119'),
@@ -4207,7 +4207,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('People may ridicule the solar cars because they look strange, but this is a phenomenon that isn\'t going away','Nhiều người có lẽ sẽ giễu cợt những chiếc xe ô tô năng lượng mặt trời bởi trông chúng rất kỳ lạ, tuy nhiên đây là một hiện tượng sẽ không bị mai một đi','','','4000-essential-english-words-119'),
 	('Using the technology from the vehicles, car makers will eventually create solar cars for the rest of us','Sử dụng công nghệ từ các phương tiện vận chuyển, những nhà chế tạo xe ô tô rồi cũng sẽ tạo ra những chiếc xe ô tô năng lượng mặt trời cho tất cả chúng ta','','','4000-essential-english-words-119'),
 
-	/* (UUID(),'4000-essential-english-words-120','The Heirs','Những người thừa kế','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_120.mp3',NULL,'','','4000-essential-english-words','NO',120) */
+	/* (UUID(),'4000-essential-english-words-120','The Heirs','Những người thừa kế','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_120.mp3',NULL,'','','4000-essential-english-words',0,0,120) */
 	('Martin, Paul and Tom were brothers','Martin, Paul và Tom trước là anh em','','','4000-essential-english-words-120'),
 	('They were very different, but they were consistent about two things','Họ rất khác nhau, nhưng họ lại nhất quán về hai điều','','','4000-essential-english-words-120'),
 	('They couldn\'t succeed in business, and they never agreed about anything','Họ đã không thể thành công trong việc kinh doanh, và họ không bao giờ đồng ý về bất kỳ chuyện gì','','','4000-essential-english-words-120'),
@@ -4245,7 +4245,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'4000-essential-english-words-121','The Little Mice','Những cô chuột bé nhỏ','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_121.mp3',NULL,'','','4000-essential-english-words','NO',121) */
+	/* (UUID(),'4000-essential-english-words-121','The Little Mice','Những cô chuột bé nhỏ','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_121.mp3',NULL,'','','4000-essential-english-words',0,0,121) */
 	('Beth was a very resourceful and conservative mouse','Beth là một con chuột rất tháo vát và thận trọng','','','4000-essential-english-words-121'),
 	('She knew that winter was coming and that there would soon be a dearth of food','Cô biết rằng mùa đông sắp đến và sẽ sớm khan hiếm thức ăn','','','4000-essential-english-words-121'),
 	('So she decided to make gathering food for winter her primary job','Vì vậy, cô quyết định thu thập thức ăn cho mùa đông là công việc chính của mình','','','4000-essential-english-words-121'),
@@ -4279,7 +4279,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Mary griped some more, but she knew that her sister was right','Mary phàn nàn thêm một chút, nhưng cô biết rằng chị gái mình đã đúng','','','4000-essential-english-words-121'),
 	('She took the bag and went to work gathering her own beans for the winter','Cô lấy túi và tự mình đi nhặt những hạt đậu cho mùa đông','','','4000-essential-english-words-121'),
 
-	/* (UUID(),'4000-essential-english-words-122','The Helpful Abbey','Tu viện giúp đỡ người khó khăn','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_122.mp3',NULL,'','','4000-essential-english-words','NO',122) */
+	/* (UUID(),'4000-essential-english-words-122','The Helpful Abbey','Tu viện giúp đỡ người khó khăn','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_122.mp3',NULL,'','','4000-essential-english-words',0,0,122) */
 	('It had not rained on the prairie for several months','Trời đã không mưa ở thảo nguyên trong một vài tháng','','','4000-essential-english-words-122'),
 	('Because of the drought, the climate had become very arid','Bởi vì hạn hán, khí hậu đã trở nên rất khô cằn','','','4000-essential-english-words-122'),
 	('There was no moisture left in the soil','Không có một chút hơi ẩm nào trên đất đai','','','4000-essential-english-words-122'),
@@ -4313,7 +4313,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('By the end of winter, there was still enough food and shelter for everyone','Cuối mùa đông, vẫn có đủ thức ăn và chỗ ở cho mọi người','','','4000-essential-english-words-122'),
 	('They learned that sometimes helping others means you must give more help than you first expected','Họ đã học được rằng đôi khi giúp đỡ người khác có nghĩa là bạn phải giúp đỡ nhiều hơn thứ mà bạn dự kiến lúc đầu','','','4000-essential-english-words-122'),
 
-	/* (UUID(),'4000-essential-english-words-123','The Bachelor\'s Lesson','Bài học của chàng cử nhân','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_123.mp3',NULL,'','','4000-essential-english-words','NO',123) */
+	/* (UUID(),'4000-essential-english-words-123','The Bachelor\'s Lesson','Bài học của chàng cử nhân','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_123.mp3',NULL,'','','4000-essential-english-words',0,0,123) */
 	('A keen young bachelor had finished his studies at the university','Một cử nhân trẻ sắc sảo mới hoàn thành việc học tại trường đại học','','','4000-essential-english-words-123'),
 	('As soon as he had received his diploma, he asserted to everyone he met that he was the smartest person in town','Ngay sau khi nhận được bằng tốt nghiệp, anh khẳng định với mọi người rằng anh là người thông minh nhất trong thị trấn','','','4000-essential-english-words-123'),
 	('"I excel at everything I study," he said, bragging about his knowledge','"Tôi xuất sắc trong mọi thứ tôi học," anh nói, khoe khoang về kiến thức của mình','','','4000-essential-english-words-123'),
@@ -4342,7 +4342,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('"Having only a brain is not enough," he thought','"Chỉ có một bộ não là không đủ," anh nghĩ','','','4000-essential-english-words-123'),
 	('"You must also have a heart"','"Bạn cũng phải có một trái tim"','','','4000-essential-english-words-123'),
 
-	/* (UUID(),'4000-essential-english-words-124','The Corrupt Administrator','Giám sát viên tham nhũng','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_124.mp3',NULL,'','','4000-essential-english-words','NO',124) */
+	/* (UUID(),'4000-essential-english-words-124','The Corrupt Administrator','Giám sát viên tham nhũng','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_124.mp3',NULL,'','','4000-essential-english-words',0,0,124) */
 	('Mr.Pig was an administrator at a big factory that made different kinds of merchandise','Ông Pig là một giám sát viên của một nhà máy lớn chuyên sản xuất nhiều loại hàng hóa khác nhau','','','4000-essential-english-words-124'),
 	('During a meeting at the company\'s headquarters, his bosses said they wanted the factory to make more money','Trong suốt buổi gặp mặt trụ sở chính của công ty, các sếp của ông ta nói rằng họ muốn nhà máy kiếm ra nhiều tiền hơn','','','4000-essential-english-words-124'),
 	('"If the factory makes more money, then you will too," his boss, Mr.Horse, told him','"Nếu nhà máy kiếm được nhiều tiền hơn thì cậu cũng sẽ làm được," ông chủ, ngài Horse, nói với ông ta','','','4000-essential-english-words-124'),
@@ -4367,7 +4367,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He realized his mistakes too late','Ông ta nhận ra lỗi lầm của mình thì đã quá muộn','','','4000-essential-english-words-124'),
 	('He had tried to become rich by saving money any way possible, but the cheapest way was not always the best','Ông ta muốn trở nên giàu có bằng cách tiết kiệm tiền bạc bằng mọi cách có thể, nhưng không phải lúc nào cách rẻ nhất cũng là cách tốt nhất','','','4000-essential-english-words-124'),
 
-	/* (UUID(),'4000-essential-english-words-125','A Famous Accident','Tai nạn nổi tiếng','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_125.mp3',NULL,'','','4000-essential-english-words','NO',125) */
+	/* (UUID(),'4000-essential-english-words-125','A Famous Accident','Tai nạn nổi tiếng','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_125.mp3',NULL,'','','4000-essential-english-words',0,0,125) */
 	('One of the greatest pharmaceutical discoveries happened by accident','Một trong những khám phá vĩ đại về dược phẩm đã xảy ra một cách tình cờ','','','4000-essential-english-words-125'),
 	('In his haste to go on vacation, Alexander Fleming had left his laboratory in a mess','Trong lúc vội vã đi nghỉ mát, Alexander Fleming đã rời khỏi phòng thí nghiệm của mình trong tình trạng hỗn độn','','','4000-essential-english-words-125'),
 	('The essence of his ongoing work involved a type of bacteria','Bản chất công việc đang làm của anh liên quan đến một loại vi khuẩn','','','4000-essential-english-words-125'),
@@ -4399,7 +4399,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'4000-essential-english-words-126','The Island','Hòn đảo','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_126.mp3',NULL,'','','4000-essential-english-words','NO',126) */
+	/* (UUID(),'4000-essential-english-words-126','The Island','Hòn đảo','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_126.mp3',NULL,'','','4000-essential-english-words',0,0,126) */
 	('"Where am I?"','"Mình đang ở đâu?"','','','4000-essential-english-words-126'),
 	('Bob thought to himself when he woke up on a peculiar beach','Bob nghĩ thầm khi tỉnh dậy trên một bãi biển kỳ lạ','','','4000-essential-english-words-126'),
 	('"I can\'t remember what happened"','"Mình không nhớ chuyện gì đã xảy ra nữa"','','','4000-essential-english-words-126'),
@@ -4430,7 +4430,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Slowly, he floated out to sea','Dần dần, anh trôi ra biển','','','4000-essential-english-words-126'),
 	('In a few days, he made it to shore and ran home to see his happy family','Sau vài ngày, anh đến được với bờ và trở về với gia đình hạnh phúc của mình','','','4000-essential-english-words-126'),
 
-	/* (UUID(),'4000-essential-english-words-127','Small World','Thế giới nhỏ bé','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_127.mp3',NULL,'','','4000-essential-english-words','NO',127) */
+	/* (UUID(),'4000-essential-english-words-127','Small World','Thế giới nhỏ bé','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_127.mp3',NULL,'','','4000-essential-english-words',0,0,127) */
 	('Even though people can\'t see me, I\'m an important part of Earth\'s biosphere','Mặc dù mọi người không thể nhìn thấy tôi, nhưng tôi là một phần quan trọng của sinh quyển Trái đất','','','4000-essential-english-words-127'),
 	('Scientists who study ecology know that I was the first life form on Earth','Các nhà khoa học những người nghiên cứu sinh thái học biết rằng tôi là dạng sống đầu tiên trên Trái Đất','','','4000-essential-english-words-127'),
 	('There is more of my kind than any other plant or animal in the world','Giống loài của tôi có nhiều hơn bất kỳ loài thực vật nào hay động vật nào trên thế giới','','','4000-essential-english-words-127'),
@@ -4458,7 +4458,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('It really is an impressive feat','Nó thực sự là một kỳ tích ấn tượng','','','4000-essential-english-words-127'),
 	('I can create an infinite number of new protists all by myself','Tôi có thể tự mình tạo ra vô số sinh vật nguyên sinh mới','','','4000-essential-english-words-127'),
 
-	/* (UUID(),'4000-essential-english-words-128','Becoming a Healer','Trở thành người chữa bệnh','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_128.mp3',NULL,'','','4000-essential-english-words','NO',128) */
+	/* (UUID(),'4000-essential-english-words-128','Becoming a Healer','Trở thành người chữa bệnh','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_128.mp3',NULL,'','','4000-essential-english-words',0,0,128) */
 	('Years ago, I worked at a small health clinic in a remote country','Nhiều năm trước, tôi làm việc tại một phòng khám nhỏ ở một vùng quê hẻo lánh','','','4000-essential-english-words-128'),
 	('I had gone there to treat an obscure syndrome','Tôi đã đến đó để điều trị một hội chứng ít người biết đến','','','4000-essential-english-words-128'),
 	('It attacked people\'s lungs, causing them to need a respirator to breathe','Nó tấn công phổi của con người, khiến họ phải cần đến mặt nạ để thở','','','4000-essential-english-words-128'),
@@ -4489,7 +4489,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('As thanks, she gave me a beautiful ceramic bowl','Để cảm ơn, cô ấy đã tặng tôi một chiếc bát sứ rất đẹp','','','4000-essential-english-words-128'),
 	('I never became famous, but I kept that bowl to remind me what it truly means to heal someone','Tôi không trở nên nổi tiếng, nhưng tôi giữ cái bát đó để nhắc nhở tôi ý nghĩa thực sự của việc chữa bệnh cho ai đó','','','4000-essential-english-words-128'),
 
-	/* (UUID(),'4000-essential-english-words-129','The Weaving Machine','Chiếc máy dệt vải','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_129.mp3',NULL,'','','4000-essential-english-words','NO',129) */
+	/* (UUID(),'4000-essential-english-words-129','The Weaving Machine','Chiếc máy dệt vải','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_129.mp3',NULL,'','','4000-essential-english-words',0,0,129) */
 	('Mr.Joseph Franklin invented a machine that could weave cloth','Ông Joseph Franklin đã phát minh ra một chiếc máy có thể dệt vải','','','4000-essential-english-words-129'),
 	('It wove faster and straighter than anyone could weave by hand','Nó dệt nhanh hơn và thẳng hơn bất kỳ ai dệt bằng tay','','','4000-essential-english-words-129'),
 	('He decided to take it to two cities on a peninsula, Netherton and Wilton','Ông quyết định đưa nó đến hai thành phố trên một bán đảo, Netherton và Wilton','','','4000-essential-english-words-129'),
@@ -4522,7 +4522,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He then ordered twenty weaving machines','Sau đó ông đã đặt hai mươi chiếc máy dệt vải','','','4000-essential-english-words-129'),
 	('After that, both Netherton and Wilton became rich cities, famous throughout the land for their wonderful cloth','Sau đó, cả Netherton và Wilton trở thành những thành phố giàu có, nổi tiếng khắp miền đất với những tấm vải tuyệt vời','','','4000-essential-english-words-129'),
 
-	/* (UUID(),'4000-essential-english-words-130','Life on the Farm','Cuộc sống ở nông trại','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_130.mp3',NULL,'','','4000-essential-english-words','NO',130) */
+	/* (UUID(),'4000-essential-english-words-130','Life on the Farm','Cuộc sống ở nông trại','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_130.mp3',NULL,'','','4000-essential-english-words',0,0,130) */
 	('Bill was an excellent capitalist','Bill là một nhà đầu tư xuất sắc','','','4000-essential-english-words-130'),
 	('He financed a large aviation enterprise that made a lot of money','Anh đã cấp vốn cho một hãng hàng không lớn mà hãng này thu được rất nhiều tiền','','','4000-essential-english-words-130'),
 	('He knew how to maximize monetary gains in every business deal he made','Anh ấy biết cách để tối đa hóa số tiền kiếm được từ mỗi công việc kinh doanh của mình','','','4000-essential-english-words-130'),
@@ -4561,7 +4561,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'4000-essential-english-words-131','Beethoven\'s Gift','Món quà của Beethoven','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_131.mp3',NULL,'','','4000-essential-english-words','NO',131) */
+	/* (UUID(),'4000-essential-english-words-131','Beethoven\'s Gift','Món quà của Beethoven','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_131.mp3',NULL,'','','4000-essential-english-words',0,0,131) */
 	('Beethoven was a great composer of classical music in the 1800s','Beethoven là một nhà soạn nhạc vĩ đại của âm nhạc cổ điển vào những năm 1800','','','4000-essential-english-words-131'),
 	('Many biographies have been written that narrate his dominance in the music world','Nhiều tiểu sử đã được viết kể lại sự thống trị của ông trong thế giới âm nhạc','','','4000-essential-english-words-131'),
 	('But do you know what really makes him special?','Nhưng bạn có biết điều gì thực sự khiến ông ấy đặc biệt không?','','','4000-essential-english-words-131'),
@@ -4592,7 +4592,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He didn\'t survive the sickness, but his music did because great music never becomes outdated','Ông đã không qua khỏi cơn bạo bệnh, nhưng âm nhạc của ông không bao giờ trở nên lỗi thời','','','4000-essential-english-words-131'),
 	('Even though Beethoven is gone, his legacy will live on forever','Mặc dù Beethoven đã ra đi, di sản của ông sẽ tồn tại mãi mãi','','','4000-essential-english-words-131'),
 
-	/* (UUID(),'4000-essential-english-words-132','Brothers','Những người anh em','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_132.mp3',NULL,'','','4000-essential-english-words','NO',132) */
+	/* (UUID(),'4000-essential-english-words-132','Brothers','Những người anh em','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_132.mp3',NULL,'','','4000-essential-english-words',0,0,132) */
 	('John and Mark were brothers, but they were quite different people','John và Mark là hai anh em, nhưng họ lại khá khác nhau','','','4000-essential-english-words-132'),
 	('Mark looked very masculine','Mark trông rất nam tính','','','4000-essential-english-words-132'),
 	('He had a mustache and was very muscular','Anh có một bộ ria mép và khá là cơ bắp','','','4000-essential-english-words-132'),
@@ -4629,7 +4629,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('John replied, "I agree"','John đáp, "Tôi đồng ý"','','','4000-essential-english-words-132'),
 	('"When we combine our talents, we are capable of greatness"','"Khi chúng ta kết hợp lại những tài năng của nhau, chúng ta có khả năng tạo ra những điều tốt đẹp"','','','4000-essential-english-words-132'),
 
-	/* (UUID(),'4000-essential-english-words-133','The Old Hound','Chú chó săn già','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_133.mp3',NULL,'','','4000-essential-english-words','NO',133) */
+	/* (UUID(),'4000-essential-english-words-133','The Old Hound','Chú chó săn già','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_133.mp3',NULL,'','','4000-essential-english-words',0,0,133) */
 	('Elvis was a dog that loved to run','Elvis là một con chó rất thích chạy','','','4000-essential-english-words-133'),
 	('He possessed all the criteria to be a great racing dog','Nó sở hữu tất cả các tiêu chuẩn để trở thành một chú chó đua giỏi','','','4000-essential-english-words-133'),
 	('He had long legs, lean muscles, and a strong heart','Nó có đôi chân dài, nhiều cơ bắp và một trái tim khỏe mạnh','','','4000-essential-english-words-133'),
@@ -4663,7 +4663,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Elvis learned there were kind people in the world after all','Elvis nhận ra rằng sau tất cả, trên thế giới vẫn còn có những người tốt','','','4000-essential-english-words-133'),
 	('He was so thankful that he jumped up and licked the woman\'s face','Nó cảm thấy rất biết ơn đến mức mà nó đã nhảy lên và liếm khuôn mặt của bà ấy','','','4000-essential-english-words-133'),
 
-	/* (UUID(),'4000-essential-english-words-134','Day Without Sight','Ngày không có thị giác','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_134.mp3',NULL,'','','4000-essential-english-words','NO',134) */
+	/* (UUID(),'4000-essential-english-words-134','Day Without Sight','Ngày không có thị giác','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_134.mp3',NULL,'','','4000-essential-english-words',0,0,134) */
 	('On Friday afternoon, Sam\'s teacher had a special assignment','Vào chiều thứ Sáu, giáo viên của Sam đã đưa ra 1 nhiệm vụ đặc biệt','','','4000-essential-english-words-134'),
 	('"Next week, we\'ll be studying humanitarian efforts around the world since the time of the Renaissance, including those to help the blind," she said','"Tuần tới, chúng ta sẽ nghiên cứu về những nỗ lực nhân đạo trên toàn thế giới từ thời kỳ Phục hưng bao gồm việc giúp đỡ người mù," cô ấy nói','','','4000-essential-english-words-134'),
 	('"Over the weekend, I want each of you to wear a blindfold for an entire day"','"Trong cuối tuần này, cô muốn mỗi người trong các bạn đeo bịt mắt trong cả ngày"','','','4000-essential-english-words-134'),
@@ -4692,7 +4692,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The informative experiment had an imprint on him','Trải nghiệm hữu ích đã để lại một dấu ấn cho cậu bé','','','4000-essential-english-words-134'),
 	('It showed him sight was an asset that should be appreciated and taught him to revere the talents of blind people','Nó cho cậu thấy rằng thị lực của cậu chính là 1 vốn quý nên được coi trọng và dạy cậu tôn trọng những tài năng của người mù','','','4000-essential-english-words-134'),
 
-	/* (UUID(),'4000-essential-english-words-135','The Big Ship','Con tàu lớn','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_135.mp3',NULL,'','','4000-essential-english-words','NO',135) */
+	/* (UUID(),'4000-essential-english-words-135','The Big Ship','Con tàu lớn','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_135.mp3',NULL,'','','4000-essential-english-words',0,0,135) */
 	('Ernest looked at his fleet of ships','Ernest nhìn đội tàu của mình','','','4000-essential-english-words-135'),
 	('Usually, he used them for his firm, which imported marble statues from other countries','Thường ngày, ông dùng chúng cho công ty của mình để nhập khẩu những bức tượng đá cẩm thạch từ các nước khác','','','4000-essential-english-words-135'),
 	('But today he was going fishing','Nhưng hôm nay ông đi câu cá','','','4000-essential-english-words-135'),
@@ -4729,7 +4729,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'4000-essential-english-words-136','The History of Parachutes','Lịch sử của những chiếc dù','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_136.mp3',NULL,'','','4000-essential-english-words','NO',136) */
+	/* (UUID(),'4000-essential-english-words-136','The History of Parachutes','Lịch sử của những chiếc dù','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_136.mp3',NULL,'','','4000-essential-english-words',0,0,136) */
 	('Scientists who study archeology say that there may be some evidence of prehistoric parachutes','Các nhà khoa học nghiên cứu khảo cổ học nói rằng có thể có một số bằng chứng về những chiếc dù thời tiền sử','','','4000-essential-english-words-136'),
 	('But the first written history of the device comes from China about 2,100 years ago','Nhưng lịch sử được viết ra đầu tiên của thiết bị này đến từ Trung Quốc khoảng 2.100 năm trước','','','4000-essential-english-words-136'),
 	('Scientists cite an ancient book that describes parachutes','Các nhà khoa học trích dẫn một cuốn sách cổ mô tả về những chiếc dù','','','4000-essential-english-words-136'),
@@ -4756,7 +4756,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He was forced to use a parachute himself','Ông buộc phải tự mình sử dụng một chiếc dù','','','4000-essential-english-words-136'),
 	('And much to his relief, it saved his life','Và thật là nhẹ nhõm khi nó đã cứu mạng ông','','','4000-essential-english-words-136'),
 
-	/* (UUID(),'4000-essential-english-words-137','I Didn\'t Do It','Tôi không thể làm được','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_137.mp3',NULL,'','','4000-essential-english-words','NO',137) */
+	/* (UUID(),'4000-essential-english-words-137','I Didn\'t Do It','Tôi không thể làm được','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_137.mp3',NULL,'','','4000-essential-english-words',0,0,137) */
 	('Billy was in big trouble','Billy gặp rắc rối lớn','','','4000-essential-english-words-137'),
 	('The day before, a donor gave the school a painting with a sports theme','Ngày hôm trước, một người quyên góp tặng trường học một bức tranh với đề tài thể thao','','','4000-essential-english-words-137'),
 	('It showed a referee congratulating two athletes','Bức tranh vẽ một trọng tài đang chúc mừng hai vận động viên','','','4000-essential-english-words-137'),
@@ -4786,7 +4786,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Billy was happy that someone believed him','Billy rất vui khi có người tin mình','','','4000-essential-english-words-137'),
 	('He said to Mr.Meyers, "When I graduate and go to university, I will major in law, so I can be a guardian of justice like you"','Cậu nói với ông Meyers, "Khi cháu tốt nghiệp và vào đại học, cháu sẽ học luật để có thể trở thành một người bảo vệ công lý như ông"','','','4000-essential-english-words-137'),
 
-	/* (UUID(),'4000-essential-english-words-138','The Soldier\'s Decision','Quyết định của người lính','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_138.mp3',NULL,'','','4000-essential-english-words','NO',138) */
+	/* (UUID(),'4000-essential-english-words-138','The Soldier\'s Decision','Quyết định của người lính','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_138.mp3',NULL,'','','4000-essential-english-words',0,0,138) */
 	('A soldier was captured while fighting in an enemy king\'s land','Một nguời lính đã bị bắt trong khi chiến đấu ở vùng đất của một vị vua đối địch','','','4000-essential-english-words-138'),
 	('It was well known that this king would make captives fight one another','Ai cũng biết rằng vị vua này sẽ cho những người bị bắt giữ chiến đấu với nhau','','','4000-essential-english-words-138'),
 	('This was commonplace during his reign','Điều này đã trở nên bình thường trong suốt triều đại của ông','','','4000-essential-english-words-138'),
@@ -4814,7 +4814,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('As a result, he gave the peaceful soldier amnesty','Kết quả là, ông đã cho ân xá người lính vì hòa bình đó','','','4000-essential-english-words-138'),
 	('The soldier\'s actions proved to the king and everyone in the arena that peace was more powerful than fighting','Hành động của người lính đã chứng minh cho nhà vua và tất cả mọi người trong vũ đài rằng hòa bình mạnh hơn rất nhiều so với chiến tranh','','','4000-essential-english-words-138'),
 
-	/* (UUID(),'4000-essential-english-words-139','Jane\'s Pride','Niềm kiêu hãnh của Jane','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_139.mp3',NULL,'','','4000-essential-english-words','NO',139) */
+	/* (UUID(),'4000-essential-english-words-139','Jane\'s Pride','Niềm kiêu hãnh của Jane','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_139.mp3',NULL,'','','4000-essential-english-words',0,0,139) */
 	('Jane and her father, Mike, owned a secondhand boat','Jane và cha cô ấy - Mike sở hữu một chiếc thuyền đã qua sử dụng','','','4000-essential-english-words-139'),
 	('They called it "High Hopes"','Họ gọi nó là "Niềm hy vọng lớn"','','','4000-essential-english-words-139'),
 	('The two loved to spend time together on the ocean and would often go on long fishing trips','Hai cha con thích dành thời gian cùng nhau ở trên biển và thường xuyên có những chuyến đi câu dài ngày','','','4000-essential-english-words-139'),
@@ -4847,7 +4847,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He designated it "Jane\'s Pride" and painted the name on the fore of the ship','Ông chỉ rõ nó là "Niềm kiêu hãnh của Jane" và sơn tên lên mũi tàu','','','4000-essential-english-words-139'),
 	('Jane finally had something to be proud of','Jane cuối cùng cũng có thứ gì đó để được tự hào','','','4000-essential-english-words-139'),
 
-	/* (UUID(),'4000-essential-english-words-140','Microchips','Vi mạch','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_140.mp3',NULL,'','','4000-essential-english-words','NO',140) */
+	/* (UUID(),'4000-essential-english-words-140','Microchips','Vi mạch','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_140.mp3',NULL,'','','4000-essential-english-words',0,0,140) */
 	('The bond between humans and computers is becoming more intimate than ever before','Mối liên kết giữa con người và máy tính ngày càng trở nên mật thiết hơn bao giờ hết','','','4000-essential-english-words-140'),
 	('Scientists are now putting microchips inside people\'s bodies','Các nhà khoa học hiện nay đang đưa vi mạch vào bên trong cơ thể người','','','4000-essential-english-words-140'),
 	('They are made up of compressed electrical circuits that can detect and record data about the body','Chúng được tạo thành từ những mạch điện nén có thể phát hiện và ghi lại các dữ liệu về cơ thể người','','','4000-essential-english-words-140'),
@@ -4877,7 +4877,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'4000-essential-english-words-141','The Twins','Song sinh','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_141.mp3',NULL,'','','4000-essential-english-words','NO',141) */
+	/* (UUID(),'4000-essential-english-words-141','The Twins','Song sinh','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_141.mp3',NULL,'','','4000-essential-english-words',0,0,141) */
 	('Katie and Alice were twins','Katie và Alice là một cặp song sinh','','','4000-essential-english-words-141'),
 	('They were so alike that few people could tell the siblings apart','Họ giống nhau tới nỗi rất ít người có thể phân biệt được chị em họ','','','4000-essential-english-words-141'),
 	('They were almost like clones','Họ giống nhau như bản sao vậy','','','4000-essential-english-words-141'),
@@ -4915,7 +4915,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('"But it\'s totally plausible for twins to have different interests"','"Nhưng hoàn toàn hợp lý khi các cặp song sinh có những sở thích khác nhau"','','','4000-essential-english-words-141'),
 	('"We can still be best friends without being together all the time"','"Chúng ta lúc nào cũng có thể là bạn thân mặc dù không ở bên nhau"','','','4000-essential-english-words-141'),
 
-	/* (UUID(),'4000-essential-english-words-142','The New Bioco','Công ty New Bioco','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_142.mp3',NULL,'','','4000-essential-english-words','NO',142) */
+	/* (UUID(),'4000-essential-english-words-142','The New Bioco','Công ty New Bioco','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_142.mp3',NULL,'','','4000-essential-english-words',0,0,142) */
 	('Jack got a new job at a biotechnology company called Bioco','Jack nhận một công việc mới tại một công ty công nghệ sinh học được gọi là Bioco','','','4000-essential-english-words-142'),
 	('Bioco manufactured drugs to treat diabetes and high cholesterol','Bioco sản xuất thuốc để điều trị bệnh tiểu đường và nồng độ cholesterol cao','','','4000-essential-english-words-142'),
 	('Jack\'s job was to use a tiny mechanism to get nectar from flowers','Công việc của Jack là sử dụng một máy móc nhỏ để lấy mật hoa từ hoa','','','4000-essential-english-words-142'),
@@ -4943,7 +4943,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('They cleaned up the acid from the river and minimized the amount of air pollution the company released','Họ đã làm sạch axit từ sông và giảm thiểu lượng ô nhiễm không khí mà công ty thải ra','','','4000-essential-english-words-142'),
 	('At last, the company motto became apt','Cuối cùng, phương châm của công ty đã trở nên phù hợp','','','4000-essential-english-words-142'),
 
-	/* (UUID(),'4000-essential-english-words-143','How Comet Got His Tail','Sao chổi có đuôi như thế nào','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_143.mp3',NULL,'','','4000-essential-english-words','NO',143) */
+	/* (UUID(),'4000-essential-english-words-143','How Comet Got His Tail','Sao chổi có đuôi như thế nào','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_143.mp3',NULL,'','','4000-essential-english-words',0,0,143) */
 	('A solitary rock roamed through the cold gloom of outer space','Một tảng đá đơn độc lang thang trong không gian u ám lạnh lẽo','','','4000-essential-english-words-143'),
 	('It slowly drifted through the debris of broken asteroids with a feeling of sadness','Nó buồn bã trôi dạt chầm chậm qua những mảnh vụn của các tiểu hành tinh bị vỡ','','','4000-essential-english-words-143'),
 	('In the vast and beautiful galaxy, it was only a tiny rock','Trong dải ngân hà rộng lớn và xinh đẹp, nó chỉ là một tảng đá nhỏ','','','4000-essential-english-words-143'),
@@ -4975,7 +4975,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('It realized that the star helped it change its appearance','Nó nhận ra rằng ngôi sao đã giúp nó thay đổi bề ngoài','','','4000-essential-english-words-143'),
 	('"Thank you," the comet said and then flew away with its new beautiful tail following behind it like a galactic cape','sao chổi nói "Cảm ơn," và sau đó bay đi với cái đuôi mới tuyệt đẹp theo sau nó giống như một chiếc áo choàng thiên hà','','','4000-essential-english-words-143'),
 
-	/* (UUID(),'4000-essential-english-words-144','The Resourceful Landlord','Người chủ nhà tháo vát','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_144.mp3',NULL,'','','4000-essential-english-words','NO',144) */
+	/* (UUID(),'4000-essential-english-words-144','The Resourceful Landlord','Người chủ nhà tháo vát','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_144.mp3',NULL,'','','4000-essential-english-words',0,0,144) */
 	('A kind landlord was afraid that he would lose his apartment building','Một người chủ nhà tốt bụng lo sợ rằng ông ấy sẽ mất đi tòa nhà chung cư của mình','','','4000-essential-english-words-144'),
 	('He needed to make some mandatory repairs to the old building, or his tenants would have to leave by the end of the month','Ông cần tiến hành một vài sửa chữa bắt buộc cho tòa nhà cũ, nếu không thì những người thuê nhà sẽ phải rời đi vào cuối tháng','','','4000-essential-english-words-144'),
 	('Without tenants to lease the rooms, the landlord would be unable to pay his mortgage','Nếu không có người muốn thuê phòng, chủ nhà sẽ không thể trả tiền thế chấp','','','4000-essential-english-words-144'),
@@ -5002,7 +5002,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('"I could never have done it by myself"','"Tôi sẽ không bao giờ có thể làm được nó một mình"','','','4000-essential-english-words-144'),
 	('"But by working together, we now all have a beautiful place to live"','"Nhưng bằng cách làm việc cùng nhau, bây giờ chúng ta đều có một nơi tuyệt đẹp để sống"','','','4000-essential-english-words-144'),
 
-	/* (UUID(),'4000-essential-english-words-145','The Man and the Monkey','Người đàn ông và con khỉ','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_145.mp3',NULL,'','','4000-essential-english-words','NO',145) */
+	/* (UUID(),'4000-essential-english-words-145','The Man and the Monkey','Người đàn ông và con khỉ','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_145.mp3',NULL,'','','4000-essential-english-words',0,0,145) */
 	('While flying over a jungle, a wealthy executive\'s private plane crashed','Khi đang bay qua một khu rừng, chiếc máy bay riêng của một giám đốc điều hành giàu có gặp tai nạn','','','4000-essential-english-words-145'),
 	('Some of the crew were hurt, so the pilot decided to stay with them and wait for help','Một số phi hành đoàn đã bị thương, nên người phi công đã quyết định ở lại cùng họ để chờ sự cứu viện','','','4000-essential-english-words-145'),
 	('The arrogant executive, though, didn\'t care about the welfare of the pilot and crew','Ông giám đốc điều hành kiêu ngạo mặc dù không quan tâm đến sự an toàn của phi hành đoàn','','','4000-essential-english-words-145'),
@@ -5035,7 +5035,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'4000-essential-english-words-146','Cosmo\'s Flight','Chuyến bay của Cosmo','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_146.mp3',NULL,'','','4000-essential-english-words','NO',146) */
+	/* (UUID(),'4000-essential-english-words-146','Cosmo\'s Flight','Chuyến bay của Cosmo','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_146.mp3',NULL,'','','4000-essential-english-words',0,0,146) */
 	('When Cosmo woke up, he was crying','Khi Cosmo tỉnh dậy, cậu ấy đang khóc','','','4000-essential-english-words-146'),
 	('He had a dream that he was falling','Cậu có một giấc mơ rằng cậu đang rơi xuống','','','4000-essential-english-words-146'),
 	('This dream had recurred for the previous five nights','Giấc mơ này đã lặp lại trong năm đêm trước đó','','','4000-essential-english-words-146'),
@@ -5072,7 +5072,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('"We\'re proud of you, Cosmo"','"Chúng ta tự hào về con, Cosmo"','','','4000-essential-english-words-146'),
 	('Cosmo was proud of himself, too','Cosmo cũng rất tự hào về bản thân cậu','','','4000-essential-english-words-146'),
 
-	/* (UUID(),'4000-essential-english-words-147','The First Organ Transplant','Người cấy ghép nội tạng đầu tiên','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_147.mp3',NULL,'','','4000-essential-english-words','NO',147) */
+	/* (UUID(),'4000-essential-english-words-147','The First Organ Transplant','Người cấy ghép nội tạng đầu tiên','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_147.mp3',NULL,'','','4000-essential-english-words',0,0,147) */
 	('In 1954, a man named Richard was dying of kidney disease','Năm 1954, một người đàn ông tên là Richard đang hấp hối vì bệnh thận','','','4000-essential-english-words-147'),
 	('He wouldn\'t survive for long unless he got a new kidney right away','Anh ta sẽ không sống được bao lâu trừ khi anh ta có một quả thận mới ngay lập tức','','','4000-essential-english-words-147'),
 	('Richard\'s twin brother, Robert, was willing to donate one of his kidneys to his dying brother','Anh trai sinh đôi của Richard, Robert, sẵn sàng hiến một quả thận của mình cho người anh trai đang hấp hối của mình','','','4000-essential-english-words-147'),
@@ -5101,7 +5101,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('His success gave other doctors confidence to try organ transplants themselves','Thành công của ông đã khiến các bác sĩ khác tự tin để thử cấy ghép nội tạng','','','4000-essential-english-words-147'),
 	('Now, doctors perform life-saving transplants and surgeries every day','Hiện nay, các bác sĩ thực hiện những ca ghép tạng và các ca phẫu thuật cứu sống người bệnh mỗi ngày','','','4000-essential-english-words-147'),
 
-	/* (UUID(),'4000-essential-english-words-148','The Lottery','Xổ số kiến thiết','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_148.mp3',NULL,'','','4000-essential-english-words','NO',148) */
+	/* (UUID(),'4000-essential-english-words-148','The Lottery','Xổ số kiến thiết','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_148.mp3',NULL,'','','4000-essential-english-words',0,0,148) */
 	('Joe was watching television when he heard a knock at the door','Joe đang xem TV thì nghe thấy tiếng gõ cửa','','','4000-essential-english-words-148'),
 	('He thought, "Who could that be?"','Anh nghĩ, "Có thể là ai nhỉ?"','','','4000-essential-english-words-148'),
 	('"It\'s probably one of the naughty neighborhood children"','"Chắc là một trong những đứa trẻ con hàng xóm nghịch ngợm đây"','','','4000-essential-english-words-148'),
@@ -5132,7 +5132,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Joe told the zookeeper, "I know it\'s not the norm, but my ultimate decision to help I these animals is better than anything I could have done for myself"','Joe nói với người trông coi sở thú rằng, "Tôi biết nó không phải là điều bình thường, nhưng quyết định cuối cùng của tôi khi hỗ trợ những loài vật này cao cả hơn nhiều so với bất cứ điều gì tôi làm cho chính mình"','','','4000-essential-english-words-148'),
 	('"If I ever write an autobiography, I will write that this was the happiest day of my life"','"Nếu tôi có viết tự truyện, tôi sẽ viết rằng đấy là ngày hạnh phúc nhất cuộc đời tôi"','','','4000-essential-english-words-148'),
 
-	/* (UUID(),'4000-essential-english-words-149','Jen\'s New Job','Công việc mới của Jen','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_149.mp3',NULL,'','','4000-essential-english-words','NO',149) */
+	/* (UUID(),'4000-essential-english-words-149','Jen\'s New Job','Công việc mới của Jen','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_149.mp3',NULL,'','','4000-essential-english-words',0,0,149) */
 	('The history museum needed to recruit a new tour guide','Bảo tàng lịch sử cần tuyển dụng một hướng dẫn viên mới','','','4000-essential-english-words-149'),
 	('The director interviewed dozens of applicants before he decided to hire Jen','Giám đốc đã phỏng vấn rất nhiều ứng cử viên trước khi quyết định thuê Jen','','','4000-essential-english-words-149'),
 	('She was chosen because she was friendly, punctual and had a great attitude','Jen được chọn bởi cô ấy rất thân thiện, đúng giờ và có một thái độ tuyệt vời','','','4000-essential-english-words-149'),
@@ -5165,7 +5165,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She was persistent and worked hard','Cô ấy đã rất kiên trì và chăm chỉ','','','4000-essential-english-words-149'),
 	('In time, Jen became the best tour guide at the museum','Đến giờ, Jen đã trở thành hướng dẫn viên giỏi nhất ở viện bảo tàng','','','4000-essential-english-words-149'),
 
-	/* (UUID(),'4000-essential-english-words-150','The Demon\'s Bridge','Cầu quỷ','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_150.mp3',NULL,'','','4000-essential-english-words','NO',150) */
+	/* (UUID(),'4000-essential-english-words-150','The Demon\'s Bridge','Cầu quỷ','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_150.mp3',NULL,'','','4000-essential-english-words',0,0,150) */
 	('A young woman\'s cow had crossed the river in the morning when the water level was moderate','Vào một buổi sáng, con bò của người phụ nữ trẻ băng qua sông khi mà mực nước vẫn còn vừa phải','','','4000-essential-english-words-150'),
 	('But when the woman returned with her dog to get the cow, she was overwhelmed by how high the water had risen','Nhưng khi cô quay lại cùng với con chó của mình để đón con bò về, cô ấy kinh ngạc bởi mực nước dâng quá cao','','','4000-essential-english-words-150'),
 	('Even if she crossed, she still couldn\'t tow her cow back through the river','Ngay cả khi vượt qua sông, cô ấy cũng không thể kéo con bò qua lại được','','','4000-essential-english-words-150'),
@@ -5203,7 +5203,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'4000-essential-english-words-151','The North Star','Ngôi sao phương bắc','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_151.mp3',NULL,'','','4000-essential-english-words','NO',151) */
+	/* (UUID(),'4000-essential-english-words-151','The North Star','Ngôi sao phương bắc','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_151.mp3',NULL,'','','4000-essential-english-words',0,0,151) */
 	('Among the multitude of stars in the universe, there are a couple that are of great importance to people on Earth','Giữa vô vàn những vì sao trong vũ trụ, có hai ngôi sao vô cùng quan trọng đối với con người trên trái đất','','','4000-essential-english-words-151'),
 	('The sun, of course, is one of them','Tất nhiên, mặt trời, là một trong số đó','','','4000-essential-english-words-151'),
 	('The other is known as Polaris, the North Star','Ngôi sao còn lại được biết đến là Polaris, sao Phương Bắc','','','4000-essential-english-words-151'),
@@ -5228,7 +5228,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The handle of the Big Dipper always points to the North Star','Hướng đi của sao Bắc Đầu luôn hướng về sao Phương Bắc','','','4000-essential-english-words-151'),
 	('When people get lost, it\'s comforting to know that their problems can be alleviated by looking at the sky','Khi người ta bị lạc đường, vấn đề của họ sẽ được xoa dịu bằng cách nhìn lên bầu trời','','','4000-essential-english-words-151'),
 
-	/* (UUID(),'4000-essential-english-words-152','The Fossil Hunters','Thợ săn hóa thạch','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_152.mp3',NULL,'','','4000-essential-english-words','NO',152) */
+	/* (UUID(),'4000-essential-english-words-152','The Fossil Hunters','Thợ săn hóa thạch','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_152.mp3',NULL,'','','4000-essential-english-words',0,0,152) */
 	('Tim and Dean were great fossil hunters','Tim và Dean là những thợ săn hóa thạch giỏi','','','4000-essential-english-words-152'),
 	('They were the very best at finding dinosaur bones','Họ là những người giỏi nhất trong việc tìm kiếm xương khủng long','','','4000-essential-english-words-152'),
 	('Although Tim and Dean were quite similar, they were outright enemies','Mặc dù, Tim và Dean khá giống nhau, nhưng rõ ràng họ là kẻ thù của nhau','','','4000-essential-english-words-152'),
@@ -5261,7 +5261,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('They decided to end their feud and become friends','Họ quyết định kết thúc mối hận thù và trở thành bạn của nhau','','','4000-essential-english-words-152'),
 	('By combining their talents, the men became even greater than they were before','Bằng cách kết hợp tài năng của mình , họ thậm chí trở thành những người thợ săn tuyệt vời hơn cả trước kia','','','4000-essential-english-words-152'),
 
-	/* (UUID(),'4000-essential-english-words-153','Dressed to Excess','Ăn mặc quá mức','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_153.mp3',NULL,'','','4000-essential-english-words','NO',153) */
+	/* (UUID(),'4000-essential-english-words-153','Dressed to Excess','Ăn mặc quá mức','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_153.mp3',NULL,'','','4000-essential-english-words',0,0,153) */
 	('If you traveled back in time to the 1700s in Europe, you would laugh when you saw how the aristocracy dressed','Nếu bạn du hành ngược thời gian trở về những năm 1700 ở Châu Âu, bạn sẽ bật cười khi thấy cách ăn mặc của tầng lớp quý tộc','','','4000-essential-english-words-153'),
 	('Soon you\'d realize, though, that the aristocrats of Europe were very serious about their appearance','Chẳng mấy chốc, bạn sẽ nhận ra, các quý tộc Châu Âu rất coi trọng vẻ bề ngoài của họ','','','4000-essential-english-words-153'),
 	('The predominant style in women\'s attire was enormous dresses','Phong cách chủ đạo trong trang phục của những người phụ nữ là những bộ váy khổng lồ','','','4000-essential-english-words-153'),
@@ -5288,7 +5288,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Both men and women spent huge amounts of money and time on how they looked','Cả đàn ông và phụ nữ đều chi những khoản tiền khổng lồ để chăm chút cho vẻ bề ngoài của mình','','','4000-essential-english-words-153'),
 	('Though such vanity would seem vulgar today, three hundred years from now, the fashions of our time might also seem completely ridiculous','Mặc dù sự phù phiếm này có vẻ tầm thường đối với ngày nay, có lẽ 300 năm nữa, thời trang của thời đại chúng ta bây giờ cũng có thể hoàn toàn lố bịch','','','4000-essential-english-words-153'),
 
-	/* (UUID(),'4000-essential-english-words-154','The Butler\'s Bad Day','Ngày xấu của Butler','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_154.mp3',NULL,'','','4000-essential-english-words','NO',154) */
+	/* (UUID(),'4000-essential-english-words-154','The Butler\'s Bad Day','Ngày xấu của Butler','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_154.mp3',NULL,'','','4000-essential-english-words',0,0,154) */
 	('The Superintendent of Civic Projects was a busy man','Người giám sát của các dự án dân sự là một người bận rộn','','','4000-essential-english-words-154'),
 	('He worked every day of the week and had fancy parties at his house every night','Ông ấy làm việc hàng ngày mỗi tuần và thích những bữa tiệc sang trọng tại gia vào mỗi tối','','','4000-essential-english-words-154'),
 	('However, if there was someone busier than him, it was his butler','Tuy nhiên, nếu có một người nào đó bận rộn hơn ông ấy, thì đó là người quản gia của ông','','','4000-essential-english-words-154'),
@@ -5319,7 +5319,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He had no idea the butler was so tired','Ông ấy không biết người quản gia mệt mỏi đến như vậy','','','4000-essential-english-words-154'),
 	('He said, "You should have told me earlier, then we could have avoided this whole ordeal"','Ông ấy nói, "Đáng lẽ ra ông nên nói với tôi sớm hơn, thì chúng ta đã có thể tránh được tất cả các thách thức này"','','','4000-essential-english-words-154'),
 
-	/* (UUID(),'4000-essential-english-words-155','A Bet','Cuộc cá cược','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_155.mp3',NULL,'','','4000-essential-english-words','NO',155) */
+	/* (UUID(),'4000-essential-english-words-155','A Bet','Cuộc cá cược','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_155.mp3',NULL,'','','4000-essential-english-words',0,0,155) */
 	('Russell finished running a relay and joined his friend Becky in the cafeteria','Russel hoàn thành cuộc chạy tiếp sức và cùng người bạn Becky trong quán cà phê','','','4000-essential-english-words-155'),
 	('He asked, "What\'s for lunch?"','Anh ấy hỏi, "Bữa trưa của bạn thế nào?"','','','4000-essential-english-words-155'),
 	('"Sesame chicken"','"Gà tẩm vừng"','','','4000-essential-english-words-155'),
@@ -5359,7 +5359,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'4000-essential-english-words-156','Amazing Komodo Dragons','Rồng Komodo','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_156.mp3',NULL,'','','4000-essential-english-words','NO',156) */
+	/* (UUID(),'4000-essential-english-words-156','Amazing Komodo Dragons','Rồng Komodo','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_156.mp3',NULL,'','','4000-essential-english-words',0,0,156) */
 	('Once, a British gazette had an unusual story','Một lần, một tờ báo của Anh đã đăng một câu chuyện kỳ lạ','','','4000-essential-english-words-156'),
 	('Scientists at a zoo made a discovery about komodo dragons','Các nhà khoa học tại một sở thú đã khám phá về rồng Komod','','','4000-essential-english-words-156'),
 	('Komodo dragons are giant lizards that grow up to two and a half meters long','Rồng Komodo là loài thằn lằn khổng lồ có thể phát triển dài tới hai mét rưỡi','','','4000-essential-english-words-156'),
@@ -5387,7 +5387,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Once again there is a surplus of lizards on one island','Một lần nữa, có một sự dư thừa lượng thằn lằn trên một hòn đảo','','','4000-essential-english-words-156'),
 	('Scientists think that this may be how the lizards took over all of the islands in that area','Các nhà khoa học cho rằng đây có thể là cách mà những con thằn lằn đã chiếm lĩnh toàn bộ các đảo trong khu vực đó','','','4000-essential-english-words-156'),
 
-	/* (UUID(),'4000-essential-english-words-157','Greek Magical Papyri','Giấy cói ma thuật','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_157.mp3',NULL,'','','4000-essential-english-words','NO',157) */
+	/* (UUID(),'4000-essential-english-words-157','Greek Magical Papyri','Giấy cói ma thuật','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_157.mp3',NULL,'','','4000-essential-english-words',0,0,157) */
 	('"The Greek Magical Papyri" is a collection of writing about magic','"Giấy cói ma thuật Hy Lạp" là một bộ sưu tập viết về ma thuật','','','4000-essential-english-words-157'),
 	('After it was found in the Egyptian desert, it took experts years to decipher it','Sau khi được tìm thấy ở sa mạc Ai Cập, các chuyên gia mất nhiều năm để giải mã về loại giấy này','','','4000-essential-english-words-157'),
 	('The text was written in at least three different ancient languages','Nội dung được viết bằng ít nhất ba loại ngôn ngữ cổ đại khác nhau','','','4000-essential-english-words-157'),
@@ -5409,7 +5409,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('For example, one tells how to give someone warts, while another will make all of the victim\'s farm animals die','Ví du, có điều nói về cách để khiến người khác mọc mụn cóc, thì điều khác sẽ làm cho tất các các con vật trong nông trại của nạn nhân chết','','','4000-essential-english-words-157'),
 	('However, if someone\'s farm animals died as a result of a curse, he could ask a magician to perform magic that makes the deceased come back to life','Tuy nhiên, nếu động vật tại nông trại của một ai đó chết bởi lời nguyền, anh ta có thể nhờ một pháp sư biểu diễn ma thuật giúp hồi sinh','','','4000-essential-english-words-157'),
 
-	/* (UUID(),'4000-essential-english-words-158','Watch Out','Hãy coi chừng','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_158.mp3',NULL,'','','4000-essential-english-words','NO',158) */
+	/* (UUID(),'4000-essential-english-words-158','Watch Out','Hãy coi chừng','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_158.mp3',NULL,'','','4000-essential-english-words',0,0,158) */
 	('Kevin stepped off the tram and walked toward the ship, holding a package tightly in his hands','Kevin bước xuống xe điện và đi về phía con tàu, trong tay nắm chặt gói bưu kiện','','','4000-essential-english-words-158'),
 	('He had been hired as a courier for an important broker','Anh ta được thuê làm nhân viên chuyển phát nhanh của một nhà môi giới quan trọng','','','4000-essential-english-words-158'),
 	('All he needed to do was deliver a package to an office in New York City, the ship would take him there','Tất cả những gì anh ta cần làm là giao một gói bưu kiện tới một văn phòng tại thành phố New York và con tàu này sẽ đưa anh ta tới đó','','','4000-essential-english-words-158'),
@@ -5440,7 +5440,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Kevin felt relieved','Kevin thở phào nhẹ nhõm','','','4000-essential-english-words-158'),
 	('Now he knew to always trust his intuitive sense','Giờ đây anh ta biết là phải luôn tin vào trực giác của mình','','','4000-essential-english-words-158'),
 
-	/* (UUID(),'4000-essential-english-words-159','Dangerous Bites','Những vết cắn nguy hiểm','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_159.mp3',NULL,'','','4000-essential-english-words','NO',159) */
+	/* (UUID(),'4000-essential-english-words-159','Dangerous Bites','Những vết cắn nguy hiểm','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_159.mp3',NULL,'','','4000-essential-english-words',0,0,159) */
 	('There are many animals with dangerous bites in the world, but which one is the worst?','Có nhiều động vật có những vết cắn nguy hiểm trên thế giới, nhưng vết cắn của loài động vật nào là tệ nhất?','','','4000-essential-english-words-159'),
 	('Some would say that the elusive short-tailed mamushi has the worst bite','Một số người nói rằng, loài rắn Mamushi với cái đuôi ngắn khó bắt là loài có vết cắn tồi tệ nhất','','','4000-essential-english-words-159'),
 	('The snake only goes into homes to chase pests such as mice','Con rắn này chỉ vào nhà để bắt những loài vật gây hại như chuột','','','4000-essential-english-words-159'),
@@ -5464,7 +5464,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Furthermore, most people don\'t realize how serious a human bite can be, so they don\'t go to the doctor right away','Hơn nữa, phần lớn con người không nhận thấy sự nguy hiểm của vết cắn, nên họ không đến bệnh viện ngay lập tức','','','4000-essential-english-words-159'),
 	('This gives the wound a chance to get infected and cause more problems','Điều đó là một cơ hội để vết thương nhiễm trùng và dẫn đến nhiều vấn đề hơn','','','4000-essential-english-words-159'),
 
-	/* (UUID(),'4000-essential-english-words-160','The Avalanche','Một trận tuyết lở','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_160.mp3',NULL,'','','4000-essential-english-words','NO',160) */
+	/* (UUID(),'4000-essential-english-words-160','The Avalanche','Một trận tuyết lở','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_160.mp3',NULL,'','','4000-essential-english-words',0,0,160) */
 	('Randy was a forest ranger','Randy là một kiểm lâm rừng','','','4000-essential-english-words-160'),
 	('Because of his job, he was secluded in a cabin in the wilderness','Bởi vì công việc của ông ấy, ông ấy bị tách biệt ở trong một chòi nhỏ trong rừng','','','4000-essential-english-words-160'),
 	('One day, the radio reported, "Convection in the atmosphere is causing a lot of clouds to form"','Một ngày nọ radio thông báo, "Nhiệt đối lưu trong không khí đang tạo ra rất nhiều mây','','','4000-essential-english-words-160'),
@@ -5502,7 +5502,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'4000-essential-english-words-161','The Lydian King','Vua Lydian','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_161.mp3',NULL,'','','4000-essential-english-words','NO',161) */
+	/* (UUID(),'4000-essential-english-words-161','The Lydian King','Vua Lydian','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_161.mp3',NULL,'','','4000-essential-english-words',0,0,161) */
 	('King Croesus was once one of the richest kings in the world','Vua Croesus từng là một trong số vị vua giàu nhất thế giới','','','4000-essential-english-words-161'),
 	('He ruled over Lydia, an ancient empire located near modern-day Turkey and controlled a valuable commodity: gold','Ông cai trị Lydia, một đế chế cổ nằm ở gần thành phố Thổ Nhĩ Kỳ hiện đại ngày nay và kiểm soát một mặt hàng có giá trị là vàng','','','4000-essential-english-words-161'),
 	('Many people were very envious of him','Nhiều người vô cùng ghen tị với ông ấy','','','4000-essential-english-words-161'),
@@ -5529,7 +5529,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('After a few months of fighting, it was obvious that the Oracle\'s prophecy had come true: by attacking the Persians, King Croesus had destroyed a great empire - his own','Sau một tháng chiến đấu, điều rõ ràng là lời tiên tri của nhà tiên tri đã trở thành sự thật, bằng cách tấn công người Ba Tư, vua Croesus đã phá hủy được một đế chế hùng mạnh - của riêng mình','','','4000-essential-english-words-161'),
 	('King Croesus should have considered the advice more carefully','Vua Croesus lẽ ra nên xem xét lời khuyên một cách cẩn thận hơn','','','4000-essential-english-words-161'),
 
-	/* (UUID(),'4000-essential-english-words-162','The Butler','Quản gia','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_162.mp3',NULL,'','','4000-essential-english-words','NO',162) */
+	/* (UUID(),'4000-essential-english-words-162','The Butler','Quản gia','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_162.mp3',NULL,'','','4000-essential-english-words',0,0,162) */
 	('Greta was an elderly lady who lived alone in a huge, dilapidated mansion','Greta là một phụ nữ lớn tuổi sống một mình trong một biệt thự đổ nát, khổng lồ','','','4000-essential-english-words-162'),
 	('The mansion was in terrible condition','Ngôi biệt thự đang trong tình trạng thật khủng khiếp','','','4000-essential-english-words-162'),
 	('It was covered with filth, and most of the furniture was broken','Nó được phủ đầy rác, và hầu hết các đồ nội thất đã bị hỏng','','','4000-essential-english-words-162'),
@@ -5563,7 +5563,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('"My hard work really paid off"','"Công việc vất vả của tôi thực sự đã được đền đáp"','','','4000-essential-english-words-162'),
 	('The two said their farewells, and Gordon spent the afternoon admiring his beautiful new home','Hai người chào tạm biệt nhau, và Gordon dành cả một buổi chiều để ngắm nhìn căn nhà đẹp mới của mình','','','4000-essential-english-words-162'),
 
-	/* (UUID(),'4000-essential-english-words-163','The End of Smallpox','Giai đoạn cuối của bệnh đậu mùa','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_163.mp3',NULL,'','','4000-essential-english-words','NO',163) */
+	/* (UUID(),'4000-essential-english-words-163','The End of Smallpox','Giai đoạn cuối của bệnh đậu mùa','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_163.mp3',NULL,'','','4000-essential-english-words',0,0,163) */
 	('Smallpox was once the most deadly disease in the world','Bệnh đậu mùa từng là căn bệnh gây chết nhiều người nhất trên thế giới','','','4000-essential-english-words-163'),
 	('During the 1800s, more than 20 million people got the disease every year','Trong suốt những năm 1800, hơn 20 triệu người mắc bệnh mỗi năm','','','4000-essential-english-words-163'),
 	('Of those, nearly half died','Gần một nửa trong số đó đã chết','','','4000-essential-english-words-163'),
@@ -5588,7 +5588,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('But nearly thirty years later, on December 9,1979, a group of scientists certified that smallpox had been successfully stopped','Tuy nhiên, sau gần 30 năm, vào ngày 9 tháng 12 năm 1979, một nhóm các nhà khoa học đã xác nhận bệnh đậu mùa đã bị xóa sổ','','','4000-essential-english-words-163'),
 	('The humane efforts of people from all over the world had accomplished a great task','Những nỗ lực nhân đạo của mọi người trên khắp thế giới đã giúp hoàn thành một sứ mệnh vô cùng cao cả','','','4000-essential-english-words-163'),
 
-	/* (UUID(),'4000-essential-english-words-164','The Coward\'s Lesson','Bài học của kẻ nhát gan','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_164.mp3',NULL,'','','4000-essential-english-words','NO',164) */
+	/* (UUID(),'4000-essential-english-words-164','The Coward\'s Lesson','Bài học của kẻ nhát gan','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_164.mp3',NULL,'','','4000-essential-english-words',0,0,164) */
 	('Tom was easily frightened','Tom rất dễ hoảng sợ','','','4000-essential-english-words-164'),
 	('He enlisted in the army because he thought the military would teach him courage','Cậu nhập ngũ vì nghĩ rằng quân đội sẽ dạy cho mình lòng dũng cảm','','','4000-essential-english-words-164'),
 	('And though he needed courage, he never imagined how he would learn it','Và mặc dù cậu cần sự can đảm, nhưng không bao giờ hình dung ra được cậu sẽ học nó như thế nào','','','4000-essential-english-words-164'),
@@ -5623,7 +5623,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He had finally learned courage','Cuối cùng cậu đã học được sự can đảm','','','4000-essential-english-words-164'),
 	('He learned that he had to confront his fear in order to conquer it','Cậu học được rằng phải đối mặt với nỗi sợ để chế ngự nó','','','4000-essential-english-words-164'),
 
-	/* (UUID(),'4000-essential-english-words-165','Epidemic in Zimbabwe','Bệnh dịch ở Zimbabwe','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_165.mp3',NULL,'','','4000-essential-english-words','NO',165) */
+	/* (UUID(),'4000-essential-english-words-165','Epidemic in Zimbabwe','Bệnh dịch ở Zimbabwe','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_165.mp3',NULL,'','','4000-essential-english-words',0,0,165) */
 	('In August of 2008, a deadly cholera epidemic manifested in Zimbabwe','Vào tháng 8 năm 2008, một trận dịch tả chết người xuất hiện ở Zimbabwe','','','4000-essential-english-words-165'),
 	('A severe health hazard caused the outbreak','Một mối nguy hiểm nghiêm trọng về sức khỏe đã gây ra sự bùng phát này','','','4000-essential-english-words-165'),
 	('There was an extreme lack of clean drinking water in the overcrowded urban cities','Tình trạng thiếu nước sạch để uống trở nên trầm trọng ở các thành phố đông đúc','','','4000-essential-english-words-165'),
@@ -5654,7 +5654,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'4000-essential-english-words-166','The Brute and the Billionaire','Brute và người tỷ phú','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_166.mp3',NULL,'','','4000-essential-english-words','NO',166) */
+	/* (UUID(),'4000-essential-english-words-166','The Brute and the Billionaire','Brute và người tỷ phú','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_166.mp3',NULL,'','','4000-essential-english-words',0,0,166) */
 	('Hundreds of people had come to see a popular satire, but during the performance a fire started in the theater','Hàng trăm người đã đến để xem một vở kịch châm biếm nổi tiếng, nhưng trong buổi biểu, một ngọn lửa dần bùng lên trong rạp','','','4000-essential-english-words-166'),
 	('The audience and actors evacuated the building','Khán giả và những diễn viên đã sơ tán khỏi toà nhà','','','4000-essential-english-words-166'),
 	('Luckily, no one was hurt, and the fire was soon put out','May mắn thay, không ai bị thương, và ngọn lửa đã đuợc dập ngay sau đó','','','4000-essential-english-words-166'),
@@ -5685,7 +5685,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The man they blamed was innocent, and the billionaire was guilty','Người đàn ông họ đổ lỗi thì vô tội, và nhà tỷ phú thì có tội','','','4000-essential-english-words-166'),
 	('To pay for his error, the billionaire not only repaired the theater but had it remade to be better than before','Để trả giá cho lỗi lầm của anh ấy, nhà tỷ phú không chỉ sửa chữa nhà hát, mà còn tân tiến nó hơn nhiều','','','4000-essential-english-words-166'),
 
-	/* (UUID(),'4000-essential-english-words-167','The Tenacious Inventor','Nhà phát minh cứng đầu','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_167.mp3',NULL,'','','4000-essential-english-words','NO',167) */
+	/* (UUID(),'4000-essential-english-words-167','The Tenacious Inventor','Nhà phát minh cứng đầu','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_167.mp3',NULL,'','','4000-essential-english-words',0,0,167) */
 	('A young student of meteorology was having a difficult time with an experiment','Một sinh viên trẻ học khí tượng đang gặp khó khăn với một thí nghiệm','','','4000-essential-english-words-167'),
 	('He was attempting to duplicate lightning in clouds','Anh ấy đã cố gắng để lặp lại tia sét trong những đám mây','','','4000-essential-english-words-167'),
 	('He had made a device that could simulate lightning','Anh đã chế tạo ra một thiết bị mà có thể mô phỏng tia sét','','','4000-essential-english-words-167'),
@@ -5713,7 +5713,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He had not given up','Anh ấy đã không bỏ cuộc','','','4000-essential-english-words-167'),
 	('He had remained tenacious and succeeded','Anh vẫn luôn kiên cường và thành công','','','4000-essential-english-words-167'),
 
-	/* (UUID(),'4000-essential-english-words-168','The Nurse\'s Lesson','Bài học dành cho y tá','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_168.mp3',NULL,'','','4000-essential-english-words','NO',168) */
+	/* (UUID(),'4000-essential-english-words-168','The Nurse\'s Lesson','Bài học dành cho y tá','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_168.mp3',NULL,'','','4000-essential-english-words',0,0,168) */
 	('One of the children in the nursery was sick','Một trong những đứa trẻ trong nhà trẻ bị ốm','','','4000-essential-english-words-168'),
 	('The child\'s mother, who was usually quite vivacious and chattered constantly, was quiet and worried','Mẹ của đứa trẻ, người thường rất hoạt bát và luôn nói chuyện, giờ đây lại im lặng và lo lắng','','','4000-essential-english-words-168'),
 	('She knew that if she did not act quickly, the child\'s condition would deteriorate','Bà biết rằng nếu bà không hành động nhanh chóng, tình trạng của nó sẽ xấu đi','','','4000-essential-english-words-168'),
@@ -5746,7 +5746,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The nurse was happy she had persevered through the bad weather and found the monastery','Y tá rất vui vì bà đã kiên trì vượt qua thời tiết xấu và tìm thấy tu viện','','','4000-essential-english-words-168'),
 	('Now the boy would be able to live a long natural life','Bây giờ cậu bé sẽ có thể sống một cuộc sống khỏe mạnh lâu dài','','','4000-essential-english-words-168'),
 
-	/* (UUID(),'4000-essential-english-words-169','Seizures Then and Now','Bệnh động kinh bây giờ và về sau','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_169.mp3',NULL,'','','4000-essential-english-words','NO',169) */
+	/* (UUID(),'4000-essential-english-words-169','Seizures Then and Now','Bệnh động kinh bây giờ và về sau','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_169.mp3',NULL,'','','4000-essential-english-words',0,0,169) */
 	('If a person who lived 200 years ago was treated for a seizure today, they would be surprised by the treatment\'s novelty','Nếu một người sống cách đây 20 năm được điều trị động kinh theo phương pháp ngày nay, họ sẽ ngạc nhiên với tính mới lạ của phương pháp điều trị','','','4000-essential-english-words-169'),
 	('That\'s because doctors in the 1800s were influenced more by primal medical beliefs than science','Nó là bởi vì các bác sỹ ở những năm 1800 bị ảnh hưởng nhiều bởi niềm tin vào y học nguyên thuỷ hơn là khoa học','','','4000-essential-english-words-169'),
 	('Rather than thinking the brain caused seizures, people in the 180\' still thought they were the result of strange forces','Thay vì nghĩ rằng não bộ gây ra chứng động kinh, Người ở những năm 1800 nghĩ rằng, động kinh là kết quả của những sức mạnh kỳ lạ','','','4000-essential-english-words-169'),
@@ -5774,7 +5774,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Yet most of the public no longer fear people who have seizures','Tuy nhiên, hầu hết mọi người không sợ những người bệnh động kinh','','','4000-essential-english-words-169'),
 	('Instead, they can now help and comfort a person if they have a seizure','Thay vào đó, giờ họ có thể giúp đỡ và an ủi những người mắc bệnh động kinh','','','4000-essential-english-words-169'),
 
-	/* (UUID(),'4000-essential-english-words-170','The Greedy Bee','Con ong tham lam','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_170.mp3',NULL,'','','4000-essential-english-words','NO',170) */
+	/* (UUID(),'4000-essential-english-words-170','The Greedy Bee','Con ong tham lam','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_170.mp3',NULL,'','','4000-essential-english-words',0,0,170) */
 	('A young bee had passed his intermediate level exams','Một con ong non vượt qua kỳ thi trình độ trung cấp của mình','','','4000-essential-english-words-170'),
 	('He now knew everything about flowers','Giờ đây, cậu đã biết mọi thứ về hoa','','','4000-essential-english-words-170'),
 	('He understood how they used photosynthesis to make oxygen and which ones produced the best pollen','Chú hiểu cách thức họ sử dụng sự quang hợp để tạo ra ô xi và những thứ sản xuất ra loại phấn hoa tốt nhất','','','4000-essential-english-words-170'),
@@ -5807,7 +5807,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'4000-essential-english-words-171','The Mayor of Sherman','Thị trưởng của thành phố Sherman','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_171.mp3',NULL,'','','4000-essential-english-words','NO',171) */
+	/* (UUID(),'4000-essential-english-words-171','The Mayor of Sherman','Thị trưởng của thành phố Sherman','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_171.mp3',NULL,'','','4000-essential-english-words',0,0,171) */
 	('The cosmopolitan city of Sherman needed to elect a new mayor','Thành phố quốc tế Sherman cần bầu một thị trưởng mới','','','4000-essential-english-words-171'),
 	('Two men aspired to become mayor: Mr.Jones and Mr.Webb','Hai người đàn ông khao khát trở thành thị trưởng: Ông Jones và Ông Webb','','','4000-essential-english-words-171'),
 	('Mr.Jones was a tall, handsome man','Ông Jones là một người đàn ông cao ráo, đẹp trai','','','4000-essential-english-words-171'),
@@ -5838,7 +5838,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The citizens learned that a pleasant appearance and nice words do not make a good leader','Các công dân đã học được rằng một vẻ ngoài đẹp mắt và lời nói hoa mỹ không làm nên một nhà lãnh đạo tốt','','','4000-essential-english-words-171'),
 	('The most important qualities are intelligence and a desire to help others','Những phẩm chất quan trọng nhất là trí thông minh và mong muốn giúp đỡ người khác','','','4000-essential-english-words-171'),
 
-	/* (UUID(),'4000-essential-english-words-172','The Editor\'s Choice','Sự lựa chọn của người biên tập','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_172.mp3',NULL,'','','4000-essential-english-words','NO',172) */
+	/* (UUID(),'4000-essential-english-words-172','The Editor\'s Choice','Sự lựa chọn của người biên tập','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_172.mp3',NULL,'','','4000-essential-english-words',0,0,172) */
 	('A newspaper editor sat at his desk and stared at the flashing cursor on his computer\'s screen','Một biên tập viên báo chí ngồi vào bàn làm việc của ông ấy và nhìn chằm chằm vào con trỏ nhấp nháy trên màn hình máy tính của mình','','','4000-essential-english-words-172'),
 	('He didn\'t know if he should delete the article he had just written or go ahead and publish it','Ông ta không biết rằng liệu ông có nên xóa bài báo mà mình vừa viết hay là cứ tiếp tục và xuất bản nó','','','4000-essential-english-words-172'),
 	('He was scared and filled with doubt','Ông cảm thấy lo sợ và tràn đầy nghi ngại','','','4000-essential-english-words-172'),
@@ -5862,7 +5862,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('"Never be afraid to be vocal," the editor later wrote','"Đừng bao giờ sợ hãi về việc lên tiếng," người biên tập sau này đã viết','','','4000-essential-english-words-172'),
 	('"If you think something is wrong, then stand up for what you believe"','"Nếu bạn nghĩ điều gì đó là sai, thì hãy đứng lên bảo vệ cái mà mình đã tin tưởng"','','','4000-essential-english-words-172'),
 
-	/* (UUID(),'4000-essential-english-words-173','The Ice House','Ngôi nhà băng giá','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_173.mp3',NULL,'','','4000-essential-english-words','NO',173) */
+	/* (UUID(),'4000-essential-english-words-173','The Ice House','Ngôi nhà băng giá','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_173.mp3',NULL,'','','4000-essential-english-words',0,0,173) */
 	('Last year, Erik constructed one of the world\'s strangest houses in the glacial landscape of northern Sweden','Năm ngoái, Erik xây dựng một trong những ngôi nhà kỳ lạ nhất thế giới trong cảnh quan băng giá của miền bắc Thụy Điển','','','4000-essential-english-words-173'),
 	('He called it the Ice House: a house made entirely of ice and snow',' Anh ấy gọi nó là Ngôi nhà Băng: một ngôi nhà hoàn toàn làm bằng băng và tuyết','','','4000-essential-english-words-173'),
 	('All of the beds, chairs, tables, and walls are cold, hard sculptures of ice',' Tất cả các giường, ghế, bàn và tường đều là những tác phẩm điêu khắc băng lạnh giá và cứng rắn','','','4000-essential-english-words-173'),
@@ -5890,7 +5890,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The omission of heaters can be too much for his visitors sometimes','Việc thiếu lò sưởi đôi khi có thể quá lạnh cho khách của anh ấy','','','4000-essential-english-words-173'),
 	('Luckily, there are warm rooms nearby, as a courtesy to people who get too cold','May mắn thay, có những phòng ấm gần đó, như một phép sự lịch sự đối với những người đang quá lạnh','','','4000-essential-english-words-173'),
 
-	/* (UUID(),'4000-essential-english-words-174','Preparing of the Future','Chuẩn bị cho tương lai','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_174.mp3',NULL,'','','4000-essential-english-words','NO',174) */
+	/* (UUID(),'4000-essential-english-words-174','Preparing of the Future','Chuẩn bị cho tương lai','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_174.mp3',NULL,'','','4000-essential-english-words',0,0,174) */
 	('Overpopulation is a big problem in the world today','Bùng nổ dân số là một vấn đề lớn trên thế giới ngày nay','','','4000-essential-english-words-174'),
 	('Too many people are crammed into cities and towns around the globe','Quá nhiều người đang chen chúc ở các thành phố và thị trấn trên toàn cầu','','','4000-essential-english-words-174'),
 	('Earth\'s population is about 6.5 billion people','Dân số trái đất khoảng 6.5 tỷ người','','','4000-essential-english-words-174'),
@@ -5917,7 +5917,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('They are determining ways to export goods to people in need, so that no one goes hungry','Họ xác định cách để xuất khẩu hàng hoá đến những người có nhu cầu,, để không ai bị đói','','','4000-essential-english-words-174'),
 	('Experts will continue to come up with ideas for the future, and a synthesis of these ideas will help to support the growing population','Các chuyên gia tiếp tục đưa ra ý tưởng cho tương tai, và sự tổng hợp các ý kiến hỗ trợ vấn đề phát triển dân số','','','4000-essential-english-words-174'),
 
-	/* (UUID(),'4000-essential-english-words-175','Hundred Plays','Hàng trăm vở kịch','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_175.mp3',NULL,'','','4000-essential-english-words','NO',175) */
+	/* (UUID(),'4000-essential-english-words-175','Hundred Plays','Hàng trăm vở kịch','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_175.mp3',NULL,'','','4000-essential-english-words',0,0,175) */
 	('Over two thousand years ago, Chinese farmers had a problem','Hơn hai nghìn năm trước đây, người dân Trung Quốc đối mặt với một vấn đề','','','4000-essential-english-words-175'),
 	('Even though they were very industrious, the weather became too cold outside to plant their staple food, rice','Mặc dù họ rất siêng năng, thời tiết bên ngoài quá lạnh để trồng lương thực chính, lúa gạo','','','4000-essential-english-words-175'),
 	('So what did they do?','Vậy họ đã làm cái gì?','','','4000-essential-english-words-175'),
@@ -5949,7 +5949,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'4000-essential-english-words-176','The Kidnapping','Vụ bắt cóc','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_176.mp3',NULL,'','','4000-essential-english-words','NO',176) */
+	/* (UUID(),'4000-essential-english-words-176','The Kidnapping','Vụ bắt cóc','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_176.mp3',NULL,'','','4000-essential-english-words',0,0,176) */
 	('Anne was a very quiet girl who had an inherent fear of almost everything','Anne là một cô gái rất trầm tính, có một nỗi sợ hãi cố hữu về hầu hết tất cả mọi thứ','','','4000-essential-english-words-176'),
 	('The kids at school would play tricks on her all the time','Những đứa trẻ ở trường luôn trêu chọc cô ấy','','','4000-essential-english-words-176'),
 	('They would hide behind the door of the school janitor\'s closet, then jump out to scare her','Họ sẽ trốn đằng sau cánh cửa tủ quần áo của người gác cổng trường học, sau đó nhảy ra để dọa cô ấy','','','4000-essential-english-words-176'),
@@ -5980,7 +5980,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The kids were very tolerant of Anne from then on','Từ đó trở đi bọn trẻ rất khoan dung với Anne','','','4000-essential-english-words-176'),
 	('They even decided that they would emulate her bravery if they ever got into a tough situation','Họ thậm chí còn quyết định rằng họ sẽ bắt chước sự dũng cảm của cô ấy nếu họ rơi vào một tình huống khó khăn','','','4000-essential-english-words-176'),
 
-	/* (UUID(),'4000-essential-english-words-177','The Earl of Shining','Bá tước ánh sáng','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_177.mp3',NULL,'','','4000-essential-english-words','NO',177) */
+	/* (UUID(),'4000-essential-english-words-177','The Earl of Shining','Bá tước ánh sáng','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_177.mp3',NULL,'','','4000-essential-english-words',0,0,177) */
 	('In the village of Hampton, there was an old soldier named Michael, but he was known to the world as the Earl of Shining','Tại một ngôi làng ở Hampton, có một người lính già tên Michael, nhưng ông được cả thế giới biết đến với cái tên Bá tước ánh sáng','','','4000-essential-english-words-177'),
 	('Michael was once an expert archer and a great fighter','Michael từng là một xạ thủ chuyên nghiệp và một chiến binh vĩ đại','','','4000-essential-english-words-177'),
 	('In fact, his skills seemed to be hereditary','Thật ra, tài năng của ông có vẻ là do di truyền','','','4000-essential-english-words-177'),
@@ -6016,7 +6016,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Michael realized he really was still great','Michael nhận ra rằng anh ấy thực sự vẫn tuyệt vời','','','4000-essential-english-words-177'),
 	('He just needed to believe in himself','Anh ấy chỉ cần tin vào bản thân','','','4000-essential-english-words-177'),
 
-	/* (UUID(),'4000-essential-english-words-178','The Lord and the Farmers','Lãnh chúa và nông dân','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_178.mp3',NULL,'','','4000-essential-english-words','NO',178) */
+	/* (UUID(),'4000-essential-english-words-178','The Lord and the Farmers','Lãnh chúa và nông dân','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_178.mp3',NULL,'','','4000-essential-english-words',0,0,178) */
 	('A wealthy lord was renovating his mansion','Một vị lãnh chúa giàu có đang tân trang lại toà lâu đài của mình','','','4000-essential-english-words-178'),
 	('He had added another story to his home with large windows that overlooked the farmers\' pastures on the eastern border of his land','Với cửa sổ lớn có thể nhìn từ cao xuống đồng cỏ của người nông dân ở biên giới phía đông của mảnh đất','','','4000-essential-english-words-178'),
 	('Around the mansion, he then erected a great wall','Bao quanh toà lâu đài, ông ấy sau đó xây dựng một bức tường lớn','','','4000-essential-english-words-178'),
@@ -6045,7 +6045,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The lord promised to pay for the burned pastures, and the farmers promised to rebuild the mansion','Lãnh chúa hứa sẽ bồi thường cho những cánh đồng bị cháy','','','4000-essential-english-words-178'),
 	('They had learned that when you fight, both sides lose','Họ rút ra bài học rằng khi cả hai mâu thuẫn, thì tất cả đều phải chịu mất mát','','','4000-essential-english-words-178'),
 
-	/* (UUID(),'4000-essential-english-words-179','The Shortcut','Đường tắt','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_179.mp3',NULL,'00:00:00.000','00:01:50.300','4000-essential-english-words','NO',179) */
+	/* (UUID(),'4000-essential-english-words-179','The Shortcut','Đường tắt','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_179.mp3',NULL,'00:00:00.000','00:01:50.300','4000-essential-english-words',0,0,179) */
 	('A truck driver was driving cargo from the outback to the coast','Một tài xế đang lái xe chở hàng từ nơi hẻo lánh tới bờ biển','00:00:03.000','00:00:06.800','4000-essential-english-words-179'),
 	('His load was comprised of many types of ore','Hàng hóa được chở gồm rất nhiều loại quặng','00:00:06.800','00:00:10.300','4000-essential-english-words-179'),
 	('He needed a huge truck to carry its bulk to a ship waiting at a pier on the country\'s eastern coast','Ông ấy cần một xe tải lớn để chở lượng hàng lớn của nó tới một chiếc thuyền đang đợi ở bến tàu trên bờ biển phía Đông của đất nước','00:00:10.300','00:00:15.900','4000-essential-english-words-179'),
@@ -6074,7 +6074,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He realized then the paradox of the shortcut','Sau đó ông đã nhận ra được nghịch lý của đường tắt','00:01:40.900','00:01:44.400','4000-essential-english-words-179'),
 	('The shortest route can be the longest, and vice versa, a long route may be the fastest','Con đường ngắn nhất có thể là con đường dài nhất, và ngược lại con đường dài nhất có thể là nhanh nhất','00:01:44.400','00:01:50.300','4000-essential-english-words-179'),
 
-	/* (UUID(),'4000-essential-english-words-180','The Mad Hatter','Thợ làm mũ điên','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_180.mp3',NULL,'00:00:00.000','00:01:57.000','4000-essential-english-words','NO',180) */
+	/* (UUID(),'4000-essential-english-words-180','The Mad Hatter','Thợ làm mũ điên','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_180.mp3',NULL,'00:00:00.000','00:01:57.000','4000-essential-english-words',0,0,180) */
 	('The Mad Hatter','Một buổi sáng nọ, Lucas ngồi bên ngoài cùng với ông nội của cậu','00:00:00.000','00:00:02.800','4000-essential-english-words-180'),
 	('One morning, Lucas sat outside with his grandfather','Một buổi sáng nọ, Lucas ngồi bên ngoài cùng với ông nội của cậu','00:00:03.000','00:00:06.300','4000-essential-english-words-180'),
 	('They looked past the gravel road that led to a natural reservoir on the delta','Họ nhìn qua cáp con đường sỏi dẫn đến một hồ chứa tự nhiên trên đồng bằng','00:00:06.300','00:00:10.900','4000-essential-english-words-180'),

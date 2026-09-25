@@ -118,13 +118,19 @@ const MatchSentencesPage = () => {
       const loadVoices = () => {
         const voices = window.speechSynthesis.getVoices();
         setAvailableVoices(voices);
-        // Select default English voice
-        const enVoice = voices.find(v => v.lang.startsWith('en'));
-        if (enVoice) {
-          setSelectedVoice(enVoice.name);
+        // Select Microsoft Zira - English (United States) as default
+        const ziraVoice = voices.find(v => v.name.includes('Microsoft Zira') && v.lang === 'en-US');
+        if (ziraVoice) {
+          setSelectedVoice(ziraVoice.name);
+        } else {
+          // Fallback to any English voice if Zira is not available
+          const enVoice = voices.find(v => v.lang.startsWith('en'));
+          if (enVoice) {
+            setSelectedVoice(enVoice.name);
+          }
         }
       };
-      
+
       loadVoices();
       window.speechSynthesis.onvoiceschanged = loadVoices;
     }
@@ -688,6 +694,10 @@ const MatchSentencesPage = () => {
 
       {loading ? (
         <Spin size="large" />
+      ) : meaningEnKeywords.length === 0 && meaningViKeywords.length === 0 ? (
+        <div style={{ textAlign: 'center', marginTop: 50 }}>
+          <Text style={{ fontSize: 18, color: '#999' }}>Không có bài kiểm tra</Text>
+        </div>
       ) : (
         <div style={{ display: 'flex', gap: 100, marginTop: 30, position: 'relative' }}>
           {/* SVG overlay for connection line */}
