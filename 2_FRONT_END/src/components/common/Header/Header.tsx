@@ -110,8 +110,12 @@ const MENU_ITEMS: MenuItem[] = [
     key: 'test',
     icon: <CheckCircleOutlined />,
     children: [
-      { label: 'Sắp xếp câu', key: 'sap-xep-cau', href: '/test' },
-      { label: 'Lựa chọn đáp án đúng', key: 'lua-chon-dap-an', href: '/multiple-choice' },
+      { label: '1. Ghép câu', key: 'ghep-cau', href: '/matchsentences' },
+      { label: '2. Sắp xếp câu', key: 'sap-xep-cau', href: '/test' },
+      { label: '3. Điền từ còn thiếu', key: 'dien-tu', href: '/fillblanks' },
+      { label: '4. Nghe viết toàn bộ câu', key: 'nghe-viet', href: '/dictation' },
+      { label: '5. Dịch thuật', key: 'dich-thuat', href: '/translation' },
+      { label: '6. Lựa chọn đáp án đúng', key: 'lua-chon-dap-an', href: '/multiple-choice' },
     ],
   },
   {
