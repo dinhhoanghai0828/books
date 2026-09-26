@@ -9,7 +9,7 @@ INSERT INTO CATEGORIES(UUID, SLUG, ENG, VI, PARENT_SLUG, NUMBER) VALUES
     (UUID(), 'truyen', 'Story', 'Truyện', NULL, 1),
     (UUID(), 'sach', 'Book', 'Sách', NULL, 2),
     (UUID(), 'bao', 'News', 'Báo', NULL, 3),
-    (UUID(), 'tro-chuyen', 'Conversations', 'Trò chuyện', NULL, 4),
+    (UUID(), 'presentation', 'Presentation', 'Thuyết trình', NULL, 4),
     (UUID(), 'tieng-anh-co-ban', 'Basic English', 'Tiếng anh cơ bản', NULL, 5),
 
     -- Truyện
@@ -23,21 +23,18 @@ INSERT INTO CATEGORIES(UUID, SLUG, ENG, VI, PARENT_SLUG, NUMBER) VALUES
 	(UUID(), 'sach-ielts', 'IELTS book', 'Sách IELTS', 'sach', 1),
 	(UUID(), 'sach-triet-ly', 'Philosophy book', 'Sách triết lý', 'sach', 2),
 	(UUID(), 'esl-fast', 'ESL Fast', 'Tiếng Anh ESL Fast', 'sach', 3),
-
 	-- Sách - ESL Fast
-	(UUID(), 'so-cap-1', 'Beginner (A1)', 'Sơ cấp 1 (A1)', 'esl-fast', 1),
-	(UUID(), 'so-cap-2', 'Elementary (A2)', 'Sơ cấp 2 (A2)', 'esl-fast', 2),
-	(UUID(), 'trung-cap', 'Intermediate (B1)', 'Trung cấp (B1)', 'esl-fast', 3),
-	(UUID(), 'trung-cao-cap', 'Upper Intermediate (B2)', 'Trung cao cấp (B2)', 'esl-fast', 4),
-	(UUID(), 'nang-cao', 'Advanced (C1)', 'Nâng cao (C1)', 'esl-fast', 5),
-	(UUID(), 'ban-xu', 'Proficient (C2)', 'Bản xứ (C2)', 'esl-fast', 6),
+	(UUID(), 'beginner', 'Beginner (A1)', 'Beginner (A1))', 'esl-fast', 1),
+	(UUID(), 'elementary', 'Elementary (A2)', 'Elementary (A2)', 'esl-fast', 2),
+	(UUID(), 'intermediate', 'Intermediate (B1)', 'Intermediate (B1)', 'esl-fast', 3),
+	(UUID(), 'upper-intermediate', 'Upper Intermediate (B2)', 'Upper Intermediate (B2))', 'esl-fast', 4),
 
-    -- Báo
-    (UUID(), 'tin-tuc-hang-ngay', 'Daily News', 'Tin tức hàng ngày', 'bao', 1),
+    -- Thuyết trình - TEDTALKS
+    (UUID(), 'tedtalks', 'TEDTALKS', 'TEDTALKS', 'presentation', 1),
+    (UUID(), 'technology', 'Tecnology', 'Công Nghệ', 'tedtalks', 1),
+    (UUID(), 'relationship', 'Relationship', 'Mối quan hệ', 'tedtalks', 1),
 
-    -- Trò chuyện
-    (UUID(), 'doi-thoai-hoc-thuat', 'Academic conversations', 'Đối thoại học thuật', 'tro-chuyen', 1),
-    (UUID(), 'tro-chuyen-hang-ngay', 'Daily Conversations', 'Trò chuyện hàng ngày', 'tro-chuyen', 2),
+    (UUID(), 'tro-chuyen-hang-ngay', 'Daily Conversations', 'Trò chuyện hàng ngày', 'presentation', 2),
 
     -- Tiếng Anh cơ bản
     (UUID(), 'tieng-anh-co-ban-cap-do-1', 'Basic English Level 1', 'Tiếng anh cơ bản cấp độ 1', 'tieng-anh-co-ban', 1);
@@ -56,8 +53,9 @@ INSERT INTO BOOKS(UUID,SLUG,ENG,VI,AUTHOR,DESCRIPTION,CATEGORY_SLUG,IMG,NUMBER) 
 	(UUID(),'I-am-Mary','I\'m Mary','Tôi là Mary','Mary','Những triết lý, bài học trong cuộc sống hiện đại','sach-triet-ly','I_AM_MARY.png',1),
 	(UUID(),'economist','Economist','Kinh tế học','Nhiều tác giả','Thông tin kinh tế, chính trị, khoa học, xã hội','tin-tuc-hang-ngay','THE_ECONOMIST.png',1),
 	(UUID(),'voa','VOA','Báo nước ngoài','Nhiều tác giả','Thông tin kinh tế, chính trị, khoa học, xã hội, giáo dục, du lịch','tin-tuc-hang-ngay','VOA.png',2),
-	/* Doi thoai hoc thuat */
-	(UUID(),'tedtalks','TedTalks','TedTalks','Nhiều tác giả','Thảo luận về các vấn đề trong cuộc sống','doi-thoai-hoc-thuat','TEDTALKS.png',1),
+	/* Thuyết trình */
+	-- Thuyết trình - TEDTALKS
+	(UUID(),'technology','Technology','Công Nghệ','Nhiều tác giả','Thảo luận về các vấn đề trong cuộc sống','technology','TEDTALKS.png',1),
 	(UUID(),'all-ears-english','All Ears English','All Ears English','Nhiều tác giả','Thảo luận về các vấn đề trong cuộc sống','doi-thoai-hoc-thuat','ALL_EARS_ENGLISH.png',2),
 	/* tro-chuyen-hang-ngay */
 	(UUID(),'dhar-mann-studio','Dhar Mann Studio','Dhar Mann Studio','Nhiều tác giả','Các cuộc hội thoại ngắn thường ngày','tro-chuyen-hang-ngay','DHAR_MANN_STUDIO.png',1),
@@ -65,17 +63,17 @@ INSERT INTO BOOKS(UUID,SLUG,ENG,VI,AUTHOR,DESCRIPTION,CATEGORY_SLUG,IMG,NUMBER) 
 	(UUID(),'tiger-club-learning','TigerCub Learning','TigerCub Learning','Nhiều tác giả','Học các câu tiếng anh đơn giản','tieng-anh-co-ban-cap-do-1','TIGER_CLUB_LEARNING.png',1),
 	(UUID(),'peppa-pig','Peppa Pig','Lợn Peppa','Nhiều tác giả','Học các câu tiếng anh đơn giản','tieng-anh-co-ban-cap-do-1','PEPPA_PIG.png',2),
 	/* Cac cap do trong ESL_FAST, co 6 cap do*/
-	(UUID(),'esl-fast-children-1','Children 1','Children 1','Nhiều tác giả','Học các câu tiếng anh đơn giản','so-cap-1','ESLFAST.png',1),
-	(UUID(),'esl-fast-children-2','Children 2','Children 2','Nhiều tác giả','Học các câu tiếng anh đơn giản','so-cap-1','ESLFAST.png',2),
-	(UUID(),'esl-fast-children-3','Children 3','Children 3','Nhiều tác giả','Học các câu tiếng anh đơn giản','so-cap-1','ESLFAST.png',3),
-	(UUID(),'esl-fast-elementary-1','Elementary 1','Elementary 1','Nhiều tác giả','Học các câu tiếng anh đơn giản','so-cap-2','ESLFAST.png',1),
-	(UUID(),'esl-fast-elementary-2','Elementary 2','Elementary 2','Nhiều tác giả','Học các câu tiếng anh đơn giản','so-cap-2','ESLFAST.png',2),
-	(UUID(),'esl-fast-elementary-3','Elementary 3','Elementary 3','Nhiều tác giả','Học các câu tiếng anh đơn giản','so-cap-2','ESLFAST.png',3),
-	(UUID(),'esl-fast-elementary-4','Elementary 4','Elementary 4','Nhiều tác giả','Học các câu tiếng anh đơn giản','so-cap-2','ESLFAST.png',4),
-	(UUID(),'esl-fast-elementary-5','Elementary 5','Elementary 5','Nhiều tác giả','Học các câu tiếng anh đơn giản','so-cap-2','ESLFAST.png',5),
-	(UUID(),'esl-fast-elementary-6','Elementary 6','Elementary 6','Nhiều tác giả','Học các câu tiếng anh đơn giản','so-cap-2','ESLFAST.png',6),
-	(UUID(),'esl-fast-intermediate-1','Intermediate 1','Intermediate 1','Nhiều tác giả','Học các câu tiếng anh phức tạp','trung-cap','ESLFAST.png',1),
-	(UUID(),'esl-fast-intermediate-2','Intermediate 2','Intermediate 2','Nhiều tác giả','Học các câu tiếng anh phức tạp','trung-cao-cap','ESLFAST.png',1);
+	(UUID(),'esl-fast-children-1','Children 1','Children 1','Nhiều tác giả','Học các câu tiếng anh đơn giản','beginner','ESLFAST.png',1),
+	(UUID(),'esl-fast-children-2','Children 2','Children 2','Nhiều tác giả','Học các câu tiếng anh đơn giản','beginner','ESLFAST.png',2),
+	(UUID(),'esl-fast-children-3','Children 3','Children 3','Nhiều tác giả','Học các câu tiếng anh đơn giản','beginner','ESLFAST.png',3),
+	(UUID(),'esl-fast-elementary-1','Elementary 1','Elementary 1','Nhiều tác giả','Học các câu tiếng anh đơn giản','elementary','ESLFAST.png',1),
+	(UUID(),'esl-fast-elementary-2','Elementary 2','Elementary 2','Nhiều tác giả','Học các câu tiếng anh đơn giản','elementary','ESLFAST.png',2),
+	(UUID(),'esl-fast-elementary-3','Elementary 3','Elementary 3','Nhiều tác giả','Học các câu tiếng anh đơn giản','elementary','ESLFAST.png',3),
+	(UUID(),'esl-fast-elementary-4','Elementary 4','Elementary 4','Nhiều tác giả','Học các câu tiếng anh đơn giản','elementary','ESLFAST.png',4),
+	(UUID(),'esl-fast-elementary-5','Elementary 5','Elementary 5','Nhiều tác giả','Học các câu tiếng anh đơn giản','elementary','ESLFAST.png',5),
+	(UUID(),'esl-fast-elementary-6','Elementary 6','Elementary 6','Nhiều tác giả','Học các câu tiếng anh đơn giản','elementary','ESLFAST.png',6),
+	(UUID(),'esl-fast-intermediate-1','Intermediate 1','Intermediate 1','Nhiều tác giả','Học các câu tiếng anh phức tạp','intermediate','ESLFAST.png',1),
+	(UUID(),'esl-fast-intermediate-2','Intermediate 2','Intermediate 2','Nhiều tác giả','Học các câu tiếng anh phức tạp','upper-intermediate','ESLFAST.png',1);
 	
 	
 -- DU LIEU BANG VOLUMES
