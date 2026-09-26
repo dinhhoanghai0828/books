@@ -1,0 +1,47 @@
+1
+00:00:00,010 --> 00:00:01,550
+(Được chép bởi TurboScribe. Nâng cấp lên Không giới hạn để gỡ bỏ thông báo này.) He is walking.
+
+2
+00:00:02,250 --> 00:00:04,130
+A woman stops him.
+
+3
+00:00:04,930 --> 00:00:07,010
+She asks if he is Christian.
+
+4
+00:00:07,930 --> 00:00:08,970
+He says no.
+
+5
+00:00:09,770 --> 00:00:12,250
+She says that he should be.
+
+6
+00:00:12,950 --> 00:00:14,430
+She gives him a Bible.
+
+7
+00:00:15,410 --> 00:00:16,410
+He takes it.
+
+8
+00:00:17,110 --> 00:00:18,130
+He reads it.
+
+9
+00:00:18,810 --> 00:00:21,310
+He thinks it is really interesting.
+
+10
+00:00:21,310 --> 00:00:24,310
+He cannot put it down.
+
+11
+00:00:25,290 --> 00:00:27,350
+He goes to a nearby church.
+
+12
+00:00:28,390 --> 00:00:29,470
+He prays.
