@@ -4967,10 +4967,10 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE,ANSWER_TEXT,ANSWER_TEXT_VI,IS_COR
 	('Q-esl-fast-beginner-1-41-030','A','A boy eats candy all day','Một cậu bé ăn kẹo cả ngày','N',1,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-41-030','B','A family goes to a restaurant','Một gia đình đi đến nhà hàng','N',2,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-41-030','C','A boy learns to cook meat','Một cậu bé học nấu thịt','N',3,NULL,NULL,NULL,NULL),
-	('Q-esl-fast-beginner-1-41-030','D','A family changes to healthy meals because they worry about the boy','Một gia đình chuyển sang ăn uống lành mạnh vì lo lắng cho cậu bé','Y',4,NULL,NULL,NULL,NULL),	
+	('Q-esl-fast-beginner-1-41-030','D','A family changes to healthy meals because they worry about the boy','Một gia đình chuyển sang ăn uống lành mạnh vì lo lắng cho cậu bé','Y',4,NULL,NULL,NULL,NULL);
 	
 	/* (UUID(),'esl-fast-beginner-1-42','Ferris Wheel','Vòng đu quay','BEGINNER_01_ESL_FAST_CHILDREN_042.mp3',NULL,'00:00:00.000','00:00:39.000','esl-fast-children-1',1,0,0,42), */
-	('Q-esl-fast-beginner-1-42-001','A huge rotating wheel','Một bánh xe khổng lồ quay tròn','Y',1,'ACTIVE',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,'SYSTEM','SYSTEM'),
+	/* ('Q-esl-fast-beginner-1-42-001','A huge rotating wheel','Một bánh xe khổng lồ quay tròn','Y',1,'ACTIVE',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,'SYSTEM','SYSTEM'),
 	('Q-esl-fast-beginner-1-42-001','A small train','Một chuyến tàu nhỏ','N',2,'ACTIVE',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,'SYSTEM','SYSTEM'),
 	('Q-esl-fast-beginner-1-42-001','A big airplane','Một chiếc máy bay lớn','N',3,'ACTIVE',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,'SYSTEM','SYSTEM'),
 	('Q-esl-fast-beginner-1-42-001','A tall building','Một tòa nhà cao','N',4,'ACTIVE',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,'SYSTEM','SYSTEM'),
@@ -5089,7 +5089,7 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE,ANSWER_TEXT,ANSWER_TEXT_VI,IS_COR
 	('Q-esl-fast-beginner-1-42-030','Excited and happy about the nice view','Háo hức và vui vì khung cảnh đẹp','Y',1,'ACTIVE',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,'SYSTEM','SYSTEM'),
 	('Q-esl-fast-beginner-1-42-030','Angry about the ride','Tức giận vì chuyến đi','N',2,'ACTIVE',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,'SYSTEM','SYSTEM'),
 	('Q-esl-fast-beginner-1-42-030','Sad about the people','Buồn vì mọi người','N',3,'ACTIVE',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,'SYSTEM','SYSTEM'),
-	('Q-esl-fast-beginner-1-42-030','Sleepy and bored','Buồn ngủ và chán','N',4,'ACTIVE',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,'SYSTEM','SYSTEM');
+	('Q-esl-fast-beginner-1-42-030','Sleepy and bored','Buồn ngủ và chán','N',4,'ACTIVE',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,'SYSTEM','SYSTEM'); */
 	
 	/* (UUID(),'esl-fast-beginner-1-43','More Money','Nhiều tiền hơn','BEGINNER_01_ESL_FAST_CHILDREN_043.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,0,0,43), */
 	
