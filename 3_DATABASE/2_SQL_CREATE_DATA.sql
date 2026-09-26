@@ -4,37 +4,48 @@ TRUNCATE TABLE SUBCATEGORIES;
 TRUNCATE TABLE BOOKS;
 TRUNCATE TABLE CONTENTS;
 
-INSERT INTO CATEGORIES(UUID,SLUG,ENG,VI,NUMBER) VALUES 
-	(UUID(),'truyen','Story','Truyện',1),
-	(UUID(),'sach','Book','Sách',2),
-	(UUID(),'bao','News','Báo',3),
-	(UUID(),'tro-chuyen','Conversations','Trò chuyện',4),
-	(UUID(),'tieng-anh-co-ban','Basic English','Tiếng anh cơ bản',5),
-	(UUID(),'esl-fast','English Proficiency Levels (A1–C2)','Trình độ tiếng Anh (A1-C2)',6);
+INSERT INTO CATEGORIES(UUID, SLUG, ENG, VI, PARENT_SLUG, NUMBER) VALUES 
+    -- Category cha
+    (UUID(), 'truyen', 'Story', 'Truyện', NULL, 1),
+    (UUID(), 'sach', 'Book', 'Sách', NULL, 2),
+    (UUID(), 'bao', 'News', 'Báo', NULL, 3),
+    (UUID(), 'tro-chuyen', 'Conversations', 'Trò chuyện', NULL, 4),
+    (UUID(), 'tieng-anh-co-ban', 'Basic English', 'Tiếng anh cơ bản', NULL, 5),
 
---	DU LIEU BANG SUBCATEGORIES
-INSERT INTO SUBCATEGORIES(UUID,SLUG,ENG,VI,CATEGORY_SLUG,NUMBER) VALUES
-	(UUID(),'truyen-truyen-cam-hung','Inspirational stories','Truyện truyền cảm hứng','truyen',1),
-	(UUID(),'truyen-kinh-di','Horror story','Truyện kinh dị','truyen',2),
-	(UUID(),'truyen-co-tich','Fairy tales story','Truyện cổ tích','truyen',3),
-	(UUID(),'truyen-tuoi-teen','Teen stories','Truyện tuổi teen','truyen',4),
-	(UUID(),'truyen-nguoi-lon','Adult stories','Truyện người lớn','truyen',5),
-	(UUID(),'sach-ielts','IELTS book','Sách Ielts','sach',1),
-	(UUID(),'sach-triet-ly','Philosophy book','Sách triết lý','sach',2),
-	(UUID(),'tin-tuc-hang-ngay','Daily News','Tin tức hàng ngày','bao',1),
-	(UUID(),'doi-thoai-hoc-thuat','Academic conversations','Đối thoại học thuật','tro-chuyen',1),
-	(UUID(),'tro-chuyen-hang-ngay','Daily Conversations','Trò chuyện hàng ngày','tro-chuyen',2),
-	(UUID(),'tieng-anh-co-ban-cap-do-1','Basic English Level 1','Tiếng anh cơ bản cấp độ 1','tieng-anh-co-ban',5),
-	(UUID(),'so-cap-1','Beginner (A1)','Sơ cấp 1 (A1)','esl-fast',1),
-	(UUID(),'so-cap-2','Elementary (A2)','Sơ cấp 2 (A2)','esl-fast',2),
-	(UUID(),'trung-cap','Intermediate (B1)','Trung cấp (B1)','esl-fast',3),
-	(UUID(),'trung-cao-cap','Upper Intermediate (B2)','Trung cao cấp (B2)','esl-fast',4),
-	(UUID(),'nang-cao','Advanced (C1)','Nâng cao (C1)','esl-fast',5),
-	(UUID(),'ban-xu','Proficient (C2)','Bản xứ (C2)','esl-fast',6);
+    -- Truyện
+    (UUID(), 'truyen-truyen-cam-hung', 'Inspirational stories', 'Truyện truyền cảm hứng', 'truyen', 1),
+    (UUID(), 'truyen-kinh-di', 'Horror story', 'Truyện kinh dị', 'truyen', 2),
+    (UUID(), 'truyen-co-tich', 'Fairy tales story', 'Truyện cổ tích', 'truyen', 3),
+    (UUID(), 'truyen-tuoi-teen', 'Teen stories', 'Truyện tuổi teen', 'truyen', 4),
+    (UUID(), 'truyen-nguoi-lon', 'Adult stories', 'Truyện người lớn', 'truyen', 5),
+
+    -- Sách
+	(UUID(), 'sach-ielts', 'IELTS book', 'Sách IELTS', 'sach', 1),
+	(UUID(), 'sach-triet-ly', 'Philosophy book', 'Sách triết lý', 'sach', 2),
+	(UUID(), 'esl-fast', 'ESL Fast', 'Tiếng Anh ESL Fast', 'sach', 3),
+
+	-- Sách - ESL Fast
+	(UUID(), 'so-cap-1', 'Beginner (A1)', 'Sơ cấp 1 (A1)', 'esl-fast', 1),
+	(UUID(), 'so-cap-2', 'Elementary (A2)', 'Sơ cấp 2 (A2)', 'esl-fast', 2),
+	(UUID(), 'trung-cap', 'Intermediate (B1)', 'Trung cấp (B1)', 'esl-fast', 3),
+	(UUID(), 'trung-cao-cap', 'Upper Intermediate (B2)', 'Trung cao cấp (B2)', 'esl-fast', 4),
+	(UUID(), 'nang-cao', 'Advanced (C1)', 'Nâng cao (C1)', 'esl-fast', 5),
+	(UUID(), 'ban-xu', 'Proficient (C2)', 'Bản xứ (C2)', 'esl-fast', 6),
+
+    -- Báo
+    (UUID(), 'tin-tuc-hang-ngay', 'Daily News', 'Tin tức hàng ngày', 'bao', 1),
+
+    -- Trò chuyện
+    (UUID(), 'doi-thoai-hoc-thuat', 'Academic conversations', 'Đối thoại học thuật', 'tro-chuyen', 1),
+    (UUID(), 'tro-chuyen-hang-ngay', 'Daily Conversations', 'Trò chuyện hàng ngày', 'tro-chuyen', 2),
+
+    -- Tiếng Anh cơ bản
+    (UUID(), 'tieng-anh-co-ban-cap-do-1', 'Basic English Level 1', 'Tiếng anh cơ bản cấp độ 1', 'tieng-anh-co-ban', 1);
+
 	
 	
 --	DU LIEU BANG BOOKS
-INSERT INTO BOOKS(UUID,SLUG,ENG,VI,AUTHOR,DESCRIPTION,SUBCATEGORY_SLUG,IMG,NUMBER) VALUES
+INSERT INTO BOOKS(UUID,SLUG,ENG,VI,AUTHOR,DESCRIPTION,CATEGORY_SLUG,IMG,NUMBER) VALUES
 	(UUID(),'the-fictionist','The Fictionist','Người viết tiểu thuyết','The Fictionist','Những câu chuyện ngắn, những bài học từ những người thành đạt giúp truyền động lực, cảm hứng','truyen-truyen-cam-hung','THE_FICTIONIST.png',1),
 	(UUID(),'god-of-motive','God Of Motive','Vị thần động lực','Shibin Sibi','Những câu chuyện ngắn, những bài học từ những người thành đạt truyền cảm hứng','truyen-truyen-cam-hung','GOD_OF_MOTIVE.png',2),
 	(UUID(),'nightmare-tales','Nightmare Tales','Câu chuyện lúc nửa đêm','Patreon','Những câu chuyện ngắn kinh dị lúc nửa đêm','truyen-kinh-di','NIGHTMARE_TALES.png', 1),

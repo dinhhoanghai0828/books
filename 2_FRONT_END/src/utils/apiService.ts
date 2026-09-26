@@ -77,8 +77,28 @@ export const getCategories = async () => {
   }
 };
 
-// Lay danh sach sach theo danh muc lon, co phan trang
-export const getBooksByCategory = async (
+// Lay category theo slug (dung cho routing đa cấp)
+export const getCategoryBySlug = async (slug: string) => {
+  try {
+    const response = await apiClient.get(`/categories/slug/${slug}`);
+    return response.data;
+  } catch (error: any) {
+    throw new Error(getErrorMessage(error));
+  }
+};
+
+// Lay danh sach children theo parentSlug (dung cho routing đa cấp)
+export const getChildrenByParentSlug = async (parentSlug: string) => {
+  try {
+    const response = await apiClient.get(`/categories/children/${parentSlug}`);
+    return response.data;
+  } catch (error: any) {
+    throw new Error(getErrorMessage(error));
+  }
+};
+
+// Lay danh sach sach theo category slug (hỗ trợ mọi cấp độ), co phan trang
+export const getBooksByCategorySlug = async (
     categorySlug: string,
     page: number,
     size: number
@@ -86,22 +106,6 @@ export const getBooksByCategory = async (
   try {
     const response = await apiClient.get(
         `/categories/${categorySlug}?page=${page - 1}&size=${size}`
-    );
-    return response.data;
-  } catch (error: any) {
-    throw new Error(getErrorMessage(error));
-  }
-};
-
-// Lay danh sach sach theo danh muc con, co phan trang
-export const getBooksBySubCategory = async (
-    subCategorySlug: string,
-    page: number,
-    size: number
-): Promise<PaginationResponse<Book>> => {
-  try {
-    const response = await apiClient.get(
-        `/sub-categories/${subCategorySlug}?page=${page - 1}&size=${size}`
     );
     return response.data;
   } catch (error: any) {

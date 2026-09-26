@@ -5,7 +5,7 @@ import PaginationComponent from '@/components/pagination/PaginationComponent';
 import VolumeContentComponent from '@/components/volumes/VolumeContentComponent';
 import { Book } from '@/interfaces/book';
 import { Volume } from '@/interfaces/volume';
-import { getBooksBySubCategory, getVolumes } from '@/utils/apiService';
+import { getBooksByCategorySlug, getVolumes } from '@/utils/apiService';
 import { useHasMounted } from '@/utils/customHook';
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
@@ -36,13 +36,13 @@ const ThreeLevelBookPage = () => {
     }
   }, [bookSlug, subcategorySlug]);
 
-  // Lay danh sach sach theo danh muc con (cho trang 3 cấp)
+  // Lay danh sach sach theo category slug (cho trang 3 cấp)
   const fetchBooks = async (page: number, size: number) => {
     if (!subcategorySlug || Array.isArray(subcategorySlug)) return;
     NProgress.start();
     setLoading(true);
     try {
-      const response = await getBooksBySubCategory(subcategorySlug, page, size);
+      const response = await getBooksByCategorySlug(subcategorySlug, page, size);
       setBooks(response.data);
       setTotalItems(response.totalElements);
     } catch (error) {

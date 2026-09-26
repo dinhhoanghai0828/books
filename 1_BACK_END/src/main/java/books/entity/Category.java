@@ -5,10 +5,12 @@ import java.util.List;
 public class Category {
     private String id;
     private String uuid;
+    private String slug;
     private String eng;
     private String vi;
+    private String parentSlug;
     private Long number;
-    private List<SubCategory> subcategories;
+    private List<Category> children;
 
     public String getId() {
         return id;
@@ -24,6 +26,14 @@ public class Category {
 
     public void setUuid(String uuid) {
         this.uuid = uuid;
+    }
+
+    public String getSlug() {
+        return slug;
+    }
+
+    public void setSlug(String slug) {
+        this.slug = slug;
     }
 
     public String getEng() {
@@ -42,6 +52,14 @@ public class Category {
         this.vi = vi;
     }
 
+    public String getParentSlug() {
+        return parentSlug;
+    }
+
+    public void setParentSlug(String parentSlug) {
+        this.parentSlug = parentSlug;
+    }
+
     public Long getNumber() {
         return number;
     }
@@ -50,11 +68,11 @@ public class Category {
         this.number = number;
     }
 
-    public List<SubCategory> getSubcategories() {
-        return subcategories;
+    public List<Category> getChildren() {
+        return children;
     }
 
-    public void setSubcategories(List<SubCategory> subcategories) {
-        this.subcategories = subcategories;
+    public void setChildren(List<Category> children) {
+        this.children = children;
     }
 }

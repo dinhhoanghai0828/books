@@ -37,6 +37,26 @@ public class CategoryController {
         }
     }
 
+    @GetMapping("/slug/{slug}")
+    public ResponseEntity<?> getCategoryBySlug(@PathVariable("slug") String slug) {
+        try {
+            CategoryDTO categoryDTO = categoryService.getCategoryBySlug(slug);
+            return new ResponseEntity<>(categoryDTO, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @GetMapping("/children/{parentSlug}")
+    public ResponseEntity<?> getChildrenByParentSlug(@PathVariable("parentSlug") String parentSlug) {
+        try {
+            List<CategoryDTO> children = categoryService.getChildrenByParentSlug(parentSlug);
+            return new ResponseEntity<>(children, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+    }
+
     @GetMapping("/{category-slug}")
     public ResponseEntity<?> getBookByCategorySlug(@PathVariable("category-slug") String categorySlug, @Param("page") String page, @Param("size") String size) {
         try {

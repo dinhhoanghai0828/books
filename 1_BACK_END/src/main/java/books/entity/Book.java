@@ -11,7 +11,7 @@ public class Book {
     private String author;
     private String description;
     private String img;
-    private String subCategorySlug;
+    private String categorySlug;
     private Date createdAt;
     private Date updatedAt;
     private String createBy;
@@ -82,12 +82,12 @@ public class Book {
         this.img = img;
     }
 
-    public String getSubCategorySlug() {
-        return subCategorySlug;
+    public String getCategorySlug() {
+        return categorySlug;
     }
 
-    public void setSubCategorySlug(String subCategorySlug) {
-        this.subCategorySlug = subCategorySlug;
+    public void setCategorySlug(String categorySlug) {
+        this.categorySlug = categorySlug;
     }
 
     public Date getCreatedAt() {

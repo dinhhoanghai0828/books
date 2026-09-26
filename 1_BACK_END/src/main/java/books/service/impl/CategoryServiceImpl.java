@@ -14,6 +14,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -35,6 +36,46 @@ public class CategoryServiceImpl implements CategoryService {
         List<Category> categories = categoryAdapter.getCategories();
         List<CategoryDTO> categoryDTOList = categories.stream().map(category -> modelMapper.map(category, CategoryDTO.class)).collect(Collectors.toList());
         return categoryDTOList;
+    }
+
+    @Override
+    public CategoryDTO getCategoryBySlug(String slug) throws Exception {
+        List<Category> categories = categoryAdapter.getCategories();
+        // Flatten the tree to find category by slug
+        Category foundCategory = findCategoryBySlug(categories, slug);
+        if (foundCategory != null) {
+            return modelMapper.map(foundCategory, CategoryDTO.class);
+        }
+        return null;
+    }
+
+    @Override
+    public List<CategoryDTO> getChildrenByParentSlug(String parentSlug) throws Exception {
+        List<Category> categories = categoryAdapter.getCategories();
+        Category parentCategory = findCategoryBySlug(categories, parentSlug);
+
+        if (parentCategory != null && parentCategory.getChildren() != null) {
+            return parentCategory.getChildren().stream()
+                    .map(category -> modelMapper.map(category, CategoryDTO.class))
+                    .collect(Collectors.toList());
+        }
+
+        return Collections.emptyList();
+    }
+
+    private Category findCategoryBySlug(List<Category> categories, String slug) {
+        for (Category category : categories) {
+            if (category.getSlug().equals(slug)) {
+                return category;
+            }
+            if (category.getChildren() != null) {
+                Category found = findCategoryBySlug(category.getChildren(), slug);
+                if (found != null) {
+                    return found;
+                }
+            }
+        }
+        return null;
     }
 
     @Override

@@ -3,7 +3,7 @@ import BreadCrumbComponent from '@/components/breadcumb/BreadcrumbComponent';
 import BookContentComponent from '@/components/books/BookContentComponent';
 import PaginationComponent from '@/components/pagination/PaginationComponent';
 import { Book } from '@/interfaces/book';
-import { getBooksByCategory } from '@/utils/apiService';
+import { getBooksByCategorySlug } from '@/utils/apiService';
 import { useHasMounted } from '@/utils/customHook';
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
@@ -23,13 +23,13 @@ const CategoryPage = () => {
   const [totalItems, setTotalItems] = useState(0);
   const [loading, setLoading] = useState(false);
 
-  // Lay danh sach sach theo danh muc lon, co phan trang
+  // Lay danh sach sach theo category slug (ho tro 1, 2, 3 cap do)
   const fetchBooks = async (page: number, size: number) => {
     if (!categorySlug || Array.isArray(categorySlug)) return;
     NProgress.start();
     setLoading(true);
     try {
-      const response = await getBooksByCategory(categorySlug, page, size);
+      const response = await getBooksByCategorySlug(categorySlug, page, size);
       setBooks(response.data);
       setTotalItems(response.totalElements);
     } catch (error) {

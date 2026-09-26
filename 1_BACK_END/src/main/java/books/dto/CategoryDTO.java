@@ -1,16 +1,16 @@
 package books.dto;
 
-import books.entity.SubCategory;
-
 import java.util.List;
 
 public class CategoryDTO {
     private String uuid;
+    private String slug;
     private String eng;
     private String vi;
+    private String parentSlug;
     private Long number;
     private String categoryName;
-    private List<SubCategory> subcategories;
+    private List<CategoryDTO> children;
 
     public String getUuid() {
         return uuid;
@@ -18,6 +18,14 @@ public class CategoryDTO {
 
     public void setUuid(String uuid) {
         this.uuid = uuid;
+    }
+
+    public String getSlug() {
+        return slug;
+    }
+
+    public void setSlug(String slug) {
+        this.slug = slug;
     }
 
     public String getEng() {
@@ -36,6 +44,14 @@ public class CategoryDTO {
         this.vi = vi;
     }
 
+    public String getParentSlug() {
+        return parentSlug;
+    }
+
+    public void setParentSlug(String parentSlug) {
+        this.parentSlug = parentSlug;
+    }
+
     public Long getNumber() {
         return number;
     }
@@ -52,11 +68,11 @@ public class CategoryDTO {
         this.categoryName = categoryName;
     }
 
-    public List<SubCategory> getSubcategories() {
-        return subcategories;
+    public List<CategoryDTO> getChildren() {
+        return children;
     }
 
-    public void setSubcategories(List<SubCategory> subcategories) {
-        this.subcategories = subcategories;
+    public void setChildren(List<CategoryDTO> children) {
+        this.children = children;
     }
 }

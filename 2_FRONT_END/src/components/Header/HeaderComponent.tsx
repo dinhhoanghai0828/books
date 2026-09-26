@@ -12,7 +12,8 @@ import {
 import { Button, Menu, message } from 'antd';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { getCategories } from '@/utils/apiService';
 
 // ============================================================
 // TYPES
@@ -26,12 +27,22 @@ interface MenuItem {
   children?: MenuItem[];
 }
 
+interface CategoryDTO {
+  uuid: string;
+  slug: string;
+  eng: string;
+  vi: string;
+  parentSlug: string | null;
+  number: number;
+  children?: CategoryDTO[];
+}
+
 // ============================================================
 // MENU CONFIG
 // ============================================================
 
 // Cau hinh cac muc menu chinh va menu con cua header
-const MENU_ITEMS: MenuItem[] = [
+const STATIC_MENU_ITEMS: MenuItem[] = [
   {
     label: 'Trang Chu',
     key: 'home',
@@ -43,66 +54,6 @@ const MENU_ITEMS: MenuItem[] = [
     key: 'words',
     icon: <BookOutlined />,
     href: '/words',
-  },
-  {
-    label: 'Tieng anh co ban',
-    key: 'tieng-anh-co-ban',
-    icon: <ReadOutlined />,
-    children: [
-      { label: 'Tieng anh co ban cap do 1', key: 'tienganhcoban1', href: '/tieng-anh-co-ban/tieng-anh-co-ban-cap-do-1' },
-      { label: 'Tieng anh co ban cap do 2', key: 'tienganhcoban2', href: '/tieng-anh-co-ban/tieng-anh-co-ban-cap-do-2' },
-    ],
-  },
-  {
-    label: 'Truyen',
-    key: 'truyen',
-    icon: <ReadOutlined />,
-    children: [
-      { label: 'Truyen truyen cam hung', key: 'truyenTruyenCamHung', href: '/truyen/truyen-truyen-cam-hung' },
-      { label: 'Truyen kinh di',         key: 'truyenKinhDi',        href: '/truyen/truyen-kinh-di' },
-      { label: 'Truyen co tich',         key: 'truyenCoTich',        href: '/truyen/truyen-co-tich' },
-      { label: 'Truyen tuoi teen',       key: 'truyenTuoiTeen',      href: '/truyen/truyen-tuoi-teen' },
-      { label: 'Truyen nguoi lon',       key: 'truyenNguoiLon',      href: '/truyen/truyen-nguoi-lon' },
-    ],
-  },
-  {
-    label: 'Sach',
-    key: 'sach',
-    icon: <BookOutlined />,
-    children: [
-      { label: 'Sach Ielts',    key: 'sachIelts',   href: '/sach/sach-ielts' },
-      { label: 'Sach triet ly', key: 'sachTrietLy', href: '/sach/sach-triet-ly' },
-      {
-        label: 'Eslfast',
-        key: 'eslfast',
-        children: [
-          { label: 'Beginner (A1)',            key: 'so-cap-1',      href: '/sach/esl-fast/so-cap-1' },
-          { label: 'Elementary (A2)',          key: 'so-cap-2',      href: '/sach/esl-fast/so-cap-2' },
-          { label: 'Intermediate (B1)',        key: 'trung-cap',     href: '/sach/esl-fast/trung-cap' },
-          { label: 'Upper Intermediate (B2)', key: 'trung-cao-cap', href: '/sach/esl-fast/trung-cao-cap' },
-          { label: 'Advanced (C1)',            key: 'nang-cao',      href: '/sach/esl-fast/nang-cao' },
-          { label: 'Proficient (C2)',          key: 'ban-xu',        href: '/sach/esl-fast/ban-xu' },
-        ],
-      },
-    ],
-  },
-  {
-    label: 'Bao',
-    key: 'bao',
-    icon: <ReadOutlined />,
-    children: [
-      { label: 'Economist',       key: 'economist', href: '/bao/tin-tuc-hang-ngay' },
-      { label: 'Tin tuc hang ngay', key: 'voa',     href: '/bao/tin-tuc-hang-ngay' },
-    ],
-  },
-  {
-    label: 'Tro chuyen',
-    key: 'troChuyen',
-    icon: <CommentOutlined />,
-    children: [
-      { label: 'Doi thoai hoc thuat',   key: 'doiThoaiHocThuat',    href: '/tro-chuyen/doi-thoai-hoc-thuat' },
-      { label: 'Tro chuyen hang ngay',  key: 'troChuyenHangNgay',   href: '/tro-chuyen/tro-chuyen-hang-ngay' },
-    ],
   },
   {
     label: 'Test',
@@ -118,6 +69,26 @@ const MENU_ITEMS: MenuItem[] = [
   },
 ];
 
+// Ham chuyen doi CategoryDTO sang MenuItem
+const buildCategoryMenuItems = (categories: CategoryDTO[]): MenuItem[] => {
+  return categories.map(category => {
+    const menuItem: MenuItem = {
+      label: category.vi,
+      key: category.slug,
+      icon: <ReadOutlined />,
+      href: `/${category.slug}`,
+    };
+
+    if (category.children && category.children.length > 0) {
+      menuItem.children = buildCategoryMenuItems(category.children);
+      // Xóa href nếu có children để hiển thị dropdown
+      delete menuItem.href;
+    }
+
+    return menuItem;
+  });
+};
+
 // ============================================================
 // COMPONENT
 // ============================================================
@@ -126,6 +97,23 @@ const HeaderComponent = () => {
   const router = useRouter();
   const hasMounted = useHasMounted();
   const [current, setCurrent] = useState('home');
+  const [categories, setCategories] = useState<CategoryDTO[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  // Fetch categories from API
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        const data = await getCategories();
+        setCategories(data);
+      } catch (error) {
+        console.error('Loi khi lay danh sach categories:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchCategories();
+  }, []);
 
   // Xoa JWT va chuyen nguoi dung ve trang dang nhap
   const handleLogout = () => {
@@ -151,6 +139,11 @@ const HeaderComponent = () => {
       };
     });
 
+  // Combine static menu items with dynamic category menu items
+  const menuItems = loading 
+    ? STATIC_MENU_ITEMS 
+    : [...STATIC_MENU_ITEMS, ...buildCategoryMenuItems(categories)];
+
   if (!hasMounted) return null;
 
   return (
@@ -159,7 +152,7 @@ const HeaderComponent = () => {
         onClick={(e) => setCurrent(e.key)}
         selectedKeys={[current]}
         mode="horizontal"
-        items={buildMenuItems(MENU_ITEMS)}
+        items={buildMenuItems(menuItems)}
         style={{ display: 'inline-block', width: 'calc(100% - 120px)' }}
       />
       <Button
