@@ -207,7 +207,7 @@ INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,IS_
 	(UUID(),'4000-essential-english-words-6-30','The Mad Hatter','Thợ làm mũ điên','4000_ESSENTIAL_ENGLISH_WORDS_6_30.mp3',NULL,'00:00:00.000','00:01:57.000','4000-essential-english-words',0,0,0,180);
 
 INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,IS_LANGUAGE_APPROVED,IS_REVIEW_COMPLETED,IS_READ,NUMBER) VALUES
-	(UUID(),'4000-essential-english-words-1-1','The lion and the rabbit','Sư tử và thỏ','4000_ESSENTIAL_ENGLISH_WORDS_1_1.mp3',NULL,'00:00:00.000','00:02:11.000','4000-essential-english-words-1',1,0,0,1),
+	(UUID(),'4000-essential-english-words-1-1','The lion and the rabbit','Sư tử và thỏ','4000_ESSENTIAL_ENGLISH_WORDS_1_1.mp3',NULL,'00:00:00.000','00:02:11.000','4000-essential-english-words-1',1,1,0,1),
 	(UUID(),'4000-essential-english-words-1-2','The laboratory','Phòng thí nghiệm','4000_ESSENTIAL_ENGLISH_WORDS_1_2.mp3',NULL,'00:00:00.000','00:02:13.800','4000-essential-english-words-1',1,0,0,2),
 	(UUID(),'4000-essential-english-words-1-3','The report','Báo cáo','4000_ESSENTIAL_ENGLISH_WORDS_1_3.mp3',NULL,'00:00:00.000','00:02:11.000','4000-essential-english-words-1',1,0,0,3),
 	(UUID(),'4000-essential-english-words-1-4','The dog\'s bell','Chiếc chuông của chú chó','4000_ESSENTIAL_ENGLISH_WORDS_1_4.mp3',NULL,'00:00:00.000','00:02:03.000','4000-essential-english-words-1',1,0,0,4),

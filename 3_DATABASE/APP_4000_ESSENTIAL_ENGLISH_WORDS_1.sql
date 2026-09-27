@@ -1,5 +1,5 @@
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'4000-essential-english-words-1-1','The lion and the rabbit','Sư tử và thỏ','4000_ESSENTIAL_ENGLISH_WORDS_1_1.mp3',NULL,'00:00:00.000','00:02:11.000','4000-essential-english-words-1',1,0,1) */
+	/* (UUID(),'4000-essential-english-words-1-1','The lion and the rabbit','Sư tử và thỏ','4000_ESSENTIAL_ENGLISH_WORDS_1_1.mp3',NULL,'00:00:00.000','00:02:11.000','4000-essential-english-words-1',1,1,1) */
 	('The lion and the rabbit','Sư tử và thỏ','00:00:00.960','00:00:03.800','4000-essential-english-words-1-1'),
 	('A cruel lion lived in the forest','Một con sư tử hung ác sống trong khu rừng','00:00:03.800','00:00:06.900','4000-essential-english-words-1-1'),
 	('Every day, he killed and ate a lot of animals','Mỗi ngày, nó giết và ăn thịt rất nhiều loài động vật','00:00:06.900','00:00:11.300','4000-essential-english-words-1-1'),
