@@ -1100,106 +1100,106 @@ INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,IS_
 	(UUID(),'esl-fast-elementary-5-100','Name Change','Đổi tên','ESL_FAST_ELEMENTARY_5_100.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-5',1,0,0,100);
 
 INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,IS_LANGUAGE_APPROVED,IS_REVIEW_COMPLETED,IS_READ,NUMBER) VALUES
-	(UUID(),'esl-fast-elementary-6-1','The Hairstyle Change','Thay đổi kiểu tóc','ELEMENTARY_06_ESL_FAST_001.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,1),
-	(UUID(),'esl-fast-elementary-6-2','Too Old for Trick-or-Treating','Quá lớn để đi xin kẹo Halloween','ELEMENTARY_06_ESL_FAST_002.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,2),
-	(UUID(),'esl-fast-elementary-6-3','The Night Shift','Ca làm đêm','ELEMENTARY_06_ESL_FAST_003.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,3),
-	(UUID(),'esl-fast-elementary-6-4','A Wonderful Surprise','Một bất ngờ tuyệt vời','ELEMENTARY_06_ESL_FAST_004.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,4),
-	(UUID(),'esl-fast-elementary-6-5','A Group of Friends','Một nhóm bạn','ELEMENTARY_06_ESL_FAST_005.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,5),
-	(UUID(),'esl-fast-elementary-6-6','A Long Distance Relationship','Mối quan hệ yêu xa','ELEMENTARY_06_ESL_FAST_006.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,6),
-	(UUID(),'esl-fast-elementary-6-7','Ruby\'s Role Model','Hình mẫu của Ruby','ELEMENTARY_06_ESL_FAST_007.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,7),
-	(UUID(),'esl-fast-elementary-6-8','Confidence Is Key','Sự tự tin là chìa khóa','ELEMENTARY_06_ESL_FAST_008.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,8),
-	(UUID(),'esl-fast-elementary-6-9','Not a Dancer','Không phải là người biết nhảy','ELEMENTARY_06_ESL_FAST_009.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,9),
-	(UUID(),'esl-fast-elementary-6-10','Being Too Superstitious','Quá mê tín','ELEMENTARY_06_ESL_FAST_010.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,10),
-	(UUID(),'esl-fast-elementary-6-11','Irene\'s Secret','Bí mật của Irene','ELEMENTARY_06_ESL_FAST_011.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,11),
-	(UUID(),'esl-fast-elementary-6-12','A Boy or a Girl','Con trai hay con gái','ELEMENTARY_06_ESL_FAST_012.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,12),
-	(UUID(),'esl-fast-elementary-6-13','Money Matters','Tiền bạc là vấn đề quan trọng','ELEMENTARY_06_ESL_FAST_013.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,13),
-	(UUID(),'esl-fast-elementary-6-14','Not So Average','Không hề bình thường','ELEMENTARY_06_ESL_FAST_014.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,14),
-	(UUID(),'esl-fast-elementary-6-15','At the Arcade','Ở khu trò chơi điện tử','ELEMENTARY_06_ESL_FAST_015.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,15),
-	(UUID(),'esl-fast-elementary-6-16','On a Healthy Diet','Theo chế độ ăn lành mạnh','ELEMENTARY_06_ESL_FAST_016.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,16),
-	(UUID(),'esl-fast-elementary-6-17','Pet Shopping','Mua thú cưng','ELEMENTARY_06_ESL_FAST_017.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,17),
-	(UUID(),'esl-fast-elementary-6-18','Moving into a New Apartment','Chuyển vào căn hộ mới','ELEMENTARY_06_ESL_FAST_018.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,18),
-	(UUID(),'esl-fast-elementary-6-19','A Study Group','Nhóm học tập','ELEMENTARY_06_ESL_FAST_019.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,19),
-	(UUID(),'esl-fast-elementary-6-20','Going to Teach Abroad','Đi dạy học ở nước ngoài','ELEMENTARY_06_ESL_FAST_020.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,20),
-	(UUID(),'esl-fast-elementary-6-21','Making Sushi at Home','Làm sushi tại nhà','ELEMENTARY_06_ESL_FAST_021.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,21),
-	(UUID(),'esl-fast-elementary-6-22','Jogging around the Neighborhood','Chạy bộ quanh khu phố','ELEMENTARY_06_ESL_FAST_022.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,22),
-	(UUID(),'esl-fast-elementary-6-23','A Lonely Puppy','Một chú chó con cô đơn','ELEMENTARY_06_ESL_FAST_023.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,23),
-	(UUID(),'esl-fast-elementary-6-24','An Innocent Mistake','Một sai lầm vô ý','ELEMENTARY_06_ESL_FAST_024.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,24),
-	(UUID(),'esl-fast-elementary-6-25','The First Date','Buổi hẹn hò đầu tiên','ELEMENTARY_06_ESL_FAST_025.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,25),
-	(UUID(),'esl-fast-elementary-6-26','Do-It-Yourself Projects','Các dự án tự làm (DIY)','ELEMENTARY_06_ESL_FAST_026.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,26),
-	(UUID(),'esl-fast-elementary-6-27','A Beach Day','Một ngày ở bãi biển','ELEMENTARY_06_ESL_FAST_027.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,27),
-	(UUID(),'esl-fast-elementary-6-28','Michelle\'s New Look','Diện mạo mới của Michelle','ELEMENTARY_06_ESL_FAST_028.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,28),
-	(UUID(),'esl-fast-elementary-6-29','Christmas Gift Shopping','Mua sắm quà Giáng Sinh','ELEMENTARY_06_ESL_FAST_029.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,29),
-	(UUID(),'esl-fast-elementary-6-30','The Job Search','Tìm kiếm việc làm','ELEMENTARY_06_ESL_FAST_030.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,30),
-	(UUID(),'esl-fast-elementary-6-31','The Extreme Burger','Chiếc bánh burger "khủng"','ELEMENTARY_06_ESL_FAST_031.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,31),
-	(UUID(),'esl-fast-elementary-6-32','The Old Dog','Chú chó già','ELEMENTARY_06_ESL_FAST_032.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,32),
-	(UUID(),'esl-fast-elementary-6-33','Lactose Intolerant','Không dung nạp lactose','ELEMENTARY_06_ESL_FAST_033.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,33),
-	(UUID(),'esl-fast-elementary-6-34','Financial Aid','Hỗ trợ tài chính','ELEMENTARY_06_ESL_FAST_034.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,34),
-	(UUID(),'esl-fast-elementary-6-35','New Year Resolutions','Những mục tiêu năm mới','ELEMENTARY_06_ESL_FAST_035.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,35),
-	(UUID(),'esl-fast-elementary-6-36','If Only She Waited One Day','Giá như cô ấy chờ thêm một ngày','ELEMENTARY_06_ESL_FAST_036.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,36),
-	(UUID(),'esl-fast-elementary-6-37','Getting a Divorce','Ly hôn','ELEMENTARY_06_ESL_FAST_037.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,37),
-	(UUID(),'esl-fast-elementary-6-38','A Waste of Water','Lãng phí nước','ELEMENTARY_06_ESL_FAST_038.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,38),
-	(UUID(),'esl-fast-elementary-6-39','An Ice Cream Accident','Một tai nạn với kem','ELEMENTARY_06_ESL_FAST_039.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,39),
-	(UUID(),'esl-fast-elementary-6-40','A Pair of Magi-pants','Một chiếc quần kỳ diệu','ELEMENTARY_06_ESL_FAST_040.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,40),
-	(UUID(),'esl-fast-elementary-6-41','Embarrassed to Be Seen','Xấu hổ khi bị nhìn thấy','ELEMENTARY_06_ESL_FAST_041.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,41),
-	(UUID(),'esl-fast-elementary-6-42','The School Dress Code','Quy định trang phục của trường','ELEMENTARY_06_ESL_FAST_042.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,42),
-	(UUID(),'esl-fast-elementary-6-43','To Be Independent','Trở nên độc lập','ELEMENTARY_06_ESL_FAST_043.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,43),
-	(UUID(),'esl-fast-elementary-6-44','An Artist\'s Dream','Giấc mơ của một nghệ sĩ','ELEMENTARY_06_ESL_FAST_044.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,44),
-	(UUID(),'esl-fast-elementary-6-45','Lying About Being Rich','Nói dối về việc mình giàu có','ELEMENTARY_06_ESL_FAST_045.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,45),
-	(UUID(),'esl-fast-elementary-6-46','Getting Contact Lenses','Đeo kính áp tròng','ELEMENTARY_06_ESL_FAST_046.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,46),
-	(UUID(),'esl-fast-elementary-6-47','From Skinny to Muscular','Từ gầy gò đến cơ bắp','ELEMENTARY_06_ESL_FAST_047.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,47),
-	(UUID(),'esl-fast-elementary-6-48','Fishing for Compliments','Tìm kiếm lời khen','ELEMENTARY_06_ESL_FAST_048.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,48),
-	(UUID(),'esl-fast-elementary-6-49','Quitting College to Follow Dreams','Bỏ đại học để theo đuổi ước mơ','ELEMENTARY_06_ESL_FAST_049.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,49),
-	(UUID(),'esl-fast-elementary-6-50','A Fashion Trend Setter','Người tạo xu hướng thời trang','ELEMENTARY_06_ESL_FAST_050.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,50),
-	(UUID(),'esl-fast-elementary-6-51','The Job Search','Tìm kiếm việc làm','ELEMENTARY_06_ESL_FAST_051.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,51),
-	(UUID(),'esl-fast-elementary-6-52','The Rainy Days','Những ngày mưa','ELEMENTARY_06_ESL_FAST_052.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,52),
-	(UUID(),'esl-fast-elementary-6-53','Susan\'s Favorite Band','Ban nhạc yêu thích của Susan','ELEMENTARY_06_ESL_FAST_053.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,53),
-	(UUID(),'esl-fast-elementary-6-54','Different Morning Routines','Những thói quen buổi sáng khác nhau','ELEMENTARY_06_ESL_FAST_054.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,54),
-	(UUID(),'esl-fast-elementary-6-55','A Hiking Trip','Chuyến đi leo núi','ELEMENTARY_06_ESL_FAST_055.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,55),
-	(UUID(),'esl-fast-elementary-6-56','The Physical Education Class','Lớp thể dục','ELEMENTARY_06_ESL_FAST_056.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,56),
-	(UUID(),'esl-fast-elementary-6-57','Learning How to Drive','Học lái xe','ELEMENTARY_06_ESL_FAST_057.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,57),
-	(UUID(),'esl-fast-elementary-6-58','Apartment Hunting','Tìm căn hộ','ELEMENTARY_06_ESL_FAST_058.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,58),
-	(UUID(),'esl-fast-elementary-6-59','Embarrassing Moments','Những khoảnh khắc xấu hổ','ELEMENTARY_06_ESL_FAST_059.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,59),
-	(UUID(),'esl-fast-elementary-6-60','Mark\'s New Year Resolution','Mục tiêu năm mới của Mark','ELEMENTARY_06_ESL_FAST_060.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,60),
-	(UUID(),'esl-fast-elementary-6-61','An Intern\'s First Day at a Law Firm','Ngày đầu của thực tập sinh tại công ty luật','ELEMENTARY_06_ESL_FAST_061.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,61),
-	(UUID(),'esl-fast-elementary-6-62','Margaret liked Taking Pictures','Margaret thích chụp ảnh','ELEMENTARY_06_ESL_FAST_062.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,62),
-	(UUID(),'esl-fast-elementary-6-63','She Quit Her Job at the Store','Cô ấy nghỉ việc ở cửa hàng','ELEMENTARY_06_ESL_FAST_063.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,63),
-	(UUID(),'esl-fast-elementary-6-64','A Bad Roommate','Một người bạn cùng phòng tệ','ELEMENTARY_06_ESL_FAST_064.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,64),
-	(UUID(),'esl-fast-elementary-6-65','Being Clumsy','Vụng về','ELEMENTARY_06_ESL_FAST_065.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,65),
-	(UUID(),'esl-fast-elementary-6-66','Don\'t Need a Man','Không cần đàn ông','ELEMENTARY_06_ESL_FAST_066.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,66),
-	(UUID(),'esl-fast-elementary-6-67','We\'ll Get Married Eventually','Rồi chúng ta sẽ kết hôn thôi','ELEMENTARY_06_ESL_FAST_067.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,67),
-	(UUID(),'esl-fast-elementary-6-68','Riding a Roller Coaster','Đi tàu lượn siêu tốc','ELEMENTARY_06_ESL_FAST_068.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,68),
-	(UUID(),'esl-fast-elementary-6-69','Moving into the Dorm','Chuyển vào ký túc xá','ELEMENTARY_06_ESL_FAST_069.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,69),
-	(UUID(),'esl-fast-elementary-6-70','Homecoming Queen (1)','Nữ hoàng Homecoming (phần 1)','ELEMENTARY_06_ESL_FAST_070.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,70),
-	(UUID(),'esl-fast-elementary-6-71','Homecoming Queen (2)','Nữ hoàng Homecoming (phần 2)','ELEMENTARY_06_ESL_FAST_071.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,71),
-	(UUID(),'esl-fast-elementary-6-72','Not to Give Any Spoilers','Không tiết lộ nội dung','ELEMENTARY_06_ESL_FAST_072.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,72),
-	(UUID(),'esl-fast-elementary-6-73','The Cyberbully Confessed','Kẻ bắt nạt trên mạng đã thú nhận','ELEMENTARY_06_ESL_FAST_073.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,73),
-	(UUID(),'esl-fast-elementary-6-74','A Cheap Birthday Gift','Món quà sinh nhật rẻ tiền','ELEMENTARY_06_ESL_FAST_074.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,74),
-	(UUID(),'esl-fast-elementary-6-75','To Enter the Pie-Eating Contest','Tham gia cuộc thi ăn bánh','ELEMENTARY_06_ESL_FAST_075.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,75),
-	(UUID(),'esl-fast-elementary-6-76','She Deleted His Number','Cô ấy đã xóa số của anh ấy','ELEMENTARY_06_ESL_FAST_076.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,76),
-	(UUID(),'esl-fast-elementary-6-77','He Decided to Hire Her','Anh ấy quyết định thuê cô ấy','ELEMENTARY_06_ESL_FAST_077.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,77),
-	(UUID(),'esl-fast-elementary-6-78','Transferring to a Different College','Chuyển sang một trường đại học khác','ELEMENTARY_06_ESL_FAST_078.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,78),
-	(UUID(),'esl-fast-elementary-6-79','Running a Marathon','Chạy marathon','ELEMENTARY_06_ESL_FAST_079.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,79),
-	(UUID(),'esl-fast-elementary-6-80','Sean Wanted to Change His Name','Sean muốn đổi tên','ELEMENTARY_06_ESL_FAST_080.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,80),
-	(UUID(),'esl-fast-elementary-6-81','Having a Hard Time Getting Hired','Khó khăn trong việc xin việc','ELEMENTARY_06_ESL_FAST_081.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,81),
-	(UUID(),'esl-fast-elementary-6-82','Adjusting to Cold Weather','Thích nghi với thời tiết lạnh','ELEMENTARY_06_ESL_FAST_082.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,82),
-	(UUID(),'esl-fast-elementary-6-83','Movie Hopping','Xem nhiều phim liên tiếp','ELEMENTARY_06_ESL_FAST_083.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,83),
-	(UUID(),'esl-fast-elementary-6-84','They All Have Different Plans','Mỗi người đều có kế hoạch khác nhau','ELEMENTARY_06_ESL_FAST_084.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,84),
-	(UUID(),'esl-fast-elementary-6-85','He Promised to Never Smoke Again','Anh ấy hứa sẽ không bao giờ hút thuốc nữa','ELEMENTARY_06_ESL_FAST_085.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,85),
-	(UUID(),'esl-fast-elementary-6-86','Her Handwriting Was Messy','Chữ viết tay của cô ấy rất xấu','ELEMENTARY_06_ESL_FAST_086.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,86),
-	(UUID(),'esl-fast-elementary-6-87','Getting Bored of the Fish','Chán ăn cá','ELEMENTARY_06_ESL_FAST_087.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,87),
-	(UUID(),'esl-fast-elementary-6-88','The Man Without a Mustache','Người đàn ông không có ria mép','ELEMENTARY_06_ESL_FAST_088.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,88),
-	(UUID(),'esl-fast-elementary-6-89','Puberty and the Voice Crack','Dậy thì và vỡ giọng','ELEMENTARY_06_ESL_FAST_089.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,89),
-	(UUID(),'esl-fast-elementary-6-90','Tall Girls and Heels','Những cô gái cao và giày cao gót','ELEMENTARY_06_ESL_FAST_090.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,90),
-	(UUID(),'esl-fast-elementary-6-91','A Male Nurse','Một nam y tá','ELEMENTARY_06_ESL_FAST_091.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,91),
-	(UUID(),'esl-fast-elementary-6-92','A Female Engineer','Một nữ kỹ sư','ELEMENTARY_06_ESL_FAST_092.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,92),
-	(UUID(),'esl-fast-elementary-6-93','She Wanted to Major in Sociology','Cô ấy muốn học chuyên ngành xã hội học','ELEMENTARY_06_ESL_FAST_093.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,93),
-	(UUID(),'esl-fast-elementary-6-94','Love or Money','Tình yêu hay tiền bạc','ELEMENTARY_06_ESL_FAST_094.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,94),
-	(UUID(),'esl-fast-elementary-6-95','A Big Secret','Một bí mật lớn','ELEMENTARY_06_ESL_FAST_095.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,95),
-	(UUID(),'esl-fast-elementary-6-96','A Good, Broken Promise','Một lời hứa tốt đẹp nhưng bị phá vỡ','ELEMENTARY_06_ESL_FAST_096.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,96),
-	(UUID(),'esl-fast-elementary-6-97','They Pretended to Be Dating','Họ giả vờ hẹn hò','ELEMENTARY_06_ESL_FAST_097.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,97),
-	(UUID(),'esl-fast-elementary-6-98','She Feels Underappreciated','Cô ấy cảm thấy không được trân trọng','ELEMENTARY_06_ESL_FAST_098.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,98),
-	(UUID(),'esl-fast-elementary-6-99','A Missing Video','Một video bị mất','ELEMENTARY_06_ESL_FAST_099.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,99),
-	(UUID(),'esl-fast-elementary-6-100','To See a Psychic','Đi xem bói','ELEMENTARY_06_ESL_FAST_100.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,100);
+	(UUID(),'esl-fast-elementary-6-1','The Hairstyle Change','Thay đổi kiểu tóc','ESL_FAST_ELEMENTARY_6_001.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,1),
+	(UUID(),'esl-fast-elementary-6-2','Too Old for Trick-or-Treating','Quá lớn để đi xin kẹo Halloween','ESL_FAST_ELEMENTARY_6_002.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,2),
+	(UUID(),'esl-fast-elementary-6-3','The Night Shift','Ca làm đêm','ESL_FAST_ELEMENTARY_6_003.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,3),
+	(UUID(),'esl-fast-elementary-6-4','A Wonderful Surprise','Một bất ngờ tuyệt vời','ESL_FAST_ELEMENTARY_6_004.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,4),
+	(UUID(),'esl-fast-elementary-6-5','A Group of Friends','Một nhóm bạn','ESL_FAST_ELEMENTARY_6_005.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,5),
+	(UUID(),'esl-fast-elementary-6-6','A Long Distance Relationship','Mối quan hệ yêu xa','ESL_FAST_ELEMENTARY_6_006.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,6),
+	(UUID(),'esl-fast-elementary-6-7','Ruby\'s Role Model','Hình mẫu của Ruby','ESL_FAST_ELEMENTARY_6_007.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,7),
+	(UUID(),'esl-fast-elementary-6-8','Confidence Is Key','Sự tự tin là chìa khóa','ESL_FAST_ELEMENTARY_6_008.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,8),
+	(UUID(),'esl-fast-elementary-6-9','Not a Dancer','Không phải là người biết nhảy','ESL_FAST_ELEMENTARY_6_009.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,9),
+	(UUID(),'esl-fast-elementary-6-10','Being Too Superstitious','Quá mê tín','ESL_FAST_ELEMENTARY_6_010.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,10),
+	(UUID(),'esl-fast-elementary-6-11','Irene\'s Secret','Bí mật của Irene','ESL_FAST_ELEMENTARY_6_011.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,11),
+	(UUID(),'esl-fast-elementary-6-12','A Boy or a Girl','Con trai hay con gái','ESL_FAST_ELEMENTARY_6_012.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,12),
+	(UUID(),'esl-fast-elementary-6-13','Money Matters','Tiền bạc là vấn đề quan trọng','ESL_FAST_ELEMENTARY_6_013.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,13),
+	(UUID(),'esl-fast-elementary-6-14','Not So Average','Không hề bình thường','ESL_FAST_ELEMENTARY_6_014.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,14),
+	(UUID(),'esl-fast-elementary-6-15','At the Arcade','Ở khu trò chơi điện tử','ESL_FAST_ELEMENTARY_6_015.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,15),
+	(UUID(),'esl-fast-elementary-6-16','On a Healthy Diet','Theo chế độ ăn lành mạnh','ESL_FAST_ELEMENTARY_6_016.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,16),
+	(UUID(),'esl-fast-elementary-6-17','Pet Shopping','Mua thú cưng','ESL_FAST_ELEMENTARY_6_017.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,17),
+	(UUID(),'esl-fast-elementary-6-18','Moving into a New Apartment','Chuyển vào căn hộ mới','ESL_FAST_ELEMENTARY_6_018.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,18),
+	(UUID(),'esl-fast-elementary-6-19','A Study Group','Nhóm học tập','ESL_FAST_ELEMENTARY_6_019.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,19),
+	(UUID(),'esl-fast-elementary-6-20','Going to Teach Abroad','Đi dạy học ở nước ngoài','ESL_FAST_ELEMENTARY_6_020.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,20),
+	(UUID(),'esl-fast-elementary-6-21','Making Sushi at Home','Làm sushi tại nhà','ESL_FAST_ELEMENTARY_6_021.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,21),
+	(UUID(),'esl-fast-elementary-6-22','Jogging around the Neighborhood','Chạy bộ quanh khu phố','ESL_FAST_ELEMENTARY_6_022.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,22),
+	(UUID(),'esl-fast-elementary-6-23','A Lonely Puppy','Một chú chó con cô đơn','ESL_FAST_ELEMENTARY_6_023.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,23),
+	(UUID(),'esl-fast-elementary-6-24','An Innocent Mistake','Một sai lầm vô ý','ESL_FAST_ELEMENTARY_6_024.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,24),
+	(UUID(),'esl-fast-elementary-6-25','The First Date','Buổi hẹn hò đầu tiên','ESL_FAST_ELEMENTARY_6_025.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,25),
+	(UUID(),'esl-fast-elementary-6-26','Do-It-Yourself Projects','Các dự án tự làm (DIY)','ESL_FAST_ELEMENTARY_6_026.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,26),
+	(UUID(),'esl-fast-elementary-6-27','A Beach Day','Một ngày ở bãi biển','ESL_FAST_ELEMENTARY_6_027.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,27),
+	(UUID(),'esl-fast-elementary-6-28','Michelle\'s New Look','Diện mạo mới của Michelle','ESL_FAST_ELEMENTARY_6_028.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,28),
+	(UUID(),'esl-fast-elementary-6-29','Christmas Gift Shopping','Mua sắm quà Giáng Sinh','ESL_FAST_ELEMENTARY_6_029.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,29),
+	(UUID(),'esl-fast-elementary-6-30','The Job Search','Tìm kiếm việc làm','ESL_FAST_ELEMENTARY_6_030.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,30),
+	(UUID(),'esl-fast-elementary-6-31','The Extreme Burger','Chiếc bánh burger "khủng"','ESL_FAST_ELEMENTARY_6_031.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,31),
+	(UUID(),'esl-fast-elementary-6-32','The Old Dog','Chú chó già','ESL_FAST_ELEMENTARY_6_032.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,32),
+	(UUID(),'esl-fast-elementary-6-33','Lactose Intolerant','Không dung nạp lactose','ESL_FAST_ELEMENTARY_6_033.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,33),
+	(UUID(),'esl-fast-elementary-6-34','Financial Aid','Hỗ trợ tài chính','ESL_FAST_ELEMENTARY_6_034.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,34),
+	(UUID(),'esl-fast-elementary-6-35','New Year Resolutions','Những mục tiêu năm mới','ESL_FAST_ELEMENTARY_6_035.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,35),
+	(UUID(),'esl-fast-elementary-6-36','If Only She Waited One Day','Giá như cô ấy chờ thêm một ngày','ESL_FAST_ELEMENTARY_6_036.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,36),
+	(UUID(),'esl-fast-elementary-6-37','Getting a Divorce','Ly hôn','ESL_FAST_ELEMENTARY_6_037.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,37),
+	(UUID(),'esl-fast-elementary-6-38','A Waste of Water','Lãng phí nước','ESL_FAST_ELEMENTARY_6_038.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,38),
+	(UUID(),'esl-fast-elementary-6-39','An Ice Cream Accident','Một tai nạn với kem','ESL_FAST_ELEMENTARY_6_039.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,39),
+	(UUID(),'esl-fast-elementary-6-40','A Pair of Magi-pants','Một chiếc quần kỳ diệu','ESL_FAST_ELEMENTARY_6_040.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,40),
+	(UUID(),'esl-fast-elementary-6-41','Embarrassed to Be Seen','Xấu hổ khi bị nhìn thấy','ESL_FAST_ELEMENTARY_6_041.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,41),
+	(UUID(),'esl-fast-elementary-6-42','The School Dress Code','Quy định trang phục của trường','ESL_FAST_ELEMENTARY_6_042.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,42),
+	(UUID(),'esl-fast-elementary-6-43','To Be Independent','Trở nên độc lập','ESL_FAST_ELEMENTARY_6_043.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,43),
+	(UUID(),'esl-fast-elementary-6-44','An Artist\'s Dream','Giấc mơ của một nghệ sĩ','ESL_FAST_ELEMENTARY_6_044.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,44),
+	(UUID(),'esl-fast-elementary-6-45','Lying About Being Rich','Nói dối về việc mình giàu có','ESL_FAST_ELEMENTARY_6_045.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,45),
+	(UUID(),'esl-fast-elementary-6-46','Getting Contact Lenses','Đeo kính áp tròng','ESL_FAST_ELEMENTARY_6_046.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,46),
+	(UUID(),'esl-fast-elementary-6-47','From Skinny to Muscular','Từ gầy gò đến cơ bắp','ESL_FAST_ELEMENTARY_6_047.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,47),
+	(UUID(),'esl-fast-elementary-6-48','Fishing for Compliments','Tìm kiếm lời khen','ESL_FAST_ELEMENTARY_6_048.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,48),
+	(UUID(),'esl-fast-elementary-6-49','Quitting College to Follow Dreams','Bỏ đại học để theo đuổi ước mơ','ESL_FAST_ELEMENTARY_6_049.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,49),
+	(UUID(),'esl-fast-elementary-6-50','A Fashion Trend Setter','Người tạo xu hướng thời trang','ESL_FAST_ELEMENTARY_6_050.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,50),
+	(UUID(),'esl-fast-elementary-6-51','The Job Search','Tìm kiếm việc làm','ESL_FAST_ELEMENTARY_6_051.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,51),
+	(UUID(),'esl-fast-elementary-6-52','The Rainy Days','Những ngày mưa','ESL_FAST_ELEMENTARY_6_052.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,52),
+	(UUID(),'esl-fast-elementary-6-53','Susan\'s Favorite Band','Ban nhạc yêu thích của Susan','ESL_FAST_ELEMENTARY_6_053.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,53),
+	(UUID(),'esl-fast-elementary-6-54','Different Morning Routines','Những thói quen buổi sáng khác nhau','ESL_FAST_ELEMENTARY_6_054.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,54),
+	(UUID(),'esl-fast-elementary-6-55','A Hiking Trip','Chuyến đi leo núi','ESL_FAST_ELEMENTARY_6_055.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,55),
+	(UUID(),'esl-fast-elementary-6-56','The Physical Education Class','Lớp thể dục','ESL_FAST_ELEMENTARY_6_056.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,56),
+	(UUID(),'esl-fast-elementary-6-57','Learning How to Drive','Học lái xe','ESL_FAST_ELEMENTARY_6_057.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,57),
+	(UUID(),'esl-fast-elementary-6-58','Apartment Hunting','Tìm căn hộ','ESL_FAST_ELEMENTARY_6_058.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,58),
+	(UUID(),'esl-fast-elementary-6-59','Embarrassing Moments','Những khoảnh khắc xấu hổ','ESL_FAST_ELEMENTARY_6_059.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,59),
+	(UUID(),'esl-fast-elementary-6-60','Mark\'s New Year Resolution','Mục tiêu năm mới của Mark','ESL_FAST_ELEMENTARY_6_060.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,60),
+	(UUID(),'esl-fast-elementary-6-61','An Intern\'s First Day at a Law Firm','Ngày đầu của thực tập sinh tại công ty luật','ESL_FAST_ELEMENTARY_6_061.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,61),
+	(UUID(),'esl-fast-elementary-6-62','Margaret liked Taking Pictures','Margaret thích chụp ảnh','ESL_FAST_ELEMENTARY_6_062.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,62),
+	(UUID(),'esl-fast-elementary-6-63','She Quit Her Job at the Store','Cô ấy nghỉ việc ở cửa hàng','ESL_FAST_ELEMENTARY_6_063.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,63),
+	(UUID(),'esl-fast-elementary-6-64','A Bad Roommate','Một người bạn cùng phòng tệ','ESL_FAST_ELEMENTARY_6_064.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,64),
+	(UUID(),'esl-fast-elementary-6-65','Being Clumsy','Vụng về','ESL_FAST_ELEMENTARY_6_065.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,65),
+	(UUID(),'esl-fast-elementary-6-66','Don\'t Need a Man','Không cần đàn ông','ESL_FAST_ELEMENTARY_6_066.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,66),
+	(UUID(),'esl-fast-elementary-6-67','We\'ll Get Married Eventually','Rồi chúng ta sẽ kết hôn thôi','ESL_FAST_ELEMENTARY_6_067.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,67),
+	(UUID(),'esl-fast-elementary-6-68','Riding a Roller Coaster','Đi tàu lượn siêu tốc','ESL_FAST_ELEMENTARY_6_068.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,68),
+	(UUID(),'esl-fast-elementary-6-69','Moving into the Dorm','Chuyển vào ký túc xá','ESL_FAST_ELEMENTARY_6_069.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,69),
+	(UUID(),'esl-fast-elementary-6-70','Homecoming Queen (1)','Nữ hoàng Homecoming (phần 1)','ESL_FAST_ELEMENTARY_6_070.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,70),
+	(UUID(),'esl-fast-elementary-6-71','Homecoming Queen (2)','Nữ hoàng Homecoming (phần 2)','ESL_FAST_ELEMENTARY_6_071.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,71),
+	(UUID(),'esl-fast-elementary-6-72','Not to Give Any Spoilers','Không tiết lộ nội dung','ESL_FAST_ELEMENTARY_6_072.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,72),
+	(UUID(),'esl-fast-elementary-6-73','The Cyberbully Confessed','Kẻ bắt nạt trên mạng đã thú nhận','ESL_FAST_ELEMENTARY_6_073.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,73),
+	(UUID(),'esl-fast-elementary-6-74','A Cheap Birthday Gift','Món quà sinh nhật rẻ tiền','ESL_FAST_ELEMENTARY_6_074.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,74),
+	(UUID(),'esl-fast-elementary-6-75','To Enter the Pie-Eating Contest','Tham gia cuộc thi ăn bánh','ESL_FAST_ELEMENTARY_6_075.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,75),
+	(UUID(),'esl-fast-elementary-6-76','She Deleted His Number','Cô ấy đã xóa số của anh ấy','ESL_FAST_ELEMENTARY_6_076.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,76),
+	(UUID(),'esl-fast-elementary-6-77','He Decided to Hire Her','Anh ấy quyết định thuê cô ấy','ESL_FAST_ELEMENTARY_6_077.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,77),
+	(UUID(),'esl-fast-elementary-6-78','Transferring to a Different College','Chuyển sang một trường đại học khác','ESL_FAST_ELEMENTARY_6_078.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,78),
+	(UUID(),'esl-fast-elementary-6-79','Running a Marathon','Chạy marathon','ESL_FAST_ELEMENTARY_6_079.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,79),
+	(UUID(),'esl-fast-elementary-6-80','Sean Wanted to Change His Name','Sean muốn đổi tên','ESL_FAST_ELEMENTARY_6_080.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,80),
+	(UUID(),'esl-fast-elementary-6-81','Having a Hard Time Getting Hired','Khó khăn trong việc xin việc','ESL_FAST_ELEMENTARY_6_081.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,81),
+	(UUID(),'esl-fast-elementary-6-82','Adjusting to Cold Weather','Thích nghi với thời tiết lạnh','ESL_FAST_ELEMENTARY_6_082.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,82),
+	(UUID(),'esl-fast-elementary-6-83','Movie Hopping','Xem nhiều phim liên tiếp','ESL_FAST_ELEMENTARY_6_083.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,83),
+	(UUID(),'esl-fast-elementary-6-84','They All Have Different Plans','Mỗi người đều có kế hoạch khác nhau','ESL_FAST_ELEMENTARY_6_084.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,84),
+	(UUID(),'esl-fast-elementary-6-85','He Promised to Never Smoke Again','Anh ấy hứa sẽ không bao giờ hút thuốc nữa','ESL_FAST_ELEMENTARY_6_085.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,85),
+	(UUID(),'esl-fast-elementary-6-86','Her Handwriting Was Messy','Chữ viết tay của cô ấy rất xấu','ESL_FAST_ELEMENTARY_6_086.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,86),
+	(UUID(),'esl-fast-elementary-6-87','Getting Bored of the Fish','Chán ăn cá','ESL_FAST_ELEMENTARY_6_087.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,87),
+	(UUID(),'esl-fast-elementary-6-88','The Man Without a Mustache','Người đàn ông không có ria mép','ESL_FAST_ELEMENTARY_6_088.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,88),
+	(UUID(),'esl-fast-elementary-6-89','Puberty and the Voice Crack','Dậy thì và vỡ giọng','ESL_FAST_ELEMENTARY_6_089.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,89),
+	(UUID(),'esl-fast-elementary-6-90','Tall Girls and Heels','Những cô gái cao và giày cao gót','ESL_FAST_ELEMENTARY_6_090.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,90),
+	(UUID(),'esl-fast-elementary-6-91','A Male Nurse','Một nam y tá','ESL_FAST_ELEMENTARY_6_091.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,91),
+	(UUID(),'esl-fast-elementary-6-92','A Female Engineer','Một nữ kỹ sư','ESL_FAST_ELEMENTARY_6_092.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,92),
+	(UUID(),'esl-fast-elementary-6-93','She Wanted to Major in Sociology','Cô ấy muốn học chuyên ngành xã hội học','ESL_FAST_ELEMENTARY_6_093.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,93),
+	(UUID(),'esl-fast-elementary-6-94','Love or Money','Tình yêu hay tiền bạc','ESL_FAST_ELEMENTARY_6_094.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,94),
+	(UUID(),'esl-fast-elementary-6-95','A Big Secret','Một bí mật lớn','ESL_FAST_ELEMENTARY_6_095.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,95),
+	(UUID(),'esl-fast-elementary-6-96','A Good, Broken Promise','Một lời hứa tốt đẹp nhưng bị phá vỡ','ESL_FAST_ELEMENTARY_6_096.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,96),
+	(UUID(),'esl-fast-elementary-6-97','They Pretended to Be Dating','Họ giả vờ hẹn hò','ESL_FAST_ELEMENTARY_6_097.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,97),
+	(UUID(),'esl-fast-elementary-6-98','She Feels Underappreciated','Cô ấy cảm thấy không được trân trọng','ESL_FAST_ELEMENTARY_6_098.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,98),
+	(UUID(),'esl-fast-elementary-6-99','A Missing Video','Một video bị mất','ESL_FAST_ELEMENTARY_6_099.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,99),
+	(UUID(),'esl-fast-elementary-6-100','To See a Psychic','Đi xem bói','ESL_FAST_ELEMENTARY_6_100.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-elementary-6',1,0,0,100);
 
 INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,IS_LANGUAGE_APPROVED,IS_REVIEW_COMPLETED,IS_READ,NUMBER) VALUES
 	(UUID(),'esl-fast-intermediate-1-1','George Washington: The Father of the Country','George Washington: Quốc phụ của nước Mỹ','ESL_FAST_INTERMEDIATE_1_001.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-intermediate-1',1,0,0,1),
@@ -39755,7 +39755,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She had made good friends and was living a good life, which goes to show that when you\'re true to yourself, the magic of the world will always reward you','Cô đã kết bạn tốt và sống một cuộc sống tốt đẹp, điều này chứng tỏ rằng khi bạn trung thực với chính mình, phép màu của thế giới sẽ luôn thưởng cho bạn','00:15:32.450','00:15:41.610','english-fairy-tales-65'),
 	('Oh','Ồ','00:15:43.130','00:15:43.730','english-fairy-tales-65');
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'esl-fast-beginner-1-1','Going to the Zoo','Đi tới sở thú','BEGINNER_01_ESL_FAST_CHILDREN_001.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-children-1',1,1,1) */
+	/* (UUID(),'esl-fast-beginner-1-1','Going to the Zoo','Đi tới sở thú','ESL_FAST_BEGINNER_1_001.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-children-1',1,1,1) */
 	('She goes to the zoo','Cô bé đi đến sở thú','00:00:00.520','00:00:03.301','esl-fast-beginner-1-1'),
 	('She sees a lion','Cô bé nhìn thấy một con sư tử','00:00:04.120','00:00:06.200','esl-fast-beginner-1-1'),
 	('The lion roars','Con sư tử gầm lên','00:00:06.960','00:00:09.200','esl-fast-beginner-1-1'),
@@ -39768,7 +39768,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She sees a gorilla','Cô bé nhìn thấy một con khỉ đột','00:00:28.600','00:00:31.400','esl-fast-beginner-1-1'),
 	('The gorilla is eating a banana','Con khỉ đột đang ăn một quả chuối','00:00:32.000','00:00:34.900','esl-fast-beginner-1-1'),
 
-	/* (UUID(),'esl-fast-beginner-1-2','Christmas Time','Giáng sinh','BEGINNER_01_ESL_FAST_CHILDREN_002.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-children-1',1,1,2) */
+	/* (UUID(),'esl-fast-beginner-1-2','Christmas Time','Giáng sinh','ESL_FAST_BEGINNER_1_002.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-children-1',1,1,2) */
 	('It is Christmas','Vào ngày Giáng sinh','00:00:00.390','00:00:02.300','esl-fast-beginner-1-2'),
 	('Dad gives Tim a toy','Bố tặng Tim một món đồ chơi','00:00:03.000','00:00:05.200','esl-fast-beginner-1-2'),
 	('The toy is in the box','Món đồ chơi được đặt trong hộp','00:00:05.830','00:00:08.400','esl-fast-beginner-1-2'),
@@ -39782,7 +39782,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He hugs Dad','Cậu bé ôm chặt bố','00:00:27.900','00:00:30.500','esl-fast-beginner-1-2'),
 	('Dad smiles','Bố mỉm cười hiền hậu','00:00:30.830','00:00:32.400','esl-fast-beginner-1-2'),
 
-	/* (UUID(),'esl-fast-beginner-1-3','She Goes to the Nurse','Cô ấy đến gặp y tá','BEGINNER_01_ESL_FAST_CHILDREN_003.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-children-1',1,1,3) */
+	/* (UUID(),'esl-fast-beginner-1-3','She Goes to the Nurse','Cô ấy đến gặp y tá','ESL_FAST_BEGINNER_1_003.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-children-1',1,1,3) */
 	('She goes out to play','Cô bé ra ngoài chơi','00:00:00.580','00:00:02.900','esl-fast-beginner-1-3'),
 	('She runs around','Cô bé chạy vòng quanh','00:00:03.440','00:00:04.920','esl-fast-beginner-1-3'),
 	('She falls down','Cô bé bị ngã','00:00:05.640','00:00:07.300','esl-fast-beginner-1-3'),
@@ -39798,7 +39798,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She is okay now','Giờ cô bé đã ổn rồi','00:00:29.200','00:00:31.200','esl-fast-beginner-1-3'),
 	('She walks back to class','Cô bé đi trở lại lớp học','00:00:31.820','00:00:33.800','esl-fast-beginner-1-3'),
 
-	/* (UUID(),'esl-fast-beginner-1-4','Waiting','Chờ đợi','BEGINNER_01_ESL_FAST_CHILDREN_004.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,1,4) */
+	/* (UUID(),'esl-fast-beginner-1-4','Waiting','Chờ đợi','ESL_FAST_BEGINNER_1_004.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,1,4) */
 	('The kids are in class','Bọn trẻ đang ở trong lớp học','00:00:00.580','00:00:02.740','esl-fast-beginner-1-4'),
 	('The teacher is teaching math','Giáo viên đang dạy môn toán','00:00:03.540','00:00:05.980','esl-fast-beginner-1-4'),
 	('The kids are tired','Bọn trẻ cảm thấy mệt mỏi','00:00:06.700','00:00:08.520','esl-fast-beginner-1-4'),
@@ -39811,7 +39811,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The clock moves slowly','Kim đồng hồ trôi thật chậm','00:00:25.060','00:00:27.800','esl-fast-beginner-1-4'),
 	('The kids continue to wait','Bọn trẻ vẫn tiếp tục chờ đợi','00:00:28.100','00:00:31.000','esl-fast-beginner-1-4'),
 
-	/* (UUID(),'esl-fast-beginner-1-5','Chores','Việc nhà','BEGINNER_01_ESL_FAST_CHILDREN_005.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-children-1',1,1,5) */
+	/* (UUID(),'esl-fast-beginner-1-5','Chores','Việc nhà','ESL_FAST_BEGINNER_1_005.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-children-1',1,1,5) */
 	('He is playing video games','Cậu bé đang chơi điện tử','00:00:00.650','00:00:03.500','esl-fast-beginner-1-5'),
 	('Mom gets mad','Mẹ rất tức giận','00:00:03.990','00:00:05.810','esl-fast-beginner-1-5'),
 	('She thinks he is lazy','Mẹ nghĩ cậu bé lười biếng','00:00:06.170','00:00:08.600','esl-fast-beginner-1-5'),
@@ -39826,7 +39826,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'esl-fast-beginner-1-6','The First Song','Bài hát đầu tiên','BEGINNER_01_ESL_FAST_CHILDREN_006.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1',1,1,6) */
+	/* (UUID(),'esl-fast-beginner-1-6','The First Song','Bài hát đầu tiên','ESL_FAST_BEGINNER_1_006.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1',1,1,6) */
 	('She sits in the car','Cô bé ngồi trong xe','00:00:00.390','00:00:02.870','esl-fast-beginner-1-6'),
 	('Her dad turns on the radio','Bố cô bé bật radio','00:00:03.550','00:00:05.710','esl-fast-beginner-1-6'),
 	('A song plays','Một bài hát vang lên','00:00:06.450','00:00:07.930','esl-fast-beginner-1-6'),
@@ -39839,7 +39839,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She does not like the new song','Cô bé không thích bài hát mới','00:00:24.250','00:00:26.570','esl-fast-beginner-1-6'),
 	('She sits quietly','Cô bé ngồi im lặng','00:00:27.010','00:00:28.670','esl-fast-beginner-1-6'),
 
-	/* (UUID(),'esl-fast-beginner-1-7','Visiting the Doctor','Đi khám bác sĩ','BEGINNER_01_ESL_FAST_CHILDREN_007.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-children-1',1,1,7) */
+	/* (UUID(),'esl-fast-beginner-1-7','Visiting the Doctor','Đi khám bác sĩ','ESL_FAST_BEGINNER_1_007.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-children-1',1,1,7) */
 	('Hayley feels hot','Hayley cảm thấy nóng bừng','00:00:00.260','00:00:02.720','esl-fast-beginner-1-7'),
 	('Her mom touches her forehead','Mẹ cô bé chạm tay lên trán con','00:00:03.320','00:00:05.560','esl-fast-beginner-1-7'),
 	('Hayley has a fever','Hayley bị sốt','00:00:06.460','00:00:08.120','esl-fast-beginner-1-7'),
@@ -39853,7 +39853,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She does this for three days','Cô bé làm như vậy suốt ba ngày','00:00:31.360','00:00:33.880','esl-fast-beginner-1-7'),
 	('She is healthy again','Cô bé khỏe lại','00:00:34.400','00:00:36.140','esl-fast-beginner-1-7'),
 
-	/* (UUID(),'esl-fast-beginner-1-8','Different Foods','Các loại thức ăn khác nhau','BEGINNER_01_ESL_FAST_CHILDREN_008.mp3',NULL,'00:00:00.000','00:00:34.000','esl-fast-children-1',1,1,8) */
+	/* (UUID(),'esl-fast-beginner-1-8','Different Foods','Các loại thức ăn khác nhau','ESL_FAST_BEGINNER_1_008.mp3',NULL,'00:00:00.000','00:00:34.000','esl-fast-children-1',1,1,8) */
 	('Sarah is hungry','Sarah cảm thấy đói bụng','00:00:00.330','00:00:02.530','esl-fast-beginner-1-8'),
 	('She goes to the kitchen','Cô bé đi vào bếp','00:00:03.150','00:00:04.930','esl-fast-beginner-1-8'),
 	('She opens the cabinet','Cô bé mở tủ','00:00:05.530','00:00:07.370','esl-fast-beginner-1-8'),
@@ -39867,7 +39867,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He gives her crackers','Ông ấy đưa cho cô bé vài chiếc bánh quy','00:00:28.510','00:00:30.810','esl-fast-beginner-1-8'),
 	('The crackers are perfect','Những chiếc bánh quy ấy thật hoàn hảo','00:00:31.350','00:00:33.330','esl-fast-beginner-1-8'),
 
-	/* (UUID(),'esl-fast-beginner-1-9','The Corner','Góc phố','BEGINNER_01_ESL_FAST_CHILDREN_009.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-children-1',1,1,9) */
+	/* (UUID(),'esl-fast-beginner-1-9','The Corner','Góc phố','ESL_FAST_BEGINNER_1_009.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-children-1',1,1,9) */
 	('Jill does not like math','Jill không thích môn toán','00:00:00.650','00:00:03.010','esl-fast-beginner-1-9'),
 	('Jill starts talking about food','Jill bắt đầu nói chuyện về đồ ăn','00:00:03.530','00:00:05.790','esl-fast-beginner-1-9'),
 	('Her friends laugh','Bạn bè cô bé bật cười','00:00:06.370','00:00:08.090','esl-fast-beginner-1-9'),
@@ -39881,7 +39881,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Five minutes pass','Năm phút trôi qua','00:00:26.570','00:00:28.310','esl-fast-beginner-1-9'),
 	('The teacher lets her go','Cô giáo cho cô bé quay lại chỗ','00:00:28.310','00:00:30.650','esl-fast-beginner-1-9'),
 
-	/* (UUID(),'esl-fast-beginner-1-10','A Surprise Party','Bữa tiệc bất ngờ','BEGINNER_01_ESL_FAST_CHILDREN_010.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-children-1',1,1,10) */
+	/* (UUID(),'esl-fast-beginner-1-10','A Surprise Party','Bữa tiệc bất ngờ','ESL_FAST_BEGINNER_1_010.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-children-1',1,1,10) */
 	('It is Lily\'s birthday','Hôm nay là sinh nhật của Lily','00:00:00.390','00:00:02.850','esl-fast-beginner-1-10'),
 	('She gets out of bed','Cô bé bước xuống giường','00:00:03.510','00:00:05.310','esl-fast-beginner-1-10'),
 	('Nobody says anything to her','Không ai nói gì với cô bé cả','00:00:05.990','00:00:08.090','esl-fast-beginner-1-10'),
@@ -39897,7 +39897,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'esl-fast-beginner-1-11','A New Pet','Thú cưng mới','BEGINNER_01_ESL_FAST_CHILDREN_011.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,1,11) */
+	/* (UUID(),'esl-fast-beginner-1-11','A New Pet','Thú cưng mới','ESL_FAST_BEGINNER_1_011.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,1,11) */
 	('Kate is walking','Kate đang đi dạo','00:00:00.650','00:00:02.890','esl-fast-beginner-1-11'),
 	('She sees a dog','Cô bé nhìn thấy một chú chó','00:00:03.210','00:00:05.230','esl-fast-beginner-1-11'),
 	('The dog wags its tail','Chú chó vui vẻ vẫy đuôi','00:00:05.250','00:00:07.950','esl-fast-beginner-1-11'),
@@ -39911,7 +39911,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Kate walks Toby every day','Kate dắt Toby đi dạo mỗi ngày','00:00:27.350','00:00:30.970','esl-fast-beginner-1-11'),
 	('They love each other','Họ rất yêu quý nhau','00:00:31.190','00:00:33.030','esl-fast-beginner-1-11'),
 
-	/* (UUID(),'esl-fast-beginner-1-12','Group Project','Dự án nhóm','BEGINNER_01_ESL_FAST_CHILDREN_012.mp3',NULL,'00:00:00.000','00:00:34.000','esl-fast-children-1',1,1,12) */
+	/* (UUID(),'esl-fast-beginner-1-12','Group Project','Dự án nhóm','ESL_FAST_BEGINNER_1_012.mp3',NULL,'00:00:00.000','00:00:34.000','esl-fast-children-1',1,1,12) */
 	('Ms. Howard assigns a project','Cô Howard giao cho lớp một dự án','00:00:00.260','00:00:03.580','esl-fast-beginner-1-12'),
 	('She wants the students to work in groups','Cô muốn các học sinh làm việc theo nhóm','00:00:04.380','00:00:07.339','esl-fast-beginner-1-12'),
 	('Adam works with Joe and Bill','Adam làm cùng nhóm với Joe và Bill','00:00:08.160','00:00:10.700','esl-fast-beginner-1-12'),
@@ -39924,7 +39924,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She gives them a high grade','Cô chấm cho họ điểm số rất cao','00:00:26.460','00:00:28.920','esl-fast-beginner-1-12'),
 	('Adam, Joe, and Bill are joyful','Adam, Joe và Bill vô cùng vui mừng','00:00:29.480','00:00:33.240','esl-fast-beginner-1-12'),
 
-	/* (UUID(),'esl-fast-beginner-1-13','A Cat and A Mouse','Một con mèo và một con chuột','BEGINNER_01_ESL_FAST_CHILDREN_013.mp3',NULL,'00:00:00.000','00:00:40.000','esl-fast-children-1',1,1,13) */
+	/* (UUID(),'esl-fast-beginner-1-13','A Cat and A Mouse','Một con mèo và một con chuột','ESL_FAST_BEGINNER_1_013.mp3',NULL,'00:00:00.000','00:00:40.000','esl-fast-children-1',1,1,13) */
 	('The cat is bored','Con mèo cảm thấy rất buồn chán','00:00:00.710','00:00:02.950','esl-fast-beginner-1-13'),
 	('He tries to have fun','Nó cố tìm cách tự giải trí','00:00:03.370','00:00:05.770','esl-fast-beginner-1-13'),
 	('He plays with yarn','Nó chơi với cuộn len','00:00:06.270','00:00:08.530','esl-fast-beginner-1-13'),
@@ -39939,7 +39939,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The mouse chases the cat','Con chuột đuổi theo con mèo','00:00:34.170','00:00:36.910','esl-fast-beginner-1-13'),
 	('The cat is having fun','Con mèo đang rất thích thú','00:00:37.510','00:00:40.000','esl-fast-beginner-1-13'),
 
-	/* (UUID(),'esl-fast-beginner-1-14','Lemonade Stand','Quầy nước chanh','BEGINNER_01_ESL_FAST_CHILDREN_014.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-children-1',1,1,14) */
+	/* (UUID(),'esl-fast-beginner-1-14','Lemonade Stand','Quầy nước chanh','ESL_FAST_BEGINNER_1_014.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-children-1',1,1,14) */
 	('John wants to go to his school field trip','John muốn tham gia chuyến dã ngoại của trường','00:00:00.580','00:00:04.660','esl-fast-beginner-1-14'),
 	('He needs fifty dollars','Cậu bé cần 50 đô la','00:00:05.240','00:00:07.100','esl-fast-beginner-1-14'),
 	('He wants to earn it himself','Cậu bé muốn tự mình kiếm tiền','00:00:07.460','00:00:10.180','esl-fast-beginner-1-14'),
@@ -39953,7 +39953,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('His lemonade stand is a success','Quầy bán nước chanh của cậu bé rất thành công','00:00:31.500','00:00:34.640','esl-fast-beginner-1-14'),
 	('He makes enough money','Cậu bé kiếm đủ tiền','00:00:35.100','00:00:37.000','esl-fast-beginner-1-14'),
 
-	/* (UUID(),'esl-fast-beginner-1-15','New and Old','Mới và cũ','BEGINNER_01_ESL_FAST_CHILDREN_015.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,1,15) */
+	/* (UUID(),'esl-fast-beginner-1-15','New and Old','Mới và cũ','ESL_FAST_BEGINNER_1_015.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,1,15) */
 	('Tomorrow is the first day of school','Ngày mai là ngày đầu tiên đi học','00:00:00.330','00:00:03.430','esl-fast-beginner-1-15'),
 	('Barbara looks at her backpack','Barbara nhìn chiếc ba lô của mình','00:00:03.800','00:00:05.970','esl-fast-beginner-1-15'),
 	('It has holes','Nó bị thủng lỗ','00:00:06.750','00:00:08.210','esl-fast-beginner-1-15'),
@@ -39970,7 +39970,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'esl-fast-beginner-1-16','The Kind Dentist','Nha sĩ tốt bụng','BEGINNER_01_ESL_FAST_CHILDREN_016.mp3',NULL,'00:00:00.000','00:00:40.000','esl-fast-children-1',1,1,16) */
+	/* (UUID(),'esl-fast-beginner-1-16','The Kind Dentist','Nha sĩ tốt bụng','ESL_FAST_BEGINNER_1_016.mp3',NULL,'00:00:00.000','00:00:40.000','esl-fast-children-1',1,1,16) */
 	('Maria feels pain in her teeth','Maria bị đau răng','00:00:00.460','00:00:04.440','esl-fast-beginner-1-16'),
 	('She tells her mom','Cô bé nói với mẹ','00:00:05.120','00:00:06.660','esl-fast-beginner-1-16'),
 	('Her mom takes her to the dentist','Mẹ đưa cô bé đến nha sĩ','00:00:07.340','00:00:09.780','esl-fast-beginner-1-16'),
@@ -39985,7 +39985,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He gives her a new toothbrush','Ông tặng cô bé một chiếc bàn chải đánh răng mới','00:00:34.600','00:00:37.160','esl-fast-beginner-1-16'),
 	('Maria feels good','Maria cảm thấy dễ chịu hơn','00:00:37.600','00:00:39.500','esl-fast-beginner-1-16'),
 
-	/* (UUID(),'esl-fast-beginner-1-17','A Trip to the Library','Chuyến đi đến thư viện','BEGINNER_01_ESL_FAST_CHILDREN_017.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1',1,1,17) */
+	/* (UUID(),'esl-fast-beginner-1-17','A Trip to the Library','Chuyến đi đến thư viện','ESL_FAST_BEGINNER_1_017.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1',1,1,17) */
 	('Mark needs a book','Mark cần một quyển sách','00:00:00.200','00:00:02.480','esl-fast-beginner-1-17'),
 	('He does not have money','Cậu bé không có tiền','00:00:02.960','00:00:05.220','esl-fast-beginner-1-17'),
 	('His mom takes him to the library','Mẹ đưa cậu đến thư viện','00:00:05.920','00:00:08.360','esl-fast-beginner-1-17'),
@@ -39997,7 +39997,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('There are books about science','Có những quyển sách về khoa học','00:00:24.020','00:00:26.520','esl-fast-beginner-1-17'),
 	('Mark borrows them all','Mark mượn toàn bộ sách','00:00:27.100','00:00:29.280','esl-fast-beginner-1-17'),
 
-	/* (UUID(),'esl-fast-beginner-1-18','A Lot of Ants','Rất nhiều con kiến','BEGINNER_01_ESL_FAST_CHILDREN_018.mp3',NULL,'00:00:00.000','00:00:28.000','esl-fast-children-1',1,1,18) */
+	/* (UUID(),'esl-fast-beginner-1-18','A Lot of Ants','Rất nhiều con kiến','ESL_FAST_BEGINNER_1_018.mp3',NULL,'00:00:00.000','00:00:28.000','esl-fast-children-1',1,1,18) */
 	('She eats a slice of cake','Cô ấy ăn một miếng bánh ngọt','00:00:00.460','00:00:03.359','esl-fast-beginner-1-18'),
 	('She drops a crumb','Cô ấy làm rơi một vụn bánh','00:00:04.000','00:00:05.740','esl-fast-beginner-1-18'),
 	('The ants can smell it','Đàn kiến ngửi thấy mùi vụn bánh','00:00:06.440','00:00:08.480','esl-fast-beginner-1-18'),
@@ -40009,7 +40009,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She opens the window','Cô ấy mở cửa sổ','00:00:22.860','00:00:24.760','esl-fast-beginner-1-18'),
 	('She lets the ants go','Cô ấy thả đàn kiến đi','00:00:25.560','00:00:27.520','esl-fast-beginner-1-18'),
 
-	/* (UUID(),'esl-fast-beginner-1-19','Picking a Costume','Chọn trang phục','BEGINNER_01_ESL_FAST_CHILDREN_019.mp3',NULL,'00:00:00.000','00:00:32.500','esl-fast-children-1',1,1,19) */
+	/* (UUID(),'esl-fast-beginner-1-19','Picking a Costume','Chọn trang phục','ESL_FAST_BEGINNER_1_019.mp3',NULL,'00:00:00.000','00:00:32.500','esl-fast-children-1',1,1,19) */
 	('It is Halloween','Hôm nay là lễ Halloween','00:00:00.330','00:00:02.230','esl-fast-beginner-1-19'),
 	('Nancy is dressed as a princess','Nancy hóa trang thành công chúa','00:00:03.000','00:00:05.530','esl-fast-beginner-1-19'),
 	('She goes trick-or-treating','Cô bé đi xin kẹo Halloween','00:00:06.450','00:00:08.290','esl-fast-beginner-1-19'),
@@ -40022,7 +40022,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The couple smiles','Hai vợ chồng mỉm cười','00:00:26.890','00:00:28.850','esl-fast-beginner-1-19'),
 	('Nancy goes to the next house','Nancy đi đến ngôi nhà kế tiếp','00:00:29.310','00:00:31.790','esl-fast-beginner-1-19'),
 
-	/* (UUID(),'esl-fast-beginner-1-20','Petting Zoo','Vườn thú cưng','BEGINNER_01_ESL_FAST_CHILDREN_020.mp3',NULL,'00:00:00.000','00:00:40.000','esl-fast-children-1',1,1,20) */
+	/* (UUID(),'esl-fast-beginner-1-20','Petting Zoo','Vườn thú cưng','ESL_FAST_BEGINNER_1_020.mp3',NULL,'00:00:00.000','00:00:40.000','esl-fast-children-1',1,1,20) */
 	('He goes to the petting zoo','Cậu bé đi tới vườn thú cưng','00:00:00.390','00:00:03.110','esl-fast-beginner-1-20'),
 	('There are many different animals','Có rất nhiều loài động vật khác nhau','00:00:03.670','00:00:06.330','esl-fast-beginner-1-20'),
 	('He pets the turtles','Cậu bé vuốt ve những chú rùa','00:00:06.790','00:00:08.870','esl-fast-beginner-1-20'),
@@ -40039,7 +40039,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'esl-fast-beginner-1-21','Mom is Mad','Mẹ đang tức giận','BEGINNER_01_ESL_FAST_CHILDREN_021.mp3',NULL,'00:00:00.000','00:00:35.500','esl-fast-children-1',1,1,21) */
+	/* (UUID(),'esl-fast-beginner-1-21','Mom is Mad','Mẹ đang tức giận','ESL_FAST_BEGINNER_1_021.mp3',NULL,'00:00:00.000','00:00:35.500','esl-fast-children-1',1,1,21) */
 	('Robert\'s room is messy','Phòng của Robert rất bừa bộn','00:00:00.200','00:00:03.340','esl-fast-beginner-1-21'),
 	('There is pizza under his bed','Bánh pizza ở dưới gầm giường của cậu bé','00:00:03.600','00:00:06.820','esl-fast-beginner-1-21'),
 	('There is glue on the wall','Keo thì dính trên tường','00:00:07.340','00:00:10.040','esl-fast-beginner-1-21'),
@@ -40052,7 +40052,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She yells at him','Bà ấy la mắng cậu bé','00:00:28.900','00:00:31.360','esl-fast-beginner-1-21'),
 	('He starts to clean his room','Cậu bé bắt đầu dọn dẹp phòng của mình','00:00:31.880','00:00:34.540','esl-fast-beginner-1-21'),
 
-	/* (UUID(),'esl-fast-beginner-1-22','Father\'s Day','Ngày của cha','BEGINNER_01_ESL_FAST_CHILDREN_022.mp3',NULL,'00:00:00.000','00:00:39.000','esl-fast-children-1',1,1,22) */
+	/* (UUID(),'esl-fast-beginner-1-22','Father\'s Day','Ngày của cha','ESL_FAST_BEGINNER_1_022.mp3',NULL,'00:00:00.000','00:00:39.000','esl-fast-children-1',1,1,22) */
 	('Today is Father\'s Day','Hôm nay là Ngày của Cha','00:00:00.260','00:00:02.780','esl-fast-beginner-1-22'),
 	('Daniel surprises his father','Daniel tạo bất ngờ cho bố mình','00:00:03.000','00:00:05.680','esl-fast-beginner-1-22'),
 	('He serves him breakfast','Cậu ấy mang bữa sáng đến cho bố','00:00:06.200','00:00:08.780','esl-fast-beginner-1-22'),
@@ -40065,7 +40065,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Finally, they watch the sunset','Cuối cùng, họ ngắm hoàng hôn','00:00:32.100','00:00:35.220','esl-fast-beginner-1-22'),
 	('What a great day!','Thật là một ngày tuyệt vời','00:00:35.480','00:00:37.500','esl-fast-beginner-1-22'),
 
-	/* (UUID(),'esl-fast-beginner-1-23','The Baby Sister','Em bé gái','BEGINNER_01_ESL_FAST_CHILDREN_023.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-children-1',1,1,23) */
+	/* (UUID(),'esl-fast-beginner-1-23','The Baby Sister','Em bé gái','ESL_FAST_BEGINNER_1_023.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-children-1',1,1,23) */
 	('Betty loves her baby sister','Betty rất yêu quý cô em gái bé bỏng của mình','00:00:00.900','00:00:03.640','esl-fast-beginner-1-23'),
 	('Betty takes care of her','Betty trông em','00:00:04.300','00:00:06.800','esl-fast-beginner-1-23'),
 	('She changes her diaper','Cô bé thay tã cho em','00:00:07.200','00:00:09.440','esl-fast-beginner-1-23'),
@@ -40078,7 +40078,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She covers her eyes, then opens them','Cô bé che mắt rồi lại mở ra','00:00:30.100','00:00:33.960','esl-fast-beginner-1-23'),
 	('The baby laughs','Em bé bật cười','00:00:34.540','00:00:36.240','esl-fast-beginner-1-23'),
 
-	/* (UUID(),'esl-fast-beginner-1-24','Sometimes You Lose','Đôi khi bạn thua','BEGINNER_01_ESL_FAST_CHILDREN_024.mp3',NULL,'00:00:00.000','00:00:39.000','esl-fast-children-1',1,1,24) */
+	/* (UUID(),'esl-fast-beginner-1-24','Sometimes You Lose','Đôi khi bạn thua','ESL_FAST_BEGINNER_1_024.mp3',NULL,'00:00:00.000','00:00:39.000','esl-fast-children-1',1,1,24) */
 	('Sarah\'s basketball team lost today','Đội bóng rổ của Sarah hôm nay đã thua','00:00:00.520','00:00:04.040','esl-fast-beginner-1-24'),
 	('She is upset','Cô bé rất buồn','00:00:04.460','00:00:06.380','esl-fast-beginner-1-24'),
 	('She walks home sadly','Cô bé buồn bã đi bộ về nhà','00:00:06.960','00:00:09.320','esl-fast-beginner-1-24'),
@@ -40091,7 +40091,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Sarah wipes her tears away','Sarah lau những giọt nước mắt','00:00:28.760','00:00:31.459','esl-fast-beginner-1-24'),
 	('She realizes that sometimes you win and sometimes you lose','Cô bé nhận ra rằng có lúc thắng thì cũng có lúc thua','00:00:31.800','00:00:37.560','esl-fast-beginner-1-24'),
 
-	/* (UUID(),'esl-fast-beginner-1-25','A New Home','Ngôi nhà mới','BEGINNER_01_ESL_FAST_CHILDREN_025.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1',1,1,25) */
+	/* (UUID(),'esl-fast-beginner-1-25','A New Home','Ngôi nhà mới','ESL_FAST_BEGINNER_1_025.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1',1,1,25) */
 	('He moves to a new city','Cậu bé chuyển đến một thành phố mới','00:00:00.200','00:00:02.800','esl-fast-beginner-1-25'),
 	('There are many buildings','Có rất nhiều tòa nhà','00:00:03.000','00:00:05.410','esl-fast-beginner-1-25'),
 	('There are a lot of people walking','Có rất nhiều người đang đi lại','00:00:06.000','00:00:08.610','esl-fast-beginner-1-25'),
@@ -40105,7 +40105,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'esl-fast-beginner-1-26','Chris and His Fish','Chris và những chú cá của cậu ấy','BEGINNER_01_ESL_FAST_CHILDREN_026.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,1,26) */
+	/* (UUID(),'esl-fast-beginner-1-26','Chris and His Fish','Chris và những chú cá của cậu ấy','ESL_FAST_BEGINNER_1_026.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,1,26) */
 	('Christopher wants a pet','Christopher muốn một con thú cưng','00:00:00.200','00:00:02.670','esl-fast-beginner-1-26'),
 	('He likes fish','Cậu bé thích cá','00:00:02.900','00:00:04.400','esl-fast-beginner-1-26'),
 	('Fish are easy to take care of','Cá rất dễ chăm sóc','00:00:04.700','00:00:07.550','esl-fast-beginner-1-26'),
@@ -40118,7 +40118,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('It swims slowly','Nó bơi rất chậm','00:00:25.100','00:00:27.300','esl-fast-beginner-1-26'),
 	('Christopher puts it in a tank','Christopher thả nó vào bể','00:00:27.900','00:00:30.710','esl-fast-beginner-1-26'),
 
-	/* (UUID(),'esl-fast-beginner-1-27','The Oldest Brother','Anh cả','BEGINNER_01_ESL_FAST_CHILDREN_027.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,1,27) */
+	/* (UUID(),'esl-fast-beginner-1-27','The Oldest Brother','Anh cả','ESL_FAST_BEGINNER_1_027.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,1,27) */
 	('Brian is the oldest brother','Brian là anh cả','00:00:00.200','00:00:02.850','esl-fast-beginner-1-27'),
 	('He has two younger brothers','Cậu bé có hai em trai','00:00:03.100','00:00:05.570','esl-fast-beginner-1-27'),
 	('Brian helps his parents around the house','Brian phụ giúp bố mẹ làm việc nhà','00:00:06.000','00:00:09.350','esl-fast-beginner-1-27'),
@@ -40129,7 +40129,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He tells them to be honest, kind, and friendly','Cậu bé dặn các em phải sống thật thà, tốt bụng và thân thiện','00:00:22.900','00:00:27.470','esl-fast-beginner-1-27'),
 	('Brian loves his family','Brian rất yêu gia đình mình','00:00:27.770','00:00:30.430','esl-fast-beginner-1-27'),
 
-	/* (UUID(),'esl-fast-beginner-1-28','A Successful Trade','Một giao dịch thành công','BEGINNER_01_ESL_FAST_CHILDREN_028.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-children-1',1,1,28) */
+	/* (UUID(),'esl-fast-beginner-1-28','A Successful Trade','Một giao dịch thành công','ESL_FAST_BEGINNER_1_028.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-children-1',1,1,28) */
 	('It is lunchtime','Đến giờ ăn trưa rồi','00:00:00.200','00:00:02.200','esl-fast-beginner-1-28'),
 	('The kids go out to eat','Bọn trẻ ra ngoài ăn','00:00:02.500','00:00:04.760','esl-fast-beginner-1-28'),
 	('They are excited and hungry','Chúng rất háo hức và đói bụng','00:00:04.950','00:00:08.180','esl-fast-beginner-1-28'),
@@ -40143,7 +40143,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('They trade their sandwiches','Hai bạn đổi bánh mì cho nhau','00:00:30.520','00:00:32.700','esl-fast-beginner-1-28'),
 	('They get what they want','Cả hai đều có được thứ mình muốn','00:00:33.420','00:00:35.400','esl-fast-beginner-1-28'),
 
-	/* (UUID(),'esl-fast-beginner-1-29','Making a Snowman','Đắp người tuyết','BEGINNER_01_ESL_FAST_CHILDREN_029.mp3',NULL,'00:00:00.000','00:00:38.000','esl-fast-children-1',1,1,29) */
+	/* (UUID(),'esl-fast-beginner-1-29','Making a Snowman','Đắp người tuyết','ESL_FAST_BEGINNER_1_029.mp3',NULL,'00:00:00.000','00:00:38.000','esl-fast-children-1',1,1,29) */
 	('She wants to make a snowman','Cô bé muốn nặn một người tuyết','00:00:00.390','00:00:03.290','esl-fast-beginner-1-29'),
 	('First, she rolls a large ball of snow','Đầu tiên, cô bé lăn một quả cầu tuyết thật to','00:00:03.690','00:00:07.690','esl-fast-beginner-1-29'),
 	('Second, she rolls a medium ball of snow','Tiếp theo, cô bé lăn một quả cầu tuyết cỡ vừa','00:00:08.000','00:00:12.310','esl-fast-beginner-1-29'),
@@ -40154,7 +40154,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She uses buttons for the eyes and mouth','Cô bé dùng những chiếc cúc áo để làm mắt và miệng','00:00:28.000','00:00:32.610','esl-fast-beginner-1-29'),
 	('The last thing she adds is a scarf','Thứ cuối cùng cô bé thêm vào là một chiếc khăn quàng cổ','00:00:33.000','00:00:36.590','esl-fast-beginner-1-29'),
 
-	/* (UUID(),'esl-fast-beginner-1-30','English Skills','Kỹ năng tiếng Anh','BEGINNER_01_ESL_FAST_CHILDREN_030.mp3',NULL,'00:00:00.000','00:00:26.000','esl-fast-children-1',1,1,30) */
+	/* (UUID(),'esl-fast-beginner-1-30','English Skills','Kỹ năng tiếng Anh','ESL_FAST_BEGINNER_1_030.mp3',NULL,'00:00:00.000','00:00:26.000','esl-fast-children-1',1,1,30) */
 	('Donald is in the second grade','Donald đang học lớp hai','00:00:00.200','00:00:03.000','esl-fast-beginner-1-30'),
 	('His reading level is not as good as the other students','Trình độ đọc của cậu ấy chưa tốt bằng các bạn trong lớp','00:00:03.200','00:00:07.419','esl-fast-beginner-1-30'),
 	('He wants to improve his English skills','Cậu ấy muốn cải thiện kỹ năng tiếng Anh của mình','00:00:07.700','00:00:10.700','esl-fast-beginner-1-30'),
@@ -40166,7 +40166,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'esl-fast-beginner-1-31','Practicing Drawing','Luyện tập vẽ','BEGINNER_01_ESL_FAST_CHILDREN_031.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,1,31) */
+	/* (UUID(),'esl-fast-beginner-1-31','Practicing Drawing','Luyện tập vẽ','ESL_FAST_BEGINNER_1_031.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,1,31) */
 	('I am practicing drawing','Tôi đang luyện vẽ','00:00:00.140','00:00:02.900','esl-fast-beginner-1-31'),
 	('I practice drawing every Saturday and Sunday','Tôi luyện vẽ mỗi thứ bảy và chủ nhật','00:00:03.200','00:00:07.419','esl-fast-beginner-1-31'),
 	('My teacher shows me new things','Thầy cô chỉ cho tôi nhiều điều mới','00:00:07.700','00:00:10.860','esl-fast-beginner-1-31'),
@@ -40175,7 +40175,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('My parents always tell me that I am a good artist','Bố mẹ lúc nào cũng bảo tôi rằng tôi là một họa sĩ giỏi','00:00:22.200','00:00:26.880','esl-fast-beginner-1-31'),
 	('They think I can do it as a job','Họ nghĩ tôi có thể làm nghề này','00:00:27.100','00:00:30.540','esl-fast-beginner-1-31'),
 
-	/* (UUID(),'esl-fast-beginner-1-32','A Day for Ice Cream','Một ngày dành cho kem','BEGINNER_01_ESL_FAST_CHILDREN_032.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-children-1',1,1,32) */
+	/* (UUID(),'esl-fast-beginner-1-32','A Day for Ice Cream','Một ngày dành cho kem','ESL_FAST_BEGINNER_1_032.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-children-1',1,1,32) */
 	('It is a sunny day','Hôm nay trời nắng đẹp','00:00:00.390','00:00:02.650','esl-fast-beginner-1-32'),
 	('She feels hot','Cô bé thấy nóng bừng','00:00:02.900','00:00:04.800','esl-fast-beginner-1-32'),
 	('She fans herself with a book','Cô bé dùng quyển sách để tự quạt','00:00:05.200','00:00:07.830','esl-fast-beginner-1-32'),
@@ -40189,7 +40189,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('They share a banana split','Họ chia nhau một phần kem chuối bổ đôi','00:00:27.700','00:00:30.450','esl-fast-beginner-1-32'),
 	('She does not feel hot anymore','Cô bé không còn thấy nóng nữa','00:00:30.800','00:00:33.190','esl-fast-beginner-1-32'),
 
-	/* (UUID(),'esl-fast-beginner-1-33','Taking Tests','Làm bài kiểm tra','BEGINNER_01_ESL_FAST_CHILDREN_033.mp3',NULL,'00:00:00.000','00:00:25.000','esl-fast-children-1',1,1,33) */
+	/* (UUID(),'esl-fast-beginner-1-33','Taking Tests','Làm bài kiểm tra','ESL_FAST_BEGINNER_1_033.mp3',NULL,'00:00:00.000','00:00:25.000','esl-fast-children-1',1,1,33) */
 	('He has a test tomorrow','Ngày mai cậu bé có một bài kiểm tra','00:00:00.330','00:00:02.670','esl-fast-beginner-1-33'),
 	('He does not want to study','Cậu bé không muốn học bài','00:00:03.000','00:00:05.010','esl-fast-beginner-1-33'),
 	('Instead, he plays video games','Thay vào đó, cậu bé chơi điện tử','00:00:05.400','00:00:08.630','esl-fast-beginner-1-33'),
@@ -40199,7 +40199,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He turns in his test blank','Cậu bé nộp bài kiểm tra bị bỏ trắng','00:00:16.300','00:00:19.590','esl-fast-beginner-1-33'),
 	('The teacher scolds him and gives him an "F"','Giáo viên mắng cậu bé và cho cậu bé điểm "F"','00:00:20.000','00:00:23.670','esl-fast-beginner-1-33'),
 
-	/* (UUID(),'esl-fast-beginner-1-34','Helen is Busy','Helen đang bận rộn','BEGINNER_01_ESL_FAST_CHILDREN_034.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1',1,1,34) */
+	/* (UUID(),'esl-fast-beginner-1-34','Helen is Busy','Helen đang bận rộn','ESL_FAST_BEGINNER_1_034.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1',1,1,34) */
 	('Helen wants to do well on the math test tomorrow','Helen muốn làm thật tốt bài kiểm tra Toán ngày mai','00:00:00.200','00:00:04.200','esl-fast-beginner-1-34'),
 	('She takes out her book and studies','Cô bé lấy sách ra và học','00:00:04.500','00:00:07.500','esl-fast-beginner-1-34'),
 	('Her brother then comes into her room','Rồi em trai của cô bé bước vào phòng','00:00:07.800','00:00:10.420','esl-fast-beginner-1-34'),
@@ -40210,7 +40210,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Helen yells at her','Helen lớn tiếng với mẹ','00:00:22.900','00:00:24.500','esl-fast-beginner-1-34'),
 	('Helen finally tells her family that she is busy','Cuối cùng Helen nói với cả nhà rằng mình đang bận','00:00:25.000','00:00:28.820','esl-fast-beginner-1-34'),
 
-	/* (UUID(),'esl-fast-beginner-1-35','Messing Up','Làm hỏng việc','BEGINNER_01_ESL_FAST_CHILDREN_035.mp3',NULL,'00:00:00.000','00:00:28.000','esl-fast-children-1',1,1,35) */
+	/* (UUID(),'esl-fast-beginner-1-35','Messing Up','Làm hỏng việc','ESL_FAST_BEGINNER_1_035.mp3',NULL,'00:00:00.000','00:00:28.000','esl-fast-children-1',1,1,35) */
 	('He pours a glass of soda for himself','Cậu bé rót một cốc nước ngọt cho mình','00:00:00.200','00:00:03.300','esl-fast-beginner-1-35'),
 	('He accidentally spills some on his shirt','Cậu ấy vô tình làm đổ một ít lên áo','00:00:03.600','00:00:07.380','esl-fast-beginner-1-35'),
 	('Oh no','Ôi chết rồi','00:00:07.680','00:00:08.640','esl-fast-beginner-1-35'),
@@ -40225,7 +40225,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'esl-fast-beginner-1-36','Introducing Myself','Giới thiệu bản thân','BEGINNER_01_ESL_FAST_CHILDREN_036.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,1,36) */
+	/* (UUID(),'esl-fast-beginner-1-36','Introducing Myself','Giới thiệu bản thân','ESL_FAST_BEGINNER_1_036.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,1,36) */
 	('I am a new student in school','Tôi là học sinh mới của trường','00:00:00.460','00:00:03.500','esl-fast-beginner-1-36'),
 	('I tell the class about myself','Tôi kể với cả lớp về bản thân mình','00:00:04.000','00:00:06.360','esl-fast-beginner-1-36'),
 	('I am from Canada, but now I live in Nevada','Tôi đến từ Canada nhưng hiện tại tôi sống ở Nevada','00:00:06.800','00:00:10.880','esl-fast-beginner-1-36'),
@@ -40236,7 +40236,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('I also play the saxophone','Tôi còn biết chơi kèn saxophone','00:00:24.800','00:00:27.000','esl-fast-beginner-1-36'),
 	('One day, I hope to be a music teacher','Một ngày nào đó, tôi hy vọng sẽ trở thành giáo viên dạy nhạc','00:00:27.200','00:00:31.180','esl-fast-beginner-1-36'),
 
-	/* (UUID(),'esl-fast-beginner-1-37','A Long Wait','Chờ lâu','BEGINNER_01_ESL_FAST_CHILDREN_037.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,1,37) */
+	/* (UUID(),'esl-fast-beginner-1-37','A Long Wait','Chờ lâu','ESL_FAST_BEGINNER_1_037.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,1,37) */
 	('The rollercoaster ride is fun and fast','Chuyến tàu lượn siêu tốc vừa vui vừa nhanh','00:00:00.330','00:00:04.390','esl-fast-beginner-1-37'),
 	('The line is so long','Hàng người xếp dài quá','00:00:04.700','00:00:07.010','esl-fast-beginner-1-37'),
 	('John and his friends decide to wait','John và các bạn quyết định chờ','00:00:07.400','00:00:10.830','esl-fast-beginner-1-37'),
@@ -40247,7 +40247,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Two hours pass','Hai tiếng đồng hồ trôi qua','00:00:26.300','00:00:28.490','esl-fast-beginner-1-37'),
 	('The boys are still in line','Mấy cậu bé vẫn đang xếp hàng','00:00:28.800','00:00:30.770','esl-fast-beginner-1-37'),
 
-	/* (UUID(),'esl-fast-beginner-1-38','The Teacher Takes Away His Phone','Giáo viên tịch thu điện thoại của cậu bé','BEGINNER_01_ESL_FAST_CHILDREN_038.mp3',NULL,'00:00:00.000','00:00:29.000','esl-fast-children-1',1,1,38) */
+	/* (UUID(),'esl-fast-beginner-1-38','The Teacher Takes Away His Phone','Giáo viên tịch thu điện thoại của cậu bé','ESL_FAST_BEGINNER_1_038.mp3',NULL,'00:00:00.000','00:00:29.000','esl-fast-children-1',1,1,38) */
 	('Mr. Brown\'s lectures are boring','Những bài giảng của thầy Brown rất nhàm chán','00:00:00.070','00:00:03.210','esl-fast-beginner-1-38'),
 	('A student looks up at Mr. Brown to check what he is doing','Một học sinh ngước lên nhìn thầy Brown để kiểm tra xem thầy đang làm gì','00:00:03.600','00:00:07.790','esl-fast-beginner-1-38'),
 	('Mr. Brown is writing something on the board','Thầy Brown đang viết gì đó lên bảng','00:00:08.200','00:00:12.200','esl-fast-beginner-1-38'),
@@ -40257,7 +40257,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Mr. Brown takes the student\'s phone away','Thầy Brown thu điện thoại của cậu học sinh','00:00:22.700','00:00:26.050','esl-fast-beginner-1-38'),
 	('He is in trouble','Cậu bé gặp rắc rối rồi','00:00:26.500','00:00:28.190','esl-fast-beginner-1-38'),
 
-	/* (UUID(),'esl-fast-beginner-1-39','No One Likes the Flu','Không ai thích bị cúm','BEGINNER_01_ESL_FAST_CHILDREN_039.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,1,39) */
+	/* (UUID(),'esl-fast-beginner-1-39','No One Likes the Flu','Không ai thích bị cúm','ESL_FAST_BEGINNER_1_039.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,1,39) */
 	('He is sick','Cậu bé bị ốm','00:00:00.580','00:00:02.400','esl-fast-beginner-1-39'),
 	('He goes to the doctor','Cậu bé đến gặp bác sĩ','00:00:02.400','00:00:04.520','esl-fast-beginner-1-39'),
 	('The doctor gives him some medicine','Bác sĩ đưa cho cậu bé một ít thuốc','00:00:05.120','00:00:07.840','esl-fast-beginner-1-39'),
@@ -40269,7 +40269,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He is still sick','Cậu bé vẫn bị ốm','00:00:26.140','00:00:28.000','esl-fast-beginner-1-39'),
 	('No one likes the flu','Chẳng ai thích bị cúm cả','00:00:28.300','00:00:30.580','esl-fast-beginner-1-39'),
 
-	/* (UUID(),'esl-fast-beginner-1-40','The Circus','Rạp xiếc','BEGINNER_01_ESL_FAST_CHILDREN_040.mp3',NULL,'00:00:00.000','00:00:38.000','esl-fast-children-1',1,1,40) */
+	/* (UUID(),'esl-fast-beginner-1-40','The Circus','Rạp xiếc','ESL_FAST_BEGINNER_1_040.mp3',NULL,'00:00:00.000','00:00:38.000','esl-fast-children-1',1,1,40) */
 	('She goes to the circus','Cô bé đi xem xiếc','00:00:00.650','00:00:02.870','esl-fast-beginner-1-40'),
 	('She sees a clown','Cô bé nhìn thấy một chú hề','00:00:03.300','00:00:05.310','esl-fast-beginner-1-40'),
 	('He is very colorful','Chú hề trông rất sặc sỡ','00:00:05.600','00:00:07.690','esl-fast-beginner-1-40'),
@@ -40285,7 +40285,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'esl-fast-beginner-1-41','An Unhealthy Boy','Một cậu bé không khỏe mạnh','BEGINNER_01_ESL_FAST_CHILDREN_041.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-children-1',1,0,41) */
+	/* (UUID(),'esl-fast-beginner-1-41','An Unhealthy Boy','Một cậu bé không khỏe mạnh','ESL_FAST_BEGINNER_1_041.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-children-1',1,0,41) */
 	('He is fat','Cậu bé rất mập','00:00:00.390','00:00:02.270','esl-fast-beginner-1-41'),
 	('He only eats red meat, chips, and candy','Cậu ấy chỉ ăn thịt đỏ, khoai tây chiên và kẹo','00:00:02.600','00:00:07.050','esl-fast-beginner-1-41'),
 	('His parents worry about him','Bố mẹ cậu ấy rất lo cho cậu','00:00:07.400','00:00:10.030','esl-fast-beginner-1-41'),
@@ -40295,7 +40295,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('They eat fish, carrots, and vegetables for lunch','Họ ăn cá, cà rốt và rau vào bữa trưa','00:00:21.300','00:00:25.490','esl-fast-beginner-1-41'),
 	('They eat chicken and salad for dinner','Họ ăn thịt gà và salad vào bữa tối','00:00:25.800','00:00:28.830','esl-fast-beginner-1-41'),
 
-	/* (UUID(),'esl-fast-beginner-1-42','Ferris Wheel','Vòng đu quay','BEGINNER_01_ESL_FAST_CHILDREN_042.mp3',NULL,'00:00:00.000','00:00:39.000','esl-fast-children-1',1,0,42) */
+	/* (UUID(),'esl-fast-beginner-1-42','Ferris Wheel','Vòng đu quay','ESL_FAST_BEGINNER_1_042.mp3',NULL,'00:00:00.000','00:00:39.000','esl-fast-children-1',1,0,42) */
 	('A Ferris wheel is a huge rotating wheel','Vòng đu quay là một bánh xe khổng lồ quay tròn','00:00:00.330','00:00:04.370','esl-fast-beginner-1-42'),
 	('It has many seats','Có rất nhiều ghế ngồi','00:00:04.800','00:00:06.890','esl-fast-beginner-1-42'),
 	('He sits on one of them','Cậu bé ngồi vào một trong những chỗ đó','00:00:07.300','00:00:09.370','esl-fast-beginner-1-42'),
@@ -40310,7 +40310,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The people are so small','Mọi người trông nhỏ xíu','00:00:31.300','00:00:34.130','esl-fast-beginner-1-42'),
 	('The view is so nice','Khung cảnh thật đẹp','00:00:34.500','00:00:37.270','esl-fast-beginner-1-42'),
 
-	/* (UUID(),'esl-fast-beginner-1-43','More Money','Nhiều tiền hơn','BEGINNER_01_ESL_FAST_CHILDREN_043.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,0,43) */
+	/* (UUID(),'esl-fast-beginner-1-43','More Money','Nhiều tiền hơn','ESL_FAST_BEGINNER_1_043.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,0,43) */
 	('She gets an allowance from her parents','Cô bé được bố mẹ cho tiền tiêu vặt','00:00:00.330','00:00:03.710','esl-fast-beginner-1-43'),
 	('They give her $10 a week','Mỗi tuần,  bố mẹ cho cô bé 10 đô la','00:00:04.000','00:00:06.790','esl-fast-beginner-1-43'),
 	('She wants more','Cô bé muốn được nhiều hơn','00:00:07.100','00:00:08.630','esl-fast-beginner-1-43'),
@@ -40323,7 +40323,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Her parents decide to give her a raise','Bố mẹ quyết định tăng tiền tiêu vặt cho cô bé','00:00:24.300','00:00:27.300','esl-fast-beginner-1-43'),
 	('She will get $15 a week','Cô bé sẽ được 15 đô la mỗi tuần','00:00:27.500','00:00:31.090','esl-fast-beginner-1-43'),
 
-	/* (UUID(),'esl-fast-beginner-1-44','Loving Dance','Yêu thích khiêu vũ','BEGINNER_01_ESL_FAST_CHILDREN_044.mp3',NULL,'00:00:00.000','00:00:29.000','esl-fast-children-1',1,0,44) */
+	/* (UUID(),'esl-fast-beginner-1-44','Loving Dance','Yêu thích khiêu vũ','ESL_FAST_BEGINNER_1_044.mp3',NULL,'00:00:00.000','00:00:29.000','esl-fast-children-1',1,0,44) */
 	('She loves to dance','Cô bé rất thích nhảy múa','00:00:00.200','00:00:02.620','esl-fast-beginner-1-44'),
 	('She dances on her school\'s team','Cô bé nhảy trong đội của trường','00:00:02.960','00:00:06.060','esl-fast-beginner-1-44'),
 	('She dances after school','Cô bé nhảy sau khi tan học','00:00:06.400','00:00:08.880','esl-fast-beginner-1-44'),
@@ -40333,7 +40333,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Anyone can see that she is passionate','Ai cũng có thể thấy cô bé rất đam mê','00:00:19.000','00:00:22.640','esl-fast-beginner-1-44'),
 	('People say she is the best dancer in the world','Mọi người nói cô bé là vũ công giỏi nhất thế giới','00:00:23.100','00:00:27.360','esl-fast-beginner-1-44'),
 
-	/* (UUID(),'esl-fast-beginner-1-45','A Fun Sleepover','Một buổi ngủ qua đêm vui vẻ','BEGINNER_01_ESL_FAST_CHILDREN_045.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,0,45) */
+	/* (UUID(),'esl-fast-beginner-1-45','A Fun Sleepover','Một buổi ngủ qua đêm vui vẻ','ESL_FAST_BEGINNER_1_045.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,0,45) */
 	('She sleeps over at a friend\'s house','Cô bé ngủ lại qua đêm ở nhà bạn','00:00:00.260','00:00:03.600','esl-fast-beginner-1-45'),
 	('They do a lot of fun activities','Họ làm rất nhiều hoạt động vui vẻ','00:00:03.900','00:00:06.380','esl-fast-beginner-1-45'),
 	('They fight with their pillows','Hai bạn đánh gối với nhau','00:00:06.800','00:00:08.960','esl-fast-beginner-1-45'),
@@ -40349,7 +40349,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'esl-fast-beginner-1-46','Apology','Lời xin lỗi','BEGINNER_01_ESL_FAST_CHILDREN_046.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,0,46) */
+	/* (UUID(),'esl-fast-beginner-1-46','Apology','Lời xin lỗi','ESL_FAST_BEGINNER_1_046.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,0,46) */
 	('He does not like school','Cậu bé không thích đi học','00:00:00.390','00:00:03.050','esl-fast-beginner-1-46'),
 	('He hates his teachers','Cậu bé ghét các thầy cô giáo','00:00:03.400','00:00:05.550','esl-fast-beginner-1-46'),
 	('He hates learning','Cậu bé ghét học hành','00:00:05.900','00:00:08.010','esl-fast-beginner-1-46'),
@@ -40362,7 +40362,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She yells at him','Cô giáo mắng cậu bé','00:00:25.270','00:00:26.300','esl-fast-beginner-1-46'),
 	('She makes him say sorry to his classmates','Cô giáo bắt cậu bé xin lỗi các bạn cùng lớp','00:00:26.600','00:00:30.530','esl-fast-beginner-1-46'),
 
-	/* (UUID(),'esl-fast-beginner-1-47','Glass of Milk on the Desk','Ly sữa trên bàn học','BEGINNER_01_ESL_FAST_CHILDREN_047.mp3',NULL,'00:00:00.000','00:00:34.000','esl-fast-children-1',1,0,47) */
+	/* (UUID(),'esl-fast-beginner-1-47','Glass of Milk on the Desk','Ly sữa trên bàn học','ESL_FAST_BEGINNER_1_047.mp3',NULL,'00:00:00.000','00:00:34.000','esl-fast-children-1',1,0,47) */
 	('A glass of milk is on the desk','Một ly sữa được đặt trên bàn','00:00:00.330','00:00:03.250','esl-fast-beginner-1-47'),
 	('It is near the edge','Ly sữa ở sát mép bàn','00:00:03.600','00:00:05.610','esl-fast-beginner-1-47'),
 	('The child looks at the milk','Đứa trẻ nhìn ly sữa','00:00:06.000','00:00:08.390','esl-fast-beginner-1-47'),
@@ -40375,7 +40375,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The glass of milk tips over','Ly sữa bị nghiêng rồi đổ xuống','00:00:26.100','00:00:28.300','esl-fast-beginner-1-47'),
 	('The milk is all over the floor','Sữa lênh láng khắp sàn nhà','00:00:28.600','00:00:32.230','esl-fast-beginner-1-47'),
 
-	/* (UUID(),'esl-fast-beginner-1-48','A Simple Gift','Một món quà đơn giản','BEGINNER_01_ESL_FAST_CHILDREN_048.mp3',NULL,'00:00:00.000','00:00:25.000','esl-fast-children-1',1,0,48) */
+	/* (UUID(),'esl-fast-beginner-1-48','A Simple Gift','Một món quà đơn giản','ESL_FAST_BEGINNER_1_048.mp3',NULL,'00:00:00.000','00:00:25.000','esl-fast-children-1',1,0,48) */
 	('He wants to get something for his teacher','Cậu bé muốn mua thứ gì đó cho cô giáo','00:00:00.330','00:00:03.370','esl-fast-beginner-1-48'),
 	('He has no money though','Nhưng cậu bé lại không có tiền','00:00:03.670','00:00:05.700','esl-fast-beginner-1-48'),
 	('He gets creative','Cậu bé liền sáng tạo','00:00:06.000','00:00:07.910','esl-fast-beginner-1-48'),
@@ -40386,7 +40386,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He pours some water in the vase','Cậu bé đổ một ít nước vào bình','00:00:18.800','00:00:21.750','esl-fast-beginner-1-48'),
 	('The gift is complete','Món quà đã hoàn thành','00:00:22.100','00:00:23.950','esl-fast-beginner-1-48'),
 
-	/* (UUID(),'esl-fast-beginner-1-49','Hide-and-Seek','Trò chơi trốn tìm','BEGINNER_01_ESL_FAST_CHILDREN_049.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,0,49) */
+	/* (UUID(),'esl-fast-beginner-1-49','Hide-and-Seek','Trò chơi trốn tìm','ESL_FAST_BEGINNER_1_049.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,0,49) */
 	('John covers his eyes','John che mắt lại','00:00:00.710','00:00:03.070','esl-fast-beginner-1-49'),
 	('Sandra finds a place to hide','Sandra tìm một chỗ để trốn','00:00:03.430','00:00:06.110','esl-fast-beginner-1-49'),
 	('John counts to ten','John đếm đến mười','00:00:06.600','00:00:08.790','esl-fast-beginner-1-49'),
@@ -40399,7 +40399,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He does not find her yet','Nhưng cậu bé vẫn chưa tìm thấy cô bé','00:00:26.400','00:00:28.000','esl-fast-beginner-1-49'),
 	('Sandra is in their parents\' room','Sandra đang ở trong phòng của bố mẹ','00:00:28.300','00:00:31.690','esl-fast-beginner-1-49'),
 
-	/* (UUID(),'esl-fast-beginner-1-50','Excited for the Mail','Hồi hộp chờ thư','BEGINNER_01_ESL_FAST_CHILDREN_050.mp3',NULL,'00:00:00.000','00:00:28.000','esl-fast-children-1',1,0,50) */
+	/* (UUID(),'esl-fast-beginner-1-50','Excited for the Mail','Hồi hộp chờ thư','ESL_FAST_BEGINNER_1_050.mp3',NULL,'00:00:00.000','00:00:28.000','esl-fast-children-1',1,0,50) */
 	('The boy waits for the mailman','Cậu bé đợi người đưa thư','00:00:00.780','00:00:03.260','esl-fast-beginner-1-50'),
 	('A package is supposed to come today','Hôm nay một kiện hàng dự kiến sẽ đến','00:00:03.600','00:00:06.300','esl-fast-beginner-1-50'),
 	('He sits by the window','Cậu bé ngồi bên cửa sổ','00:00:06.700','00:00:08.980','esl-fast-beginner-1-50'),
@@ -40413,7 +40413,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'esl-fast-beginner-1-51','Having Fun on a Swing','Vui chơi trên xích đu','BEGINNER_01_ESL_FAST_CHILDREN_051.mp3',NULL,'00:00:00.000','00:00:28.000','esl-fast-children-1',1,0,51) */
+	/* (UUID(),'esl-fast-beginner-1-51','Having Fun on a Swing','Vui chơi trên xích đu','ESL_FAST_BEGINNER_1_051.mp3',NULL,'00:00:00.000','00:00:28.000','esl-fast-children-1',1,0,51) */
 	('Michael and his grandmother go to the park\'s playground','Michael cùng bà đến khu vui chơi trong công viên','00:00:00.330','00:00:04.490','esl-fast-beginner-1-51'),
 	('There are so many things to do','Ở đó có rất nhiều việc để làm','00:00:05.000','00:00:07.970','esl-fast-beginner-1-51'),
 	('Michael runs over to the swing set','Michael chạy đến khu xích đu','00:00:08.300','00:00:11.090','esl-fast-beginner-1-51'),
@@ -40424,7 +40424,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He is even higher','Cậu bé thậm chí lên còn cao hơn nữa','00:00:21.000','00:00:23.150','esl-fast-beginner-1-51'),
 	('He feels like he can touch the sky','Cậu bé có cảm giác như mình chạm được tới bầu trời','00:00:23.500','00:00:26.770','esl-fast-beginner-1-51'),
 
-	/* (UUID(),'esl-fast-beginner-1-52','He Walks His Dogs','Cậu ấy dắt chó đi dạo','BEGINNER_01_ESL_FAST_CHILDREN_052.mp3',NULL,'00:00:00.000','00:00:34.000','esl-fast-children-1',1,0,52) */
+	/* (UUID(),'esl-fast-beginner-1-52','He Walks His Dogs','Cậu ấy dắt chó đi dạo','ESL_FAST_BEGINNER_1_052.mp3',NULL,'00:00:00.000','00:00:34.000','esl-fast-children-1',1,0,52) */
 	('Brian has three dogs','Brian có ba chú chó','00:00:00.580','00:00:03.080','esl-fast-beginner-1-52'),
 	('The first one is black','Con đầu tiên có màu đen','00:00:03.400','00:00:05.260','esl-fast-beginner-1-52'),
 	('The second one is brown','Con thứ hai có màu nâu','00:00:05.600','00:00:07.540','esl-fast-beginner-1-52'),
@@ -40437,7 +40437,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The dogs enjoy it','Những chú chó rất thích điều đó','00:00:27.000','00:00:28.900','esl-fast-beginner-1-52'),
 	('They always seem happy when they are walking','Chúng dường như lúc nào cũng vui vẻ khi chúng đi dạo','00:00:29.200','00:00:32.740','esl-fast-beginner-1-52'),
 
-	/* (UUID(),'esl-fast-beginner-1-53','A Pencil for Everything','Một cây bút chì cho mọi việc','BEGINNER_01_ESL_FAST_CHILDREN_053.mp3',NULL,'00:00:00.000','00:00:26.000','esl-fast-children-1',1,0,53) */
+	/* (UUID(),'esl-fast-beginner-1-53','A Pencil for Everything','Một cây bút chì cho mọi việc','ESL_FAST_BEGINNER_1_053.mp3',NULL,'00:00:00.000','00:00:26.000','esl-fast-children-1',1,0,53) */
 	('She has a pencil','Cô bé có một cây bút chì','00:00:00.200','00:00:02.100','esl-fast-beginner-1-53'),
 	('It is four inches long','Nó dài bốn inch','00:00:02.400','00:00:04.600','esl-fast-beginner-1-53'),
 	('It is shiny and pink','Nó lấp lánh và có màu hồng','00:00:05.000','00:00:06.880','esl-fast-beginner-1-53'),
@@ -40448,7 +40448,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She uses it to do her homework','Cô bé dùng nó để làm bài tập về nhà','00:00:19.400','00:00:22.120','esl-fast-beginner-1-53'),
 	('She uses it on her tests','Cô bé dùng nó khi làm bài kiểm tra','00:00:22.400','00:00:25.060','esl-fast-beginner-1-53'),
 
-	/* (UUID(),'esl-fast-beginner-1-54','Being Careless','Sự bất cẩn','BEGINNER_01_ESL_FAST_CHILDREN_054.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1',1,0,54) */
+	/* (UUID(),'esl-fast-beginner-1-54','Being Careless','Sự bất cẩn','ESL_FAST_BEGINNER_1_054.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1',1,0,54) */
 	('Two brothers are bored','Hai anh em cảm thấy chán','00:00:00.200','00:00:02.640','esl-fast-beginner-1-54'),
 	('They play catch with each other inside the house','Hai anh em chơi ném và bắt bóng với nhau trong nhà','00:00:03.000','00:00:06.860','esl-fast-beginner-1-54'),
 	('The older brother throws the ball to the younger brother','Người anh ném bóng cho em trai','00:00:07.200','00:00:11.400','esl-fast-beginner-1-54'),
@@ -40460,7 +40460,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She is mad','Mẹ rất tức giận','00:00:23.900','00:00:25.860','esl-fast-beginner-1-54'),
 	('She takes the ball away','Mẹ tịch thu quả bóng','00:00:26.200','00:00:28.320','esl-fast-beginner-1-54'),
 
-	/* (UUID(),'esl-fast-beginner-1-55','Fluffy the Rabbit','Fluffy chú thỏ nhỏ','BEGINNER_01_ESL_FAST_CHILDREN_055.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-children-1',1,0,55) */
+	/* (UUID(),'esl-fast-beginner-1-55','Fluffy the Rabbit','Fluffy chú thỏ nhỏ','ESL_FAST_BEGINNER_1_055.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-children-1',1,0,55) */
 	('He has a pet','Cậu bé có một con vật cưng','00:00:00.520','00:00:02.520','esl-fast-beginner-1-55'),
 	('It is a rabbit','Đó là một chú thỏ','00:00:02.900','00:00:04.440','esl-fast-beginner-1-55'),
 	('His rabbit\'s name is Fluffy','Chú thỏ của cậu bé tên là Fluffy','00:00:04.900','00:00:07.560','esl-fast-beginner-1-55'),
@@ -40477,7 +40477,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'esl-fast-beginner-1-56','Three Friends and a Jump Rope','Ba người bạn và dây nhảy','BEGINNER_01_ESL_FAST_CHILDREN_056.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,0,56) */
+	/* (UUID(),'esl-fast-beginner-1-56','Three Friends and a Jump Rope','Ba người bạn và dây nhảy','ESL_FAST_BEGINNER_1_056.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,0,56) */
 	('It is break time','Đến giờ ra chơi rồi','00:00:00.260','00:00:02.360','esl-fast-beginner-1-56'),
 	('The students go out to play','Các học sinh ra ngoài chơi','00:00:02.800','00:00:05.220','esl-fast-beginner-1-56'),
 	('Three friends play with a jump rope','Ba người bạn cùng chơi nhảy dây','00:00:05.800','00:00:09.080','esl-fast-beginner-1-56'),
@@ -40490,7 +40490,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She is good','Cô bé rất giỏi','00:00:27.200','00:00:28.600','esl-fast-beginner-1-56'),
 	('She keeps jumping over the rope','Cô bé tiếp tục nhảy qua sợi dây','00:00:28.900','00:00:31.820','esl-fast-beginner-1-56'),
 
-	/* (UUID(),'esl-fast-beginner-1-57','He Plays with the Ladybug','Cậu ấy chơi với bọ rùa','BEGINNER_01_ESL_FAST_CHILDREN_057.mp3',NULL,'00:00:00.000','00:00:38.000','esl-fast-children-1',1,0,57) */
+	/* (UUID(),'esl-fast-beginner-1-57','He Plays with the Ladybug','Cậu ấy chơi với bọ rùa','ESL_FAST_BEGINNER_1_057.mp3',NULL,'00:00:00.000','00:00:38.000','esl-fast-children-1',1,0,57) */
 	('He goes outside','Cậu bé đi ra ngoài','00:00:00.260','00:00:02.160','esl-fast-beginner-1-57'),
 	('He sees a ladybug','Cậu bé nhìn thấy một con bọ rùa','00:00:02.500','00:00:04.700','esl-fast-beginner-1-57'),
 	('The ladybug is red','Con bọ rùa có màu đỏ','00:00:05.000','00:00:07.640','esl-fast-beginner-1-57'),
@@ -40505,7 +40505,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The ladybug flies away','Con bọ rùa bay mất','00:00:31.600','00:00:34.240','esl-fast-beginner-1-57'),
 	('He tries to catch it','Cậu bé cố bắt nó lại','00:00:34.600','00:00:36.780','esl-fast-beginner-1-57'),
 
-	/* (UUID(),'esl-fast-beginner-1-58','The Dog That Digs','Con chó hay đào đất','BEGINNER_01_ESL_FAST_CHILDREN_058.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-children-1',1,0,58) */
+	/* (UUID(),'esl-fast-beginner-1-58','The Dog That Digs','Con chó hay đào đất','ESL_FAST_BEGINNER_1_058.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-children-1',1,0,58) */
 	('The dog likes to dig','Chú chó rất thích đào bới','00:00:00.390','00:00:03.010','esl-fast-beginner-1-58'),
 	('It is his favorite thing to do','Đó là việc nó thích làm nhất','00:00:03.310','00:00:06.010','esl-fast-beginner-1-58'),
 	('He goes into his owner\'s house','Nó đi vào nhà của chủ','00:00:06.500','00:00:09.750','esl-fast-beginner-1-58'),
@@ -40516,7 +40516,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He puts the necklace inside','Nó để chiếc vòng cổ vào trong hố','00:00:23.000','00:00:26.150','esl-fast-beginner-1-58'),
 	('He covers the hole with dirt','Rồi nó che hố lại bằng đất','00:00:27.000','00:00:29.830','esl-fast-beginner-1-58'),
 
-	/* (UUID(),'esl-fast-beginner-1-59','Playing with the Monkey Bars','Chơi xà đơn trong sân chơi','BEGINNER_01_ESL_FAST_CHILDREN_059.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,0,59) */
+	/* (UUID(),'esl-fast-beginner-1-59','Playing with the Monkey Bars','Chơi xà đơn trong sân chơi','ESL_FAST_BEGINNER_1_059.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,0,59) */
 	('She likes the monkey bars','Cô bé thích chơi xà ngang','00:00:00.580','00:00:03.500','esl-fast-beginner-1-59'),
 	('She grabs the first bar with her hands','Cô bé dùng hai tay nắm thanh xà ngang đầu tiên','00:00:03.900','00:00:07.160','esl-fast-beginner-1-59'),
 	('Her legs are swinging from the ground','Đôi chân cô bé đung đưa trên không','00:00:07.600','00:00:10.540','esl-fast-beginner-1-59'),
@@ -40527,7 +40527,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She jumps down','Cô bé nhảy xuống','00:00:25.600','00:00:27.500','esl-fast-beginner-1-59'),
 	('She starts over again for fun','Rồi cô bé lại bắt đầu lại từ đầu cho vui','00:00:27.800','00:00:31.100','esl-fast-beginner-1-59'),
 
-	/* (UUID(),'esl-fast-beginner-1-60','Playing a Doctor','Đóng vai bác sĩ','BEGINNER_01_ESL_FAST_CHILDREN_060.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-children-1',1,0,60) */
+	/* (UUID(),'esl-fast-beginner-1-60','Playing a Doctor','Đóng vai bác sĩ','ESL_FAST_BEGINNER_1_060.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-children-1',1,0,60) */
 	('She likes to pretend she is a doctor for fun','Cô bé thích giả làm bác sĩ để giải trí','00:00:00.460','00:00:05.040','esl-fast-beginner-1-60'),
 	('She wears a white coat','Cô bé mặc một chiếc áo khoác trắng','00:00:05.400','00:00:07.720','esl-fast-beginner-1-60'),
 	('She pretends her room is a medical office','Cô bé giả vờ phòng mình thành một phòng khám','00:00:08.300','00:00:11.880','esl-fast-beginner-1-60'),
@@ -40540,7 +40540,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'esl-fast-beginner-1-61','Art Class','Giờ học mỹ thuật','BEGINNER_01_ESL_FAST_CHILDREN_061.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-children-1',1,0,61) */
+	/* (UUID(),'esl-fast-beginner-1-61','Art Class','Giờ học mỹ thuật','ESL_FAST_BEGINNER_1_061.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-children-1',1,0,61) */
 	('She goes to her art class','Cô bé đến lớp học vẽ','00:00:00.260','00:00:03.359','esl-fast-beginner-1-61'),
 	('She wears a special white coat','Cô bé mặc một chiếc áo choàng trắng chuyên dụng','00:00:03.780','00:00:06.680','esl-fast-beginner-1-61'),
 	('Now, her inside clothes will be clean','Giờ thì quần áo bên trong của cô bé sẽ rất sạch sẽ','00:00:07.320','00:00:11.580','esl-fast-beginner-1-61'),
@@ -40551,7 +40551,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She dips her paintbrush in the paint','Cô bé nhúng cọ vẽ vào màu','00:00:28.000','00:00:30.980','esl-fast-beginner-1-61'),
 	('She starts to draw','Cô bé bắt đầu vẽ','00:00:31.720','00:00:33.740','esl-fast-beginner-1-61'),
 
-	/* (UUID(),'esl-fast-beginner-1-62','Getting Ready for Soccer Practice','Chuẩn bị cho buổi tập bóng đá','BEGINNER_01_ESL_FAST_CHILDREN_062.mp3',NULL,'00:00:00.000','00:00:27.000','esl-fast-children-1',1,0,62) */
+	/* (UUID(),'esl-fast-beginner-1-62','Getting Ready for Soccer Practice','Chuẩn bị cho buổi tập bóng đá','ESL_FAST_BEGINNER_1_062.mp3',NULL,'00:00:00.000','00:00:27.000','esl-fast-children-1',1,0,62) */
 	('She is getting ready for soccer practice','Cô bé đang chuẩn bị đi tập bóng đá','00:00:00.060','00:00:03.680','esl-fast-beginner-1-62'),
 	('She wears her uniform','Cô bé mặc đồng phục','00:00:04.000','00:00:06.240','esl-fast-beginner-1-62'),
 	('She gets a soccer ball','Cô bé lấy một quả bóng đá','00:00:06.940','00:00:09.080','esl-fast-beginner-1-62'),
@@ -40562,7 +40562,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('They put their legs together','Họ khép hai chân lại cùng nhau','00:00:21.600','00:00:23.700','esl-fast-beginner-1-62'),
 	('They reach their toes with their hands','Họ dùng tay chạm vào các ngón chân','00:00:24.240','00:00:27.200','esl-fast-beginner-1-62'),
 
-	/* (UUID(),'esl-fast-beginner-1-63','The Pouch of a Kangaroo','Túi của con chuột túi','BEGINNER_01_ESL_FAST_CHILDREN_063.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1',1,0,63) */
+	/* (UUID(),'esl-fast-beginner-1-63','The Pouch of a Kangaroo','Túi của con chuột túi','ESL_FAST_BEGINNER_1_063.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1',1,0,63) */
 	('A kangaroo is an interesting animal','Chuột túi là một loài động vật rất thú vị','00:00:00.130','00:00:04.310','esl-fast-beginner-1-63'),
 	('It has a pouch','Nó có một chiếc túi','00:00:04.990','00:00:06.830','esl-fast-beginner-1-63'),
 	('A kangaroo\'s baby goes into the pouch','Chuột túi con sẽ chui vào chiếc túi đó','00:00:07.490','00:00:11.830','esl-fast-beginner-1-63'),
@@ -40572,7 +40572,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He would put food and video games inside','Cậu ấy sẽ bỏ đồ ăn và trò chơi điện tử vào trong','00:00:20.910','00:00:25.010','esl-fast-beginner-1-63'),
 	('People and kangaroos are different','Con người và chuột túi rất khác nhau','00:00:25.770','00:00:28.970','esl-fast-beginner-1-63'),
 
-	/* (UUID(),'esl-fast-beginner-1-64','Aunt and Uncle','Dì và chú','BEGINNER_01_ESL_FAST_CHILDREN_064.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,64) */
+	/* (UUID(),'esl-fast-beginner-1-64','Aunt and Uncle','Dì và chú','ESL_FAST_BEGINNER_1_064.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,64) */
 	('He visits his aunt and uncle','Cậu bé đến thăm cô và chú của mình','00:00:00.130','00:00:03.390','esl-fast-beginner-1-64'),
 	('They are very different from each other','Hai người rất khác nhau','00:00:03.910','00:00:06.550','esl-fast-beginner-1-64'),
 	('His aunt is tall and skinny','Cô của cậu ấy cao và gầy','00:00:07.190','00:00:10.030','esl-fast-beginner-1-64'),
@@ -40585,7 +40585,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('They like it when he visits','Họ rất vui khi cậu bé đến thăm','00:00:29.470','00:00:31.930','esl-fast-beginner-1-64'),
 	('He always has fun with his aunt and uncle','Lúc nào cậu bé cũng có khoảng thời gian vui vẻ với cô chú của mình','00:00:32.610','00:00:36.130','esl-fast-beginner-1-64'),
 
-	/* (UUID(),'esl-fast-beginner-1-65','A Busy Boy','Một cậu bé bận rộn','BEGINNER_01_ESL_FAST_CHILDREN_065.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,65) */
+	/* (UUID(),'esl-fast-beginner-1-65','A Busy Boy','Một cậu bé bận rộn','ESL_FAST_BEGINNER_1_065.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,65) */
 	('The boy is always busy','Cậu bé lúc nào cũng bận rộn','00:00:00.320','00:00:03.420','esl-fast-beginner-1-65'),
 	('He goes to school for eight hours','Cậu ấy đi học suốt tám tiếng mỗi ngày','00:00:03.840','00:00:06.780','esl-fast-beginner-1-65'),
 	('He has seven classes','Cậu ấy có bảy tiết học','00:00:07.340','00:00:09.440','esl-fast-beginner-1-65'),
@@ -40600,7 +40600,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'esl-fast-beginner-1-66','Fruit Salad','Salad trái cây','BEGINNER_01_ESL_FAST_CHILDREN_066.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,66) */
+	/* (UUID(),'esl-fast-beginner-1-66','Fruit Salad','Salad trái cây','ESL_FAST_BEGINNER_1_066.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,66) */
 	('She pours some chips in a bowl','Cô bé đổ khoai tây chiên vào một cái bát','00:00:00.770','00:00:04.210','esl-fast-beginner-1-66'),
 	('Her dad sees her','Bố nhìn thấy cô bé','00:00:04.610','00:00:06.430','esl-fast-beginner-1-66'),
 	('He tells her chips are bad','Ông nói với cô bé rằng khoai tây chiên không tốt','00:00:06.710','00:00:09.330','esl-fast-beginner-1-66'),
@@ -40612,7 +40612,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She cuts them up in small pieces','Cô bé cắt chúng thành những miếng nhỏ','00:00:26.850','00:00:31.150','esl-fast-beginner-1-66'),
 	('She puts them all together in a bowl','Cô bé cho tất cả vào chung một cái bát','00:00:31.570','00:00:34.650','esl-fast-beginner-1-66'),
 
-	/* (UUID(),'esl-fast-beginner-1-67','He Takes His Test','Cậu ấy làm bài kiểm tra','BEGINNER_01_ESL_FAST_CHILDREN_067.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,67) */
+	/* (UUID(),'esl-fast-beginner-1-67','He Takes His Test','Cậu ấy làm bài kiểm tra','ESL_FAST_BEGINNER_1_067.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,67) */
 	('The teacher announces that there is a test','Thầy cô thông báo hôm nay sẽ có bài kiểm tra','00:00:00.000','00:00:03.750','esl-fast-beginner-1-67'),
 	('The students clear off their desks','Các học sinh dọn hết đồ trên bàn','00:00:04.090','00:00:07.290','esl-fast-beginner-1-67'),
 	('The teacher passes out the tests','Thầy cô phát đề kiểm tra','00:00:07.630','00:00:10.750','esl-fast-beginner-1-67'),
@@ -40624,7 +40624,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He finishes the test','Cậu ấy hoàn thành bài kiểm tra','00:00:25.430','00:00:27.730','esl-fast-beginner-1-67'),
 	('He feels good','Cậu ấy cảm thấy rất vui','00:00:27.230','00:00:29.910','esl-fast-beginner-1-67'),
 
-	/* (UUID(),'esl-fast-beginner-1-68','Parent-teacher Conference','Buổi họp phụ huynh và giáo viên','BEGINNER_01_ESL_FAST_CHILDREN_068.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,68) */
+	/* (UUID(),'esl-fast-beginner-1-68','Parent-teacher Conference','Buổi họp phụ huynh và giáo viên','ESL_FAST_BEGINNER_1_068.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,68) */
 	('Lisa and her mom go to school','Lisa và mẹ đến trường','00:00:00.320','00:00:03.660','esl-fast-beginner-1-68'),
 	('They meet with Lisa\'s teacher','Họ gặp cô giáo của Lisa','00:00:04.300','00:00:06.500','esl-fast-beginner-1-68'),
 	('The teacher smiles','Cô giáo mỉm cười','00:00:07.200','00:00:09.160','esl-fast-beginner-1-68'),
@@ -40637,7 +40637,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Her mom is happy','Mẹ của Lisa rất vui','00:00:28.180','00:00:29.920','esl-fast-beginner-1-68'),
 	('She is a very kind person','Cô bé là một người rất tốt bụng','00:00:30.320','00:00:31.720','esl-fast-beginner-1-68'),
 
-	/* (UUID(),'esl-fast-beginner-1-69','The Second Dog','Con chó thứ hai','BEGINNER_01_ESL_FAST_CHILDREN_069.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,69) */
+	/* (UUID(),'esl-fast-beginner-1-69','The Second Dog','Con chó thứ hai','ESL_FAST_BEGINNER_1_069.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,69) */
 	('She has one dog already','Cô bé đã nuôi một chú chó rồi','00:00:00.190','00:00:03.170','esl-fast-beginner-1-69'),
 	('It has black fur','Nó có bộ lông màu đen','00:00:03.630','00:00:05.510','esl-fast-beginner-1-69'),
 	('It is very big','Nó rất to','00:00:05.970','00:00:07.830','esl-fast-beginner-1-69'),
@@ -40651,7 +40651,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('They run away from each other','Chúng chạy tránh nhau','00:00:25.890','00:00:28.210','esl-fast-beginner-1-69'),
 	('They do not like each other','Chúng không thích nhau','00:00:28.350','00:00:30.870','esl-fast-beginner-1-69'),
 
-	/* (UUID(),'esl-fast-beginner-1-70','A Cat and a Ball of Yarn','Một con mèo và cuộn len','BEGINNER_01_ESL_FAST_CHILDREN_070.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,70) */
+	/* (UUID(),'esl-fast-beginner-1-70','A Cat and a Ball of Yarn','Một con mèo và cuộn len','ESL_FAST_BEGINNER_1_070.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,70) */
 	('The boy tries to study for his quiz tomorrow','Cậu bé cố gắng ôn bài cho bài kiểm tra ngày mai','00:00:00.060','00:00:04.000','esl-fast-beginner-1-70'),
 	('His cat keeps bothering him','Con mèo của cậu cứ quấy rầy cậu ấy','00:00:04.660','00:00:07.060','esl-fast-beginner-1-70'),
 	('It keeps pulling his leg','Nó cứ kéo chân cậu ấy','00:00:07.520','00:00:09.900','esl-fast-beginner-1-70'),
@@ -40666,7 +40666,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'esl-fast-beginner-1-71','Taking Care of His Orange Tree','Chăm sóc cây cam của cậu ấy','BEGINNER_01_ESL_FAST_CHILDREN_071.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,71) */
+	/* (UUID(),'esl-fast-beginner-1-71','Taking Care of His Orange Tree','Chăm sóc cây cam của cậu ấy','ESL_FAST_BEGINNER_1_071.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,71) */
 	('He wants to grow an orange tree','Cậu bé muốn trồng một cây cam','00:00:00.060','00:00:03.520','esl-fast-beginner-1-71'),
 	('He digs a small hole','Cậu bé đào một cái hố nhỏ','00:00:04.100','00:00:06.260','esl-fast-beginner-1-71'),
 	('He puts the seeds in it','Cậu bé cho hạt giống vào đó','00:00:06.640','00:00:09.060','esl-fast-beginner-1-71'),
@@ -40678,7 +40678,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He continues to water the tree for a month','Cậu bé tiếp tục tưới cây suốt một tháng','00:00:27.180','00:00:31.080','esl-fast-beginner-1-71'),
 	('He sees an orange start to grow','Cậu bé nhìn thấy một quả cam bắt đầu lớn lên','00:00:31.760','00:00:34.680','esl-fast-beginner-1-71'),
 
-	/* (UUID(),'esl-fast-beginner-1-72','The Missing Notebook','Cuốn vở bị mất','BEGINNER_01_ESL_FAST_CHILDREN_072.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,72) */
+	/* (UUID(),'esl-fast-beginner-1-72','The Missing Notebook','Cuốn vở bị mất','ESL_FAST_BEGINNER_1_072.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,72) */
 	('Helen leaves her notebook in the cafeteria','Helen để quên quyển vở ở căng tin','00:00:00.450','00:00:03.930','esl-fast-beginner-1-72'),
 	('She does not know this yet','Lúc này cô bé vẫn chưa biết điều đó','00:00:04.370','00:00:06.430','esl-fast-beginner-1-72'),
 	('She goes to class','Cô bé đi vào lớp học','00:00:06.770','00:00:08.750','esl-fast-beginner-1-72'),
@@ -40690,7 +40690,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She checks the lost and found box','Cô bé kiểm tra hộp đồ thất lạc','00:00:24.210','00:00:27.090','esl-fast-beginner-1-72'),
 	('She finds her notebook','Cô bé tìm thấy quyển vở của mình','00:00:27.350','00:00:29.370','esl-fast-beginner-1-72'),
 
-	/* (UUID(),'esl-fast-beginner-1-73','Tag, You\'re It!','Trò chơi đuổi bắt, đến lượt bạn rồi!','BEGINNER_01_ESL_FAST_CHILDREN_073.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,73) */
+	/* (UUID(),'esl-fast-beginner-1-73','Tag, You\'re It!','Trò chơi đuổi bắt, đến lượt bạn rồi!','ESL_FAST_BEGINNER_1_073.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,73) */
 	('Tag is a very fun game','Đuổi bắt là một trò chơi rất vui','00:00:00.260','00:00:03.700','esl-fast-beginner-1-73'),
 	('George, Lisa, and Laura play tag every day','George, Lisa và Laura ngày nào cũng chơi đuổi bắt','00:00:04.000','00:00:09.020','esl-fast-beginner-1-73'),
 	('Lisa and Laura run around','Lisa và Laura chạy khắp nơi','00:00:09.460','00:00:12.160','esl-fast-beginner-1-73'),
@@ -40703,7 +40703,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He taps her on the shoulder','Cậu ấy chạm nhẹ vào vai Lisa','00:00:29.120','00:00:31.220','esl-fast-beginner-1-73'),
 	('He says to her, Tag, you\'re it!','Cậu ấy nói: "Bắt được rồi, giờ đến lượt cậu đuổi nhé!"','00:00:31.600','00:00:35.180','esl-fast-beginner-1-73'),
 
-	/* (UUID(),'esl-fast-beginner-1-74','Different Flavors','Những hương vị khác nhau','BEGINNER_01_ESL_FAST_CHILDREN_074.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,74) */
+	/* (UUID(),'esl-fast-beginner-1-74','Different Flavors','Những hương vị khác nhau','ESL_FAST_BEGINNER_1_074.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,74) */
 	('I like cupcakes and lollipops','Tôi thích bánh cupcake và kẹo mút','00:00:00.000','00:00:03.780','esl-fast-beginner-1-74'),
 	('Both of them are sweet','Cả hai đều có vị ngọt','00:00:04.060','00:00:05.940','esl-fast-beginner-1-74'),
 	('My mom likes hamburgers and french fries','Mẹ tôi thích bánh hamburger và khoai tây chiên','00:00:06.460','00:00:10.460','esl-fast-beginner-1-74'),
@@ -40714,7 +40714,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Both of them are bitter','Cả hai đều có vị đắng','00:00:26.360','00:00:28.780','esl-fast-beginner-1-74'),
 	('My brother likes everything','Em trai tôi thích tất cả mọi thứ','00:00:28.280','00:00:32.100','esl-fast-beginner-1-74'),
 
-	/* (UUID(),'esl-fast-beginner-1-75','Daydreaming at School','Mơ mộng trong giờ học','BEGINNER_01_ESL_FAST_CHILDREN_075.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,75) */
+	/* (UUID(),'esl-fast-beginner-1-75','Daydreaming at School','Mơ mộng trong giờ học','ESL_FAST_BEGINNER_1_075.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,75) */
 	('The teacher is talking about U.S. government','Cô giáo đang giảng về chính phủ Hoa Kỳ','00:00:00.190','00:00:04.250','esl-fast-beginner-1-75'),
 	('She thinks it is boring','Cô bé thấy bài học thật nhàm chán','00:00:04.630','00:00:06.610','esl-fast-beginner-1-75'),
 	('She stares at her desk','Cô bé nhìn chằm chằm xuống bàn học','00:00:07.070','00:00:09.150','esl-fast-beginner-1-75'),
@@ -40729,7 +40729,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'esl-fast-beginner-1-76','A Pet for Dad','Một thú cưng dành cho bố','BEGINNER_01_ESL_FAST_CHILDREN_076.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,76) */
+	/* (UUID(),'esl-fast-beginner-1-76','A Pet for Dad','Một thú cưng dành cho bố','ESL_FAST_BEGINNER_1_076.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,76) */
 	('Her dad is lonely','Bố cô ấy sống rất cô đơn','00:00:00.320','00:00:03.040','esl-fast-beginner-1-76'),
 	('He lives in a big house with no one','Ông sống một mình trong một ngôi nhà rộng lớn','00:00:03.540','00:00:07.260','esl-fast-beginner-1-76'),
 	('He is divorced','Ông đã ly hôn','00:00:07.540','00:00:09.180','esl-fast-beginner-1-76'),
@@ -40741,7 +40741,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He loves the dog so much','Ông rất yêu chú chó đó','00:00:25.160','00:00:28.040','esl-fast-beginner-1-76'),
 	('He takes care of it','Ông chăm sóc nó rất chu đáo','00:00:28.320','00:00:30.300','esl-fast-beginner-1-76'),
 
-	/* (UUID(),'esl-fast-beginner-1-77','Too Sick','Bị ốm nặng','BEGINNER_01_ESL_FAST_CHILDREN_077.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,77) */
+	/* (UUID(),'esl-fast-beginner-1-77','Too Sick','Bị ốm nặng','ESL_FAST_BEGINNER_1_077.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,77) */
 	('She is too sick','Cô ấy bị ốm nặng','00:00:00.380','00:00:02.900','esl-fast-beginner-1-77'),
 	('She has a cold','Cô ấy bị cảm','00:00:03.280','00:00:05.060','esl-fast-beginner-1-77'),
 	('She can\'t stop sneezing','Cô ấy cứ hắt hơi mãi không ngừng','00:00:05.800','00:00:08.260','esl-fast-beginner-1-77'),
@@ -40754,7 +40754,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('They give her the homework assignments','Họ đưa cho cô ấy bài tập về nhà','00:00:28.660','00:00:31.480','esl-fast-beginner-1-77'),
 	('They try to make her feel better','Họ cố gắng làm cô ấy thấy vui hơn','00:00:31.920','00:00:34.240','esl-fast-beginner-1-77'),
 
-	/* (UUID(),'esl-fast-beginner-1-78','The Worst Student','Học sinh tệ nhất','BEGINNER_01_ESL_FAST_CHILDREN_078.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,78) */
+	/* (UUID(),'esl-fast-beginner-1-78','The Worst Student','Học sinh tệ nhất','ESL_FAST_BEGINNER_1_078.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,78) */
 	('Ronald is the worst student','Ronald là học sinh tệ nhất lớp','00:00:00.380','00:00:03.540','esl-fast-beginner-1-78'),
 	('He does not do his homework','Cậu ấy không làm bài tập về nhà','00:00:04.060','00:00:06.480','esl-fast-beginner-1-78'),
 	('Instead, he plays video games','Thay vào đó, cậu ấy chơi game','00:00:07.000','00:00:10.200','esl-fast-beginner-1-78'),
@@ -40767,7 +40767,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Charles asks to borrow his eraser','Charles xin mượn cục tẩy của cậu ấy','00:00:28.460','00:00:31.840','esl-fast-beginner-1-78'),
 	('Ronald hits him','Ronald đánh cậu ấy','00:00:32.300','00:00:34.000','esl-fast-beginner-1-78'),
 
-	/* (UUID(),'esl-fast-beginner-1-79','Bad Manners','Cư xử không đúng mực','BEGINNER_01_ESL_FAST_CHILDREN_079.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,79) */
+	/* (UUID(),'esl-fast-beginner-1-79','Bad Manners','Cư xử không đúng mực','ESL_FAST_BEGINNER_1_079.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,79) */
 	('She has bad manners','Cô ấy cư xử rất thiếu lịch sự','00:00:00.320','00:00:02.980','esl-fast-beginner-1-79'),
 	('She never shows any respect','Cô ấy chẳng bao giờ biết tôn trọng người khác','00:00:03.440','00:00:06.100','esl-fast-beginner-1-79'),
 	('Her mother buys her a present','Mẹ mua cho cô ấy một món quà','00:00:06.700','00:00:08.940','esl-fast-beginner-1-79'),
@@ -40780,7 +40780,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She does not do it','Cô ấy không chịu làm','00:00:27.660','00:00:29.660','esl-fast-beginner-1-79'),
 	('She does not do it','Cô ấy vẫn không chịu làm','00:00:30.320','00:00:31.500','esl-fast-beginner-1-79'),
 
-	/* (UUID(),'esl-fast-beginner-1-80','Transferring to Another Class','Chuyển sang lớp khác','BEGINNER_01_ESL_FAST_CHILDREN_080.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,80) */
+	/* (UUID(),'esl-fast-beginner-1-80','Transferring to Another Class','Chuyển sang lớp khác','ESL_FAST_BEGINNER_1_080.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,80) */
 	('He does not like Ms. Garcia, his math','Cậu ấy không thích cô Garcia, giáo viên môn Toán của mình','00:00:00.060','00:00:04.340','esl-fast-beginner-1-80'),
 	('teacher','','00:00:03.840','00:00:04.760','esl-fast-beginner-1-80'),
 	('She always separates him from his classmates','Cô ấy luôn tách cậu ấy khỏi các bạn cùng lớp','00:00:05.500','00:00:08.640','esl-fast-beginner-1-80'),
@@ -40794,7 +40794,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'esl-fast-beginner-1-81','Good Manners','Cư xử lịch sự','BEGINNER_01_ESL_FAST_CHILDREN_081.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,81) */
+	/* (UUID(),'esl-fast-beginner-1-81','Good Manners','Cư xử lịch sự','ESL_FAST_BEGINNER_1_081.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,81) */
 	('Michelle eats with her family','Michelle ăn cơm cùng gia đình','00:00:00.000','00:00:02.760','esl-fast-beginner-1-81'),
 	('She wants to eat peas','Cô bé muốn ăn đậu Hà Lan','00:00:03.180','00:00:05.140','esl-fast-beginner-1-81'),
 	('She asks her mom, Will you please pass me the peas?','Cô bé hỏi mẹ: Mẹ lấy đậu Hà Lan đưa cho con được không ạ?','00:00:05.700','00:00:10.520','esl-fast-beginner-1-81'),
@@ -40807,7 +40807,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Michelle has really good manners','Michelle là một cô bé rất lịch sự','00:00:27.160','00:00:29.780','esl-fast-beginner-1-81'),
 	('Thank you for watching','Cảm ơn bạn đã xem','00:00:29.280','00:00:31.680','esl-fast-beginner-1-81'),
 
-	/* (UUID(),'esl-fast-beginner-1-82','The Trouble with Braces','Rắc rối với niềng răng','BEGINNER_01_ESL_FAST_CHILDREN_082.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,82) */
+	/* (UUID(),'esl-fast-beginner-1-82','The Trouble with Braces','Rắc rối với niềng răng','ESL_FAST_BEGINNER_1_082.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,82) */
 	('He has bad teeth','Răng của cậu ấy không được đẹp','00:00:00.000','00:00:02.540','esl-fast-beginner-1-82'),
 	('He gets braces','Cậu ấy đeo niềng răng','00:00:02.780','00:00:04.320','esl-fast-beginner-1-82'),
 	('He goes to school','Cậu ấy đi học','00:00:04.760','00:00:06.800','esl-fast-beginner-1-82'),
@@ -40821,7 +40821,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He decides to talk','Cậu ấy quyết định cứ nói chuyện','00:00:26.100','00:00:28.280','esl-fast-beginner-1-82'),
 	('He does not care if people make fun of him anymore','Cậu ấy không còn quan tâm nếu mọi người trêu chọc mình nữa','00:00:28.440','00:00:32.380','esl-fast-beginner-1-82'),
 
-	/* (UUID(),'esl-fast-beginner-1-83','Lost on the First Day','Lạc trong ngày đầu tiên','BEGINNER_01_ESL_FAST_CHILDREN_083.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,83) */
+	/* (UUID(),'esl-fast-beginner-1-83','Lost on the First Day','Lạc trong ngày đầu tiên','ESL_FAST_BEGINNER_1_083.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,83) */
 	('It is the first day of high school','Hôm nay là ngày đầu tiên cô ấy học cấp ba','00:00:00.060','00:00:03.340','esl-fast-beginner-1-83'),
 	('She is completely lost','Cô ấy hoàn toàn không biết đường','00:00:03.740','00:00:05.960','esl-fast-beginner-1-83'),
 	('She has never been here before','Cô ấy chưa từng đến đây bao giờ','00:00:06.400','00:00:08.620','esl-fast-beginner-1-83'),
@@ -40832,7 +40832,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She looks at it','Cô ấy nhìn vào tấm bản đồ','00:00:21.260','00:00:22.720','esl-fast-beginner-1-83'),
 	('She finds her Spanish class','Cô ấy tìm được lớp tiếng Tây Ban Nha của mình','00:00:23.080','00:00:25.460','esl-fast-beginner-1-83'),
 
-	/* (UUID(),'esl-fast-beginner-1-84','Stealing is Bad','Ăn cắp là xấu','BEGINNER_01_ESL_FAST_CHILDREN_084.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,84) */
+	/* (UUID(),'esl-fast-beginner-1-84','Stealing is Bad','Ăn cắp là xấu','ESL_FAST_BEGINNER_1_084.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,84) */
 	('Donna and her uncle go to a school supplies shop','Donna và chú đi đến cửa hàng bán đồ dùng học tập','00:00:00.060','00:00:05.140','esl-fast-beginner-1-84'),
 	('Donna sees a pink eraser','Donna nhìn thấy một cục tẩy màu hồng','00:00:05.400','00:00:07.760','esl-fast-beginner-1-84'),
 	('She likes it','Cô bé rất thích nó','00:00:08.180','00:00:09.640','esl-fast-beginner-1-84'),
@@ -40845,7 +40845,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He makes Donna apologize to the manager','Chú bắt Donna xin lỗi người quản lý','00:00:26.220','00:00:29.380','esl-fast-beginner-1-84'),
 	('He tells her that stealing is bad and that she has to pay for it','Chú nói rằng ăn cắp là việc xấu và cô bé phải trả tiền cho món đồ đó','00:00:30.060','00:00:31.420','esl-fast-beginner-1-84'),
 
-	/* (UUID(),'esl-fast-beginner-1-85','Picking Her Up','Đón cô ấy','BEGINNER_01_ESL_FAST_CHILDREN_085.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,85) */
+	/* (UUID(),'esl-fast-beginner-1-85','Picking Her Up','Đón cô ấy','ESL_FAST_BEGINNER_1_085.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,85) */
 	('He is talking to his friends','Anh ấy đang nói chuyện với bạn bè','00:00:00.000','00:00:03.359','esl-fast-beginner-1-85'),
 	('His cell phone rings','Điện thoại của anh ấy reo','00:00:03.200','00:00:04.980','esl-fast-beginner-1-85'),
 	('He answers it','Anh ấy nghe máy','00:00:05.220','00:00:06.840','esl-fast-beginner-1-85'),
@@ -40861,7 +40861,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'esl-fast-beginner-1-86','Saving the Princess','Giải cứu công chúa','BEGINNER_01_ESL_FAST_CHILDREN_086.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,86) */
+	/* (UUID(),'esl-fast-beginner-1-86','Saving the Princess','Giải cứu công chúa','ESL_FAST_BEGINNER_1_086.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,86) */
 	('The princess is stuck in the tower','Công chúa bị mắc kẹt trong tòa tháp','00:00:00.060','00:00:03.000','esl-fast-beginner-1-86'),
 	('A dragon will eat her soon','Một con rồng sắp ăn thịt cô ấy','00:00:03.100','00:00:05.760','esl-fast-beginner-1-86'),
 	('The king and queen are sad','Nhà vua và hoàng hậu rất buồn','00:00:05.900','00:00:08.920','esl-fast-beginner-1-86'),
@@ -40873,7 +40873,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He takes her to his horse','Anh ấy đưa cô ấy đến chỗ con ngựa của mình','00:00:23.800','00:00:25.860','esl-fast-beginner-1-86'),
 	('They ride back to town','Họ cưỡi ngựa trở về thị trấn','00:00:25.960','00:00:27.980','esl-fast-beginner-1-86'),
 
-	/* (UUID(),'esl-fast-beginner-1-87','Make It Hot, Make It Cold','Làm nóng lên, làm lạnh đi','BEGINNER_01_ESL_FAST_CHILDREN_087.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,87) */
+	/* (UUID(),'esl-fast-beginner-1-87','Make It Hot, Make It Cold','Làm nóng lên, làm lạnh đi','ESL_FAST_BEGINNER_1_087.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,87) */
 	('He wants to eat some pizza','Anh ấy muốn ăn một ít pizza','00:00:00.000','00:00:02.680','esl-fast-beginner-1-87'),
 	('He opens the refrigerator','Anh ấy mở tủ lạnh','00:00:03.080','00:00:05.040','esl-fast-beginner-1-87'),
 	('He reaches for the frozen pizza','Anh ấy lấy chiếc pizza đông lạnh','00:00:05.700','00:00:08.080','esl-fast-beginner-1-87'),
@@ -40888,7 +40888,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He blankets his hands','Anh ấy đắp chăn lên tay','00:00:30.000','00:00:30.600','esl-fast-beginner-1-87'),
 	('He gets ready to go to bed','Anh ấy chuẩn bị đi ngủ','00:00:30.100','00:00:30.700','esl-fast-beginner-1-87'),
 
-	/* (UUID(),'esl-fast-beginner-1-88','A Good Shower','Một buổi tắm sảng khoái','BEGINNER_01_ESL_FAST_CHILDREN_088.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,88) */
+	/* (UUID(),'esl-fast-beginner-1-88','A Good Shower','Một buổi tắm sảng khoái','ESL_FAST_BEGINNER_1_088.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,88) */
 	('She goes to the market','Cô ấy đi chợ','00:00:00.000','00:00:02.180','esl-fast-beginner-1-88'),
 	('She buys ingredients for lunch and dinner','Cô ấy mua nguyên liệu cho bữa trưa và bữa tối','00:00:02.680','00:00:06.100','esl-fast-beginner-1-88'),
 	('She goes to the pharmacy','Cô ấy đi đến hiệu thuốc','00:00:06.520','00:00:08.320','esl-fast-beginner-1-88'),
@@ -40903,7 +40903,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She takes a cold shower','Cô ấy tắm nước lạnh','00:00:28.980','00:00:31.459','esl-fast-beginner-1-88'),
 	('She feels good','Cô ấy cảm thấy dễ chịu','00:00:31.860','00:00:33.480','esl-fast-beginner-1-88'),
 
-	/* (UUID(),'esl-fast-beginner-1-89','The Wrong Color','Màu sắc bị chọn sai','BEGINNER_01_ESL_FAST_CHILDREN_089.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,89) */
+	/* (UUID(),'esl-fast-beginner-1-89','The Wrong Color','Màu sắc bị chọn sai','ESL_FAST_BEGINNER_1_089.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,89) */
 	('He waits for his package','Anh ấy chờ bưu kiện của mình','00:00:00.130','00:00:02.650','esl-fast-beginner-1-89'),
 	('He is excited','Anh ấy rất háo hức','00:00:03.090','00:00:04.590','esl-fast-beginner-1-89'),
 	('He will finally get his T-shirt today','Cuối cùng hôm nay anh ấy cũng sẽ nhận được chiếc áo phông của mình','00:00:04.930','00:00:08.190','esl-fast-beginner-1-89'),
@@ -40917,7 +40917,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The manager apologizes','Quản lý xin lỗi anh ấy','00:00:27.450','00:00:30.130','esl-fast-beginner-1-89'),
 	('He will send the blue T-shirt for free','Họ sẽ gửi chiếc áo phông màu xanh cho anh ấy miễn phí','00:00:30.130','00:00:33.670','esl-fast-beginner-1-89'),
 
-	/* (UUID(),'esl-fast-beginner-1-90','Forgetting Her Glasses','Quên kính của cô ấy','BEGINNER_01_ESL_FAST_CHILDREN_090.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,90) */
+	/* (UUID(),'esl-fast-beginner-1-90','Forgetting Her Glasses','Quên kính của cô ấy','ESL_FAST_BEGINNER_1_090.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,90) */
 	('She goes to English class','Cô ấy đến lớp tiếng Anh','00:00:00.580','00:00:03.260','esl-fast-beginner-1-90'),
 	('She reaches into her backpack','Cô ấy thò tay vào ba lô','00:00:03.480','00:00:05.540','esl-fast-beginner-1-90'),
 	('Her glasses are not inside','Kính của cô ấy không có trong đó','00:00:06.060','00:00:08.460','esl-fast-beginner-1-90'),
@@ -40932,7 +40932,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'esl-fast-beginner-1-91','Quitting His Job','Nghỉ việc','BEGINNER_01_ESL_FAST_CHILDREN_091.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,91) */
+	/* (UUID(),'esl-fast-beginner-1-91','Quitting His Job','Nghỉ việc','ESL_FAST_BEGINNER_1_091.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,91) */
 	('He works at a fast-food restaurant','Anh ấy làm việc tại một nhà hàng đồ ăn nhanh','00:00:00.130','00:00:03.870','esl-fast-beginner-1-91'),
 	('He hates his job','Anh ấy ghét công việc của mình','00:00:03.650','00:00:06.050','esl-fast-beginner-1-91'),
 	('He flips burgers','Anh ấy lật những miếng bánh burger','00:00:06.310','00:00:08.010','esl-fast-beginner-1-91'),
@@ -40944,7 +40944,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She always makes him work extra hours','Bà ấy luôn bắt anh ấy làm thêm giờ','00:00:24.690','00:00:28.070','esl-fast-beginner-1-91'),
 	('He finally quits his job','Cuối cùng anh ấy cũng nghỉ việc','00:00:27.570','00:00:30.750','esl-fast-beginner-1-91'),
 
-	/* (UUID(),'esl-fast-beginner-1-92','Future Goals','Mục tiêu tương lai','BEGINNER_01_ESL_FAST_CHILDREN_092.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,92) */
+	/* (UUID(),'esl-fast-beginner-1-92','Future Goals','Mục tiêu tương lai','ESL_FAST_BEGINNER_1_092.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,92) */
 	('She thinks about the future a lot','Cô ấy thường suy nghĩ rất nhiều về tương lai','00:00:00.060','00:00:03.319','esl-fast-beginner-1-92'),
 	('She wants to be a doctor','Cô ấy muốn trở thành bác sĩ','00:00:03.700','00:00:05.640','esl-fast-beginner-1-92'),
 	('Doctors have cool uniforms','Bác sĩ có những bộ đồng phục rất đẹp','00:00:06.280','00:00:08.740','esl-fast-beginner-1-92'),
@@ -40955,7 +40955,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The houses there are nice','Những ngôi nhà ở đó rất đẹp','00:00:22.020','00:00:24.420','esl-fast-beginner-1-92'),
 	('She wants to get married and have kids, too','Cô ấy cũng muốn kết hôn và có con','00:00:24.820','00:00:28.280','esl-fast-beginner-1-92'),
 
-	/* (UUID(),'esl-fast-beginner-1-93','A Kind Stranger','Một người lạ tốt bụng','BEGINNER_01_ESL_FAST_CHILDREN_093.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,93) */
+	/* (UUID(),'esl-fast-beginner-1-93','A Kind Stranger','Một người lạ tốt bụng','ESL_FAST_BEGINNER_1_093.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,93) */
 	('She walks across the street','Cô ấy đi bộ băng qua đường','00:00:00.000','00:00:02.820','esl-fast-beginner-1-93'),
 	('She has four boxes in her hand','Cô ấy cầm bốn chiếc hộp trên tay','00:00:03.160','00:00:05.920','esl-fast-beginner-1-93'),
 	('They are very heavy','Chúng rất nặng','00:00:06.100','00:00:07.900','esl-fast-beginner-1-93'),
@@ -40968,7 +40968,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He carries them to her car','Anh ấy mang chúng đến xe của cô ấy','00:00:22.960','00:00:25.560','esl-fast-beginner-1-93'),
 	('She says, thank you','Cô ấy nói: Cảm ơn anh','00:00:25.960','00:00:28.120','esl-fast-beginner-1-93');
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'esl-fast-beginner-2-1','Going to School','Đi tới trường','BEGINNER_02_ESL_FAST_CHILDREN_001.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',1,1,1) */
+	/* (UUID(),'esl-fast-beginner-2-1','Going to School','Đi tới trường','ESL_FAST_BEGINNER_2_001.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',1,1,1) */
 	('He eats his breakfast','Cậu bé ăn bữa sáng','00:00:00.130','00:00:03.400','esl-fast-beginner-2-1'),
 	('He leaves his house','Cậu bé rời khỏi nhà','00:00:03.810','00:00:06.490','esl-fast-beginner-2-1'),
 	('He walks to the bus stop','Cậu bé đi bộ đến trạm xe buýt','00:00:07.310','00:00:10.230','esl-fast-beginner-2-1'),
@@ -40982,7 +40982,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He thanks the bus driver','Cậu bé cảm ơn tài xế xe buýt','00:00:34.850','00:00:37.490','esl-fast-beginner-2-1'),
 	('He exits the bus','Cậu bé xuống xe buýt','00:00:38.390','00:00:40.990','esl-fast-beginner-2-1'),
 
-	/* (UUID(),'esl-fast-beginner-2-2','A Nice Teacher','Một giáo viên tốt','BEGINNER_02_ESL_FAST_CHILDREN_002.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',1,0,2) */
+	/* (UUID(),'esl-fast-beginner-2-2','A Nice Teacher','Một giáo viên tốt','ESL_FAST_BEGINNER_2_002.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',1,0,2) */
 	('She is a teacher','Cô là một giáo viên','00:00:00.720','00:00:02.220','esl-fast-beginner-2-2'),
 	('She teaches third graders','Cô dạy học sinh lớp Ba','00:00:02.300','00:00:05.220','esl-fast-beginner-2-2'),
 	('She says, Good morning every day','Ngày nào cô cũng chào: "Chào buổi sáng!"','00:00:06.360','00:00:10.100','esl-fast-beginner-2-2'),
@@ -40993,7 +40993,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Teachers should get more money','Giáo viên nên được trả lương cao hơn','00:00:25.800','00:00:27.900','esl-fast-beginner-2-2'),
 	('They work so hard','Họ làm việc rất vất vả','00:00:27.900','00:00:31.419','esl-fast-beginner-2-2'),
 
-	/* (UUID(),'esl-fast-beginner-2-3','Harry Studies Everywhere','Harry học ở mọi nơi','BEGINNER_02_ESL_FAST_CHILDREN_003.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',1,0,3) */
+	/* (UUID(),'esl-fast-beginner-2-3','Harry Studies Everywhere','Harry học ở mọi nơi','ESL_FAST_BEGINNER_2_003.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',1,0,3) */
 	('Harry thinks his grades are very important','Harry nghĩ rằng điểm số của mình rất quan trọng','00:00:00.760','00:00:04.100','esl-fast-beginner-2-3'),
 	('He studies a lot','Cậu bé học rất chăm','00:00:04.100','00:00:07.100','esl-fast-beginner-2-3'),
 	('He studies everywhere he goes','Đi đến đâu cậu bé cũng học','00:00:07.880','00:00:11.000','esl-fast-beginner-2-3'),
@@ -41004,7 +41004,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Harry does not care','Harry chẳng bận tâm','00:00:27.340','00:00:29.700','esl-fast-beginner-2-3'),
 	('He gets A\'s all the time','Lúc nào cậu bé cũng đạt điểm A','00:00:30.620','00:00:33.600','esl-fast-beginner-2-3'),
 
-	/* (UUID(),'esl-fast-beginner-2-4','The Coloring Book','Cuốn sách tô màu','BEGINNER_02_ESL_FAST_CHILDREN_004.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',1,0,4) */
+	/* (UUID(),'esl-fast-beginner-2-4','The Coloring Book','Cuốn sách tô màu','ESL_FAST_BEGINNER_2_004.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',1,0,4) */
 	('She takes out her coloring book','Cô bé lấy quyển sách tô màu của mình ra','00:00:00.660','00:00:03.200','esl-fast-beginner-2-4'),
 	('She gets her crayons','Cô bé lấy hộp bút sáp màu của mình','00:00:03.300','00:00:06.200','esl-fast-beginner-2-4'),
 	('She opens the book','Cô bé mở quyển sách ra','00:00:07.119','00:00:09.400','esl-fast-beginner-2-4'),
@@ -41015,7 +41015,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She rips the page out','Cô bé xé trang giấy đó ra','00:00:29.880','00:00:32.920','esl-fast-beginner-2-4'),
 	('She sticks it to the wall','Cô bé dán nó lên tường','00:00:33.400','00:00:36.220','esl-fast-beginner-2-4'),
 
-	/* (UUID(),'esl-fast-beginner-2-5','Picking a Book','Chọn một cuốn sách','BEGINNER_02_ESL_FAST_CHILDREN_005.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',1,0,5) */
+	/* (UUID(),'esl-fast-beginner-2-5','Picking a Book','Chọn một cuốn sách','ESL_FAST_BEGINNER_2_005.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',1,0,5) */
 	('She goes to the library','Cô bé đi đến thư viện','00:00:00.070','00:00:03.100','esl-fast-beginner-2-5'),
 	('She looks at the shelves','Cô bé nhìn lên các kệ sách','00:00:03.300','00:00:06.150','esl-fast-beginner-2-5'),
 	('She pulls out a book','Cô bé lấy một quyển sách xuống','00:00:06.630','00:00:09.310','esl-fast-beginner-2-5'),
@@ -41032,7 +41032,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'esl-fast-beginner-2-6','Getting Ready to Study','Chuẩn bị học','BEGINNER_02_ESL_FAST_CHILDREN_006.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',1,0,6) */
+	/* (UUID(),'esl-fast-beginner-2-6','Getting Ready to Study','Chuẩn bị học','ESL_FAST_BEGINNER_2_006.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',1,0,6) */
 	('He gets ready to study at the library','Cậu bé chuẩn bị học ở thư viện','00:00:00.010','00:00:04.300','esl-fast-beginner-2-6'),
 	('He puts his science textbook in his backpack','Cậu bé bỏ sách giáo khoa môn Khoa học vào ba lô','00:00:04.400','00:00:09.270','esl-fast-beginner-2-6'),
 	('He puts his pencils and pens in his backpack','Cậu bé bỏ bút chì và bút mực vào ba lô','00:00:10.550','00:00:15.290','esl-fast-beginner-2-6'),
@@ -41042,7 +41042,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He puts a notebook in his backpack','Cậu bé bỏ một quyển vở vào ba lô','00:00:27.650','00:00:32.490','esl-fast-beginner-2-6'),
 	('He is ready to study','Cậu bé đã sẵn sàng để học','00:00:33.190','00:00:36.210','esl-fast-beginner-2-6'),
 
-	/* (UUID(),'esl-fast-beginner-2-7','Studying at the Library','Học ở thư viện','BEGINNER_02_ESL_FAST_CHILDREN_007.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',1,0,7) */
+	/* (UUID(),'esl-fast-beginner-2-7','Studying at the Library','Học ở thư viện','ESL_FAST_BEGINNER_2_007.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',1,0,7) */
 	('He is at the library','Cậu bé đang ở thư viện','00:00:00.520','00:00:02.660','esl-fast-beginner-2-7'),
 	('There are a lot of people','Ở đó có rất nhiều người','00:00:03.100','00:00:05.940','esl-fast-beginner-2-7'),
 	('Everyone is studying for their final exams','Mọi người đều đang ôn thi cuối kỳ','00:00:07.220','00:00:10.940','esl-fast-beginner-2-7'),
@@ -41054,7 +41054,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He highlights the important parts','Cậu bé tô nổi bật những phần quan trọng','00:00:28.680','00:00:32.500','esl-fast-beginner-2-7'),
 	('Then, he takes a study break','Sau đó, cậu bé nghỉ giải lao một lúc','00:00:33.040','00:00:36.260','esl-fast-beginner-2-7'),
 
-	/* (UUID(),'esl-fast-beginner-2-8','Taking Notes','Ghi chú','BEGINNER_02_ESL_FAST_CHILDREN_008.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',0,0,8) */
+	/* (UUID(),'esl-fast-beginner-2-8','Taking Notes','Ghi chú','ESL_FAST_BEGINNER_2_008.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',0,0,8) */
 	('He takes out his notebook','Cậu bé lấy quyển vở ra','00:00:00.010','00:00:02.790','esl-fast-beginner-2-8'),
 	('He reads his textbook','Cậu bé đọc sách giáo khoa','00:00:02.890','00:00:05.610','esl-fast-beginner-2-8'),
 	('He copies the chapter title on top of the page','Cậu bé chép tiêu đề chương lên đầu trang','00:00:06.570','00:00:11.390','esl-fast-beginner-2-8'),
@@ -41064,7 +41064,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He takes more notes','Cậu bé ghi chép thêm','00:00:24.350','00:00:26.700','esl-fast-beginner-2-8'),
 	('He writes a summary of the chapter at the end','Cuối cùng, cậu bé viết phần tóm tắt của chương','00:00:26.800','00:00:32.450','esl-fast-beginner-2-8'),
 
-	/* (UUID(),'esl-fast-beginner-2-9','She Writes an Essay','Cô ấy viết một bài luận','BEGINNER_02_ESL_FAST_CHILDREN_009.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',0,0,9) */
+	/* (UUID(),'esl-fast-beginner-2-9','She Writes an Essay','Cô ấy viết một bài luận','ESL_FAST_BEGINNER_2_009.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',0,0,9) */
 	('She is taking an English class','Cô bé đang học một lớp tiếng Anh','00:00:00.070','00:00:03.470','esl-fast-beginner-2-9'),
 	('She has to write an essay','Cô bé phải viết một bài luận','00:00:03.710','00:00:06.330','esl-fast-beginner-2-9'),
 	('The essay is on penguins','Bài luận nói về loài chim cánh cụt','00:00:07.490','00:00:09.870','esl-fast-beginner-2-9'),
@@ -41073,7 +41073,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Her first sentence is a riddle about penguins','Câu đầu tiên là một câu đố về chim cánh cụt','00:00:21.790','00:00:26.200','esl-fast-beginner-2-9'),
 	('Her last sentence is the answer to the riddle','Câu cuối cùng là lời giải cho câu đố đó','00:00:26.250','00:00:31.950','esl-fast-beginner-2-9'),
 
-	/* (UUID(),'esl-fast-beginner-2-10','He Takes a Test','Anh ấy làm bài kiểm tra','BEGINNER_02_ESL_FAST_CHILDREN_010.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',0,0,10) */
+	/* (UUID(),'esl-fast-beginner-2-10','He Takes a Test','Anh ấy làm bài kiểm tra','ESL_FAST_BEGINNER_2_010.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',0,0,10) */
 	('It is Lily\'s birthday','Hôm nay là sinh nhật của Lily','00:00:00.390','00:00:02.850','esl-fast-beginner-2-10'),
 	('She gets out of bed','Cô bé bước xuống giường','00:00:03.510','00:00:05.310','esl-fast-beginner-2-10'),
 	('Nobody says anything to her','Không ai nói gì với cô bé','00:00:05.990','00:00:08.090','esl-fast-beginner-2-10'),
@@ -41089,7 +41089,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'esl-fast-beginner-2-11','Punching a Wall','Đấm vào tường','BEGINNER_02_ESL_FAST_CHILDREN_011.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',0,0,11) */
+	/* (UUID(),'esl-fast-beginner-2-11','Punching a Wall','Đấm vào tường','ESL_FAST_BEGINNER_2_011.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',0,0,11) */
 	('Kate is walking','Kate đang đi dạo','00:00:00.650','00:00:02.590','esl-fast-beginner-2-11'),
 	('She sees a dog','Cô bé nhìn thấy một chú chó','00:00:03.210','00:00:04.930','esl-fast-beginner-2-11'),
 	('The dog wags its tail','Chú chó vẫy đuôi','00:00:05.250','00:00:07.650','esl-fast-beginner-2-11'),
@@ -41103,7 +41103,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Kate walks Toby every day','Ngày nào Kate cũng dắt Toby đi dạo','00:00:27.350','00:00:30.670','esl-fast-beginner-2-11'),
 	('They love each other','Cả hai rất yêu quý nhau','00:00:31.390','00:00:32.730','esl-fast-beginner-2-11'),
 
-	/* (UUID(),'esl-fast-beginner-2-12','School Supplies Box','Hộp đồ dùng học tập','BEGINNER_02_ESL_FAST_CHILDREN_012.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',0,0,12) */
+	/* (UUID(),'esl-fast-beginner-2-12','School Supplies Box','Hộp đồ dùng học tập','ESL_FAST_BEGINNER_2_012.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',0,0,12) */
 	('Ms Howard assigns a project','Cô Howard giao một bài làm theo dự án','00:00:00.260','00:00:03.580','esl-fast-beginner-2-12'),
 	('She wants the students to work in groups','Cô muốn các học sinh làm việc theo nhóm','00:00:04.380','00:00:07.339','esl-fast-beginner-2-12'),
 	('Adam works with Joe and Bill','Adam làm chung nhóm với Joe và Bill','00:00:08.160','00:00:10.700','esl-fast-beginner-2-12'),
@@ -41116,7 +41116,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She gives them a high grade','Cô cho cả nhóm điểm cao','00:00:26.460','00:00:28.920','esl-fast-beginner-2-12'),
 	('Adam, Joe, and Bill are joyful','Adam, Joe và Bill đều rất vui','00:00:29.480','00:00:33.240','esl-fast-beginner-2-12'),
 
-	/* (UUID(),'esl-fast-beginner-2-13','He Loses the Cap','Anh ấy làm mất mũ','BEGINNER_02_ESL_FAST_CHILDREN_013.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',0,0,13) */
+	/* (UUID(),'esl-fast-beginner-2-13','He Loses the Cap','Anh ấy làm mất mũ','ESL_FAST_BEGINNER_2_013.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',0,0,13) */
 	('He takes out a pen','Cậu bé lấy một chiếc bút ra','00:00:00.260','00:00:02.220','esl-fast-beginner-2-13'),
 	('He takes off the cap','Cậu bé tháo nắp bút ra','00:00:02.540','00:00:05.080','esl-fast-beginner-2-13'),
 	('He drops it','Cậu bé làm rơi nó','00:00:05.380','00:00:07.360','esl-fast-beginner-2-13'),
@@ -41130,7 +41130,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He goes to the other side of the room','Cậu bé đi sang phía bên kia căn phòng','00:00:28.760','00:00:31.860','esl-fast-beginner-2-13'),
 	('He sees the cap','Cậu bé nhìn thấy nắp bút','00:00:32.580','00:00:34.920','esl-fast-beginner-2-13'),
 
-	/* (UUID(),'esl-fast-beginner-2-14','The Lunch Bag','Túi đựng bữa trưa','BEGINNER_02_ESL_FAST_CHILDREN_014.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',0,0,14) */
+	/* (UUID(),'esl-fast-beginner-2-14','The Lunch Bag','Túi đựng bữa trưa','ESL_FAST_BEGINNER_2_014.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',0,0,14) */
 	('She has a lunch bag','Cô bé có một chiếc túi đựng đồ ăn trưa','00:00:00.400','00:00:02.580','esl-fast-beginner-2-14'),
 	('It has two pockets','Nó có hai ngăn','00:00:03.160','00:00:05.480','esl-fast-beginner-2-14'),
 	('There is one on top','Có một ngăn ở phía trên','00:00:06.180','00:00:08.740','esl-fast-beginner-2-14'),
@@ -41142,7 +41142,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('There is a long strap, too','Nó cũng có một dây đeo dài','00:00:25.020','00:00:28.500','esl-fast-beginner-2-14'),
 	('She can put it over her shoulder','Cô bé có thể đeo nó lên vai','00:00:28.720','00:00:31.779','esl-fast-beginner-2-14'),
 
-	/* (UUID(),'esl-fast-beginner-2-15','School Cafeteria','Căng tin trường học','BEGINNER_02_ESL_FAST_CHILDREN_015.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',0,0,15) */
+	/* (UUID(),'esl-fast-beginner-2-15','School Cafeteria','Căng tin trường học','ESL_FAST_BEGINNER_2_015.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',0,0,15) */
 	('He gets school lunch','Cậu bé ăn trưa ở trường','00:00:00.170','00:00:02.650','esl-fast-beginner-2-15'),
 	('It is not good','Đồ ăn không ngon','00:00:02.690','00:00:04.890','esl-fast-beginner-2-15'),
 	('At least it is free','Ít nhất thì đồ ăn cũng miễn phí','00:00:04.810','00:00:07.710','esl-fast-beginner-2-15'),
@@ -41157,7 +41157,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'esl-fast-beginner-2-16','Ice Cream in the Summer','Kem vào mùa hè','BEGINNER_02_ESL_FAST_CHILDREN_016.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',0,0,16) */
+	/* (UUID(),'esl-fast-beginner-2-16','Ice Cream in the Summer','Kem vào mùa hè','ESL_FAST_BEGINNER_2_016.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',0,0,16) */
 	('It is summer','Bây giờ là mùa hè','00:00:00.340','00:00:01.740','esl-fast-beginner-2-16'),
 	('It is three o\'clock','Bây giờ là ba giờ','00:00:01.900','00:00:04.260','esl-fast-beginner-2-16'),
 	('It is very hot','Trời rất nóng','00:00:04.300','00:00:06.560','esl-fast-beginner-2-16'),
@@ -41169,7 +41169,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The line is long','Hàng người xếp hàng rất dài','00:00:27.780','00:00:30.300','esl-fast-beginner-2-16'),
 	('Everyone wants ice cream in the summer','Mùa hè ai cũng muốn ăn kem','00:00:31.140','00:00:34.140','esl-fast-beginner-2-16'),
 
-	/* (UUID(),'esl-fast-beginner-2-17','A Trip to the Library','Một chuyến đi đến thư viện','BEGINNER_02_ESL_FAST_CHILDREN_017.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',0,0,17) */
+	/* (UUID(),'esl-fast-beginner-2-17','A Trip to the Library','Một chuyến đi đến thư viện','ESL_FAST_BEGINNER_2_017.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',0,0,17) */
 	('She likes sour stuff','Cô bé thích những thứ có vị chua','00:00:00.420','00:00:02.780','esl-fast-beginner-2-17'),
 	('Lemons are sour','Chanh có vị chua','00:00:03.480','00:00:05.360','esl-fast-beginner-2-17'),
 	('Lemons are yellow','Chanh có màu vàng','00:00:06.440','00:00:08.020','esl-fast-beginner-2-17'),
@@ -41181,7 +41181,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Her mom says she is weird','Mẹ cô bé nói rằng cô bé thật kỳ lạ','00:00:25.940','00:00:29.080','esl-fast-beginner-2-17'),
 	('Most people eat lemon with other food','Hầu hết mọi người ăn chanh cùng với những món ăn khác','00:00:28.580','00:00:33.620','esl-fast-beginner-2-17'),
 
-	/* (UUID(),'esl-fast-beginner-2-18','A Lot of Ants','Rất nhiều kiến','BEGINNER_02_ESL_FAST_CHILDREN_018.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',0,0,18) */
+	/* (UUID(),'esl-fast-beginner-2-18','A Lot of Ants','Rất nhiều kiến','ESL_FAST_BEGINNER_2_018.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',0,0,18) */
 	('He is hungry','Cậu bé đói bụng','00:00:00.000','00:00:02.230','esl-fast-beginner-2-18'),
 	('He smells something good','Cậu bé ngửi thấy mùi thơm của một món gì đó','00:00:02.230','00:00:05.550','esl-fast-beginner-2-18'),
 	('It is coming from the kitchen','Mùi đó bay ra từ nhà bếp','00:00:05.610','00:00:08.530','esl-fast-beginner-2-18'),
@@ -41194,7 +41194,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He sticks the fork in it','Cậu bé xiên nĩa vào miếng thịt','00:00:27.290','00:00:30.210','esl-fast-beginner-2-18'),
 	('He eats the chicken','Cậu bé ăn thịt gà','00:00:29.810','00:00:32.510','esl-fast-beginner-2-18'),
 
-	/* (UUID(),'esl-fast-beginner-2-19','Picking a Costume','Chọn trang phục hóa trang','BEGINNER_02_ESL_FAST_CHILDREN_019.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',0,0,19) */
+	/* (UUID(),'esl-fast-beginner-2-19','Picking a Costume','Chọn trang phục hóa trang','ESL_FAST_BEGINNER_2_019.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',0,0,19) */
 	('He slices up tofu in ten pieces','Cậu bé cắt đậu phụ thành mười miếng','00:00:00.300','00:00:03.920','esl-fast-beginner-2-19'),
 	('He puts the pan on the stove','Cậu bé đặt chảo lên bếp','00:00:04.360','00:00:07.680','esl-fast-beginner-2-19'),
 	('He turns on the stove','Cậu bé bật bếp','00:00:08.080','00:00:10.780','esl-fast-beginner-2-19'),
@@ -41206,7 +41206,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He waits for the tofu to turn brown again','Cậu bé chờ đậu phụ chuyển sang màu vàng nâu một lần nữa','00:00:30.160','00:00:34.240','esl-fast-beginner-2-19'),
 	('He turns off the stove','Cậu bé tắt bếp','00:00:34.440','00:00:37.280','esl-fast-beginner-2-19'),
 
-	/* (UUID(),'esl-fast-beginner-2-20','Petting Zoo','Sở thú cưng','BEGINNER_02_ESL_FAST_CHILDREN_020.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',0,0,20) */
+	/* (UUID(),'esl-fast-beginner-2-20','Petting Zoo','Sở thú cưng','ESL_FAST_BEGINNER_2_020.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',0,0,20) */
 	('He stands in front of the supermarket','Cậu bé đứng trước siêu thị','00:00:00.220','00:00:03.260','esl-fast-beginner-2-20'),
 	('He stands behind a table','Cậu bé đứng phía sau một chiếc bàn','00:00:03.320','00:00:06.780','esl-fast-beginner-2-20'),
 	('His chocolate is on the table','Những thanh sô-cô-la của cậu bé ở trên bàn','00:00:07.640','00:00:10.560','esl-fast-beginner-2-20'),
@@ -41220,7 +41220,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'esl-fast-beginner-2-21','Mom is Mad','Mẹ tức giận','BEGINNER_02_ESL_FAST_CHILDREN_021.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',0,0,21) */
+	/* (UUID(),'esl-fast-beginner-2-21','Mom is Mad','Mẹ tức giận','ESL_FAST_BEGINNER_2_021.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',0,0,21) */
 	('Kelly and Julie are best friends','Kelly và Julie là đôi bạn thân nhất','00:00:00.000','00:00:03.910','esl-fast-beginner-2-21'),
 	('They do everything together','Hai bạn làm mọi việc cùng nhau','00:00:04.290','00:00:06.510','esl-fast-beginner-2-21'),
 	('They walk to school together every morning','Sáng nào hai bạn cũng cùng nhau đi bộ đến trường','00:00:07.150','00:00:10.590','esl-fast-beginner-2-21'),
@@ -41233,7 +41233,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('They help each other out','Hai bạn giúp đỡ lẫn nhau','00:00:30.910','00:00:33.710','esl-fast-beginner-2-21'),
 	('They plan to go to the same college','Hai bạn dự định sẽ học cùng một trường đại học','00:00:34.250','00:00:37.470','esl-fast-beginner-2-21'),
 
-	/* (UUID(),'esl-fast-beginner-2-22','Father\'s Day','Ngày của Cha','BEGINNER_02_ESL_FAST_CHILDREN_022.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',0,0,22) */
+	/* (UUID(),'esl-fast-beginner-2-22','Father\'s Day','Ngày của Cha','ESL_FAST_BEGINNER_2_022.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',0,0,22) */
 	('Howard goes to a backpack store','Howard đến một cửa hàng bán ba lô','00:00:00.500','00:00:03.160','esl-fast-beginner-2-22'),
 	('He likes the red backpack','Cậu bé thích chiếc ba lô màu đỏ','00:00:03.140','00:00:06.240','esl-fast-beginner-2-22'),
 	('He looks at the tag','Cậu bé nhìn vào bảng giá','00:00:06.720','00:00:09.300','esl-fast-beginner-2-22'),
@@ -41244,7 +41244,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('How about $30, and I tell my friends to come here?','30 đô la nhé, và tôi sẽ bảo bạn bè tôi đến đây mua hàng?','00:00:24.840','00:00:30.140','esl-fast-beginner-2-22'),
 	('The cashier agrees to that deal','Nhân viên thu ngân đồng ý với thỏa thuận đó','00:00:30.740','00:00:33.860','esl-fast-beginner-2-22'),
 
-	/* (UUID(),'esl-fast-beginner-2-23','He Goes to a Hat Store','Anh ấy đi đến cửa hàng mũ','BEGINNER_02_ESL_FAST_CHILDREN_023.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',0,0,23) */
+	/* (UUID(),'esl-fast-beginner-2-23','He Goes to a Hat Store','Anh ấy đi đến cửa hàng mũ','ESL_FAST_BEGINNER_2_023.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',0,0,23) */
 	('He is bald','Anh ấy bị hói','00:00:00.340','00:00:01.880','esl-fast-beginner-2-23'),
 	('He wants to get a hat to cover his baldness','Anh ấy muốn mua một chiếc mũ để che chỗ hói','00:00:02.000','00:00:06.420','esl-fast-beginner-2-23'),
 	('He goes to a hat store','Anh ấy đến một cửa hàng bán mũ','00:00:07.080','00:00:09.620','esl-fast-beginner-2-23'),
@@ -41255,7 +41255,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('They are good to wear in the winter','Những chiếc mũ này thích hợp để đội vào mùa đông','00:00:20.800','00:00:23.060','esl-fast-beginner-2-23'),
 	('He buys a beanie and a cap','Anh ấy mua một chiếc mũ len và một chiếc mũ lưỡi trai','00:00:23.660','00:00:27.280','esl-fast-beginner-2-23'),
 
-	/* (UUID(),'esl-fast-beginner-2-24','She Needs New Clothes','Cô ấy cần quần áo mới','BEGINNER_02_ESL_FAST_CHILDREN_024.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',0,0,24) */
+	/* (UUID(),'esl-fast-beginner-2-24','She Needs New Clothes','Cô ấy cần quần áo mới','ESL_FAST_BEGINNER_2_024.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',0,0,24) */
 	('She needs to get new clothes','Cô bé cần mua quần áo mới','00:00:00.210','00:00:03.010','esl-fast-beginner-2-24'),
 	('She does not fit into her old clothes anymore','Cô bé không còn mặc vừa quần áo cũ nữa','00:00:03.510','00:00:07.350','esl-fast-beginner-2-24'),
 	('She goes to the mall','Cô bé đến trung tâm mua sắm','00:00:07.770','00:00:10.130','esl-fast-beginner-2-24'),
@@ -41267,7 +41267,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She has a lot of shopping bags','Cô bé có rất nhiều túi mua sắm','00:00:28.470','00:00:32.090','esl-fast-beginner-2-24'),
 	('She can\'t wait to wear her new clothes','Cô bé nóng lòng muốn mặc những bộ quần áo mới','00:00:32.690','00:00:36.170','esl-fast-beginner-2-24'),
 
-	/* (UUID(),'esl-fast-beginner-2-25','She Buys a Skirt','Cô ấy mua một chiếc váy','BEGINNER_02_ESL_FAST_CHILDREN_025.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',0,0,25) */
+	/* (UUID(),'esl-fast-beginner-2-25','She Buys a Skirt','Cô ấy mua một chiếc váy','ESL_FAST_BEGINNER_2_025.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',0,0,25) */
 	('She goes to the mall','Cô bé đến trung tâm mua sắm','00:00:00.360','00:00:02.420','esl-fast-beginner-2-25'),
 	('She goes inside a store','Cô bé bước vào một cửa hàng','00:00:02.360','00:00:05.640','esl-fast-beginner-2-25'),
 	('She sees a nice skirt','Cô bé nhìn thấy một chiếc chân váy rất đẹp','00:00:06.080','00:00:09.320','esl-fast-beginner-2-25'),
@@ -41283,7 +41283,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'esl-fast-beginner-2-26','White Shirt','Áo sơ mi trắng','BEGINNER_02_ESL_FAST_CHILDREN_026.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',1,0,26) */
+	/* (UUID(),'esl-fast-beginner-2-26','White Shirt','Áo sơ mi trắng','ESL_FAST_BEGINNER_2_026.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',1,0,26) */
 	('He puts on his white shirt','Cậu bé mặc chiếc áo sơ mi trắng vào','00:00:00.340','00:00:03.540','esl-fast-beginner-2-26'),
 	('His mom tells him to be careful','Mẹ cậu bé bảo cậu bé phải cẩn thận','00:00:03.800','00:00:07.440','esl-fast-beginner-2-26'),
 	('White shirts get dirty easily','Áo sơ mi trắng rất dễ bị bẩn','00:00:08.340','00:00:10.940','esl-fast-beginner-2-26'),
@@ -41295,7 +41295,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He takes off the pizza','Cậu bé lấy miếng pizza ra khỏi áo','00:00:27.760','00:00:30.380','esl-fast-beginner-2-26'),
 	('There is an orange triangle stain','Có một vết bẩn hình tam giác màu cam','00:00:31.020','00:00:34.980','esl-fast-beginner-2-26'),
 
-	/* (UUID(),'esl-fast-beginner-2-27','Ugly Boots','Đôi ủng xấu xí','BEGINNER_02_ESL_FAST_CHILDREN_027.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',1,0,27) */
+	/* (UUID(),'esl-fast-beginner-2-27','Ugly Boots','Đôi ủng xấu xí','ESL_FAST_BEGINNER_2_027.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',1,0,27) */
 	('People think his boots are ugly','Mọi người nghĩ đôi bốt của cậu bé xấu','00:00:00.000','00:00:03.750','esl-fast-beginner-2-27'),
 	('They are brown','Chúng có màu nâu','00:00:04.530','00:00:05.890','esl-fast-beginner-2-27'),
 	('They have yellow spots','Chúng có những đốm màu vàng','00:00:06.310','00:00:08.550','esl-fast-beginner-2-27'),
@@ -41307,7 +41307,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('His mom tells him to get new boots','Mẹ cậu bé bảo cậu bé mua một đôi bốt mới','00:00:27.930','00:00:33.090','esl-fast-beginner-2-27'),
 	('He says no','Cậu bé nói không','00:00:33.250','00:00:35.850','esl-fast-beginner-2-27'),
 
-	/* (UUID(),'esl-fast-beginner-2-28','Shoe Collection','Bộ sưu tập giày','BEGINNER_02_ESL_FAST_CHILDREN_028.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',1,0,28) */
+	/* (UUID(),'esl-fast-beginner-2-28','Shoe Collection','Bộ sưu tập giày','ESL_FAST_BEGINNER_2_028.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',1,0,28) */
 	('He collects shoes','Cậu bé sưu tầm giày','00:00:00.000','00:00:02.940','esl-fast-beginner-2-28'),
 	('He has 50 pairs of shoes','Cậu bé có 50 đôi giày','00:00:03.120','00:00:06.760','esl-fast-beginner-2-28'),
 	('Some shoes are for running','Một số đôi giày dùng để chạy bộ','00:00:07.560','00:00:10.100','esl-fast-beginner-2-28'),
@@ -41318,7 +41318,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('His favorite pair is designed by Michael Jordan','Đôi giày cậu bé thích nhất được thiết kế bởi Michael Jordan','00:00:25.640','00:00:29.100','esl-fast-beginner-2-28'),
 	('Michael Jordan is a retired basketball player','Michael Jordan là một cầu thủ bóng rổ đã giải nghệ','00:00:29.100','00:00:34.060','esl-fast-beginner-2-28'),
 
-	/* (UUID(),'esl-fast-beginner-2-29','Ear Piercings','Xỏ khuyên tai','BEGINNER_02_ESL_FAST_CHILDREN_029.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',1,0,29) */
+	/* (UUID(),'esl-fast-beginner-2-29','Ear Piercings','Xỏ khuyên tai','ESL_FAST_BEGINNER_2_029.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',1,0,29) */
 	('He wants to pierce his ears','Cậu bé muốn xỏ khuyên tai','00:00:00.000','00:00:03.190','esl-fast-beginner-2-29'),
 	('His mom does not want him to','Mẹ cậu bé không muốn cậu bé làm vậy','00:00:03.630','00:00:06.750','esl-fast-beginner-2-29'),
 	('She thinks boys should not have earrings','Bà ấy nghĩ con trai không nên đeo khuyên tai','00:00:07.050','00:00:10.450','esl-fast-beginner-2-29'),
@@ -41328,7 +41328,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Others say it would look terrible','Những người khác nói trông sẽ rất xấu','00:00:21.730','00:00:24.950','esl-fast-beginner-2-29'),
 	('He thinks about getting a fake earring','Cậu bé nghĩ đến việc mua một chiếc khuyên tai giả','00:00:25.250','00:00:28.710','esl-fast-beginner-2-29'),
 
-	/* (UUID(),'esl-fast-beginner-2-30','Black Friday','Thứ Sáu Đen','BEGINNER_02_ESL_FAST_CHILDREN_030.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',1,0,30) */
+	/* (UUID(),'esl-fast-beginner-2-30','Black Friday','Thứ Sáu Đen','ESL_FAST_BEGINNER_2_030.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-2',1,0,30) */
 	('It is Black Friday','Hôm nay là ngày Black Friday','00:00:00.340','00:00:02.240','esl-fast-beginner-2-30'),
 	('Black Friday is always the day after Thanksgiving','Black Friday luôn là ngày ngay sau Lễ Tạ ơn','00:00:02.660','00:00:07.300','esl-fast-beginner-2-30'),
 	('A lot of stores have good deals','Nhiều cửa hàng có những món hàng giảm giá rất hấp dẫn','00:00:08.220','00:00:11.220','esl-fast-beginner-2-30'),
@@ -41341,7 +41341,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Sometimes, people fight for items','Đôi khi mọi người còn tranh giành đồ với nhau','00:00:28.670','00:00:32.120','esl-fast-beginner-2-30'),
 	('It can get crazy','Mọi chuyện có thể trở nên rất hỗn loạn','00:00:32.500','00:00:34.580','esl-fast-beginner-2-30');
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'esl-fast-beginner-3-1','Going to School','Đi tới trường','BEGINNER_03_ESL_FAST_CHILDREN_001.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-3',0,0,1) */
+	/* (UUID(),'esl-fast-beginner-3-1','Going to School','Đi tới trường','ESL_FAST_BEGINNER_3_001.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-3',0,0,1) */
 	('Claire is five years old','Claire năm nay 5 tuổi','00:00:00.000','00:00:02.970','esl-fast-beginner-3-1'),
 	('She watches a lot of TV','Cô bé xem TV rất nhiều','00:00:03.290','00:00:06.090','esl-fast-beginner-3-1'),
 	('Her parents want her to read more','Bố mẹ muốn cô bé đọc sách nhiều hơn','00:00:06.610','00:00:10.150','esl-fast-beginner-3-1'),
@@ -41362,7 +41362,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She gives her a book based on a movie','Chị đưa cho cô bé một cuốn sách dựa theo một bộ phim','00:00:54.130','00:00:57.590','esl-fast-beginner-3-1'),
 	('Claire reads it','Claire đọc cuốn sách đó','00:00:58.070','00:00:59.830','esl-fast-beginner-3-1'),
 
-	/* (UUID(),'esl-fast-beginner-3-2','Claire Reads a Book','Claire đọc sách','BEGINNER_03_ESL_FAST_CHILDREN_002.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-3',0,0,2) */
+	/* (UUID(),'esl-fast-beginner-3-2','Claire Reads a Book','Claire đọc sách','ESL_FAST_BEGINNER_3_002.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-3',0,0,2) */
 	('Sally and her mom went shopping','Sally và mẹ đi mua sắm','00:00:00.460','00:00:03.319','esl-fast-beginner-3-2'),
 	('They are looking for a chair','Hai mẹ con đang tìm mua một chiếc ghế','00:00:03.820','00:00:05.980','esl-fast-beginner-3-2'),
 	('The mom sees a nice brown stool','Mẹ nhìn thấy một chiếc ghế đẩu màu nâu rất đẹp','00:00:06.400','00:00:09.780','esl-fast-beginner-3-2'),
@@ -41384,7 +41384,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Sally is on the floor','Sally ngã xuống sàn nhà','00:00:56.140','00:00:58.340','esl-fast-beginner-3-2'),
 	('She cries from the pain','Cô bé đau quá nên bật khóc','00:00:57.840','00:01:01.420','esl-fast-beginner-3-2'),
 
-	/* (UUID(),'esl-fast-beginner-3-3','A Broken Chair','Một chiếc ghế bị hỏng','BEGINNER_03_ESL_FAST_CHILDREN_003.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-3',0,0,3) */
+	/* (UUID(),'esl-fast-beginner-3-3','A Broken Chair','Một chiếc ghế bị hỏng','ESL_FAST_BEGINNER_3_003.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-3',0,0,3) */
 	('Barb was celebrating her birthday today','Hôm nay Barb tổ chức sinh nhật','00:00:00.000','00:00:03.410','esl-fast-beginner-3-3'),
 	('She was turning seven years old','Cô bé tròn 7 tuổi','00:00:03.550','00:00:07.010','esl-fast-beginner-3-3'),
 	('All her friends were coming','Tất cả bạn bè của cô bé đều đến dự','00:00:07.510','00:00:09.730','esl-fast-beginner-3-3'),
@@ -41403,7 +41403,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She thanked everyone for coming','Cô bé cảm ơn mọi người đã đến dự sinh nhật','00:01:01.610','00:01:04.250','esl-fast-beginner-3-3'),
 	('She hugged her parents','Cô bé ôm bố mẹ','00:01:04.430','00:01:06.790','esl-fast-beginner-3-3'),
 
-	/* (UUID(),'esl-fast-beginner-3-4','Birthday Celebration','Lễ kỷ niệm sinh nhật','BEGINNER_03_ESL_FAST_CHILDREN_004.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-3',0,0,4) */
+	/* (UUID(),'esl-fast-beginner-3-4','Birthday Celebration','Lễ kỷ niệm sinh nhật','ESL_FAST_BEGINNER_3_004.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-3',0,0,4) */
 	('Donna decided to buy her two daughters water bottles','Donna quyết định mua cho hai cô con gái mỗi đứa một chiếc bình nước','00:00:00.500','00:00:04.840','esl-fast-beginner-3-4'),
 	('They were going to school soon','Hai cô bé sắp đi học','00:00:05.340','00:00:07.660','esl-fast-beginner-3-4'),
 	('She bought a pink one and a blue one','Cô mua một chiếc màu hồng và một chiếc màu xanh','00:00:08.000','00:00:11.780','esl-fast-beginner-3-4'),
@@ -41423,7 +41423,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('One of them would still be mad though','Nhưng kiểu gì cũng sẽ có một đứa không vui','00:00:50.880','00:00:53.580','esl-fast-beginner-3-4'),
 	('Donna decided not to give the water bottle to any of them','Donna quyết định không đưa chiếc bình nước cho đứa nào cả','00:00:53.940','00:00:58.360','esl-fast-beginner-3-4'),
 
-	/* (UUID(),'esl-fast-beginner-3-5','The Pink One is Popular','Cái màu hồng được ưa chuộng','BEGINNER_03_ESL_FAST_CHILDREN_005.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-3',0,0,5) */
+	/* (UUID(),'esl-fast-beginner-3-5','The Pink One is Popular','Cái màu hồng được ưa chuộng','ESL_FAST_BEGINNER_3_005.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-3',0,0,5) */
 	('Joy was going to the petting zoo','Joy chuẩn bị đi sở thú cho khách vuốt ve và cho động vật ăn','00:00:00.320','00:00:02.740','esl-fast-beginner-3-5'),
 	('She was excited','Cô bé háo hức lắm','00:00:02.819','00:00:04.680','esl-fast-beginner-3-5'),
 	('It was going to be her first time seeing animals','Đây sẽ là lần đầu tiên cô bé được tận mắt nhìn thấy các con vật','00:00:05.140','00:00:09.380','esl-fast-beginner-3-5'),
@@ -41443,7 +41443,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'esl-fast-beginner-3-6','The Petting Zoo','Sở thú vuốt ve','BEGINNER_03_ESL_FAST_CHILDREN_006.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-3',0,0,6) */
+	/* (UUID(),'esl-fast-beginner-3-6','The Petting Zoo','Sở thú vuốt ve','ESL_FAST_BEGINNER_3_006.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-3',0,0,6) */
 	('Parents have different ways of punishing their kids','Bố mẹ có nhiều cách khác nhau để phạt con cái','00:00:00.260','00:00:04.880','esl-fast-beginner-3-6'),
 	('Some parents ground their kids','Một số bố mẹ phạt con bằng cách cấm không cho đi chơi','00:00:05.240','00:00:08.000','esl-fast-beginner-3-6'),
 	('Grounding means that kids are not allowed to do fun things','Phạt kiểu này có nghĩa là trẻ không được làm những việc mình thích','00:00:08.340','00:00:12.920','esl-fast-beginner-3-6'),
@@ -41456,7 +41456,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Some parents don\'t even punish their kids','Một số bố mẹ thậm chí còn chẳng phạt con','00:00:42.820','00:00:46.440','esl-fast-beginner-3-6'),
 	('They are very lenient','Họ khá là dễ tính với con','00:00:46.480','00:00:48.760','esl-fast-beginner-3-6'),
 
-	/* (UUID(),'esl-fast-beginner-3-7','Parental Punishment','Hình phạt của cha mẹ','BEGINNER_03_ESL_FAST_CHILDREN_007.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-3',0,0,7) */
+	/* (UUID(),'esl-fast-beginner-3-7','Parental Punishment','Hình phạt của cha mẹ','ESL_FAST_BEGINNER_3_007.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-3',0,0,7) */
 	('Pat found a bunny','Pat nhặt được một chú thỏ','00:00:00.000','00:00:02.200','esl-fast-beginner-3-7'),
 	('She found it on the street','Cô bé thấy nó trên đường','00:00:02.320','00:00:04.860','esl-fast-beginner-3-7'),
 	('There was blood on the bunny','Trên người chú thỏ có dính máu','00:00:05.300','00:00:07.380','esl-fast-beginner-3-7'),
@@ -41475,7 +41475,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Her mom said okay','Mẹ cô bé đồng ý','00:00:44.340','00:00:46.020','esl-fast-beginner-3-7'),
 	('Pat took really good care of the bunny','Pat chăm sóc chú thỏ rất cẩn thận','00:00:46.460','00:00:49.500','esl-fast-beginner-3-7'),
 
-	/* (UUID(),'esl-fast-beginner-3-8','Alexa\'s Bunny','Chú thỏ của Alexa','BEGINNER_03_ESL_FAST_CHILDREN_008.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-3',0,0,8) */
+	/* (UUID(),'esl-fast-beginner-3-8','Alexa\'s Bunny','Chú thỏ của Alexa','ESL_FAST_BEGINNER_3_008.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-3',0,0,8) */
 	('Yvonne loved drawing','Yvonne rất thích vẽ','00:00:00.700','00:00:02.580','esl-fast-beginner-3-8'),
 	('She practiced drawing a lot','Cô bé luyện vẽ rất nhiều','00:00:03.020','00:00:05.680','esl-fast-beginner-3-8'),
 	('She knew how to draw nature','Cô bé biết vẽ cảnh thiên nhiên','00:00:06.020','00:00:08.000','esl-fast-beginner-3-8'),
@@ -41496,7 +41496,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She decided to take a break','Cô bé quyết định nghỉ một lát','00:00:51.980','00:00:54.720','esl-fast-beginner-3-8'),
 	('Tomorrow, she would learn how to draw a bear','Ngày mai, cô bé sẽ học cách vẽ một chú gấu','00:00:55.080','00:00:58.860','esl-fast-beginner-3-8'),
 
-	/* (UUID(),'esl-fast-beginner-3-9','Drawing Animals','Vẽ động vật','BEGINNER_03_ESL_FAST_CHILDREN_009.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-3',0,0,9) */
+	/* (UUID(),'esl-fast-beginner-3-9','Drawing Animals','Vẽ động vật','ESL_FAST_BEGINNER_3_009.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-3',0,0,9) */
 	('Andrea was playing tag with her friends','Andrea đang chơi đuổi bắt với các bạn','00:00:00.460','00:00:03.359','esl-fast-beginner-3-9'),
 	('Tag is a game where one person is it and chases the other players','Đuổi bắt là trò chơi mà một người làm người đuổi và chạy theo những người còn lại','00:00:03.900','00:00:09.460','esl-fast-beginner-3-9'),
 	('Andrea is it','Andrea là người đuổi','00:00:09.940','00:00:11.720','esl-fast-beginner-3-9'),
@@ -41516,7 +41516,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He said no','Cậu bé nói không','00:00:49.680','00:00:51.160','esl-fast-beginner-3-9'),
 	('The teacher said sorry to Andrea','Cô giáo xin lỗi Andrea','00:00:50.660','00:00:54.780','esl-fast-beginner-3-9'),
 
-	/* (UUID(),'esl-fast-beginner-3-10','Falling Down in the Game','Ngã trong trò chơi','BEGINNER_03_ESL_FAST_CHILDREN_010.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-3',0,0,10) */
+	/* (UUID(),'esl-fast-beginner-3-10','Falling Down in the Game','Ngã trong trò chơi','ESL_FAST_BEGINNER_3_010.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-3',0,0,10) */
 	('Mrs. U was working on arts and crafts with her kids at school','Cô U đang cùng các bé làm đồ thủ công ở trường','00:00:03.190','00:00:05.370','esl-fast-beginner-3-10'),
 	('The children wanted to make something','Các bé muốn làm một thứ gì đó','00:00:05.810','00:00:08.210','esl-fast-beginner-3-10'),
 	('They were very excited','Các bé rất hào hứng','00:00:08.490','00:00:10.390','esl-fast-beginner-3-10'),
@@ -41536,7 +41536,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'esl-fast-beginner-3-11','Arts and Crafts','Thủ công mỹ nghệ','BEGINNER_03_ESL_FAST_CHILDREN_011.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-3',0,0,11) */
+	/* (UUID(),'esl-fast-beginner-3-11','Arts and Crafts','Thủ công mỹ nghệ','ESL_FAST_BEGINNER_3_011.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-3',0,0,11) */
 	('Charlie was going to visit a candy factory','Charlie sắp đi tham quan một nhà máy kẹo','00:00:00.460','00:00:03.440','esl-fast-beginner-3-11'),
 	('He was going with his parents','Cậu bé đi cùng bố mẹ','00:00:03.920','00:00:06.360','esl-fast-beginner-3-11'),
 	('On this trip, he would take a tour of the factory','Trong chuyến đi này, cậu bé sẽ được tham quan nhà máy','00:00:06.940','00:00:11.060','esl-fast-beginner-3-11'),
@@ -41551,7 +41551,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Charlie filled his up with sour candy, chocolate, and soda candy','Charlie cho đầy túi của mình bằng kẹo chua, sô-cô-la và kẹo vị soda','00:00:45.880','00:00:51.280','esl-fast-beginner-3-11'),
 	('He was very happy','Cậu bé rất vui','00:00:51.560','00:00:53.680','esl-fast-beginner-3-11'),
 
-	/* (UUID(),'esl-fast-beginner-3-12','Visiting a Candy Factory','Thăm nhà máy kẹo','BEGINNER_03_ESL_FAST_CHILDREN_012.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-3',0,0,12) */
+	/* (UUID(),'esl-fast-beginner-3-12','Visiting a Candy Factory','Thăm nhà máy kẹo','ESL_FAST_BEGINNER_3_012.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-3',0,0,12) */
 	('The kids are at a water park for a field trip','Các bé đang ở công viên nước trong một chuyến đi tham quan','00:00:00.000','00:00:04.400','esl-fast-beginner-3-12'),
 	('It is time to go on the water slide','Đã đến lúc chơi cầu trượt nước','00:00:04.460','00:00:08.020','esl-fast-beginner-3-12'),
 	('Hector is scared to go on the slide','Hector sợ không dám chơi cầu trượt','00:00:08.560','00:00:11.440','esl-fast-beginner-3-12'),
@@ -41568,7 +41568,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('At the bottom, he realizes it is not so bad','Khi xuống đến cuối, cậu bé nhận ra rằng trò này cũng không đáng sợ lắm','00:00:48.560','00:00:54.320','esl-fast-beginner-3-12'),
 	('He is now ready to line up and go again','Bây giờ cậu bé đã sẵn sàng xếp hàng để chơi lại','00:00:54.500','00:00:58.900','esl-fast-beginner-3-12'),
 
-	/* (UUID(),'esl-fast-beginner-3-13','Water Slide','Cầu trượt nước','BEGINNER_03_ESL_FAST_CHILDREN_013.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-3',0,0,13) */
+	/* (UUID(),'esl-fast-beginner-3-13','Water Slide','Cầu trượt nước','ESL_FAST_BEGINNER_3_013.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-3',0,0,13) */
 	('Luke was moving to a new school','Luke chuyển đến một ngôi trường mới','00:00:00.000','00:00:03.070','esl-fast-beginner-3-13'),
 	('His dad got a new job, so he had to move','Bố của cậu bé có công việc mới nên cả gia đình phải chuyển nhà','00:00:03.590','00:00:07.670','esl-fast-beginner-3-13'),
 	('He felt sad','Cậu bé cảm thấy buồn','00:00:07.910','00:00:09.690','esl-fast-beginner-3-13'),
@@ -41583,7 +41583,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He made a lot of new friends','Cậu bé đã kết bạn với rất nhiều người bạn mới','00:00:42.850','00:00:45.010','esl-fast-beginner-3-13'),
 	('He was happy with his new school','Cậu bé cảm thấy vui với ngôi trường mới','00:00:45.410','00:00:48.170','esl-fast-beginner-3-13'),
 
-	/* (UUID(),'esl-fast-beginner-3-14','Luke\'s New School','Trường mới của Luke','BEGINNER_03_ESL_FAST_CHILDREN_014.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-3',0,0,14) */
+	/* (UUID(),'esl-fast-beginner-3-14','Luke\'s New School','Trường mới của Luke','ESL_FAST_BEGINNER_3_014.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-3',0,0,14) */
 	('Frank\'s cousins were coming to town','Anh chị em họ của Frank sắp đến thành phố','00:00:00.000','00:00:03.200','esl-fast-beginner-3-14'),
 	('He was excited','Cậu bé rất hào hứng','00:00:03.520','00:00:05.340','esl-fast-beginner-3-14'),
 	('This was the first time he would see them in person','Đây là lần đầu tiên cậu bé được gặp họ ngoài đời','00:00:05.720','00:00:09.700','esl-fast-beginner-3-14'),
@@ -41602,7 +41602,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Then they ate dinner','Sau đó, họ cùng ăn tối','00:00:51.020','00:00:53.260','esl-fast-beginner-3-14'),
 	('After dinner, they continued to play games','Sau bữa tối, họ tiếp tục chơi trò chơi','00:00:52.760','00:00:57.380','esl-fast-beginner-3-14');
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'esl-fast-elementary-1-1','Morning','Buổi sáng','ELEMENTARY_01_ESL_FAST_001.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-elementary-1',0,0,1) */
+	/* (UUID(),'esl-fast-elementary-1-1','Morning','Buổi sáng','ESL_FAST_ELEMENTARY_1_001.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-elementary-1',0,0,1) */
 	('He wakes up','Cậu bé thức dậy','00:00:00.710','00:00:02.410','esl-fast-elementary-1-1'),
 	('He sees the sun rise','Cậu bé ngắm mặt trời mọc','00:00:02.810','00:00:04.830','esl-fast-elementary-1-1'),
 	('He brushes his teeth','Cậu bé đánh răng','00:00:04.990','00:00:06.870','esl-fast-elementary-1-1'),
@@ -41618,7 +41618,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He gets the newspaper','Cậu bé lấy tờ báo','00:00:30.070','00:00:31.909','esl-fast-elementary-1-1'),
 	('He reads','Cậu bé đọc báo','00:00:32.430','00:00:33.730','esl-fast-elementary-1-1'),
 
-	/* (UUID(),'esl-fast-elementary-1-2','First Day of School','Ngày đầu tiên đi học','ELEMENTARY_01_ESL_FAST_002.mp3',NULL,'00:00:29.000','00:00:00.000','esl-fast-elementary-1',0,0,2) */
+	/* (UUID(),'esl-fast-elementary-1-2','First Day of School','Ngày đầu tiên đi học','ESL_FAST_ELEMENTARY_1_002.mp3',NULL,'00:00:29.000','00:00:00.000','esl-fast-elementary-1',0,0,2) */
 	('He goes to class','Anh ấy đi đến lớp học','00:00:00.330','00:00:02.130','esl-fast-elementary-1-2'),
 	('There is an empty seat in front','Có một chỗ ngồi trống ở phía trước','00:00:02.590','00:00:04.990','esl-fast-elementary-1-2'),
 	('He sits in the seat','Anh ấy ngồi vào ghế','00:00:05.790','00:00:07.290','esl-fast-elementary-1-2'),
@@ -41631,7 +41631,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Everyone is silent','Mọi người đều im lặng','00:00:23.310','00:00:25.030','esl-fast-elementary-1-2'),
 	('The first day of school begins','Ngày học đầu tiên bắt đầu','00:00:25.710','00:00:28.090','esl-fast-elementary-1-2'),
 
-	/* (UUID(),'esl-fast-elementary-1-3','Water on the Floor','Nước trên sàn','ELEMENTARY_01_ESL_FAST_003.mp3',NULL,'00:00:31.000','00:00:00.000','esl-fast-elementary-1',0,0,3) */
+	/* (UUID(),'esl-fast-elementary-1-3','Water on the Floor','Nước trên sàn','ESL_FAST_ELEMENTARY_1_003.mp3',NULL,'00:00:31.000','00:00:00.000','esl-fast-elementary-1',0,0,3) */
 	('She is thirsty','Cô ấy khát nước','00:00:00.200','00:00:02.020','esl-fast-elementary-1-3'),
 	('She gets a glass of water','Cô ấy lấy một cốc nước','00:00:02.660','00:00:04.540','esl-fast-elementary-1-3'),
 	('She begins to walk','Cô ấy bắt đầu bước đi','00:00:05.080','00:00:07.120','esl-fast-elementary-1-3'),
@@ -41645,7 +41645,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She drinks it','Cô ấy uống cốc nước đó','00:00:26.260','00:00:27.660','esl-fast-elementary-1-3'),
 	('She is happy','Cô ấy rất vui','00:00:28.340','00:00:29.620','esl-fast-elementary-1-3'),
 
-	/* (UUID(),'esl-fast-elementary-1-4','Babysitting','Trông trẻ','ELEMENTARY_01_ESL_FAST_004.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-elementary-1',0,0,4) */
+	/* (UUID(),'esl-fast-elementary-1-4','Babysitting','Trông trẻ','ESL_FAST_ELEMENTARY_1_004.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-elementary-1',0,0,4) */
 	('Casey wants a new car','Casey muốn mua một chiếc xe mới','00:00:00.900','00:00:02.960','esl-fast-elementary-1-4'),
 	('She needs money','Cô ấy cần tiền','00:00:03.860','00:00:04.800','esl-fast-elementary-1-4'),
 	('She decides to babysit','Cô ấy quyết định đi trông trẻ','00:00:05.760','00:00:07.360','esl-fast-elementary-1-4'),
@@ -41660,7 +41660,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Casey leaves','Casey rời đi','00:00:26.920','00:00:29.360','esl-fast-elementary-1-4'),
 	('She will babysit him again','Cô ấy sẽ trông cậu bé lần nữa','00:00:29.900','00:00:31.679','esl-fast-elementary-1-4'),
 
-	/* (UUID(),'esl-fast-elementary-1-5','A Doctor','Một bác sĩ','ELEMENTARY_01_ESL_FAST_005.mp3',NULL,'00:00:00.000','000:00:29.000','esl-fast-elementary-1',0,0,5) */
+	/* (UUID(),'esl-fast-elementary-1-5','A Doctor','Một bác sĩ','ESL_FAST_ELEMENTARY_1_005.mp3',NULL,'00:00:00.000','000:00:29.000','esl-fast-elementary-1',0,0,5) */
 	('Sam is a doctor','Sam là một bác sĩ','00:00:00.390','00:00:02.010','esl-fast-elementary-1-5'),
 	('He takes care of people','Anh ấy chăm sóc mọi người','00:00:02.890','00:00:04.370','esl-fast-elementary-1-5'),
 	('He smiles at them','Anh ấy mỉm cười với họ','00:00:05.250','00:00:06.490','esl-fast-elementary-1-5'),
@@ -41676,7 +41676,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'esl-fast-elementary-1-6','Twins','Cặp song sinh','ELEMENTARY_01_ESL_FAST_006.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-elementary-1',0,0,6) */
+	/* (UUID(),'esl-fast-elementary-1-6','Twins','Cặp song sinh','ESL_FAST_ELEMENTARY_1_006.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-elementary-1',0,0,6) */
 	('Jill and Jodi are twins','Jill và Jodi là hai chị em sinh đôi','00:00:00.580','00:00:02.700','esl-fast-elementary-1-6'),
 	('They look the same, but they act differently','Họ trông giống nhau nhưng lại cư xử khác nhau','00:00:03.560','00:00:07.140','esl-fast-elementary-1-6'),
 	('Jill likes sports','Jill thích thể thao','00:00:08.160','00:00:09.580','esl-fast-elementary-1-6'),
@@ -64627,7 +64627,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('I already told my dad, but..','Tôi đã nói với bố tôi rồi, nhưng...','00:13:12.320','00:13:14.040','your-animated-story-show-20'),
 	('That\'s all I want to hear, Elise Stone','Đó là tất cả những gì tôi muốn nghe, Elise Stone','00:13:14.040','00:13:16.140','your-animated-story-show-20');
 INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_VI, STATUS, CREATED_AT, UPDATED_AT, CREATED_BY, UPDATED_BY) VALUES
-	/* (UUID(),'esl-fast-beginner-1-1','Going to the Zoo','Đi tới sở thú','BEGINNER_01_ESL_FAST_CHILDREN_001.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-children-1',1,1,1,1), */
+	/* (UUID(),'esl-fast-beginner-1-1','Going to the Zoo','Đi tới sở thú','ESL_FAST_BEGINNER_1_001.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-children-1',1,1,1,1), */
     ('Q-esl-fast-beginner-1-1-001', 'esl-fast-beginner-1-1', 'Where does she go?', 'Cô bé đi đâu?', 'ACTIVE', NULL, NULL, NULL, NULL),
     ('Q-esl-fast-beginner-1-1-002', 'esl-fast-beginner-1-1', 'What does she see at the zoo?', 'Cô bé nhìn thấy gì ở sở thú?', 'ACTIVE', NULL, NULL, NULL, NULL),
     ('Q-esl-fast-beginner-1-1-003', 'esl-fast-beginner-1-1', 'What animal does she see first?', 'Cô bé nhìn thấy con vật nào đầu tiên?', 'ACTIVE', NULL, NULL, NULL, NULL),
@@ -64659,7 +64659,7 @@ INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_
     ('Q-esl-fast-beginner-1-1-029', 'esl-fast-beginner-1-1', 'What does the rabbit''s fur feel like?', 'Bộ lông của con thỏ như thế nào?', 'ACTIVE', NULL, NULL, NULL, NULL),
     ('Q-esl-fast-beginner-1-1-030', 'esl-fast-beginner-1-1', 'What does the girl see at the zoo?', 'Cô bé nhìn thấy gì ở sở thú?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-2','Christmas Time','Giáng sinh','BEGINNER_01_ESL_FAST_CHILDREN_002.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-children-1',1,1,1,2), */
+	/* (UUID(),'esl-fast-beginner-1-2','Christmas Time','Giáng sinh','ESL_FAST_BEGINNER_1_002.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-children-1',1,1,1,2), */
 	('Q-esl-fast-beginner-1-2-001', 'esl-fast-beginner-1-2', 'What holiday is it?', 'Đó là ngày lễ gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	('Q-esl-fast-beginner-1-2-002', 'esl-fast-beginner-1-2', 'Who gives Tim a toy?', 'Ai tặng Tim một món đồ chơi?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	('Q-esl-fast-beginner-1-2-003', 'esl-fast-beginner-1-2', 'What does Dad give Tim?', 'Bố tặng Tim cái gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
@@ -64691,7 +64691,7 @@ INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_
 	('Q-esl-fast-beginner-1-2-029', 'esl-fast-beginner-1-2', 'Why does Tim hug Dad?', 'Tại sao Tim ôm bố?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	('Q-esl-fast-beginner-1-2-030', 'esl-fast-beginner-1-2', 'What does Dad do at the end of the story?', 'Bố làm gì ở cuối câu chuyện?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-3','She Goes to the Nurse','Cô ấy đến gặp y tá','BEGINNER_01_ESL_FAST_CHILDREN_003.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-children-1',1,1,1,3), */
+	/* (UUID(),'esl-fast-beginner-1-3','She Goes to the Nurse','Cô ấy đến gặp y tá','ESL_FAST_BEGINNER_1_003.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-children-1',1,1,1,3), */
 	('Q-esl-fast-beginner-1-3-001', 'esl-fast-beginner-1-3', 'Where does she go?', 'Cô bé đi đâu?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	('Q-esl-fast-beginner-1-3-002', 'esl-fast-beginner-1-3', 'What does she go out to do?', 'Cô bé ra ngoài để làm gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	('Q-esl-fast-beginner-1-3-003', 'esl-fast-beginner-1-3', 'What does she do outside?', 'Cô bé làm gì ở bên ngoài?', 'ACTIVE', NULL, NULL, NULL, NULL),
@@ -64723,7 +64723,7 @@ INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_
 	('Q-esl-fast-beginner-1-3-029', 'esl-fast-beginner-1-3', 'Who gives her a bandage?', 'Ai băng vết thương cho cô bé?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	('Q-esl-fast-beginner-1-3-030', 'esl-fast-beginner-1-3', 'What does she do after she is okay?', 'Cô bé làm gì sau khi đã ổn?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-4','Waiting','Chờ đợi','BEGINNER_01_ESL_FAST_CHILDREN_004.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,1,1,4), */
+	/* (UUID(),'esl-fast-beginner-1-4','Waiting','Chờ đợi','ESL_FAST_BEGINNER_1_004.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,1,1,4), */
 	('Q-esl-fast-beginner-1-4-001', 'esl-fast-beginner-1-4', 'Where are the kids?', 'Bọn trẻ đang ở đâu?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	('Q-esl-fast-beginner-1-4-002', 'esl-fast-beginner-1-4', 'Who is teaching the kids?', 'Ai đang dạy bọn trẻ?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	('Q-esl-fast-beginner-1-4-003', 'esl-fast-beginner-1-4', 'What is the teacher teaching?', 'Giáo viên đang dạy môn gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
@@ -64755,7 +64755,7 @@ INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_
 	('Q-esl-fast-beginner-1-4-029', 'esl-fast-beginner-1-4', 'What do the kids do while the clock moves slowly?', 'Bọn trẻ làm gì khi đồng hồ chạy chậm?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	('Q-esl-fast-beginner-1-4-030', 'esl-fast-beginner-1-4', 'What do the kids continue to do?', 'Bọn trẻ tiếp tục làm gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-5','Chores','Việc nhà','BEGINNER_01_ESL_FAST_CHILDREN_005.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-children-1',1,1,1,5) */
+	/* (UUID(),'esl-fast-beginner-1-5','Chores','Việc nhà','ESL_FAST_BEGINNER_1_005.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-children-1',1,1,1,5) */
 	('Q-esl-fast-beginner-1-5-001','esl-fast-beginner-1-5','What is he playing?','Cậu bé đang chơi gì?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-5-002','esl-fast-beginner-1-5','What is Mom doing?','Mẹ đang làm gì?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-5-003','esl-fast-beginner-1-5','Who gets mad?','Ai tức giận?','ACTIVE',NULL,NULL,NULL,NULL),
@@ -64788,7 +64788,7 @@ INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_
 	('Q-esl-fast-beginner-1-5-030','esl-fast-beginner-1-5','What does he do after looking at the list?','Sau khi nhìn vào danh sách, cậu bé làm gì?','ACTIVE',NULL,NULL,NULL,NULL);
 
 INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_VI, STATUS, CREATED_AT, UPDATED_AT, CREATED_BY, UPDATED_BY) VALUES
-	/* (UUID(),'esl-fast-beginner-1-6','The First Song','Bài hát đầu tiên','BEGINNER_01_ESL_FAST_CHILDREN_006.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1',1,1,1,6), */
+	/* (UUID(),'esl-fast-beginner-1-6','The First Song','Bài hát đầu tiên','ESL_FAST_BEGINNER_1_006.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1',1,1,1,6), */
 	('Q-esl-fast-beginner-1-6-001', 'esl-fast-beginner-1-6', 'Where does she sit?', 'Cô bé ngồi ở đâu?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	('Q-esl-fast-beginner-1-6-002', 'esl-fast-beginner-1-6', 'Who turns on the radio?', 'Ai bật radio?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	('Q-esl-fast-beginner-1-6-003', 'esl-fast-beginner-1-6', 'What does her dad turn on?', 'Bố cô bé bật gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
@@ -64820,7 +64820,7 @@ INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_
 	('Q-esl-fast-beginner-1-6-029', 'esl-fast-beginner-1-6', 'What does she do at the end?', 'Cuối cùng cô bé làm gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	('Q-esl-fast-beginner-1-6-030', 'esl-fast-beginner-1-6', 'What does she do after the radio plays a different song?', 'Cô bé làm gì sau khi radio phát một bài hát khác?', 'ACTIVE', NULL, NULL, NULL, NULL),
 
-	/* (UUID(),'esl-fast-beginner-1-7','Visiting the Doctor','Đi khám bác sĩ','BEGINNER_01_ESL_FAST_CHILDREN_007.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-children-1',1,1,1,7), */
+	/* (UUID(),'esl-fast-beginner-1-7','Visiting the Doctor','Đi khám bác sĩ','ESL_FAST_BEGINNER_1_007.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-children-1',1,1,1,7), */
 	('Q-esl-fast-beginner-1-7-001', 'esl-fast-beginner-1-7', 'How does Hayley feel?', 'Hayley cảm thấy thế nào?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	('Q-esl-fast-beginner-1-7-002', 'esl-fast-beginner-1-7', 'What does Hayley feel?', 'Hayley cảm thấy gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	('Q-esl-fast-beginner-1-7-003', 'esl-fast-beginner-1-7', 'Who touches Hayley''s forehead?', 'Ai chạm vào trán Hayley?', 'ACTIVE', NULL, NULL, NULL, NULL),
@@ -64852,7 +64852,7 @@ INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_
 	('Q-esl-fast-beginner-1-7-029', 'esl-fast-beginner-1-7', 'Who helps Hayley when she has a fever?', 'Ai giúp Hayley khi cô bé bị sốt?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	('Q-esl-fast-beginner-1-7-030', 'esl-fast-beginner-1-7', 'What does Hayley do for three days?', 'Hayley làm gì trong ba ngày?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-8','Different Foods','Các loại thức ăn khác nhau','BEGINNER_01_ESL_FAST_CHILDREN_008.mp3',NULL,'00:00:00.000','00:00:34.000','esl-fast-children-1',1,1,1,8), */
+	/* (UUID(),'esl-fast-beginner-1-8','Different Foods','Các loại thức ăn khác nhau','ESL_FAST_BEGINNER_1_008.mp3',NULL,'00:00:00.000','00:00:34.000','esl-fast-children-1',1,1,1,8), */
 	('Q-esl-fast-beginner-1-8-001', 'esl-fast-beginner-1-8', 'How does Sarah feel?', 'Sarah cảm thấy thế nào?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	('Q-esl-fast-beginner-1-8-002', 'esl-fast-beginner-1-8', 'Why does Sarah go to the kitchen?', 'Tại sao Sarah đi vào bếp?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	('Q-esl-fast-beginner-1-8-003', 'esl-fast-beginner-1-8', 'Where does Sarah go?', 'Sarah đi đâu?', 'ACTIVE', NULL, NULL, NULL, NULL),
@@ -64884,7 +64884,7 @@ INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_
 	('Q-esl-fast-beginner-1-8-029', 'esl-fast-beginner-1-8', 'What happens after Sarah opens the cabinet?', 'Điều gì xảy ra sau khi Sarah mở tủ?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	('Q-esl-fast-beginner-1-8-030', 'esl-fast-beginner-1-8', 'What happens after her dad comes home?', 'Điều gì xảy ra sau khi bố cô bé trở về nhà?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-9','The Corner','Góc phố','BEGINNER_01_ESL_FAST_CHILDREN_009.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-children-1',1,1,1,9), */
+	/* (UUID(),'esl-fast-beginner-1-9','The Corner','Góc phố','ESL_FAST_BEGINNER_1_009.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-children-1',1,1,1,9), */
 	('Q-esl-fast-beginner-1-9-001', 'esl-fast-beginner-1-9', 'What does Jill not like?', 'Jill không thích điều gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
     ('Q-esl-fast-beginner-1-9-002', 'esl-fast-beginner-1-9', 'Does Jill like math?', 'Jill có thích môn toán không?', 'ACTIVE', NULL, NULL, NULL, NULL),
     ('Q-esl-fast-beginner-1-9-003', 'esl-fast-beginner-1-9', 'What does Jill start talking about?', 'Jill bắt đầu nói chuyện về điều gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
@@ -64916,7 +64916,7 @@ INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_
     ('Q-esl-fast-beginner-1-9-029', 'esl-fast-beginner-1-9', 'What does Jill talk about instead of doing math?', 'Thay vì làm toán, Jill nói chuyện về điều gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
     ('Q-esl-fast-beginner-1-9-030', 'esl-fast-beginner-1-9', 'What happens at the end?', 'Điều gì xảy ra ở cuối câu chuyện?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-10','A Surprise Party','Bữa tiệc bất ngờ','BEGINNER_01_ESL_FAST_CHILDREN_010.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-children-1',1,1,1,10), */
+	/* (UUID(),'esl-fast-beginner-1-10','A Surprise Party','Bữa tiệc bất ngờ','ESL_FAST_BEGINNER_1_010.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-children-1',1,1,1,10), */
 	('Q-esl-fast-beginner-1-10-001', 'esl-fast-beginner-1-10', 'Whose birthday is it?', 'Hôm nay là sinh nhật của ai?', 'ACTIVE', NULL, NULL, NULL, NULL),
     ('Q-esl-fast-beginner-1-10-002', 'esl-fast-beginner-1-10', 'Is it Lily''s birthday?', 'Hôm nay có phải là sinh nhật của Lily không?', 'ACTIVE', NULL, NULL, NULL, NULL),
     ('Q-esl-fast-beginner-1-10-003', 'esl-fast-beginner-1-10', 'What does Lily do first?', 'Lily làm gì đầu tiên?', 'ACTIVE', NULL, NULL, NULL, NULL),
@@ -64949,7 +64949,7 @@ INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_
     ('Q-esl-fast-beginner-1-10-030', 'esl-fast-beginner-1-10', 'What happens at the end of the story?', 'Điều gì xảy ra ở cuối câu chuyện?', 'ACTIVE', NULL, NULL, NULL, NULL);
 	
 INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_VI, STATUS, CREATED_AT, UPDATED_AT, CREATED_BY, UPDATED_BY) VALUES
-    /* (UUID(),'esl-fast-beginner-1-11','A New Pet','Thú cưng mới','BEGINNER_01_ESL_FAST_CHILDREN_011.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,1,1,11), */
+    /* (UUID(),'esl-fast-beginner-1-11','A New Pet','Thú cưng mới','ESL_FAST_BEGINNER_1_011.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,1,1,11), */
 	('Q-esl-fast-beginner-1-11-001', 'esl-fast-beginner-1-11', 'What is Kate doing?', 'Kate đang làm gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
     ('Q-esl-fast-beginner-1-11-002', 'esl-fast-beginner-1-11', 'What does Kate see?', 'Kate nhìn thấy gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
     ('Q-esl-fast-beginner-1-11-003', 'esl-fast-beginner-1-11', 'Who sees a dog?', 'Ai nhìn thấy một chú chó?', 'ACTIVE', NULL, NULL, NULL, NULL),
@@ -64981,7 +64981,7 @@ INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_
     ('Q-esl-fast-beginner-1-11-029', 'esl-fast-beginner-1-11', 'What does Kate do before walking Toby every day?', 'Kate làm gì trước khi dắt Toby đi dạo mỗi ngày?', 'ACTIVE', NULL, NULL, NULL, NULL),
     ('Q-esl-fast-beginner-1-11-030', 'esl-fast-beginner-1-11', 'How does the story end?', 'Câu chuyện kết thúc như thế nào?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-12','Group Project','Dự án nhóm','BEGINNER_01_ESL_FAST_CHILDREN_012.mp3',NULL,'00:00:00.000','00:00:34.000','esl-fast-children-1',1,1,1,12), */
+	/* (UUID(),'esl-fast-beginner-1-12','Group Project','Dự án nhóm','ESL_FAST_BEGINNER_1_012.mp3',NULL,'00:00:00.000','00:00:34.000','esl-fast-children-1',1,1,1,12), */
 	('Q-esl-fast-beginner-1-12-001', 'esl-fast-beginner-1-12', 'What does Ms. Howard assign?', 'Cô Howard giao bài gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	('Q-esl-fast-beginner-1-12-002', 'esl-fast-beginner-1-12', 'Who assigns the project?', 'Ai giao dự án?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	('Q-esl-fast-beginner-1-12-003', 'esl-fast-beginner-1-12', 'Who does Ms. Howard want to work in groups?', 'Cô Howard muốn ai làm việc theo nhóm?', 'ACTIVE', NULL, NULL, NULL, NULL),
@@ -65013,7 +65013,7 @@ INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_
 	('Q-esl-fast-beginner-1-12-029', 'esl-fast-beginner-1-12', 'What happens after they turn in their project?', 'Điều gì xảy ra sau khi họ nộp dự án?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	('Q-esl-fast-beginner-1-12-030', 'esl-fast-beginner-1-12', 'What makes the three students joyful?', 'Điều gì khiến ba học sinh vui mừng?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-13','A Cat and A Mouse','Một con mèo và một con chuột','BEGINNER_01_ESL_FAST_CHILDREN_013.mp3',NULL,'00:00:00.000','00:00:40.000','esl-fast-children-1',1,1,1,13), */
+	/* (UUID(),'esl-fast-beginner-1-13','A Cat and A Mouse','Một con mèo và một con chuột','ESL_FAST_BEGINNER_1_013.mp3',NULL,'00:00:00.000','00:00:40.000','esl-fast-children-1',1,1,1,13), */
 	('Q-esl-fast-beginner-1-13-001','esl-fast-beginner-1-13','How does the cat feel at the beginning?','Con mèo cảm thấy thế nào lúc đầu?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-13-002','esl-fast-beginner-1-13','What does the cat try to do?','Con mèo cố làm gì?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-13-003','esl-fast-beginner-1-13','What does the cat play with?','Con mèo chơi với cái gì?','ACTIVE',NULL,NULL,NULL,NULL),
@@ -65045,7 +65045,7 @@ INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_
 	('Q-esl-fast-beginner-1-13-029','esl-fast-beginner-1-13','What is the cat like at the end?','Con mèo cảm thấy thế nào ở cuối câu chuyện?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-13-030','esl-fast-beginner-1-13','What does the cat do before seeing the mouse?','Con mèo làm gì trước khi nhìn thấy con chuột?','ACTIVE',NULL,NULL,NULL,NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-14','Lemonade Stand','Quầy nước chanh','BEGINNER_01_ESL_FAST_CHILDREN_014.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-children-1',1,1,1,14), */
+	/* (UUID(),'esl-fast-beginner-1-14','Lemonade Stand','Quầy nước chanh','ESL_FAST_BEGINNER_1_014.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-children-1',1,1,1,14), */
 	('Q-esl-fast-beginner-1-14-001','esl-fast-beginner-1-14','Where does John want to go?','John muốn đi đâu?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-14-002','esl-fast-beginner-1-14','What does John want to attend?','John muốn tham gia sự kiện gì?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-14-003','esl-fast-beginner-1-14','How much money does John need?','John cần bao nhiêu tiền?','ACTIVE',NULL,NULL,NULL,NULL),
@@ -65077,7 +65077,7 @@ INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_
 	('Q-esl-fast-beginner-1-14-029','esl-fast-beginner-1-14','Does John earn enough money for his goal?','John có kiếm đủ tiền cho mục tiêu của mình không?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-14-030','esl-fast-beginner-1-14','What is the result of John''s hard work?','Kết quả của sự cố gắng của John là gì?','ACTIVE',NULL,NULL,NULL,NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-15','New and Old','Mới và cũ','BEGINNER_01_ESL_FAST_CHILDREN_015.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,1,1,15), */
+	/* (UUID(),'esl-fast-beginner-1-15','New and Old','Mới và cũ','ESL_FAST_BEGINNER_1_015.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,1,1,15), */
 	('Q-esl-fast-beginner-1-15-001','esl-fast-beginner-1-15','What is tomorrow?','Ngày mai là ngày gì?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-15-002','esl-fast-beginner-1-15','Who is the story about?','Câu chuyện kể về ai?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-15-003','esl-fast-beginner-1-15','What does Barbara look at?','Barbara nhìn vào cái gì?','ACTIVE',NULL,NULL,NULL,NULL),
@@ -65110,7 +65110,7 @@ INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_
 	('Q-esl-fast-beginner-1-15-030','esl-fast-beginner-1-15','Who buys the new backpack?','Ai mua chiếc ba lô mới?','ACTIVE',NULL,NULL,NULL,NULL);
 
 INSERT INTO QUESTIONS (QUESTION_CODE,VOLUME_SLUG,QUESTION_TEXT,QUESTION_TEXT_VI,STATUS,CREATED_AT,UPDATED_AT,CREATED_BY,UPDATED_BY) VALUES	
-	/* (UUID(),'esl-fast-beginner-1-16','The Kind Dentist','Nha sĩ tốt bụng','BEGINNER_01_ESL_FAST_CHILDREN_016.mp3',NULL,'00:00:00.000','00:00:40.000','esl-fast-children-1',1,1,1,16), */
+	/* (UUID(),'esl-fast-beginner-1-16','The Kind Dentist','Nha sĩ tốt bụng','ESL_FAST_BEGINNER_1_016.mp3',NULL,'00:00:00.000','00:00:40.000','esl-fast-children-1',1,1,1,16), */
 	('Q-esl-fast-beginner-1-16-001','esl-fast-beginner-1-16','What is wrong with Maria?','Maria bị làm sao?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-16-002','esl-fast-beginner-1-16','Where does Maria feel pain?','Maria cảm thấy đau ở đâu?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-16-003','esl-fast-beginner-1-16','Who does Maria tell about her pain?','Maria nói với ai về cơn đau của mình?','ACTIVE',NULL,NULL,NULL,NULL),
@@ -65142,7 +65142,7 @@ INSERT INTO QUESTIONS (QUESTION_CODE,VOLUME_SLUG,QUESTION_TEXT,QUESTION_TEXT_VI,
 	('Q-esl-fast-beginner-1-16-029','esl-fast-beginner-1-16','What is the story mainly about?','Câu chuyện chủ yếu nói về điều gì?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-16-030','esl-fast-beginner-1-16','What happens at the end of the story?','Điều gì xảy ra ở cuối câu chuyện?','ACTIVE',NULL,NULL,NULL,NULL),
 		
-	/* (UUID(),'esl-fast-beginner-1-17','A Trip to the Library','Chuyến đi đến thư viện','BEGINNER_01_ESL_FAST_CHILDREN_017.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1',1,1,1,17), */
+	/* (UUID(),'esl-fast-beginner-1-17','A Trip to the Library','Chuyến đi đến thư viện','ESL_FAST_BEGINNER_1_017.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1',1,1,1,17), */
 	('Q-esl-fast-beginner-1-17-001','esl-fast-beginner-1-17','What does Mark need?','Mark cần gì?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-17-002','esl-fast-beginner-1-17','Does Mark have money?','Mark có tiền không?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-17-003','esl-fast-beginner-1-17','Who takes Mark to the library?','Ai đưa Mark đến thư viện?','ACTIVE',NULL,NULL,NULL,NULL),
@@ -65174,7 +65174,7 @@ INSERT INTO QUESTIONS (QUESTION_CODE,VOLUME_SLUG,QUESTION_TEXT,QUESTION_TEXT_VI,
 	('Q-esl-fast-beginner-1-17-029','esl-fast-beginner-1-17','What does Mark do after entering the library?','Mark làm gì sau khi bước vào thư viện?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-17-030','esl-fast-beginner-1-17','How many books does Mark borrow according to the story?','Theo câu chuyện, Mark mượn bao nhiêu sách?','ACTIVE',NULL,NULL,NULL,NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-18','A Lot of Ants','Rất nhiều con kiến','BEGINNER_01_ESL_FAST_CHILDREN_018.mp3',NULL,'00:00:00.000','00:00:28.000','esl-fast-children-1',1,1,1,18), */
+	/* (UUID(),'esl-fast-beginner-1-18','A Lot of Ants','Rất nhiều con kiến','ESL_FAST_BEGINNER_1_018.mp3',NULL,'00:00:00.000','00:00:28.000','esl-fast-children-1',1,1,1,18), */
 	('Q-esl-fast-beginner-1-18-001','esl-fast-beginner-1-18','What does she eat?','Cô ấy ăn gì?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-18-002','esl-fast-beginner-1-18','What does she eat a slice of?','Cô ấy ăn một miếng gì?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-18-003','esl-fast-beginner-1-18','What does she drop?','Cô ấy làm rơi gì?','ACTIVE',NULL,NULL,NULL,NULL),
@@ -65206,7 +65206,7 @@ INSERT INTO QUESTIONS (QUESTION_CODE,VOLUME_SLUG,QUESTION_TEXT,QUESTION_TEXT_VI,
 	('Q-esl-fast-beginner-1-18-029','esl-fast-beginner-1-18','What does she do with the cup?','Cô ấy làm gì với cái cốc?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-18-030','esl-fast-beginner-1-18','What is the last thing she does?','Điều cuối cùng cô ấy làm là gì?','ACTIVE',NULL,NULL,NULL,NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-19','Picking a Costume','Chọn trang phục','BEGINNER_01_ESL_FAST_CHILDREN_019.mp3',NULL,'00:00:00.000','00:00:32.500','esl-fast-children-1',1,1,1,19), */
+	/* (UUID(),'esl-fast-beginner-1-19','Picking a Costume','Chọn trang phục','ESL_FAST_BEGINNER_1_019.mp3',NULL,'00:00:00.000','00:00:32.500','esl-fast-children-1',1,1,1,19), */
 	('Q-esl-fast-beginner-1-19-001','esl-fast-beginner-1-19','What holiday is it?','Hôm nay là ngày lễ gì?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-19-002','esl-fast-beginner-1-19','Who is dressed as a princess?','Ai hóa trang thành công chúa?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-19-003','esl-fast-beginner-1-19','What is Nancy dressed as?','Nancy hóa trang thành gì?','ACTIVE',NULL,NULL,NULL,NULL),
@@ -65238,7 +65238,7 @@ INSERT INTO QUESTIONS (QUESTION_CODE,VOLUME_SLUG,QUESTION_TEXT,QUESTION_TEXT_VI,
 	('Q-esl-fast-beginner-1-19-029','esl-fast-beginner-1-19','What does Nancy do at the next house?','Nancy làm gì ở ngôi nhà kế tiếp?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-19-030','esl-fast-beginner-1-19','What is Nancy doing on Halloween?','Nancy đang làm gì vào Halloween?','ACTIVE',NULL,NULL,NULL,NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-20','Petting Zoo','Vườn thú cưng','BEGINNER_01_ESL_FAST_CHILDREN_020.mp3',NULL,'00:00:00.000','00:00:40.000','esl-fast-children-1',1,1,1,20), */
+	/* (UUID(),'esl-fast-beginner-1-20','Petting Zoo','Vườn thú cưng','ESL_FAST_BEGINNER_1_020.mp3',NULL,'00:00:00.000','00:00:40.000','esl-fast-children-1',1,1,1,20), */
 	('Q-esl-fast-beginner-1-20-001','esl-fast-beginner-1-20','Where does he go?','Cậu bé đi đâu?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-20-002','esl-fast-beginner-1-20','What kind of zoo does he go to?','Cậu bé đi đến loại vườn thú nào?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-20-003','esl-fast-beginner-1-20','What are there at the petting zoo?','Có gì ở vườn thú cưng?','ACTIVE',NULL,NULL,NULL,NULL),
@@ -65271,7 +65271,7 @@ INSERT INTO QUESTIONS (QUESTION_CODE,VOLUME_SLUG,QUESTION_TEXT,QUESTION_TEXT_VI,
 	('Q-esl-fast-beginner-1-20-030','esl-fast-beginner-1-20','What will he be able to get tomorrow?','Ngày mai cậu bé sẽ có thể nuôi gì?','ACTIVE',NULL,NULL,NULL,NULL);
 
 INSERT INTO QUESTIONS (QUESTION_CODE,VOLUME_SLUG,QUESTION_TEXT,QUESTION_TEXT_VI,STATUS,CREATED_AT,UPDATED_AT,CREATED_BY,UPDATED_BY) VALUES	
-	/* (UUID(),'esl-fast-beginner-1-21','Mom is Mad','Mẹ đang tức giận','BEGINNER_01_ESL_FAST_CHILDREN_021.mp3',NULL,'00:00:00.000','00:00:35.500','esl-fast-children-1',1,1,1,21, */
+	/* (UUID(),'esl-fast-beginner-1-21','Mom is Mad','Mẹ đang tức giận','ESL_FAST_BEGINNER_1_021.mp3',NULL,'00:00:00.000','00:00:35.500','esl-fast-children-1',1,1,1,21, */
     ('Q-esl-fast-beginner-1-21-001', 'esl-fast-beginner-1-21', 'Whose room is messy?', 'Phòng của ai rất bừa bộn?', 'ACTIVE', NULL, NULL, NULL, NULL),
     ('Q-esl-fast-beginner-1-21-002', 'esl-fast-beginner-1-21', 'What is under Robert''s bed?', 'Có gì ở dưới gầm giường của Robert?', 'ACTIVE', NULL, NULL, NULL, NULL),
     ('Q-esl-fast-beginner-1-21-003', 'esl-fast-beginner-1-21', 'Where is the pizza?', 'Bánh pizza ở đâu?', 'ACTIVE', NULL, NULL, NULL, NULL),
@@ -65303,7 +65303,7 @@ INSERT INTO QUESTIONS (QUESTION_CODE,VOLUME_SLUG,QUESTION_TEXT,QUESTION_TEXT_VI,
     ('Q-esl-fast-beginner-1-21-029', 'esl-fast-beginner-1-21', 'Who yells at Robert?', 'Ai la mắng Robert?', 'ACTIVE', NULL, NULL, NULL, NULL),
     ('Q-esl-fast-beginner-1-21-030', 'esl-fast-beginner-1-21', 'What does Robert clean?', 'Robert dọn dẹp cái gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-22','Father\'s Day','Ngày của cha','BEGINNER_01_ESL_FAST_CHILDREN_022.mp3',NULL,'00:00:00.000','00:00:39.000','esl-fast-children-1',1,1,1,22), */
+	/* (UUID(),'esl-fast-beginner-1-22','Father\'s Day','Ngày của cha','ESL_FAST_BEGINNER_1_022.mp3',NULL,'00:00:00.000','00:00:39.000','esl-fast-children-1',1,1,1,22), */
 	('Q-esl-fast-beginner-1-22-001', 'esl-fast-beginner-1-22', 'What day is it?', 'Hôm nay là ngày gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	('Q-esl-fast-beginner-1-22-002', 'esl-fast-beginner-1-22', 'Whose day is it?', 'Đây là ngày của ai?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	('Q-esl-fast-beginner-1-22-003', 'esl-fast-beginner-1-22', 'Who surprises his father?', 'Ai tạo bất ngờ cho bố của mình?', 'ACTIVE', NULL, NULL, NULL, NULL),
@@ -65335,7 +65335,7 @@ INSERT INTO QUESTIONS (QUESTION_CODE,VOLUME_SLUG,QUESTION_TEXT,QUESTION_TEXT_VI,
 	('Q-esl-fast-beginner-1-22-029', 'esl-fast-beginner-1-22', 'What does Daniel think about the day?', 'Daniel nghĩ gì về ngày hôm đó?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	('Q-esl-fast-beginner-1-22-030', 'esl-fast-beginner-1-22', 'What is the main idea of the story?', 'Ý chính của bài đọc là gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
 		
-	/* (UUID(),'esl-fast-beginner-1-23','The Baby Sister','Em bé gái','BEGINNER_01_ESL_FAST_CHILDREN_023.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-children-1',1,1,1,23), */
+	/* (UUID(),'esl-fast-beginner-1-23','The Baby Sister','Em bé gái','ESL_FAST_BEGINNER_1_023.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-children-1',1,1,1,23), */
 	('Q-esl-fast-beginner-1-23-001', 'esl-fast-beginner-1-23', 'Who loves her baby sister?', 'Ai rất yêu quý em gái bé bỏng của mình?', 'ACTIVE', NULL, NULL, NULL, NULL),
     ('Q-esl-fast-beginner-1-23-002', 'esl-fast-beginner-1-23', 'Who is Betty''s baby sister?', 'Em gái bé bỏng của Betty là ai?', 'ACTIVE', NULL, NULL, NULL, NULL),
     ('Q-esl-fast-beginner-1-23-003', 'esl-fast-beginner-1-23', 'What does Betty do for her baby sister?', 'Betty làm gì cho em gái bé bỏng của mình?', 'ACTIVE', NULL, NULL, NULL, NULL),
@@ -65367,7 +65367,7 @@ INSERT INTO QUESTIONS (QUESTION_CODE,VOLUME_SLUG,QUESTION_TEXT,QUESTION_TEXT_VI,
     ('Q-esl-fast-beginner-1-23-029', 'esl-fast-beginner-1-23', 'Why does the baby laugh?', 'Tại sao em bé cười?', 'ACTIVE', NULL, NULL, NULL, NULL),
     ('Q-esl-fast-beginner-1-23-030', 'esl-fast-beginner-1-23', 'What is the main idea of the story?', 'Ý chính của bài đọc là gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-24','Sometimes You Lose','Đôi khi bạn thua','BEGINNER_01_ESL_FAST_CHILDREN_024.mp3',NULL,'00:00:00.000','00:00:39.000','esl-fast-children-1','YES',24) */
+	/* (UUID(),'esl-fast-beginner-1-24','Sometimes You Lose','Đôi khi bạn thua','ESL_FAST_BEGINNER_1_024.mp3',NULL,'00:00:00.000','00:00:39.000','esl-fast-children-1','YES',24) */
     ('Q-esl-fast-beginner-1-24-001', 'esl-fast-beginner-1-24', 'What happened to Sarah''s basketball team?', 'Điều gì đã xảy ra với đội bóng rổ của Sarah?', 'ACTIVE', NULL, NULL, NULL, NULL),
     ('Q-esl-fast-beginner-1-24-002', 'esl-fast-beginner-1-24', 'How does Sarah feel after the game?', 'Sarah cảm thấy thế nào sau trận đấu?', 'ACTIVE', NULL, NULL, NULL, NULL),
     ('Q-esl-fast-beginner-1-24-003', 'esl-fast-beginner-1-24', 'How does Sarah walk home?', 'Sarah đi bộ về nhà như thế nào?', 'ACTIVE', NULL, NULL, NULL, NULL),
@@ -65389,7 +65389,7 @@ INSERT INTO QUESTIONS (QUESTION_CODE,VOLUME_SLUG,QUESTION_TEXT,QUESTION_TEXT_VI,
     ('Q-esl-fast-beginner-1-24-019', 'esl-fast-beginner-1-24', 'What does Sarah do after her mom bakes the cookies?', 'Sarah làm gì sau khi mẹ làm bánh quy?', 'ACTIVE', NULL, NULL, NULL, NULL),
     ('Q-esl-fast-beginner-1-24-020', 'esl-fast-beginner-1-24', 'What is the main lesson Sarah learns?', 'Bài học chính mà Sarah rút ra là gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-25','A New Home','Ngôi nhà mới','BEGINNER_01_ESL_FAST_CHILDREN_025.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1','YES',25) */
+	/* (UUID(),'esl-fast-beginner-1-25','A New Home','Ngôi nhà mới','ESL_FAST_BEGINNER_1_025.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1','YES',25) */
     ('Q-esl-fast-beginner-1-25-001', 'esl-fast-beginner-1-25', 'Where does he move?', 'Cậu bé chuyển đến đâu?', 'ACTIVE', NULL, NULL, NULL, NULL),
     ('Q-esl-fast-beginner-1-25-002', 'esl-fast-beginner-1-25', 'What kind of place does he move to?', 'Cậu bé chuyển đến một nơi như thế nào?', 'ACTIVE', NULL, NULL, NULL, NULL),
     ('Q-esl-fast-beginner-1-25-003', 'esl-fast-beginner-1-25', 'What are there many of in the new city?', 'Có rất nhiều gì ở thành phố mới?', 'ACTIVE', NULL, NULL, NULL, NULL),
@@ -65422,7 +65422,7 @@ INSERT INTO QUESTIONS (QUESTION_CODE,VOLUME_SLUG,QUESTION_TEXT,QUESTION_TEXT_VI,
     ('Q-esl-fast-beginner-1-25-030', 'esl-fast-beginner-1-25', 'What is the main idea of the story?', 'Ý chính của câu chuyện là gì?', 'ACTIVE', NULL, NULL, NULL, NULL);
 
 INSERT INTO QUESTIONS (QUESTION_CODE,VOLUME_SLUG,QUESTION_TEXT,QUESTION_TEXT_VI,STATUS,CREATED_AT,UPDATED_AT,CREATED_BY,UPDATED_BY) VALUES
-	/* (UUID(),'esl-fast-beginner-1-26','Chris and His Fish','Chris và những chú cá của cậu ấy','BEGINNER_01_ESL_FAST_CHILDREN_026.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,0,0,26), */
+	/* (UUID(),'esl-fast-beginner-1-26','Chris and His Fish','Chris và những chú cá của cậu ấy','ESL_FAST_BEGINNER_1_026.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,0,0,26), */
 	('Q-esl-fast-beginner-1-26-001','esl-fast-beginner-1-26','What does Christopher want?','Christopher muốn gì?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-26-002','esl-fast-beginner-1-26','What kind of pet does Christopher want?','Christopher muốn loại thú cưng nào?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-26-003','esl-fast-beginner-1-26','What does Christopher like?','Christopher thích gì?','ACTIVE',NULL,NULL,NULL,NULL),
@@ -65454,7 +65454,7 @@ INSERT INTO QUESTIONS (QUESTION_CODE,VOLUME_SLUG,QUESTION_TEXT,QUESTION_TEXT_VI,
 	('Q-esl-fast-beginner-1-26-029','esl-fast-beginner-1-26','What does the fish do slowly?','Con cá làm gì một cách chậm rãi?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-26-030','esl-fast-beginner-1-26','What does Christopher put the fish in?','Christopher thả con cá vào đâu?','ACTIVE',NULL,NULL,NULL,NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-27','The Oldest Brother','Anh cả','BEGINNER_01_ESL_FAST_CHILDREN_027.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,0,0,27), */
+	/* (UUID(),'esl-fast-beginner-1-27','The Oldest Brother','Anh cả','ESL_FAST_BEGINNER_1_027.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,0,0,27), */
 	('Q-esl-fast-beginner-1-27-001','esl-fast-beginner-1-27','Who is the oldest brother?','Ai là anh cả?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-27-002','esl-fast-beginner-1-27','How many younger brothers does Brian have?','Brian có bao nhiêu em trai?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-27-003','esl-fast-beginner-1-27','Who does Brian help around the house?','Brian giúp ai làm việc nhà?','ACTIVE',NULL,NULL,NULL,NULL),
@@ -65486,7 +65486,7 @@ INSERT INTO QUESTIONS (QUESTION_CODE,VOLUME_SLUG,QUESTION_TEXT,QUESTION_TEXT_VI,
 	('Q-esl-fast-beginner-1-27-029','esl-fast-beginner-1-27','What does Brian do for his younger brothers?','Brian làm gì cho các em trai?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-27-030','esl-fast-beginner-1-27','How does Brian feel about his family?','Brian cảm thấy thế nào về gia đình mình?','ACTIVE',NULL,NULL,NULL,NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-28','A Successful Trade','Một giao dịch thành công','BEGINNER_01_ESL_FAST_CHILDREN_028.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-children-1',1,0,0,28), */
+	/* (UUID(),'esl-fast-beginner-1-28','A Successful Trade','Một giao dịch thành công','ESL_FAST_BEGINNER_1_028.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-children-1',1,0,0,28), */
 	('Q-esl-fast-beginner-1-28-001','esl-fast-beginner-1-28','What time is it?','Đến giờ gì rồi?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-28-002','esl-fast-beginner-1-28','What do the kids do?','Bọn trẻ làm gì?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-28-003','esl-fast-beginner-1-28','Where do the kids go?','Bọn trẻ đi đâu?','ACTIVE',NULL,NULL,NULL,NULL),
@@ -65518,7 +65518,7 @@ INSERT INTO QUESTIONS (QUESTION_CODE,VOLUME_SLUG,QUESTION_TEXT,QUESTION_TEXT_VI,
 	('Q-esl-fast-beginner-1-28-029','esl-fast-beginner-1-28','What happens when Paul and Sarah meet?','Điều gì xảy ra khi Paul và Sarah gặp nhau?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-28-030','esl-fast-beginner-1-28','Are Paul and Sarah happy with the trade?','Paul và Sarah có hài lòng với việc đổi bánh mì không?','ACTIVE',NULL,NULL,NULL,NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-29','Making a Snowman','Đắp người tuyết','BEGINNER_01_ESL_FAST_CHILDREN_029.mp3',NULL,'00:00:00.000','00:00:38.000','esl-fast-children-1',1,0,0,29), */
+	/* (UUID(),'esl-fast-beginner-1-29','Making a Snowman','Đắp người tuyết','ESL_FAST_BEGINNER_1_029.mp3',NULL,'00:00:00.000','00:00:38.000','esl-fast-children-1',1,0,0,29), */
 	('Q-esl-fast-beginner-1-29-001','esl-fast-beginner-1-29','What does she want to make?','Cô bé muốn làm gì?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-29-002','esl-fast-beginner-1-29','What does she make?','Cô bé làm gì?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-29-003','esl-fast-beginner-1-29','What does she roll first?','Đầu tiên cô bé lăn gì?','ACTIVE',NULL,NULL,NULL,NULL),
@@ -65550,7 +65550,7 @@ INSERT INTO QUESTIONS (QUESTION_CODE,VOLUME_SLUG,QUESTION_TEXT,QUESTION_TEXT_VI,
 	('Q-esl-fast-beginner-1-29-029','esl-fast-beginner-1-29','Does she add a scarf at the end?','Cô bé có thêm khăn quàng cổ vào cuối cùng không?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-29-030','esl-fast-beginner-1-29','What does the finished snowman have?','Người tuyết hoàn thành có những gì?','ACTIVE',NULL,NULL,NULL,NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-30','English Skills','Kỹ năng tiếng Anh','BEGINNER_01_ESL_FAST_CHILDREN_030.mp3',NULL,'00:00:00.000','00:00:26.000','esl-fast-children-1',1,0,0,30), */
+	/* (UUID(),'esl-fast-beginner-1-30','English Skills','Kỹ năng tiếng Anh','ESL_FAST_BEGINNER_1_030.mp3',NULL,'00:00:00.000','00:00:26.000','esl-fast-children-1',1,0,0,30), */
 	('Q-esl-fast-beginner-1-30-001','esl-fast-beginner-1-30','What grade is Donald in?','Donald đang học lớp mấy?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-30-002','esl-fast-beginner-1-30','What is Donald''s reading level like?','Trình độ đọc của Donald như thế nào?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-30-003','esl-fast-beginner-1-30','Who is in the second grade?','Ai đang học lớp hai?','ACTIVE',NULL,NULL,NULL,NULL),
@@ -65583,7 +65583,7 @@ INSERT INTO QUESTIONS (QUESTION_CODE,VOLUME_SLUG,QUESTION_TEXT,QUESTION_TEXT_VI,
 	('Q-esl-fast-beginner-1-30-030','esl-fast-beginner-1-30','What does Donald do after he looks up the words?','Donald làm gì sau khi tra các từ?','ACTIVE',NULL,NULL,NULL,NULL);
 	
 INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_VI, STATUS, CREATED_AT, UPDATED_AT, CREATED_BY, UPDATED_BY) VALUES
-	/* (UUID(),'esl-fast-beginner-1-31','Practicing Drawing','Luyện tập vẽ','BEGINNER_01_ESL_FAST_CHILDREN_031.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,0,0,31), */
+	/* (UUID(),'esl-fast-beginner-1-31','Practicing Drawing','Luyện tập vẽ','ESL_FAST_BEGINNER_1_031.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,0,0,31), */
 	('Q-esl-fast-beginner-1-31-001', 'esl-fast-beginner-1-31', 'What am I practicing?', 'Tôi đang luyện tập điều gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	('Q-esl-fast-beginner-1-31-002', 'esl-fast-beginner-1-31', 'When do I practice drawing?', 'Tôi luyện vẽ khi nào?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	('Q-esl-fast-beginner-1-31-003', 'esl-fast-beginner-1-31', 'How often do I practice drawing?', 'Tôi luyện vẽ thường xuyên như thế nào?', 'ACTIVE', NULL, NULL, NULL, NULL),
@@ -65615,7 +65615,7 @@ INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_
 	('Q-esl-fast-beginner-1-31-029', 'esl-fast-beginner-1-31', 'What do I want to become better at?', 'Tôi muốn trở nên giỏi hơn về điều gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	('Q-esl-fast-beginner-1-31-030', 'esl-fast-beginner-1-31', 'What do my parents think I can do as a job?', 'Bố mẹ nghĩ tôi có thể làm nghề gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
 		
-	/* (UUID(),'esl-fast-beginner-1-32','A Day for Ice Cream','Một ngày dành cho kem','BEGINNER_01_ESL_FAST_CHILDREN_032.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-children-1',1,0,0,32), */
+	/* (UUID(),'esl-fast-beginner-1-32','A Day for Ice Cream','Một ngày dành cho kem','ESL_FAST_BEGINNER_1_032.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-children-1',1,0,0,32), */
 	('Q-esl-fast-beginner-1-32-001','esl-fast-beginner-1-32','What kind of day is it?','Hôm nay là một ngày như thế nào?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-32-002','esl-fast-beginner-1-32','How does she feel?','Cô bé cảm thấy thế nào?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-32-003','esl-fast-beginner-1-32','Why does she feel hot?','Tại sao cô bé cảm thấy nóng?','ACTIVE',NULL,NULL,NULL,NULL),
@@ -65647,7 +65647,7 @@ INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_
 	('Q-esl-fast-beginner-1-32-029','esl-fast-beginner-1-32','What happens after they eat ice cream?','Điều gì xảy ra sau khi họ ăn kem?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-32-030','esl-fast-beginner-1-32','Why does she stop feeling hot?','Tại sao cô bé không còn cảm thấy nóng nữa?','ACTIVE',NULL,NULL,NULL,NULL),
 		
-	/* (UUID(),'esl-fast-beginner-1-33','Taking Tests','Làm bài kiểm tra','BEGINNER_01_ESL_FAST_CHILDREN_033.mp3',NULL,'00:00:00.000','00:00:25.000','esl-fast-children-1',1,0,0,33), */
+	/* (UUID(),'esl-fast-beginner-1-33','Taking Tests','Làm bài kiểm tra','ESL_FAST_BEGINNER_1_033.mp3',NULL,'00:00:00.000','00:00:25.000','esl-fast-children-1',1,0,0,33), */
 	('Q-esl-fast-beginner-1-33-001','esl-fast-beginner-1-33','What does he have tomorrow?','Ngày mai cậu bé có gì?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-33-002','esl-fast-beginner-1-33','When does he have a test?','Khi nào cậu bé có bài kiểm tra?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-33-003','esl-fast-beginner-1-33','Does he want to study?','Cậu bé có muốn học bài không?','ACTIVE',NULL,NULL,NULL,NULL),
@@ -65679,7 +65679,7 @@ INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_
 	('Q-esl-fast-beginner-1-33-029','esl-fast-beginner-1-33','What happens after he turns in the test?','Điều gì xảy ra sau khi cậu bé nộp bài?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-33-030','esl-fast-beginner-1-33','What grade does he receive?','Cậu bé nhận được điểm gì?','ACTIVE',NULL,NULL,NULL,NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-34','Helen is Busy','Helen đang bận rộn','BEGINNER_01_ESL_FAST_CHILDREN_034.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1',1,0,0,34), */
+	/* (UUID(),'esl-fast-beginner-1-34','Helen is Busy','Helen đang bận rộn','ESL_FAST_BEGINNER_1_034.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1',1,0,0,34), */
 	('Q-esl-fast-beginner-1-34-001','esl-fast-beginner-1-34','What does Helen want to do well on?','Helen muốn làm tốt bài gì?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-34-002','esl-fast-beginner-1-34','When is the math test?','Bài kiểm tra Toán diễn ra khi nào?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-34-003','esl-fast-beginner-1-34','What subject is the test?','Bài kiểm tra là môn gì?','ACTIVE',NULL,NULL,NULL,NULL),
@@ -65711,7 +65711,7 @@ INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_
 	('Q-esl-fast-beginner-1-34-029','esl-fast-beginner-1-34','Who does Helen tell that she is busy?','Helen nói với ai rằng mình đang bận?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-34-030','esl-fast-beginner-1-34','What does Helen do before her family interrupts her?','Helen làm gì trước khi gia đình làm gián đoạn việc học?','ACTIVE',NULL,NULL,NULL,NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-35','Messing Up','Làm hỏng việc','BEGINNER_01_ESL_FAST_CHILDREN_035.mp3',NULL,'00:00:00.000','00:00:28.000','esl-fast-children-1',1,0,1,35), */
+	/* (UUID(),'esl-fast-beginner-1-35','Messing Up','Làm hỏng việc','ESL_FAST_BEGINNER_1_035.mp3',NULL,'00:00:00.000','00:00:28.000','esl-fast-children-1',1,0,1,35), */
 	('Q-esl-fast-beginner-1-35-001','esl-fast-beginner-1-35','What does he pour for himself?','Cậu bé rót gì cho mình?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-35-002','esl-fast-beginner-1-35','What does he pour into a glass?','Cậu bé rót gì vào cốc?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-35-003','esl-fast-beginner-1-35','Who does he pour the soda for?','Cậu bé rót nước ngọt cho ai?','ACTIVE',NULL,NULL,NULL,NULL),
@@ -65744,7 +65744,7 @@ INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_
 	('Q-esl-fast-beginner-1-35-030','esl-fast-beginner-1-35','What is the final result?','Kết quả cuối cùng là gì?','ACTIVE',NULL,NULL,NULL,NULL);
 	
 INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_VI, STATUS, CREATED_AT, UPDATED_AT, CREATED_BY, UPDATED_BY) VALUES
-	/* (UUID(),'esl-fast-beginner-1-36','Introducing Myself','Giới thiệu bản thân','BEGINNER_01_ESL_FAST_CHILDREN_036.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,0,0,36), */
+	/* (UUID(),'esl-fast-beginner-1-36','Introducing Myself','Giới thiệu bản thân','ESL_FAST_BEGINNER_1_036.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,0,0,36), */
 	('Q-esl-fast-beginner-1-36-001','esl-fast-beginner-1-36','What is the speaker?','Người nói là ai?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-36-002','esl-fast-beginner-1-36','Is the speaker a new student?','Người nói có phải là học sinh mới không?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-36-003','esl-fast-beginner-1-36','Where is the speaker a new student?','Người nói là học sinh mới ở đâu?','ACTIVE',NULL,NULL,NULL,NULL),
@@ -65776,7 +65776,7 @@ INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_
 	('Q-esl-fast-beginner-1-36-029','esl-fast-beginner-1-36','What career does the speaker hope to have?','Người nói hy vọng có nghề nghiệp gì?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-36-030','esl-fast-beginner-1-36','What is the speaker''s main interest?','Mối quan tâm chính của người nói là gì?','ACTIVE',NULL,NULL,NULL,NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-37','A Long Wait','Chờ lâu','BEGINNER_01_ESL_FAST_CHILDREN_037.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,0,0,37), */
+	/* (UUID(),'esl-fast-beginner-1-37','A Long Wait','Chờ lâu','ESL_FAST_BEGINNER_1_037.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,0,0,37), */
 	('Q-esl-fast-beginner-1-37-001','esl-fast-beginner-1-37','What is fun and fast?','Điều gì vừa vui vừa nhanh?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-37-002','esl-fast-beginner-1-37','How is the rollercoaster ride?','Chuyến tàu lượn siêu tốc như thế nào?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-37-003','esl-fast-beginner-1-37','What is very long?','Cái gì rất dài?','ACTIVE',NULL,NULL,NULL,NULL),
@@ -65808,7 +65808,7 @@ INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_
 	('Q-esl-fast-beginner-1-37-029','esl-fast-beginner-1-37','What is John trying to do while waiting?','John đang cố làm gì trong lúc chờ?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-37-030','esl-fast-beginner-1-37','Are John and his friends on the rollercoaster yet?','John và các bạn đã lên tàu lượn chưa?','ACTIVE',NULL,NULL,NULL,NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-38','The Teacher Takes Away His Phone','Giáo viên tịch thu điện thoại của cậu ấy','BEGINNER_01_ESL_FAST_CHILDREN_038.mp3',NULL,'00:00:00.000','00:00:29.000','esl-fast-children-1',1,0,0,38), */
+	/* (UUID(),'esl-fast-beginner-1-38','The Teacher Takes Away His Phone','Giáo viên tịch thu điện thoại của cậu ấy','ESL_FAST_BEGINNER_1_038.mp3',NULL,'00:00:00.000','00:00:29.000','esl-fast-children-1',1,0,0,38), */
 	('Q-esl-fast-beginner-1-38-001', 'esl-fast-beginner-1-38', 'How are Mr. Brown''s lectures?', 'Những bài giảng của thầy Brown như thế nào?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	('Q-esl-fast-beginner-1-38-002', 'esl-fast-beginner-1-38', 'What does a student do while Mr. Brown is teaching?', 'Một học sinh làm gì trong khi thầy Brown đang giảng bài?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	('Q-esl-fast-beginner-1-38-003', 'esl-fast-beginner-1-38', 'Who is teaching the class?', 'Ai đang dạy lớp học?', 'ACTIVE', NULL, NULL, NULL, NULL),
@@ -65840,7 +65840,7 @@ INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_
 	('Q-esl-fast-beginner-1-38-029', 'esl-fast-beginner-1-38', 'What does Mr. Brown do when he sees the student playing games?', 'Thầy Brown làm gì khi thấy cậu học sinh chơi game?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	('Q-esl-fast-beginner-1-38-030', 'esl-fast-beginner-1-38', 'What happens to the student at the end of the story?', 'Điều gì xảy ra với cậu học sinh ở cuối câu chuyện?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-39','No One Likes the Flu','Không ai thích bị cúm','BEGINNER_01_ESL_FAST_CHILDREN_039.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,0,0,39), */
+	/* (UUID(),'esl-fast-beginner-1-39','No One Likes the Flu','Không ai thích bị cúm','ESL_FAST_BEGINNER_1_039.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,0,0,39), */
 	('Q-esl-fast-beginner-1-39-001', 'esl-fast-beginner-1-39', 'What is wrong with the boy?', 'Cậu bé bị làm sao?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	('Q-esl-fast-beginner-1-39-002', 'esl-fast-beginner-1-39', 'Where does the boy go when he is sick?', 'Cậu bé đi đâu khi bị ốm?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	('Q-esl-fast-beginner-1-39-003', 'esl-fast-beginner-1-39', 'Who does the boy visit?', 'Cậu bé đến gặp ai?', 'ACTIVE', NULL, NULL, NULL, NULL),
@@ -65872,7 +65872,7 @@ INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_
 	('Q-esl-fast-beginner-1-39-029', 'esl-fast-beginner-1-39', 'Does anyone like having the flu?', 'Có ai thích bị cúm không?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	('Q-esl-fast-beginner-1-39-030', 'esl-fast-beginner-1-39', 'What is the main idea of the story?', 'Ý chính của câu chuyện là gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-40','The Circus','Rạp xiếc','BEGINNER_01_ESL_FAST_CHILDREN_040.mp3',NULL,'00:00:00.000','00:00:38.000','esl-fast-children-1',1,0,0,40), */
+	/* (UUID(),'esl-fast-beginner-1-40','The Circus','Rạp xiếc','ESL_FAST_BEGINNER_1_040.mp3',NULL,'00:00:00.000','00:00:38.000','esl-fast-children-1',1,0,0,40), */
 	('Q-esl-fast-beginner-1-40-001', 'esl-fast-beginner-1-40', 'Where does the girl go?', 'Cô bé đi đâu?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	('Q-esl-fast-beginner-1-40-002', 'esl-fast-beginner-1-40', 'What does the girl see first?', 'Cô bé nhìn thấy gì đầu tiên?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	('Q-esl-fast-beginner-1-40-003', 'esl-fast-beginner-1-40', 'Who does the girl see at the circus?', 'Cô bé nhìn thấy ai ở rạp xiếc?', 'ACTIVE', NULL, NULL, NULL, NULL),
@@ -65904,7 +65904,7 @@ INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_
 	('Q-esl-fast-beginner-1-40-029', 'esl-fast-beginner-1-40', 'Does the girl enjoy the circus?', 'Cô bé có thích rạp xiếc không?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	('Q-esl-fast-beginner-1-40-030', 'esl-fast-beginner-1-40', 'Why does the girl not want to leave the circus?', 'Tại sao cô bé không muốn rời rạp xiếc?', 'ACTIVE', NULL, NULL, NULL, NULL);
 	
-	/* (UUID(),'esl-fast-beginner-1-41','An Unhealthy Boy','Một cậu bé không khỏe mạnh','BEGINNER_01_ESL_FAST_CHILDREN_041.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-children-1',1,0,0,41), */
+	/* (UUID(),'esl-fast-beginner-1-41','An Unhealthy Boy','Một cậu bé không khỏe mạnh','ESL_FAST_BEGINNER_1_041.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-children-1',1,0,0,41), */
 INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_VI, STATUS, CREATED_AT, UPDATED_AT, CREATED_BY, UPDATED_BY) VALUES
 	('Q-esl-fast-beginner-1-41-001', 'esl-fast-beginner-1-41', 'What is the boy like?', 'Cậu bé như thế nào?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	('Q-esl-fast-beginner-1-41-002', 'esl-fast-beginner-1-41', 'What does the boy look like?', 'Cậu bé trông như thế nào?', 'ACTIVE', NULL, NULL, NULL, NULL),
@@ -65937,7 +65937,7 @@ INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_
 	('Q-esl-fast-beginner-1-41-029', 'esl-fast-beginner-1-41', 'What is served for dinner in the story?', 'Trong câu chuyện, bữa tối có những món gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	('Q-esl-fast-beginner-1-41-030', 'esl-fast-beginner-1-41', 'What is the main idea of the story?', 'Ý chính của câu chuyện là gì?', 'ACTIVE', NULL, NULL, NULL, NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-42','Ferris Wheel','Vòng đu quay','BEGINNER_01_ESL_FAST_CHILDREN_042.mp3',NULL,'00:00:00.000','00:00:39.000','esl-fast-children-1',1,0,0,42), */
+	/* (UUID(),'esl-fast-beginner-1-42','Ferris Wheel','Vòng đu quay','ESL_FAST_BEGINNER_1_042.mp3',NULL,'00:00:00.000','00:00:39.000','esl-fast-children-1',1,0,0,42), */
 	('Q-esl-fast-beginner-1-42-001','esl-fast-beginner-1-42','What is a Ferris wheel?','Vòng đu quay là gì?','ACTIVE',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,'SYSTEM','SYSTEM'),
 	('Q-esl-fast-beginner-1-42-002','esl-fast-beginner-1-42','How big is a Ferris wheel?','Vòng đu quay lớn như thế nào?','ACTIVE',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,'SYSTEM','SYSTEM'),
 	('Q-esl-fast-beginner-1-42-003','esl-fast-beginner-1-42','What does a Ferris wheel do?','Vòng đu quay làm gì?','ACTIVE',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,'SYSTEM','SYSTEM'),
@@ -65969,67 +65969,67 @@ INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_
 	('Q-esl-fast-beginner-1-42-029','esl-fast-beginner-1-42','What does the boy see when he looks down?','Cậu bé nhìn thấy gì khi nhìn xuống?','ACTIVE',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,'SYSTEM','SYSTEM'),
 	('Q-esl-fast-beginner-1-42-030','esl-fast-beginner-1-42','How does the boy feel about the view?','Cậu bé cảm thấy thế nào về khung cảnh?','ACTIVE',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,'SYSTEM','SYSTEM');
 	
-	/* (UUID(),'esl-fast-beginner-1-43','More Money','Nhiều tiền hơn','BEGINNER_01_ESL_FAST_CHILDREN_043.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,0,0,43), */
+	/* (UUID(),'esl-fast-beginner-1-43','More Money','Nhiều tiền hơn','ESL_FAST_BEGINNER_1_043.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,0,0,43), */
 	
 	
-	/* (UUID(),'esl-fast-beginner-1-44','Loving Dance','Yêu thích khiêu vũ','BEGINNER_01_ESL_FAST_CHILDREN_044.mp3',NULL,'00:00:00.000','00:00:29.000','esl-fast-children-1',1,0,0,44), */
+	/* (UUID(),'esl-fast-beginner-1-44','Loving Dance','Yêu thích khiêu vũ','ESL_FAST_BEGINNER_1_044.mp3',NULL,'00:00:00.000','00:00:29.000','esl-fast-children-1',1,0,0,44), */
 	
 	
-	/* (UUID(),'esl-fast-beginner-1-45','A Fun Sleepover','Một buổi ngủ qua đêm vui vẻ','BEGINNER_01_ESL_FAST_CHILDREN_045.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,0,0,45), */
+	/* (UUID(),'esl-fast-beginner-1-45','A Fun Sleepover','Một buổi ngủ qua đêm vui vẻ','ESL_FAST_BEGINNER_1_045.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,0,0,45), */
 	
 	
-	/* (UUID(),'esl-fast-beginner-1-46','Apology','Lời xin lỗi','BEGINNER_01_ESL_FAST_CHILDREN_046.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,0,0,46), */
+	/* (UUID(),'esl-fast-beginner-1-46','Apology','Lời xin lỗi','ESL_FAST_BEGINNER_1_046.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,0,0,46), */
 	
 	
-	/* (UUID(),'esl-fast-beginner-1-47','Glass of Milk on the Desk','Ly sữa trên bàn học','BEGINNER_01_ESL_FAST_CHILDREN_047.mp3',NULL,'00:00:00.000','00:00:34.000','esl-fast-children-1',1,0,0,47), */
-	/* (UUID(),'esl-fast-beginner-1-48','A Simple Gift','Một món quà đơn giản','BEGINNER_01_ESL_FAST_CHILDREN_048.mp3',NULL,'00:00:00.000','00:00:25.000','esl-fast-children-1',1,0,0,48), */
-	/* (UUID(),'esl-fast-beginner-1-49','Hide-and-Seek','Trò chơi trốn tìm','BEGINNER_01_ESL_FAST_CHILDREN_049.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,0,0,49), */
-	/* (UUID(),'esl-fast-beginner-1-50','Excited for the Mail','Hồi hộp chờ thư','BEGINNER_01_ESL_FAST_CHILDREN_050.mp3',NULL,'00:00:00.000','00:00:28.000','esl-fast-children-1',1,0,0,50), */
-	/* (UUID(),'esl-fast-beginner-1-51','Having Fun on a Swing','Vui chơi trên xích đu','BEGINNER_01_ESL_FAST_CHILDREN_051.mp3',NULL,'00:00:00.000','00:00:28.000','esl-fast-children-1',1,0,0,51), */
-	/* (UUID(),'esl-fast-beginner-1-52','He Walks His Dogs','Cậu ấy dắt chó đi dạo','BEGINNER_01_ESL_FAST_CHILDREN_052.mp3',NULL,'00:00:00.000','00:00:34.000','esl-fast-children-1',1,0,0,52), */
-	/* (UUID(),'esl-fast-beginner-1-53','A Pencil for Everything','Một cây bút chì cho mọi việc','BEGINNER_01_ESL_FAST_CHILDREN_053.mp3',NULL,'00:00:00.000','00:00:26.000','esl-fast-children-1',1,0,0,53), */
-	/* (UUID(),'esl-fast-beginner-1-54','Being Careless','Sự bất cẩn','BEGINNER_01_ESL_FAST_CHILDREN_054.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1',1,0,0,54), */
-	/* (UUID(),'esl-fast-beginner-1-55','Fluffy the Rabbit','Fluffy chú thỏ nhỏ','BEGINNER_01_ESL_FAST_CHILDREN_055.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-children-1',1,0,0,55), */
-	/* (UUID(),'esl-fast-beginner-1-56','Three Friends and a Jump Rope','Ba người bạn và dây nhảy','BEGINNER_01_ESL_FAST_CHILDREN_056.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,0,0,56), */
-	/* (UUID(),'esl-fast-beginner-1-57','He Plays with the Ladybug','Cậu ấy chơi với bọ rùa','BEGINNER_01_ESL_FAST_CHILDREN_057.mp3',NULL,'00:00:00.000','00:00:38.000','esl-fast-children-1',1,0,0,57), */
-	/* (UUID(),'esl-fast-beginner-1-58','The Dog That Digs','Con chó hay đào đất','BEGINNER_01_ESL_FAST_CHILDREN_058.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-children-1',1,0,0,58), */
-	/* (UUID(),'esl-fast-beginner-1-59','Playing with the Monkey Bars','Chơi xà đơn trong sân chơi','BEGINNER_01_ESL_FAST_CHILDREN_059.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,0,0,59), */
-	/* (UUID(),'esl-fast-beginner-1-60','Playing a Doctor','Đóng vai bác sĩ','BEGINNER_01_ESL_FAST_CHILDREN_060.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-children-1',1,0,0,60), */
-	/* (UUID(),'esl-fast-beginner-1-61','Art Class','Giờ học mỹ thuật','BEGINNER_01_ESL_FAST_CHILDREN_061.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-children-1',1,0,0,61), */
-	/* (UUID(),'esl-fast-beginner-1-62','Getting Ready for Soccer Practice','Chuẩn bị cho buổi tập bóng đá','BEGINNER_01_ESL_FAST_CHILDREN_062.mp3',NULL,'00:00:00.000','00:00:27.000','esl-fast-children-1',1,0,0,62), */
-	/* (UUID(),'esl-fast-beginner-1-63','The Pouch of a Kangaroo','Túi của con chuột túi','BEGINNER_01_ESL_FAST_CHILDREN_063.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1',1,0,0,63), */
-	/* (UUID(),'esl-fast-beginner-1-64','Aunt and Uncle','Dì và chú','BEGINNER_01_ESL_FAST_CHILDREN_064.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,64), */
-	/* (UUID(),'esl-fast-beginner-1-65','A Busy Boy','Một cậu bé bận rộn','BEGINNER_01_ESL_FAST_CHILDREN_065.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,65), */
-	/* (UUID(),'esl-fast-beginner-1-66','Fruit Salad','Salad trái cây','BEGINNER_01_ESL_FAST_CHILDREN_066.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,66), */
-	/* (UUID(),'esl-fast-beginner-1-67','He Takes His Test','Cậu ấy làm bài kiểm tra','BEGINNER_01_ESL_FAST_CHILDREN_067.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,67), */
-	/* (UUID(),'esl-fast-beginner-1-68','Parent-teacher Conference','Buổi họp phụ huynh và giáo viên','BEGINNER_01_ESL_FAST_CHILDREN_068.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,68), */
-	/* (UUID(),'esl-fast-beginner-1-69','The Second Dog','Con chó thứ hai','BEGINNER_01_ESL_FAST_CHILDREN_069.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,69), */
-	/* (UUID(),'esl-fast-beginner-1-70','A Cat and a Ball of Yarn','Một con mèo và cuộn len','BEGINNER_01_ESL_FAST_CHILDREN_070.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,70), */
-	/* (UUID(),'esl-fast-beginner-1-71','Taking Care of His Orange Tree','Chăm sóc cây cam của cậu ấy','BEGINNER_01_ESL_FAST_CHILDREN_071.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,71), */
-	/* (UUID(),'esl-fast-beginner-1-72','The Missing Notebook','Cuốn vở bị mất','BEGINNER_01_ESL_FAST_CHILDREN_072.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,72), */
-	/* (UUID(),'esl-fast-beginner-1-73','Tag, You\'re It!','Trò chơi đuổi bắt, đến lượt bạn rồi!','BEGINNER_01_ESL_FAST_CHILDREN_073.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,73), */
-	/* (UUID(),'esl-fast-beginner-1-74','Different Flavors','Những hương vị khác nhau','BEGINNER_01_ESL_FAST_CHILDREN_074.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,74), */
-	/* (UUID(),'esl-fast-beginner-1-75','Daydreaming at School','Mơ mộng trong giờ học','BEGINNER_01_ESL_FAST_CHILDREN_075.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,75), */
-	/* (UUID(),'esl-fast-beginner-1-76','A Pet for Dad','Một thú cưng dành cho bố','BEGINNER_01_ESL_FAST_CHILDREN_076.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,76), */
-	/* (UUID(),'esl-fast-beginner-1-77','Too Sick','Bị ốm nặng','BEGINNER_01_ESL_FAST_CHILDREN_077.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,77), */
-	/* (UUID(),'esl-fast-beginner-1-78','The Worst Student','Học sinh tệ nhất','BEGINNER_01_ESL_FAST_CHILDREN_078.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,78), */
-	/* (UUID(),'esl-fast-beginner-1-79','Bad Manners','Cư xử không đúng mực','BEGINNER_01_ESL_FAST_CHILDREN_079.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,79), */
-	/* (UUID(),'esl-fast-beginner-1-80','Transferring to Another Class','Chuyển sang lớp khác','BEGINNER_01_ESL_FAST_CHILDREN_080.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,80), */
-	/* (UUID(),'esl-fast-beginner-1-81','Good Manners','Cư xử lịch sự','BEGINNER_01_ESL_FAST_CHILDREN_081.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,81), */
-	/* (UUID(),'esl-fast-beginner-1-82','The Trouble with Braces','Rắc rối với niềng răng','BEGINNER_01_ESL_FAST_CHILDREN_082.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,82), */
-	/* (UUID(),'esl-fast-beginner-1-83','Lost on the First Day','Lạc trong ngày đầu tiên','BEGINNER_01_ESL_FAST_CHILDREN_083.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,83), */
-	/* (UUID(),'esl-fast-beginner-1-84','Stealing is Bad','Ăn cắp là xấu','BEGINNER_01_ESL_FAST_CHILDREN_084.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,84), */
-	/* (UUID(),'esl-fast-beginner-1-85','Picking Her Up','Đón cô ấy','BEGINNER_01_ESL_FAST_CHILDREN_085.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,85), */
-	/* (UUID(),'esl-fast-beginner-1-86','Saving the Princess','Giải cứu công chúa','BEGINNER_01_ESL_FAST_CHILDREN_086.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,86), */
-	/* (UUID(),'esl-fast-beginner-1-87','Make It Hot, Make It Cold','Làm nóng lên, làm lạnh đi','BEGINNER_01_ESL_FAST_CHILDREN_087.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,87), */
-	/* (UUID(),'esl-fast-beginner-1-88','A Good Shower','Một buổi tắm sảng khoái','BEGINNER_01_ESL_FAST_CHILDREN_088.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,88), */
-	/* (UUID(),'esl-fast-beginner-1-89','The Wrong Color','Màu sắc bị chọn sai','BEGINNER_01_ESL_FAST_CHILDREN_089.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,89), */
-	/* (UUID(),'esl-fast-beginner-1-90','Forgetting Her Glasses','Quên kính của cô ấy','BEGINNER_01_ESL_FAST_CHILDREN_090.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,90), */
-	/* (UUID(),'esl-fast-beginner-1-91','Quitting His Job','Nghỉ việc','BEGINNER_01_ESL_FAST_CHILDREN_091.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,91), */
-	/* (UUID(),'esl-fast-beginner-1-92','Future Goals','Mục tiêu tương lai','BEGINNER_01_ESL_FAST_CHILDREN_092.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,92), */
-	/* (UUID(),'esl-fast-beginner-1-93','A Kind Stranger','Một người lạ tốt bụng','BEGINNER_01_ESL_FAST_CHILDREN_093.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,93); */
+	/* (UUID(),'esl-fast-beginner-1-47','Glass of Milk on the Desk','Ly sữa trên bàn học','ESL_FAST_BEGINNER_1_047.mp3',NULL,'00:00:00.000','00:00:34.000','esl-fast-children-1',1,0,0,47), */
+	/* (UUID(),'esl-fast-beginner-1-48','A Simple Gift','Một món quà đơn giản','ESL_FAST_BEGINNER_1_048.mp3',NULL,'00:00:00.000','00:00:25.000','esl-fast-children-1',1,0,0,48), */
+	/* (UUID(),'esl-fast-beginner-1-49','Hide-and-Seek','Trò chơi trốn tìm','ESL_FAST_BEGINNER_1_049.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,0,0,49), */
+	/* (UUID(),'esl-fast-beginner-1-50','Excited for the Mail','Hồi hộp chờ thư','ESL_FAST_BEGINNER_1_050.mp3',NULL,'00:00:00.000','00:00:28.000','esl-fast-children-1',1,0,0,50), */
+	/* (UUID(),'esl-fast-beginner-1-51','Having Fun on a Swing','Vui chơi trên xích đu','ESL_FAST_BEGINNER_1_051.mp3',NULL,'00:00:00.000','00:00:28.000','esl-fast-children-1',1,0,0,51), */
+	/* (UUID(),'esl-fast-beginner-1-52','He Walks His Dogs','Cậu ấy dắt chó đi dạo','ESL_FAST_BEGINNER_1_052.mp3',NULL,'00:00:00.000','00:00:34.000','esl-fast-children-1',1,0,0,52), */
+	/* (UUID(),'esl-fast-beginner-1-53','A Pencil for Everything','Một cây bút chì cho mọi việc','ESL_FAST_BEGINNER_1_053.mp3',NULL,'00:00:00.000','00:00:26.000','esl-fast-children-1',1,0,0,53), */
+	/* (UUID(),'esl-fast-beginner-1-54','Being Careless','Sự bất cẩn','ESL_FAST_BEGINNER_1_054.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1',1,0,0,54), */
+	/* (UUID(),'esl-fast-beginner-1-55','Fluffy the Rabbit','Fluffy chú thỏ nhỏ','ESL_FAST_BEGINNER_1_055.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-children-1',1,0,0,55), */
+	/* (UUID(),'esl-fast-beginner-1-56','Three Friends and a Jump Rope','Ba người bạn và dây nhảy','ESL_FAST_BEGINNER_1_056.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,0,0,56), */
+	/* (UUID(),'esl-fast-beginner-1-57','He Plays with the Ladybug','Cậu ấy chơi với bọ rùa','ESL_FAST_BEGINNER_1_057.mp3',NULL,'00:00:00.000','00:00:38.000','esl-fast-children-1',1,0,0,57), */
+	/* (UUID(),'esl-fast-beginner-1-58','The Dog That Digs','Con chó hay đào đất','ESL_FAST_BEGINNER_1_058.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-children-1',1,0,0,58), */
+	/* (UUID(),'esl-fast-beginner-1-59','Playing with the Monkey Bars','Chơi xà đơn trong sân chơi','ESL_FAST_BEGINNER_1_059.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,0,0,59), */
+	/* (UUID(),'esl-fast-beginner-1-60','Playing a Doctor','Đóng vai bác sĩ','ESL_FAST_BEGINNER_1_060.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-children-1',1,0,0,60), */
+	/* (UUID(),'esl-fast-beginner-1-61','Art Class','Giờ học mỹ thuật','ESL_FAST_BEGINNER_1_061.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-children-1',1,0,0,61), */
+	/* (UUID(),'esl-fast-beginner-1-62','Getting Ready for Soccer Practice','Chuẩn bị cho buổi tập bóng đá','ESL_FAST_BEGINNER_1_062.mp3',NULL,'00:00:00.000','00:00:27.000','esl-fast-children-1',1,0,0,62), */
+	/* (UUID(),'esl-fast-beginner-1-63','The Pouch of a Kangaroo','Túi của con chuột túi','ESL_FAST_BEGINNER_1_063.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1',1,0,0,63), */
+	/* (UUID(),'esl-fast-beginner-1-64','Aunt and Uncle','Dì và chú','ESL_FAST_BEGINNER_1_064.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,64), */
+	/* (UUID(),'esl-fast-beginner-1-65','A Busy Boy','Một cậu bé bận rộn','ESL_FAST_BEGINNER_1_065.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,65), */
+	/* (UUID(),'esl-fast-beginner-1-66','Fruit Salad','Salad trái cây','ESL_FAST_BEGINNER_1_066.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,66), */
+	/* (UUID(),'esl-fast-beginner-1-67','He Takes His Test','Cậu ấy làm bài kiểm tra','ESL_FAST_BEGINNER_1_067.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,67), */
+	/* (UUID(),'esl-fast-beginner-1-68','Parent-teacher Conference','Buổi họp phụ huynh và giáo viên','ESL_FAST_BEGINNER_1_068.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,68), */
+	/* (UUID(),'esl-fast-beginner-1-69','The Second Dog','Con chó thứ hai','ESL_FAST_BEGINNER_1_069.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,69), */
+	/* (UUID(),'esl-fast-beginner-1-70','A Cat and a Ball of Yarn','Một con mèo và cuộn len','ESL_FAST_BEGINNER_1_070.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,70), */
+	/* (UUID(),'esl-fast-beginner-1-71','Taking Care of His Orange Tree','Chăm sóc cây cam của cậu ấy','ESL_FAST_BEGINNER_1_071.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,71), */
+	/* (UUID(),'esl-fast-beginner-1-72','The Missing Notebook','Cuốn vở bị mất','ESL_FAST_BEGINNER_1_072.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,72), */
+	/* (UUID(),'esl-fast-beginner-1-73','Tag, You\'re It!','Trò chơi đuổi bắt, đến lượt bạn rồi!','ESL_FAST_BEGINNER_1_073.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,73), */
+	/* (UUID(),'esl-fast-beginner-1-74','Different Flavors','Những hương vị khác nhau','ESL_FAST_BEGINNER_1_074.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,74), */
+	/* (UUID(),'esl-fast-beginner-1-75','Daydreaming at School','Mơ mộng trong giờ học','ESL_FAST_BEGINNER_1_075.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,75), */
+	/* (UUID(),'esl-fast-beginner-1-76','A Pet for Dad','Một thú cưng dành cho bố','ESL_FAST_BEGINNER_1_076.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,76), */
+	/* (UUID(),'esl-fast-beginner-1-77','Too Sick','Bị ốm nặng','ESL_FAST_BEGINNER_1_077.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,77), */
+	/* (UUID(),'esl-fast-beginner-1-78','The Worst Student','Học sinh tệ nhất','ESL_FAST_BEGINNER_1_078.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,78), */
+	/* (UUID(),'esl-fast-beginner-1-79','Bad Manners','Cư xử không đúng mực','ESL_FAST_BEGINNER_1_079.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,79), */
+	/* (UUID(),'esl-fast-beginner-1-80','Transferring to Another Class','Chuyển sang lớp khác','ESL_FAST_BEGINNER_1_080.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,80), */
+	/* (UUID(),'esl-fast-beginner-1-81','Good Manners','Cư xử lịch sự','ESL_FAST_BEGINNER_1_081.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,81), */
+	/* (UUID(),'esl-fast-beginner-1-82','The Trouble with Braces','Rắc rối với niềng răng','ESL_FAST_BEGINNER_1_082.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,82), */
+	/* (UUID(),'esl-fast-beginner-1-83','Lost on the First Day','Lạc trong ngày đầu tiên','ESL_FAST_BEGINNER_1_083.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,83), */
+	/* (UUID(),'esl-fast-beginner-1-84','Stealing is Bad','Ăn cắp là xấu','ESL_FAST_BEGINNER_1_084.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,84), */
+	/* (UUID(),'esl-fast-beginner-1-85','Picking Her Up','Đón cô ấy','ESL_FAST_BEGINNER_1_085.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,85), */
+	/* (UUID(),'esl-fast-beginner-1-86','Saving the Princess','Giải cứu công chúa','ESL_FAST_BEGINNER_1_086.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,86), */
+	/* (UUID(),'esl-fast-beginner-1-87','Make It Hot, Make It Cold','Làm nóng lên, làm lạnh đi','ESL_FAST_BEGINNER_1_087.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,87), */
+	/* (UUID(),'esl-fast-beginner-1-88','A Good Shower','Một buổi tắm sảng khoái','ESL_FAST_BEGINNER_1_088.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,88), */
+	/* (UUID(),'esl-fast-beginner-1-89','The Wrong Color','Màu sắc bị chọn sai','ESL_FAST_BEGINNER_1_089.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,89), */
+	/* (UUID(),'esl-fast-beginner-1-90','Forgetting Her Glasses','Quên kính của cô ấy','ESL_FAST_BEGINNER_1_090.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,90), */
+	/* (UUID(),'esl-fast-beginner-1-91','Quitting His Job','Nghỉ việc','ESL_FAST_BEGINNER_1_091.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,91), */
+	/* (UUID(),'esl-fast-beginner-1-92','Future Goals','Mục tiêu tương lai','ESL_FAST_BEGINNER_1_092.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,92), */
+	/* (UUID(),'esl-fast-beginner-1-93','A Kind Stranger','Một người lạ tốt bụng','ESL_FAST_BEGINNER_1_093.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,93); */
 INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE, ANSWER_TEXT, ANSWER_TEXT_VI, IS_CORRECT,DISPLAY_ORDER,CREATED_AT,UPDATED_AT,CREATED_BY,UPDATED_BY) VALUES
-	/* (UUID(),'esl-fast-beginner-1-1','Going to the Zoo','Đi tới sở thú','BEGINNER_01_ESL_FAST_CHILDREN_001.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-children-1',1,1,1,1), */
+	/* (UUID(),'esl-fast-beginner-1-1','Going to the Zoo','Đi tới sở thú','ESL_FAST_BEGINNER_1_001.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-children-1',1,1,1,1), */
     ('Q-esl-fast-beginner-1-1-001','A','She goes to the zoo','Cô bé đi đến sở thú','Y',1,NULL,NULL,NULL,NULL),
     ('Q-esl-fast-beginner-1-1-001','B','She goes to school','Cô bé đi đến trường','N',2,NULL,NULL,NULL,NULL),
     ('Q-esl-fast-beginner-1-1-001','C','She goes home','Cô bé về nhà','N',3,NULL,NULL,NULL,NULL),
@@ -66151,7 +66151,7 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE, ANSWER_TEXT, ANSWER_TEXT_VI, IS_
     ('Q-esl-fast-beginner-1-1-030','C','A horse and a cow','Một con ngựa và một con bò','N',3,NULL,NULL,NULL,NULL),
     ('Q-esl-fast-beginner-1-1-030','D','A bird and a fish','Một con chim và một con cá','N',4,NULL,NULL,NULL,NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-2','Christmas Time','Giáng sinh','BEGINNER_01_ESL_FAST_CHILDREN_002.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-children-1',1,1,1,2), */
+	/* (UUID(),'esl-fast-beginner-1-2','Christmas Time','Giáng sinh','ESL_FAST_BEGINNER_1_002.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-children-1',1,1,1,2), */
 	('Q-esl-fast-beginner-1-2-001','A','It is Christmas','Đó là ngày Giáng sinh','Y',1,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-2-001','B','It is Halloween','Đó là ngày Halloween','N',2,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-2-001','C','It is Easter','Đó là lễ Phục sinh','N',3,NULL,NULL,NULL,NULL),
@@ -66273,7 +66273,7 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE, ANSWER_TEXT, ANSWER_TEXT_VI, IS_
 	('Q-esl-fast-beginner-1-2-030','C','Dad takes the car','Bố lấy chiếc xe','N',3,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-2-030','D','Dad leaves the house','Bố rời khỏi nhà','N',4,NULL,NULL,NULL,NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-3','She Goes to the Nurse','Cô ấy đến gặp y tá','BEGINNER_01_ESL_FAST_CHILDREN_003.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-children-1',1,1,1,3), */
+	/* (UUID(),'esl-fast-beginner-1-3','She Goes to the Nurse','Cô ấy đến gặp y tá','ESL_FAST_BEGINNER_1_003.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-children-1',1,1,1,3), */
 	('Q-esl-fast-beginner-1-3-001','A','She goes outside','Cô bé ra ngoài','Y',1,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-3-001','B','She goes home','Cô bé về nhà','N',2,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-3-001','C','She goes to the store','Cô bé đi đến cửa hàng','N',3,NULL,NULL,NULL,NULL),
@@ -66395,7 +66395,7 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE, ANSWER_TEXT, ANSWER_TEXT_VI, IS_
 	('Q-esl-fast-beginner-1-3-030','C','She runs outside','Cô bé chạy ra ngoài','N',3,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-3-030','D','She goes to the store','Cô bé đi đến cửa hàng','N',4,NULL,NULL,NULL,NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-4','Waiting','Chờ đợi','BEGINNER_01_ESL_FAST_CHILDREN_004.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,1,1,4), */
+	/* (UUID(),'esl-fast-beginner-1-4','Waiting','Chờ đợi','ESL_FAST_BEGINNER_1_004.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,1,1,4), */
 	('Q-esl-fast-beginner-1-4-001','A','They are in class','Chúng đang ở trong lớp học','Y',1,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-4-001','B','They are at home','Chúng đang ở nhà','N',2,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-4-001','C','They are outside','Chúng đang ở bên ngoài','N',3,NULL,NULL,NULL,NULL),
@@ -66517,7 +66517,7 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE, ANSWER_TEXT, ANSWER_TEXT_VI, IS_
 	('Q-esl-fast-beginner-1-4-030','C','They continue to sleep','Chúng tiếp tục ngủ','N',3,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-4-030','D','They continue to study','Chúng tiếp tục học','N',4,NULL,NULL,NULL,NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-5','Chores','Việc nhà','BEGINNER_01_ESL_FAST_CHILDREN_005.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-children-1',1,1,1,5), */
+	/* (UUID(),'esl-fast-beginner-1-5','Chores','Việc nhà','ESL_FAST_BEGINNER_1_005.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-children-1',1,1,1,5), */
 	('Q-esl-fast-beginner-1-5-001','A','Video games','Trò chơi điện tử','Y',1,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-5-001','B','Basketball','Bóng rổ','N',2,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-5-001','C','Football','Bóng đá','N',3,NULL,NULL,NULL,NULL),
@@ -66640,7 +66640,7 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE, ANSWER_TEXT, ANSWER_TEXT_VI, IS_
 	('Q-esl-fast-beginner-1-5-030','D','He goes to sleep','Cậu bé đi ngủ','N',4,NULL,NULL,NULL,NULL);
 
 INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE,ANSWER_TEXT,ANSWER_TEXT_VI,IS_CORRECT,DISPLAY_ORDER,CREATED_AT,UPDATED_AT,CREATED_BY,UPDATED_BY) VALUES	
-	/* (UUID(),'esl-fast-beginner-1-6','The First Song','Bài hát đầu tiên','BEGINNER_01_ESL_FAST_CHILDREN_006.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1',1,1,1,6), */
+	/* (UUID(),'esl-fast-beginner-1-6','The First Song','Bài hát đầu tiên','ESL_FAST_BEGINNER_1_006.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1',1,1,1,6), */
 	('Q-esl-fast-beginner-1-6-001','A','In the car','Trong xe ô tô','Y',1,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-6-001','B','In the house','Trong nhà','N',2,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-6-001','C','At school','Ở trường','N',3,NULL,NULL,NULL,NULL),
@@ -66762,7 +66762,7 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE,ANSWER_TEXT,ANSWER_TEXT_VI,IS_COR
 	('Q-esl-fast-beginner-1-6-030','C','She taps her feet','Cô bé gõ nhịp bằng chân','N',3,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-6-030','D','She leaves the car','Cô bé rời khỏi xe','N',4,NULL,NULL,NULL,NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-7','Visiting the Doctor','Đi khám bác sĩ','BEGINNER_01_ESL_FAST_CHILDREN_007.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-children-1',1,1,1,7), */
+	/* (UUID(),'esl-fast-beginner-1-7','Visiting the Doctor','Đi khám bác sĩ','ESL_FAST_BEGINNER_1_007.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-children-1',1,1,1,7), */
 	('Q-esl-fast-beginner-1-7-001','A','She feels hot','Cô bé cảm thấy nóng','Y',1,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-7-001','B','She feels cold','Cô bé cảm thấy lạnh','N',2,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-7-001','C','She feels hungry','Cô bé cảm thấy đói','N',3,NULL,NULL,NULL,NULL),
@@ -66884,7 +66884,7 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE,ANSWER_TEXT,ANSWER_TEXT_VI,IS_COR
 	('Q-esl-fast-beginner-1-7-030','C','She plays with a sticker','Cô bé chơi với miếng sticker','N',3,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-7-030','D','She visits the doctor every day','Cô bé đi khám bác sĩ mỗi ngày','N',4,NULL,NULL,NULL,NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-8','Different Foods','Các loại thức ăn khác nhau','BEGINNER_01_ESL_FAST_CHILDREN_008.mp3',NULL,'00:00:00.000','00:00:34.000','esl-fast-children-1',1,1,1,8), */
+	/* (UUID(),'esl-fast-beginner-1-8','Different Foods','Các loại thức ăn khác nhau','ESL_FAST_BEGINNER_1_008.mp3',NULL,'00:00:00.000','00:00:34.000','esl-fast-children-1',1,1,1,8), */
 	('Q-esl-fast-beginner-1-8-001','A','She is hungry','Cô bé cảm thấy đói','Y',1,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-8-001','B','She is thirsty','Cô bé cảm thấy khát','N',2,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-8-001','C','She is tired','Cô bé cảm thấy mệt','N',3,NULL,NULL,NULL,NULL),
@@ -67006,7 +67006,7 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE,ANSWER_TEXT,ANSWER_TEXT_VI,IS_COR
 	('Q-esl-fast-beginner-1-8-030','C','He takes her to the store','Ông ấy đưa cô bé đến cửa hàng','N',3,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-8-030','D','He cooks dinner','Ông ấy nấu bữa tối','N',4,NULL,NULL,NULL,NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-9','The Corner','Góc phố','BEGINNER_01_ESL_FAST_CHILDREN_009.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-children-1',1,1,1,9), */
+	/* (UUID(),'esl-fast-beginner-1-9','The Corner','Góc phố','ESL_FAST_BEGINNER_1_009.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-children-1',1,1,1,9), */
 	('Q-esl-fast-beginner-1-9-001','A','Math','Môn toán','Y',1,NULL,NULL,NULL,NULL),
     ('Q-esl-fast-beginner-1-9-001','B','Food','Đồ ăn','N',2,NULL,NULL,NULL,NULL),
     ('Q-esl-fast-beginner-1-9-001','C','Homework','Bài tập về nhà','N',3,NULL,NULL,NULL,NULL),
@@ -67128,7 +67128,7 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE,ANSWER_TEXT,ANSWER_TEXT_VI,IS_COR
     ('Q-esl-fast-beginner-1-9-030','C','Jill starts doing math','Jill bắt đầu làm toán','N',3,NULL,NULL,NULL,NULL),
     ('Q-esl-fast-beginner-1-9-030','D','Her friends leave','Bạn bè của cô bé rời đi','N',4,NULL,NULL,NULL,NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-10','A Surprise Party','Bữa tiệc bất ngờ','BEGINNER_01_ESL_FAST_CHILDREN_010.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-children-1',1,1,1,10), */
+	/* (UUID(),'esl-fast-beginner-1-10','A Surprise Party','Bữa tiệc bất ngờ','ESL_FAST_BEGINNER_1_010.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-children-1',1,1,1,10), */
 	('Q-esl-fast-beginner-1-10-001','A','Lily','Lily','Y',1,NULL,NULL,NULL,NULL),
     ('Q-esl-fast-beginner-1-10-001','B','Her mom','Mẹ của cô bé','N',2,NULL,NULL,NULL,NULL),
     ('Q-esl-fast-beginner-1-10-001','C','Her teacher','Cô giáo của cô bé','N',3,NULL,NULL,NULL,NULL),
@@ -67251,7 +67251,7 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE,ANSWER_TEXT,ANSWER_TEXT_VI,IS_COR
     ('Q-esl-fast-beginner-1-10-030','D','Her teacher visits her','Cô giáo đến thăm cô bé','N',4,NULL,NULL,NULL,NULL);
 	
 INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE, ANSWER_TEXT, ANSWER_TEXT_VI, IS_CORRECT,DISPLAY_ORDER,CREATED_AT,UPDATED_AT,CREATED_BY,UPDATED_BY) VALUES
-	/* (UUID(),'esl-fast-beginner-1-11','A New Pet','Thú cưng mới','BEGINNER_01_ESL_FAST_CHILDREN_011.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,1,1,11), */
+	/* (UUID(),'esl-fast-beginner-1-11','A New Pet','Thú cưng mới','ESL_FAST_BEGINNER_1_011.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,1,1,11), */
     ('Q-esl-fast-beginner-1-11-001','A','She is walking','Cô bé đang đi dạo','Y',1,NULL,NULL,NULL,NULL),
     ('Q-esl-fast-beginner-1-11-001','B','She is sleeping','Cô bé đang ngủ','N',2,NULL,NULL,NULL,NULL),
     ('Q-esl-fast-beginner-1-11-001','C','She is eating','Cô bé đang ăn','N',3,NULL,NULL,NULL,NULL),
@@ -67373,7 +67373,7 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE, ANSWER_TEXT, ANSWER_TEXT_VI, IS_
     ('Q-esl-fast-beginner-1-11-030','C','Kate leaves Toby','Kate bỏ Toby lại','N',3,NULL,NULL,NULL,NULL),
     ('Q-esl-fast-beginner-1-11-030','D','The vet takes Toby home','Bác sĩ thú y đưa Toby về nhà','N',4,NULL,NULL,NULL,NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-12','Group Project','Dự án nhóm','BEGINNER_01_ESL_FAST_CHILDREN_012.mp3',NULL,'00:00:00.000','00:00:34.000','esl-fast-children-1',1,1,1,12), */
+	/* (UUID(),'esl-fast-beginner-1-12','Group Project','Dự án nhóm','ESL_FAST_BEGINNER_1_012.mp3',NULL,'00:00:00.000','00:00:34.000','esl-fast-children-1',1,1,1,12), */
 	('Q-esl-fast-beginner-1-12-001','A','A test','Một bài kiểm tra','N',1,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-12-001','B','A project','Một dự án','Y',2,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-12-001','C','A game','Một trò chơi','N',3,NULL,NULL,NULL,NULL),
@@ -67495,7 +67495,7 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE, ANSWER_TEXT, ANSWER_TEXT_VI, IS_
 	('Q-esl-fast-beginner-1-12-030','C','They work alone','Họ làm việc một mình','N',3,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-12-030','D','They finish a game','Họ hoàn thành một trò chơi','N',4,NULL,NULL,NULL,NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-13','A Cat and A Mouse','Một con mèo và một con chuột','BEGINNER_01_ESL_FAST_CHILDREN_013.mp3',NULL,'00:00:00.000','00:00:40.000','esl-fast-children-1',1,1,1,13), */
+	/* (UUID(),'esl-fast-beginner-1-13','A Cat and A Mouse','Một con mèo và một con chuột','ESL_FAST_BEGINNER_1_013.mp3',NULL,'00:00:00.000','00:00:40.000','esl-fast-children-1',1,1,1,13), */
 	('Q-esl-fast-beginner-1-13-001','A','Bored','Buồn chán','Y',1,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-13-001','B','Angry','Tức giận','N',2,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-13-001','C','Hungry','Đói','N',3,NULL,NULL,NULL,NULL),
@@ -67617,7 +67617,7 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE, ANSWER_TEXT, ANSWER_TEXT_VI, IS_
 	('Q-esl-fast-beginner-1-13-030','C','He eats cheese','Nó ăn phô mai','N',3,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-13-030','D','He chases the mouse','Nó đuổi theo chuột','N',4,NULL,NULL,NULL,NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-14','Lemonade Stand','Quầy nước chanh','BEGINNER_01_ESL_FAST_CHILDREN_014.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-children-1',1,1,1,14), */
+	/* (UUID(),'esl-fast-beginner-1-14','Lemonade Stand','Quầy nước chanh','ESL_FAST_BEGINNER_1_014.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-children-1',1,1,1,14), */
 	('Q-esl-fast-beginner-1-14-001','A','To the market','Đến chợ','N',1,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-14-001','B','To his school field trip','Đến chuyến dã ngoại của trường','Y',2,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-14-001','C','To a store','Đến cửa hàng','N',3,NULL,NULL,NULL,NULL),
@@ -67739,7 +67739,7 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE, ANSWER_TEXT, ANSWER_TEXT_VI, IS_
 	('Q-esl-fast-beginner-1-14-030','C','He goes to the market again','Cậu bé lại đi chợ','N',3,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-14-030','D','He opens a school','Cậu bé mở một ngôi trường','N',4,NULL,NULL,NULL,NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-15','New and Old','Mới và cũ','BEGINNER_01_ESL_FAST_CHILDREN_015.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,1,1,15), */
+	/* (UUID(),'esl-fast-beginner-1-15','New and Old','Mới và cũ','ESL_FAST_BEGINNER_1_015.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,1,1,15), */
     ('Q-esl-fast-beginner-1-15-001','A','The first day of school','Ngày đầu tiên đi học','Y',1,NULL,NULL,NULL,NULL),
     ('Q-esl-fast-beginner-1-15-001','B','Her birthday','Sinh nhật của cô bé','N',2,NULL,NULL,NULL,NULL),
     ('Q-esl-fast-beginner-1-15-001','C','A holiday','Một ngày nghỉ lễ','N',3,NULL,NULL,NULL,NULL),
@@ -67862,7 +67862,7 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE, ANSWER_TEXT, ANSWER_TEXT_VI, IS_
     ('Q-esl-fast-beginner-1-15-030','D','The store owner','Chủ cửa hàng','N',4,NULL,NULL,NULL,NULL);
 
 INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE, ANSWER_TEXT, ANSWER_TEXT_VI, IS_CORRECT,DISPLAY_ORDER,CREATED_AT,UPDATED_AT,CREATED_BY,UPDATED_BY) VALUES
-	/* (UUID(),'esl-fast-beginner-1-16','The Kind Dentist','Nha sĩ tốt bụng','BEGINNER_01_ESL_FAST_CHILDREN_016.mp3',NULL,'00:00:00.000','00:00:40.000','esl-fast-children-1',1,1,1,16), */
+	/* (UUID(),'esl-fast-beginner-1-16','The Kind Dentist','Nha sĩ tốt bụng','ESL_FAST_BEGINNER_1_016.mp3',NULL,'00:00:00.000','00:00:40.000','esl-fast-children-1',1,1,1,16), */
 	('Q-esl-fast-beginner-1-16-001','A','Her teeth hurt','Răng cô bé bị đau','Y',1,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-16-001','B','Her stomach hurts','Bụng cô bé bị đau','N',2,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-16-001','C','Her head hurts','Đầu cô bé bị đau','N',3,NULL,NULL,NULL,NULL),
@@ -67984,7 +67984,7 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE, ANSWER_TEXT, ANSWER_TEXT_VI, IS_
 	('Q-esl-fast-beginner-1-16-030','C','Maria feels good','Maria cảm thấy dễ chịu hơn','Y',3,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-16-030','D','Maria starts crying','Maria bắt đầu khóc','N',4,NULL,NULL,NULL,NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-17','A Trip to the Library','Chuyến đi đến thư viện','BEGINNER_01_ESL_FAST_CHILDREN_017.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1',1,1,1,17), */
+	/* (UUID(),'esl-fast-beginner-1-17','A Trip to the Library','Chuyến đi đến thư viện','ESL_FAST_BEGINNER_1_017.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1',1,1,1,17), */
 	('Q-esl-fast-beginner-1-17-001','A','A book','Một quyển sách','Y',1,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-17-001','B','A toy','Một món đồ chơi','N',2,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-17-001','C','A ball','Một quả bóng','N',3,NULL,NULL,NULL,NULL),
@@ -68106,7 +68106,7 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE, ANSWER_TEXT, ANSWER_TEXT_VI, IS_
 	('Q-esl-fast-beginner-1-17-030','C','All the books','Tất cả sách','Y',3,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-17-030','D','No books','Không có quyển nào','N',4,NULL,NULL,NULL,NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-18','A Lot of Ants','Rất nhiều con kiến','BEGINNER_01_ESL_FAST_CHILDREN_018.mp3',NULL,'00:00:00.000','00:00:28.000','esl-fast-children-1',1,1,1,18), */
+	/* (UUID(),'esl-fast-beginner-1-18','A Lot of Ants','Rất nhiều con kiến','ESL_FAST_BEGINNER_1_018.mp3',NULL,'00:00:00.000','00:00:28.000','esl-fast-children-1',1,1,1,18), */
 	('Q-esl-fast-beginner-1-18-001','A','A slice of cake','Một miếng bánh ngọt','Y',1,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-18-001','B','An apple','Một quả táo','N',2,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-18-001','C','A sandwich','Một chiếc bánh sandwich','N',3,NULL,NULL,NULL,NULL),
@@ -68228,7 +68228,7 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE, ANSWER_TEXT, ANSWER_TEXT_VI, IS_
 	('Q-esl-fast-beginner-1-18-030','C','She catches the ants','Cô ấy bắt đàn kiến','N',3,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-18-030','D','She closes the window','Cô ấy đóng cửa sổ','N',4,NULL,NULL,NULL,NULL),
 		
-	/* (UUID(),'esl-fast-beginner-1-19','Picking a Costume','Chọn trang phục','BEGINNER_01_ESL_FAST_CHILDREN_019.mp3',NULL,'00:00:00.000','00:00:32.500','esl-fast-children-1',1,1,1,19), */
+	/* (UUID(),'esl-fast-beginner-1-19','Picking a Costume','Chọn trang phục','ESL_FAST_BEGINNER_1_019.mp3',NULL,'00:00:00.000','00:00:32.500','esl-fast-children-1',1,1,1,19), */
 	('Q-esl-fast-beginner-1-19-001','A','Halloween','Halloween','Y',1,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-19-001','B','Christmas','Giáng sinh','N',2,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-19-001','C','Easter','Lễ Phục sinh','N',3,NULL,NULL,NULL,NULL),
@@ -68350,7 +68350,7 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE, ANSWER_TEXT, ANSWER_TEXT_VI, IS_
 	('Q-esl-fast-beginner-1-19-030','C','She is going shopping','Cô bé đang đi mua sắm','N',3,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-19-030','D','She is going home','Cô bé đang về nhà','N',4,NULL,NULL,NULL,NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-20','Petting Zoo','Vườn thú cưng','BEGINNER_01_ESL_FAST_CHILDREN_020.mp3',NULL,'00:00:00.000','00:00:40.000','esl-fast-children-1',1,1,1,20), */
+	/* (UUID(),'esl-fast-beginner-1-20','Petting Zoo','Vườn thú cưng','ESL_FAST_BEGINNER_1_020.mp3',NULL,'00:00:00.000','00:00:40.000','esl-fast-children-1',1,1,1,20), */
 	('Q-esl-fast-beginner-1-20-001','A','The petting zoo','Vườn thú cưng','Y',1,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-20-001','B','The school','Trường học','N',2,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-20-001','C','The park','Công viên','N',3,NULL,NULL,NULL,NULL),
@@ -68473,7 +68473,7 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE, ANSWER_TEXT, ANSWER_TEXT_VI, IS_
 	('Q-esl-fast-beginner-1-20-030','D','A new bike','Một chiếc xe đạp mới','N',4,NULL,NULL,NULL,NULL);
 
 INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE,ANSWER_TEXT,ANSWER_TEXT_VI,IS_CORRECT,DISPLAY_ORDER,CREATED_AT,UPDATED_AT,CREATED_BY,UPDATED_BY) VALUES
-	/* (UUID(),'esl-fast-beginner-1-21','Mom is Mad','Mẹ đang tức giận','BEGINNER_01_ESL_FAST_CHILDREN_021.mp3',NULL,'00:00:00.000','00:00:35.500','esl-fast-children-1',1,1,1,21), */
+	/* (UUID(),'esl-fast-beginner-1-21','Mom is Mad','Mẹ đang tức giận','ESL_FAST_BEGINNER_1_021.mp3',NULL,'00:00:00.000','00:00:35.500','esl-fast-children-1',1,1,1,21), */
     ('Q-esl-fast-beginner-1-21-001','A','Robert''s room','Phòng của Robert','Y',1,NULL,NULL,NULL,NULL),
     ('Q-esl-fast-beginner-1-21-001','B','His mom''s room','Phòng của mẹ cậu bé','N',2,NULL,NULL,NULL,NULL),
     ('Q-esl-fast-beginner-1-21-001','C','The living room','Phòng khách','N',3,NULL,NULL,NULL,NULL),
@@ -68595,7 +68595,7 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE,ANSWER_TEXT,ANSWER_TEXT_VI,IS_COR
     ('Q-esl-fast-beginner-1-21-030','C','The living room','Phòng khách','N',3,NULL,NULL,NULL,NULL),
     ('Q-esl-fast-beginner-1-21-030','D','The bathroom','Phòng tắm','N',4,NULL,NULL,NULL,NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-22','Father\'s Day','Ngày của cha','BEGINNER_01_ESL_FAST_CHILDREN_022.mp3',NULL,'00:00:00.000','00:00:39.000','esl-fast-children-1',1,1,1,22), */
+	/* (UUID(),'esl-fast-beginner-1-22','Father\'s Day','Ngày của cha','ESL_FAST_BEGINNER_1_022.mp3',NULL,'00:00:00.000','00:00:39.000','esl-fast-children-1',1,1,1,22), */
 	('Q-esl-fast-beginner-1-22-001','A','Father''s Day','Ngày của Cha','Y',1,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-22-001','B','Mother''s Day','Ngày của Mẹ','N',2,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-22-001','C','Christmas','Giáng sinh','N',3,NULL,NULL,NULL,NULL),
@@ -68717,7 +68717,7 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE,ANSWER_TEXT,ANSWER_TEXT_VI,IS_COR
 	('Q-esl-fast-beginner-1-22-030','C','Daniel plays tennis alone','Daniel chơi quần vợt một mình','N',3,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-22-030','D','Daniel spends the day at home alone','Daniel ở nhà một mình cả ngày','N',4,NULL,NULL,NULL,NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-23','The Baby Sister','Em bé gái','BEGINNER_01_ESL_FAST_CHILDREN_023.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-children-1',1,1,1,23), */
+	/* (UUID(),'esl-fast-beginner-1-23','The Baby Sister','Em bé gái','ESL_FAST_BEGINNER_1_023.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-children-1',1,1,1,23), */
     ('Q-esl-fast-beginner-1-23-001', 'A', 'Betty', 'Betty', 'Y', 1, NULL, NULL, NULL, NULL),
     ('Q-esl-fast-beginner-1-23-001', 'B', 'Sarah', 'Sarah', 'N', 2, NULL, NULL, NULL, NULL),
     ('Q-esl-fast-beginner-1-23-001', 'C', 'Mary', 'Mary', 'N', 3, NULL, NULL, NULL, NULL),
@@ -68839,7 +68839,7 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE,ANSWER_TEXT,ANSWER_TEXT_VI,IS_COR
     ('Q-esl-fast-beginner-1-23-030', 'C', 'Betty teaches her sister to play basketball', 'Betty dạy em gái chơi bóng rổ', 'N', 3, NULL, NULL, NULL, NULL),
     ('Q-esl-fast-beginner-1-23-030', 'D', 'Betty is afraid of her baby sister', 'Betty sợ em gái bé bỏng', 'N', 4, NULL, NULL, NULL, NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-24','Sometimes You Lose','Đôi khi bạn thua','BEGINNER_01_ESL_FAST_CHILDREN_024.mp3',NULL,'00:00:00.000','00:00:39.000','esl-fast-children-1','YES',24) */
+	/* (UUID(),'esl-fast-beginner-1-24','Sometimes You Lose','Đôi khi bạn thua','ESL_FAST_BEGINNER_1_024.mp3',NULL,'00:00:00.000','00:00:39.000','esl-fast-children-1','YES',24) */
 	('Q-esl-fast-beginner-1-24-001','A','They won','Họ đã thắng','N',1,NULL,NULL,NULL,NULL),
     ('Q-esl-fast-beginner-1-24-001','B','They lost','Họ đã thua','Y',2,NULL,NULL,NULL,NULL),
     ('Q-esl-fast-beginner-1-24-001','C','They canceled the game','Họ đã hủy trận đấu','N',3,NULL,NULL,NULL,NULL),
@@ -68921,7 +68921,7 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE,ANSWER_TEXT,ANSWER_TEXT_VI,IS_COR
     ('Q-esl-fast-beginner-1-24-020','C','Sometimes you win and sometimes you lose','Đôi khi bạn thắng và đôi khi bạn thua','Y',3,NULL,NULL,NULL,NULL),
     ('Q-esl-fast-beginner-1-24-020','D','Losing means you should quit','Thua nghĩa là bạn nên bỏ cuộc','N',4,NULL,NULL,NULL,NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-25','A New Home','Ngôi nhà mới','BEGINNER_01_ESL_FAST_CHILDREN_025.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1','YES',25) */
+	/* (UUID(),'esl-fast-beginner-1-25','A New Home','Ngôi nhà mới','ESL_FAST_BEGINNER_1_025.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1','YES',25) */
     ('Q-esl-fast-beginner-1-25-001', 'A', 'A new city', 'Một thành phố mới', 'Y', 1, NULL, NULL, NULL, NULL),
     ('Q-esl-fast-beginner-1-25-001', 'B', 'A new country', 'Một đất nước mới', 'N', 2, NULL, NULL, NULL, NULL),
     ('Q-esl-fast-beginner-1-25-001', 'C', 'A new school', 'Một ngôi trường mới', 'N', 3, NULL, NULL, NULL, NULL),
@@ -69044,7 +69044,7 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE,ANSWER_TEXT,ANSWER_TEXT_VI,IS_COR
     ('Q-esl-fast-beginner-1-25-030', 'D', 'A boy buys a new house', 'Một cậu bé mua một ngôi nhà mới', 'N', 4, NULL, NULL, NULL, NULL);
 	
 INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE,ANSWER_TEXT,ANSWER_TEXT_VI,IS_CORRECT,DISPLAY_ORDER,CREATED_AT,UPDATED_AT,CREATED_BY,UPDATED_BY) VALUES
-	/* (UUID(),'esl-fast-beginner-1-26','Chris and His Fish','Chris và những chú cá của cậu ấy','BEGINNER_01_ESL_FAST_CHILDREN_026.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,0,0,26), */
+	/* (UUID(),'esl-fast-beginner-1-26','Chris and His Fish','Chris và những chú cá của cậu ấy','ESL_FAST_BEGINNER_1_026.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,0,0,26), */
 	('Q-esl-fast-beginner-1-26-001','A','A pet','Một con thú cưng','Y',1,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-26-001','B','A book','Một quyển sách','N',2,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-26-001','C','A toy','Một món đồ chơi','N',3,NULL,NULL,NULL,NULL),
@@ -69166,7 +69166,7 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE,ANSWER_TEXT,ANSWER_TEXT_VI,IS_COR
 	('Q-esl-fast-beginner-1-26-030','C','A bag','Một cái túi','N',3,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-26-030','D','A cage','Một cái lồng','N',4,NULL,NULL,NULL,NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-27','The Oldest Brother','Anh cả','BEGINNER_01_ESL_FAST_CHILDREN_027.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,0,0,27), */
+	/* (UUID(),'esl-fast-beginner-1-27','The Oldest Brother','Anh cả','ESL_FAST_BEGINNER_1_027.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,0,0,27), */
 	('Q-esl-fast-beginner-1-27-001','A','Brian','Brian','Y',1,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-27-001','B','His younger brother','Em trai của cậu','N',2,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-27-001','C','His father','Bố của cậu','N',3,NULL,NULL,NULL,NULL),
@@ -69288,7 +69288,7 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE,ANSWER_TEXT,ANSWER_TEXT_VI,IS_COR
 	('Q-esl-fast-beginner-1-27-030','C','He is angry with his family','Cậu tức giận với gia đình mình','N',3,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-27-030','D','He is afraid of his family','Cậu sợ gia đình mình','N',4,NULL,NULL,NULL,NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-28','A Successful Trade','Một giao dịch thành công','BEGINNER_01_ESL_FAST_CHILDREN_028.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-children-1',1,0,0,28), */
+	/* (UUID(),'esl-fast-beginner-1-28','A Successful Trade','Một giao dịch thành công','ESL_FAST_BEGINNER_1_028.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-children-1',1,0,0,28), */
 	('Q-esl-fast-beginner-1-28-001','A','Lunchtime','Giờ ăn trưa','Y',1,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-28-001','B','Breakfast time','Giờ ăn sáng','N',2,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-28-001','C','Dinner time','Giờ ăn tối','N',3,NULL,NULL,NULL,NULL),
@@ -69410,7 +69410,7 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE,ANSWER_TEXT,ANSWER_TEXT_VI,IS_COR
 	('Q-esl-fast-beginner-1-28-030','C','No, they go home','Không, họ về nhà','N',3,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-28-030','D','No, they buy different food','Không, họ mua món khác','N',4,NULL,NULL,NULL,NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-29','Making a Snowman','Đắp người tuyết','BEGINNER_01_ESL_FAST_CHILDREN_029.mp3',NULL,'00:00:00.000','00:00:38.000','esl-fast-children-1',1,0,0,29), */
+	/* (UUID(),'esl-fast-beginner-1-29','Making a Snowman','Đắp người tuyết','ESL_FAST_BEGINNER_1_029.mp3',NULL,'00:00:00.000','00:00:38.000','esl-fast-children-1',1,0,0,29), */
 	('Q-esl-fast-beginner-1-29-001','A','A snowman','Một người tuyết','Y',1,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-29-001','B','A snowball','Một quả cầu tuyết','N',2,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-29-001','C','A snow house','Một ngôi nhà tuyết','N',3,NULL,NULL,NULL,NULL),
@@ -69532,7 +69532,7 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE,ANSWER_TEXT,ANSWER_TEXT_VI,IS_COR
 	('Q-esl-fast-beginner-1-29-030','C','A stick, a hat, and shoes','Một cái que, chiếc mũ và đôi giày','N',3,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-29-030','D','A scarf, a hat, and gloves','Một chiếc khăn, mũ và găng tay','N',4,NULL,NULL,NULL,NULL),
 
-	/* (UUID(),'esl-fast-beginner-1-30','English Skills','Kỹ năng tiếng Anh','BEGINNER_01_ESL_FAST_CHILDREN_030.mp3',NULL,'00:00:00.000','00:00:26.000','esl-fast-children-1',1,0,0,30), */
+	/* (UUID(),'esl-fast-beginner-1-30','English Skills','Kỹ năng tiếng Anh','ESL_FAST_BEGINNER_1_030.mp3',NULL,'00:00:00.000','00:00:26.000','esl-fast-children-1',1,0,0,30), */
 	('Q-esl-fast-beginner-1-30-001','A','First grade','Lớp một','N',1,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-30-001','B','Second grade','Lớp hai','Y',2,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-30-001','C','Third grade','Lớp ba','N',3,NULL,NULL,NULL,NULL),
@@ -69655,7 +69655,7 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE,ANSWER_TEXT,ANSWER_TEXT_VI,IS_COR
 	('Q-esl-fast-beginner-1-30-030','D','He writes a new story','Cậu ấy viết một câu chuyện mới','N',4,NULL,NULL,NULL,NULL);
 	
 INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE,ANSWER_TEXT,ANSWER_TEXT_VI,IS_CORRECT,DISPLAY_ORDER,CREATED_AT,UPDATED_AT,CREATED_BY,UPDATED_BY) VALUES
-	/* (UUID(),'esl-fast-beginner-1-31','Practicing Drawing','Luyện tập vẽ','BEGINNER_01_ESL_FAST_CHILDREN_031.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,0,0,31), */
+	/* (UUID(),'esl-fast-beginner-1-31','Practicing Drawing','Luyện tập vẽ','ESL_FAST_BEGINNER_1_031.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,0,0,31), */
 	('Q-esl-fast-beginner-1-31-001','A','Drawing','Vẽ','Y',1,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-31-001','B','Singing','Ca hát','N',2,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-31-001','C','Dancing','Nhảy múa','N',3,NULL,NULL,NULL,NULL),
@@ -69777,7 +69777,7 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE,ANSWER_TEXT,ANSWER_TEXT_VI,IS_COR
 	('Q-esl-fast-beginner-1-31-030','C','A doctor','Một bác sĩ','N',3,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-31-030','D','A musician','Một nhạc sĩ','N',4,NULL,NULL,NULL,NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-32','A Day for Ice Cream','Một ngày dành cho kem','BEGINNER_01_ESL_FAST_CHILDREN_032.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-children-1',1,0,0,32), */
+	/* (UUID(),'esl-fast-beginner-1-32','A Day for Ice Cream','Một ngày dành cho kem','ESL_FAST_BEGINNER_1_032.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-children-1',1,0,0,32), */
 	('Q-esl-fast-beginner-1-32-001','A','It is a sunny day','Hôm nay là một ngày nắng','Y',1,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-32-001','B','It is a rainy day','Hôm nay là một ngày mưa','N',2,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-32-001','C','It is a snowy day','Hôm nay là một ngày có tuyết','N',3,NULL,NULL,NULL,NULL),
@@ -69899,7 +69899,7 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE,ANSWER_TEXT,ANSWER_TEXT_VI,IS_COR
 	('Q-esl-fast-beginner-1-32-030','C','Because it starts raining','Vì trời bắt đầu mưa','N',3,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-32-030','D','Because she turns off the air conditioner','Vì cô bé tắt điều hòa','N',4,NULL,NULL,NULL,NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-33','Taking Tests','Làm bài kiểm tra','BEGINNER_01_ESL_FAST_CHILDREN_033.mp3',NULL,'00:00:00.000','00:00:25.000','esl-fast-children-1',1,0,0,33), */
+	/* (UUID(),'esl-fast-beginner-1-33','Taking Tests','Làm bài kiểm tra','ESL_FAST_BEGINNER_1_033.mp3',NULL,'00:00:00.000','00:00:25.000','esl-fast-children-1',1,0,0,33), */
 	('Q-esl-fast-beginner-1-33-001','A','A test','Một bài kiểm tra','Y',1,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-33-001','B','A game','Một trò chơi','N',2,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-33-001','C','A book','Một quyển sách','N',3,NULL,NULL,NULL,NULL),
@@ -70021,7 +70021,7 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE,ANSWER_TEXT,ANSWER_TEXT_VI,IS_COR
 	('Q-esl-fast-beginner-1-33-030','C','B','B','N',3,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-33-030','D','C','C','N',4,NULL,NULL,NULL,NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-34','Helen is Busy','Helen đang bận rộn','BEGINNER_01_ESL_FAST_CHILDREN_034.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1',1,0,0,34), */
+	/* (UUID(),'esl-fast-beginner-1-34','Helen is Busy','Helen đang bận rộn','ESL_FAST_BEGINNER_1_034.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1',1,0,0,34), */
 	('Q-esl-fast-beginner-1-34-001','A','The math test','Bài kiểm tra Toán','Y',1,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-34-001','B','The English test','Bài kiểm tra tiếng Anh','N',2,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-34-001','C','Her homework','Bài tập về nhà','N',3,NULL,NULL,NULL,NULL),
@@ -70143,7 +70143,7 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE,ANSWER_TEXT,ANSWER_TEXT_VI,IS_COR
 	('Q-esl-fast-beginner-1-34-030','C','She plays games','Cô bé chơi trò chơi','N',3,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-34-030','D','She leaves the house','Cô bé rời khỏi nhà','N',4,NULL,NULL,NULL,NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-35','Messing Up','Làm hỏng việc','BEGINNER_01_ESL_FAST_CHILDREN_035.mp3',NULL,'00:00:00.000','00:00:28.000','esl-fast-children-1',1,0,1,35), */
+	/* (UUID(),'esl-fast-beginner-1-35','Messing Up','Làm hỏng việc','ESL_FAST_BEGINNER_1_035.mp3',NULL,'00:00:00.000','00:00:28.000','esl-fast-children-1',1,0,1,35), */
 	('Q-esl-fast-beginner-1-35-001','A','A glass of soda','Một cốc nước ngọt','Y',1,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-35-001','B','A glass of water','Một cốc nước','N',2,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-35-001','C','A cup of coffee','Một cốc cà phê','N',3,NULL,NULL,NULL,NULL),
@@ -70266,7 +70266,7 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE,ANSWER_TEXT,ANSWER_TEXT_VI,IS_COR
 	('Q-esl-fast-beginner-1-35-030','D','His mom cleans the shirt','Mẹ cậu bé làm sạch áo','N',4,NULL,NULL,NULL,NULL);
 	
 INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE,ANSWER_TEXT,ANSWER_TEXT_VI,IS_CORRECT,DISPLAY_ORDER,CREATED_AT,UPDATED_AT,CREATED_BY,UPDATED_BY) VALUES
-	/* (UUID(),'esl-fast-beginner-1-36','Introducing Myself','Giới thiệu bản thân','BEGINNER_01_ESL_FAST_CHILDREN_036.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,0,0,36), */
+	/* (UUID(),'esl-fast-beginner-1-36','Introducing Myself','Giới thiệu bản thân','ESL_FAST_BEGINNER_1_036.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,0,0,36), */
 	('Q-esl-fast-beginner-1-36-001','A','A new student','Một học sinh mới','Y',1,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-36-001','B','A teacher','Một giáo viên','N',2,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-36-001','C','A doctor','Một bác sĩ','N',3,NULL,NULL,NULL,NULL),
@@ -70388,7 +70388,7 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE,ANSWER_TEXT,ANSWER_TEXT_VI,IS_COR
 	('Q-esl-fast-beginner-1-36-030','C','Math','Toán','N',3,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-36-030','D','Travel','Du lịch','N',4,NULL,NULL,NULL,NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-37','A Long Wait','Chờ lâu','BEGINNER_01_ESL_FAST_CHILDREN_037.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,0,0,37), */
+	/* (UUID(),'esl-fast-beginner-1-37','A Long Wait','Chờ lâu','ESL_FAST_BEGINNER_1_037.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,0,0,37), */
 	('Q-esl-fast-beginner-1-37-001','A','The rollercoaster ride','Chuyến tàu lượn siêu tốc','Y',1,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-37-001','B','The phone','Điện thoại','N',2,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-37-001','C','The line','Hàng người xếp hàng','N',3,NULL,NULL,NULL,NULL),
@@ -70510,7 +70510,7 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE,ANSWER_TEXT,ANSWER_TEXT_VI,IS_COR
 	('Q-esl-fast-beginner-1-37-030','C','Yes, they are at home','Có, họ đang ở nhà','N',3,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-37-030','D','No, they have left the park','Không, họ đã rời công viên','N',4,NULL,NULL,NULL,NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-38','The Teacher Takes Away His Phone','Giáo viên tịch thu điện thoại của cậu bé','BEGINNER_01_ESL_FAST_CHILDREN_038.mp3',NULL,'00:00:00.000','00:00:29.000','esl-fast-children-1',1,0,0,38), */
+	/* (UUID(),'esl-fast-beginner-1-38','The Teacher Takes Away His Phone','Giáo viên tịch thu điện thoại của cậu bé','ESL_FAST_BEGINNER_1_038.mp3',NULL,'00:00:00.000','00:00:29.000','esl-fast-children-1',1,0,0,38), */
 	('Q-esl-fast-beginner-1-38-001','A','They are boring','Chúng rất nhàm chán','Y',1,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-38-001','B','They are exciting','Chúng rất thú vị','N',2,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-38-001','C','They are funny','Chúng rất hài hước','N',3,NULL,NULL,NULL,NULL),
@@ -70632,7 +70632,7 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE,ANSWER_TEXT,ANSWER_TEXT_VI,IS_COR
 	('Q-esl-fast-beginner-1-38-030','C','He is in trouble','Cậu bé gặp rắc rối','Y',3,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-38-030','D','He gets a new phone','Cậu bé có điện thoại mới','N',4,NULL,NULL,NULL,NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-39','No One Likes the Flu','Không ai thích bị cúm','BEGINNER_01_ESL_FAST_CHILDREN_039.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,0,0,39), */
+	/* (UUID(),'esl-fast-beginner-1-39','No One Likes the Flu','Không ai thích bị cúm','ESL_FAST_BEGINNER_1_039.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,0,0,39), */
 	('Q-esl-fast-beginner-1-39-001','A','He is sick','Cậu bé bị ốm','Y',1,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-39-001','B','He is hungry','Cậu bé đói bụng','N',2,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-39-001','C','He is tired','Cậu bé mệt mỏi','N',3,NULL,NULL,NULL,NULL),
@@ -70754,7 +70754,7 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE,ANSWER_TEXT,ANSWER_TEXT_VI,IS_COR
 	('Q-esl-fast-beginner-1-39-030','C','A boy learns to cook chicken soup','Một cậu bé học nấu súp gà','N',3,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-39-030','D','A boy plays games with his friends','Một cậu bé chơi game với bạn bè','N',4,NULL,NULL,NULL,NULL),
 	
-	/* (UUID(),'esl-fast-beginner-1-40','The Circus','Rạp xiếc','BEGINNER_01_ESL_FAST_CHILDREN_040.mp3',NULL,'00:00:00.000','00:00:38.000','esl-fast-children-1',1,0,0,40), */
+	/* (UUID(),'esl-fast-beginner-1-40','The Circus','Rạp xiếc','ESL_FAST_BEGINNER_1_040.mp3',NULL,'00:00:00.000','00:00:38.000','esl-fast-children-1',1,0,0,40), */
 	('Q-esl-fast-beginner-1-40-001','A','She goes to the circus','Cô bé đi xem xiếc','Y',1,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-40-001','B','She goes to school','Cô bé đi học','N',2,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-40-001','C','She goes to the zoo','Cô bé đi sở thú','N',3,NULL,NULL,NULL,NULL),
@@ -70876,7 +70876,7 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE,ANSWER_TEXT,ANSWER_TEXT_VI,IS_COR
 	('Q-esl-fast-beginner-1-40-030','C','Because she wants to go home','Vì cô bé muốn về nhà','N',3,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-40-030','D','Because she does not like animals','Vì cô bé không thích động vật','N',4,NULL,NULL,NULL,NULL);
 	
-	/* (UUID(),'esl-fast-beginner-1-41','An Unhealthy Boy','Một cậu bé không khỏe mạnh','BEGINNER_01_ESL_FAST_CHILDREN_041.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-children-1',1,0,0,41), */
+	/* (UUID(),'esl-fast-beginner-1-41','An Unhealthy Boy','Một cậu bé không khỏe mạnh','ESL_FAST_BEGINNER_1_041.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-children-1',1,0,0,41), */
 INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE,ANSWER_TEXT,ANSWER_TEXT_VI,IS_CORRECT,DISPLAY_ORDER,CREATED_AT,UPDATED_AT,CREATED_BY,UPDATED_BY) VALUES
 	('Q-esl-fast-beginner-1-41-001','A','He is fat','Cậu bé rất mập','Y',1,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-41-001','B','He is thin','Cậu bé gầy','N',2,NULL,NULL,NULL,NULL),
@@ -70999,7 +70999,7 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE,ANSWER_TEXT,ANSWER_TEXT_VI,IS_COR
 	('Q-esl-fast-beginner-1-41-030','C','A boy learns to cook meat','Một cậu bé học nấu thịt','N',3,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-41-030','D','A family changes to healthy meals because they worry about the boy','Một gia đình chuyển sang ăn uống lành mạnh vì lo lắng cho cậu bé','Y',4,NULL,NULL,NULL,NULL);
 	
-	/* (UUID(),'esl-fast-beginner-1-42','Ferris Wheel','Vòng đu quay','BEGINNER_01_ESL_FAST_CHILDREN_042.mp3',NULL,'00:00:00.000','00:00:39.000','esl-fast-children-1',1,0,0,42), */
+	/* (UUID(),'esl-fast-beginner-1-42','Ferris Wheel','Vòng đu quay','ESL_FAST_BEGINNER_1_042.mp3',NULL,'00:00:00.000','00:00:39.000','esl-fast-children-1',1,0,0,42), */
 	/* ('Q-esl-fast-beginner-1-42-001','A huge rotating wheel','Một bánh xe khổng lồ quay tròn','Y',1,'ACTIVE',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,'SYSTEM','SYSTEM'),
 	('Q-esl-fast-beginner-1-42-001','A small train','Một chuyến tàu nhỏ','N',2,'ACTIVE',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,'SYSTEM','SYSTEM'),
 	('Q-esl-fast-beginner-1-42-001','A big airplane','Một chiếc máy bay lớn','N',3,'ACTIVE',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,'SYSTEM','SYSTEM'),
@@ -71121,100 +71121,100 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE,ANSWER_TEXT,ANSWER_TEXT_VI,IS_COR
 	('Q-esl-fast-beginner-1-42-030','Sad about the people','Buồn vì mọi người','N',3,'ACTIVE',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,'SYSTEM','SYSTEM'),
 	('Q-esl-fast-beginner-1-42-030','Sleepy and bored','Buồn ngủ và chán','N',4,'ACTIVE',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,'SYSTEM','SYSTEM'); */
 	
-	/* (UUID(),'esl-fast-beginner-1-43','More Money','Nhiều tiền hơn','BEGINNER_01_ESL_FAST_CHILDREN_043.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,0,0,43), */
+	/* (UUID(),'esl-fast-beginner-1-43','More Money','Nhiều tiền hơn','ESL_FAST_BEGINNER_1_043.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,0,0,43), */
 	
 	
-	/* (UUID(),'esl-fast-beginner-1-44','Loving Dance','Yêu thích khiêu vũ','BEGINNER_01_ESL_FAST_CHILDREN_044.mp3',NULL,'00:00:00.000','00:00:29.000','esl-fast-children-1',1,0,0,44), */
+	/* (UUID(),'esl-fast-beginner-1-44','Loving Dance','Yêu thích khiêu vũ','ESL_FAST_BEGINNER_1_044.mp3',NULL,'00:00:00.000','00:00:29.000','esl-fast-children-1',1,0,0,44), */
 	
 	
-	/* (UUID(),'esl-fast-beginner-1-45','A Fun Sleepover','Một buổi ngủ qua đêm vui vẻ','BEGINNER_01_ESL_FAST_CHILDREN_045.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,0,0,45), */
+	/* (UUID(),'esl-fast-beginner-1-45','A Fun Sleepover','Một buổi ngủ qua đêm vui vẻ','ESL_FAST_BEGINNER_1_045.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,0,0,45), */
 	
 	
-	/* (UUID(),'esl-fast-beginner-1-46','Apology','Lời xin lỗi','BEGINNER_01_ESL_FAST_CHILDREN_046.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,0,0,46), */
+	/* (UUID(),'esl-fast-beginner-1-46','Apology','Lời xin lỗi','ESL_FAST_BEGINNER_1_046.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-children-1',1,0,0,46), */
 	
 	
-	/* (UUID(),'esl-fast-beginner-1-47','Glass of Milk on the Desk','Ly sữa trên bàn học','BEGINNER_01_ESL_FAST_CHILDREN_047.mp3',NULL,'00:00:00.000','00:00:34.000','esl-fast-children-1',1,0,0,47), */
+	/* (UUID(),'esl-fast-beginner-1-47','Glass of Milk on the Desk','Ly sữa trên bàn học','ESL_FAST_BEGINNER_1_047.mp3',NULL,'00:00:00.000','00:00:34.000','esl-fast-children-1',1,0,0,47), */
 	
 	
-	/* (UUID(),'esl-fast-beginner-1-48','A Simple Gift','Một món quà đơn giản','BEGINNER_01_ESL_FAST_CHILDREN_048.mp3',NULL,'00:00:00.000','00:00:25.000','esl-fast-children-1',1,0,0,48), */
+	/* (UUID(),'esl-fast-beginner-1-48','A Simple Gift','Một món quà đơn giản','ESL_FAST_BEGINNER_1_048.mp3',NULL,'00:00:00.000','00:00:25.000','esl-fast-children-1',1,0,0,48), */
 	
 	
-	/* (UUID(),'esl-fast-beginner-1-49','Hide-and-Seek','Trò chơi trốn tìm','BEGINNER_01_ESL_FAST_CHILDREN_049.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,0,0,49), */
+	/* (UUID(),'esl-fast-beginner-1-49','Hide-and-Seek','Trò chơi trốn tìm','ESL_FAST_BEGINNER_1_049.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,0,0,49), */
 	
 	
-	/* (UUID(),'esl-fast-beginner-1-50','Excited for the Mail','Hồi hộp chờ thư','BEGINNER_01_ESL_FAST_CHILDREN_050.mp3',NULL,'00:00:00.000','00:00:28.000','esl-fast-children-1',1,0,0,50), */
+	/* (UUID(),'esl-fast-beginner-1-50','Excited for the Mail','Hồi hộp chờ thư','ESL_FAST_BEGINNER_1_050.mp3',NULL,'00:00:00.000','00:00:28.000','esl-fast-children-1',1,0,0,50), */
 	
 	
-	/* (UUID(),'esl-fast-beginner-1-51','Having Fun on a Swing','Vui chơi trên xích đu','BEGINNER_01_ESL_FAST_CHILDREN_051.mp3',NULL,'00:00:00.000','00:00:28.000','esl-fast-children-1',1,0,0,51), */
+	/* (UUID(),'esl-fast-beginner-1-51','Having Fun on a Swing','Vui chơi trên xích đu','ESL_FAST_BEGINNER_1_051.mp3',NULL,'00:00:00.000','00:00:28.000','esl-fast-children-1',1,0,0,51), */
 	
 	
-	/* (UUID(),'esl-fast-beginner-1-52','He Walks His Dogs','Cậu ấy dắt chó đi dạo','BEGINNER_01_ESL_FAST_CHILDREN_052.mp3',NULL,'00:00:00.000','00:00:34.000','esl-fast-children-1',1,0,0,52), */
+	/* (UUID(),'esl-fast-beginner-1-52','He Walks His Dogs','Cậu ấy dắt chó đi dạo','ESL_FAST_BEGINNER_1_052.mp3',NULL,'00:00:00.000','00:00:34.000','esl-fast-children-1',1,0,0,52), */
 	
 	
-	/* (UUID(),'esl-fast-beginner-1-53','A Pencil for Everything','Một cây bút chì cho mọi việc','BEGINNER_01_ESL_FAST_CHILDREN_053.mp3',NULL,'00:00:00.000','00:00:26.000','esl-fast-children-1',1,0,0,53), */
+	/* (UUID(),'esl-fast-beginner-1-53','A Pencil for Everything','Một cây bút chì cho mọi việc','ESL_FAST_BEGINNER_1_053.mp3',NULL,'00:00:00.000','00:00:26.000','esl-fast-children-1',1,0,0,53), */
 	
 	
-	/* (UUID(),'esl-fast-beginner-1-54','Being Careless','Sự bất cẩn','BEGINNER_01_ESL_FAST_CHILDREN_054.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1',1,0,0,54), */
+	/* (UUID(),'esl-fast-beginner-1-54','Being Careless','Sự bất cẩn','ESL_FAST_BEGINNER_1_054.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1',1,0,0,54), */
 	
 	
-	/* (UUID(),'esl-fast-beginner-1-55','Fluffy the Rabbit','Fluffy chú thỏ nhỏ','BEGINNER_01_ESL_FAST_CHILDREN_055.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-children-1',1,0,0,55), */
+	/* (UUID(),'esl-fast-beginner-1-55','Fluffy the Rabbit','Fluffy chú thỏ nhỏ','ESL_FAST_BEGINNER_1_055.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-children-1',1,0,0,55), */
 	
 	
-	/* (UUID(),'esl-fast-beginner-1-56','Three Friends and a Jump Rope','Ba người bạn và dây nhảy','BEGINNER_01_ESL_FAST_CHILDREN_056.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,0,0,56), */
+	/* (UUID(),'esl-fast-beginner-1-56','Three Friends and a Jump Rope','Ba người bạn và dây nhảy','ESL_FAST_BEGINNER_1_056.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,0,0,56), */
 	
 	
-	/* (UUID(),'esl-fast-beginner-1-57','He Plays with the Ladybug','Cậu ấy chơi với bọ rùa','BEGINNER_01_ESL_FAST_CHILDREN_057.mp3',NULL,'00:00:00.000','00:00:38.000','esl-fast-children-1',1,0,0,57), */
+	/* (UUID(),'esl-fast-beginner-1-57','He Plays with the Ladybug','Cậu ấy chơi với bọ rùa','ESL_FAST_BEGINNER_1_057.mp3',NULL,'00:00:00.000','00:00:38.000','esl-fast-children-1',1,0,0,57), */
 	
 	
-	/* (UUID(),'esl-fast-beginner-1-58','The Dog That Digs','Con chó hay đào đất','BEGINNER_01_ESL_FAST_CHILDREN_058.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-children-1',1,0,0,58), */
+	/* (UUID(),'esl-fast-beginner-1-58','The Dog That Digs','Con chó hay đào đất','ESL_FAST_BEGINNER_1_058.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-children-1',1,0,0,58), */
 	
 	
-	/* (UUID(),'esl-fast-beginner-1-59','Playing with the Monkey Bars','Chơi xà đơn trong sân chơi','BEGINNER_01_ESL_FAST_CHILDREN_059.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,0,0,59), */
+	/* (UUID(),'esl-fast-beginner-1-59','Playing with the Monkey Bars','Chơi xà đơn trong sân chơi','ESL_FAST_BEGINNER_1_059.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,0,0,59), */
 	
 	
-	/* (UUID(),'esl-fast-beginner-1-60','Playing a Doctor','Đóng vai bác sĩ','BEGINNER_01_ESL_FAST_CHILDREN_060.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-children-1',1,0,0,60), */
+	/* (UUID(),'esl-fast-beginner-1-60','Playing a Doctor','Đóng vai bác sĩ','ESL_FAST_BEGINNER_1_060.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-children-1',1,0,0,60), */
 	
 	
-	/* (UUID(),'esl-fast-beginner-1-61','Art Class','Giờ học mỹ thuật','BEGINNER_01_ESL_FAST_CHILDREN_061.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-children-1',1,0,0,61), */
+	/* (UUID(),'esl-fast-beginner-1-61','Art Class','Giờ học mỹ thuật','ESL_FAST_BEGINNER_1_061.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-children-1',1,0,0,61), */
 	
 	
-	/* (UUID(),'esl-fast-beginner-1-62','Getting Ready for Soccer Practice','Chuẩn bị cho buổi tập bóng đá','BEGINNER_01_ESL_FAST_CHILDREN_062.mp3',NULL,'00:00:00.000','00:00:27.000','esl-fast-children-1',1,0,0,62), */
+	/* (UUID(),'esl-fast-beginner-1-62','Getting Ready for Soccer Practice','Chuẩn bị cho buổi tập bóng đá','ESL_FAST_BEGINNER_1_062.mp3',NULL,'00:00:00.000','00:00:27.000','esl-fast-children-1',1,0,0,62), */
 	
 	
-	/* (UUID(),'esl-fast-beginner-1-63','The Pouch of a Kangaroo','Túi của con chuột túi','BEGINNER_01_ESL_FAST_CHILDREN_063.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1',1,0,0,63), */
+	/* (UUID(),'esl-fast-beginner-1-63','The Pouch of a Kangaroo','Túi của con chuột túi','ESL_FAST_BEGINNER_1_063.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-children-1',1,0,0,63), */
 	
 	
-	/* (UUID(),'esl-fast-beginner-1-64','Aunt and Uncle','Dì và chú','BEGINNER_01_ESL_FAST_CHILDREN_064.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,64), */
+	/* (UUID(),'esl-fast-beginner-1-64','Aunt and Uncle','Dì và chú','ESL_FAST_BEGINNER_1_064.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,64), */
 	
 	
-	/* (UUID(),'esl-fast-beginner-1-65','A Busy Boy','Một cậu bé bận rộn','BEGINNER_01_ESL_FAST_CHILDREN_065.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,65), */
+	/* (UUID(),'esl-fast-beginner-1-65','A Busy Boy','Một cậu bé bận rộn','ESL_FAST_BEGINNER_1_065.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,65), */
 	
 	
-	/* (UUID(),'esl-fast-beginner-1-66','Fruit Salad','Salad trái cây','BEGINNER_01_ESL_FAST_CHILDREN_066.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,66), */
-	/* (UUID(),'esl-fast-beginner-1-67','He Takes His Test','Cậu ấy làm bài kiểm tra','BEGINNER_01_ESL_FAST_CHILDREN_067.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,67), */
-	/* (UUID(),'esl-fast-beginner-1-68','Parent-teacher Conference','Buổi họp phụ huynh và giáo viên','BEGINNER_01_ESL_FAST_CHILDREN_068.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,68), */
-	/* (UUID(),'esl-fast-beginner-1-69','The Second Dog','Con chó thứ hai','BEGINNER_01_ESL_FAST_CHILDREN_069.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,69), */
-	/* (UUID(),'esl-fast-beginner-1-70','A Cat and a Ball of Yarn','Một con mèo và cuộn len','BEGINNER_01_ESL_FAST_CHILDREN_070.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,70), */
-	/* (UUID(),'esl-fast-beginner-1-71','Taking Care of His Orange Tree','Chăm sóc cây cam của cậu ấy','BEGINNER_01_ESL_FAST_CHILDREN_071.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,71), */
-	/* (UUID(),'esl-fast-beginner-1-72','The Missing Notebook','Cuốn vở bị mất','BEGINNER_01_ESL_FAST_CHILDREN_072.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,72), */
-	/* (UUID(),'esl-fast-beginner-1-73','Tag, You\'re It!','Trò chơi đuổi bắt, đến lượt bạn rồi!','BEGINNER_01_ESL_FAST_CHILDREN_073.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,73), */
-	/* (UUID(),'esl-fast-beginner-1-74','Different Flavors','Những hương vị khác nhau','BEGINNER_01_ESL_FAST_CHILDREN_074.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,74), */
-	/* (UUID(),'esl-fast-beginner-1-75','Daydreaming at School','Mơ mộng trong giờ học','BEGINNER_01_ESL_FAST_CHILDREN_075.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,75), */
-	/* (UUID(),'esl-fast-beginner-1-76','A Pet for Dad','Một thú cưng dành cho bố','BEGINNER_01_ESL_FAST_CHILDREN_076.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,76), */
-	/* (UUID(),'esl-fast-beginner-1-77','Too Sick','Bị ốm nặng','BEGINNER_01_ESL_FAST_CHILDREN_077.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,77), */
-	/* (UUID(),'esl-fast-beginner-1-78','The Worst Student','Học sinh tệ nhất','BEGINNER_01_ESL_FAST_CHILDREN_078.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,78), */
-	/* (UUID(),'esl-fast-beginner-1-79','Bad Manners','Cư xử không đúng mực','BEGINNER_01_ESL_FAST_CHILDREN_079.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,79), */
-	/* (UUID(),'esl-fast-beginner-1-80','Transferring to Another Class','Chuyển sang lớp khác','BEGINNER_01_ESL_FAST_CHILDREN_080.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,80), */
-	/* (UUID(),'esl-fast-beginner-1-81','Good Manners','Cư xử lịch sự','BEGINNER_01_ESL_FAST_CHILDREN_081.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,81), */
-	/* (UUID(),'esl-fast-beginner-1-82','The Trouble with Braces','Rắc rối với niềng răng','BEGINNER_01_ESL_FAST_CHILDREN_082.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,82), */
-	/* (UUID(),'esl-fast-beginner-1-83','Lost on the First Day','Lạc trong ngày đầu tiên','BEGINNER_01_ESL_FAST_CHILDREN_083.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,83), */
-	/* (UUID(),'esl-fast-beginner-1-84','Stealing is Bad','Ăn cắp là xấu','BEGINNER_01_ESL_FAST_CHILDREN_084.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,84), */
-	/* (UUID(),'esl-fast-beginner-1-85','Picking Her Up','Đón cô ấy','BEGINNER_01_ESL_FAST_CHILDREN_085.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,85), */
-	/* (UUID(),'esl-fast-beginner-1-86','Saving the Princess','Giải cứu công chúa','BEGINNER_01_ESL_FAST_CHILDREN_086.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,86), */
-	/* (UUID(),'esl-fast-beginner-1-87','Make It Hot, Make It Cold','Làm nóng lên, làm lạnh đi','BEGINNER_01_ESL_FAST_CHILDREN_087.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,87), */
-	/* (UUID(),'esl-fast-beginner-1-88','A Good Shower','Một buổi tắm sảng khoái','BEGINNER_01_ESL_FAST_CHILDREN_088.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,88), */
-	/* (UUID(),'esl-fast-beginner-1-89','The Wrong Color','Màu sắc bị chọn sai','BEGINNER_01_ESL_FAST_CHILDREN_089.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,89), */
-	/* (UUID(),'esl-fast-beginner-1-90','Forgetting Her Glasses','Quên kính của cô ấy','BEGINNER_01_ESL_FAST_CHILDREN_090.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,90), */
-	/* (UUID(),'esl-fast-beginner-1-91','Quitting His Job','Nghỉ việc','BEGINNER_01_ESL_FAST_CHILDREN_091.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,91), */
-	/* (UUID(),'esl-fast-beginner-1-92','Future Goals','Mục tiêu tương lai','BEGINNER_01_ESL_FAST_CHILDREN_092.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,92), */
-	/* (UUID(),'esl-fast-beginner-1-93','A Kind Stranger','Một người lạ tốt bụng','BEGINNER_01_ESL_FAST_CHILDREN_093.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,93); */
+	/* (UUID(),'esl-fast-beginner-1-66','Fruit Salad','Salad trái cây','ESL_FAST_BEGINNER_1_066.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,66), */
+	/* (UUID(),'esl-fast-beginner-1-67','He Takes His Test','Cậu ấy làm bài kiểm tra','ESL_FAST_BEGINNER_1_067.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,67), */
+	/* (UUID(),'esl-fast-beginner-1-68','Parent-teacher Conference','Buổi họp phụ huynh và giáo viên','ESL_FAST_BEGINNER_1_068.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,68), */
+	/* (UUID(),'esl-fast-beginner-1-69','The Second Dog','Con chó thứ hai','ESL_FAST_BEGINNER_1_069.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,69), */
+	/* (UUID(),'esl-fast-beginner-1-70','A Cat and a Ball of Yarn','Một con mèo và cuộn len','ESL_FAST_BEGINNER_1_070.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,70), */
+	/* (UUID(),'esl-fast-beginner-1-71','Taking Care of His Orange Tree','Chăm sóc cây cam của cậu ấy','ESL_FAST_BEGINNER_1_071.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,71), */
+	/* (UUID(),'esl-fast-beginner-1-72','The Missing Notebook','Cuốn vở bị mất','ESL_FAST_BEGINNER_1_072.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,72), */
+	/* (UUID(),'esl-fast-beginner-1-73','Tag, You\'re It!','Trò chơi đuổi bắt, đến lượt bạn rồi!','ESL_FAST_BEGINNER_1_073.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,73), */
+	/* (UUID(),'esl-fast-beginner-1-74','Different Flavors','Những hương vị khác nhau','ESL_FAST_BEGINNER_1_074.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,74), */
+	/* (UUID(),'esl-fast-beginner-1-75','Daydreaming at School','Mơ mộng trong giờ học','ESL_FAST_BEGINNER_1_075.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,75), */
+	/* (UUID(),'esl-fast-beginner-1-76','A Pet for Dad','Một thú cưng dành cho bố','ESL_FAST_BEGINNER_1_076.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,76), */
+	/* (UUID(),'esl-fast-beginner-1-77','Too Sick','Bị ốm nặng','ESL_FAST_BEGINNER_1_077.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,77), */
+	/* (UUID(),'esl-fast-beginner-1-78','The Worst Student','Học sinh tệ nhất','ESL_FAST_BEGINNER_1_078.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,78), */
+	/* (UUID(),'esl-fast-beginner-1-79','Bad Manners','Cư xử không đúng mực','ESL_FAST_BEGINNER_1_079.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,79), */
+	/* (UUID(),'esl-fast-beginner-1-80','Transferring to Another Class','Chuyển sang lớp khác','ESL_FAST_BEGINNER_1_080.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,80), */
+	/* (UUID(),'esl-fast-beginner-1-81','Good Manners','Cư xử lịch sự','ESL_FAST_BEGINNER_1_081.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,81), */
+	/* (UUID(),'esl-fast-beginner-1-82','The Trouble with Braces','Rắc rối với niềng răng','ESL_FAST_BEGINNER_1_082.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,82), */
+	/* (UUID(),'esl-fast-beginner-1-83','Lost on the First Day','Lạc trong ngày đầu tiên','ESL_FAST_BEGINNER_1_083.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,83), */
+	/* (UUID(),'esl-fast-beginner-1-84','Stealing is Bad','Ăn cắp là xấu','ESL_FAST_BEGINNER_1_084.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,84), */
+	/* (UUID(),'esl-fast-beginner-1-85','Picking Her Up','Đón cô ấy','ESL_FAST_BEGINNER_1_085.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,85), */
+	/* (UUID(),'esl-fast-beginner-1-86','Saving the Princess','Giải cứu công chúa','ESL_FAST_BEGINNER_1_086.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,86), */
+	/* (UUID(),'esl-fast-beginner-1-87','Make It Hot, Make It Cold','Làm nóng lên, làm lạnh đi','ESL_FAST_BEGINNER_1_087.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,87), */
+	/* (UUID(),'esl-fast-beginner-1-88','A Good Shower','Một buổi tắm sảng khoái','ESL_FAST_BEGINNER_1_088.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,88), */
+	/* (UUID(),'esl-fast-beginner-1-89','The Wrong Color','Màu sắc bị chọn sai','ESL_FAST_BEGINNER_1_089.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,89), */
+	/* (UUID(),'esl-fast-beginner-1-90','Forgetting Her Glasses','Quên kính của cô ấy','ESL_FAST_BEGINNER_1_090.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,90), */
+	/* (UUID(),'esl-fast-beginner-1-91','Quitting His Job','Nghỉ việc','ESL_FAST_BEGINNER_1_091.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,91), */
+	/* (UUID(),'esl-fast-beginner-1-92','Future Goals','Mục tiêu tương lai','ESL_FAST_BEGINNER_1_092.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,92), */
+	/* (UUID(),'esl-fast-beginner-1-93','A Kind Stranger','Một người lạ tốt bụng','ESL_FAST_BEGINNER_1_093.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,93); */
