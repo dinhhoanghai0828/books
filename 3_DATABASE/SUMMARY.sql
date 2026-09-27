@@ -180,7 +180,6 @@ CREATE TABLE ANSWERS (
 
 --	DU LIEU BANG CATEGORIES
 TRUNCATE TABLE CATEGORIES;
-TRUNCATE TABLE SUBCATEGORIES;
 TRUNCATE TABLE BOOKS;
 TRUNCATE TABLE CONTENTS;
 
@@ -200,24 +199,26 @@ INSERT INTO CATEGORIES(UUID, SLUG, ENG, VI, PARENT_SLUG, NUMBER) VALUES
     (UUID(), 'truyen-nguoi-lon', 'Adult stories', 'Truyện người lớn', 'truyen', 5),
 
     -- Sách
-	(UUID(), 'sach-ielts', 'IELTS book', 'Sách IELTS', 'sach', 1),
-	(UUID(), 'sach-triet-ly', 'Philosophy book', 'Sách triết lý', 'sach', 2),
-	(UUID(), 'esl-fast', 'ESL Fast', 'Tiếng Anh ESL Fast', 'sach', 3),
 	-- Sách - ESL Fast
-	(UUID(), 'beginner', 'Beginner (A1)', 'Beginner (A1))', 'esl-fast', 1),
-	(UUID(), 'elementary', 'Elementary (A2)', 'Elementary (A2)', 'esl-fast', 2),
-	(UUID(), 'intermediate', 'Intermediate (B1)', 'Intermediate (B1)', 'esl-fast', 3),
-	(UUID(), 'upper-intermediate', 'Upper Intermediate (B2)', 'Upper Intermediate (B2))', 'esl-fast', 4),
+	(UUID(), 'esl-fast', 'ESL Fast', 'ESL Fast', 'sach', NULL),
+	(UUID(), 'esl-fast-beginner', 'Beginner (A1)', 'Beginner (A1))', 'esl-fast', NULL),
+	(UUID(), 'esl-fast-elementary', 'Elementary (A2)', 'Elementary (A2)', 'esl-fast', NULL),
+	(UUID(), 'esl-fast-intermediate', 'Intermediate (B1)', 'Intermediate (B1)', 'esl-fast', NULL),
+	(UUID(), 'esl-fast-upper-intermediate', 'Upper Intermediate (B2)', 'Upper Intermediate (B2))', 'esl-fast', NULL),
+	-- Sách - 4000 Essential English Words
+	(UUID(), 'ielts-books', 'Sách IELTS', 'Sách IELTS', 'sach', NULL),
+	(UUID(), '4000-essential-english-words', '4000 Essential English Words', '4000 Essential English Words', 'ielts-books', NULL),
 
+	(UUID(), 'sach-triet-ly', 'Philosophy book', 'Sách triết lý', 'sach', NULL),
     -- Thuyết trình - TEDTALKS
-    (UUID(), 'tedtalks', 'TEDTALKS', 'TEDTALKS', 'presentation', 1),
-    (UUID(), 'technology', 'Tecnology', 'Công Nghệ', 'tedtalks', 1),
-    (UUID(), 'relationship', 'Relationship', 'Mối quan hệ', 'tedtalks', 1),
+    (UUID(), 'tedtalks', 'TEDTALKS', 'TEDTALKS', 'presentation', NULL),
+    (UUID(), 'technology', 'Tecnology', 'Công Nghệ', 'tedtalks', NULL),
+    (UUID(), 'relationship', 'Relationship', 'Mối quan hệ', 'tedtalks', NULL),
 
-    (UUID(), 'tro-chuyen-hang-ngay', 'Daily Conversations', 'Trò chuyện hàng ngày', 'presentation', 2),
+    (UUID(), 'tro-chuyen-hang-ngay', 'Daily Conversations', 'Trò chuyện hàng ngày', 'presentation', NULL),
 
     -- Tiếng Anh cơ bản
-    (UUID(), 'tieng-anh-co-ban-cap-do-1', 'Basic English Level 1', 'Tiếng anh cơ bản cấp độ 1', 'tieng-anh-co-ban', 1);
+    (UUID(), 'tieng-anh-co-ban-cap-do-1', 'Basic English Level 1', 'Tiếng anh cơ bản cấp độ 1', 'tieng-anh-co-ban', NULL);
 
 	
 	
@@ -229,7 +230,7 @@ INSERT INTO BOOKS(UUID,SLUG,ENG,VI,AUTHOR,DESCRIPTION,CATEGORY_SLUG,IMG,NUMBER) 
 	(UUID(),'english-fairy-tales','English Fairy Tales','Chuyện Cổ Tích','Nhiều tác giả','Những câu chuyện cổ tích','truyen-co-tich','ENGLISH_FAIRY_TALES.png', 1),
 	(UUID(),'your-animated-story-show','Your Animated Story Show','Chương trình hoạt hình','Nhiều tác giả','Những câu chuyện tuổi teen về tình yêu, gia đình, tình bạn và những mối quan hệ trong cuộc sống','truyen-tuoi-teen','YOUR_ANIMATED_STORY_SHOW.png', 2),
 	(UUID(),'animatters','Animatters','Hoạt hình','Nhiều tác giả','Những câu chuyện người lớn','truyen-nguoi-lon','ANIMATTERS.png', 1),
-	(UUID(),'4000-essential-english-words','4000 Essential English Words','4000 từ Tiếng Anh quan trọng','Nadin Miles & Artur Krotkov','Sách 4000 từ tiếng anh thông dụng','sach-ielts','4000_ESSENTIAL_ENGLISH_WORDS.png',1),
+	
 	(UUID(),'I-am-Mary','I\'m Mary','Tôi là Mary','Mary','Những triết lý, bài học trong cuộc sống hiện đại','sach-triet-ly','I_AM_MARY.png',1),
 	(UUID(),'economist','Economist','Kinh tế học','Nhiều tác giả','Thông tin kinh tế, chính trị, khoa học, xã hội','tin-tuc-hang-ngay','THE_ECONOMIST.png',1),
 	(UUID(),'voa','VOA','Báo nước ngoài','Nhiều tác giả','Thông tin kinh tế, chính trị, khoa học, xã hội, giáo dục, du lịch','tin-tuc-hang-ngay','VOA.png',2),
@@ -242,53 +243,59 @@ INSERT INTO BOOKS(UUID,SLUG,ENG,VI,AUTHOR,DESCRIPTION,CATEGORY_SLUG,IMG,NUMBER) 
 	/* tieng-anh-co-ban-cap-do-1 */
 	(UUID(),'tiger-club-learning','TigerCub Learning','TigerCub Learning','Nhiều tác giả','Học các câu tiếng anh đơn giản','tieng-anh-co-ban-cap-do-1','TIGER_CLUB_LEARNING.png',1),
 	(UUID(),'peppa-pig','Peppa Pig','Lợn Peppa','Nhiều tác giả','Học các câu tiếng anh đơn giản','tieng-anh-co-ban-cap-do-1','PEPPA_PIG.png',2),
-	/* Cac cap do trong ESL_FAST, co 6 cap do*/
-	(UUID(),'esl-fast-children-1','Children 1','Children 1','Nhiều tác giả','Học các câu tiếng anh đơn giản','beginner','ESLFAST.png',1),
-	(UUID(),'esl-fast-children-2','Children 2','Children 2','Nhiều tác giả','Học các câu tiếng anh đơn giản','beginner','ESLFAST.png',2),
-	(UUID(),'esl-fast-children-3','Children 3','Children 3','Nhiều tác giả','Học các câu tiếng anh đơn giản','beginner','ESLFAST.png',3),
-	(UUID(),'esl-fast-elementary-1','Elementary 1','Elementary 1','Nhiều tác giả','Học các câu tiếng anh đơn giản','elementary','ESLFAST.png',1),
-	(UUID(),'esl-fast-elementary-2','Elementary 2','Elementary 2','Nhiều tác giả','Học các câu tiếng anh đơn giản','elementary','ESLFAST.png',2),
-	(UUID(),'esl-fast-elementary-3','Elementary 3','Elementary 3','Nhiều tác giả','Học các câu tiếng anh đơn giản','elementary','ESLFAST.png',3),
-	(UUID(),'esl-fast-elementary-4','Elementary 4','Elementary 4','Nhiều tác giả','Học các câu tiếng anh đơn giản','elementary','ESLFAST.png',4),
-	(UUID(),'esl-fast-elementary-5','Elementary 5','Elementary 5','Nhiều tác giả','Học các câu tiếng anh đơn giản','elementary','ESLFAST.png',5),
-	(UUID(),'esl-fast-elementary-6','Elementary 6','Elementary 6','Nhiều tác giả','Học các câu tiếng anh đơn giản','elementary','ESLFAST.png',6),
-	(UUID(),'esl-fast-intermediate-1','Intermediate 1','Intermediate 1','Nhiều tác giả','Học các câu tiếng anh phức tạp','intermediate','ESLFAST.png',1),
-	(UUID(),'esl-fast-intermediate-2','Intermediate 2','Intermediate 2','Nhiều tác giả','Học các câu tiếng anh phức tạp','upper-intermediate','ESLFAST.png',1);
+	/* Sách - ESL Fast, co 6 cap do */
+	(UUID(),'esl-fast-children-1','Children 1','Children 1','Nhiều tác giả','Học các câu tiếng anh đơn giản','esl-fast-beginner','ESLFAST.png',1),
+	(UUID(),'esl-fast-children-2','Children 2','Children 2','Nhiều tác giả','Học các câu tiếng anh đơn giản','esl-fast-beginner','ESLFAST.png',2),
+	(UUID(),'esl-fast-children-3','Children 3','Children 3','Nhiều tác giả','Học các câu tiếng anh đơn giản','esl-fast-beginner','ESLFAST.png',3),
+	(UUID(),'esl-fast-elementary-1','Elementary 1','Elementary 1','Nhiều tác giả','Học các câu tiếng anh đơn giản','esl-fast-elementary','ESLFAST.png',1),
+	(UUID(),'esl-fast-elementary-2','Elementary 2','Elementary 2','Nhiều tác giả','Học các câu tiếng anh đơn giản','esl-fast-elementary','ESLFAST.png',2),
+	(UUID(),'esl-fast-elementary-3','Elementary 3','Elementary 3','Nhiều tác giả','Học các câu tiếng anh đơn giản','esl-fast-elementary','ESLFAST.png',3),
+	(UUID(),'esl-fast-elementary-4','Elementary 4','Elementary 4','Nhiều tác giả','Học các câu tiếng anh đơn giản','esl-fast-elementary','ESLFAST.png',4),
+	(UUID(),'esl-fast-elementary-5','Elementary 5','Elementary 5','Nhiều tác giả','Học các câu tiếng anh đơn giản','esl-fast-elementary','ESLFAST.png',5),
+	(UUID(),'esl-fast-elementary-6','Elementary 6','Elementary 6','Nhiều tác giả','Học các câu tiếng anh đơn giản','esl-fast-elementary','ESLFAST.png',6),
+	(UUID(),'esl-fast-intermediate-1','Intermediate 1','Intermediate 1','Nhiều tác giả','Học các câu tiếng anh phức tạp','esl-fast-intermediate','ESLFAST.png',1),
+	(UUID(),'esl-fast-intermediate-2','Intermediate 2','Intermediate 2','Nhiều tác giả','Học các câu tiếng anh phức tạp','esl-fast-upper-intermediate','ESLFAST.png',1),
 	
+	(UUID(),'4000-essential-english-words-1','4000 Essential English Words 1','4000 từ Tiếng Anh quan trọng tập 1','Nadin Miles & Artur Krotkov','Sách 4000 từ tiếng anh thông dụng','4000-essential-english-words','4000_ESSENTIAL_ENGLISH_WORDS_1.png',1),
+	(UUID(),'4000-essential-english-words-2','4000 Essential English Words 2','4000 từ Tiếng Anh quan trọng tập 2','Nadin Miles & Artur Krotkov','Sách 4000 từ tiếng anh thông dụng','4000-essential-english-words','4000_ESSENTIAL_ENGLISH_WORDS_2.png',1),
+	(UUID(),'4000-essential-english-words-3','4000 Essential English Words 3','4000 từ Tiếng Anh quan trọng tập 3','Nadin Miles & Artur Krotkov','Sách 4000 từ tiếng anh thông dụng','4000-essential-english-words','4000_ESSENTIAL_ENGLISH_WORDS_3.png',1),
+	(UUID(),'4000-essential-english-words-4','4000 Essential English Words 4','4000 từ Tiếng Anh quan trọng tập 4','Nadin Miles & Artur Krotkov','Sách 4000 từ tiếng anh thông dụng','4000-essential-english-words','4000_ESSENTIAL_ENGLISH_WORDS_4.png',1),
+	(UUID(),'4000-essential-english-words-5','4000 Essential English Words 5','4000 từ Tiếng Anh quan trọng tập 5','Nadin Miles & Artur Krotkov','Sách 4000 từ tiếng anh thông dụng','4000-essential-english-words','4000_ESSENTIAL_ENGLISH_WORDS_5.png',1),
+	(UUID(),'4000-essential-english-words-6','4000 Essential English Words 6','4000 từ Tiếng Anh quan trọng tập 6','Nadin Miles & Artur Krotkov','Sách 4000 từ tiếng anh thông dụng','4000-essential-english-words','4000_ESSENTIAL_ENGLISH_WORDS_6.png',1);
 	
 -- DU LIEU BANG VOLUMES
 TRUNCATE TABLE VOLUMES;
 INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,IS_LANGUAGE_APPROVED,IS_REVIEW_COMPLETED,IS_READ,NUMBER) VALUES
-	(UUID(),'4000-essential-english-words-1','The lion and the rabbit','Sư tử và thỏ','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_001.mp3',NULL,'00:00:00.000','00:02:11.000','4000-essential-english-words',1,0,0,1),
-	(UUID(),'4000-essential-english-words-2','The laboratory','Phòng thí nghiệm','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_002.mp3',NULL,'00:00:00.000','00:02:13.800','4000-essential-english-words',1,0,0,2),
-	(UUID(),'4000-essential-english-words-3','The report','Báo cáo','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_003.mp3',NULL,'00:00:00.000','00:02:11.000','4000-essential-english-words',1,0,0,3),
-	(UUID(),'4000-essential-english-words-4','The dog\'s bell','Chiếc chuông của chú chó','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_004.mp3',NULL,'00:00:00.000','00:02:03.000','4000-essential-english-words',1,0,0,4),
-	(UUID(),'4000-essential-english-words-5','The jackal and the sun child','Chú chó rừng và đứa con Mặt trời','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_005.mp3',NULL,'00:00:00.000','00:02:11.600','4000-essential-english-words',1,0,0,5),
-	(UUID(),'4000-essential-english-words-6','The friendly ghost','Hồn ma thân thiện','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_006.mp3',NULL,'00:00:00.000','00:02:11.300','4000-essential-english-words',1,0,0,6),
-	(UUID(),'4000-essential-english-words-7','The best prince','Chàng hoàng tử tốt nhất','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_007.mp3',NULL,'00:00:00.000','00:02:17.200','4000-essential-english-words',1,0,0,7),
-	(UUID(),'4000-essential-english-words-8','How the sun and the moon were made?','Mặt trời và mặt trăng được sinh ra bằng cách nào?','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_008.mp3',NULL,'00:00:00.000','00:02:10.000','4000-essential-english-words',1,0,0,8),
-	(UUID(),'4000-essential-english-words-9','The starfish','Chú sao biển','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_009.mp3',NULL,'00:00:00.000','00:01:52.000','4000-essential-english-words',1,0,0,9),
-	(UUID(),'4000-essential-english-words-10','The first peacock','Con công đầu tiên','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_010.mp3',NULL,'00:00:00.000','00:02:01.000','4000-essential-english-words',1,0,0,10),
-	(UUID(),'4000-essential-english-words-11','Princess Rose and the creature','Công chúa Hoa Hồng và các sinh Vật','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_011.mp3',NULL,'00:00:00.000','00:02:04.000','4000-essential-english-words',0,0,0,11),
-	(UUID(),'4000-essential-english-words-12','The crazy artist','Người nghệ sĩ điên','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_012.mp3',NULL,'00:00:00.000','00:02:11.500','4000-essential-english-words',0,0,0,12),
-	(UUID(),'4000-essential-english-words-13','The farmer and the cats','Người nông dân và những con mèo','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_013.mp3',NULL,'00:00:00.000','00:02:03.600','4000-essential-english-words',0,0,0,13),
-	(UUID(),'4000-essential-english-words-14','A magical book','Cuốn sách phép thuật','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_014.mp3',NULL,'00:00:00.000','00:02:12.000','4000-essential-english-words',0,0,0,14),
-	(UUID(),'4000-essential-english-words-15','The big race','Cuộc đua lớn','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_015.mp3',NULL,'00:00:00.000','00:02:07.000','4000-essential-english-words',0,0,0,15),
-	(UUID(),'4000-essential-english-words-16','Adams county\'s gold','Vàng ở quận Adams','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_016.mp3',NULL,'00:00:00.000','00:02:11.200','4000-essential-english-words',0,0,0,16),
-	(UUID(),'4000-essential-english-words-17','The race for water','Cuộc đua giành nước','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_017.mp3',NULL,'00:00:00.000','00:02:10.300','4000-essential-english-words',0,0,0,17),
-	(UUID(),'4000-essential-english-words-18','The little red chicken','Cô gà đỏ bé nhỏ','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_018.mp3',NULL,'00:00:00.000','00:01:57.200','4000-essential-english-words',0,0,0,18),
-	(UUID(),'4000-essential-english-words-19','Shipwrecked','Đắm tàu','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_019.mp3',NULL,'00:00:00.000','00:02:14.800','4000-essential-english-words',0,0,0,19),
-	(UUID(),'4000-essential-english-words-20','The seven cities of gold','Bảy thành phố vàng','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_020.mp3',NULL,'00:00:00.000','00:02:05.000','4000-essential-english-words',0,0,0,20),
-	(UUID(),'4000-essential-english-words-21','Katy','Katy','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_021.mp3',NULL,'00:00:00.000','00:02:02.000','4000-essential-english-words',0,0,0,21),
-	(UUID(),'4000-essential-english-words-22','A better reward','Một phần thưởng tuyệt vời hơn','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_022.mp3',NULL,'00:00:00.000','00:02:06.000','4000-essential-english-words',0,0,0,22),
-	(UUID(),'4000-essential-english-words-23','The camp','Lều trại','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_023.mp3',NULL,'00:00:00.000','00:02:05.000','4000-essential-english-words',0,0,0,23),
-	(UUID(),'4000-essential-english-words-24','A strong friendship','Tình bạn mạnh mẽ','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_024.mp3',NULL,'00:00:00.000','00:02:05.600','4000-essential-english-words',0,0,0,24),
-	(UUID(),'4000-essential-english-words-25','Joe\'s pond','Ao của Joe','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_025.mp3',NULL,'00:00:00.000','00:02:02.100','4000-essential-english-words',0,0,0,25),
-	(UUID(),'4000-essential-english-words-26','Archie and his donkey','Archie và con lừa','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_026.mp3',NULL,'00:00:00.000','00:02:00.700','4000-essential-english-words',0,0,0,26),
-	(UUID(),'4000-essential-english-words-27','The spider and the bird','Con nhện và con chim','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_027.mp3',NULL,'00:00:00.000','00:02:02.000','4000-essential-english-words',0,0,0,27),
-	(UUID(),'4000-essential-english-words-28','The party','Bữa tiệc sinh nhật','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_028.mp3',NULL,'00:00:00.000','00:02:11.000','4000-essential-english-words',0,0,0,28),
-	(UUID(),'4000-essential-english-words-29','How the World got light','Thế giới đã có ánh sáng như thế nào','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_029.mp3',NULL,'00:00:00.000','00:02:03.800','4000-essential-english-words',0,0,0,29),
-	(UUID(),'4000-essential-english-words-30','Cats and secrets','Con mèo và những bí mật','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_030.mp3',NULL,'00:00:00.000','00:01:57.000','4000-essential-english-words',0,0,0,30),
+	(UUID(),'4000-essential-english-words-1-1','The lion and the rabbit','Sư tử và thỏ','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_001.mp3',NULL,'00:00:00.000','00:02:11.000','4000-essential-english-words-1',1,0,0,1),
+	(UUID(),'4000-essential-english-words-1-2','The laboratory','Phòng thí nghiệm','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_002.mp3',NULL,'00:00:00.000','00:02:13.800','4000-essential-english-words-1',1,0,0,2),
+	(UUID(),'4000-essential-english-words-1-3','The report','Báo cáo','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_003.mp3',NULL,'00:00:00.000','00:02:11.000','4000-essential-english-words-1',1,0,0,3),
+	(UUID(),'4000-essential-english-words-1-4','The dog\'s bell','Chiếc chuông của chú chó','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_004.mp3',NULL,'00:00:00.000','00:02:03.000','4000-essential-english-words-1',1,0,0,4),
+	(UUID(),'4000-essential-english-words-1-5','The jackal and the sun child','Chú chó rừng và đứa con Mặt trời','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_005.mp3',NULL,'00:00:00.000','00:02:11.600','4000-essential-english-words-1',1,0,0,5),
+	(UUID(),'4000-essential-english-words-1-6','The friendly ghost','Hồn ma thân thiện','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_006.mp3',NULL,'00:00:00.000','00:02:11.300','4000-essential-english-words-1',1,0,0,6),
+	(UUID(),'4000-essential-english-words-1-7','The best prince','Chàng hoàng tử tốt nhất','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_007.mp3',NULL,'00:00:00.000','00:02:17.200','4000-essential-english-words-1',1,0,0,7),
+	(UUID(),'4000-essential-english-words-1-8','How the sun and the moon were made?','Mặt trời và mặt trăng được sinh ra bằng cách nào?','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_008.mp3',NULL,'00:00:00.000','00:02:10.000','4000-essential-english-words-1',1,0,0,8),
+	(UUID(),'4000-essential-english-words-1-9','The starfish','Chú sao biển','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_009.mp3',NULL,'00:00:00.000','00:01:52.000','4000-essential-english-words-1',1,0,0,9),
+	(UUID(),'4000-essential-english-words-1-10','The first peacock','Con công đầu tiên','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_010.mp3',NULL,'00:00:00.000','00:02:01.000','4000-essential-english-words-1',1,0,0,10),
+	(UUID(),'4000-essential-english-words-1-11','Princess Rose and the creature','Công chúa Hoa Hồng và các sinh Vật','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_011.mp3',NULL,'00:00:00.000','00:02:04.000','4000-essential-english-words-1',0,0,0,11),
+	(UUID(),'4000-essential-english-words-1-12','The crazy artist','Người nghệ sĩ điên','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_012.mp3',NULL,'00:00:00.000','00:02:11.500','4000-essential-english-words-1',0,0,0,12),
+	(UUID(),'4000-essential-english-words-1-13','The farmer and the cats','Người nông dân và những con mèo','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_013.mp3',NULL,'00:00:00.000','00:02:03.600','4000-essential-english-words-1',0,0,0,13),
+	(UUID(),'4000-essential-english-words-1-14','A magical book','Cuốn sách phép thuật','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_014.mp3',NULL,'00:00:00.000','00:02:12.000','4000-essential-english-words-1',0,0,0,14),
+	(UUID(),'4000-essential-english-words-1-15','The big race','Cuộc đua lớn','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_015.mp3',NULL,'00:00:00.000','00:02:07.000','4000-essential-english-words-1',0,0,0,15),
+	(UUID(),'4000-essential-english-words-1-16','Adams county\'s gold','Vàng ở quận Adams','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_016.mp3',NULL,'00:00:00.000','00:02:11.200','4000-essential-english-words-1',0,0,0,16),
+	(UUID(),'4000-essential-english-words-1-17','The race for water','Cuộc đua giành nước','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_017.mp3',NULL,'00:00:00.000','00:02:10.300','4000-essential-english-words-1',0,0,0,17),
+	(UUID(),'4000-essential-english-words-1-18','The little red chicken','Cô gà đỏ bé nhỏ','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_018.mp3',NULL,'00:00:00.000','00:01:57.200','4000-essential-english-words-1',0,0,0,18),
+	(UUID(),'4000-essential-english-words-1-19','Shipwrecked','Đắm tàu','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_019.mp3',NULL,'00:00:00.000','00:02:14.800','4000-essential-english-words-1',0,0,0,19),
+	(UUID(),'4000-essential-english-words-1-20','The seven cities of gold','Bảy thành phố vàng','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_020.mp3',NULL,'00:00:00.000','00:02:05.000','4000-essential-english-words-1',0,0,0,20),
+	(UUID(),'4000-essential-english-words-1-21','Katy','Katy','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_021.mp3',NULL,'00:00:00.000','00:02:02.000','4000-essential-english-words-1',0,0,0,21),
+	(UUID(),'4000-essential-english-words-1-22','A better reward','Một phần thưởng tuyệt vời hơn','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_022.mp3',NULL,'00:00:00.000','00:02:06.000','4000-essential-english-words-1',0,0,0,22),
+	(UUID(),'4000-essential-english-words-1-23','The camp','Lều trại','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_023.mp3',NULL,'00:00:00.000','00:02:05.000','4000-essential-english-words-1',0,0,0,23),
+	(UUID(),'4000-essential-english-words-1-24','A strong friendship','Tình bạn mạnh mẽ','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_024.mp3',NULL,'00:00:00.000','00:02:05.600','4000-essential-english-words-1',0,0,0,24),
+	(UUID(),'4000-essential-english-words-1-25','Joe\'s pond','Ao của Joe','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_025.mp3',NULL,'00:00:00.000','00:02:02.100','4000-essential-english-words-1',0,0,0,25),
+	(UUID(),'4000-essential-english-words-1-26','Archie and his donkey','Archie và con lừa','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_026.mp3',NULL,'00:00:00.000','00:02:00.700','4000-essential-english-words-1',0,0,0,26),
+	(UUID(),'4000-essential-english-words-1-27','The spider and the bird','Con nhện và con chim','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_027.mp3',NULL,'00:00:00.000','00:02:02.000','4000-essential-english-words-1',0,0,0,27),
+	(UUID(),'4000-essential-english-words-1-28','The party','Bữa tiệc sinh nhật','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_028.mp3',NULL,'00:00:00.000','00:02:11.000','4000-essential-english-words-1',0,0,0,28),
+	(UUID(),'4000-essential-english-words-1-29','How the World got light','Thế giới đã có ánh sáng như thế nào','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_029.mp3',NULL,'00:00:00.000','00:02:03.800','4000-essential-english-words-1',0,0,0,29),
+	(UUID(),'4000-essential-english-words-1-30','Cats and secrets','Con mèo và những bí mật','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_030.mp3',NULL,'00:00:00.000','00:01:57.000','4000-essential-english-words-1',0,0,0,30),
 	(UUID(),'4000-essential-english-words-31','The twelve months','Mười hai tháng','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_031.mp3',NULL,'00:00:00.000','00:01:52.200','4000-essential-english-words',0,0,0,31),
 	(UUID(),'4000-essential-english-words-32','The dragon','Con rồng','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_032.mp3',NULL,'00:00:00.000','00:01:40.000','4000-essential-english-words',0,0,0,32),
 	(UUID(),'4000-essential-english-words-33','The battle of Thermopylae','Trận chiến Thermopylae','BOOKS_IELTS_BOOK_01_4000_ESSENTIAL_ENGLISH_WORDS_033.mp3',NULL,'00:00:00.000','00:01:41.000','4000-essential-english-words',0,0,0,33),
