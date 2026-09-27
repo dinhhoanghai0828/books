@@ -22,7 +22,7 @@ const SubCategoryPage = () => {
   const [books, setBooks] = useState<Book[]>([]);
   const [volumes, setVolumes] = useState<Volume[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [pageSize, setPageSize] = useState(10);
+  const [pageSize, setPageSize] = useState(100);
   const [totalItems, setTotalItems] = useState(0);
   const [loading, setLoading] = useState(false);
   // isVolumePage = true khi subcategorySlug thực ra là bookSlug (không tìm được books)
