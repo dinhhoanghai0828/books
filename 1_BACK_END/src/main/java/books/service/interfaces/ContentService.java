@@ -10,7 +10,7 @@ import java.util.Map;
 public interface ContentService {
     List<ContentDTO> getContentByVolumeSlug(String volumeSlug) throws Exception;
 
-    Map<String, Object> getContents(String eng, String vi, String page, String size) throws Exception;
+    Map<String, Object> getContents(String eng, String vi, String page, String size, String reviewStatus) throws Exception;
 
     boolean updateContent(Long id, String eng, String vi, String startTime, String endTime) throws Exception;
 

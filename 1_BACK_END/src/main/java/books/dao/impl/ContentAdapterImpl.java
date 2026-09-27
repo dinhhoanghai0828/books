@@ -19,7 +19,7 @@ public class ContentAdapterImpl implements ContentAdapter {
     private static final Logger logger = LoggerFactory.getLogger(ContentAdapterImpl.class);
     private static final String SQL_GET_CONTENTS_BY_VOLUME_SLUG = "SELECT C.*, V.ENG AS VOLUME_ENG, V.VI AS VOLUME_VI, V.AUDIO AS AUDIO, V.VIDEO AS VIDEO FROM CONTENTS C JOIN VOLUMES V ON C.VOLUME_SLUG = V.SLUG WHERE V.SLUG = ?";
     private static final String SQL_GET_MISSING_WORDS = "SELECT * FROM MISSING_WORDS";
-    private static final String SQL_COUNT_CONTENTS_SEARCH = "SELECT COUNT(*) FROM CONTENTS WHERE 1 = 1 ";
+    private static final String SQL_COUNT_CONTENTS_SEARCH = "SELECT COUNT(*) FROM CONTENTS C INNER JOIN VOLUMES V ON C.VOLUME_SLUG = V.SLUG WHERE 1 = 1 ";
     private static final String SQL_GET_CONTENTS_SEARCH = "SELECT C.*, V.ENG AS VOLUME_ENG, V.VI AS VOLUME_VI, V.AUDIO AS AUDIO, V.VIDEO AS VIDEO, V.IS_LANGUAGE_APPROVED AS IS_LANGUAGE_APPROVED, V.IS_REVIEW_COMPLETED AS IS_REVIEW_COMPLETED, V.NUMBER AS NUMBER, B.ENG AS BOOK_ENG FROM CONTENTS C INNER JOIN VOLUMES V ON C.VOLUME_SLUG = V.SLUG  INNER JOIN BOOKS B ON B.SLUG = V.BOOK_SLUG WHERE 1 = 1 ";
     private static final String SQL_UPDATE_CONTENT = "UPDATE CONTENTS SET ENG = ?, VI = ?, START_TIME = ?, END_TIME = ? WHERE ID = ?";
 
@@ -124,7 +124,7 @@ public class ContentAdapterImpl implements ContentAdapter {
 
 
 
-    public Map<String, Object> getContents(String eng, String vi, String page, String size) throws Exception {
+    public Map<String, Object> getContents(String eng, String vi, String page, String size, String reviewStatus) throws Exception {
         String thisMethod = "CategoryAdapterImpl.getContents";
         Connection con = null;
         PreparedStatement pstmt = null;
@@ -137,10 +137,17 @@ public class ContentAdapterImpl implements ContentAdapter {
         try {
             StringBuffer sql = new StringBuffer(SQL_COUNT_CONTENTS_SEARCH);
             if (StringUtils.isNotBlank(eng)) {
-                sql.append(" AND UPPER(eng) REGEXP CONCAT('\\\\b', UPPER(?), '\\\\b')");
+                sql.append(" AND UPPER(C.ENG) REGEXP CONCAT('\\\\b', UPPER(?), '\\\\b')");
             }
             if (StringUtils.isNotBlank(vi)) {
-                sql.append(" AND UPPER(vi) REGEXP CONCAT('\\\\b', UPPER(?), '\\\\b')");
+                sql.append(" AND UPPER(C.VI) REGEXP CONCAT('\\\\b', UPPER(?), '\\\\b')");
+            }
+            if (StringUtils.isNotBlank(reviewStatus)) {
+                if ("approved".equals(reviewStatus)) {
+                    sql.append(" AND V.IS_REVIEW_COMPLETED = 1");
+                } else if ("not_approved".equals(reviewStatus)) {
+                    sql.append(" AND V.IS_REVIEW_COMPLETED = 0");
+                }
             }
             con = DBUtils.getConnection(thisMethod, true, Connection.TRANSACTION_READ_COMMITTED);
             pstmt = DBUtils.prepareStatement(con, sql.toString());
@@ -179,8 +186,15 @@ public class ContentAdapterImpl implements ContentAdapter {
             if (StringUtils.isNotBlank(vi)) {
                 sql.append(" AND UPPER(C.VI) REGEXP CONCAT('\\\\b', UPPER(?), '\\\\b')");
             }
+            if (StringUtils.isNotBlank(reviewStatus)) {
+                if ("approved".equals(reviewStatus)) {
+                    sql.append(" AND V.IS_REVIEW_COMPLETED = 1");
+                } else if ("not_approved".equals(reviewStatus)) {
+                    sql.append(" AND V.IS_REVIEW_COMPLETED = 0");
+                }
+            }
             if (StringUtils.isNotBlank(eng) || StringUtils.isNotBlank(vi)) {
-                sql.append(" ORDER BY V.IS_LANGUAGE_APPROVED DESC");
+                sql.append(" ORDER BY V.IS_REVIEW_COMPLETED DESC, V.IS_LANGUAGE_APPROVED DESC");
             }
             sql.append(" LIMIT ? OFFSET ?");
             pstmt = DBUtils.prepareStatement(con, sql.toString());

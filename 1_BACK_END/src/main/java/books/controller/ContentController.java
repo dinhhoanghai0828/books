@@ -41,10 +41,10 @@ public class ContentController {
     }
 
     @GetMapping("/search")
-    public ResponseEntity<?> getContent(@Param("eng") String eng, @Param("vi") String vi, @Param("page") String page, @Param("size") String size) {
+    public ResponseEntity<?> getContent(@Param("eng") String eng, @Param("vi") String vi, @Param("page") String page, @Param("size") String size, @Param("reviewStatus") String reviewStatus) {
         try {
             // Lấy dữ liệu từ service
-            Map<String, Object> contentDTOS = contentService.getContents(eng, vi, page, size);
+            Map<String, Object> contentDTOS = contentService.getContents(eng, vi, page, size, reviewStatus);
             PaginationResponse<ContentDTO> response = new PaginationResponse<>();
             // Lấy thông tin phân trang
             response.setTotalElements((Integer) contentDTOS.get("TOTAL_ELEMENTS"));
@@ -57,6 +57,7 @@ public class ContentController {
             // Trả về response với mã thành công (HTTP 200)
             return new ResponseEntity<>(response, HttpStatus.OK);
         } catch (Exception e) {
+            e.printStackTrace();
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
     }

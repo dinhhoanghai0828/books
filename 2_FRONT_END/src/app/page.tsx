@@ -26,6 +26,7 @@ const HomePage = () => {
 
   const [searchValueEn, setSearchValueEn] = useState('');
   const [searchValueVi, setSearchValueVi] = useState('');
+  const [reviewStatus, setReviewStatus] = useState('all');
   const [contents, setContents] = useState<ContentType[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [pageSize, setPageSize] = useState(50);
@@ -38,7 +39,7 @@ const HomePage = () => {
   const fetchContents = async () => {
     NProgress.start();
     try {
-      const response = await getContentSearch(searchValueEn, searchValueVi, currentPage, pageSize);
+      const response = await getContentSearch(searchValueEn, searchValueVi, currentPage, pageSize, reviewStatus);
       setContents(response.data || []);
       setTotalItems(response.totalElements || 0);
     } catch (error) {
@@ -73,20 +74,23 @@ const HomePage = () => {
   useEffect(() => {
     fetchContents();
     fetchHighlight();
-  }, [searchValueEn, searchValueVi, currentPage, pageSize]);
+  }, [searchValueEn, searchValueVi, currentPage, pageSize, reviewStatus]);
 
   // Cap nhat tu khoa tim kiem va reset ve trang dau
-  const handleSearch = async (searchEn: string, searchVi: string) => {
+  const handleSearch = async (searchEn: string, searchVi: string, searchReviewStatus?: string) => {
     const trimmedEn = searchEn.trim();
     const trimmedVi = searchVi.trim();
     setSearchValueEn(trimmedEn);
     setSearchValueVi(trimmedVi);
+    if (searchReviewStatus) {
+      setReviewStatus(searchReviewStatus);
+    }
     setCurrentPage(1);
 
     // Gọi API ngay lập tức để tìm kiếm lại ngay cả khi từ khóa không đổi
     NProgress.start();
     try {
-      const response = await getContentSearch(trimmedEn, trimmedVi, 1, pageSize);
+      const response = await getContentSearch(trimmedEn, trimmedVi, 1, pageSize, searchReviewStatus || reviewStatus);
       setContents(response.data || []);
       setTotalItems(response.totalElements || 0);
     } catch (error) {

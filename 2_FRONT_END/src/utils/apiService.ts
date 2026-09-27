@@ -318,7 +318,8 @@ export const getContentSearch = async (
     eng: string | null,
     vi: string | null,
     page: number,
-    size: number
+    size: number,
+    reviewStatus?: string
 ): Promise<PaginationResponse<ContentType>> => {
   try {
     const params = new URLSearchParams({
@@ -326,6 +327,7 @@ export const getContentSearch = async (
       ...(vi ? { vi } : {}),
       page: (page - 1).toString(),
       size: size.toString(),
+      ...(reviewStatus && reviewStatus !== 'all' ? { reviewStatus } : {}),
     });
     const response = await apiClient.get(`/content/search?${params}`);
     return response.data;

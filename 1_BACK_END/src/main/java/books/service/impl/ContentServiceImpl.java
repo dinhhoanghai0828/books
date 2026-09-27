@@ -41,8 +41,8 @@ public class ContentServiceImpl implements ContentService {
     }
 
     @Override
-    public Map<String, Object> getContents(String eng, String vi, String page, String size) throws Exception {
-        Map<String, Object> result = contentAdapter.getContents(eng, vi, page, size);
+    public Map<String, Object> getContents(String eng, String vi, String page, String size, String reviewStatus) throws Exception {
+        Map<String, Object> result = contentAdapter.getContents(eng, vi, page, size, reviewStatus);
         List<Content> contents = (List<Content>) result.get("CONTENTS");
         List<ContentDTO> contentDTOS = contents.stream()
                 .map(content -> {

@@ -30,8 +30,15 @@ const SPEED_OPTIONS = [
   { value: '200%', label: '200%' },
 ];
 
+// Danh sach trang thai review
+const REVIEW_STATUS_OPTIONS = [
+  { value: 'all', label: 'Tất cả' },
+  { value: 'approved', label: 'Đã duyệt' },
+  { value: 'not_approved', label: 'Chưa duyệt' },
+];
+
 interface HomeSearchProps {
-  onSearch: (searchEn: string, searchVi: string) => void;
+  onSearch: (searchEn: string, searchVi: string, reviewStatus?: string) => void;
   onSelectChange: (value: string) => void;
   onWordAdded?: () => void;
 }
@@ -47,6 +54,7 @@ const HomeSearch = React.memo(({
   const [suggestionsEn, setSuggestionsEn] = useState<string[]>([]);
   const [suggestionsVi, setSuggestionsVi] = useState<string[]>([]);
   const [selectedSpeed, setSelectedSpeed] = useState('100%');
+  const [reviewStatus, setReviewStatus] = useState('all');
   const [loadingTonghop, setLoadingTonghop] = useState(false);
   const [notifApi, notifContextHolder] = notification.useNotification({
     top: 80,
@@ -97,7 +105,7 @@ const HomeSearch = React.memo(({
 
   // Thuc hien tim kiem voi gia tri hien tai
   const handleSearch = () => {
-    onSearch(searchValueEn.trim(), searchValueVi.trim());
+    onSearch(searchValueEn.trim(), searchValueVi.trim(), reviewStatus);
   };
 
   // Xu ly phim Enter de tim kiem nhanh
@@ -223,6 +231,17 @@ const HomeSearch = React.memo(({
               onKeyDown={handleKeyDown}
             />
           </AutoComplete>
+        </Col>
+
+        {/* Chon trang thai review */}
+        <Col span={4} xs={12} sm={4} md={4} lg={3}>
+          <Select
+            value={reviewStatus}
+            onChange={setReviewStatus}
+            size="large"
+            style={{ width: '100%' }}
+            options={REVIEW_STATUS_OPTIONS}
+          />
         </Col>
 
         {/* Nut tim kiem */}
