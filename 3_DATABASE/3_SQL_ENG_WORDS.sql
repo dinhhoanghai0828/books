@@ -6650,6 +6650,7 @@ INSERT INTO `WORDS` (`ENG`,`VI`) VALUES
 	('identities','danh tính'),
 	('identities','nhận diện'),
 	('identity','danh tính'),
+	('idiom','thành ngữ'),
 	('if','liệu'),
 	('if','nếu'),
 	('if not','ngược lại'),
