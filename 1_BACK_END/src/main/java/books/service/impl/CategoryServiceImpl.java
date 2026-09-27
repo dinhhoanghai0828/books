@@ -35,7 +35,24 @@ public class CategoryServiceImpl implements CategoryService {
     public List<CategoryDTO> getCategories() throws Exception {
         List<Category> categories = categoryAdapter.getCategories();
         List<CategoryDTO> categoryDTOList = categories.stream().map(category -> modelMapper.map(category, CategoryDTO.class)).collect(Collectors.toList());
+        // Build full path for each category
+        buildFullPaths(categoryDTOList, null);
+        // Debug log
+        System.out.println("Categories with full paths:");
+        for (CategoryDTO cat : categoryDTOList) {
+            System.out.println(cat.getVi() + " -> fullPath: " + cat.getFullPath());
+        }
         return categoryDTOList;
+    }
+
+    private void buildFullPaths(List<CategoryDTO> categories, String parentPath) {
+        for (CategoryDTO category : categories) {
+            String currentPath = parentPath != null ? parentPath + "/" + category.getSlug() : category.getSlug();
+            category.setFullPath(currentPath);
+            if (category.getChildren() != null && !category.getChildren().isEmpty()) {
+                buildFullPaths(category.getChildren(), currentPath);
+            }
+        }
     }
 
     @Override

@@ -34,6 +34,7 @@ interface CategoryDTO {
   vi: string;
   parentSlug: string | null;
   number: number;
+  fullPath?: string; // Full path for URL building
   children?: CategoryDTO[];
 }
 
@@ -76,8 +77,16 @@ const buildCategoryMenuItems = (categories: CategoryDTO[]): MenuItem[] => {
       label: category.vi,
       key: category.slug,
       icon: <ReadOutlined />,
-      href: `/${category.slug}`,
     };
+
+    // Sử dụng fullPath từ backend để xây dựng URL
+    if (category.fullPath) {
+      menuItem.href = `/${category.fullPath}`;
+      console.log(`Building menu item for ${category.vi}, fullPath: ${category.fullPath}, href: ${menuItem.href}`);
+    } else {
+      menuItem.href = `/${category.slug}`;
+      console.log(`Building menu item for ${category.vi}, no fullPath, using slug: ${category.slug}, href: ${menuItem.href}`);
+    }
 
     if (category.children && category.children.length > 0) {
       menuItem.children = buildCategoryMenuItems(category.children);
@@ -105,6 +114,7 @@ const HeaderComponent = () => {
     const fetchCategories = async () => {
       try {
         const data = await getCategories();
+        console.log('Categories from API:', JSON.stringify(data, null, 2));
         setCategories(data);
       } catch (error) {
         console.error('Loi khi lay danh sach categories:', error);

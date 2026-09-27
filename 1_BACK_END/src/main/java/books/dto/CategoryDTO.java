@@ -10,6 +10,7 @@ public class CategoryDTO {
     private String parentSlug;
     private Long number;
     private String categoryName;
+    private String fullPath; // Full path for URL building (e.g., "book/esl-fast/esl-fast-beginner")
     private List<CategoryDTO> children;
 
     public String getUuid() {
@@ -66,6 +67,14 @@ public class CategoryDTO {
 
     public void setCategoryName(String categoryName) {
         this.categoryName = categoryName;
+    }
+
+    public String getFullPath() {
+        return fullPath;
+    }
+
+    public void setFullPath(String fullPath) {
+        this.fullPath = fullPath;
     }
 
     public List<CategoryDTO> getChildren() {

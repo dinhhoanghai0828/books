@@ -6,7 +6,7 @@ TRUNCATE TABLE CONTENTS;
 INSERT INTO CATEGORIES(UUID, SLUG, ENG, VI, PARENT_SLUG, NUMBER) VALUES 
     -- Category cha
     (UUID(), 'truyen', 'Story', 'Truyện', NULL, 1),
-    (UUID(), 'sach', 'Book', 'Sách', NULL, 2),
+    (UUID(), 'book', 'Book', 'Sách', NULL, 2),
     (UUID(), 'bao', 'News', 'Báo', NULL, 3),
     (UUID(), 'presentation', 'Presentation', 'Thuyết trình', NULL, 4),
     (UUID(), 'tieng-anh-co-ban', 'Basic English', 'Tiếng anh cơ bản', NULL, 5),
@@ -20,16 +20,16 @@ INSERT INTO CATEGORIES(UUID, SLUG, ENG, VI, PARENT_SLUG, NUMBER) VALUES
 
     -- Sách
 	-- Sách - ESL Fast
-	(UUID(), 'esl-fast', 'ESL Fast', 'ESL Fast', 'sach', NULL),
+	(UUID(), 'esl-fast', 'ESL Fast', 'ESL Fast', 'book', NULL),
 	(UUID(), 'esl-fast-beginner', 'Beginner (A1)', 'Beginner (A1))', 'esl-fast', NULL),
 	(UUID(), 'esl-fast-elementary', 'Elementary (A2)', 'Elementary (A2)', 'esl-fast', NULL),
 	(UUID(), 'esl-fast-intermediate', 'Intermediate (B1)', 'Intermediate (B1)', 'esl-fast', NULL),
 	(UUID(), 'esl-fast-upper-intermediate', 'Upper Intermediate (B2)', 'Upper Intermediate (B2))', 'esl-fast', NULL),
 	-- Sách - 4000 Essential English Words
-	(UUID(), 'ielts-books', 'Sách IELTS', 'Sách IELTS', 'sach', NULL),
+	(UUID(), 'ielts-books', 'Sách IELTS', 'Sách IELTS', 'book', NULL),
 	(UUID(), '4000-essential-english-words', '4000 Essential English Words', '4000 Essential English Words', 'ielts-books', NULL),
 
-	(UUID(), 'sach-triet-ly', 'Philosophy book', 'Sách triết lý', 'sach', NULL),
+	(UUID(), 'sach-triet-ly', 'Philosophy book', 'Sách triết lý', 'book', NULL),
     -- Thuyết trình - TEDTALKS
     (UUID(), 'tedtalks', 'TEDTALKS', 'TEDTALKS', 'presentation', NULL),
     (UUID(), 'technology', 'Tecnology', 'Công Nghệ', 'tedtalks', NULL),
