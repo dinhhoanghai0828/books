@@ -1240,7 +1240,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('But the other animals were very happy','Nhưng những động vật khác thì lại rất hạnh phúc','00:02:01.800','00:02:03.800','4000-essential-english-words-1-29'),
 	('At last, they had light - all because of Raven\'s smart thinking','Cuối cùng, họ có ánh sáng - tất cả là nhờ suy nghĩ thông minh của Raven','00:02:03.800','00:02:09.300','4000-essential-english-words-1-29'),
 
-	/* (UUID(),'4000-essential-english-words-1-30','Cats and secrets','Con mèo và những bí mật','4000_ESSENTIAL_ENGLISH_WORDS_1_30.mp3',NULL,'00:00:00.000','00:01:57.000','4000-essential-english-words-1',0,0,30) */
+	/* (UUID(),'4000-essential-english-words-1-30','Cats and secrets','Con mèo và những bí mật','4000_ESSENTIAL_ENGLISH_WORDS_1_30.mp3',NULL,'00:00:00.000','00:01:57.000','4000-essential-english-words-1',1,1,30) */
 	('In English, there is a common idiom "let the cat out of the bag"','Trong tiếng Anh, có một thành ngữ phổ biến là "Thả mèo ra khỏi túi"','00:00:03.400','00:00:08.800','4000-essential-english-words-1-30'),
 	('It means to tell a secret','Nó có nghĩa là tiết lộ một bí mật','00:00:08.800','00:00:10.900','4000-essential-english-words-1-30'),
 	('But where did this idiom start?','Nhưng thành ngữ này bắt nguồn từ đâu?','00:00:10.700','00:00:12.900','4000-essential-english-words-1-30'),
@@ -1265,19 +1265,18 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('It was moving','Nó đang chuyển động','00:01:08.900','00:01:10.800','4000-essential-english-words-1-30'),
 	('She opened it to let the pig out','Cô mở túi để thả con heo ra','00:01:10.800','00:01:12.900','4000-essential-english-words-1-30'),
 	('A cat was inside','Bên trong là một con mèo','00:01:12.900','00:01:15.100','4000-essential-english-words-1-30'),
-	('"He tricked me"','"Anh ta đã lừa tôi"','00:01:15.100','00:01:17.000','4000-essential-english-words-1-30'),
-	('"That isn\'t proper," she said','"Như vậy là không đúng," cô ấy nói','00:01:17.000','00:01:19.800','4000-essential-english-words-1-30'),
+	('"He tricked me! That isn\'t proper," she said','"Anh ta đã lừa tôi! Điều đó không đúng," cô ấy nói','00:01:15.100','00:01:19.800','4000-essential-english-words-1-30'),
 	('Later, the man returned to trick more people','Sau đó, người đàn ông quay lại để lừa thêm nhiều người','00:01:19.800','00:01:22.900','4000-essential-english-words-1-30'),
 	('Beth saw him and the memory of the cat came back','Beth nhìn thấy anh ta và nhớ lại chuyện con mèo','00:01:22.900','00:01:26.700','4000-essential-english-words-1-30'),
-	('She told her friends','Cô kể cho những người bạn của mình nghe','00:01:26.700','00:01:28.400','4000-essential-english-words-1-30'),
+	('She told her friends','Cô ấy kể cho bạn bè của mình','00:01:26.700','00:01:28.400','4000-essential-english-words-1-30'),
 	('They stopped him','Họ chặn anh ta lại','00:01:28.400','00:01:29.800','4000-essential-english-words-1-30'),
-	('But no one knew what to do next','Nhưng không ai biết tiếp theo phải làm gì','00:01:29.800','00:01:32.100','4000-essential-english-words-1-30'),
+	('But no one knew what to do next','Nhưng không ai biết phải làm gì tiếp theo','00:01:29.800','00:01:32.100','4000-essential-english-words-1-30'),
 	('Someone said, "We need an independent and fair person to decide that"','Một người nói, "Chúng ta cần một người độc lập và công bằng để đưa ra phán quyết"','00:01:32.100','00:01:37.100','4000-essential-english-words-1-30'),
 	('They went to the judge','Họ đến gặp quan tòa','00:01:37.100','00:01:38.800','4000-essential-english-words-1-30'),
 	('Beth told him about the cat in the bag','Beth kể cho quan tòa nghe về con mèo trong túi','00:01:38.800','00:01:41.800','4000-essential-english-words-1-30'),
 	('The judge asked, "Is there evidence?"','Quan tòa hỏi, "Có bằng chứng không?"','00:01:41.800','00:01:44.800','4000-essential-english-words-1-30'),
-	('"Can you demonstrate how he did it?"','"Cô có thể cho thấy anh ta đã làm việc đó như thế nào không?"','00:01:44.800','00:01:47.600','4000-essential-english-words-1-30'),
+	('"Can you demonstrate how he did it?"','"Cô có thể chứng minh anh ta đã làm việc đó như thế nào không?"','00:01:44.800','00:01:47.600','4000-essential-english-words-1-30'),
 	('"Look in his bag," said Beth','"Hãy nhìn vào túi của anh ta," Beth nói','00:01:47.600','00:01:50.000','4000-essential-english-words-1-30'),
 	('She opened it and let a cat out of the bag','Cô mở túi ra và thả một con mèo ra ngoài','00:01:50.000','00:01:53.500','4000-essential-english-words-1-30'),
-	('They learned the man\'s secret, and he went to jail','Mọi người biết được bí mật của người đàn ông, và anh ta bị tống vào tù','00:01:53.500','00:01:57.000','4000-essential-english-words-1-30'),
-	('That\'s how the idiom "let the cat out of the bag" came to mean to tell a secret','Đó là cách thành ngữ "let the cat out of the bag" mang nghĩa là tiết lộ một bí mật','00:01:57.000','00:02:03.000','4000-essential-english-words-1-30');
+	('They learned the man\'s secret, and he went to jail','Mọi người biết được bí mật của người đàn ông, và anh ta đã đi tù','00:01:53.500','00:01:57.000','4000-essential-english-words-1-30'),
+	('That\'s how the idiom "let the cat out of the bag" came to mean to tell a secret','Đó là cách thành ngữ "Thả mèo ra khỏi túi" mang nghĩa là tiết lộ một bí mật','00:01:57.000','00:02:03.000','4000-essential-english-words-1-30');
