@@ -236,7 +236,7 @@ INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,IS_
 	(UUID(),'4000-essential-english-words-1-27','The spider and the bird','Con nhện và con chim','4000_ESSENTIAL_ENGLISH_WORDS_1_27.mp3',NULL,'00:00:00.000','00:02:02.000','4000-essential-english-words-1',0,0,0,27),
 	(UUID(),'4000-essential-english-words-1-28','The party','Bữa tiệc sinh nhật','4000_ESSENTIAL_ENGLISH_WORDS_1_28.mp3',NULL,'00:00:00.000','00:02:11.000','4000-essential-english-words-1',0,0,0,28),
 	(UUID(),'4000-essential-english-words-1-29','How the World got light','Thế giới đã có ánh sáng như thế nào','4000_ESSENTIAL_ENGLISH_WORDS_1_29.mp3',NULL,'00:00:00.000','00:02:03.800','4000-essential-english-words-1',0,0,0,29),
-	(UUID(),'4000-essential-english-words-1-30','Cats and secrets','Con mèo và những bí mật','4000_ESSENTIAL_ENGLISH_WORDS_1_30.mp3',NULL,'00:00:00.000','00:01:57.000','4000-essential-english-words-1',0,0,0,30);
+	(UUID(),'4000-essential-english-words-1-30','Cats and secrets','Con mèo và những bí mật','4000_ESSENTIAL_ENGLISH_WORDS_1_30.mp3',NULL,'00:00:00.000','00:01:57.000','4000-essential-english-words-1',1,1,0,30);
 
 INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,IS_LANGUAGE_APPROVED,IS_REVIEW_COMPLETED,IS_READ,NUMBER) VALUES
 	(UUID(),'4000-essential-english-words-2-1','The twelve months','Mười hai tháng','4000_ESSENTIAL_ENGLISH_WORDS_031.mp3',NULL,'00:00:00.000','00:01:52.200','4000-essential-english-words-2',0,0,0,31),
