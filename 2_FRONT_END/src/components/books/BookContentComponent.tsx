@@ -2,7 +2,7 @@ import { Book } from '@/interfaces/book';
 import { Card, Col, Empty, Row } from 'antd';
 import { Content } from 'antd/es/layout/layout';
 import Link from 'next/link';
-import { useParams } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 
 interface BookContentComponentProps {
   books: Book[];
@@ -11,8 +11,8 @@ interface BookContentComponentProps {
 
 // Hien thi danh sach sach duoi dang luoi card, moi card la 1 link den trang danh sach tap
 const BookContentComponent = ({ books }: BookContentComponentProps) => {
-  const params = useParams();
-  const { categorySlug, subcategorySlug } = params;
+  const pathname = usePathname();
+  const basePath = pathname.endsWith('/') ? pathname.slice(0, -1) : pathname;
 
   return (
     <Content className="bookClass">
@@ -20,14 +20,29 @@ const BookContentComponent = ({ books }: BookContentComponentProps) => {
         <Row gutter={[16, 16]} className="bookRowClass">
           {books.map((item) => (
             <Col key={item.id} xs={12} sm={12} md={8} lg={6} xl={4}>
-              <Link href={`/${categorySlug}/${subcategorySlug}/${item.slug}`} passHref>
+              <Link href={`${basePath}/${item.slug}`} passHref>
                 <Card
                   cover={
-                    <img
-                      alt={item.eng}
-                      src={`/images/${item.img}`}
-                      style={{ width: '100%', height: 'auto' }}
-                    />
+                    <div style={{
+                      width: '100%',
+                      aspectRatio: '2 / 3',
+                      overflow: 'hidden',
+                      background: '#f0f0f0',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                    }}>
+                      <img
+                        alt={item.eng}
+                        src={`/images/${item.img}`}
+                        style={{
+                          width: '100%',
+                          height: '100%',
+                          objectFit: 'contain',
+                          display: 'block',
+                        }}
+                      />
+                    </div>
                   }
                   hoverable
                   style={{ borderRadius: 12, overflow: 'hidden' }}

@@ -187,7 +187,7 @@ INSERT INTO CATEGORIES(UUID, SLUG, ENG, VI, PARENT_SLUG, NUMBER) VALUES
     -- Category cha
     (UUID(), 'truyen', 'Story', 'Truyện', NULL, 1),
     (UUID(), 'book', 'Book', 'Sách', NULL, 2),
-    (UUID(), 'bao', 'News', 'Báo', NULL, 3),
+    (UUID(), 'news', 'News', 'Báo', NULL, 3),
     (UUID(), 'presentation', 'Presentation', 'Thuyết trình', NULL, 4),
     (UUID(), 'tieng-anh-co-ban', 'Basic English', 'Tiếng anh cơ bản', NULL, 5),
 
@@ -212,8 +212,6 @@ INSERT INTO CATEGORIES(UUID, SLUG, ENG, VI, PARENT_SLUG, NUMBER) VALUES
 	(UUID(), 'sach-triet-ly', 'Philosophy book', 'Sách triết lý', 'book', NULL),
     -- Thuyết trình - TEDTALKS
     (UUID(), 'tedtalks', 'TEDTALKS', 'TEDTALKS', 'presentation', NULL),
-    (UUID(), 'technology', 'Tecnology', 'Công Nghệ', 'tedtalks', NULL),
-    (UUID(), 'relationship', 'Relationship', 'Mối quan hệ', 'tedtalks', NULL),
 
     (UUID(), 'tro-chuyen-hang-ngay', 'Daily Conversations', 'Trò chuyện hàng ngày', 'presentation', NULL),
 
@@ -236,7 +234,8 @@ INSERT INTO BOOKS(UUID,SLUG,ENG,VI,AUTHOR,DESCRIPTION,CATEGORY_SLUG,IMG,NUMBER) 
 	(UUID(),'voa','VOA','Báo nước ngoài','Nhiều tác giả','Thông tin kinh tế, chính trị, khoa học, xã hội, giáo dục, du lịch','tin-tuc-hang-ngay','VOA.png',2),
 	/* Thuyết trình */
 	-- Thuyết trình - TEDTALKS
-	(UUID(),'technology','Technology','Công Nghệ','Nhiều tác giả','Thảo luận về các vấn đề trong cuộc sống','technology','TEDTALKS.png',1),
+	(UUID(),'technology','Technology','Công Nghệ','Nhiều tác giả','Thảo luận về các vấn đề trong cuộc sống','tedtalks','TEDTALKS.png',1),
+	(UUID(),'hon-tap','Hỗn tạp','Hỗn tạp','Nhiều tác giả','Thảo luận về các vấn đề trong cuộc sống','tedtalks','TEDTALKS.png',1),
 	(UUID(),'all-ears-english','All Ears English','All Ears English','Nhiều tác giả','Thảo luận về các vấn đề trong cuộc sống','doi-thoai-hoc-thuat','ALL_EARS_ENGLISH.png',2),
 	/* tro-chuyen-hang-ngay */
 	(UUID(),'dhar-mann-studio','Dhar Mann Studio','Dhar Mann Studio','Nhiều tác giả','Các cuộc hội thoại ngắn thường ngày','tro-chuyen-hang-ngay','DHAR_MANN_STUDIO.png',1),
