@@ -59,8 +59,9 @@ const HomePage = () => {
     NProgress.start();
     try {
       const response = await getHighLightWords(searchValueEn, searchValueVi);
-      setHighlightedEnKeywords(response.map((item) => item.eng));
-      setHighlightedViKeywords(response.map((item) => item.vi));
+      const words = Array.isArray(response) ? response : [];
+      setHighlightedEnKeywords(words.map((item) => item.eng));
+      setHighlightedViKeywords(words.map((item) => item.vi));
     } catch (error) {
       console.error('Loi khi lay tu highlight:', error);
     } finally {
@@ -98,8 +99,9 @@ const HomePage = () => {
     NProgress.start();
     try {
       const response = await getHighLightWords(trimmedEn, trimmedVi);
-      setHighlightedEnKeywords(response.map((item) => item.eng));
-      setHighlightedViKeywords(response.map((item) => item.vi));
+      const words = Array.isArray(response) ? response : [];
+      setHighlightedEnKeywords(words.map((item) => item.eng));
+      setHighlightedViKeywords(words.map((item) => item.vi));
     } catch (error) {
       console.error('Loi khi lay tu highlight:', error);
     } finally {

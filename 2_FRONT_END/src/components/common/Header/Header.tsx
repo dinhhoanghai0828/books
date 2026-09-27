@@ -78,6 +78,7 @@ const STATIC_MENU_ITEMS: MenuItem[] = [
 
 // Ham chuyen doi CategoryDTO sang MenuItem
 const buildCategoryMenuItems = (categories: CategoryDTO[]): MenuItem[] => {
+  if (!categories || !Array.isArray(categories)) return [];
   return categories.map(category => {
     const menuItem: MenuItem = {
       label: category.vi,
@@ -112,7 +113,7 @@ const HeaderComponent = () => {
     const fetchCategories = async () => {
       try {
         const data = await getCategories();
-        setCategories(data);
+        setCategories(data ?? []);
       } catch (error) {
         console.error('Loi khi lay danh sach categories:', error);
       } finally {
