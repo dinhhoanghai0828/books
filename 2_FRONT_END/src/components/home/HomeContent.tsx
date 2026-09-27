@@ -626,8 +626,8 @@ const HomeContent = React.memo(({
                     )}
                   </Text>
                   <Space>
-                    {item.isLanguageApproved === 1 && (
-                      <CheckOutlined style={{ color: 'green', fontSize: 22 }} />
+                    {item.isReviewCompleted === 1 && (
+                      <Text style={{ color: 'green', fontSize: 14, fontWeight: 'bold' }}>Đã duyệt</Text>
                     )}
                     {/* Nut Play / Pause */}
                     <Button

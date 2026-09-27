@@ -90,16 +90,18 @@ public class RunSQLComponent {
         scripts.add(path + "2_SQL_CREATE_DATA.sql");
         scripts.add(path + "3_SQL_ENG_MISSING_WORDS.sql");
         scripts.add(path + "3_SQL_ENG_WORDS.sql");
-        scripts.add(path + "APP_4000_ESSENTIAL_ENGLISH_WORDS.sql");
+
+        scripts.add(path + "APP_ESL_FAST_BEGINNER_1.sql");
+        scripts.add(path + "APP_ESL_FAST_BEGINNER_2.sql");
+        scripts.add(path + "APP_ESL_FAST_BEGINNER_3.sql");
+        scripts.add(path + "APP_ESL_FAST_ELEMENTARY_1.sql");
+        scripts.add(path + "APP_4000_ESSENTIAL_ENGLISH_WORDS_1.sql");
+        scripts.add(path + "APP_4000_ESSENTIAL_ENGLISH_WORDS_2.sql");
         scripts.add(path + "APP_ALL_EARS_ENGLISH.sql");
         scripts.add(path + "APP_ANIMATTERS.sql");
         scripts.add(path + "APP_DHAR_MANN_STUDIO.sql");
         scripts.add(path + "APP_ECONOMIST.sql");
         scripts.add(path + "APP_ENGLISH_FAIRY_TALES.sql");
-        scripts.add(path + "APP_ESL_FAST_BEGINNER_1.sql");
-        scripts.add(path + "APP_ESL_FAST_BEGINNER_2.sql");
-        scripts.add(path + "APP_ESL_FAST_BEGINNER_3.sql");
-        scripts.add(path + "APP_ESL_FAST_ELEMENTARY_1.sql");
         scripts.add(path + "APP_GOD_OF_MOTIVE.sql");
         scripts.add(path + "APP_I_AM_MARY.sql");
         scripts.add(path + "APP_NIGHTMARE_TALES.sql");
