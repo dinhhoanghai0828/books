@@ -11709,7 +11709,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Lottery Millionaire','Tỷ phú xổ số','00:00:05.260','00:00:14.700','english-fairy-tales-56'),
 	('Once upon a time, as the alarm clock blared, Tom, a scruffy and groggy mess, wrestled it into silence','Ngày xửa ngày xưa, khi đồng hồ báo thức kêu vang, Tom, một chàng trai lôi thôi và buồn ngủ, đã vật lộn để tắt nó','00:00:05.260','00:00:17.400','english-fairy-tales-56'),
 	('He knocked over a stack of old pizza boxes in the process','Trong quá trình đó, anh đã làm đổ một chồng hộp pizza cũ','00:00:18.200','00:00:21.540','english-fairy-tales-56'),
-	('Grumbling, he dragged himself out of bed, kicking aside a pile of mismatched socks, which flew in opposite directions','Lầm bầm, anh kéo mình ra khỏi giường, đá một đống tất không giống nhau sang bên, chúng bay đi theo hai hướng đối lập','00:00:22.400','00:00:32.880','english-fairy-tales-56'),
+	('"Can you demonstrate how he did it?"','"Cô có thể chứng minh anh ta đã làm việc đó như thế nào không?"','00:01:44.800','00:01:47.600','english-fairy-tales-56'),
 	('He then leaped over a plate, which had a half-eaten sandwich that littered the floor','Sau đó, anh nhảy qua một cái đĩa, trên đó có một chiếc bánh mì đã ăn dở vương vãi trên sàn','00:00:33.980','00:00:40.100','english-fairy-tales-56'),
 	('Another day, another disaster waiting to happen','Một ngày khác, một thảm họa khác đang chờ xảy ra','00:00:48.090','00:00:51.590','english-fairy-tales-56'),
 	('Meet Tom, the poster boy for mediocrity, a nobody in a world full of somebodies','Gặp Tom, hình mẫu của sự tầm thường, một người vô danh trong thế giới đầy rẫy những người nổi bật','00:00:52.850','00:00:59.090','english-fairy-tales-56'),
