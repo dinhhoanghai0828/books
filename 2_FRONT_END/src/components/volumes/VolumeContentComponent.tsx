@@ -3,7 +3,7 @@ import { CheckOutlined, EditOutlined, DownloadOutlined, BookOutlined, FilePdfOut
 import { Button, Checkbox, Col, Empty, Form, Input, Modal, Row, Select, Typography, notification, Dropdown } from 'antd';
 import { Content } from 'antd/es/layout/layout';
 import Link from 'next/link';
-import { useParams } from 'next/navigation';
+import { useParams, usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { updateVolume, runVolumesExport, markAsRead, markAsUnread, downloadVolumeWord, downloadVolumePdf, downloadSelectedVolumesWord, downloadSelectedVolumesWordEnglish } from '@/utils/apiService';
 
@@ -16,7 +16,10 @@ interface VolumeContentComponentProps {
 // Hien thi danh sach cac tap duoi dang luoi 2 cot, moi tap la 1 link den trang noi dung
 const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentComponentProps) => {
   const params = useParams();
+  const pathname = usePathname();
   const { categorySlug, subcategorySlug, bookSlug } = params;
+  // basePath = pathname hiện tại, dùng để build link tới volume (tránh undefined khi URL ít segment)
+  const basePath = pathname.endsWith('/') ? pathname.slice(0, -1) : pathname;
 
   const [editModalOpen, setEditModalOpen] = useState(false);
   const [editingVolume, setEditingVolume] = useState<Volume | null>(null);
@@ -409,7 +412,7 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
                 }}
               >
                 <Link
-                  href={`/${categorySlug}/${subcategorySlug}/${bookSlug}/${volume.slug}`}
+                  href={`${basePath}/${volume.slug}`}
                   className="volume-link"
                 >
                   {/* Dong so tap va icon da hoc */}
