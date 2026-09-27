@@ -9740,6 +9740,8 @@ INSERT INTO `WORDS` (`ENG`,`VI`) VALUES
 	('pass on','trao lại'),
 	('pass on','truyền lại'),
 	('pass time','Giết thời gian'),
+	('passage','bài đọc'),
+	('passage','đoạn văn'),
 	('passageway','hành lang'),
 	('passageway','lối đi'),
 	('passageways','hành lang'),
