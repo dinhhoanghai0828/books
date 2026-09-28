@@ -1,0 +1,39 @@
+1
+00:00:00,200 --> 00:00:03,180
+(Được chép bởi TurboScribe. Nâng cấp lên Không giới hạn để gỡ bỏ thông báo này.) She brings her dress back to the store.
+
+2
+00:00:03,660 --> 00:00:05,040
+It is too big.
+
+3
+00:00:05,720 --> 00:00:07,500
+She needs a smaller size.
+
+4
+00:00:08,480 --> 00:00:11,480
+The store does not have a smaller size.
+
+5
+00:00:12,440 --> 00:00:13,880
+She returns it.
+
+6
+00:00:14,740 --> 00:00:16,480
+She gets her money back.
+
+7
+00:00:17,360 --> 00:00:19,920
+She sees another dress she likes.
+
+8
+00:00:20,660 --> 00:00:22,080
+It is very pretty.
+
+9
+00:00:23,200 --> 00:00:24,380
+She buys it.
+
+10
+00:00:25,060 --> 00:00:27,760
+It is cheaper than the other dress.
