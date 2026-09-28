@@ -1,0 +1,43 @@
+1
+00:00:00,500 --> 00:00:02,400
+(Được chép bởi TurboScribe. Nâng cấp lên Không giới hạn để gỡ bỏ thông báo này.) He goes to the movie theater.
+
+2
+00:00:03,080 --> 00:00:04,760
+He sits down.
+
+3
+00:00:05,580 --> 00:00:07,440
+He puts his feet up.
+
+4
+00:00:08,200 --> 00:00:09,700
+He looks around.
+
+5
+00:00:11,000 --> 00:00:13,700
+He eats his popcorn loudly.
+
+6
+00:00:14,620 --> 00:00:16,680
+He uses his phone.
+
+7
+00:00:17,560 --> 00:00:19,060
+He calls someone.
+
+8
+00:00:19,920 --> 00:00:21,880
+He is talking loudly.
+
+9
+00:00:22,900 --> 00:00:24,880
+He bothers everyone.
+
+10
+00:00:25,740 --> 00:00:28,620
+The other moviegoers are mad.
+
+11
+00:00:28,620 --> 00:00:31,500
+They tell him to get out.
