@@ -619,8 +619,8 @@ INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,IS_
 	(UUID(),'esl-fast-beginner-1-76','A Pet for Dad','Một thú cưng dành cho bố','ESL_FAST_BEGINNER_1_076.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',0,0,0,76),
 	(UUID(),'esl-fast-beginner-1-77','Too Sick','Bị ốm nặng','ESL_FAST_BEGINNER_1_077.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',0,0,0,77),
 	(UUID(),'esl-fast-beginner-1-78','The Worst Student','Học sinh tệ nhất','ESL_FAST_BEGINNER_1_078.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',0,0,0,78),
-	(UUID(),'esl-fast-beginner-1-79','Bad Manners','Cư xử không đúng mực','ESL_FAST_BEGINNER_1_079.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',0,0,0,79),
-	(UUID(),'esl-fast-beginner-1-80','Transferring to Another Class','Chuyển sang lớp khác','ESL_FAST_BEGINNER_1_080.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',0,0,0,80),
+	(UUID(),'esl-fast-beginner-1-79','Bad Manners','Cư xử không đúng mực','ESL_FAST_BEGINNER_1_079.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,0,79),
+	(UUID(),'esl-fast-beginner-1-80','Transferring to Another Class','Chuyển sang lớp khác','ESL_FAST_BEGINNER_1_080.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,0,80),
 	(UUID(),'esl-fast-beginner-1-81','Good Manners','Cư xử lịch sự','ESL_FAST_BEGINNER_1_081.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,0,81),
 	(UUID(),'esl-fast-beginner-1-82','The Trouble with Braces','Rắc rối với niềng răng','ESL_FAST_BEGINNER_1_082.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,0,82),
 	(UUID(),'esl-fast-beginner-1-83','Lost on the First Day','Lạc trong ngày đầu tiên','ESL_FAST_BEGINNER_1_083.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,0,83),
@@ -18923,7 +18923,6 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She steals it','Cô ấy lấy trộm món đồ đó','00:00:22.320','00:00:24.060','esl-fast-beginner-1-79'),
 	('Her dad asks her for a favor','Bố nhờ cô ấy làm giúp một việc','00:00:24.540','00:00:27.360','esl-fast-beginner-1-79'),
 	('She does not do it','Cô ấy không chịu làm','00:00:27.660','00:00:29.660','esl-fast-beginner-1-79'),
-	('She does not do it','Cô ấy vẫn không chịu làm','00:00:30.320','00:00:31.500','esl-fast-beginner-1-79'),
 
 	/* (UUID(),'esl-fast-beginner-1-80','Transferring to Another Class','Chuyển sang lớp khác','ESL_FAST_BEGINNER_1_080.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',0,0,80) */
 	('He does not like Ms. Garcia, his math teacher','Cậu ấy không thích cô Garcia, giáo viên môn Toán của mình','00:00:00.060','00:00:04.760','esl-fast-beginner-1-80'),
