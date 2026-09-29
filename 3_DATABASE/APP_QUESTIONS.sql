@@ -1532,7 +1532,7 @@ INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_
 	('Q-esl-fast-beginner-1-48-027','esl-fast-beginner-1-48','What does the boy pour into the vase after cutting the rose?','Sau khi cắt bông hồng, cậu bé đổ gì vào bình?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-48-028','esl-fast-beginner-1-48','What does the boy look at before cutting the flower?','Cậu bé nhìn gì trước khi cắt bông hoa?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-48-029','esl-fast-beginner-1-48','What does the boy do first in the backyard?','Cậu bé làm gì đầu tiên ở sân sau nhà?','ACTIVE',NULL,NULL,NULL,NULL),
-	('Q-esl-fast-beginner-1-48-030','esl-fast-beginner-1-48','What is the final result of the boy''s actions?','Kết quả cuối cùng từ những việc cậu bé làm là gì?','ACTIVE',NULL,NULL,NULL,NULL);
+	('Q-esl-fast-beginner-1-48-030','esl-fast-beginner-1-48','What is the final result of the boy''s actions?','Kết quả cuối cùng từ những việc cậu bé làm là gì?','ACTIVE',NULL,NULL,NULL,NULL),
 	
 	/* (UUID(),'esl-fast-beginner-1-49','Hide-and-Seek','Trò chơi trốn tìm','ESL_FAST_BEGINNER_1_049.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,0,0,49), */
 	('Q-esl-fast-beginner-1-49-001','esl-fast-beginner-1-49','What does John cover?','John che cái gì?','ACTIVE',NULL,NULL,NULL,NULL),

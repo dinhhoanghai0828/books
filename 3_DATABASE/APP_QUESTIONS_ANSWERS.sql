@@ -5823,7 +5823,7 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE,ANSWER_TEXT,ANSWER_TEXT_VI,IS_COR
 	('Q-esl-fast-beginner-1-48-030','A','The boy buys an expensive gift','Cậu bé mua một món quà đắt tiền','N',1,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-48-030','B','The boy gives his teacher money','Cậu bé đưa tiền cho cô giáo','N',2,NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-48-030','C','The boy completes a gift with a rose in a vase','Cậu bé hoàn thành một món quà với một bông hồng trong bình','Y',3,NULL,NULL,NULL,NULL),
-	('Q-esl-fast-beginner-1-48-030','D','The boy leaves the rose outside','Cậu bé để bông hồng bên ngoài','N',4,NULL,NULL,NULL,NULL);
+	('Q-esl-fast-beginner-1-48-030','D','The boy leaves the rose outside','Cậu bé để bông hồng bên ngoài','N',4,NULL,NULL,NULL,NULL),
 	
 	/* (UUID(),'esl-fast-beginner-1-49','Hide-and-Seek','Trò chơi trốn tìm','ESL_FAST_BEGINNER_1_049.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-children-1',1,0,0,49), */
 	('Q-esl-fast-beginner-1-49-001','A','His eyes','Mắt của cậu bé','Y',1,NULL,NULL,NULL,NULL),
