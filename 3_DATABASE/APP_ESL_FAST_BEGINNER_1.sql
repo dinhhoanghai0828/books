@@ -1128,9 +1128,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('His sister wants to drink cold water','Em gái anh ấy muốn uống nước lạnh','00:00:18.900','00:00:21.720','esl-fast-beginner-1-87'),
 	('She gets a bottle of water from the kitchen','Cô bé lấy một chai nước từ trong bếp','00:00:22.040','00:00:24.780','esl-fast-beginner-1-87'),
 	('It is warm','Nó còn ấm','00:00:25.020','00:00:26.340','esl-fast-beginner-1-87'),
-	('She puts it in the refrigerator','Cô bé cho chai nước vào tủ lạnh','00:00:26.560','00:00:28.460','esl-fast-beginner-1-87'),
-	('He blankets his hands','Anh ấy đắp chăn lên tay','00:00:30.000','00:00:30.600','esl-fast-beginner-1-87'),
-	('He gets ready to go to bed','Anh ấy chuẩn bị đi ngủ','00:00:30.100','00:00:30.700','esl-fast-beginner-1-87'),
+	('She puts it in the refrigerator','Cô bé cho chai nước vào tủ lạnh','00:00:26.560','00:00:28.460','esl-fast-beginner-1-87');
 
 	/* (UUID(),'esl-fast-beginner-1-88','A Good Shower','Một buổi tắm sảng khoái','ESL_FAST_BEGINNER_1_088.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',0,0,88) */
 	('She goes to the market','Cô ấy đi chợ','00:00:00.000','00:00:02.180','esl-fast-beginner-1-88'),
@@ -1166,7 +1164,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She reaches into her backpack','Cô ấy thò tay vào ba lô','00:00:03.480','00:00:05.540','esl-fast-beginner-1-90'),
 	('Her glasses are not inside','Kính của cô ấy không có trong đó','00:00:06.060','00:00:08.460','esl-fast-beginner-1-90'),
 	('She cannot see anything','Cô ấy chẳng nhìn thấy gì cả','00:00:08.960','00:00:11.140','esl-fast-beginner-1-90'),
-	('Her teacher writes the sentence The cat chases the ball','Giáo viên viết câu: Con mèo đuổi theo quả bóng','00:00:11.600','00:00:16.560','esl-fast-beginner-1-90'),
+	('Her teacher writes the sentence: "The cat chases the ball"','Giáo viên viết câu: "Con mèo đuổi theo quả bóng"','00:00:11.600','00:00:16.560','esl-fast-beginner-1-90'),
 	('The teacher asks the students to copy this sentence','Giáo viên yêu cầu học sinh chép lại câu này','00:00:16.900','00:00:20.980','esl-fast-beginner-1-90'),
 	('She squints','Cô ấy nheo mắt','00:00:21.520','00:00:22.980','esl-fast-beginner-1-90'),
 	('She still cannot see the sentence','Cô ấy vẫn không nhìn rõ câu đó','00:00:23.260','00:00:25.680','esl-fast-beginner-1-90'),
