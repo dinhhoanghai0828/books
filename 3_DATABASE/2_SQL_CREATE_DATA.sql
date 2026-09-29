@@ -21,10 +21,10 @@ INSERT INTO CATEGORIES(UUID, SLUG, ENG, VI, PARENT_SLUG, NUMBER) VALUES
     -- Sách
 	-- Sách - ESL Fast
 	(UUID(), 'esl-fast', 'ESL Fast', 'ESL Fast', 'book', NULL),
-	(UUID(), 'esl-fast-beginner', 'Beginner (A1)', 'Beginner (A1))', 'esl-fast', NULL),
+	(UUID(), 'esl-fast-beginner', 'Beginner (A1)', 'Beginner (A1)', 'esl-fast', NULL),
 	(UUID(), 'esl-fast-elementary', 'Elementary (A2)', 'Elementary (A2)', 'esl-fast', NULL),
 	(UUID(), 'esl-fast-intermediate', 'Intermediate (B1)', 'Intermediate (B1)', 'esl-fast', NULL),
-	(UUID(), 'esl-fast-upper-intermediate', 'Upper Intermediate (B2)', 'Upper Intermediate (B2))', 'esl-fast', NULL),
+	(UUID(), 'esl-fast-upper-intermediate', 'Upper Intermediate (B2)', 'Upper Intermediate (B2)', 'esl-fast', NULL),
 	-- Sách - 4000 Essential English Words
 	(UUID(), 'ielts-books', 'Sách IELTS', 'Sách IELTS', 'book', NULL),
 	(UUID(), '4000-essential-english-words', '4000 Essential English Words', '4000 Essential English Words', 'ielts-books', NULL),
