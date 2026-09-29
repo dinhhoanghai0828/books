@@ -24,6 +24,7 @@ public class Volume {
     private String createBy;
     private String updatedBy;
     private int number;
+    private int contentCount;
     private List<Content> contents;
 
     public String getId() {
@@ -168,6 +169,14 @@ public class Volume {
 
     public void setNumber(int number) {
         this.number = number;
+    }
+
+    public int getContentCount() {
+        return contentCount;
+    }
+
+    public void setContentCount(int contentCount) {
+        this.contentCount = contentCount;
     }
 
     public String getVideo() {

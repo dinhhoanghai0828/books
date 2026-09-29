@@ -18,7 +18,7 @@ import java.util.Map;
 @Repository
 public class BookAdapterImpl implements BookAdapter {
     private static final Logger logger = LoggerFactory.getLogger(BookAdapterImpl.class);
-    private static final String SQL_GET_VOLUMES_BY_BOOK_SLUG = "SELECT V.* FROM VOLUMES V INNER JOIN BOOKS B ON V.BOOK_SLUG = B.SLUG WHERE B.SLUG = ? LIMIT ? OFFSET ?";
+    private static final String SQL_GET_VOLUMES_BY_BOOK_SLUG = "SELECT V.*, (SELECT COUNT(*) FROM CONTENTS C WHERE C.VOLUME_SLUG = V.SLUG) AS CONTENT_COUNT FROM VOLUMES V INNER JOIN BOOKS B ON V.BOOK_SLUG = B.SLUG WHERE B.SLUG = ? LIMIT ? OFFSET ?";
     private static final String SQL_COUNT_VOLUMES_BY_BOOK_SLUG = "SELECT COUNT(*) FROM VOLUMES V INNER JOIN BOOKS B ON V.BOOK_SLUG = B.SLUG WHERE B.SLUG = ?";
 
     @Override
@@ -71,6 +71,7 @@ public class BookAdapterImpl implements BookAdapter {
                 volume.setIsLanguageApproved(rs.getInt("IS_LANGUAGE_APPROVED"));
                 volume.setIsReviewCompleted(rs.getInt("IS_REVIEW_COMPLETED"));
                 volume.setIsRead(rs.getInt("IS_READ"));
+                volume.setContentCount(rs.getInt("CONTENT_COUNT"));
                 volumes.add(volume);
             }
             // Đưa danh sách sách vào Map

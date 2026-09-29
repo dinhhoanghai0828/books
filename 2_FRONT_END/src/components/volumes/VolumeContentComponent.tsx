@@ -475,10 +475,15 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
                   </div>
 
                   {/* Ten tap tieng Anh va tieng Viet */}
-                  <div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
                     <Typography.Text strong className="engClass">
                       {volume.eng}
                     </Typography.Text>
+                    {volume.contentCount !== undefined && volume.contentCount > 0 && (
+                      <Typography.Text strong style={{ color: 'blueviolet', fontSize:'16px' }}>
+                        {volume.contentCount} câu
+                      </Typography.Text>
+                    )}
                   </div>
                   <div>
                     <Typography.Text>{volume.vi}</Typography.Text>

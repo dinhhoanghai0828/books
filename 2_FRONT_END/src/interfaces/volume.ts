@@ -21,5 +21,6 @@ export interface Volume {
   img: string;             // Ten file anh
   number: number;          // So thu tu
   isRead: number;          // Trang thai da doc xong (0: chua doc, 1: da doc)
+  contentCount?: number;   // So luong cau trong tap
   contents?: ContentType[]; // Danh sach cau trong tap
 }

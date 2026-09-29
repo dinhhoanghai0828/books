@@ -24,6 +24,7 @@ public class VolumeDTO {
     private String createBy;
     private String updatedBy;
     private Long number;
+    private int contentCount;
     private List<ContentDTO> contents;
 
     public String getId() {
@@ -168,6 +169,14 @@ public class VolumeDTO {
 
     public void setNumber(Long number) {
         this.number = number;
+    }
+
+    public int getContentCount() {
+        return contentCount;
+    }
+
+    public void setContentCount(int contentCount) {
+        this.contentCount = contentCount;
     }
 
     public String getVideo() {
