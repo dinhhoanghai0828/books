@@ -879,7 +879,6 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The teacher also talks about Lisa\'s behavior','Cô giáo cũng nói về cách cư xử của Lisa','00:00:21.480','00:00:25.000','esl-fast-beginner-1-68'),
 	('She is friendly to everyone','Cô bé thân thiện với mọi người','00:00:25.720','00:00:27.940','esl-fast-beginner-1-68'),
 	('Her mom is happy','Mẹ của Lisa rất vui','00:00:28.180','00:00:29.920','esl-fast-beginner-1-68'),
-	('She is a very kind person','Cô bé là một người rất tốt bụng','00:00:30.320','00:00:31.720','esl-fast-beginner-1-68'),
 
 	/* (UUID(),'esl-fast-beginner-1-69','The Second Dog','Con chó thứ hai','ESL_FAST_BEGINNER_1_069.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',0,0,69) */
 	('She has one dog already','Cô bé đã nuôi một chú chó rồi','00:00:00.190','00:00:03.170','esl-fast-beginner-1-69'),
@@ -918,7 +917,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He waters it for a week','Cậu bé tưới nước suốt một tuần','00:00:12.900','00:00:15.500','esl-fast-beginner-1-71'),
 	('No oranges have grown','Vẫn chưa có quả cam nào mọc lên','00:00:16.260','00:00:18.300','esl-fast-beginner-1-71'),
 	('He asks his mom what he is doing wrong','Cậu bé hỏi mẹ mình đã làm sai điều gì','00:00:19.100','00:00:23.120','esl-fast-beginner-1-71'),
-	('She says, you have to be patient','Mẹ nói: "Con phải kiên nhẫn."','00:00:23.460','00:00:26.860','esl-fast-beginner-1-71'),
+	('She says, "You have to be patient"','Mẹ nói: "Con phải kiên nhẫn"','00:00:23.460','00:00:26.860','esl-fast-beginner-1-71'),
 	('He continues to water the tree for a month','Cậu bé tiếp tục tưới cây suốt một tháng','00:00:27.180','00:00:31.080','esl-fast-beginner-1-71'),
 	('He sees an orange start to grow','Cậu bé nhìn thấy một quả cam bắt đầu lớn lên','00:00:31.760','00:00:34.680','esl-fast-beginner-1-71'),
 
@@ -945,7 +944,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He sees her running','Cậu ấy nhìn thấy Lisa đang chạy','00:00:24.740','00:00:26.500','esl-fast-beginner-1-73'),
 	('He catches up to her','Cậu ấy đuổi kịp Lisa','00:00:26.720','00:00:28.760','esl-fast-beginner-1-73'),
 	('He taps her on the shoulder','Cậu ấy chạm nhẹ vào vai Lisa','00:00:29.120','00:00:31.220','esl-fast-beginner-1-73'),
-	('He says to her, Tag, you\'re it!','Cậu ấy nói: "Bắt được rồi, giờ đến lượt cậu đuổi nhé!"','00:00:31.600','00:00:35.180','esl-fast-beginner-1-73'),
+	('He says to her, "Tag, you\'re it!"','Cậu ấy nói: "Bắt được rồi, giờ đến lượt cậu đuổi nhé!"','00:00:31.600','00:00:35.180','esl-fast-beginner-1-73'),
 
 	/* (UUID(),'esl-fast-beginner-1-74','Different Flavors','Những hương vị khác nhau','ESL_FAST_BEGINNER_1_074.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',0,0,74) */
 	('I like cupcakes and lollipops','Tôi thích bánh cupcake và kẹo mút','00:00:00.000','00:00:03.780','esl-fast-beginner-1-74'),
