@@ -1022,11 +1022,9 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She steals it','Cô ấy lấy trộm món đồ đó','00:00:22.320','00:00:24.060','esl-fast-beginner-1-79'),
 	('Her dad asks her for a favor','Bố nhờ cô ấy làm giúp một việc','00:00:24.540','00:00:27.360','esl-fast-beginner-1-79'),
 	('She does not do it','Cô ấy không chịu làm','00:00:27.660','00:00:29.660','esl-fast-beginner-1-79'),
-	('She does not do it','Cô ấy vẫn không chịu làm','00:00:30.320','00:00:31.500','esl-fast-beginner-1-79'),
 
 	/* (UUID(),'esl-fast-beginner-1-80','Transferring to Another Class','Chuyển sang lớp khác','ESL_FAST_BEGINNER_1_080.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',0,0,80) */
-	('He does not like Ms. Garcia, his math','Cậu ấy không thích cô Garcia, giáo viên môn Toán của mình','00:00:00.060','00:00:04.340','esl-fast-beginner-1-80'),
-	('teacher','','00:00:03.840','00:00:04.760','esl-fast-beginner-1-80'),
+	('He does not like Ms. Garcia, his math teacher','Cậu ấy không thích cô Garcia, giáo viên môn Toán của mình','00:00:00.060','00:00:04.760','esl-fast-beginner-1-80'),
 	('She always separates him from his classmates','Cô ấy luôn tách cậu ấy khỏi các bạn cùng lớp','00:00:05.500','00:00:08.640','esl-fast-beginner-1-80'),
 	('She always gives him a lot of homework','Cô ấy luôn giao cho cậu ấy rất nhiều bài tập về nhà','00:00:09.180','00:00:12.320','esl-fast-beginner-1-80'),
 	('She always calls him mean names','Cô ấy luôn gọi cậu ấy bằng những cái tên khó nghe','00:00:12.820','00:00:15.960','esl-fast-beginner-1-80'),
