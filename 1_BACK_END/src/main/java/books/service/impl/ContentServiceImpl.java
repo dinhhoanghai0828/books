@@ -72,7 +72,7 @@ public class ContentServiceImpl implements ContentService {
             if (content.getEng() != null) {
                 String[] words = content.getEng().split("\\s+");
                 for (String word : words) {
-                    String cleanWord = word.replaceAll("[.,?!\"';]", "").toLowerCase();
+                    String cleanWord = word.replaceAll("[.,?!\";]", "").toLowerCase();
                     if (!cleanWord.isEmpty()) {
                         allWords.add(cleanWord);
                     }
@@ -113,7 +113,7 @@ public class ContentServiceImpl implements ContentService {
             if (content.getEng() != null) {
                 String[] words = content.getEng().split("\\s+");
                 for (String word : words) {
-                    String cleanWord = word.replaceAll("[.,?!\"';]", "").toLowerCase();
+                    String cleanWord = word.replaceAll("[.,?!\";]", "").toLowerCase();
                     // Highlight if: NOT in dictionary AND NOT in MISSING_WORDS table
                     if (!cleanWord.isEmpty() && !wordsInDictionary.contains(cleanWord) && !wordsInMissingWordsTable.contains(cleanWord)) {
                         missingWords.add(cleanWord);
