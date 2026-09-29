@@ -208,12 +208,12 @@ INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,IS_
 
 INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,IS_LANGUAGE_APPROVED,IS_REVIEW_COMPLETED,IS_READ,NUMBER) VALUES
 	(UUID(),'4000-essential-english-words-1-1','The lion and the rabbit','Sư tử và thỏ','4000_ESSENTIAL_ENGLISH_WORDS_1_1.mp3',NULL,'00:00:00.000','00:02:11.000','4000-essential-english-words-1',1,1,0,1),
-	(UUID(),'4000-essential-english-words-1-2','The laboratory','Phòng thí nghiệm','4000_ESSENTIAL_ENGLISH_WORDS_1_2.mp3',NULL,'00:00:00.000','00:02:13.800','4000-essential-english-words-1',1,0,0,2),
-	(UUID(),'4000-essential-english-words-1-3','The report','Báo cáo','4000_ESSENTIAL_ENGLISH_WORDS_1_3.mp3',NULL,'00:00:00.000','00:02:11.000','4000-essential-english-words-1',1,0,0,3),
-	(UUID(),'4000-essential-english-words-1-4','The dog\'s bell','Chiếc chuông của chú chó','4000_ESSENTIAL_ENGLISH_WORDS_1_4.mp3',NULL,'00:00:00.000','00:02:03.000','4000-essential-english-words-1',1,0,0,4),
-	(UUID(),'4000-essential-english-words-1-5','The jackal and the sun child','Chú chó rừng và đứa con Mặt trời','4000_ESSENTIAL_ENGLISH_WORDS_1_5.mp3',NULL,'00:00:00.000','00:02:11.600','4000-essential-english-words-1',1,0,0,5),
-	(UUID(),'4000-essential-english-words-1-6','The friendly ghost','Hồn ma thân thiện','4000_ESSENTIAL_ENGLISH_WORDS_1_6.mp3',NULL,'00:00:00.000','00:02:11.300','4000-essential-english-words-1',1,0,0,6),
-	(UUID(),'4000-essential-english-words-1-7','The best prince','Chàng hoàng tử tốt nhất','4000_ESSENTIAL_ENGLISH_WORDS_1_7.mp3',NULL,'00:00:00.000','00:02:17.200','4000-essential-english-words-1',1,0,0,7),
+	(UUID(),'4000-essential-english-words-1-2','The laboratory','Phòng thí nghiệm','4000_ESSENTIAL_ENGLISH_WORDS_1_2.mp3',NULL,'00:00:00.000','00:02:13.800','4000-essential-english-words-1',1,1,0,2),
+	(UUID(),'4000-essential-english-words-1-3','The report','Báo cáo','4000_ESSENTIAL_ENGLISH_WORDS_1_3.mp3',NULL,'00:00:00.000','00:02:11.000','4000-essential-english-words-1',1,1,0,3),
+	(UUID(),'4000-essential-english-words-1-4','The dog\'s bell','Chiếc chuông của chú chó','4000_ESSENTIAL_ENGLISH_WORDS_1_4.mp3',NULL,'00:00:00.000','00:02:03.000','4000-essential-english-words-1',1,1,0,4),
+	(UUID(),'4000-essential-english-words-1-5','The jackal and the sun child','Chú chó rừng và đứa con Mặt trời','4000_ESSENTIAL_ENGLISH_WORDS_1_5.mp3',NULL,'00:00:00.000','00:02:11.600','4000-essential-english-words-1',1,1,0,5),
+	(UUID(),'4000-essential-english-words-1-6','The friendly ghost','Hồn ma thân thiện','4000_ESSENTIAL_ENGLISH_WORDS_1_6.mp3',NULL,'00:00:00.000','00:02:11.300','4000-essential-english-words-1',1,1,0,6),
+	(UUID(),'4000-essential-english-words-1-7','The best prince','Chàng hoàng tử tốt nhất','4000_ESSENTIAL_ENGLISH_WORDS_1_7.mp3',NULL,'00:00:00.000','00:02:17.200','4000-essential-english-words-1',1,1,0,7),
 	(UUID(),'4000-essential-english-words-1-8','How the sun and the moon were made?','Mặt trời và mặt trăng được sinh ra bằng cách nào?','4000_ESSENTIAL_ENGLISH_WORDS_1_8.mp3',NULL,'00:00:00.000','00:02:10.000','4000-essential-english-words-1',1,0,0,8),
 	(UUID(),'4000-essential-english-words-1-9','The starfish','Chú sao biển','4000_ESSENTIAL_ENGLISH_WORDS_1_9.mp3',NULL,'00:00:00.000','00:01:52.000','4000-essential-english-words-1',1,0,0,9),
 	(UUID(),'4000-essential-english-words-1-10','The first peacock','Con công đầu tiên','4000_ESSENTIAL_ENGLISH_WORDS_1_10.mp3',NULL,'00:00:00.000','00:02:01.000','4000-essential-english-words-1',1,0,0,10),

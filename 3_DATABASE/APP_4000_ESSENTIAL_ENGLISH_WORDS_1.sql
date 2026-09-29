@@ -29,7 +29,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He never came out','Nó không bao giờ thoát ra được nữa','00:02:02.500','00:02:04.500','4000-essential-english-words-1-1'),
 	('All of the other animals in the forest were very pleased with their rabbit\'s clever trick','Tất cả các loài vật khác trong rừng đều rất hài lòng với mưu kế thông minh của thỏ','00:02:04.500','00:02:11.000','4000-essential-english-words-1-1'),
 
-	/* (UUID(),'4000-essential-english-words-1-2','The laboratory','Phòng thí nghiệm','4000_ESSENTIAL_ENGLISH_WORDS_1_2.mp3',NULL,'00:00:00.000','00:02:13.800','4000-essential-english-words-1',1,0,2) */
+	/* (UUID(),'4000-essential-english-words-1-2','The laboratory','Phòng thí nghiệm','4000_ESSENTIAL_ENGLISH_WORDS_1_2.mp3',NULL,'00:00:00.000','00:02:13.800','4000-essential-english-words-1',1,1,2) */
 	('The laboratory','Phòng thí nghiệm','00:00:00.960','00:00:03.000','4000-essential-english-words-1-2'),
 	('Mia\'s father had a laboratory, but she had no idea what was in it','Bố của Mia có một phòng thí nghiệm, nhưng cô bé không biết có thứ gì bên trong đó','00:00:03.000','00:00:08.600','4000-essential-english-words-1-2'),
 	('Her dad always closed and locked the door when he went in','Bố cô ấy luôn đóng và khóa cửa khi ông đi vào','00:00:08.600','00:00:13.000','4000-essential-english-words-1-2'),
@@ -72,7 +72,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('"I wanted to give it to you then, but you can have it now"','"Bố muốn tặng nó cho con sau, nhưng con có thể nhận nó ngay bây giờ"','00:02:07.300','00:02:11.360','4000-essential-english-words-1-2'),
 	('"I hope you like it"','"Bố hi vọng con thích nó"','00:02:11.360','00:02:13.800','4000-essential-english-words-1-2'),
 
-	/* (UUID(),'4000-essential-english-words-1-3','The report','Báo cáo','4000_ESSENTIAL_ENGLISH_WORDS_1_3.mp3',NULL,'00:00:00.000','00:02:11.000','4000-essential-english-words-1',1,0,3) */
+	/* (UUID(),'4000-essential-english-words-1-3','The report','Báo cáo','4000_ESSENTIAL_ENGLISH_WORDS_1_3.mp3',NULL,'00:00:00.000','00:02:11.000','4000-essential-english-words-1',1,1,3) */
 	('The report','Báo cáo','00:00:00.960','00:00:02.800','4000-essential-english-words-1-3'),
 	('Lee sat among the books at the library and thought about his group project','Lee ngồi giữa những cuốn sách trong thư viện và nghĩ về dự án của nhóm mình','00:00:02.800','00:00:08.700','4000-essential-english-words-1-3'),
 	('They had to turn it in soon, but he hadn\'t even started his part','Họ phải nộp sớm, nhưng cậu ta thậm chí còn chưa bắt đầu phần của mình','00:00:08.700','00:00:13.700','4000-essential-english-words-1-3'),
@@ -108,7 +108,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('"My model will be awesome"','"Mô hình của tôi sẽ tuyệt vời"','00:02:03.670','00:02:06.000','4000-essential-english-words-1-3'),
 	('Then he took his model and said goodbye to his new friend','Sau đó, cậu ấy lấy mô hình của mình và nói lời tạm biệt với người bạn mới','00:02:06.000','00:02:11.000','4000-essential-english-words-1-3'),
 
-	/* (UUID(),'4000-essential-english-words-1-4','The dog\'s bell','Chiếc chuông của chú chó','4000_ESSENTIAL_ENGLISH_WORDS_1_4.mp3',NULL,'00:00:00.000','00:02:03.000','4000-essential-english-words-1',1,0,4) */
+	/* (UUID(),'4000-essential-english-words-1-4','The dog\'s bell','Chiếc chuông của chú chó','4000_ESSENTIAL_ENGLISH_WORDS_1_4.mp3',NULL,'00:00:00.000','00:02:03.000','4000-essential-english-words-1',1,1,4) */
 	('The dog\'s bell','Chiếc chuông của chú chó','00:00:00.960','00:00:03.000','4000-essential-english-words-1-4'),
 	('John\'s dog was a bad dog','Chó của John là một con chó tồi tệ','00:00:03.000','00:00:06.000','4000-essential-english-words-1-4'),
 	('He bit people frequently','Nó thường xuyên cắn người','00:00:06.000','00:00:08.500','4000-essential-english-words-1-4'),
@@ -145,7 +145,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('"You aren\'t able to bite them anymore"','"Mày không thể cắn họ nữa"','00:01:54.000','00:01:57.000','4000-essential-english-words-1-4'),
 	('You see, being popular isn\'t something positive when it\'s for the wrong reason','Mày thấy đấy, nổi tiếng không phải là điều gì tích cực khi nó xuất phát từ lý do sai lầm','00:01:57.000','00:02:03.000','4000-essential-english-words-1-4'),
 
-	/* (UUID(),'4000-essential-english-words-1-5','The jackal and the sun child','Chú chó rừng và đứa con Mặt trời','4000_ESSENTIAL_ENGLISH_WORDS_1_5.mp3',NULL,'00:00:00.000','00:02:11.600','4000-essential-english-words-1',1,0,5) */
+	/* (UUID(),'4000-essential-english-words-1-5','The jackal and the sun child','Chú chó rừng và đứa con Mặt trời','4000_ESSENTIAL_ENGLISH_WORDS_1_5.mp3',NULL,'00:00:00.000','00:02:11.600','4000-essential-english-words-1',1,1,5) */
 	('The Jackal and the Sun Child','Chú chó rừng và đứa con Mặt trời','00:00:00.960','00:00:04.000','4000-essential-english-words-1-5'),
 	('A jackal is a wild dog with a big black back','Chó rừng là một loài chó hoang dã với cái lưng đen to lớn','00:00:04.000','00:00:08.600','4000-essential-english-words-1-5'),
 	('It resides in the desert','Nó sinh sống ở sa mạc','00:00:08.600','00:00:10.600','4000-essential-english-words-1-5'),
@@ -189,7 +189,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
-	/* (UUID(),'4000-essential-english-words-1-6','The friendly ghost','Hồn ma thân thiện','4000_ESSENTIAL_ENGLISH_WORDS_1_6.mp3',NULL,'00:00:00.000','00:02:11.300','4000-essential-english-words-1',1,0,6) */
+	/* (UUID(),'4000-essential-english-words-1-6','The friendly ghost','Hồn ma thân thiện','4000_ESSENTIAL_ENGLISH_WORDS_1_6.mp3',NULL,'00:00:00.000','00:02:11.300','4000-essential-english-words-1',1,1,6) */
 	('The friendly ghost','Hồn ma thân thiện','00:00:00.960','00:00:03.000','4000-essential-english-words-1-6'),
 	('A nice woman lived by a large river','Có một người phụ nữ tốt bụng sống bên cạnh một con sông lớn','00:00:03.000','00:00:06.600','4000-essential-english-words-1-6'),
 	('She loved children','Bà rất yêu trẻ con','00:00:06.600','00:00:08.800','4000-essential-english-words-1-6'),
@@ -232,7 +232,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Sometimes, meeting a ghost has some advantages','Đôi khi, gặp một hồn ma cũng có một vài lợi thế','00:02:04.800','00:02:08.300','4000-essential-english-words-1-6'),
 	('A ghost can save your life','Một hồn ma có thể cứu mạng sống của bạn đấy','00:02:08.300','00:02:11.300','4000-essential-english-words-1-6'),
 
-	/* (UUID(),'4000-essential-english-words-1-7','The best prince','Chàng hoàng tử tốt nhất','4000_ESSENTIAL_ENGLISH_WORDS_1_7.mp3',NULL,'00:00:00.000','00:02:17.200','4000-essential-english-words-1',1,0,7) */
+	/* (UUID(),'4000-essential-english-words-1-7','The best prince','Chàng hoàng tử tốt nhất','4000_ESSENTIAL_ENGLISH_WORDS_1_7.mp3',NULL,'00:00:00.000','00:02:17.200','4000-essential-english-words-1',1,1,7) */
 	('The best prince','Chàng hoàng tử tốt nhất','00:00:00.960','00:00:03.300','4000-essential-english-words-1-7'),
 	('King Minos was very sick','Vua Minos đang bị ốm nặng','00:00:03.300','00:00:05.700','4000-essential-english-words-1-7'),
 	('His condition was getting worse','Tình trạng của ông ngày càng xấu hơn','00:00:05.700','00:00:08.200','4000-essential-english-words-1-7'),
