@@ -2047,10 +2047,39 @@ INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_
 	('Q-esl-fast-beginner-1-64-027','esl-fast-beginner-1-64','How does the uncle behave?','Chú cư xử như thế nào?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-64-028','esl-fast-beginner-1-64','Do they still love each other despite being different?','Dù khác nhau, họ vẫn yêu thương nhau phải không?','ACTIVE',NULL,NULL,NULL,NULL),
 	('Q-esl-fast-beginner-1-64-029','esl-fast-beginner-1-64','Does he always enjoy visiting them?','Cậu bé có luôn vui khi đến thăm họ không?','ACTIVE',NULL,NULL,NULL,NULL),
-	('Q-esl-fast-beginner-1-64-030','esl-fast-beginner-1-64','What does the boy enjoy doing with his aunt and uncle?','Cậu bé thích làm gì với cô chú của mình?','ACTIVE',NULL,NULL,NULL,NULL);
+	('Q-esl-fast-beginner-1-64-030','esl-fast-beginner-1-64','What does the boy enjoy doing with his aunt and uncle?','Cậu bé thích làm gì với cô chú của mình?','ACTIVE',NULL,NULL,NULL,NULL),
 	
 	/* (UUID(),'esl-fast-beginner-1-65','A Busy Boy','Một cậu bé bận rộn','ESL_FAST_BEGINNER_1_065.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,65), */
-	
+	('Q-esl-fast-beginner-1-65-001','esl-fast-beginner-1-65','What is the boy always like?','Cậu bé lúc nào cũng như thế nào?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-65-002','esl-fast-beginner-1-65','How many hours does he go to school?','Cậu ấy đi học bao nhiêu tiếng?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-65-003','esl-fast-beginner-1-65','How many classes does he have?','Cậu ấy có bao nhiêu tiết học?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-65-004','esl-fast-beginner-1-65','What are all of his classes like?','Tất cả các tiết học của cậu ấy như thế nào?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-65-005','esl-fast-beginner-1-65','What does the boy have a lot of?','Cậu bé có rất nhiều thứ gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-65-006','esl-fast-beginner-1-65','How long does it take him to finish his homework?','Cậu ấy mất bao lâu để làm xong bài tập về nhà?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-65-007','esl-fast-beginner-1-65','What kind of practice does he also have?','Cậu ấy còn phải luyện tập môn gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-65-008','esl-fast-beginner-1-65','How many hours does he spend playing the piano?','Cậu ấy dành bao nhiêu tiếng để chơi đàn piano?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-65-009','esl-fast-beginner-1-65','How many hours does he sleep?','Cậu ấy ngủ bao nhiêu tiếng?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-65-010','esl-fast-beginner-1-65','How does the boy feel?','Cậu bé cảm thấy thế nào?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-65-011','esl-fast-beginner-1-65','Is the boy usually busy?','Cậu bé có thường xuyên bận rộn không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-65-012','esl-fast-beginner-1-65','How long does he spend at school?','Cậu ấy dành bao lâu ở trường?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-65-013','esl-fast-beginner-1-65','Are his classes easy?','Các tiết học của cậu ấy có dễ không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-65-014','esl-fast-beginner-1-65','What does he have to do at home?','Cậu ấy phải làm gì ở nhà?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-65-015','esl-fast-beginner-1-65','What does he practice besides his schoolwork?','Ngoài việc học ở trường, cậu ấy còn luyện tập gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-65-016','esl-fast-beginner-1-65','How long does he play the piano?','Cậu ấy chơi đàn piano trong bao lâu?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-65-017','esl-fast-beginner-1-65','Does he sleep for a long time?','Cậu ấy có ngủ trong thời gian dài không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-65-018','esl-fast-beginner-1-65','How many hours of sleep does he get?','Cậu ấy ngủ được bao nhiêu tiếng?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-65-019','esl-fast-beginner-1-65','What takes him five hours to finish?','Điều gì khiến cậu ấy mất năm tiếng để hoàn thành?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-65-020','esl-fast-beginner-1-65','How many hours does he spend on piano practice?','Cậu ấy dành bao nhiêu tiếng để tập piano?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-65-021','esl-fast-beginner-1-65','Does he have a lot of homework?','Cậu ấy có nhiều bài tập về nhà không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-65-022','esl-fast-beginner-1-65','How many classes does the boy have at school?','Cậu bé có bao nhiêu tiết học ở trường?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-65-023','esl-fast-beginner-1-65','Are all seven classes hard?','Cả bảy tiết học có khó không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-65-024','esl-fast-beginner-1-65','What does he spend two hours doing?','Cậu ấy dành hai tiếng để làm gì?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-65-025','esl-fast-beginner-1-65','How many hours does he spend doing homework?','Cậu ấy dành bao nhiêu tiếng để làm bài tập về nhà?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-65-026','esl-fast-beginner-1-65','Does he also practice the piano?','Cậu ấy có tập đàn piano nữa không?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-65-027','esl-fast-beginner-1-65','What does he do for four hours?','Cậu ấy làm gì trong bốn tiếng?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-65-028','esl-fast-beginner-1-65','How many hours does he spend doing schoolwork and piano practice?','Cậu ấy dành bao nhiêu tiếng cho việc học và tập piano?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-65-029','esl-fast-beginner-1-65','What happens after his seven classes?','Điều gì xảy ra sau bảy tiết học của cậu ấy?','ACTIVE',NULL,NULL,NULL,NULL),
+	('Q-esl-fast-beginner-1-65-030','esl-fast-beginner-1-65','Why is the boy tired according to the passage?','Theo bài đọc, tại sao cậu bé lại mệt?','ACTIVE',NULL,NULL,NULL,NULL);
 	
 	/* (UUID(),'esl-fast-beginner-1-66','Fruit Salad','Salad trái cây','ESL_FAST_BEGINNER_1_066.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,66), */
 	/* (UUID(),'esl-fast-beginner-1-67','He Takes His Test','Cậu ấy làm bài kiểm tra','ESL_FAST_BEGINNER_1_067.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-children-1',0,0,0,67), */
