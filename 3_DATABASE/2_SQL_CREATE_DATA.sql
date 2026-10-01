@@ -453,7 +453,14 @@ INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,IS_
 	(UUID(),'esl-fast-beginner-1-90','Forgetting Her Glasses','Quên kính của cô ấy','ESL_FAST_BEGINNER_1_090.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,0,90),
 	(UUID(),'esl-fast-beginner-1-91','Quitting His Job','Nghỉ việc','ESL_FAST_BEGINNER_1_091.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,0,91),
 	(UUID(),'esl-fast-beginner-1-92','Future Goals','Mục tiêu tương lai','ESL_FAST_BEGINNER_1_092.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,0,92),
-	(UUID(),'esl-fast-beginner-1-93','A Kind Stranger','Một người lạ tốt bụng','ESL_FAST_BEGINNER_1_093.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,0,93);
+	(UUID(),'esl-fast-beginner-1-93','A Kind Stranger','Một người lạ tốt bụng','ESL_FAST_BEGINNER_1_093.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,0,93),
+	(UUID(),'esl-fast-beginner-1-94','Excited for Thanksgiving','Háo hức chờ Lễ Tạ Ơn','ESL_FAST_BEGINNER_1_094.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,0,94),
+	(UUID(),'esl-fast-beginner-1-95','A Sad Book and a Happy Book','Một cuốn sách buồn và một cuốn sách vui','ESL_FAST_BEGINNER_1_095.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,0,95),
+	(UUID(),'esl-fast-beginner-1-96','The Water Slide at the Amusement Park','Cầu trượt nước ở công viên giải trí','ESL_FAST_BEGINNER_1_096.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,0,96),
+	(UUID(),'esl-fast-beginner-1-97','Keeping a Diary','Viết nhật ký','ESL_FAST_BEGINNER_1_097.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,0,97),
+	(UUID(),'esl-fast-beginner-1-98','Trying on Shoes','Thử giày','ESL_FAST_BEGINNER_1_098.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,0,98),
+	(UUID(),'esl-fast-beginner-1-99','A Lot of Pants','Rất nhiều quần','ESL_FAST_BEGINNER_1_099.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,0,99),
+	(UUID(),'esl-fast-beginner-1-100','Chili Sauce Lover','Người yêu thích tương ớt','ESL_FAST_BEGINNER_1_100.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,0,100);
 
 INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,IS_LANGUAGE_APPROVED,IS_REVIEW_COMPLETED,IS_READ,NUMBER) VALUES
 	(UUID(),'esl-fast-beginner-2-1','Going to School','Đi tới trường','ESL_FAST_BEGINNER_2_001.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-2',1,1,0,1),
