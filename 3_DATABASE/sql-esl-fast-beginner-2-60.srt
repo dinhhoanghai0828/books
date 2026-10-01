@@ -1,0 +1,39 @@
+1
+00:00:00,140 --> 00:00:02,520
+(Được chép bởi TurboScribe. Nâng cấp lên Không giới hạn để gỡ bỏ thông báo này.) Kate looks at the magazine.
+
+2
+00:00:03,180 --> 00:00:06,100
+The magazine cover has a pretty girl.
+
+3
+00:00:07,100 --> 00:00:08,800
+She has long hair.
+
+4
+00:00:09,620 --> 00:00:12,180
+She has big blue eyes.
+
+5
+00:00:12,860 --> 00:00:14,820
+Her skin looks nice.
+
+6
+00:00:15,920 --> 00:00:17,920
+She is a fashion model.
+
+7
+00:00:19,060 --> 00:00:21,240
+Kate opens up the magazine.
+
+8
+00:00:22,560 --> 00:00:25,880
+She flips to pages where the model is.
+
+9
+00:00:26,680 --> 00:00:28,980
+She reads about the model.
+
+10
+00:00:30,140 --> 00:00:32,820
+She wishes she could be her.
