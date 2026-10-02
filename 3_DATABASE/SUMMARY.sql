@@ -230,8 +230,8 @@ INSERT INTO BOOKS(UUID,SLUG,ENG,VI,AUTHOR,DESCRIPTION,CATEGORY_SLUG,IMG,NUMBER) 
 	(UUID(),'animatters','Animatters','Hoạt hình','Nhiều tác giả','Những câu chuyện người lớn','truyen-nguoi-lon','ANIMATTERS.png', 1),
 	
 	(UUID(),'I-am-Mary','I\'m Mary','Tôi là Mary','Mary','Những triết lý, bài học trong cuộc sống hiện đại','sach-triet-ly','I_AM_MARY.png',1),
-	(UUID(),'economist','Economist','Kinh tế học','Nhiều tác giả','Thông tin kinh tế, chính trị, khoa học, xã hội','tin-tuc-hang-ngay','THE_ECONOMIST.png',1),
-	(UUID(),'voa','VOA','Báo nước ngoài','Nhiều tác giả','Thông tin kinh tế, chính trị, khoa học, xã hội, giáo dục, du lịch','tin-tuc-hang-ngay','VOA.png',2),
+	(UUID(),'economist','Economist','Kinh tế học','Nhiều tác giả','Thông tin kinh tế, chính trị, khoa học, xã hội','news','THE_ECONOMIST.png',1),
+	(UUID(),'voa','VOA','Báo nước ngoài','Nhiều tác giả','Thông tin kinh tế, chính trị, khoa học, xã hội, giáo dục, du lịch','news','VOA.png',2),
 	/* Thuyết trình */
 	-- Thuyết trình - TEDTALKS
 	(UUID(),'technology','Technology','Công Nghệ','Nhiều tác giả','Thảo luận về các vấn đề trong cuộc sống','tedtalks','TEDTALKS.png',1),
