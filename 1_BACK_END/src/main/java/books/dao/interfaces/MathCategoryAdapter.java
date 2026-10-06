@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface MathCategoryAdapter {
     List<MathCategory> getMathCategories() throws Exception;
+    List<MathCategory> getMathCategoriesByFullPath(String fullPath) throws Exception;
 }

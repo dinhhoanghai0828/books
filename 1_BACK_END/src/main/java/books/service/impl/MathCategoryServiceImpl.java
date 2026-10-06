@@ -13,8 +13,8 @@ import java.util.stream.Collectors;
 
 @Service
 public class MathCategoryServiceImpl implements MathCategoryService {
-    private MathCategoryAdapter mathCategoryAdapter;
-    private ModelMapper modelMapper;
+    private final MathCategoryAdapter mathCategoryAdapter;
+    private final ModelMapper modelMapper;
 
     @Autowired
     public MathCategoryServiceImpl(MathCategoryAdapter mathCategoryAdapter, ModelMapper modelMapper) {
@@ -25,26 +25,18 @@ public class MathCategoryServiceImpl implements MathCategoryService {
     @Override
     public List<MathCategoryDTO> getMathCategories() throws Exception {
         List<MathCategory> categories = mathCategoryAdapter.getMathCategories();
-        List<MathCategoryDTO> categoryDTOList = categories.stream()
-                .map(category -> modelMapper.map(category, MathCategoryDTO.class))
-                .collect(Collectors.toList());
-        // Build full path for each category
-        buildFullPaths(categoryDTOList, null);
-        // Debug log
-        System.out.println("Math Categories with full paths:");
-        for (MathCategoryDTO cat : categoryDTOList) {
-            System.out.println(cat.getCategoryName() + " -> fullPath: " + cat.getFullPath());
-        }
-        return categoryDTOList;
+        return toDTO(categories);
     }
 
-    private void buildFullPaths(List<MathCategoryDTO> categories, String parentPath) {
-        for (MathCategoryDTO category : categories) {
-            String currentPath = parentPath != null ? parentPath + "/" + category.getCategoryCode() : category.getCategoryCode();
-            category.setFullPath(currentPath);
-            if (category.getChildren() != null && !category.getChildren().isEmpty()) {
-                buildFullPaths(category.getChildren(), currentPath);
-            }
-        }
+    @Override
+    public List<MathCategoryDTO> getMathCategoriesByFullPath(String fullPath) throws Exception {
+        List<MathCategory> categories = mathCategoryAdapter.getMathCategoriesByFullPath(fullPath);
+        return toDTO(categories);
+    }
+
+    private List<MathCategoryDTO> toDTO(List<MathCategory> categories) {
+        return categories.stream()
+                .map(c -> modelMapper.map(c, MathCategoryDTO.class))
+                .collect(Collectors.toList());
     }
 }

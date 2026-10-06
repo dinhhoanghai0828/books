@@ -43,12 +43,12 @@ const MathGradePage = () => {
     return `Bài tập Toán - ${grade}`;
   };
 
-  // Fetch math categories on mount
+  // Fetch math categories theo fullPath = "toan/{grade}"
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const data = await getMathCategories();
-        setCategories(data);
+        const data: MathCategoryType[] = await getMathCategories(`toan/${grade}`);
+        setCategories(data ?? []);
       } catch (error) {
         console.error('Lỗi khi lấy danh sách math categories:', error);
         message.error('Không thể tải danh sách danh mục');
@@ -57,7 +57,7 @@ const MathGradePage = () => {
       }
     };
     fetchCategories();
-  }, []);
+  }, [grade]);
 
   // Fetch questions when category is selected
   useEffect(() => {

@@ -8,62 +8,27 @@ public class MathCategoryDTO {
     private String categoryDesc;
     private String parentCode;
     private String status;
-    private String fullPath; // Full path for URL building (e.g., "toan/lop-1")
+    private String fullPath;
     private List<MathCategoryDTO> children;
 
-    public String getCategoryCode() {
-        return categoryCode;
-    }
+    public String getCategoryCode() { return categoryCode; }
+    public void setCategoryCode(String categoryCode) { this.categoryCode = categoryCode; }
 
-    public void setCategoryCode(String categoryCode) {
-        this.categoryCode = categoryCode;
-    }
+    public String getCategoryName() { return categoryName; }
+    public void setCategoryName(String categoryName) { this.categoryName = categoryName; }
 
-    public String getCategoryName() {
-        return categoryName;
-    }
+    public String getCategoryDesc() { return categoryDesc; }
+    public void setCategoryDesc(String categoryDesc) { this.categoryDesc = categoryDesc; }
 
-    public void setCategoryName(String categoryName) {
-        this.categoryName = categoryName;
-    }
+    public String getParentCode() { return parentCode; }
+    public void setParentCode(String parentCode) { this.parentCode = parentCode; }
 
-    public String getCategoryDesc() {
-        return categoryDesc;
-    }
+    public String getStatus() { return status; }
+    public void setStatus(String status) { this.status = status; }
 
-    public void setCategoryDesc(String categoryDesc) {
-        this.categoryDesc = categoryDesc;
-    }
+    public String getFullPath() { return fullPath; }
+    public void setFullPath(String fullPath) { this.fullPath = fullPath; }
 
-    public String getParentCode() {
-        return parentCode;
-    }
-
-    public void setParentCode(String parentCode) {
-        this.parentCode = parentCode;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public String getFullPath() {
-        return fullPath;
-    }
-
-    public void setFullPath(String fullPath) {
-        this.fullPath = fullPath;
-    }
-
-    public List<MathCategoryDTO> getChildren() {
-        return children;
-    }
-
-    public void setChildren(List<MathCategoryDTO> children) {
-        this.children = children;
-    }
+    public List<MathCategoryDTO> getChildren() { return children; }
+    public void setChildren(List<MathCategoryDTO> children) { this.children = children; }
 }

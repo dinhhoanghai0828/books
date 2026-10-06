@@ -6,8 +6,10 @@ export interface MathCategoryType {
   id: number;
   categoryCode: string;
   categoryName: string;
-  parentId: number | null;
+  categoryDesc: string;
+  parentCode: string | null;
   status: string;
+  fullPath: string;
   children?: MathCategoryType[];
 }
 

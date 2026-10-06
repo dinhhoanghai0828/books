@@ -16,8 +16,8 @@ import java.util.List;
 @CrossOrigin("*")
 @RequestMapping("/math")
 public class MathController {
-    private MathCategoryService mathCategoryService;
-    private MathQuestionService mathQuestionService;
+    private final MathCategoryService mathCategoryService;
+    private final MathQuestionService mathQuestionService;
 
     @Autowired
     public MathController(MathCategoryService mathCategoryService, MathQuestionService mathQuestionService) {
@@ -25,10 +25,17 @@ public class MathController {
         this.mathQuestionService = mathQuestionService;
     }
 
+    // GET /api/v1/math/categories               → lấy tất cả
+    // GET /api/v1/math/categories?fullPath=toan/lop-1 → lọc theo FULL_PATH
     @GetMapping("/categories")
-    public ResponseEntity<?> getMathCategories() {
+    public ResponseEntity<?> getMathCategories(@RequestParam(value = "fullPath", required = false) String fullPath) {
         try {
-            List<MathCategoryDTO> categories = mathCategoryService.getMathCategories();
+            List<MathCategoryDTO> categories;
+            if (fullPath != null) {
+                categories = mathCategoryService.getMathCategoriesByFullPath(fullPath);
+            } else {
+                categories = mathCategoryService.getMathCategories();
+            }
             MathCategoryResponse response = new MathCategoryResponse();
             response.setCategories(categories);
             return new ResponseEntity<>(response, HttpStatus.OK);

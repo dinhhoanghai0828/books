@@ -621,10 +621,11 @@ export const submitQuiz = async (userAnswers: Record<string, string>, questions:
 // MATH
 // ============================================================
 
-// Lay danh sach math categories (tree structure)
-export const getMathCategories = async () => {
+// Lay danh sach math categories (tree structure), co the loc theo fullPath
+export const getMathCategories = async (fullPath?: string) => {
   try {
-    const response = await apiClient.get('/math/categories');
+    const url = fullPath ? `/math/categories?fullPath=${encodeURIComponent(fullPath)}` : '/math/categories';
+    const response = await apiClient.get(url);
     return response.data.categories;
   } catch (error: any) {
     throw new Error(getErrorMessage(error));
