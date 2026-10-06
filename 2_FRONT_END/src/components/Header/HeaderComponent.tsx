@@ -58,7 +58,7 @@ const STATIC_MENU_ITEMS: MenuItem[] = [
       {
         label: 'Lớp 1',
         key: 'lop-1',
-        href: '/lop-1',
+        href: '/math/lop-1',
       },
     ],
   },
