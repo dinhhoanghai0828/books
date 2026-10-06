@@ -136,6 +136,52 @@ INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICU
 	('NUMBER_BASIC_EVEN_ODD', 'NUMBER_BASIC_EVEN_ODD_039', 'Cho các số 7, 12, 15, 20, 23, 28, 31, 36. Có bao nhiêu số lẻ và số chẵn nhỏ nhất là số nào?', 4, 'ACTIVE', NULL, NULL),
 	('NUMBER_BASIC_EVEN_ODD', 'NUMBER_BASIC_EVEN_ODD_040', 'Cho các số 5, 10, 17, 22, 27, 32, 35, 40. Có bao nhiêu số chẵn và số lẻ nhỏ nhất là số nào?', 4, 'ACTIVE', NULL, NULL);
 
+
+-- Child: 2.1. Dãy số tăng
+INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
+	('NUMBER_PATTERN_INCREASING', 'NUMBER_PATTERN_INCREASING_001', '2, 3, 4, 5, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_INCREASING', 'NUMBER_PATTERN_INCREASING_002', '5, 6, 7, 8, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_INCREASING', 'NUMBER_PATTERN_INCREASING_003', '1, 2, 3, 4, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_INCREASING', 'NUMBER_PATTERN_INCREASING_004', '6, 7, 8, 9, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_INCREASING', 'NUMBER_PATTERN_INCREASING_005', '3, 4, 5, 6, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_INCREASING', 'NUMBER_PATTERN_INCREASING_006', '7, 8, 9, 10, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_INCREASING', 'NUMBER_PATTERN_INCREASING_007', '4, 5, 6, 7, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_INCREASING', 'NUMBER_PATTERN_INCREASING_008', '8, 9, 10, 11, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_INCREASING', 'NUMBER_PATTERN_INCREASING_009', '10, 11, 12, 13, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_INCREASING', 'NUMBER_PATTERN_INCREASING_010', '11, 12, 13, 14, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+
+	('NUMBER_PATTERN_INCREASING', 'NUMBER_PATTERN_INCREASING_011', '2, 4, 6, 8, ?, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_INCREASING', 'NUMBER_PATTERN_INCREASING_012', '1, 3, 5, 7, ?, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_INCREASING', 'NUMBER_PATTERN_INCREASING_013', '5, 7, 9, 11, ?, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_INCREASING', 'NUMBER_PATTERN_INCREASING_014', '3, 6, 9, 12, ?, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_INCREASING', 'NUMBER_PATTERN_INCREASING_015', '4, 7, 10, 13, ?, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_INCREASING', 'NUMBER_PATTERN_INCREASING_016', '6, 8, 10, 12, ?, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_INCREASING', 'NUMBER_PATTERN_INCREASING_017', '10, 13, 16, 19, ?, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_INCREASING', 'NUMBER_PATTERN_INCREASING_018', '7, 10, 13, 16, ?, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_INCREASING', 'NUMBER_PATTERN_INCREASING_019', '8, 10, 12, 14, ?, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_INCREASING', 'NUMBER_PATTERN_INCREASING_020', '9, 12, 15, 18, ?, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+
+	('NUMBER_PATTERN_INCREASING', 'NUMBER_PATTERN_INCREASING_021', '2, 5, 8, 11, 14, ?, số nào thích hợp điền vào dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_INCREASING', 'NUMBER_PATTERN_INCREASING_022', '3, 7, 11, 15, 19, ?, số nào thích hợp điền vào dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_INCREASING', 'NUMBER_PATTERN_INCREASING_023', '4, 9, 14, 19, 24, ?, số nào thích hợp điền vào dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_INCREASING', 'NUMBER_PATTERN_INCREASING_024', '1, 5, 9, 13, 17, ?, số nào thích hợp điền vào dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_INCREASING', 'NUMBER_PATTERN_INCREASING_025', '6, 11, 16, 21, 26, ?, số nào thích hợp điền vào dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_INCREASING', 'NUMBER_PATTERN_INCREASING_026', '5, 8, 11, 14, 17, ?, số nào thích hợp điền vào dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_INCREASING', 'NUMBER_PATTERN_INCREASING_027', '7, 12, 17, 22, 27, ?, số nào thích hợp điền vào dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_INCREASING', 'NUMBER_PATTERN_INCREASING_028', '2, 6, 10, 14, 18, ?, số nào thích hợp điền vào dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_INCREASING', 'NUMBER_PATTERN_INCREASING_029', '8, 13, 18, 23, 28, ?, số nào thích hợp điền vào dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_INCREASING', 'NUMBER_PATTERN_INCREASING_030', '4, 8, 12, 16, 20, ?, số nào thích hợp điền vào dấu ?', 3, 'ACTIVE', NULL, NULL),
+
+	('NUMBER_PATTERN_INCREASING', 'NUMBER_PATTERN_INCREASING_031', '?, 7, 12, 17, 22, 27. Số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_INCREASING', 'NUMBER_PATTERN_INCREASING_032', '?, 8, 14, 20, 26, 32. Số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_INCREASING', 'NUMBER_PATTERN_INCREASING_033', '?, 9, 16, 23, 30, 37. Số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_INCREASING', 'NUMBER_PATTERN_INCREASING_034', '?, 10, 18, 26, 34, 42. Số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_INCREASING', 'NUMBER_PATTERN_INCREASING_035', '?, 6, 13, 20, 27, 34. Số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_INCREASING', 'NUMBER_PATTERN_INCREASING_036', '?, 11, 19, 27, 35, 43. Số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_INCREASING', 'NUMBER_PATTERN_INCREASING_037', '?, 12, 21, 30, 39, 48. Số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_INCREASING', 'NUMBER_PATTERN_INCREASING_038', '?, 15, 24, 33, 42, 51. Số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_INCREASING', 'NUMBER_PATTERN_INCREASING_039', '?, 14, 24, 34, 44, 54. Số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_INCREASING', 'NUMBER_PATTERN_INCREASING_040', '?, 13, 22, 31, 40, 49. Số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL);
 -- =========================================================
 -- 6.1. Hai bước cộng
 -- MULTI_STEP_ADD_ADD
@@ -185,3 +231,49 @@ INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICU
 	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_038', 'Một giỏ có 7 quả táo. Mẹ đặt thêm 4 quả vào giỏ. Sau đó bố đặt thêm 5 quả nữa. Hỏi sau hai lần đặt thêm, trong giỏ có tất cả bao nhiêu quả táo?', 4, 'ACTIVE', NULL, NULL),
 	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_039', 'Nam có 8 chiếc xe đồ chơi. Anh cho Nam thêm 3 chiếc. Sau đó bố cho Nam thêm 5 chiếc nữa. Hỏi sau hai lần được cho thêm, Nam có tất cả bao nhiêu chiếc xe đồ chơi?', 4, 'ACTIVE', NULL, NULL),
 	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_040', 'Trong lớp có 6 hộp bút màu. Cô giáo mang thêm 5 hộp đến lớp. Sau đó phụ huynh tặng thêm 4 hộp nữa. Hỏi sau hai lần được thêm, lớp có tất cả bao nhiêu hộp bút màu?', 4, 'ACTIVE', NULL, NULL);
+
+-- Child: 6.2. Hai bước trừ
+INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
+	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_001', 'Mai có 12 quả táo. Mai cho bạn 3 quả rồi ăn 2 quả. Hỏi Mai còn lại bao nhiêu quả táo?', 1, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_002', 'Nam có 15 viên bi. Nam cho em 4 viên rồi cho bạn 3 viên. Hỏi Nam còn lại bao nhiêu viên bi?', 1, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_003', 'Trong hộp có 14 chiếc bút. Lấy ra 2 chiếc để dùng rồi lấy thêm 4 chiếc cho các bạn. Hỏi trong hộp còn bao nhiêu chiếc bút?', 1, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_004', 'Lan có 16 cái kẹo. Lan cho em 5 cái rồi ăn 2 cái. Hỏi Lan còn bao nhiêu cái kẹo?', 1, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_005', 'Một giỏ có 18 quả cam. Mẹ lấy 6 quả rồi lấy thêm 3 quả. Hỏi giỏ còn lại bao nhiêu quả cam?', 1, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_006', 'Bình có 13 chiếc ô tô đồ chơi. Bình cho em 2 chiếc rồi cất đi 5 chiếc. Hỏi Bình còn lại bao nhiêu chiếc ô tô đồ chơi?', 1, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_007', 'Có 17 con cá trong bể. Người ta bắt ra 4 con rồi bắt thêm 2 con. Hỏi trong bể còn bao nhiêu con cá?', 1, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_008', 'Một rổ có 19 quả bóng. Lấy ra 7 quả rồi lấy thêm 3 quả. Hỏi trong rổ còn bao nhiêu quả bóng?', 1, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_009', 'Hoa có 20 nhãn vở. Hoa dùng 5 nhãn rồi cho bạn 4 nhãn. Hỏi Hoa còn bao nhiêu nhãn vở?', 1, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_010', 'Một hộp có 15 chiếc bánh. Bé ăn 3 chiếc rồi cho em 5 chiếc. Hỏi hộp còn lại bao nhiêu chiếc bánh?', 1, 'ACTIVE', NULL, NULL),
+
+	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_011', 'Một cửa hàng có 25 quả bóng. Buổi sáng bán 7 quả, buổi chiều bán thêm 5 quả. Hỏi cửa hàng còn lại bao nhiêu quả bóng?', 2, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_012', 'Thư viện có 30 quyển truyện. Các bạn mượn 8 quyển vào buổi sáng và 6 quyển vào buổi chiều. Hỏi thư viện còn bao nhiêu quyển truyện?', 2, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_013', 'Một giỏ có 28 quả táo. Mẹ lấy 9 quả để làm bánh rồi lấy thêm 4 quả để ăn. Hỏi giỏ còn bao nhiêu quả táo?', 2, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_014', 'Lớp 1A có 32 quyển vở dự phòng. Cô giáo phát 10 quyển cho học sinh rồi phát thêm 7 quyển. Hỏi còn lại bao nhiêu quyển vở?', 2, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_015', 'Một hộp có 27 chiếc bút màu. Nam lấy 6 chiếc để vẽ rồi cho bạn 8 chiếc. Hỏi hộp còn bao nhiêu chiếc bút màu?', 2, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_016', 'Cửa hàng có 35 chiếc bánh. Buổi sáng bán 12 chiếc, buổi chiều bán 9 chiếc. Hỏi cửa hàng còn lại bao nhiêu chiếc bánh?', 2, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_017', 'Một trang trại có 40 con gà. Người ta bán 15 con rồi bán thêm 8 con. Hỏi trang trại còn bao nhiêu con gà?', 2, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_018', 'Trong kho có 38 thùng sữa. Người ta chuyển đi 9 thùng rồi chuyển tiếp 11 thùng. Hỏi kho còn lại bao nhiêu thùng sữa?', 2, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_019', 'Một lớp có 36 chiếc bút chì. Cô phát 14 chiếc cho học sinh rồi phát thêm 7 chiếc. Hỏi còn lại bao nhiêu chiếc bút chì?', 2, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_020', 'Một cửa hàng có 45 quyển vở. Ngày thứ nhất bán 13 quyển, ngày thứ hai bán 12 quyển. Hỏi cửa hàng còn bao nhiêu quyển vở?', 2, 'ACTIVE', NULL, NULL),
+
+	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_021', 'Một thư viện có 52 quyển sách. Buổi sáng học sinh mượn 17 quyển, buổi chiều mượn thêm 13 quyển. Hỏi thư viện còn lại bao nhiêu quyển sách?', 3, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_022', 'Một cửa hàng có 60 chiếc bút. Ngày thứ nhất bán 18 chiếc, ngày thứ hai bán 15 chiếc. Hỏi cửa hàng còn lại bao nhiêu chiếc bút?', 3, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_023', 'Một kho có 55 hộp sữa. Người ta chuyển đi 16 hộp vào buổi sáng và 19 hộp vào buổi chiều. Hỏi kho còn bao nhiêu hộp sữa?', 3, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_024', 'Một trường có 70 quả bóng. Khối Một sử dụng 24 quả, sau đó khối Hai sử dụng thêm 18 quả. Hỏi trường còn lại bao nhiêu quả bóng?', 3, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_025', 'Một trang trại có 65 con vịt. Người ta bán 27 con rồi bán thêm 16 con. Hỏi trang trại còn lại bao nhiêu con vịt?', 3, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_026', 'Một cửa hàng có 72 chiếc bánh. Buổi sáng bán 25 chiếc, buổi chiều bán 17 chiếc. Hỏi cửa hàng còn lại bao nhiêu chiếc bánh?', 3, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_027', 'Một lớp có 68 quyển truyện. Các bạn mượn 29 quyển rồi trả lại 5 quyển. Hỏi lớp còn bao nhiêu quyển truyện?', 3, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_028', 'Một kho có 80 chiếc hộp. Người ta lấy 32 chiếc để đóng hàng rồi lấy thêm 18 chiếc. Hỏi kho còn bao nhiêu chiếc hộp?', 3, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_029', 'Một cửa hàng có 75 quyển sách. Buổi sáng bán 28 quyển, buổi chiều bán 21 quyển. Hỏi cửa hàng còn bao nhiêu quyển sách?', 3, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_030', 'Một trang trại có 90 quả trứng. Người ta bán 35 quả vào buổi sáng và 24 quả vào buổi chiều. Hỏi còn lại bao nhiêu quả trứng?', 3, 'ACTIVE', NULL, NULL),
+
+	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_031', 'Một thư viện có 96 quyển sách. Ngày thứ nhất học sinh mượn 28 quyển, ngày thứ hai mượn thêm 37 quyển. Hỏi thư viện còn lại bao nhiêu quyển sách?', 4, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_032', 'Một cửa hàng có 100 chiếc bút. Buổi sáng bán 36 chiếc, buổi chiều bán 29 chiếc. Hỏi cửa hàng còn lại bao nhiêu chiếc bút?', 4, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_033', 'Một kho có 85 hộp bánh. Người ta chuyển đi 27 hộp, sau đó chuyển tiếp 38 hộp. Hỏi kho còn lại bao nhiêu hộp bánh?', 4, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_034', 'Một trường có 98 quyển vở. Cô giáo phát 34 quyển cho học sinh lớp 1A rồi phát thêm 27 quyển cho lớp 1B. Hỏi còn lại bao nhiêu quyển vở?', 4, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_035', 'Một cửa hàng có 87 quả bóng. Ngày thứ nhất bán 29 quả, ngày thứ hai bán thêm 36 quả. Hỏi cửa hàng còn lại bao nhiêu quả bóng?', 4, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_036', 'Một trang trại có 100 con gà. Người ta bán 38 con vào buổi sáng và 27 con vào buổi chiều. Hỏi trang trại còn lại bao nhiêu con gà?', 4, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_037', 'Một kho có 92 thùng nước. Người ta chuyển đi 35 thùng, sau đó chuyển tiếp 28 thùng. Hỏi kho còn lại bao nhiêu thùng nước?', 4, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_038', 'Một cửa hàng có 94 chiếc áo. Buổi sáng bán 37 chiếc, buổi chiều bán thêm 26 chiếc. Hỏi cửa hàng còn lại bao nhiêu chiếc áo?', 4, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_039', 'Một thư viện có 88 quyển truyện. Các bạn mượn 39 quyển vào ngày thứ nhất và 24 quyển vào ngày thứ hai. Hỏi thư viện còn lại bao nhiêu quyển truyện?', 4, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_040', 'Một cửa hàng có 100 chiếc bánh. Buổi sáng bán 42 chiếc, buổi chiều bán thêm 31 chiếc. Hỏi cửa hàng còn lại bao nhiêu chiếc bánh?', 4, 'ACTIVE', NULL, NULL);

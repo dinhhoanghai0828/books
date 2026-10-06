@@ -64,6 +64,6 @@ INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, C
 MATH_QUESTIONS: 40 câu
 MATH_ANSWERS: 160 đáp án
 Độ khó 1 → 4, mỗi mức 10 câu
-Đáp án đúng A/B/C/D được phân bố xen kẽ ngẫu nhiên trong 4 đáp án A=10, B=10, C=10, D=10
+Đáp án đúng A/B/C/D được phân bố, xáo trộn xen kẽ ngẫu nhiên trong 4 đáp án A=10, B=10, C=10, D=10
 Câu hỏi rõ ràng đầy đủ, dữ kiện chi tiết
 Toàn bộ vẫn trong phạm vi Toán lớp 1
