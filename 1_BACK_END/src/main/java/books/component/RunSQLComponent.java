@@ -113,6 +113,8 @@ public class RunSQLComponent {
         scripts.add(path + "APP_YOUR_ANIMATED_STORY_SHOW.sql");
         scripts.add(path + "APP_QUESTIONS.sql");
         scripts.add(path + "APP_QUESTIONS_ANSWERS.sql");
+        scripts.add(path + "MATH_QUESTIONS.sql");
+        scripts.add(path + "MATH_ANSWERS.sql");
 
         if (scripts.isEmpty()) {
             System.out.println("insertContentFromExport: no APP_*.sql files found from DB.");
