@@ -240,7 +240,7 @@ const MathGradePage = () => {
                         style={{ width: 150 }}
                         placeholder="Tất cả"
                       >
-                        <Select.Option value={null}>Tất cả</Select.Option>
+                        <Select.Option value={0}>Tất cả</Select.Option>
                         <Select.Option value={1}>Dễ</Select.Option>
                         <Select.Option value={2}>Bình thường</Select.Option>
                         <Select.Option value={3}>Khó</Select.Option>
