@@ -3,7 +3,6 @@
 // ============================================================
 
 export interface MathCategoryType {
-  id: number;
   categoryCode: string;
   categoryName: string;
   categoryDesc: string;
