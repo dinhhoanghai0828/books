@@ -4,6 +4,27 @@ import { CheckCircleOutlined, CloseCircleOutlined } from '@ant-design/icons';
 
 const { Text } = Typography;
 
+// Hàm chuyển đổi độ khó sang text
+const getDifficultyText = (difficulty: number): string => {
+  switch (difficulty) {
+    case 1: return 'Dễ';
+    case 2: return 'Bình thường';
+    case 3: return 'Khó';
+    case 4: return 'Rất khó';
+    default: return difficulty.toString();
+  }
+};
+
+const getDifficultyColor = (difficulty: number): string => {
+  switch (difficulty) {
+    case 1: return 'green';
+    case 2: return 'blue';
+    case 3: return 'orange';
+    case 4: return 'red';
+    default: return 'default';
+  }
+};
+
 interface MathQuizComponentProps {
   questions: MathQuestionType[];
   userAnswers: Record<string, string>;
@@ -33,7 +54,7 @@ const MathQuizComponent = ({ questions, userAnswers, onAnswerChange, isChecked }
                 <Text strong style={{ fontSize: '16px' }}>
                   Câu {index + 1}
                 </Text>
-                <Tag color="blue">Độ khó: {question.difficulty}</Tag>
+                <Tag color={getDifficultyColor(question.difficulty)}>{getDifficultyText(question.difficulty)}</Tag>
                 {isChecked && !isUnanswered && (
                   isCorrect ? (
                     <Tag color="success" icon={<CheckCircleOutlined />}>Đúng</Tag>
