@@ -56,8 +56,8 @@ INSERT INTO BOOKS(UUID,SLUG,ENG,VI,AUTHOR,DESCRIPTION,CATEGORY_SLUG,IMG,NUMBER) 
 	(UUID(),'animatters','Animatters','Hoạt hình','Nhiều tác giả','Những câu chuyện người lớn','truyen-nguoi-lon','ANIMATTERS.png', 1),
 	
 	(UUID(),'I-am-Mary','I\'m Mary','Tôi là Mary','Mary','Những triết lý, bài học trong cuộc sống hiện đại','sach-triet-ly','I_AM_MARY.png',1),
-	(UUID(),'economist','Economist','Kinh tế học','Nhiều tác giả','Thông tin kinh tế, chính trị, khoa học, xã hội','tin-tuc-hang-ngay','THE_ECONOMIST.png',1),
-	(UUID(),'voa','VOA','Báo nước ngoài','Nhiều tác giả','Thông tin kinh tế, chính trị, khoa học, xã hội, giáo dục, du lịch','tin-tuc-hang-ngay','VOA.png',2),
+	(UUID(),'economist','Economist','Kinh tế học','Nhiều tác giả','Thông tin kinh tế, chính trị, khoa học, xã hội','news','THE_ECONOMIST.png',1),
+	(UUID(),'voa','VOA','Báo nước ngoài','Nhiều tác giả','Thông tin kinh tế, chính trị, khoa học, xã hội, giáo dục, du lịch','news','VOA.png',2),
 	/* Thuyết trình */
 	-- Thuyết trình - TEDTALKS
 	(UUID(),'technology','Technology','Công Nghệ','Nhiều tác giả','Thảo luận về các vấn đề trong cuộc sống','tedtalks','TEDTALKS.png',1),
@@ -432,11 +432,11 @@ INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,IS_
 	(UUID(),'esl-fast-beginner-1-63','The Pouch of a Kangaroo','Túi của con chuột túi','ESL_FAST_BEGINNER_1_063.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-beginner-1',1,1,0,63),
 	(UUID(),'esl-fast-beginner-1-64','Aunt and Uncle','Dì và chú','ESL_FAST_BEGINNER_1_064.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,1,0,64),
 	(UUID(),'esl-fast-beginner-1-65','A Busy Boy','Một cậu bé bận rộn','ESL_FAST_BEGINNER_1_065.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,1,0,65),
-	(UUID(),'esl-fast-beginner-1-66','Fruit Salad','Salad trái cây','ESL_FAST_BEGINNER_1_066.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,0,66),
-	(UUID(),'esl-fast-beginner-1-67','He Takes His Test','Cậu ấy làm bài kiểm tra','ESL_FAST_BEGINNER_1_067.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,0,67),
-	(UUID(),'esl-fast-beginner-1-68','Parent-teacher Conference','Buổi họp phụ huynh và giáo viên','ESL_FAST_BEGINNER_1_068.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,0,68),
-	(UUID(),'esl-fast-beginner-1-69','The Second Dog','Con chó thứ hai','ESL_FAST_BEGINNER_1_069.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,0,69),
-	(UUID(),'esl-fast-beginner-1-70','A Cat and a Ball of Yarn','Một con mèo và cuộn len','ESL_FAST_BEGINNER_1_070.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,0,70),
+	(UUID(),'esl-fast-beginner-1-66','Fruit Salad','Salad trái cây','ESL_FAST_BEGINNER_1_066.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,1,0,66),
+	(UUID(),'esl-fast-beginner-1-67','He Takes His Test','Cậu ấy làm bài kiểm tra','ESL_FAST_BEGINNER_1_067.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,1,0,67),
+	(UUID(),'esl-fast-beginner-1-68','Parent-teacher Conference','Buổi họp phụ huynh và giáo viên','ESL_FAST_BEGINNER_1_068.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,1,0,68),
+	(UUID(),'esl-fast-beginner-1-69','The Second Dog','Con chó thứ hai','ESL_FAST_BEGINNER_1_069.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,1,0,69),
+	(UUID(),'esl-fast-beginner-1-70','A Cat and a Ball of Yarn','Một con mèo và cuộn len','ESL_FAST_BEGINNER_1_070.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,1,0,70),
 	(UUID(),'esl-fast-beginner-1-71','Taking Care of His Orange Tree','Chăm sóc cây cam của cậu ấy','ESL_FAST_BEGINNER_1_071.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,0,71),
 	(UUID(),'esl-fast-beginner-1-72','The Missing Notebook','Cuốn vở bị mất','ESL_FAST_BEGINNER_1_072.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,0,72),
 	(UUID(),'esl-fast-beginner-1-73','Tag, You\'re It!','Trò chơi đuổi bắt, đến lượt bạn rồi!','ESL_FAST_BEGINNER_1_073.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,0,73),
@@ -459,7 +459,14 @@ INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,IS_
 	(UUID(),'esl-fast-beginner-1-90','Forgetting Her Glasses','Quên kính của cô ấy','ESL_FAST_BEGINNER_1_090.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,0,90),
 	(UUID(),'esl-fast-beginner-1-91','Quitting His Job','Nghỉ việc','ESL_FAST_BEGINNER_1_091.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,0,91),
 	(UUID(),'esl-fast-beginner-1-92','Future Goals','Mục tiêu tương lai','ESL_FAST_BEGINNER_1_092.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,0,92),
-	(UUID(),'esl-fast-beginner-1-93','A Kind Stranger','Một người lạ tốt bụng','ESL_FAST_BEGINNER_1_093.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,0,93);
+	(UUID(),'esl-fast-beginner-1-93','A Kind Stranger','Một người lạ tốt bụng','ESL_FAST_BEGINNER_1_093.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,0,93),
+	(UUID(),'esl-fast-beginner-1-94','Excited for Thanksgiving','Háo hức chờ Lễ Tạ Ơn','ESL_FAST_BEGINNER_1_094.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,0,94),
+	(UUID(),'esl-fast-beginner-1-95','A Sad Book and a Happy Book','Một cuốn sách buồn và một cuốn sách vui','ESL_FAST_BEGINNER_1_095.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,0,95),
+	(UUID(),'esl-fast-beginner-1-96','The Water Slide at the Amusement Park','Cầu trượt nước ở công viên giải trí','ESL_FAST_BEGINNER_1_096.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,0,96),
+	(UUID(),'esl-fast-beginner-1-97','Keeping a Diary','Viết nhật ký','ESL_FAST_BEGINNER_1_097.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,0,97),
+	(UUID(),'esl-fast-beginner-1-98','Trying on Shoes','Thử giày','ESL_FAST_BEGINNER_1_098.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,0,98),
+	(UUID(),'esl-fast-beginner-1-99','A Lot of Pants','Rất nhiều quần','ESL_FAST_BEGINNER_1_099.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,0,99),
+	(UUID(),'esl-fast-beginner-1-100','Chili Sauce Lover','Người yêu thích tương ớt','ESL_FAST_BEGINNER_1_100.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,0,100);
 
 INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,IS_LANGUAGE_APPROVED,IS_REVIEW_COMPLETED,IS_READ,NUMBER) VALUES
 	(UUID(),'esl-fast-beginner-2-1','Going to School','Đi tới trường','ESL_FAST_BEGINNER_2_001.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-2',1,1,0,1),
