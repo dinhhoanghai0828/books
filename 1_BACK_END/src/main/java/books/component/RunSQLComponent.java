@@ -90,6 +90,7 @@ public class RunSQLComponent {
         scripts.add(path + "2_SQL_CREATE_DATA.sql");
         scripts.add(path + "3_SQL_ENG_MISSING_WORDS.sql");
         scripts.add(path + "3_SQL_ENG_WORDS.sql");
+        scripts.add(path + "MATH_CATEGORIES.sql");
 
         scripts.add(path + "APP_ESL_FAST_BEGINNER_1.sql");
         scripts.add(path + "APP_ESL_FAST_BEGINNER_2.sql");
