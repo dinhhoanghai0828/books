@@ -6,7 +6,7 @@ import { FolderOutlined, FileTextOutlined, CheckCircleOutlined, ReloadOutlined }
 import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import MathQuizComponent from '@/components/math/MathQuizComponent';
-import '../../../styles/global.css';
+import '@/styles/global.css';
 
 const { Sider, Content } = Layout;
 const { Title } = Typography;

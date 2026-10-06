@@ -149,22 +149,22 @@ const HeaderComponent = () => {
   // cac muc co href duoc boc trong Link, cac muc co children xu ly de quy
   const buildMenuItems = (items: MenuItem[]): any[] =>
     items.map((item) => {
-      if (item.children) {
-        return {
-          ...item,
-          label: item.label,
-          children: buildMenuItems(item.children),
-        };
-      }
+      // Process children recursively first
+      const children = item.children ? buildMenuItems(item.children) : undefined;
+      
       // Nếu item có href và label chưa phải là React element, bọc trong Link
       if (item.href && typeof item.label === 'string') {
         return {
           ...item,
           label: <Link href={item.href}>{item.label}</Link>,
+          children,
         };
       }
       // Nếu label đã là React element (ví dụ từ buildCategoryMenuItems), giữ nguyên
-      return item;
+      return {
+        ...item,
+        children,
+      };
     });
 
   // Combine static menu items with dynamic category menu items
