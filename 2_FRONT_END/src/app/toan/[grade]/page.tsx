@@ -29,7 +29,7 @@ const MathGradePage = () => {
   const [openConfirmModal, setOpenConfirmModal] = useState(false);
 
   // Bộ lọc
-  const [difficultyFilter, setDifficultyFilter] = useState<number | null>(null); // null = tất cả
+  const [difficultyFilter, setDifficultyFilter] = useState<number>(0); // 0 = tất cả
   const [questionLimit, setQuestionLimit] = useState<number>(10); // 0 = tất cả
   const [questionOrder, setQuestionOrder] = useState<'random' | 'default'>('default');
 
@@ -71,7 +71,7 @@ const MathGradePage = () => {
 
           // Filter by difficulty
           let filteredQuestions = data;
-          if (difficultyFilter !== null) {
+          if (difficultyFilter !== 0) {
             filteredQuestions = data.filter(q => q.difficulty === difficultyFilter);
           }
 
@@ -163,7 +163,7 @@ const MathGradePage = () => {
 
       // Filter by difficulty
       let filteredQuestions = data;
-      if (difficultyFilter !== null) {
+      if (difficultyFilter !== 0) {
         filteredQuestions = data.filter(q => q.difficulty === difficultyFilter);
       }
 
