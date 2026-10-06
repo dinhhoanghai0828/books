@@ -1,6 +1,5 @@
 import { MathQuestionType } from '@/interfaces/math';
 import { Radio, Button, Space, Card, Typography, Tag } from 'antd';
-import { CheckCircleOutlined, CloseCircleOutlined } from '@ant-design/icons';
 
 const { Text } = Typography;
 
@@ -51,20 +50,10 @@ const MathQuizComponent = ({ questions, userAnswers, onAnswerChange, isChecked }
           >
             <div style={{ marginBottom: '16px' }}>
               <Space size="middle">
-                <Text strong style={{ fontSize: '16px' }}>
+                <Text strong style={{ fontSize: '16px', fontWeight: 'bold' }}>
                   Câu {index + 1}
                 </Text>
                 <Tag color={getDifficultyColor(question.difficulty)}>{getDifficultyText(question.difficulty)}</Tag>
-                {isChecked && !isUnanswered && (
-                  isCorrect ? (
-                    <Tag color="success" icon={<CheckCircleOutlined />}>Đúng</Tag>
-                  ) : (
-                    <Tag color="error" icon={<CloseCircleOutlined />}>Sai</Tag>
-                  )
-                )}
-                {isChecked && isUnanswered && (
-                  <Tag color="warning">Chưa trả lời</Tag>
-                )}
               </Space>
             </div>
 
@@ -94,18 +83,12 @@ const MathQuizComponent = ({ questions, userAnswers, onAnswerChange, isChecked }
                         borderRadius: '8px',
                         display: 'flex',
                         alignItems: 'center',
-                        background: isChecked && isThisCorrect ? '#f6ffed' : isChecked && isSelected && !isThisCorrect ? '#fff2f0' : undefined,
+                        background: isChecked && isThisCorrect ? '#d9f7be' : isChecked && isSelected && !isThisCorrect ? '#ffccc7' : undefined,
                         borderColor: isChecked && isThisCorrect ? '#52c41a' : isChecked && isSelected && !isThisCorrect ? '#ff4d4f' : undefined,
                       }}
                     >
                       <span style={{ fontWeight: 'bold', marginRight: '8px' }}>{answer.answerCode}.</span>
                       <span>{answer.answerText}</span>
-                      {isChecked && isThisCorrect && (
-                        <CheckCircleOutlined style={{ color: '#52c41a', marginLeft: 'auto' }} />
-                      )}
-                      {isChecked && isSelected && !isThisCorrect && (
-                        <CloseCircleOutlined style={{ color: '#ff4d4f', marginLeft: 'auto' }} />
-                      )}
                     </Radio>
                   );
                 })}
