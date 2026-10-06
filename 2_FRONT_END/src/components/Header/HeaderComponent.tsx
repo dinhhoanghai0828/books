@@ -51,6 +51,12 @@ const STATIC_MENU_ITEMS: MenuItem[] = [
     href: '/',
   },
   {
+    label: 'Toán',
+    key: 'toan',
+    icon: <ReadOutlined />,
+    href: '/toan/lop-1',
+  },
+  {
     label: 'Từ mới',
     key: 'words',
     icon: <BookOutlined />,

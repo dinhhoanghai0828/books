@@ -616,3 +616,27 @@ export const submitQuiz = async (userAnswers: Record<string, string>, questions:
     throw new Error(getErrorMessage(error));
   }
 };
+
+// ============================================================
+// MATH
+// ============================================================
+
+// Lay danh sach math categories (tree structure)
+export const getMathCategories = async () => {
+  try {
+    const response = await apiClient.get('/math/categories');
+    return response.data;
+  } catch (error: any) {
+    throw new Error(getErrorMessage(error));
+  }
+};
+
+// Lay danh sach cau hoi theo math category code
+export const getMathQuestionsByCategoryCode = async (categoryCode: string) => {
+  try {
+    const response = await apiClient.get(`/math/questions/${categoryCode}`);
+    return response.data;
+  } catch (error: any) {
+    throw new Error(getErrorMessage(error));
+  }
+};

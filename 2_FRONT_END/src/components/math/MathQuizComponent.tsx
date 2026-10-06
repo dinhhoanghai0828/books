@@ -1,0 +1,106 @@
+import { MathQuestionType } from '@/interfaces/math';
+import { Radio, Button, Space, Card, Typography, Tag } from 'antd';
+import { CheckCircleOutlined, CloseCircleOutlined } from '@ant-design/icons';
+
+const { Text } = Typography;
+
+interface MathQuizComponentProps {
+  questions: MathQuestionType[];
+  userAnswers: Record<string, string>;
+  onAnswerChange: (questionCode: string, answerCode: string) => void;
+  isChecked: boolean;
+}
+
+const MathQuizComponent = ({ questions, userAnswers, onAnswerChange, isChecked }: MathQuizComponentProps) => {
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+      {questions.map((question, index) => {
+        const userAnswer = userAnswers[question.questionCode];
+        const correctAnswer = question.answers.find(a => a.isCorrect === 'Y');
+        const isCorrect = userAnswer === correctAnswer?.answerCode;
+        const isUnanswered = !userAnswer;
+
+        return (
+          <Card
+            key={question.questionCode}
+            style={{
+              boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+              border: isChecked && isCorrect ? '2px solid #52c41a' : isChecked && !isUnanswered && !isCorrect ? '2px solid #ff4d4f' : undefined,
+            }}
+          >
+            <div style={{ marginBottom: '16px' }}>
+              <Space size="middle">
+                <Text strong style={{ fontSize: '16px' }}>
+                  Câu {index + 1}
+                </Text>
+                <Tag color="blue">Độ khó: {question.difficulty}</Tag>
+                {isChecked && !isUnanswered && (
+                  isCorrect ? (
+                    <Tag color="success" icon={<CheckCircleOutlined />}>Đúng</Tag>
+                  ) : (
+                    <Tag color="error" icon={<CloseCircleOutlined />}>Sai</Tag>
+                  )
+                )}
+                {isChecked && isUnanswered && (
+                  <Tag color="warning">Chưa trả lời</Tag>
+                )}
+              </Space>
+            </div>
+
+            <div style={{ marginBottom: '16px', fontSize: '16px' }}>
+              {question.questionText}
+            </div>
+
+            <Radio.Group
+              value={userAnswer}
+              onChange={(e) => onAnswerChange(question.questionCode, e.target.value)}
+              disabled={isChecked}
+              style={{ width: '100%' }}
+            >
+              <Space direction="vertical" style={{ width: '100%' }}>
+                {question.answers.map((answer) => {
+                  const isThisCorrect = answer.isCorrect === 'Y';
+                  const isSelected = userAnswer === answer.answerCode;
+
+                  return (
+                    <Radio
+                      key={answer.answerCode}
+                      value={answer.answerCode}
+                      style={{
+                        width: '100%',
+                        padding: '12px',
+                        border: '1px solid #d9d9d9',
+                        borderRadius: '8px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        background: isChecked && isThisCorrect ? '#f6ffed' : isChecked && isSelected && !isThisCorrect ? '#fff2f0' : undefined,
+                        borderColor: isChecked && isThisCorrect ? '#52c41a' : isChecked && isSelected && !isThisCorrect ? '#ff4d4f' : undefined,
+                      }}
+                    >
+                      <span style={{ fontWeight: 'bold', marginRight: '8px' }}>{answer.answerCode}.</span>
+                      <span>{answer.answerText}</span>
+                      {isChecked && isThisCorrect && (
+                        <CheckCircleOutlined style={{ color: '#52c41a', marginLeft: 'auto' }} />
+                      )}
+                      {isChecked && isSelected && !isThisCorrect && (
+                        <CloseCircleOutlined style={{ color: '#ff4d4f', marginLeft: 'auto' }} />
+                      )}
+                    </Radio>
+                  );
+                })}
+              </Space>
+            </Radio.Group>
+
+            {isChecked && !isUnanswered && !isCorrect && correctAnswer && (
+              <div style={{ marginTop: '12px', color: '#ff4d4f' }}>
+                Đáp án đúng: <strong>{correctAnswer.answerCode}. {correctAnswer.answerText}</strong>
+              </div>
+            )}
+          </Card>
+        );
+      })}
+    </div>
+  );
+};
+
+export default MathQuizComponent;
