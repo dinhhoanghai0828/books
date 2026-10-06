@@ -64,10 +64,9 @@ public class MathCategoryServiceImpl implements MathCategoryService {
                     tongHop.setFullPath(parent.getFullPath());
                     tongHop.setChildren(new ArrayList<>());
 
-                    // Thêm vào đầu danh sách children
-                    List<MathCategoryDTO> newChildren = new ArrayList<>();
+                    // Thêm vào cuối danh sách children
+                    List<MathCategoryDTO> newChildren = new ArrayList<>(parent.getChildren());
                     newChildren.add(tongHop);
-                    newChildren.addAll(parent.getChildren());
                     parent.setChildren(newChildren);
                 }
             }
