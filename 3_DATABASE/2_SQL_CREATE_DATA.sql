@@ -10,6 +10,7 @@ INSERT INTO CATEGORIES(UUID, SLUG, ENG, VI, PARENT_SLUG, NUMBER) VALUES
     (UUID(), 'news', 'News', 'Báo', NULL, 3),
     (UUID(), 'presentation', 'Presentation', 'Thuyết trình', NULL, 4),
     (UUID(), 'tieng-anh-co-ban', 'Basic English', 'Tiếng anh cơ bản', NULL, 5),
+    (UUID(), 'toan', 'Toán', 'Toán', NULL, 6),
 
     -- Truyện
     (UUID(), 'truyen-truyen-cam-hung', 'Inspirational stories', 'Truyện truyền cảm hứng', 'truyen', 1),
@@ -37,7 +38,12 @@ INSERT INTO CATEGORIES(UUID, SLUG, ENG, VI, PARENT_SLUG, NUMBER) VALUES
 
     -- Tiếng Anh cơ bản
     (UUID(), 'tieng-anh-co-ban-cap-do-1', 'Basic English Level 1', 'Tiếng anh cơ bản cấp độ 1', 'tieng-anh-co-ban', NULL);
-
+	-- Toán
+    (UUID(), 'lop-1', 'Lớp 1', 'Lớp 1', 'toan', 1),
+    (UUID(), 'lop-2', 'Lớp 2', 'Lớp 2', 'toan', 2),
+    (UUID(), 'lop-3', 'Lớp 3', 'Lớp 3', 'toan', 3),
+    (UUID(), 'lop-4', 'Lớp 4', 'Lớp 4', 'toan', 4),
+    (UUID(), 'lop-5', 'Lớp 5', 'Lớp 5', 'toan', 5),
 	
 	
 --	DU LIEU BANG BOOKS
