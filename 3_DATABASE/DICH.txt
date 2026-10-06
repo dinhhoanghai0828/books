@@ -41,3 +41,29 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE, ANSWER_TEXT, ANSWER_TEXT_VI, IS_
 
 
 Đáp án đúng đã được xáo trộn theo thứ tự: B, C, D, B, A, C, A, B, D, C, A, B, D, A, C, B, D, A, C, A, B, D, A, C, B, A, C, D, B, D — đủ A=7, B=8, C=8, D=7, không chạy theo quy luật lặp cố định.
+
+
+
+
+Tạo cho t mỗi loại 40 câu bao gồm Dễ, Trung Bình, Khó, Rất Khó
+-- Child: 6.1. Hai bước cộng
+	('MULTI_STEP_ADD_ADD', 'Hai bước cộng', 'Thực hiện hai lần thêm vào.', 'MULTI_STEP', 'ACTIVE', NULL, NULL),
+tương tự
+
+INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
+	('NUMBER_INCREASING', 'NUMBER_INCREASING_001', '2, 3, 4, 5, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+('NUMBER_INCREASING', 'NUMBER_INCREASING_011', '2, 4, 6, 8, ?, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+('NUMBER_INCREASING', 'NUMBER_INCREASING_021', '2, 5, 8, 11, 14, ?, số nào thích hợp điền vào dấu ?', 3, 'ACTIVE', NULL, NULL),
+('NUMBER_INCREASING', 'NUMBER_INCREASING_031', '?, 7, 12, 17, 22, 27. Số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
+INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, CREATED_AT, UPDATED_AT) VALUES
+	('NUMBER_INCREASING_001', 'A', '5', 'Y', NULL, NULL),
+	('NUMBER_INCREASING_001', 'B', '6', 'N', NULL, NULL),
+	('NUMBER_INCREASING_001', 'C', '7', 'N', NULL, NULL),
+	('NUMBER_INCREASING_001', 'D', '8', 'N', NULL, NULL),
+
+MATH_QUESTIONS: 40 câu
+MATH_ANSWERS: 160 đáp án
+Độ khó 1 → 4, mỗi mức 10 câu
+Đáp án đúng A/B/C/D được phân bố xen kẽ ngẫu nhiên trong 4 đáp án A=10, B=10, C=10, D=10
+Câu hỏi rõ ràng đầy đủ, dữ kiện chi tiết
+Toàn bộ vẫn trong phạm vi Toán lớp 1
