@@ -54,7 +54,13 @@ const STATIC_MENU_ITEMS: MenuItem[] = [
     label: 'Toán',
     key: 'toan',
     icon: <ReadOutlined />,
-    href: '/toan/lop-1',
+    children: [
+      {
+        label: 'Lớp 1',
+        key: 'lop-1',
+        href: '/lop-1',
+      },
+    ],
   },
   {
     label: 'Từ mới',
@@ -150,10 +156,15 @@ const HeaderComponent = () => {
           children: buildMenuItems(item.children),
         };
       }
-      return {
-        ...item,
-        label: item.href ? <Link href={item.href}>{item.label}</Link> : item.label,
-      };
+      // Nếu item có href và label chưa phải là React element, bọc trong Link
+      if (item.href && typeof item.label === 'string') {
+        return {
+          ...item,
+          label: <Link href={item.href}>{item.label}</Link>,
+        };
+      }
+      // Nếu label đã là React element (ví dụ từ buildCategoryMenuItems), giữ nguyên
+      return item;
     });
 
   // Combine static menu items with dynamic category menu items

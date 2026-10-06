@@ -178,6 +178,289 @@ CREATE TABLE ANSWERS (
     UNIQUE INDEX UK_ANSWERS_QUESTION_OPTION (QUESTION_CODE, ANSWER_CODE)
 );
 
+
+DROP TABLE IF EXISTS `MATH_CATEGORIES`;
+CREATE TABLE MATH_CATEGORIES (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    CATEGORY_CODE VARCHAR(100) NOT NULL,
+    CATEGORY_NAME VARCHAR(500) NOT NULL,
+    PARENT_ID INT NULL,
+    STATUS VARCHAR(20) NOT NULL DEFAULT 'ACTIVE',
+    CREATED_AT DATETIME(6) NULL DEFAULT NULL,
+    UPDATED_AT DATETIME(6) NULL DEFAULT NULL,
+    CREATED_BY VARCHAR(50) CHARACTER SET UTF8 COLLATE UTF8_GENERAL_CI NULL DEFAULT NULL,
+    UPDATED_BY VARCHAR(50) CHARACTER SET UTF8 COLLATE UTF8_GENERAL_CI NULL DEFAULT NULL,
+    INDEX IDX_MATH_CATEGORIES_PARENT_ID (PARENT_ID),
+    INDEX IDX_MATH_CATEGORIES_STATUS (STATUS),
+    UNIQUE INDEX UK_MATH_CATEGORIES_CODE (CATEGORY_CODE)
+);
+
+DROP TABLE IF EXISTS `MATH_QUESTIONS`;
+CREATE TABLE MATH_QUESTIONS (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    CATEGORY_CODE VARCHAR(100) NOT NULL,
+    QUESTION_CODE VARCHAR(200) NOT NULL,
+    QUESTION_TEXT VARCHAR(2000) NOT NULL,
+    DIFFICULTY INT NOT NULL,
+    STATUS VARCHAR(20) DEFAULT 'ACTIVE' NOT NULL,
+    CREATED_AT DATETIME(6) NULL DEFAULT NULL,
+    UPDATED_AT DATETIME(6) NULL DEFAULT NULL,
+    CREATED_BY VARCHAR(50) CHARACTER SET UTF8 COLLATE UTF8_GENERAL_CI NULL DEFAULT NULL,
+    UPDATED_BY VARCHAR(50) CHARACTER SET UTF8 COLLATE UTF8_GENERAL_CI NULL DEFAULT NULL,
+    INDEX IDX_MATH_QUESTIONS_CATEGORY_CODE (CATEGORY_CODE),
+    INDEX IDX_MATH_QUESTIONS_STATUS (STATUS),
+    UNIQUE INDEX UK_MATH_QUESTIONS_CODE (QUESTION_CODE)
+);
+
+DROP TABLE IF EXISTS `MATH_ANSWERS`;
+CREATE TABLE MATH_ANSWERS (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    QUESTION_CODE VARCHAR(200) NOT NULL,
+    ANSWER_CODE VARCHAR(10) NOT NULL,
+    ANSWER_TEXT VARCHAR(2000) NOT NULL,
+    IS_CORRECT CHAR(1) DEFAULT 'N' NOT NULL,
+    CREATED_AT DATETIME(6) NULL DEFAULT NULL,
+    UPDATED_AT DATETIME(6) NULL DEFAULT NULL,
+    CREATED_BY VARCHAR(50) CHARACTER SET UTF8 COLLATE UTF8_GENERAL_CI NULL DEFAULT NULL,
+    UPDATED_BY VARCHAR(50) CHARACTER SET UTF8 COLLATE UTF8_GENERAL_CI NULL DEFAULT NULL,
+    INDEX IDX_MATH_ANSWERS_QUESTION_CODE (QUESTION_CODE),
+    UNIQUE INDEX UK_MATH_ANSWERS_QUESTION_CODE(QUESTION_CODE, ANSWER_CODE)
+);
+
+-- Parent: DÃY SỐ VÀ QUY LUẬT
+-- Parent: SUY LUẬN LOGIC
+INSERT INTO MATH_CATEGORIES (ID, CATEGORY_CODE, CATEGORY_NAME, PARENT_ID, STATUS, CREATED_AT, UPDATED_AT) VALUES
+-- Parent: 1. DÃY SỐ VÀ QUY LUẬT
+(1, 'NUMBER', 'DÃY SỐ VÀ QUY LUẬT', NULL, 'ACTIVE', NULL, NULL),
+-- Parent: 2. SUY LUẬN LOGIC
+(2, 'LOGIC', 'SUY LUẬN LOGIC', NULL, 'ACTIVE', NULL, NULL),
+-- Child: 1.1. Dãy tăng đều
+(3, 'NUMBER_INCREASING', 'Dãy tăng đều', 1, 'ACTIVE', NULL, NULL),
+-- Child: 1.2. Dãy giảm đều
+(4, 'NUMBER_DECREASING', 'Dãy giảm đều', 1, 'ACTIVE', NULL, NULL),
+-- Child: 1.3. Dãy xen kẽ
+(5, 'NUMBER_ALTERNATING', 'Dãy xen kẽ', 1, 'ACTIVE', NULL, NULL),
+-- Child: 1.4. Dãy có khoảng cách thay đổi
+(6, 'NUMBER_VARIABLE_INTERVAL', 'Dãy có khoảng cách thay đổi', 1, 'ACTIVE', NULL, NULL),
+-- Child: 1.5. Dãy kết hợp nhiều quy luật
+(7, 'NUMBER_MULTI_RULE', 'Dãy kết hợp nhiều quy luật', 1, 'ACTIVE', NULL, NULL),
+-- Child: 1.7. Dãy số đặc biệt
+(8, 'NUMBER_SPECIAL', 'Dãy số đặc biệt', 1, 'ACTIVE', NULL, NULL),
+-- Child: 1.8. Phát hiện số sai
+(9, 'NUMBER_WRONG_NUMBER', 'Phát hiện số sai', 1, 'ACTIVE', NULL, NULL),
+
+-- Child: 2.1. So sánh
+(10, 'LOGIC_COMPARISON', 'So sánh', 2, 'ACTIVE', NULL, NULL),
+-- Child: 2.2. Suy luận thứ tự
+(11, 'LOGIC_ORDER', 'Suy luận thứ tự', 2, 'ACTIVE', NULL, NULL),
+-- Child: 2.3. Tìm vị trí
+(12, 'LOGIC_POSITION', 'Tìm vị trí', 2, 'ACTIVE', NULL, NULL),
+-- Child: 2.4. Đúng – sai
+(13, 'LOGIC_TRUE_FALSE', 'Đúng – sai', 2, 'ACTIVE', NULL, NULL),
+-- Child: 2.5. Loại trừ
+(14, 'LOGIC_ELIMINATION', 'Loại trừ', 2, 'ACTIVE', NULL, NULL),
+-- Child: 2.6. Ghép đôi
+(15, 'LOGIC_MATCHING', 'Ghép đôi', 2, 'ACTIVE', NULL, NULL),
+-- Child: 2.7. Phân loại
+(16, 'LOGIC_CLASSIFICATION', 'Phân loại', 2, 'ACTIVE', NULL, NULL),
+-- Child: 2.8. Suy luận nhiều điều kiện
+(17, 'LOGIC_MULTI_CONDITION', 'Suy luận nhiều điều kiện', 2, 'ACTIVE', NULL, NULL),
+-- Child: 2.9. Chắc chắn đúng
+(18, 'LOGIC_CERTAIN_TRUE', 'Chắc chắn đúng', 2, 'ACTIVE', NULL, NULL),
+-- Child: 2.10. Chắc chắn sai / không thể xảy ra
+(19, 'LOGIC_CERTAIN_FALSE', 'Chắc chắn sai / không thể xảy ra', 2, 'ACTIVE', NULL, NULL),
+-- Child: 2.11. Suy luận nhiều tầng
+(20, 'LOGIC_MULTI_LEVEL', 'Suy luận nhiều tầng', 2, 'ACTIVE', NULL, NULL),
+
+-- Parent: 3. TÌM SỐ CHƯA BIẾT
+(21, 'UNKNOWN_NUMBER', 'TÌM SỐ CHƯA BIẾT', NULL, 'ACTIVE', NULL, NULL),
+-- Child: 3.1. Tìm số hạng chưa biết
+(22, 'UNKNOWN_NUMBER_TERM', 'Tìm số hạng chưa biết', 21, 'ACTIVE', NULL, NULL),
+-- Child: 3.2. Tìm số bị trừ
+(23, 'UNKNOWN_NUMBER_MINUEND', 'Tìm số bị trừ', 21, 'ACTIVE', NULL, NULL),
+-- Child: 3.3. Tìm số trừ
+(24, 'UNKNOWN_NUMBER_SUBTRAHEND', 'Tìm số trừ', 21, 'ACTIVE', NULL, NULL),
+-- Child: 3.4. Tìm số lớn hơn/nhỏ hơn
+(25, 'UNKNOWN_NUMBER_GREATER_LESS', 'Tìm số lớn hơn/nhỏ hơn', 21, 'ACTIVE', NULL, NULL),
+-- Child: 3.5. Tìm số dựa vào tổng
+(26, 'UNKNOWN_NUMBER_BY_SUM', 'Tìm số dựa vào tổng', 21, 'ACTIVE', NULL, NULL),
+-- Child: 3.6. Tìm số dựa vào hiệu
+(27, 'UNKNOWN_NUMBER_BY_DIFFERENCE', 'Tìm số dựa vào hiệu', 21, 'ACTIVE', NULL, NULL),
+-- Child: 3.7. Tìm số trong sơ đồ
+(28, 'UNKNOWN_NUMBER_DIAGRAM', 'Tìm số trong sơ đồ', 21, 'ACTIVE', NULL, NULL),
+-- Child: 3.8. Tìm số trong phép tính liên hoàn
+(29, 'UNKNOWN_NUMBER_CHAIN_CALCULATION', 'Tìm số trong phép tính liên hoàn', 21, 'ACTIVE', NULL, NULL),
+-- Child: 3.9. Tìm số trong nhiều phép tính
+(30, 'UNKNOWN_NUMBER_MULTIPLE_CALCULATION', 'Tìm số trong nhiều phép tính', 21, 'ACTIVE', NULL, NULL),
+-- Child: 3.10. Tìm số thỏa mãn điều kiện
+(31, 'UNKNOWN_NUMBER_CONDITION', 'Tìm số thỏa mãn điều kiện', 21, 'ACTIVE', NULL, NULL),
+-- Child: 3.11. Tìm nhiều số có thể xảy ra
+(32, 'UNKNOWN_NUMBER_MULTIPLE_POSSIBILITIES', 'Tìm nhiều số có thể xảy ra', 21, 'ACTIVE', NULL, NULL),
+-- Child: 3.12. Tìm số duy nhất
+(33, 'UNKNOWN_NUMBER_UNIQUE', 'Tìm số duy nhất', 21, 'ACTIVE', NULL, NULL),
+
+-- Parent: 4. BÀI TOÁN NGƯỢC
+(34, 'REVERSE_PROBLEM', 'BÀI TOÁN NGƯỢC', NULL, 'ACTIVE', NULL, NULL),
+-- Child: 4.1. Biết kết quả → tìm số ban đầu
+(35, 'REVERSE_RESULT_TO_INITIAL', 'Biết kết quả → tìm số ban đầu', 34, 'ACTIVE', NULL, NULL),
+-- Child: 4.2. Thêm vào rồi tìm ban đầu
+(36, 'REVERSE_ADD_TO_INITIAL', 'Thêm vào rồi tìm ban đầu', 34, 'ACTIVE', NULL, NULL),
+-- Child: 4.3. Bớt đi rồi tìm ban đầu
+(37, 'REVERSE_SUBTRACT_TO_INITIAL', 'Bớt đi rồi tìm ban đầu', 34, 'ACTIVE', NULL, NULL),
+-- Child: 4.4. Cho đi rồi nhận lại
+(38, 'REVERSE_GIVE_AND_RECEIVE', 'Cho đi rồi nhận lại', 34, 'ACTIVE', NULL, NULL),
+-- Child: 4.5. Tăng rồi giảm → tìm ban đầu
+(39, 'REVERSE_INCREASE_DECREASE', 'Tăng rồi giảm → tìm ban đầu', 34, 'ACTIVE', NULL, NULL),
+-- Child: 4.6. Giảm rồi tăng → tìm ban đầu
+(40, 'REVERSE_DECREASE_INCREASE', 'Giảm rồi tăng → tìm ban đầu', 34, 'ACTIVE', NULL, NULL),
+-- Child: 4.7. Bài toán ngược về số lượng
+(41, 'REVERSE_QUANTITY', 'Bài toán ngược về số lượng', 34, 'ACTIVE', NULL, NULL),
+-- Child: 4.8. Bài toán ngược về tuổi
+(42, 'REVERSE_AGE', 'Bài toán ngược về tuổi', 34, 'ACTIVE', NULL, NULL),
+-- Child: 4.9. Bài toán ngược nhiều bước
+(43, 'REVERSE_MULTI_STEP', 'Bài toán ngược nhiều bước', 34, 'ACTIVE', NULL, NULL),
+-- Child: 4.10. Bài toán ngược kết hợp điều kiện
+(44, 'REVERSE_WITH_CONDITION', 'Bài toán ngược kết hợp điều kiện', 34, 'ACTIVE', NULL, NULL),
+
+-- Parent: 5. BÀI TOÁN NHIỀU BƯỚC
+(45, 'MULTI_STEP_PROBLEM', 'BÀI TOÁN NHIỀU BƯỚC', NULL, 'ACTIVE', NULL, NULL),
+-- Child: 5.1. Hai bước cộng
+(46, 'MULTI_STEP_TWO_ADDITIONS', 'Hai bước cộng', 45, 'ACTIVE', NULL, NULL),
+-- Child: 5.2. Hai bước trừ
+(47, 'MULTI_STEP_TWO_SUBTRACTIONS', 'Hai bước trừ', 45, 'ACTIVE', NULL, NULL),
+-- Child: 5.3. Cộng rồi trừ
+(48, 'MULTI_STEP_ADD_SUBTRACT', 'Cộng rồi trừ', 45, 'ACTIVE', NULL, NULL),
+-- Child: 5.4. Trừ rồi cộng
+(49, 'MULTI_STEP_SUBTRACT_ADD', 'Trừ rồi cộng', 45, 'ACTIVE', NULL, NULL),
+-- Child: 5.5. Tìm tổng sau nhiều bước
+(50, 'MULTI_STEP_SUM', 'Tìm tổng sau nhiều bước', 45, 'ACTIVE', NULL, NULL),
+-- Child: 5.6. Tìm phần còn lại
+(51, 'MULTI_STEP_REMAINING', 'Tìm phần còn lại', 45, 'ACTIVE', NULL, NULL),
+-- Child: 5.7. Ba bước tính toán
+(52, 'MULTI_STEP_THREE_OPERATIONS', 'Ba bước tính toán', 45, 'ACTIVE', NULL, NULL),
+-- Child: 5.8. Bài toán nhiều đối tượng
+(53, 'MULTI_STEP_MULTIPLE_OBJECTS', 'Bài toán nhiều đối tượng', 45, 'ACTIVE', NULL, NULL),
+-- Child: 5.9. Bài toán thay đổi liên tiếp
+(54, 'MULTI_STEP_CONTINUOUS_CHANGE', 'Bài toán thay đổi liên tiếp', 45, 'ACTIVE', NULL, NULL),
+-- Child: 5.10. Bài toán nhiều bước có dữ kiện thừa
+(55, 'MULTI_STEP_EXTRA_DATA', 'Bài toán nhiều bước có dữ kiện thừa', 45, 'ACTIVE', NULL, NULL),
+-- Child: 5.11. Bài toán nhiều bước cần chọn phép tính
+(56, 'MULTI_STEP_CHOOSE_OPERATION', 'Bài toán nhiều bước cần chọn phép tính', 45, 'ACTIVE', NULL, NULL),
+-- Child: 5.12. Bài toán nhiều bước nâng cao
+(57, 'MULTI_STEP_ADVANCED', 'Bài toán nhiều bước nâng cao', 45, 'ACTIVE', NULL, NULL),
+
+-- Parent: 6. BÀI TOÁN NHIỀU ĐIỀU KIỆN
+(58, 'MULTI_CONDITION_PROBLEM', 'BÀI TOÁN NHIỀU ĐIỀU KIỆN', NULL, 'ACTIVE', NULL, NULL),
+-- Child: 6.1. Tìm số thỏa mãn 2 điều kiện
+(59, 'MULTI_CONDITION_TWO', 'Tìm số thỏa mãn 2 điều kiện', 58, 'ACTIVE', NULL, NULL),
+-- Child: 6.2. Tìm số thỏa mãn 3 điều kiện
+(60, 'MULTI_CONDITION_THREE', 'Tìm số thỏa mãn 3 điều kiện', 58, 'ACTIVE', NULL, NULL),
+-- Child: 6.3. Lớn hơn – nhỏ hơn
+(61, 'MULTI_CONDITION_GREATER_LESS', 'Lớn hơn – nhỏ hơn', 58, 'ACTIVE', NULL, NULL),
+-- Child: 6.4. Nằm giữa hai số
+(62, 'MULTI_CONDITION_BETWEEN', 'Nằm giữa hai số', 58, 'ACTIVE', NULL, NULL),
+-- Child: 6.5. Số chẵn/số lẻ + điều kiện
+(63, 'MULTI_CONDITION_EVEN_ODD', 'Số chẵn/số lẻ + điều kiện', 58, 'ACTIVE', NULL, NULL),
+-- Child: 6.6. So sánh nhiều đối tượng
+(64, 'MULTI_CONDITION_COMPARE_OBJECTS', 'So sánh nhiều đối tượng', 58, 'ACTIVE', NULL, NULL),
+-- Child: 6.7. Sắp xếp theo nhiều điều kiện
+(65, 'MULTI_CONDITION_SORT', 'Sắp xếp theo nhiều điều kiện', 58, 'ACTIVE', NULL, NULL),
+-- Child: 6.8. Vị trí + điều kiện
+(66, 'MULTI_CONDITION_POSITION', 'Vị trí + điều kiện', 58, 'ACTIVE', NULL, NULL),
+-- Child: 6.9. Loại trừ nhiều điều kiện
+(67, 'MULTI_CONDITION_ELIMINATION', 'Loại trừ nhiều điều kiện', 58, 'ACTIVE', NULL, NULL),
+-- Child: 6.10. Tìm đáp án chắc chắn đúng
+(68, 'MULTI_CONDITION_CERTAIN_TRUE', 'Tìm đáp án chắc chắn đúng', 58, 'ACTIVE', NULL, NULL),
+-- Child: 6.11. Tìm đáp án có thể đúng
+(69, 'MULTI_CONDITION_POSSIBLE_TRUE', 'Tìm đáp án có thể đúng', 58, 'ACTIVE', NULL, NULL),
+-- Child: 6.12. Tìm đáp án không thể đúng
+(70, 'MULTI_CONDITION_IMPOSSIBLE', 'Tìm đáp án không thể đúng', 58, 'ACTIVE', NULL, NULL),
+-- Child: 6.13. Điều kiện về số lượng
+(71, 'MULTI_CONDITION_QUANTITY', 'Điều kiện về số lượng', 58, 'ACTIVE', NULL, NULL),
+-- Child: 6.14. Điều kiện về thứ tự
+(72, 'MULTI_CONDITION_ORDER', 'Điều kiện về thứ tự', 58, 'ACTIVE', NULL, NULL),
+-- Child: 6.15. Điều kiện kết hợp
+(73, 'MULTI_CONDITION_COMBINED', 'Điều kiện kết hợp', 58, 'ACTIVE', NULL, NULL),
+-- Child: 6.16. Bài toán nhiều trường hợp
+(74, 'MULTI_CONDITION_MULTIPLE_CASES', 'Bài toán nhiều trường hợp', 58, 'ACTIVE', NULL, NULL),
+
+-- Parent: 7. ĐẾM HÌNH VÀ TƯ DUY HÌNH HỌC
+(75, 'GEOMETRY_COUNTING', 'ĐẾM HÌNH VÀ TƯ DUY HÌNH HỌC', NULL, 'ACTIVE', NULL, NULL),
+-- Child: 7.1. Nhận biết hình
+(76, 'GEOMETRY_IDENTIFY_SHAPE', 'Nhận biết hình', 75, 'ACTIVE', NULL, NULL),
+-- Child: 7.2. Đếm hình cơ bản
+(77, 'GEOMETRY_BASIC_COUNTING', 'Đếm hình cơ bản', 75, 'ACTIVE', NULL, NULL),
+-- Child: 7.3. Đếm hình chồng lên nhau
+(78, 'GEOMETRY_OVERLAPPING_COUNTING', 'Đếm hình chồng lên nhau', 75, 'ACTIVE', NULL, NULL),
+-- Child: 7.4. Đếm hình trong hình lớn
+(79, 'GEOMETRY_COUNTING_IN_LARGE_SHAPE', 'Đếm hình trong hình lớn', 75, 'ACTIVE', NULL, NULL),
+-- Child: 7.5. Tìm hình giống nhau
+(80, 'GEOMETRY_FIND_SAME', 'Tìm hình giống nhau', 75, 'ACTIVE', NULL, NULL),
+-- Child: 7.6. Tìm hình khác nhau
+(81, 'GEOMETRY_FIND_DIFFERENT', 'Tìm hình khác nhau', 75, 'ACTIVE', NULL, NULL),
+-- Child: 7.7. Ghép hình
+(82, 'GEOMETRY_COMBINE_SHAPES', 'Ghép hình', 75, 'ACTIVE', NULL, NULL),
+-- Child: 7.8. Tách hình
+(83, 'GEOMETRY_SPLIT_SHAPES', 'Tách hình', 75, 'ACTIVE', NULL, NULL),
+-- Child: 7.9. Hình còn thiếu
+(84, 'GEOMETRY_MISSING_SHAPE', 'Hình còn thiếu', 75, 'ACTIVE', NULL, NULL),
+-- Child: 7.10. Hình đối xứng đơn giản
+(85, 'GEOMETRY_SIMPLE_SYMMETRY', 'Hình đối xứng đơn giản', 75, 'ACTIVE', NULL, NULL),
+-- Child: 7.11. Quy luật hình học
+(86, 'GEOMETRY_PATTERN', 'Quy luật hình học', 75, 'ACTIVE', NULL, NULL),
+-- Child: 7.12. Hình quay / thay đổi vị trí
+(87, 'GEOMETRY_ROTATION_POSITION', 'Hình quay / thay đổi vị trí', 75, 'ACTIVE', NULL, NULL),
+-- Child: 7.13. Đường đi trên lưới
+(88, 'GEOMETRY_GRID_PATH', 'Đường đi trên lưới', 75, 'ACTIVE', NULL, NULL),
+-- Child: 7.14. Đếm đoạn thẳng
+(89, 'GEOMETRY_SEGMENT_COUNTING', 'Đếm đoạn thẳng', 75, 'ACTIVE', NULL, NULL),
+-- Child: 7.15. Tìm đường ngắn/dài
+(90, 'GEOMETRY_SHORTEST_LONGEST_PATH', 'Tìm đường ngắn/dài', 75, 'ACTIVE', NULL, NULL),
+-- Child: 7.16. Tư duy không gian
+(91, 'GEOMETRY_SPATIAL_REASONING', 'Tư duy không gian', 75, 'ACTIVE', NULL, NULL),
+-- Child: 7.17. Hình học kết hợp số
+(92, 'GEOMETRY_NUMBER_COMBINATION', 'Hình học kết hợp số', 75, 'ACTIVE', NULL, NULL),
+
+-- Parent: 8. BÀI TOÁN TƯ DUY TỔNG HỢP
+(93, 'GENERAL_REASONING', 'BÀI TOÁN TƯ DUY TỔNG HỢP', NULL, 'ACTIVE', NULL, NULL),
+-- Child: 8.1. Tính toán + suy luận
+(94, 'GENERAL_CALCULATION_REASONING', 'Tính toán + suy luận', 93, 'ACTIVE', NULL, NULL),
+-- Child: 8.2. Dãy số + điều kiện
+(95, 'GENERAL_SEQUENCE_CONDITION', 'Dãy số + điều kiện', 93, 'ACTIVE', NULL, NULL),
+-- Child: 8.3. Tìm số + điều kiện
+(96, 'GENERAL_NUMBER_CONDITION', 'Tìm số + điều kiện', 93, 'ACTIVE', NULL, NULL),
+-- Child: 8.4. Bài toán ngược + nhiều bước
+(97, 'GENERAL_REVERSE_MULTI_STEP', 'Bài toán ngược + nhiều bước', 93, 'ACTIVE', NULL, NULL),
+-- Child: 8.5. Logic + số học
+(98, 'GENERAL_LOGIC_ARITHMETIC', 'Logic + số học', 93, 'ACTIVE', NULL, NULL),
+-- Child: 8.6. Logic + hình học
+(99, 'GENERAL_LOGIC_GEOMETRY', 'Logic + hình học', 93, 'ACTIVE', NULL, NULL),
+-- Child: 8.7. Hình học + đếm số
+(100, 'GENERAL_GEOMETRY_COUNTING', 'Hình học + đếm số', 93, 'ACTIVE', NULL, NULL),
+-- Child: 8.8. Nhiều bước + nhiều điều kiện
+(101, 'GENERAL_MULTI_STEP_CONDITION', 'Nhiều bước + nhiều điều kiện', 93, 'ACTIVE', NULL, NULL),
+-- Child: 8.9. Bài toán có dữ kiện thừa
+(102, 'GENERAL_EXTRA_DATA', 'Bài toán có dữ kiện thừa', 93, 'ACTIVE', NULL, NULL),
+-- Child: 8.10. Bài toán thiếu dữ kiện
+(103, 'GENERAL_MISSING_DATA', 'Bài toán thiếu dữ kiện', 93, 'ACTIVE', NULL, NULL),
+-- Child: 8.11. Tìm tất cả khả năng
+(104, 'GENERAL_ALL_POSSIBILITIES', 'Tìm tất cả khả năng', 93, 'ACTIVE', NULL, NULL),
+-- Child: 8.12. Tìm khả năng duy nhất
+(105, 'GENERAL_UNIQUE_POSSIBILITY', 'Tìm khả năng duy nhất', 93, 'ACTIVE', NULL, NULL),
+-- Child: 8.13. Chọn phương án đúng
+(106, 'GENERAL_CHOOSE_CORRECT', 'Chọn phương án đúng', 93, 'ACTIVE', NULL, NULL),
+-- Child: 8.14. Chọn phương án sai
+(107, 'GENERAL_CHOOSE_INCORRECT', 'Chọn phương án sai', 93, 'ACTIVE', NULL, NULL),
+-- Child: 8.15. Chắc chắn đúng / có thể đúng / không thể đúng
+(108, 'GENERAL_CERTAINTY_POSSIBILITY', 'Chắc chắn đúng / có thể đúng / không thể đúng', 93, 'ACTIVE', NULL, NULL),
+-- Child: 8.16. Bài toán suy luận ngược nhiều tầng
+(109, 'GENERAL_REVERSE_MULTI_LEVEL', 'Bài toán suy luận ngược nhiều tầng', 93, 'ACTIVE', NULL, NULL),
+-- Child: 8.17. Bài toán tổng hợp 3–4 điều kiện
+(110, 'GENERAL_THREE_FOUR_CONDITIONS', 'Bài toán tổng hợp 3–4 điều kiện', 93, 'ACTIVE', NULL, NULL),
+-- Child: 8.18. Câu đố tư duy tổng hợp
+(111, 'GENERAL_COMPREHENSIVE_PUZZLE', 'Câu đố tư duy tổng hợp', 93, 'ACTIVE', NULL, NULL);
+
+
 --	DU LIEU BANG CATEGORIES
 TRUNCATE TABLE CATEGORIES;
 TRUNCATE TABLE BOOKS;
@@ -190,6 +473,7 @@ INSERT INTO CATEGORIES(UUID, SLUG, ENG, VI, PARENT_SLUG, NUMBER) VALUES
     (UUID(), 'news', 'News', 'Báo', NULL, 3),
     (UUID(), 'presentation', 'Presentation', 'Thuyết trình', NULL, 4),
     (UUID(), 'tieng-anh-co-ban', 'Basic English', 'Tiếng anh cơ bản', NULL, 5),
+    (UUID(), 'toan', 'Toán', 'Toán', NULL, 6),
 
     -- Truyện
     (UUID(), 'truyen-truyen-cam-hung', 'Inspirational stories', 'Truyện truyền cảm hứng', 'truyen', 1),
@@ -216,8 +500,13 @@ INSERT INTO CATEGORIES(UUID, SLUG, ENG, VI, PARENT_SLUG, NUMBER) VALUES
     (UUID(), 'tro-chuyen-hang-ngay', 'Daily Conversations', 'Trò chuyện hàng ngày', 'presentation', NULL),
 
     -- Tiếng Anh cơ bản
-    (UUID(), 'tieng-anh-co-ban-cap-do-1', 'Basic English Level 1', 'Tiếng anh cơ bản cấp độ 1', 'tieng-anh-co-ban', NULL);
-
+    (UUID(), 'tieng-anh-co-ban-cap-do-1', 'Basic English Level 1', 'Tiếng anh cơ bản cấp độ 1', 'tieng-anh-co-ban', NULL),
+	-- Toán
+    (UUID(), 'lop-1', 'Lớp 1', 'Lớp 1', 'toan', 1),
+    (UUID(), 'lop-2', 'Lớp 2', 'Lớp 2', 'toan', 2),
+    (UUID(), 'lop-3', 'Lớp 3', 'Lớp 3', 'toan', 3),
+    (UUID(), 'lop-4', 'Lớp 4', 'Lớp 4', 'toan', 4),
+    (UUID(), 'lop-5', 'Lớp 5', 'Lớp 5', 'toan', 5);
 	
 	
 --	DU LIEU BANG BOOKS
@@ -74265,3 +74554,936 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE,ANSWER_TEXT,ANSWER_TEXT_VI,IS_COR
 	('Q-4000-essential-english-words-1-30-050','B','Beth sold a cat to the man','Beth bán một con mèo cho người đàn ông','N',2,NULL,NULL,NULL,NULL),
 	('Q-4000-essential-english-words-1-30-050','C','The judge bought the pig','Quan tòa mua con heo','N',3,NULL,NULL,NULL,NULL),
 	('Q-4000-essential-english-words-1-30-050','D','The people learned how to sell animals','Mọi người học cách bán động vật','N',4,NULL,NULL,NULL,NULL);
+INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
+	('NUMBER_INCREASING', 'NUMBER_INCREASING_001', '2, 3, 4, 5, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_INCREASING', 'NUMBER_INCREASING_002', '4, 5, 6, 7, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_INCREASING', 'NUMBER_INCREASING_003', '1, 2, 3, 4, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_INCREASING', 'NUMBER_INCREASING_004', '5, 6, 7, 8, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_INCREASING', 'NUMBER_INCREASING_005', '6, 7, 8, 9, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_INCREASING', 'NUMBER_INCREASING_006', '3, 4, 5, 6, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_INCREASING', 'NUMBER_INCREASING_007', '7, 8, 9, 10, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_INCREASING', 'NUMBER_INCREASING_008', '8, 9, 10, 11, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_INCREASING', 'NUMBER_INCREASING_009', '9, 10, 11, 12, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_INCREASING', 'NUMBER_INCREASING_010', '10, 11, 12, 13, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+
+	('NUMBER_INCREASING', 'NUMBER_INCREASING_011', '2, 4, 6, 8, ?, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_INCREASING', 'NUMBER_INCREASING_012', '1, 3, 5, 7, ?, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_INCREASING', 'NUMBER_INCREASING_013', '3, 5, 7, 9, ?, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_INCREASING', 'NUMBER_INCREASING_014', '4, 6, 8, 10, ?, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_INCREASING', 'NUMBER_INCREASING_015', '5, 7, 9, 11, ?, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_INCREASING', 'NUMBER_INCREASING_016', '6, 8, 10, 12, ?, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_INCREASING', 'NUMBER_INCREASING_017', '3, 6, 9, 12, ?, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_INCREASING', 'NUMBER_INCREASING_018', '4, 7, 10, 13, ?, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_INCREASING', 'NUMBER_INCREASING_019', '5, 8, 11, 14, ?, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_INCREASING', 'NUMBER_INCREASING_020', '6, 9, 12, 15, ?, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+
+	('NUMBER_INCREASING', 'NUMBER_INCREASING_021', '2, 5, 8, 11, 14, ?, số nào thích hợp điền vào dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_INCREASING', 'NUMBER_INCREASING_022', '3, 6, 9, 12, 15, ?, số nào thích hợp điền vào dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_INCREASING', 'NUMBER_INCREASING_023', '4, 8, 12, 16, ?, số nào thích hợp điền vào dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_INCREASING', 'NUMBER_INCREASING_024', '5, 10, 15, 20, ?, số nào thích hợp điền vào dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_INCREASING', 'NUMBER_INCREASING_025', '1, 4, 7, 10, 13, ?, số nào thích hợp điền vào dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_INCREASING', 'NUMBER_INCREASING_026', '2, 6, 10, 14, 18, ?, số nào thích hợp điền vào dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_INCREASING', 'NUMBER_INCREASING_027', '3, 8, 13, 18, ?, số nào thích hợp điền vào dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_INCREASING', 'NUMBER_INCREASING_028', '4, 9, 14, 19, ?, số nào thích hợp điền vào dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_INCREASING', 'NUMBER_INCREASING_029', '5, 10, 15, 20, 25, ?, số nào thích hợp điền vào dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_INCREASING', 'NUMBER_INCREASING_030', '6, 11, 16, 21, 26, ?, số nào thích hợp điền vào dấu ?', 3, 'ACTIVE', NULL, NULL),
+
+	('NUMBER_INCREASING', 'NUMBER_INCREASING_031', '?, 7, 12, 17, 22, 27. Số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_INCREASING', 'NUMBER_INCREASING_032', '4, ?, 14, 19, 24, 29. Số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_INCREASING', 'NUMBER_INCREASING_033', '3, 8, ?, 18, 23, 28. Số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_INCREASING', 'NUMBER_INCREASING_034', '5, 10, 15, ?, 25, 30. Số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_INCREASING', 'NUMBER_INCREASING_035', '2, 7, 12, 17, ?, 27. Số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_INCREASING', 'NUMBER_INCREASING_036', '1, 6, 11, 16, 21, ?. Số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_INCREASING', 'NUMBER_INCREASING_037', '?, 10, 15, 20, 25, 30. Số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_INCREASING', 'NUMBER_INCREASING_038', '6, ?, 16, 21, 26, 31. Số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_INCREASING', 'NUMBER_INCREASING_039', '4, 9, 14, ?, 24, 29. Số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_INCREASING', 'NUMBER_INCREASING_040', '7, 12, 17, 22, 27, ?. Số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL);
+	
+	
+INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
+	('NUMBER_DECREASING', 'NUMBER_DECREASING_001', '10, 9, 8, 7, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_DECREASING', 'NUMBER_DECREASING_002', '9, 8, 7, 6, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_DECREASING', 'NUMBER_DECREASING_003', '8, 7, 6, 5, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_DECREASING', 'NUMBER_DECREASING_004', '7, 6, 5, 4, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_DECREASING', 'NUMBER_DECREASING_005', '6, 5, 4, 3, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_DECREASING', 'NUMBER_DECREASING_006', '5, 4, 3, 2, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_DECREASING', 'NUMBER_DECREASING_007', '12, 11, 10, 9, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_DECREASING', 'NUMBER_DECREASING_008', '11, 10, 9, 8, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_DECREASING', 'NUMBER_DECREASING_009', '15, 14, 13, 12, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_DECREASING', 'NUMBER_DECREASING_010', '14, 13, 12, 11, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_DECREASING', 'NUMBER_DECREASING_011', '12, 10, 8, 6, ?, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_DECREASING', 'NUMBER_DECREASING_012', '11, 9, 7, 5, ?, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_DECREASING', 'NUMBER_DECREASING_013', '10, 8, 6, 4, ?, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_DECREASING', 'NUMBER_DECREASING_014', '14, 12, 10, 8, ?, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_DECREASING', 'NUMBER_DECREASING_015', '16, 14, 12, 10, ?, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_DECREASING', 'NUMBER_DECREASING_016', '15, 13, 11, 9, ?, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_DECREASING', 'NUMBER_DECREASING_017', '18, 15, 12, 9, ?, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_DECREASING', 'NUMBER_DECREASING_018', '17, 14, 11, 8, ?, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_DECREASING', 'NUMBER_DECREASING_019', '20, 17, 14, 11, ?, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_DECREASING', 'NUMBER_DECREASING_020', '19, 16, 13, 10, ?, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_DECREASING', 'NUMBER_DECREASING_021', '20, 17, 14, 11, 8, ?, số nào thích hợp điền vào dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_DECREASING', 'NUMBER_DECREASING_022', '21, 18, 15, 12, 9, ?, số nào thích hợp điền vào dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_DECREASING', 'NUMBER_DECREASING_023', '22, 18, 14, 10, ?, số nào thích hợp điền vào dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_DECREASING', 'NUMBER_DECREASING_024', '25, 20, 15, 10, ?, số nào thích hợp điền vào dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_DECREASING', 'NUMBER_DECREASING_025', '24, 20, 16, 12, 8, ?, số nào thích hợp điền vào dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_DECREASING', 'NUMBER_DECREASING_026', '23, 18, 13, 8, ?, số nào thích hợp điền vào dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_DECREASING', 'NUMBER_DECREASING_027', '28, 23, 18, 13, ?, số nào thích hợp điền vào dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_DECREASING', 'NUMBER_DECREASING_028', '27, 22, 17, 12, ?, số nào thích hợp điền vào dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_DECREASING', 'NUMBER_DECREASING_029', '30, 25, 20, 15, 10, ?, số nào thích hợp điền vào dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_DECREASING', 'NUMBER_DECREASING_030', '29, 24, 19, 14, 9, ?, số nào thích hợp điền vào dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_DECREASING', 'NUMBER_DECREASING_031', '?, 25, 20, 15, 10, 5. Số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_DECREASING', 'NUMBER_DECREASING_032', '30, ?, 20, 15, 10, 5. Số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_DECREASING', 'NUMBER_DECREASING_033', '28, 23, ?, 13, 8, 3. Số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_DECREASING', 'NUMBER_DECREASING_034', '27, 22, 17, ?, 7, 2. Số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_DECREASING', 'NUMBER_DECREASING_035', '26, 21, 16, 11, ?, 1. Số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_DECREASING', 'NUMBER_DECREASING_036', '25, 20, 15, 10, 5, ?. Số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_DECREASING', 'NUMBER_DECREASING_037', '?, 24, 18, 12, 6. Số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_DECREASING', 'NUMBER_DECREASING_038', '30, ?, 20, 15, 10, 5. Số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_DECREASING', 'NUMBER_DECREASING_039', '29, 24, 19, ?, 9, 4. Số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_DECREASING', 'NUMBER_DECREASING_040', '28, 23, 18, 13, 8, ?. Số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL);
+	
+
+-- Child: 2.3. Tìm vị trí
+INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
+	-- Dễ: 1-10
+	('LOGIC_POSITION', 'LOGIC_POSITION_001', 'Trong hàng: An, Bình, Chi, Dũng. Ai đứng đầu hàng?', 1, 'ACTIVE', NULL, NULL),
+	('LOGIC_POSITION', 'LOGIC_POSITION_002', 'Trong hàng: An, Bình, Chi, Dũng. Ai đứng cuối hàng?', 1, 'ACTIVE', NULL, NULL),
+	('LOGIC_POSITION', 'LOGIC_POSITION_003', 'Trong hàng: Lan, Mai, Nam, Hoa. Ai đứng sau Mai?', 1, 'ACTIVE', NULL, NULL),
+	('LOGIC_POSITION', 'LOGIC_POSITION_004', 'Trong hàng: Lan, Mai, Nam, Hoa. Ai đứng trước Nam?', 1, 'ACTIVE', NULL, NULL),
+	('LOGIC_POSITION', 'LOGIC_POSITION_005', 'Trong hàng: An, Bình, Chi. Ai đứng ở giữa?', 1, 'ACTIVE', NULL, NULL),
+	('LOGIC_POSITION', 'LOGIC_POSITION_006', 'Trong hàng: Minh, Lan, Hoa, Nam. Ai đứng thứ hai?', 1, 'ACTIVE', NULL, NULL),
+	('LOGIC_POSITION', 'LOGIC_POSITION_007', 'Trong hàng: An, Bình, Chi, Dũng. Ai đứng thứ ba?', 1, 'ACTIVE', NULL, NULL),
+	('LOGIC_POSITION', 'LOGIC_POSITION_008', 'Trong hàng: Hoa, Lan, Mai, Nam. Ai đứng trước Lan?', 1, 'ACTIVE', NULL, NULL),
+	('LOGIC_POSITION', 'LOGIC_POSITION_009', 'Trong hàng: Nam, Hoa, Lan, Mai. Ai đứng sau Hoa?', 1, 'ACTIVE', NULL, NULL),
+	('LOGIC_POSITION', 'LOGIC_POSITION_010', 'Trong hàng: Bình, An, Dũng, Chi. Ai đứng cuối hàng?', 1, 'ACTIVE', NULL, NULL),
+
+	-- Khá: 11-20
+	('LOGIC_POSITION', 'LOGIC_POSITION_011', 'Có 5 bạn đứng thành hàng: An, Bình, Chi, Dũng, Hoa. Ai đứng ở giữa?', 2, 'ACTIVE', NULL, NULL),
+	('LOGIC_POSITION', 'LOGIC_POSITION_012', 'Có 5 bạn đứng thành hàng: Lan, Mai, Nam, Hoa, An. Ai đứng thứ tư?', 2, 'ACTIVE', NULL, NULL),
+	('LOGIC_POSITION', 'LOGIC_POSITION_013', 'Có 5 bạn đứng thành hàng: Minh, Lan, Hoa, Nam, Mai. Ai đứng trước Hoa?', 2, 'ACTIVE', NULL, NULL),
+	('LOGIC_POSITION', 'LOGIC_POSITION_014', 'Có 5 bạn đứng thành hàng: An, Chi, Bình, Dũng, Lan. Ai đứng sau Bình?', 2, 'ACTIVE', NULL, NULL),
+	('LOGIC_POSITION', 'LOGIC_POSITION_015', 'Có 5 bạn đứng thành hàng: Hoa, Nam, An, Mai, Bình. Ai đứng thứ hai?', 2, 'ACTIVE', NULL, NULL),
+	('LOGIC_POSITION', 'LOGIC_POSITION_016', 'Có 5 bạn đứng thành hàng: Mai, Lan, An, Hoa, Nam. Ai đứng thứ ba?', 2, 'ACTIVE', NULL, NULL),
+	('LOGIC_POSITION', 'LOGIC_POSITION_017', 'Có 5 bạn đứng thành hàng: Bình, Hoa, Lan, An, Chi. Ai đứng ngay trước An?', 2, 'ACTIVE', NULL, NULL),
+	('LOGIC_POSITION', 'LOGIC_POSITION_018', 'Có 5 bạn đứng thành hàng: Nam, Chi, Mai, Bình, Hoa. Ai đứng ngay sau Chi?', 2, 'ACTIVE', NULL, NULL),
+	('LOGIC_POSITION', 'LOGIC_POSITION_019', 'Có 5 bạn đứng thành hàng: An, Mai, Hoa, Bình, Chi. Ai đứng ở cuối hàng?', 2, 'ACTIVE', NULL, NULL),
+	('LOGIC_POSITION', 'LOGIC_POSITION_020', 'Có 5 bạn đứng thành hàng: Lan, An, Chi, Nam, Mai. Ai đứng ở đầu hàng?', 2, 'ACTIVE', NULL, NULL),
+
+	-- Khó: 21-30
+	('LOGIC_POSITION', 'LOGIC_POSITION_021', 'Có 6 bạn đứng thành hàng: An, Bình, Chi, Dũng, Hoa, Lan. Ai đứng thứ năm?', 3, 'ACTIVE', NULL, NULL),
+	('LOGIC_POSITION', 'LOGIC_POSITION_022', 'Có 6 bạn đứng thành hàng: Mai, Nam, Hoa, An, Lan, Bình. Ai đứng thứ hai?', 3, 'ACTIVE', NULL, NULL),
+	('LOGIC_POSITION', 'LOGIC_POSITION_023', 'Có 6 bạn đứng thành hàng: Chi, An, Bình, Hoa, Dũng, Mai. Ai đứng ngay trước Hoa?', 3, 'ACTIVE', NULL, NULL),
+	('LOGIC_POSITION', 'LOGIC_POSITION_024', 'Có 6 bạn đứng thành hàng: Lan, Hoa, Mai, Nam, An, Chi. Ai đứng ngay sau Nam?', 3, 'ACTIVE', NULL, NULL),
+	('LOGIC_POSITION', 'LOGIC_POSITION_025', 'Có 6 bạn đứng thành hàng: Bình, An, Hoa, Chi, Lan, Nam. Ai đứng thứ tư?', 3, 'ACTIVE', NULL, NULL),
+	('LOGIC_POSITION', 'LOGIC_POSITION_026', 'Có 6 bạn đứng thành hàng: Nam, Mai, Chi, An, Bình, Hoa. Ai đứng thứ sáu?', 3, 'ACTIVE', NULL, NULL),
+	('LOGIC_POSITION', 'LOGIC_POSITION_027', 'Có 7 bạn đứng thành hàng: An, Bình, Chi, Dũng, Hoa, Lan, Mai. Ai đứng ở giữa hàng?', 3, 'ACTIVE', NULL, NULL),
+	('LOGIC_POSITION', 'LOGIC_POSITION_028', 'Có 7 bạn đứng thành hàng: Mai, Lan, Hoa, An, Bình, Chi, Nam. Ai đứng thứ ba?', 3, 'ACTIVE', NULL, NULL),
+	('LOGIC_POSITION', 'LOGIC_POSITION_029', 'Có 7 bạn đứng thành hàng: Chi, Nam, An, Hoa, Mai, Bình, Lan. Ai đứng ngay trước Mai?', 3, 'ACTIVE', NULL, NULL),
+	('LOGIC_POSITION', 'LOGIC_POSITION_030', 'Có 7 bạn đứng thành hàng: Hoa, An, Lan, Chi, Nam, Mai, Bình. Ai đứng ngay sau Nam?', 3, 'ACTIVE', NULL, NULL),
+
+	-- Rất khó: 31-40
+	('LOGIC_POSITION', 'LOGIC_POSITION_031', 'An đứng thứ hai trong hàng. Ai đứng ngay trước An nếu người đầu tiên là Bình?', 4, 'ACTIVE', NULL, NULL),
+	('LOGIC_POSITION', 'LOGIC_POSITION_032', 'Mai đứng thứ tư trong hàng: Lan, Hoa, An, Mai, Nam. Ai đứng ngay trước Mai?', 4, 'ACTIVE', NULL, NULL),
+	('LOGIC_POSITION', 'LOGIC_POSITION_033', 'Nam đứng thứ ba trong hàng: An, Bình, Nam, Chi, Hoa. Ai đứng ngay sau Nam?', 4, 'ACTIVE', NULL, NULL),
+	('LOGIC_POSITION', 'LOGIC_POSITION_034', 'Có 5 bạn: An đứng đầu, Mai đứng cuối. Bình đứng ngay sau An. Ai đứng thứ hai?', 4, 'ACTIVE', NULL, NULL),
+	('LOGIC_POSITION', 'LOGIC_POSITION_035', 'Có 5 bạn: Lan đứng đầu, Hoa đứng cuối. Mai đứng ngay sau Lan. Ai đứng thứ hai?', 4, 'ACTIVE', NULL, NULL),
+	('LOGIC_POSITION', 'LOGIC_POSITION_036', 'Có 5 bạn: Bình đứng cuối, An đứng đầu. Chi đứng ngay trước Bình. Ai đứng thứ tư?', 4, 'ACTIVE', NULL, NULL),
+	('LOGIC_POSITION', 'LOGIC_POSITION_037', 'Có 6 bạn: An, Bình, Chi, Dũng, Hoa, Lan. Nếu Chi đứng thứ ba thì ai đứng ngay sau Chi?', 4, 'ACTIVE', NULL, NULL),
+	('LOGIC_POSITION', 'LOGIC_POSITION_038', 'Có 6 bạn: Mai, Lan, Nam, Hoa, An, Bình. Nếu Hoa đứng thứ tư thì ai đứng ngay trước Hoa?', 4, 'ACTIVE', NULL, NULL),
+	('LOGIC_POSITION', 'LOGIC_POSITION_039', 'Có 7 bạn: An, Bình, Chi, Dũng, Hoa, Lan, Mai. Nếu Dũng đứng giữa hàng thì ai đứng ngay trước Dũng?', 4, 'ACTIVE', NULL, NULL),
+	('LOGIC_POSITION', 'LOGIC_POSITION_040', 'Có 7 bạn: Lan, Mai, Hoa, An, Bình, Chi, Nam. Nếu Bình đứng thứ năm thì ai đứng ngay sau Bình?', 4, 'ACTIVE', NULL, NULL);
+	
+INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
+	-- 2.11.1. Thứ tự + loại trừ
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_001', 'An đứng trước Bình. Chi không đứng cuối. Nếu An đứng đầu thì ai có thể đứng cuối?', 1, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_002', 'Lan đứng trước Mai. Hoa không đứng đầu. Ai có thể đứng đầu trong các bạn Lan, Mai, Hoa?', 1, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_003', 'An đứng trước Chi. Bình không đứng đầu. Ai có thể đứng đầu?', 2, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_004', 'Mai đứng sau Lan. Hoa không đứng cuối. Ai có thể đứng cuối?', 2, 'ACTIVE', NULL, NULL),
+
+	-- 2.11.2. Thứ tự + so sánh
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_005', 'An cao hơn Bình. Chi thấp hơn An. Nếu Bình đứng trước Chi, ai cao hơn?', 1, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_006', 'Lan có nhiều bút hơn Mai. Mai có nhiều bút hơn Hoa. Ai có nhiều bút nhất?', 1, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_007', 'An lớn hơn Bình. Chi nhỏ hơn Bình. Nếu An đứng trước Chi, ai lớn nhất?', 2, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_008', 'Nam có ít viên bi hơn An nhưng nhiều hơn Bình. Ai có ít viên bi nhất?', 2, 'ACTIVE', NULL, NULL),
+
+	-- 2.11.3. So sánh + loại trừ
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_009', 'An cao hơn Bình. Chi không cao hơn An. Ai chắc chắn không cao hơn An?', 1, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_010', 'Lan có nhiều hoa hơn Mai. Hoa không có nhiều hoa nhất. Ai chắc chắn có nhiều hoa hơn Mai?', 1, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_011', 'An nặng hơn Bình. Chi không nhẹ hơn Bình. Ai chắc chắn không nhẹ hơn An?', 2, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_012', 'Mai có ít bút hơn Lan. Hoa không có ít bút nhất. Ai có thể có ít bút nhất?', 2, 'ACTIVE', NULL, NULL),
+
+	-- 2.11.4. Ghép đôi + loại trừ
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_013', 'An thích táo hoặc cam. Bình không thích táo. Nếu An thích cam thì Bình thích gì?', 1, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_014', 'Lan có bút đỏ hoặc xanh. Mai không có bút đỏ. Nếu Lan có bút xanh thì Mai có thể có bút màu gì?', 1, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_015', 'An, Bình và Chi mỗi bạn có một quả: táo, cam, chuối. An không có táo, Bình không có cam. Nếu Chi có chuối thì An có thể có quả gì?', 2, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_016', 'Mai, Lan và Hoa mỗi bạn chọn một màu: đỏ, xanh, vàng. Mai không chọn đỏ, Lan không chọn xanh. Nếu Hoa chọn vàng thì Mai có thể chọn màu gì?', 2, 'ACTIVE', NULL, NULL),
+
+	-- 2.11.5. Vị trí + thứ tự
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_017', 'An đứng thứ nhất. Bình đứng sau An. Chi đứng sau Bình. Ai đứng thứ ba?', 1, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_018', 'Lan đứng thứ hai. Mai đứng sau Lan. Hoa đứng sau Mai. Ai đứng thứ tư nếu có 4 bạn?', 1, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_019', 'An đứng trước Bình. Chi đứng sau Bình. Nếu Bình đứng thứ hai thì Chi đứng thứ mấy?', 2, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_020', 'Mai đứng trước Lan. Hoa đứng sau Lan. Nếu Lan đứng thứ hai thì Hoa đứng thứ mấy?', 2, 'ACTIVE', NULL, NULL),
+
+	-- 2.11.6. Vị trí + loại trừ
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_021', 'An đứng thứ nhất. Bình không đứng thứ hai. Chi đứng sau An. Ai có thể đứng thứ hai?', 1, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_022', 'Lan đứng thứ ba. Mai không đứng thứ nhất. Hoa đứng sau Lan. Ai có thể đứng thứ nhất?', 1, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_023', 'An đứng thứ hai. Bình không đứng cuối. Chi đứng sau An. Ai có thể đứng cuối?', 2, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_024', 'Mai đứng thứ tư. Lan không đứng thứ nhất. Hoa đứng trước Mai. Ai có thể đứng thứ nhất?', 2, 'ACTIVE', NULL, NULL),
+
+	-- 2.11.7. So sánh + ghép đôi
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_025', 'An có 3 viên bi, Bình có nhiều hơn An, Chi có ít hơn An. Ai có nhiều viên bi nhất?', 1, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_026', 'Lan có 5 bông hoa, Mai có ít hơn Lan, Hoa có nhiều hơn Mai. Ai có thể có nhiều hoa nhất?', 1, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_027', 'An có nhiều bút hơn Bình. Bình có nhiều bút hơn Chi. Nếu An chọn bút đỏ, ai có thể chọn bút xanh?', 2, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_028', 'Mai cao hơn Lan. Hoa thấp hơn Lan. Nếu Mai mặc áo đỏ, ai có thể mặc áo xanh?', 2, 'ACTIVE', NULL, NULL),
+
+	-- 2.11.8. Thứ tự + vị trí + loại trừ
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_029', 'An đứng trước Bình. Chi đứng sau Bình. Dũng không đứng cuối. Nếu Bình đứng thứ hai, ai có thể đứng cuối?', 2, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_030', 'Lan đứng trước Mai. Hoa đứng sau Mai. An không đứng đầu. Nếu Mai đứng thứ hai, ai có thể đứng đầu?', 2, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_031', 'An đứng thứ nhất, Bình đứng trước Chi, Dũng không đứng cuối. Ai có thể đứng thứ hai?', 3, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_032', 'Mai đứng trước Lan, Hoa đứng sau Lan, Bình không đứng thứ nhất. Ai có thể đứng thứ ba?', 3, 'ACTIVE', NULL, NULL),
+
+	-- 2.11.9. 3–4 dữ kiện liên tiếp
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_033', 'An đứng trước Bình. Bình đứng trước Chi. Chi đứng trước Dũng. Ai đứng cuối?', 2, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_034', 'Lan cao hơn Mai. Mai cao hơn Hoa. Hoa cao hơn An. Ai thấp nhất?', 2, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_035', 'An có 2 quả bóng. Bình có nhiều hơn An. Chi có ít hơn Bình nhưng nhiều hơn An. Ai có nhiều bóng nhất?', 3, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_036', 'Mai đứng sau Lan. Lan đứng sau Hoa. Hoa đứng sau An. Ai đứng đầu?', 3, 'ACTIVE', NULL, NULL),
+
+	-- 2.11.10. Suy luận từ kết quả ngược lại
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_037', 'Chi đứng thứ ba. Biết An đứng trước Chi và Bình đứng sau Chi. Ai có thể đứng thứ nhất?', 3, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_038', 'Hoa đứng cuối. Mai đứng trước Hoa. Lan đứng trước Mai. Ai có thể đứng đầu?', 3, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_039', 'Bình có nhiều hơn Chi. An có ít hơn Chi. Nếu Chi có 3 viên bi, ai có thể có 4 viên bi?', 3, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_040', 'Mai đứng thứ tư. Lan đứng trước Mai. Hoa đứng sau Mai. Nếu có 5 bạn, ai đứng thứ năm?', 3, 'ACTIVE', NULL, NULL);
+-- Child: 1.1. Dãy tăng đều
+INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, CREATED_AT, UPDATED_AT) VALUES
+	('NUMBER_INCREASING_001', 'A', '5', 'Y', NULL, NULL),
+	('NUMBER_INCREASING_001', 'B', '6', 'N', NULL, NULL),
+	('NUMBER_INCREASING_001', 'C', '7', 'N', NULL, NULL),
+	('NUMBER_INCREASING_001', 'D', '8', 'N', NULL, NULL),
+	('NUMBER_INCREASING_002', 'A', '7', 'N', NULL, NULL),
+	('NUMBER_INCREASING_002', 'B', '8', 'Y', NULL, NULL),
+	('NUMBER_INCREASING_002', 'C', '9', 'N', NULL, NULL),
+	('NUMBER_INCREASING_002', 'D', '10', 'N', NULL, NULL),
+	('NUMBER_INCREASING_003', 'A', '4', 'Y', NULL, NULL),
+	('NUMBER_INCREASING_003', 'B', '5', 'N', NULL, NULL),
+	('NUMBER_INCREASING_003', 'C', '6', 'N', NULL, NULL),
+	('NUMBER_INCREASING_003', 'D', '7', 'N', NULL, NULL),
+	('NUMBER_INCREASING_004', 'A', '8', 'N', NULL, NULL),
+	('NUMBER_INCREASING_004', 'B', '9', 'Y', NULL, NULL),
+	('NUMBER_INCREASING_004', 'C', '10', 'N', NULL, NULL),
+	('NUMBER_INCREASING_004', 'D', '11', 'N', NULL, NULL),
+	('NUMBER_INCREASING_005', 'A', '10', 'N', NULL, NULL),
+	('NUMBER_INCREASING_005', 'B', '11', 'Y', NULL, NULL),
+	('NUMBER_INCREASING_005', 'C', '12', 'N', NULL, NULL),
+	('NUMBER_INCREASING_005', 'D', '13', 'N', NULL, NULL),
+	('NUMBER_INCREASING_006', 'A', '7', 'Y', NULL, NULL),
+	('NUMBER_INCREASING_006', 'B', '8', 'N', NULL, NULL),
+	('NUMBER_INCREASING_006', 'C', '9', 'N', NULL, NULL),
+	('NUMBER_INCREASING_006', 'D', '10', 'N', NULL, NULL),
+	('NUMBER_INCREASING_007', 'A', '10', 'N', NULL, NULL),
+	('NUMBER_INCREASING_007', 'B', '11', 'Y', NULL, NULL),
+	('NUMBER_INCREASING_007', 'C', '12', 'N', NULL, NULL),
+	('NUMBER_INCREASING_007', 'D', '13', 'N', NULL, NULL),
+	('NUMBER_INCREASING_008', 'A', '11', 'N', NULL, NULL),
+	('NUMBER_INCREASING_008', 'B', '12', 'Y', NULL, NULL),
+	('NUMBER_INCREASING_008', 'C', '13', 'N', NULL, NULL),
+	('NUMBER_INCREASING_008', 'D', '14', 'N', NULL, NULL),
+	('NUMBER_INCREASING_009', 'A', '12', 'N', NULL, NULL),
+	('NUMBER_INCREASING_009', 'B', '13', 'Y', NULL, NULL),
+	('NUMBER_INCREASING_009', 'C', '14', 'N', NULL, NULL),
+	('NUMBER_INCREASING_009', 'D', '15', 'N', NULL, NULL),
+	('NUMBER_INCREASING_010', 'A', '13', 'N', NULL, NULL),
+	('NUMBER_INCREASING_010', 'B', '14', 'Y', NULL, NULL),
+	('NUMBER_INCREASING_010', 'C', '15', 'N', NULL, NULL),
+	('NUMBER_INCREASING_010', 'D', '16', 'N', NULL, NULL),
+
+	('NUMBER_INCREASING_011', 'A', '9', 'N', NULL, NULL),
+	('NUMBER_INCREASING_011', 'B', '10', 'Y', NULL, NULL),
+	('NUMBER_INCREASING_011', 'C', '11', 'N', NULL, NULL),
+	('NUMBER_INCREASING_011', 'D', '12', 'N', NULL, NULL),
+	('NUMBER_INCREASING_012', 'A', '8', 'Y', NULL, NULL),
+	('NUMBER_INCREASING_012', 'B', '9', 'N', NULL, NULL),
+	('NUMBER_INCREASING_012', 'C', '10', 'N', NULL, NULL),
+	('NUMBER_INCREASING_012', 'D', '11', 'N', NULL, NULL),
+	('NUMBER_INCREASING_013', 'A', '10', 'N', NULL, NULL),
+	('NUMBER_INCREASING_013', 'B', '11', 'Y', NULL, NULL),
+	('NUMBER_INCREASING_013', 'C', '12', 'N', NULL, NULL),
+	('NUMBER_INCREASING_013', 'D', '13', 'N', NULL, NULL),
+	('NUMBER_INCREASING_014', 'A', '11', 'N', NULL, NULL),
+	('NUMBER_INCREASING_014', 'B', '12', 'Y', NULL, NULL),
+	('NUMBER_INCREASING_014', 'C', '13', 'N', NULL, NULL),
+	('NUMBER_INCREASING_014', 'D', '14', 'N', NULL, NULL),
+	('NUMBER_INCREASING_015', 'A', '12', 'N', NULL, NULL),
+	('NUMBER_INCREASING_015', 'B', '13', 'Y', NULL, NULL),
+	('NUMBER_INCREASING_015', 'C', '14', 'N', NULL, NULL),
+	('NUMBER_INCREASING_015', 'D', '15', 'N', NULL, NULL),
+	('NUMBER_INCREASING_016', 'A', '13', 'N', NULL, NULL),
+	('NUMBER_INCREASING_016', 'B', '14', 'Y', NULL, NULL),
+	('NUMBER_INCREASING_016', 'C', '15', 'N', NULL, NULL),
+	('NUMBER_INCREASING_016', 'D', '16', 'N', NULL, NULL),
+	('NUMBER_INCREASING_017', 'A', '14', 'N', NULL, NULL),
+	('NUMBER_INCREASING_017', 'B', '15', 'Y', NULL, NULL),
+	('NUMBER_INCREASING_017', 'C', '16', 'N', NULL, NULL),
+	('NUMBER_INCREASING_017', 'D', '18', 'N', NULL, NULL),
+	('NUMBER_INCREASING_018', 'A', '15', 'N', NULL, NULL),
+	('NUMBER_INCREASING_018', 'B', '16', 'Y', NULL, NULL),
+	('NUMBER_INCREASING_018', 'C', '17', 'N', NULL, NULL),
+	('NUMBER_INCREASING_018', 'D', '18', 'N', NULL, NULL),
+	('NUMBER_INCREASING_019', 'A', '17', 'N', NULL, NULL),
+	('NUMBER_INCREASING_019', 'B', '18', 'Y', NULL, NULL),
+	('NUMBER_INCREASING_019', 'C', '19', 'N', NULL, NULL),
+	('NUMBER_INCREASING_019', 'D', '20', 'N', NULL, NULL),
+	('NUMBER_INCREASING_020', 'A', '17', 'N', NULL, NULL),
+	('NUMBER_INCREASING_020', 'B', '18', 'Y', NULL, NULL),
+	('NUMBER_INCREASING_020', 'C', '19', 'N', NULL, NULL),
+	('NUMBER_INCREASING_020', 'D', '20', 'N', NULL, NULL),
+
+	('NUMBER_INCREASING_021', 'A', '16', 'N', NULL, NULL),
+	('NUMBER_INCREASING_021', 'B', '17', 'Y', NULL, NULL),
+	('NUMBER_INCREASING_021', 'C', '18', 'N', NULL, NULL),
+	('NUMBER_INCREASING_021', 'D', '19', 'N', NULL, NULL),
+	('NUMBER_INCREASING_022', 'A', '17', 'N', NULL, NULL),
+	('NUMBER_INCREASING_022', 'B', '18', 'N', NULL, NULL),
+	('NUMBER_INCREASING_022', 'C', '20', 'Y', NULL, NULL),
+	('NUMBER_INCREASING_022', 'D', '21', 'N', NULL, NULL),
+	('NUMBER_INCREASING_023', 'A', '19', 'N', NULL, NULL),
+	('NUMBER_INCREASING_023', 'B', '20', 'Y', NULL, NULL),
+	('NUMBER_INCREASING_023', 'C', '21', 'N', NULL, NULL),
+	('NUMBER_INCREASING_023', 'D', '22', 'N', NULL, NULL),
+	('NUMBER_INCREASING_024', 'A', '23', 'N', NULL, NULL),
+	('NUMBER_INCREASING_024', 'B', '24', 'Y', NULL, NULL),
+	('NUMBER_INCREASING_024', 'C', '25', 'N', NULL, NULL),
+	('NUMBER_INCREASING_024', 'D', '26', 'N', NULL, NULL),
+	('NUMBER_INCREASING_025', 'A', '15', 'N', NULL, NULL),
+	('NUMBER_INCREASING_025', 'B', '16', 'Y', NULL, NULL),
+	('NUMBER_INCREASING_025', 'C', '17', 'N', NULL, NULL),
+	('NUMBER_INCREASING_025', 'D', '18', 'N', NULL, NULL),
+	('NUMBER_INCREASING_026', 'A', '21', 'N', NULL, NULL),
+	('NUMBER_INCREASING_026', 'B', '22', 'Y', NULL, NULL),
+	('NUMBER_INCREASING_026', 'C', '23', 'N', NULL, NULL),
+	('NUMBER_INCREASING_026', 'D', '24', 'N', NULL, NULL),
+	('NUMBER_INCREASING_027', 'A', '22', 'N', NULL, NULL),
+	('NUMBER_INCREASING_027', 'B', '23', 'Y', NULL, NULL),
+	('NUMBER_INCREASING_027', 'C', '24', 'N', NULL, NULL),
+	('NUMBER_INCREASING_027', 'D', '25', 'N', NULL, NULL),
+	('NUMBER_INCREASING_028', 'A', '23', 'N', NULL, NULL),
+	('NUMBER_INCREASING_028', 'B', '24', 'Y', NULL, NULL),
+	('NUMBER_INCREASING_028', 'C', '25', 'N', NULL, NULL),
+	('NUMBER_INCREASING_028', 'D', '26', 'N', NULL, NULL),
+	('NUMBER_INCREASING_029', 'A', '29', 'N', NULL, NULL),
+	('NUMBER_INCREASING_029', 'B', '30', 'Y', NULL, NULL),
+	('NUMBER_INCREASING_029', 'C', '31', 'N', NULL, NULL),
+	('NUMBER_INCREASING_029', 'D', '32', 'N', NULL, NULL),
+	('NUMBER_INCREASING_030', 'A', '31', 'N', NULL, NULL),
+	('NUMBER_INCREASING_030', 'B', '32', 'Y', NULL, NULL),
+	('NUMBER_INCREASING_030', 'C', '33', 'N', NULL, NULL),
+	('NUMBER_INCREASING_030', 'D', '34', 'N', NULL, NULL),
+
+	('NUMBER_INCREASING_031', 'A', '2', 'N', NULL, NULL),
+	('NUMBER_INCREASING_031', 'B', '3', 'N', NULL, NULL),
+	('NUMBER_INCREASING_031', 'C', '4', 'Y', NULL, NULL),
+	('NUMBER_INCREASING_031', 'D', '5', 'N', NULL, NULL),
+	('NUMBER_INCREASING_032', 'A', '8', 'Y', NULL, NULL),
+	('NUMBER_INCREASING_032', 'B', '9', 'N', NULL, NULL),
+	('NUMBER_INCREASING_032', 'C', '10', 'N', NULL, NULL),
+	('NUMBER_INCREASING_032', 'D', '11', 'N', NULL, NULL),
+	('NUMBER_INCREASING_033', 'A', '12', 'Y', NULL, NULL),
+	('NUMBER_INCREASING_033', 'B', '13', 'N', NULL, NULL),
+	('NUMBER_INCREASING_033', 'C', '14', 'N', NULL, NULL),
+	('NUMBER_INCREASING_033', 'D', '15', 'N', NULL, NULL),
+	('NUMBER_INCREASING_034', 'A', '18', 'N', NULL, NULL),
+	('NUMBER_INCREASING_034', 'B', '20', 'Y', NULL, NULL),
+	('NUMBER_INCREASING_034', 'C', '22', 'N', NULL, NULL),
+	('NUMBER_INCREASING_034', 'D', '24', 'N', NULL, NULL),
+	('NUMBER_INCREASING_035', 'A', '20', 'N', NULL, NULL),
+	('NUMBER_INCREASING_035', 'B', '22', 'Y', NULL, NULL),
+	('NUMBER_INCREASING_035', 'C', '24', 'N', NULL, NULL),
+	('NUMBER_INCREASING_035', 'D', '25', 'N', NULL, NULL),
+	('NUMBER_INCREASING_036', 'A', '25', 'N', NULL, NULL),
+	('NUMBER_INCREASING_036', 'B', '26', 'Y', NULL, NULL),
+	('NUMBER_INCREASING_036', 'C', '27', 'N', NULL, NULL),
+	('NUMBER_INCREASING_036', 'D', '28', 'N', NULL, NULL),
+	('NUMBER_INCREASING_037', 'A', '4', 'N', NULL, NULL),
+	('NUMBER_INCREASING_037', 'B', '5', 'Y', NULL, NULL),
+	('NUMBER_INCREASING_037', 'C', '6', 'N', NULL, NULL),
+	('NUMBER_INCREASING_037', 'D', '7', 'N', NULL, NULL),
+	('NUMBER_INCREASING_038', 'A', '10', 'Y', NULL, NULL),
+	('NUMBER_INCREASING_038', 'B', '11', 'N', NULL, NULL),
+	('NUMBER_INCREASING_038', 'C', '12', 'N', NULL, NULL),
+	('NUMBER_INCREASING_038', 'D', '13', 'N', NULL, NULL),
+	('NUMBER_INCREASING_039', 'A', '18', 'N', NULL, NULL),
+	('NUMBER_INCREASING_039', 'B', '19', 'Y', NULL, NULL),
+	('NUMBER_INCREASING_039', 'C', '20', 'N', NULL, NULL),
+	('NUMBER_INCREASING_039', 'D', '21', 'N', NULL, NULL),
+	('NUMBER_INCREASING_040', 'A', '31', 'N', NULL, NULL),
+	('NUMBER_INCREASING_040', 'B', '32', 'Y', NULL, NULL),
+	('NUMBER_INCREASING_040', 'C', '33', 'N', NULL, NULL),
+	('NUMBER_INCREASING_040', 'D', '34', 'N', NULL, NULL);
+
+-- Child: 1.2. Dãy giảm đều
+INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, CREATED_AT, UPDATED_AT) VALUES
+	('NUMBER_DECREASING_001', 'A', '5', 'N', NULL, NULL),
+	('NUMBER_DECREASING_001', 'B', '6', 'Y', NULL, NULL),
+	('NUMBER_DECREASING_001', 'C', '7', 'N', NULL, NULL),
+	('NUMBER_DECREASING_001', 'D', '8', 'N', NULL, NULL),
+	('NUMBER_DECREASING_002', 'A', '4', 'N', NULL, NULL),
+	('NUMBER_DECREASING_002', 'B', '5', 'Y', NULL, NULL),
+	('NUMBER_DECREASING_002', 'C', '6', 'N', NULL, NULL),
+	('NUMBER_DECREASING_002', 'D', '7', 'N', NULL, NULL),
+	('NUMBER_DECREASING_003', 'A', '3', 'N', NULL, NULL),
+	('NUMBER_DECREASING_003', 'B', '4', 'Y', NULL, NULL),
+	('NUMBER_DECREASING_003', 'C', '5', 'N', NULL, NULL),
+	('NUMBER_DECREASING_003', 'D', '6', 'N', NULL, NULL),
+	('NUMBER_DECREASING_004', 'A', '2', 'Y', NULL, NULL),
+	('NUMBER_DECREASING_004', 'B', '3', 'N', NULL, NULL),
+	('NUMBER_DECREASING_004', 'C', '4', 'N', NULL, NULL),
+	('NUMBER_DECREASING_004', 'D', '5', 'N', NULL, NULL),
+	('NUMBER_DECREASING_005', 'A', '2', 'N', NULL, NULL),
+	('NUMBER_DECREASING_005', 'B', '3', 'Y', NULL, NULL),
+	('NUMBER_DECREASING_005', 'C', '4', 'N', NULL, NULL),
+	('NUMBER_DECREASING_005', 'D', '5', 'N', NULL, NULL),
+	('NUMBER_DECREASING_006', 'A', '0', 'Y', NULL, NULL),
+	('NUMBER_DECREASING_006', 'B', '1', 'N', NULL, NULL),
+	('NUMBER_DECREASING_006', 'C', '2', 'N', NULL, NULL),
+	('NUMBER_DECREASING_006', 'D', '3', 'N', NULL, NULL),
+	('NUMBER_DECREASING_007', 'A', '7', 'N', NULL, NULL),
+	('NUMBER_DECREASING_007', 'B', '8', 'Y', NULL, NULL),
+	('NUMBER_DECREASING_007', 'C', '9', 'N', NULL, NULL),
+	('NUMBER_DECREASING_007', 'D', '10', 'N', NULL, NULL),
+	('NUMBER_DECREASING_008', 'A', '6', 'N', NULL, NULL),
+	('NUMBER_DECREASING_008', 'B', '7', 'Y', NULL, NULL),
+	('NUMBER_DECREASING_008', 'C', '8', 'N', NULL, NULL),
+	('NUMBER_DECREASING_008', 'D', '9', 'N', NULL, NULL),
+	('NUMBER_DECREASING_009', 'A', '10', 'N', NULL, NULL),
+	('NUMBER_DECREASING_009', 'B', '11', 'N', NULL, NULL),
+	('NUMBER_DECREASING_009', 'C', '12', 'Y', NULL, NULL),
+	('NUMBER_DECREASING_009', 'D', '13', 'N', NULL, NULL),
+	('NUMBER_DECREASING_010', 'A', '9', 'N', NULL, NULL),
+	('NUMBER_DECREASING_010', 'B', '10', 'N', NULL, NULL),
+	('NUMBER_DECREASING_010', 'C', '11', 'Y', NULL, NULL),
+	('NUMBER_DECREASING_010', 'D', '12', 'N', NULL, NULL),
+
+	('NUMBER_DECREASING_011', 'A', '2', 'N', NULL, NULL),
+	('NUMBER_DECREASING_011', 'B', '4', 'N', NULL, NULL),
+	('NUMBER_DECREASING_011', 'C', '5', 'N', NULL, NULL),
+	('NUMBER_DECREASING_011', 'D', '6', 'Y', NULL, NULL),
+	('NUMBER_DECREASING_012', 'A', '2', 'N', NULL, NULL),
+	('NUMBER_DECREASING_012', 'B', '3', 'Y', NULL, NULL),
+	('NUMBER_DECREASING_012', 'C', '4', 'N', NULL, NULL),
+	('NUMBER_DECREASING_012', 'D', '5', 'N', NULL, NULL),
+	('NUMBER_DECREASING_013', 'A', '1', 'N', NULL, NULL),
+	('NUMBER_DECREASING_013', 'B', '2', 'N', NULL, NULL),
+	('NUMBER_DECREASING_013', 'C', '3', 'Y', NULL, NULL),
+	('NUMBER_DECREASING_013', 'D', '5', 'N', NULL, NULL),
+	('NUMBER_DECREASING_014', 'A', '4', 'N', NULL, NULL),
+	('NUMBER_DECREASING_014', 'B', '6', 'N', NULL, NULL),
+	('NUMBER_DECREASING_014', 'C', '7', 'N', NULL, NULL),
+	('NUMBER_DECREASING_014', 'D', '8', 'Y', NULL, NULL),
+	('NUMBER_DECREASING_015', 'A', '6', 'N', NULL, NULL),
+	('NUMBER_DECREASING_015', 'B', '8', 'Y', NULL, NULL),
+	('NUMBER_DECREASING_015', 'C', '9', 'N', NULL, NULL),
+	('NUMBER_DECREASING_015', 'D', '10', 'N', NULL, NULL),
+	('NUMBER_DECREASING_016', 'A', '7', 'N', NULL, NULL),
+	('NUMBER_DECREASING_016', 'B', '8', 'N', NULL, NULL),
+	('NUMBER_DECREASING_016', 'C', '9', 'Y', NULL, NULL),
+	('NUMBER_DECREASING_016', 'D', '10', 'N', NULL, NULL),
+	('NUMBER_DECREASING_017', 'A', '5', 'N', NULL, NULL),
+	('NUMBER_DECREASING_017', 'B', '6', 'Y', NULL, NULL),
+	('NUMBER_DECREASING_017', 'C', '7', 'N', NULL, NULL),
+	('NUMBER_DECREASING_017', 'D', '8', 'N', NULL, NULL),
+	('NUMBER_DECREASING_018', 'A', '5', 'Y', NULL, NULL),
+	('NUMBER_DECREASING_018', 'B', '6', 'N', NULL, NULL),
+	('NUMBER_DECREASING_018', 'C', '7', 'N', NULL, NULL),
+	('NUMBER_DECREASING_018', 'D', '8', 'N', NULL, NULL),
+	('NUMBER_DECREASING_019', 'A', '7', 'N', NULL, NULL),
+	('NUMBER_DECREASING_019', 'B', '8', 'Y', NULL, NULL),
+	('NUMBER_DECREASING_019', 'C', '9', 'N', NULL, NULL),
+	('NUMBER_DECREASING_019', 'D', '10', 'N', NULL, NULL),
+	('NUMBER_DECREASING_020', 'A', '7', 'Y', NULL, NULL),
+	('NUMBER_DECREASING_020', 'B', '8', 'N', NULL, NULL),
+	('NUMBER_DECREASING_020', 'C', '9', 'N', NULL, NULL),
+	('NUMBER_DECREASING_020', 'D', '10', 'N', NULL, NULL),
+
+	('NUMBER_DECREASING_021', 'A', '5', 'N', NULL, NULL),
+	('NUMBER_DECREASING_021', 'B', '6', 'N', NULL, NULL),
+	('NUMBER_DECREASING_021', 'C', '7', 'Y', NULL, NULL),
+	('NUMBER_DECREASING_021', 'D', '8', 'N', NULL, NULL),
+	('NUMBER_DECREASING_022', 'A', '5', 'N', NULL, NULL),
+	('NUMBER_DECREASING_022', 'B', '6', 'Y', NULL, NULL),
+	('NUMBER_DECREASING_022', 'C', '7', 'N', NULL, NULL),
+	('NUMBER_DECREASING_022', 'D', '8', 'N', NULL, NULL),
+	('NUMBER_DECREASING_023', 'A', '5', 'N', NULL, NULL),
+	('NUMBER_DECREASING_023', 'B', '6', 'N', NULL, NULL),
+	('NUMBER_DECREASING_023', 'C', '7', 'Y', NULL, NULL),
+	('NUMBER_DECREASING_023', 'D', '8', 'N', NULL, NULL),
+	('NUMBER_DECREASING_024', 'A', '4', 'N', NULL, NULL),
+	('NUMBER_DECREASING_024', 'B', '5', 'Y', NULL, NULL),
+	('NUMBER_DECREASING_024', 'C', '6', 'N', NULL, NULL),
+	('NUMBER_DECREASING_024', 'D', '7', 'N', NULL, NULL),
+	('NUMBER_DECREASING_025', 'A', '6', 'N', NULL, NULL),
+	('NUMBER_DECREASING_025', 'B', '7', 'Y', NULL, NULL),
+	('NUMBER_DECREASING_025', 'C', '8', 'N', NULL, NULL),
+	('NUMBER_DECREASING_025', 'D', '9', 'N', NULL, NULL),
+	('NUMBER_DECREASING_026', 'A', '2', 'N', NULL, NULL),
+	('NUMBER_DECREASING_026', 'B', '3', 'Y', NULL, NULL),
+	('NUMBER_DECREASING_026', 'C', '4', 'N', NULL, NULL),
+	('NUMBER_DECREASING_026', 'D', '5', 'N', NULL, NULL),
+	('NUMBER_DECREASING_027', 'A', '7', 'N', NULL, NULL),
+	('NUMBER_DECREASING_027', 'B', '8', 'Y', NULL, NULL),
+	('NUMBER_DECREASING_027', 'C', '9', 'N', NULL, NULL),
+	('NUMBER_DECREASING_027', 'D', '10', 'N', NULL, NULL),
+	('NUMBER_DECREASING_028', 'A', '6', 'N', NULL, NULL),
+	('NUMBER_DECREASING_028', 'B', '7', 'Y', NULL, NULL),
+	('NUMBER_DECREASING_028', 'C', '8', 'N', NULL, NULL),
+	('NUMBER_DECREASING_028', 'D', '9', 'N', NULL, NULL),
+	('NUMBER_DECREASING_029', 'A', '7', 'N', NULL, NULL),
+	('NUMBER_DECREASING_029', 'B', '8', 'N', NULL, NULL),
+	('NUMBER_DECREASING_029', 'C', '9', 'N', NULL, NULL),
+	('NUMBER_DECREASING_029', 'D', '10', 'Y', NULL, NULL),
+	('NUMBER_DECREASING_030', 'A', '3', 'N', NULL, NULL),
+	('NUMBER_DECREASING_030', 'B', '4', 'N', NULL, NULL),
+	('NUMBER_DECREASING_030', 'C', '5', 'Y', NULL, NULL),
+	('NUMBER_DECREASING_030', 'D', '6', 'N', NULL, NULL),
+
+	('NUMBER_DECREASING_031', 'A', '30', 'Y', NULL, NULL),
+	('NUMBER_DECREASING_031', 'B', '35', 'N', NULL, NULL),
+	('NUMBER_DECREASING_031', 'C', '40', 'N', NULL, NULL),
+	('NUMBER_DECREASING_031', 'D', '45', 'N', NULL, NULL),
+	('NUMBER_DECREASING_032', 'A', '22', 'N', NULL, NULL),
+	('NUMBER_DECREASING_032', 'B', '25', 'Y', NULL, NULL),
+	('NUMBER_DECREASING_032', 'C', '27', 'N', NULL, NULL),
+	('NUMBER_DECREASING_032', 'D', '28', 'N', NULL, NULL),
+	('NUMBER_DECREASING_033', 'A', '17', 'N', NULL, NULL),
+	('NUMBER_DECREASING_033', 'B', '18', 'Y', NULL, NULL),
+	('NUMBER_DECREASING_033', 'C', '19', 'N', NULL, NULL),
+	('NUMBER_DECREASING_033', 'D', '20', 'N', NULL, NULL),
+	('NUMBER_DECREASING_034', 'A', '11', 'N', NULL, NULL),
+	('NUMBER_DECREASING_034', 'B', '12', 'Y', NULL, NULL),
+	('NUMBER_DECREASING_034', 'C', '13', 'N', NULL, NULL),
+	('NUMBER_DECREASING_034', 'D', '14', 'N', NULL, NULL),
+	('NUMBER_DECREASING_035', 'A', '5', 'N', NULL, NULL),
+	('NUMBER_DECREASING_035', 'B', '6', 'Y', NULL, NULL),
+	('NUMBER_DECREASING_035', 'C', '7', 'N', NULL, NULL),
+	('NUMBER_DECREASING_035', 'D', '8', 'N', NULL, NULL),
+	('NUMBER_DECREASING_036', 'A', '0', 'N', NULL, NULL),
+	('NUMBER_DECREASING_036', 'B', '5', 'Y', NULL, NULL),
+	('NUMBER_DECREASING_036', 'C', '10', 'N', NULL, NULL),
+	('NUMBER_DECREASING_036', 'D', '15', 'N', NULL, NULL),
+	('NUMBER_DECREASING_037', 'A', '28', 'N', NULL, NULL),
+	('NUMBER_DECREASING_037', 'B', '30', 'Y', NULL, NULL),
+	('NUMBER_DECREASING_037', 'C', '32', 'N', NULL, NULL),
+	('NUMBER_DECREASING_037', 'D', '36', 'N', NULL, NULL),
+	('NUMBER_DECREASING_038', 'A', '23', 'N', NULL, NULL),
+	('NUMBER_DECREASING_038', 'B', '25', 'Y', NULL, NULL),
+	('NUMBER_DECREASING_038', 'C', '27', 'N', NULL, NULL),
+	('NUMBER_DECREASING_038', 'D', '28', 'N', NULL, NULL),
+	('NUMBER_DECREASING_039', 'A', '14', 'N', NULL, NULL),
+	('NUMBER_DECREASING_039', 'B', '15', 'Y', NULL, NULL),
+	('NUMBER_DECREASING_039', 'C', '16', 'N', NULL, NULL),
+	('NUMBER_DECREASING_039', 'D', '17', 'N', NULL, NULL),
+	('NUMBER_DECREASING_040', 'A', '1', 'N', NULL, NULL),
+	('NUMBER_DECREASING_040', 'B', '3', 'Y', NULL, NULL),
+	('NUMBER_DECREASING_040', 'C', '4', 'N', NULL, NULL),
+	('NUMBER_DECREASING_040', 'D', '5', 'N', NULL, NULL);
+	
+
+INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, CREATED_AT, UPDATED_AT) VALUES
+	('LOGIC_POSITION_001', 'A', 'An', 'Y', NULL, NULL),
+	('LOGIC_POSITION_001', 'B', 'Bình', 'N', NULL, NULL),
+	('LOGIC_POSITION_001', 'C', 'Chi', 'N', NULL, NULL),
+	('LOGIC_POSITION_001', 'D', 'Dũng', 'N', NULL, NULL),
+
+	('LOGIC_POSITION_002', 'A', 'An', 'N', NULL, NULL),
+	('LOGIC_POSITION_002', 'B', 'Bình', 'N', NULL, NULL),
+	('LOGIC_POSITION_002', 'C', 'Chi', 'N', NULL, NULL),
+	('LOGIC_POSITION_002', 'D', 'Dũng', 'Y', NULL, NULL),
+
+	('LOGIC_POSITION_003', 'A', 'Lan', 'N', NULL, NULL),
+	('LOGIC_POSITION_003', 'B', 'Nam', 'Y', NULL, NULL),
+	('LOGIC_POSITION_003', 'C', 'Hoa', 'N', NULL, NULL),
+	('LOGIC_POSITION_003', 'D', 'An', 'N', NULL, NULL),
+
+	('LOGIC_POSITION_004', 'A', 'Lan', 'N', NULL, NULL),
+	('LOGIC_POSITION_004', 'B', 'Mai', 'Y', NULL, NULL),
+	('LOGIC_POSITION_004', 'C', 'Hoa', 'N', NULL, NULL),
+	('LOGIC_POSITION_004', 'D', 'An', 'N', NULL, NULL),
+
+	('LOGIC_POSITION_005', 'A', 'An', 'N', NULL, NULL),
+	('LOGIC_POSITION_005', 'B', 'Bình', 'Y', NULL, NULL),
+	('LOGIC_POSITION_005', 'C', 'Chi', 'N', NULL, NULL),
+	('LOGIC_POSITION_005', 'D', 'Không có', 'N', NULL, NULL),
+
+	('LOGIC_POSITION_006', 'A', 'Minh', 'N', NULL, NULL),
+	('LOGIC_POSITION_006', 'B', 'Lan', 'Y', NULL, NULL),
+	('LOGIC_POSITION_006', 'C', 'Hoa', 'N', NULL, NULL),
+	('LOGIC_POSITION_006', 'D', 'Nam', 'N', NULL, NULL),
+
+	('LOGIC_POSITION_007', 'A', 'An', 'N', NULL, NULL),
+	('LOGIC_POSITION_007', 'B', 'Bình', 'N', NULL, NULL),
+	('LOGIC_POSITION_007', 'C', 'Chi', 'Y', NULL, NULL),
+	('LOGIC_POSITION_007', 'D', 'Dũng', 'N', NULL, NULL),
+
+	('LOGIC_POSITION_008', 'A', 'Hoa', 'Y', NULL, NULL),
+	('LOGIC_POSITION_008', 'B', 'Lan', 'N', NULL, NULL),
+	('LOGIC_POSITION_008', 'C', 'Mai', 'N', NULL, NULL),
+	('LOGIC_POSITION_008', 'D', 'Không có', 'N', NULL, NULL),
+
+	('LOGIC_POSITION_009', 'A', 'Nam', 'N', NULL, NULL),
+	('LOGIC_POSITION_009', 'B', 'Hoa', 'N', NULL, NULL),
+	('LOGIC_POSITION_009', 'C', 'Lan', 'Y', NULL, NULL),
+	('LOGIC_POSITION_009', 'D', 'Mai', 'N', NULL, NULL),
+
+	('LOGIC_POSITION_010', 'A', 'Bình', 'N', NULL, NULL),
+	('LOGIC_POSITION_010', 'B', 'An', 'N', NULL, NULL),
+	('LOGIC_POSITION_010', 'C', 'Dũng', 'N', NULL, NULL),
+	('LOGIC_POSITION_010', 'D', 'Chi', 'Y', NULL, NULL),
+
+	('LOGIC_POSITION_011', 'A', 'An', 'N', NULL, NULL),
+	('LOGIC_POSITION_011', 'B', 'Bình', 'N', NULL, NULL),
+	('LOGIC_POSITION_011', 'C', 'Chi', 'Y', NULL, NULL),
+	('LOGIC_POSITION_011', 'D', 'Dũng', 'N', NULL, NULL),
+
+	('LOGIC_POSITION_012', 'A', 'Lan', 'N', NULL, NULL),
+	('LOGIC_POSITION_012', 'B', 'Mai', 'N', NULL, NULL),
+	('LOGIC_POSITION_012', 'C', 'Nam', 'N', NULL, NULL),
+	('LOGIC_POSITION_012', 'D', 'Hoa', 'Y', NULL, NULL),
+
+	('LOGIC_POSITION_013', 'A', 'Minh', 'N', NULL, NULL),
+	('LOGIC_POSITION_013', 'B', 'Lan', 'Y', NULL, NULL),
+	('LOGIC_POSITION_013', 'C', 'Nam', 'N', NULL, NULL),
+	('LOGIC_POSITION_013', 'D', 'Mai', 'N', NULL, NULL),
+
+	('LOGIC_POSITION_014', 'A', 'An', 'N', NULL, NULL),
+	('LOGIC_POSITION_014', 'B', 'Chi', 'N', NULL, NULL),
+	('LOGIC_POSITION_014', 'C', 'Dũng', 'Y', NULL, NULL),
+	('LOGIC_POSITION_014', 'D', 'Lan', 'N', NULL, NULL),
+
+	('LOGIC_POSITION_015', 'A', 'Hoa', 'N', NULL, NULL),
+	('LOGIC_POSITION_015', 'B', 'Nam', 'Y', NULL, NULL),
+	('LOGIC_POSITION_015', 'C', 'An', 'N', NULL, NULL),
+	('LOGIC_POSITION_015', 'D', 'Mai', 'N', NULL, NULL),
+
+	('LOGIC_POSITION_016', 'A', 'Mai', 'N', NULL, NULL),
+	('LOGIC_POSITION_016', 'B', 'Lan', 'N', NULL, NULL),
+	('LOGIC_POSITION_016', 'C', 'An', 'Y', NULL, NULL),
+	('LOGIC_POSITION_016', 'D', 'Hoa', 'N', NULL, NULL),
+
+	('LOGIC_POSITION_017', 'A', 'Bình', 'N', NULL, NULL),
+	('LOGIC_POSITION_017', 'B', 'Hoa', 'Y', NULL, NULL),
+	('LOGIC_POSITION_017', 'C', 'Lan', 'N', NULL, NULL),
+	('LOGIC_POSITION_017', 'D', 'Chi', 'N', NULL, NULL),
+
+	('LOGIC_POSITION_018', 'A', 'Nam', 'N', NULL, NULL),
+	('LOGIC_POSITION_018', 'B', 'Chi', 'N', NULL, NULL),
+	('LOGIC_POSITION_018', 'C', 'Mai', 'Y', NULL, NULL),
+	('LOGIC_POSITION_018', 'D', 'Bình', 'N', NULL, NULL),
+
+	('LOGIC_POSITION_019', 'A', 'An', 'N', NULL, NULL),
+	('LOGIC_POSITION_019', 'B', 'Mai', 'N', NULL, NULL),
+	('LOGIC_POSITION_019', 'C', 'Bình', 'N', NULL, NULL),
+	('LOGIC_POSITION_019', 'D', 'Chi', 'Y', NULL, NULL),
+
+	('LOGIC_POSITION_020', 'A', 'Lan', 'Y', NULL, NULL),
+	('LOGIC_POSITION_020', 'B', 'An', 'N', NULL, NULL),
+	('LOGIC_POSITION_020', 'C', 'Chi', 'N', NULL, NULL),
+	('LOGIC_POSITION_020', 'D', 'Mai', 'N', NULL, NULL),
+
+	('LOGIC_POSITION_021', 'A', 'Dũng', 'N', NULL, NULL),
+	('LOGIC_POSITION_021', 'B', 'Hoa', 'Y', NULL, NULL),
+	('LOGIC_POSITION_021', 'C', 'Lan', 'N', NULL, NULL),
+	('LOGIC_POSITION_021', 'D', 'Chi', 'N', NULL, NULL),
+
+	('LOGIC_POSITION_022', 'A', 'Mai', 'N', NULL, NULL),
+	('LOGIC_POSITION_022', 'B', 'Nam', 'Y', NULL, NULL),
+	('LOGIC_POSITION_022', 'C', 'Hoa', 'N', NULL, NULL),
+	('LOGIC_POSITION_022', 'D', 'An', 'N', NULL, NULL),
+
+	('LOGIC_POSITION_023', 'A', 'An', 'N', NULL, NULL),
+	('LOGIC_POSITION_023', 'B', 'Bình', 'N', NULL, NULL),
+	('LOGIC_POSITION_023', 'C', 'Chi', 'Y', NULL, NULL),
+	('LOGIC_POSITION_023', 'D', 'Dũng', 'N', NULL, NULL),
+
+	('LOGIC_POSITION_024', 'A', 'Nam', 'N', NULL, NULL),
+	('LOGIC_POSITION_024', 'B', 'An', 'Y', NULL, NULL),
+	('LOGIC_POSITION_024', 'C', 'Chi', 'N', NULL, NULL),
+	('LOGIC_POSITION_024', 'D', 'Lan', 'N', NULL, NULL),
+
+	('LOGIC_POSITION_025', 'A', 'Bình', 'N', NULL, NULL),
+	('LOGIC_POSITION_025', 'B', 'An', 'N', NULL, NULL),
+	('LOGIC_POSITION_025', 'C', 'Chi', 'Y', NULL, NULL),
+	('LOGIC_POSITION_025', 'D', 'Lan', 'N', NULL, NULL),
+
+	('LOGIC_POSITION_026', 'A', 'Nam', 'N', NULL, NULL),
+	('LOGIC_POSITION_026', 'B', 'Mai', 'N', NULL, NULL),
+	('LOGIC_POSITION_026', 'C', 'Bình', 'N', NULL, NULL),
+	('LOGIC_POSITION_026', 'D', 'Hoa', 'Y', NULL, NULL),
+
+	('LOGIC_POSITION_027', 'A', 'Chi', 'N', NULL, NULL),
+	('LOGIC_POSITION_027', 'B', 'Dũng', 'Y', NULL, NULL),
+	('LOGIC_POSITION_027', 'C', 'Hoa', 'N', NULL, NULL),
+	('LOGIC_POSITION_027', 'D', 'Lan', 'N', NULL, NULL),
+
+	('LOGIC_POSITION_028', 'A', 'Mai', 'N', NULL, NULL),
+	('LOGIC_POSITION_028', 'B', 'Lan', 'N', NULL, NULL),
+	('LOGIC_POSITION_028', 'C', 'Hoa', 'Y', NULL, NULL),
+	('LOGIC_POSITION_028', 'D', 'An', 'N', NULL, NULL),
+
+	('LOGIC_POSITION_029', 'A', 'Chi', 'N', NULL, NULL),
+	('LOGIC_POSITION_029', 'B', 'Nam', 'N', NULL, NULL),
+	('LOGIC_POSITION_029', 'C', 'Hoa', 'N', NULL, NULL),
+	('LOGIC_POSITION_029', 'D', 'Mai', 'N', NULL, NULL),
+
+	('LOGIC_POSITION_030', 'A', 'Nam', 'N', NULL, NULL),
+	('LOGIC_POSITION_030', 'B', 'Mai', 'Y', NULL, NULL),
+	('LOGIC_POSITION_030', 'C', 'Chi', 'N', NULL, NULL),
+	('LOGIC_POSITION_030', 'D', 'Bình', 'N', NULL, NULL),
+
+	('LOGIC_POSITION_031', 'A', 'An', 'N', NULL, NULL),
+	('LOGIC_POSITION_031', 'B', 'Bình', 'Y', NULL, NULL),
+	('LOGIC_POSITION_031', 'C', 'Chi', 'N', NULL, NULL),
+	('LOGIC_POSITION_031', 'D', 'Không xác định', 'N', NULL, NULL),
+
+	('LOGIC_POSITION_032', 'A', 'Lan', 'N', NULL, NULL),
+	('LOGIC_POSITION_032', 'B', 'Hoa', 'N', NULL, NULL),
+	('LOGIC_POSITION_032', 'C', 'An', 'Y', NULL, NULL),
+	('LOGIC_POSITION_032', 'D', 'Nam', 'N', NULL, NULL),
+
+	('LOGIC_POSITION_033', 'A', 'Bình', 'N', NULL, NULL),
+	('LOGIC_POSITION_033', 'B', 'Nam', 'N', NULL, NULL),
+	('LOGIC_POSITION_033', 'C', 'Chi', 'Y', NULL, NULL),
+	('LOGIC_POSITION_033', 'D', 'Hoa', 'N', NULL, NULL),
+
+	('LOGIC_POSITION_034', 'A', 'An', 'N', NULL, NULL),
+	('LOGIC_POSITION_034', 'B', 'Bình', 'Y', NULL, NULL),
+	('LOGIC_POSITION_034', 'C', 'Chi', 'N', NULL, NULL),
+	('LOGIC_POSITION_034', 'D', 'Mai', 'N', NULL, NULL),
+
+	('LOGIC_POSITION_035', 'A', 'Lan', 'N', NULL, NULL),
+	('LOGIC_POSITION_035', 'B', 'Mai', 'Y', NULL, NULL),
+	('LOGIC_POSITION_035', 'C', 'Hoa', 'N', NULL, NULL),
+	('LOGIC_POSITION_035', 'D', 'An', 'N', NULL, NULL),
+
+	('LOGIC_POSITION_036', 'A', 'An', 'N', NULL, NULL),
+	('LOGIC_POSITION_036', 'B', 'Chi', 'Y', NULL, NULL),
+	('LOGIC_POSITION_036', 'C', 'Bình', 'N', NULL, NULL),
+	('LOGIC_POSITION_036', 'D', 'Hoa', 'N', NULL, NULL),
+
+	('LOGIC_POSITION_037', 'A', 'Bình', 'N', NULL, NULL),
+	('LOGIC_POSITION_037', 'B', 'Chi', 'N', NULL, NULL),
+	('LOGIC_POSITION_037', 'C', 'Dũng', 'Y', NULL, NULL),
+	('LOGIC_POSITION_037', 'D', 'Hoa', 'N', NULL, NULL),
+
+	('LOGIC_POSITION_038', 'A', 'Nam', 'Y', NULL, NULL),
+	('LOGIC_POSITION_038', 'B', 'Lan', 'N', NULL, NULL),
+	('LOGIC_POSITION_038', 'C', 'Hoa', 'N', NULL, NULL),
+	('LOGIC_POSITION_038', 'D', 'An', 'N', NULL, NULL),
+
+	('LOGIC_POSITION_039', 'A', 'Chi', 'Y', NULL, NULL),
+	('LOGIC_POSITION_039', 'B', 'Dũng', 'N', NULL, NULL),
+	('LOGIC_POSITION_039', 'C', 'Hoa', 'N', NULL, NULL),
+	('LOGIC_POSITION_039', 'D', 'Lan', 'N', NULL, NULL),
+
+	('LOGIC_POSITION_040', 'A', 'Chi', 'Y', NULL, NULL),
+	('LOGIC_POSITION_040', 'B', 'Nam', 'N', NULL, NULL),
+	('LOGIC_POSITION_040', 'C', 'Bình', 'N', NULL, NULL),
+	('LOGIC_POSITION_040', 'D', 'Mai', 'N', NULL, NULL);
+	
+INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, CREATED_AT, UPDATED_AT) VALUES
+('LOGIC_MULTI_LEVEL_001', 'A', 'An', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_001', 'B', 'Bình', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_001', 'C', 'Chi', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_001', 'D', 'Bình', 'Y', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_002', 'A', 'Lan', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_002', 'B', 'Mai', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_002', 'C', 'Hoa', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_002', 'D', 'Không ai', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_003', 'A', 'An', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_003', 'B', 'Bình', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_003', 'C', 'Chi', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_003', 'D', 'Không xác định', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_004', 'A', 'Lan', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_004', 'B', 'Mai', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_004', 'C', 'Hoa', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_004', 'D', 'Mai', 'Y', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_005', 'A', 'An', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_005', 'B', 'Bình', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_005', 'C', 'Chi', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_005', 'D', 'Không biết', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_006', 'A', 'Lan', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_006', 'B', 'Mai', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_006', 'C', 'Hoa', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_006', 'D', 'Không xác định', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_007', 'A', 'An', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_007', 'B', 'Bình', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_007', 'C', 'Chi', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_007', 'D', 'Không biết', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_008', 'A', 'Nam', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_008', 'B', 'An', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_008', 'C', 'Bình', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_008', 'D', 'Không xác định', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_009', 'A', 'An', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_009', 'B', 'Bình', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_009', 'C', 'Chi', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_009', 'D', 'Cả An và Chi', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_010', 'A', 'Lan', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_010', 'B', 'Mai', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_010', 'C', 'Hoa', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_010', 'D', 'Không biết', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_011', 'A', 'An', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_011', 'B', 'Bình', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_011', 'C', 'Chi', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_011', 'D', 'Không xác định', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_012', 'A', 'Mai', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_012', 'B', 'Lan', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_012', 'C', 'Hoa', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_012', 'D', 'Không thể biết', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_013', 'A', 'Táo', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_013', 'B', 'Cam', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_013', 'C', 'Chuối', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_013', 'D', 'Không biết', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_014', 'A', 'Đỏ', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_014', 'B', 'Xanh', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_014', 'C', 'Vàng', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_014', 'D', 'Không có', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_015', 'A', 'Táo', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_015', 'B', 'Cam', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_015', 'C', 'Chuối', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_015', 'D', 'Không xác định', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_016', 'A', 'Đỏ', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_016', 'B', 'Xanh', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_016', 'C', 'Vàng', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_016', 'D', 'Không thể biết', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_017', 'A', 'An', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_017', 'B', 'Bình', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_017', 'C', 'Chi', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_017', 'D', 'Không biết', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_018', 'A', 'Lan', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_018', 'B', 'Mai', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_018', 'C', 'Hoa', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_018', 'D', 'Lan', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_019', 'A', 'Thứ nhất', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_019', 'B', 'Thứ hai', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_019', 'C', 'Thứ ba', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_019', 'D', 'Thứ tư', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_020', 'A', 'Thứ nhất', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_020', 'B', 'Thứ hai', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_020', 'C', 'Thứ ba', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_020', 'D', 'Thứ tư', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_021', 'A', 'An', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_021', 'B', 'Bình', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_021', 'C', 'Chi', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_021', 'D', 'Không xác định', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_022', 'A', 'Lan', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_022', 'B', 'Mai', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_022', 'C', 'Hoa', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_022', 'D', 'Không ai', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_023', 'A', 'An', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_023', 'B', 'Bình', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_023', 'C', 'Chi', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_023', 'D', 'Không xác định', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_024', 'A', 'Mai', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_024', 'B', 'Lan', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_024', 'C', 'Hoa', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_024', 'D', 'Không xác định', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_025', 'A', 'An', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_025', 'B', 'Bình', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_025', 'C', 'Chi', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_025', 'D', 'Không biết', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_026', 'A', 'Lan', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_026', 'B', 'Mai', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_026', 'C', 'Hoa', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_026', 'D', 'Không xác định', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_027', 'A', 'An', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_027', 'B', 'Bình', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_027', 'C', 'Chi', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_027', 'D', 'Không biết', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_028', 'A', 'Mai', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_028', 'B', 'Lan', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_028', 'C', 'Hoa', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_028', 'D', 'Không xác định', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_029', 'A', 'An', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_029', 'B', 'Bình', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_029', 'C', 'Chi', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_029', 'D', 'Dũng', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_030', 'A', 'Lan', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_030', 'B', 'Mai', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_030', 'C', 'Hoa', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_030', 'D', 'An', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_031', 'A', 'Bình', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_031', 'B', 'Chi', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_031', 'C', 'Dũng', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_031', 'D', 'An', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_032', 'A', 'Mai', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_032', 'B', 'Lan', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_032', 'C', 'Hoa', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_032', 'D', 'Bình', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_033', 'A', 'An', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_033', 'B', 'Bình', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_033', 'C', 'Chi', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_033', 'D', 'Dũng', 'Y', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_034', 'A', 'Lan', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_034', 'B', 'Mai', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_034', 'C', 'Hoa', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_034', 'D', 'An', 'Y', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_035', 'A', 'An', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_035', 'B', 'Bình', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_035', 'C', 'Chi', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_035', 'D', 'Không xác định', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_036', 'A', 'An', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_036', 'B', 'Hoa', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_036', 'C', 'Lan', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_036', 'D', 'Mai', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_037', 'A', 'An', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_037', 'B', 'Bình', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_037', 'C', 'Chi', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_037', 'D', 'Không xác định', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_038', 'A', 'Lan', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_038', 'B', 'Mai', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_038', 'C', 'Hoa', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_038', 'D', 'Lan', 'Y', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_039', 'A', 'An', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_039', 'B', 'Bình', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_039', 'C', 'Chi', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_039', 'D', 'Không xác định', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_040', 'A', 'Lan', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_040', 'B', 'Mai', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_040', 'C', 'Hoa', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_040', 'D', 'Hoa', 'Y', NULL, NULL);

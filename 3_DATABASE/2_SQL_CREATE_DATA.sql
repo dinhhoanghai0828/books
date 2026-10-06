@@ -37,13 +37,13 @@ INSERT INTO CATEGORIES(UUID, SLUG, ENG, VI, PARENT_SLUG, NUMBER) VALUES
     (UUID(), 'tro-chuyen-hang-ngay', 'Daily Conversations', 'Trò chuyện hàng ngày', 'presentation', NULL),
 
     -- Tiếng Anh cơ bản
-    (UUID(), 'tieng-anh-co-ban-cap-do-1', 'Basic English Level 1', 'Tiếng anh cơ bản cấp độ 1', 'tieng-anh-co-ban', NULL);
+    (UUID(), 'tieng-anh-co-ban-cap-do-1', 'Basic English Level 1', 'Tiếng anh cơ bản cấp độ 1', 'tieng-anh-co-ban', NULL),
 	-- Toán
     (UUID(), 'lop-1', 'Lớp 1', 'Lớp 1', 'toan', 1),
     (UUID(), 'lop-2', 'Lớp 2', 'Lớp 2', 'toan', 2),
     (UUID(), 'lop-3', 'Lớp 3', 'Lớp 3', 'toan', 3),
     (UUID(), 'lop-4', 'Lớp 4', 'Lớp 4', 'toan', 4),
-    (UUID(), 'lop-5', 'Lớp 5', 'Lớp 5', 'toan', 5),
+    (UUID(), 'lop-5', 'Lớp 5', 'Lớp 5', 'toan', 5);
 	
 	
 --	DU LIEU BANG BOOKS

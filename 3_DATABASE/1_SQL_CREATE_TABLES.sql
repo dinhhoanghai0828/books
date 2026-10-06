@@ -458,6 +458,6 @@ INSERT INTO MATH_CATEGORIES (ID, CATEGORY_CODE, CATEGORY_NAME, PARENT_ID, STATUS
 -- Child: 8.17. Bài toán tổng hợp 3–4 điều kiện
 (110, 'GENERAL_THREE_FOUR_CONDITIONS', 'Bài toán tổng hợp 3–4 điều kiện', 93, 'ACTIVE', NULL, NULL),
 -- Child: 8.18. Câu đố tư duy tổng hợp
-(111, 'GENERAL_COMPREHENSIVE_PUZZLE', 'Câu đố tư duy tổng hợp', 93, 'ACTIVE', NULL, NULL, NULL);
+(111, 'GENERAL_COMPREHENSIVE_PUZZLE', 'Câu đố tư duy tổng hợp', 93, 'ACTIVE', NULL, NULL);
 
 
