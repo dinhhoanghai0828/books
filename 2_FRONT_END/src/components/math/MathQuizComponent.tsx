@@ -57,7 +57,7 @@ const MathQuizComponent = ({ questions, userAnswers, onAnswerChange, isChecked }
               </Space>
             </div>
 
-            <div style={{ marginBottom: '16px', fontSize: '16px' }}>
+            <div style={{ marginBottom: '16px', fontSize: '16px', fontWeight: 'bold' }}>
               {question.questionText}
             </div>
 
@@ -87,8 +87,8 @@ const MathQuizComponent = ({ questions, userAnswers, onAnswerChange, isChecked }
                         borderColor: isChecked && isThisCorrect ? '#52c41a' : isChecked && isSelected && !isThisCorrect ? '#ff4d4f' : undefined,
                       }}
                     >
-                      <span style={{ fontWeight: 'bold', marginRight: '8px' }}>{answer.answerCode}.</span>
-                      <span>{answer.answerText}</span>
+                      <span style={{ fontWeight: 'bold', marginRight: '8px', color: '#1890ff' }}>{answer.answerCode}.</span>
+                      <span style={{ fontWeight: 'bold' }}>{answer.answerText}</span>
                     </Radio>
                   );
                 })}
@@ -96,7 +96,7 @@ const MathQuizComponent = ({ questions, userAnswers, onAnswerChange, isChecked }
             </Radio.Group>
 
             {isChecked && !isUnanswered && !isCorrect && correctAnswer && (
-              <div style={{ marginTop: '12px', color: '#ff4d4f' }}>
+              <div style={{ marginTop: '12px', color: '#000' }}>
                 Đáp án đúng: <strong>{correctAnswer.answerCode}. {correctAnswer.answerText}</strong>
               </div>
             )}
