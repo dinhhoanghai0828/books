@@ -45,9 +45,17 @@ public class MathController {
     }
 
     @GetMapping("/questions/{categoryCode}")
-    public ResponseEntity<?> getQuestionsByCategoryCode(@PathVariable("categoryCode") String categoryCode) {
+    public ResponseEntity<?> getQuestionsByCategoryCode(
+            @PathVariable("categoryCode") String categoryCode,
+            @RequestParam(value = "tongHop", required = false, defaultValue = "false") boolean tongHop) {
         try {
-            List<MathQuestionDTO> questions = mathQuestionService.getQuestionsByCategoryCode(categoryCode);
+            List<MathQuestionDTO> questions;
+            if (tongHop) {
+                // Lấy ngẫu nhiên câu hỏi từ tất cả categories con của cha
+                questions = mathQuestionService.getQuestionsByParentCategoryCode(categoryCode);
+            } else {
+                questions = mathQuestionService.getQuestionsByCategoryCode(categoryCode);
+            }
             return new ResponseEntity<>(questions, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);

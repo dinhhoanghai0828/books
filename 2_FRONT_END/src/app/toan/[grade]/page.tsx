@@ -67,7 +67,9 @@ const MathGradePage = () => {
         setUserAnswers({});
         setIsChecked(false);
         try {
-          const data = await getMathQuestionsByCategoryCode(selectedCategory);
+          const isTongHop = selectedCategory.startsWith('__TONGHOP__');
+          const code = isTongHop ? selectedCategory.replace('__TONGHOP__', '') : selectedCategory;
+          const data = await getMathQuestionsByCategoryCode(code, isTongHop);
 
           // Filter by difficulty
           let filteredQuestions = data;
@@ -101,8 +103,10 @@ const MathGradePage = () => {
   const buildMenuItems = (categories: MathCategoryType[]): any[] => {
     return categories.map(category => {
       const hasChildren = category.children && category.children.length > 0;
+      // "Bài tập tổng hợp" được inject ở backend với parentCode != null nhưng categoryName đặc biệt
+      const isTongHop = category.categoryName === 'Bài tập tổng hợp';
       return {
-        key: category.categoryCode,
+        key: isTongHop ? `__TONGHOP__${category.categoryCode}` : category.categoryCode,
         label: category.categoryName,
         icon: hasChildren ? <FolderOutlined /> : <FileTextOutlined />,
         children: hasChildren ? buildMenuItems(category.children) : undefined,
@@ -110,9 +114,26 @@ const MathGradePage = () => {
     });
   };
 
-  const handleMenuSelect = ({ key, item }: { key: string; item: any }) => {
-    setSelectedCategory(key);
-    setSelectedCategoryName(item.label);
+  const handleMenuSelect = ({ key }: { key: string; item: any }) => {
+    if (key.startsWith('__TONGHOP__')) {
+      const code = key.replace('__TONGHOP__', '');
+      setSelectedCategory(`__TONGHOP__${code}`);
+      setSelectedCategoryName('Bài tập tổng hợp');
+    } else {
+      setSelectedCategory(key);
+      // Tìm tên category từ key
+      const findName = (cats: MathCategoryType[]): string => {
+        for (const cat of cats) {
+          if (cat.categoryCode === key) return cat.categoryName;
+          if (cat.children) {
+            const found = findName(cat.children);
+            if (found) return found;
+          }
+        }
+        return key;
+      };
+      setSelectedCategoryName(findName(categories));
+    }
   };
 
   const handleAnswerChange = (questionCode: string, answerCode: string) => {
@@ -159,7 +180,9 @@ const MathGradePage = () => {
     setIsChecked(false);
     
     try {
-      const data = await getMathQuestionsByCategoryCode(selectedCategory);
+      const isTongHop = selectedCategory.startsWith('__TONGHOP__');
+      const code = isTongHop ? selectedCategory.replace('__TONGHOP__', '') : selectedCategory;
+      const data = await getMathQuestionsByCategoryCode(code, isTongHop);
 
       // Filter by difficulty
       let filteredQuestions = data;

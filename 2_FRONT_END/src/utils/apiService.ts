@@ -633,9 +633,12 @@ export const getMathCategories = async (fullPath?: string) => {
 };
 
 // Lay danh sach cau hoi theo math category code
-export const getMathQuestionsByCategoryCode = async (categoryCode: string) => {
+export const getMathQuestionsByCategoryCode = async (categoryCode: string, tongHop = false) => {
   try {
-    const response = await apiClient.get(`/math/questions/${categoryCode}`);
+    const url = tongHop
+      ? `/math/questions/${categoryCode}?tongHop=true`
+      : `/math/questions/${categoryCode}`;
+    const response = await apiClient.get(url);
     return response.data;
   } catch (error: any) {
     throw new Error(getErrorMessage(error));

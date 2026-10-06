@@ -26,10 +26,19 @@ public class MathQuestionServiceImpl implements MathQuestionService {
     @Override
     public List<MathQuestionDTO> getQuestionsByCategoryCode(String categoryCode) throws Exception {
         List<MathQuestion> questions = mathQuestionAdapter.getQuestionsByCategoryCode(categoryCode);
+        return mapQuestions(questions);
+    }
+
+    @Override
+    public List<MathQuestionDTO> getQuestionsByParentCategoryCode(String parentCategoryCode) throws Exception {
+        List<MathQuestion> questions = mathQuestionAdapter.getQuestionsByParentCategoryCode(parentCategoryCode);
+        return mapQuestions(questions);
+    }
+
+    private List<MathQuestionDTO> mapQuestions(List<MathQuestion> questions) {
         return questions.stream()
                 .map(question -> {
                     MathQuestionDTO dto = modelMapper.map(question, MathQuestionDTO.class);
-                    // Map answers separately
                     if (question.getAnswers() != null) {
                         List<MathAnswerDTO> answerDTOs = question.getAnswers().stream()
                                 .map(answer -> modelMapper.map(answer, MathAnswerDTO.class))
