@@ -531,3 +531,204 @@ INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, C
 	('LOGIC_POSITION_040', 'B', 'Nam', 'N', NULL, NULL),
 	('LOGIC_POSITION_040', 'C', 'Bình', 'N', NULL, NULL),
 	('LOGIC_POSITION_040', 'D', 'Mai', 'N', NULL, NULL);
+	
+INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, CREATED_AT, UPDATED_AT) VALUES
+('LOGIC_MULTI_LEVEL_001', 'A', 'An', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_001', 'B', 'Bình', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_001', 'C', 'Chi', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_001', 'D', 'Bình', 'Y', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_002', 'A', 'Lan', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_002', 'B', 'Mai', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_002', 'C', 'Hoa', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_002', 'D', 'Không ai', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_003', 'A', 'An', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_003', 'B', 'Bình', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_003', 'C', 'Chi', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_003', 'D', 'Không xác định', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_004', 'A', 'Lan', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_004', 'B', 'Mai', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_004', 'C', 'Hoa', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_004', 'D', 'Mai', 'Y', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_005', 'A', 'An', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_005', 'B', 'Bình', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_005', 'C', 'Chi', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_005', 'D', 'Không biết', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_006', 'A', 'Lan', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_006', 'B', 'Mai', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_006', 'C', 'Hoa', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_006', 'D', 'Không xác định', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_007', 'A', 'An', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_007', 'B', 'Bình', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_007', 'C', 'Chi', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_007', 'D', 'Không biết', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_008', 'A', 'Nam', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_008', 'B', 'An', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_008', 'C', 'Bình', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_008', 'D', 'Không xác định', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_009', 'A', 'An', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_009', 'B', 'Bình', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_009', 'C', 'Chi', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_009', 'D', 'Cả An và Chi', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_010', 'A', 'Lan', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_010', 'B', 'Mai', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_010', 'C', 'Hoa', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_010', 'D', 'Không biết', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_011', 'A', 'An', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_011', 'B', 'Bình', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_011', 'C', 'Chi', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_011', 'D', 'Không xác định', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_012', 'A', 'Mai', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_012', 'B', 'Lan', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_012', 'C', 'Hoa', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_012', 'D', 'Không thể biết', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_013', 'A', 'Táo', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_013', 'B', 'Cam', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_013', 'C', 'Chuối', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_013', 'D', 'Không biết', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_014', 'A', 'Đỏ', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_014', 'B', 'Xanh', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_014', 'C', 'Vàng', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_014', 'D', 'Không có', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_015', 'A', 'Táo', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_015', 'B', 'Cam', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_015', 'C', 'Chuối', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_015', 'D', 'Không xác định', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_016', 'A', 'Đỏ', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_016', 'B', 'Xanh', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_016', 'C', 'Vàng', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_016', 'D', 'Không thể biết', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_017', 'A', 'An', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_017', 'B', 'Bình', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_017', 'C', 'Chi', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_017', 'D', 'Không biết', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_018', 'A', 'Lan', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_018', 'B', 'Mai', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_018', 'C', 'Hoa', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_018', 'D', 'Lan', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_019', 'A', 'Thứ nhất', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_019', 'B', 'Thứ hai', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_019', 'C', 'Thứ ba', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_019', 'D', 'Thứ tư', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_020', 'A', 'Thứ nhất', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_020', 'B', 'Thứ hai', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_020', 'C', 'Thứ ba', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_020', 'D', 'Thứ tư', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_021', 'A', 'An', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_021', 'B', 'Bình', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_021', 'C', 'Chi', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_021', 'D', 'Không xác định', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_022', 'A', 'Lan', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_022', 'B', 'Mai', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_022', 'C', 'Hoa', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_022', 'D', 'Không ai', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_023', 'A', 'An', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_023', 'B', 'Bình', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_023', 'C', 'Chi', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_023', 'D', 'Không xác định', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_024', 'A', 'Mai', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_024', 'B', 'Lan', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_024', 'C', 'Hoa', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_024', 'D', 'Không xác định', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_025', 'A', 'An', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_025', 'B', 'Bình', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_025', 'C', 'Chi', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_025', 'D', 'Không biết', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_026', 'A', 'Lan', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_026', 'B', 'Mai', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_026', 'C', 'Hoa', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_026', 'D', 'Không xác định', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_027', 'A', 'An', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_027', 'B', 'Bình', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_027', 'C', 'Chi', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_027', 'D', 'Không biết', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_028', 'A', 'Mai', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_028', 'B', 'Lan', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_028', 'C', 'Hoa', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_028', 'D', 'Không xác định', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_029', 'A', 'An', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_029', 'B', 'Bình', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_029', 'C', 'Chi', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_029', 'D', 'Dũng', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_030', 'A', 'Lan', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_030', 'B', 'Mai', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_030', 'C', 'Hoa', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_030', 'D', 'An', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_031', 'A', 'Bình', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_031', 'B', 'Chi', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_031', 'C', 'Dũng', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_031', 'D', 'An', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_032', 'A', 'Mai', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_032', 'B', 'Lan', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_032', 'C', 'Hoa', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_032', 'D', 'Bình', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_033', 'A', 'An', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_033', 'B', 'Bình', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_033', 'C', 'Chi', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_033', 'D', 'Dũng', 'Y', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_034', 'A', 'Lan', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_034', 'B', 'Mai', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_034', 'C', 'Hoa', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_034', 'D', 'An', 'Y', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_035', 'A', 'An', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_035', 'B', 'Bình', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_035', 'C', 'Chi', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_035', 'D', 'Không xác định', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_036', 'A', 'An', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_036', 'B', 'Hoa', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_036', 'C', 'Lan', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_036', 'D', 'Mai', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_037', 'A', 'An', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_037', 'B', 'Bình', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_037', 'C', 'Chi', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_037', 'D', 'Không xác định', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_038', 'A', 'Lan', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_038', 'B', 'Mai', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_038', 'C', 'Hoa', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_038', 'D', 'Lan', 'Y', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_039', 'A', 'An', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_039', 'B', 'Bình', 'Y', NULL, NULL),
+('LOGIC_MULTI_LEVEL_039', 'C', 'Chi', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_039', 'D', 'Không xác định', 'N', NULL, NULL),
+
+('LOGIC_MULTI_LEVEL_040', 'A', 'Lan', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_040', 'B', 'Mai', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_040', 'C', 'Hoa', 'N', NULL, NULL),
+('LOGIC_MULTI_LEVEL_040', 'D', 'Hoa', 'Y', NULL, NULL);

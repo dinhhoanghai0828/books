@@ -136,3 +136,64 @@ INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICU
 	('LOGIC_POSITION', 'LOGIC_POSITION_038', 'Có 6 bạn: Mai, Lan, Nam, Hoa, An, Bình. Nếu Hoa đứng thứ tư thì ai đứng ngay trước Hoa?', 4, 'ACTIVE', NULL, NULL),
 	('LOGIC_POSITION', 'LOGIC_POSITION_039', 'Có 7 bạn: An, Bình, Chi, Dũng, Hoa, Lan, Mai. Nếu Dũng đứng giữa hàng thì ai đứng ngay trước Dũng?', 4, 'ACTIVE', NULL, NULL),
 	('LOGIC_POSITION', 'LOGIC_POSITION_040', 'Có 7 bạn: Lan, Mai, Hoa, An, Bình, Chi, Nam. Nếu Bình đứng thứ năm thì ai đứng ngay sau Bình?', 4, 'ACTIVE', NULL, NULL);
+	
+INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
+	-- 2.11.1. Thứ tự + loại trừ
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_001', 'An đứng trước Bình. Chi không đứng cuối. Nếu An đứng đầu thì ai có thể đứng cuối?', 1, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_002', 'Lan đứng trước Mai. Hoa không đứng đầu. Ai có thể đứng đầu trong các bạn Lan, Mai, Hoa?', 1, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_003', 'An đứng trước Chi. Bình không đứng đầu. Ai có thể đứng đầu?', 2, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_004', 'Mai đứng sau Lan. Hoa không đứng cuối. Ai có thể đứng cuối?', 2, 'ACTIVE', NULL, NULL),
+
+	-- 2.11.2. Thứ tự + so sánh
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_005', 'An cao hơn Bình. Chi thấp hơn An. Nếu Bình đứng trước Chi, ai cao hơn?', 1, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_006', 'Lan có nhiều bút hơn Mai. Mai có nhiều bút hơn Hoa. Ai có nhiều bút nhất?', 1, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_007', 'An lớn hơn Bình. Chi nhỏ hơn Bình. Nếu An đứng trước Chi, ai lớn nhất?', 2, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_008', 'Nam có ít viên bi hơn An nhưng nhiều hơn Bình. Ai có ít viên bi nhất?', 2, 'ACTIVE', NULL, NULL),
+
+	-- 2.11.3. So sánh + loại trừ
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_009', 'An cao hơn Bình. Chi không cao hơn An. Ai chắc chắn không cao hơn An?', 1, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_010', 'Lan có nhiều hoa hơn Mai. Hoa không có nhiều hoa nhất. Ai chắc chắn có nhiều hoa hơn Mai?', 1, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_011', 'An nặng hơn Bình. Chi không nhẹ hơn Bình. Ai chắc chắn không nhẹ hơn An?', 2, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_012', 'Mai có ít bút hơn Lan. Hoa không có ít bút nhất. Ai có thể có ít bút nhất?', 2, 'ACTIVE', NULL, NULL),
+
+	-- 2.11.4. Ghép đôi + loại trừ
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_013', 'An thích táo hoặc cam. Bình không thích táo. Nếu An thích cam thì Bình thích gì?', 1, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_014', 'Lan có bút đỏ hoặc xanh. Mai không có bút đỏ. Nếu Lan có bút xanh thì Mai có thể có bút màu gì?', 1, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_015', 'An, Bình và Chi mỗi bạn có một quả: táo, cam, chuối. An không có táo, Bình không có cam. Nếu Chi có chuối thì An có thể có quả gì?', 2, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_016', 'Mai, Lan và Hoa mỗi bạn chọn một màu: đỏ, xanh, vàng. Mai không chọn đỏ, Lan không chọn xanh. Nếu Hoa chọn vàng thì Mai có thể chọn màu gì?', 2, 'ACTIVE', NULL, NULL),
+
+	-- 2.11.5. Vị trí + thứ tự
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_017', 'An đứng thứ nhất. Bình đứng sau An. Chi đứng sau Bình. Ai đứng thứ ba?', 1, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_018', 'Lan đứng thứ hai. Mai đứng sau Lan. Hoa đứng sau Mai. Ai đứng thứ tư nếu có 4 bạn?', 1, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_019', 'An đứng trước Bình. Chi đứng sau Bình. Nếu Bình đứng thứ hai thì Chi đứng thứ mấy?', 2, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_020', 'Mai đứng trước Lan. Hoa đứng sau Lan. Nếu Lan đứng thứ hai thì Hoa đứng thứ mấy?', 2, 'ACTIVE', NULL, NULL),
+
+	-- 2.11.6. Vị trí + loại trừ
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_021', 'An đứng thứ nhất. Bình không đứng thứ hai. Chi đứng sau An. Ai có thể đứng thứ hai?', 1, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_022', 'Lan đứng thứ ba. Mai không đứng thứ nhất. Hoa đứng sau Lan. Ai có thể đứng thứ nhất?', 1, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_023', 'An đứng thứ hai. Bình không đứng cuối. Chi đứng sau An. Ai có thể đứng cuối?', 2, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_024', 'Mai đứng thứ tư. Lan không đứng thứ nhất. Hoa đứng trước Mai. Ai có thể đứng thứ nhất?', 2, 'ACTIVE', NULL, NULL),
+
+	-- 2.11.7. So sánh + ghép đôi
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_025', 'An có 3 viên bi, Bình có nhiều hơn An, Chi có ít hơn An. Ai có nhiều viên bi nhất?', 1, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_026', 'Lan có 5 bông hoa, Mai có ít hơn Lan, Hoa có nhiều hơn Mai. Ai có thể có nhiều hoa nhất?', 1, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_027', 'An có nhiều bút hơn Bình. Bình có nhiều bút hơn Chi. Nếu An chọn bút đỏ, ai có thể chọn bút xanh?', 2, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_028', 'Mai cao hơn Lan. Hoa thấp hơn Lan. Nếu Mai mặc áo đỏ, ai có thể mặc áo xanh?', 2, 'ACTIVE', NULL, NULL),
+
+	-- 2.11.8. Thứ tự + vị trí + loại trừ
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_029', 'An đứng trước Bình. Chi đứng sau Bình. Dũng không đứng cuối. Nếu Bình đứng thứ hai, ai có thể đứng cuối?', 2, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_030', 'Lan đứng trước Mai. Hoa đứng sau Mai. An không đứng đầu. Nếu Mai đứng thứ hai, ai có thể đứng đầu?', 2, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_031', 'An đứng thứ nhất, Bình đứng trước Chi, Dũng không đứng cuối. Ai có thể đứng thứ hai?', 3, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_032', 'Mai đứng trước Lan, Hoa đứng sau Lan, Bình không đứng thứ nhất. Ai có thể đứng thứ ba?', 3, 'ACTIVE', NULL, NULL),
+
+	-- 2.11.9. 3–4 dữ kiện liên tiếp
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_033', 'An đứng trước Bình. Bình đứng trước Chi. Chi đứng trước Dũng. Ai đứng cuối?', 2, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_034', 'Lan cao hơn Mai. Mai cao hơn Hoa. Hoa cao hơn An. Ai thấp nhất?', 2, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_035', 'An có 2 quả bóng. Bình có nhiều hơn An. Chi có ít hơn Bình nhưng nhiều hơn An. Ai có nhiều bóng nhất?', 3, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_036', 'Mai đứng sau Lan. Lan đứng sau Hoa. Hoa đứng sau An. Ai đứng đầu?', 3, 'ACTIVE', NULL, NULL),
+
+	-- 2.11.10. Suy luận từ kết quả ngược lại
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_037', 'Chi đứng thứ ba. Biết An đứng trước Chi và Bình đứng sau Chi. Ai có thể đứng thứ nhất?', 3, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_038', 'Hoa đứng cuối. Mai đứng trước Hoa. Lan đứng trước Mai. Ai có thể đứng đầu?', 3, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_039', 'Bình có nhiều hơn Chi. An có ít hơn Chi. Nếu Chi có 3 viên bi, ai có thể có 4 viên bi?', 3, 'ACTIVE', NULL, NULL),
+	('LOGIC_MULTI_LEVEL', 'LOGIC_MULTI_LEVEL_040', 'Mai đứng thứ tư. Lan đứng trước Mai. Hoa đứng sau Mai. Nếu có 5 bạn, ai đứng thứ năm?', 3, 'ACTIVE', NULL, NULL);
