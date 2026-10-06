@@ -13,7 +13,7 @@ import { Button, Menu, message } from 'antd';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import React, { useState, useEffect } from 'react';
-import { getCategories } from '@/utils/apiService';
+import { getMathCategories } from '@/utils/apiService';
 
 // ============================================================
 // TYPES
@@ -28,12 +28,12 @@ interface MenuItem {
 }
 
 interface CategoryDTO {
-  uuid: string;
-  slug: string;
-  eng: string;
-  vi: string;
-  parentSlug: string | null;
-  number: number;
+  categoryCode: string;
+  categoryName: string;
+  categoryDesc: string;
+  parentCode: string | null;
+  status: string;
+  fullPath?: string; // Full path for URL building
   children?: CategoryDTO[];
 }
 
@@ -81,11 +81,17 @@ const buildCategoryMenuItems = (categories: CategoryDTO[]): MenuItem[] => {
   if (!categories || !Array.isArray(categories)) return [];
   return categories.map(category => {
     const menuItem: MenuItem = {
-      label: category.vi,
-      key: category.slug,
+      label: category.categoryName,
+      key: category.categoryCode,
       icon: <ReadOutlined />,
-      href: `/${category.slug}`,
     };
+
+    // Sử dụng fullPath từ backend để xây dựng URL
+    if (category.fullPath) {
+      menuItem.href = `/${category.fullPath}`;
+    } else {
+      menuItem.href = `/${category.categoryCode}`;
+    }
 
     if (category.children && category.children.length > 0) {
       menuItem.children = buildCategoryMenuItems(category.children);
@@ -112,10 +118,10 @@ const HeaderComponent = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const data = await getCategories();
+        const data = await getMathCategories();
         setCategories(data ?? []);
       } catch (error) {
-        console.error('Loi khi lay danh sach categories:', error);
+        console.error('Loi khi lay danh sach math categories:', error);
       } finally {
         setLoading(false);
       }
@@ -134,16 +140,21 @@ const HeaderComponent = () => {
   // cac muc co href duoc boc trong Link, cac muc co children xu ly de quy
   const buildMenuItems = (items: MenuItem[]): any[] =>
     items.map((item) => {
-      if (item.children) {
+      // Process children recursively first
+      const children = item.children ? buildMenuItems(item.children) : undefined;
+      
+      // Nếu item có href và label chưa phải là React element, bọc trong Link
+      if (item.href && typeof item.label === 'string') {
         return {
           ...item,
-          label: item.label,
-          children: buildMenuItems(item.children),
+          label: <Link href={item.href}>{item.label}</Link>,
+          children,
         };
       }
+      // Nếu label đã là React element (ví dụ từ buildCategoryMenuItems), giữ nguyên
       return {
         ...item,
-        label: item.href ? <Link href={item.href}>{item.label}</Link> : item.label,
+        children,
       };
     });
 

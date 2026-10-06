@@ -625,7 +625,7 @@ export const submitQuiz = async (userAnswers: Record<string, string>, questions:
 export const getMathCategories = async () => {
   try {
     const response = await apiClient.get('/math/categories');
-    return response.data;
+    return response.data.categories;
   } catch (error: any) {
     throw new Error(getErrorMessage(error));
   }

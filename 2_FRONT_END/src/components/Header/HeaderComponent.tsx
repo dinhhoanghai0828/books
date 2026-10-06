@@ -13,7 +13,7 @@ import { Button, Menu, message } from 'antd';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import React, { useState, useEffect } from 'react';
-import { getCategories } from '@/utils/apiService';
+import { getMathCategories } from '@/utils/apiService';
 
 // ============================================================
 // TYPES
@@ -28,12 +28,11 @@ interface MenuItem {
 }
 
 interface CategoryDTO {
-  uuid: string;
-  slug: string;
-  eng: string;
-  vi: string;
-  parentSlug: string | null;
-  number: number;
+  categoryCode: string;
+  categoryName: string;
+  categoryDesc: string;
+  parentCode: string | null;
+  status: string;
   fullPath?: string; // Full path for URL building
   children?: CategoryDTO[];
 }
@@ -87,18 +86,18 @@ const buildCategoryMenuItems = (categories: CategoryDTO[]): MenuItem[] => {
   if (!categories || !Array.isArray(categories)) return [];
   return categories.map(category => {
     const menuItem: MenuItem = {
-      label: category.vi,
-      key: category.slug,
+      label: category.categoryName,
+      key: category.categoryCode,
       icon: <ReadOutlined />,
     };
 
     // Sử dụng fullPath từ backend để xây dựng URL
     if (category.fullPath) {
       menuItem.href = `/${category.fullPath}`;
-      console.log(`Building menu item for ${category.vi}, fullPath: ${category.fullPath}, href: ${menuItem.href}`);
+      console.log(`Building menu item for ${category.categoryName}, fullPath: ${category.fullPath}, href: ${menuItem.href}`);
     } else {
-      menuItem.href = `/${category.slug}`;
-      console.log(`Building menu item for ${category.vi}, no fullPath, using slug: ${category.slug}, href: ${menuItem.href}`);
+      menuItem.href = `/${category.categoryCode}`;
+      console.log(`Building menu item for ${category.categoryName}, no fullPath, using categoryCode: ${category.categoryCode}, href: ${menuItem.href}`);
     }
 
     if (category.children && category.children.length > 0) {
@@ -126,11 +125,11 @@ const HeaderComponent = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const data = await getCategories();
-        console.log('Categories from API:', JSON.stringify(data, null, 2));
+        const data = await getMathCategories();
+        console.log('Math Categories from API:', JSON.stringify(data, null, 2));
         setCategories(data ?? []);
       } catch (error) {
-        console.error('Loi khi lay danh sach categories:', error);
+        console.error('Loi khi lay danh sach math categories:', error);
       } finally {
         setLoading(false);
       }

@@ -2,6 +2,7 @@ package books.controller;
 
 import books.dto.MathCategoryDTO;
 import books.dto.MathQuestionDTO;
+import books.response.MathCategoryResponse;
 import books.service.interfaces.MathCategoryService;
 import books.service.interfaces.MathQuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +29,9 @@ public class MathController {
     public ResponseEntity<?> getMathCategories() {
         try {
             List<MathCategoryDTO> categories = mathCategoryService.getMathCategories();
-            return new ResponseEntity<>(categories, HttpStatus.OK);
+            MathCategoryResponse response = new MathCategoryResponse();
+            response.setCategories(categories);
+            return new ResponseEntity<>(response, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }

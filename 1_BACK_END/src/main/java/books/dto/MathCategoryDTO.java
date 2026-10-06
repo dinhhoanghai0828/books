@@ -3,20 +3,13 @@ package books.dto;
 import java.util.List;
 
 public class MathCategoryDTO {
-    private Integer id;
     private String categoryCode;
     private String categoryName;
-    private Integer parentId;
+    private String categoryDesc;
+    private String parentCode;
     private String status;
+    private String fullPath; // Full path for URL building (e.g., "toan/lop-1")
     private List<MathCategoryDTO> children;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     public String getCategoryCode() {
         return categoryCode;
@@ -34,12 +27,20 @@ public class MathCategoryDTO {
         this.categoryName = categoryName;
     }
 
-    public Integer getParentId() {
-        return parentId;
+    public String getCategoryDesc() {
+        return categoryDesc;
     }
 
-    public void setParentId(Integer parentId) {
-        this.parentId = parentId;
+    public void setCategoryDesc(String categoryDesc) {
+        this.categoryDesc = categoryDesc;
+    }
+
+    public String getParentCode() {
+        return parentCode;
+    }
+
+    public void setParentCode(String parentCode) {
+        this.parentCode = parentCode;
     }
 
     public String getStatus() {
@@ -48,6 +49,14 @@ public class MathCategoryDTO {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getFullPath() {
+        return fullPath;
+    }
+
+    public void setFullPath(String fullPath) {
+        this.fullPath = fullPath;
     }
 
     public List<MathCategoryDTO> getChildren() {
