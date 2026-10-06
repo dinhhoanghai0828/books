@@ -170,6 +170,7 @@ const HeaderComponent = () => {
             mode="horizontal"
             items={buildMenuItems(menuItems)}
             style={{ display: 'inline-block', width: 'calc(100% - 120px)' }}
+            popupClassName="header-dropdown-menu"
         />
         <Button
             type="primary"

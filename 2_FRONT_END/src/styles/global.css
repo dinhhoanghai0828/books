@@ -61,6 +61,33 @@
   z-index: 10001 !important;
 }
 
+/* Make dropdown menu scrollable when content is too long */
+.header-dropdown-menu .ant-menu {
+  max-height: 60vh;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
+
+/* Ensure dropdown menu has proper positioning */
+.ant-menu-submenu-popup {
+  max-height: 60vh;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
+
+/* Fix for menu dropdown overflow */
+.ant-menu-submenu .ant-menu-submenu-popup {
+  max-height: 60vh;
+  overflow-y: auto !important;
+}
+
+/* Make sidebar menu scrollable in math page */
+.ant-layout-sider .ant-menu {
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  max-height: calc(100vh - 20px);
+}
+
 .breadCrumbClass {
   position: fixed; /* Cố định vị trí của Breadcrumb */
   left: 0;

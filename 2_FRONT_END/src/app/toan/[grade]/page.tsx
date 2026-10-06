@@ -205,7 +205,7 @@ const MathGradePage = () => {
         </div>
         <Menu
           mode="inline"
-          style={{ height: 'calc(100% - 48px)', borderRight: 0 }}
+          style={{ height: 'calc(100% - 48px)', borderRight: 0, overflowY: 'auto', overflowX: 'hidden' }}
           items={buildMenuItems(categories)}
           onSelect={handleMenuSelect}
         />
