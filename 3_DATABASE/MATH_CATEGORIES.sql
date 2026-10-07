@@ -44,24 +44,22 @@ INSERT INTO MATH_CATEGORIES (CATEGORY_CODE, FULL_PATH, CATEGORY_NAME, CATEGORY_D
 
 
 	-- Child: 2.1. Dãy số tăng đều
-	('NUMBER_PATTERN_ADD_EQUAL', 'toan/lop-1', 'Dãy số thêm đều', 'Mỗi lần tăng thêm cùng một số.', 'NUMBER_PATTERN', 'ACTIVE', NULL, NULL),
-	-- Child: 2.2. Dãy số tăng
-	('NUMBER_PATTERN_INCREASING', 'toan/lop-1', 'Dãy số tăng', 'Các số lần lượt lớn dần.', 'NUMBER_PATTERN', 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_ADD_EQUAL', 'toan/lop-1', 'Dãy số tăng đều', 'Mỗi lần tăng thêm cùng một số.', 'NUMBER_PATTERN', 'ACTIVE', NULL, NULL),
+	-- Child: 2.2. Dãy số tăng không đều
+	('NUMBER_PATTERN_INCREASING', 'toan/lop-1', 'Dãy số tăng không đều', 'Các số lần lượt lớn dần.', 'NUMBER_PATTERN', 'ACTIVE', NULL, NULL),
 	-- Child: 2.3. Dãy số giảm đều
-	('NUMBER_PATTERN_SUB_EQUAL', 'toan/lop-1', 'Dãy số bớt đều', 'Mỗi lần giảm đi cùng một số.', 'NUMBER_PATTERN', 'ACTIVE', NULL, NULL),
-	-- Child: 2.4. Dãy số giảm
-	('NUMBER_PATTERN_DECREASING', 'toan/lop-1', 'Dãy số giảm', 'Các số lần lượt nhỏ dần.', 'NUMBER_PATTERN', 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_SUB_EQUAL', 'toan/lop-1', 'Dãy số giảm đều', 'Mỗi lần giảm đi cùng một số.', 'NUMBER_PATTERN', 'ACTIVE', NULL, NULL),
+	-- Child: 2.4. Dãy số giảm không đều
+	('NUMBER_PATTERN_DECREASING', 'toan/lop-1', 'Dãy số giảm không đều', 'Các số lần lượt nhỏ dần.', 'NUMBER_PATTERN', 'ACTIVE', NULL, NULL),
 	-- Child: 2.5. Dãy số tăng – giảm xen kẽ
 	('NUMBER_PATTERN_ALTERNATE', 'toan/lop-1', 'Dãy số tăng – giảm xen kẽ', 'Các số thay đổi theo hai quy luật luân phiên.', 'NUMBER_PATTERN', 'ACTIVE', NULL, NULL),
 	-- Child: 2.6. Dãy số lặp lại
 	('NUMBER_PATTERN_REPEAT', 'toan/lop-1', 'Dãy số lặp lại', 'Một nhóm số hoặc quy luật được lặp đi lặp lại.', 'NUMBER_PATTERN', 'ACTIVE', NULL, NULL),
-	-- Child: 2.7. Tìm số tiếp theo
-	('NUMBER_PATTERN_NEXT', 'toan/lop-1', 'Tìm số tiếp theo', 'Dựa vào quy luật để tìm số đứng tiếp theo.', 'NUMBER_PATTERN', 'ACTIVE', NULL, NULL),
-	-- Child: 2.8. Tìm số còn thiếu
+	-- Child: 2.7. Tìm số còn thiếu
 	('NUMBER_PATTERN_MISSING', 'toan/lop-1', 'Tìm số còn thiếu', 'Tìm số bị thiếu ở giữa một dãy số.', 'NUMBER_PATTERN', 'ACTIVE', NULL, NULL),
-	-- Child: 2.9. Tìm quy luật của dãy
+	-- Child: 2.8. Tìm quy luật của dãy
 	('NUMBER_PATTERN_RULE', 'toan/lop-1', 'Tìm quy luật của dãy', 'Quan sát các số và nói được chúng thay đổi như thế nào.', 'NUMBER_PATTERN', 'ACTIVE', NULL, NULL),
-	-- Child: 2.10. Tìm số sai
+	-- Child: 2.9. Tìm số sai
 	('NUMBER_PATTERN_WRONG', 'toan/lop-1', 'Tìm số sai', 'Phát hiện một số không tuân theo quy luật của cả dãy.', 'NUMBER_PATTERN', 'ACTIVE', NULL, NULL),
 
 	-- Child: 3.1. Phép cộng

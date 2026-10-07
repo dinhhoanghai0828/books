@@ -27,6 +27,7 @@ const MathGradePage = () => {
   const [userAnswers, setUserAnswers] = useState<Record<string, string>>({});
   const [isChecked, setIsChecked] = useState(false);
   const [openConfirmModal, setOpenConfirmModal] = useState(false);
+  const [defaultOpenKeys, setDefaultOpenKeys] = useState<string[]>([]);
 
   // Bộ lọc
   const [difficultyFilter, setDifficultyFilter] = useState<number>(0); // 0 = tất cả
@@ -49,6 +50,23 @@ const MathGradePage = () => {
       try {
         const data: MathCategoryType[] = await getMathCategories(`toan/${grade}`);
         setCategories(data ?? []);
+
+        // Set default: open first parent menu and select first child
+        if (data && data.length > 0) {
+          const firstCategory = data[0];
+          if (firstCategory.children && firstCategory.children.length > 0) {
+            // Open first parent menu
+            setDefaultOpenKeys([firstCategory.categoryCode]);
+            // Select first child
+            const firstChild = firstCategory.children[0];
+            setSelectedCategory(firstChild.categoryCode);
+            setCategoryName(firstChild.categoryName);
+          } else {
+            // If no children, select the first category itself
+            setSelectedCategory(firstCategory.categoryCode);
+            setCategoryName(firstCategory.categoryName);
+          }
+        }
       } catch (error) {
         console.error('Lỗi khi lấy danh sách math categories:', error);
         message.error('Không thể tải danh sách danh mục');
@@ -220,6 +238,8 @@ const MathGradePage = () => {
           style={{ height: 'calc(100% - 48px)', borderRight: 0, overflowY: 'auto', overflowX: 'hidden' }}
           items={buildMenuItems(categories)}
           onSelect={handleMenuSelect}
+          defaultOpenKeys={defaultOpenKeys}
+          defaultSelectedKeys={selectedCategory ? [selectedCategory] : []}
         />
       </Sider>
       <Content style={{ padding: '24px', background: '#f5f5f5', marginLeft: '250px' }}>

@@ -319,7 +319,99 @@ INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICU
 	('NUMBER_PATTERN_DECREASING', 'NUMBER_PATTERN_DECREASING_038', '47, 46, 44, 41, 40, 38, 37, ?, số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
 	('NUMBER_PATTERN_DECREASING', 'NUMBER_PATTERN_DECREASING_039', '41, 39, 36, 35, 33, 30, 29, ?, số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
 	('NUMBER_PATTERN_DECREASING', 'NUMBER_PATTERN_DECREASING_040', '49, 46, 45, 43, 42, 40, ?, số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL);
-	
+
+-- Child: 2.5. Dãy số tăng – giảm xen kẽ
+INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
+	('NUMBER_PATTERN_ALTERNATE', 'NUMBER_PATTERN_ALTERNATE_001', '4, 6, 5, 7, 6, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_ALTERNATE', 'NUMBER_PATTERN_ALTERNATE_002', '6, 9, 8, 11, 10, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_ALTERNATE', 'NUMBER_PATTERN_ALTERNATE_003', '8, 10, 9, 11, 10, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_ALTERNATE', 'NUMBER_PATTERN_ALTERNATE_004', '10, 14, 13, 17, 16, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_ALTERNATE', 'NUMBER_PATTERN_ALTERNATE_005', '12, 15, 13, 16, 14, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_ALTERNATE', 'NUMBER_PATTERN_ALTERNATE_006', '7, 9, 8, 10, 9, 11, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_ALTERNATE', 'NUMBER_PATTERN_ALTERNATE_007', '9, 12, 10, 13, 11, 14, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_ALTERNATE', 'NUMBER_PATTERN_ALTERNATE_008', '11, 15, 14, 18, 17, 21, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_ALTERNATE', 'NUMBER_PATTERN_ALTERNATE_009', '13, 15, 12, 14, 11, 13, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_ALTERNATE', 'NUMBER_PATTERN_ALTERNATE_010', '15, 18, 17, 20, 19, 22, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+
+	('NUMBER_PATTERN_ALTERNATE', 'NUMBER_PATTERN_ALTERNATE_011', '5, 9, 7, 11, 9, 13, ?, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_ALTERNATE', 'NUMBER_PATTERN_ALTERNATE_012', '8, 11, 9, 12, 10, 13, ?, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_ALTERNATE', 'NUMBER_PATTERN_ALTERNATE_013', '10, 12, 11, 13, 12, 14, ?, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_ALTERNATE', 'NUMBER_PATTERN_ALTERNATE_014', '14, 18, 16, 20, 18, 22, ?, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_ALTERNATE', 'NUMBER_PATTERN_ALTERNATE_015', '16, 19, 17, 20, 18, 21, ?, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_ALTERNATE', 'NUMBER_PATTERN_ALTERNATE_016', '6, 11, 9, 14, 12, 17, ?, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_ALTERNATE', 'NUMBER_PATTERN_ALTERNATE_017', '9, 13, 12, 16, 15, 19, ?, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_ALTERNATE', 'NUMBER_PATTERN_ALTERNATE_018', '12, 15, 13, 16, 14, 17, ?, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_ALTERNATE', 'NUMBER_PATTERN_ALTERNATE_019', '15, 17, 14, 16, 13, 15, ?, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_ALTERNATE', 'NUMBER_PATTERN_ALTERNATE_020', '18, 22, 21, 25, 24, 28, ?, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+
+	('NUMBER_PATTERN_ALTERNATE', 'NUMBER_PATTERN_ALTERNATE_021', '20, 23, 21, 24, 22, 25, ?, số nào thích hợp điền vào dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_ALTERNATE', 'NUMBER_PATTERN_ALTERNATE_022', '22, 26, 24, 28, 26, 30, ?, số nào thích hợp điền vào dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_ALTERNATE', 'NUMBER_PATTERN_ALTERNATE_023', '24, 27, 26, 29, 28, 31, ?, số nào thích hợp điền vào dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_ALTERNATE', 'NUMBER_PATTERN_ALTERNATE_024', '26, 28, 27, 29, 28, 30, ?, số nào thích hợp điền vào dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_ALTERNATE', 'NUMBER_PATTERN_ALTERNATE_025', '28, 31, 29, 32, 30, 33, ?, số nào thích hợp điền vào dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_ALTERNATE', 'NUMBER_PATTERN_ALTERNATE_026', '30, 34, 33, 37, 36, 40, ?, số nào thích hợp điền vào dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_ALTERNATE', 'NUMBER_PATTERN_ALTERNATE_027', '32, 35, 33, 36, 34, 37, ?, số nào thích hợp điền vào dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_ALTERNATE', 'NUMBER_PATTERN_ALTERNATE_028', '34, 36, 35, 37, 36, 38, ?, số nào thích hợp điền vào dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_ALTERNATE', 'NUMBER_PATTERN_ALTERNATE_029', '36, 40, 38, 42, 40, 44, ?, số nào thích hợp điền vào dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_ALTERNATE', 'NUMBER_PATTERN_ALTERNATE_030', '38, 41, 40, 43, 42, 45, ?, số nào thích hợp điền vào dấu ?', 3, 'ACTIVE', NULL, NULL),
+
+	('NUMBER_PATTERN_ALTERNATE', 'NUMBER_PATTERN_ALTERNATE_031', '40, 42, 41, 43, 42, 44, ?, số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_ALTERNATE', 'NUMBER_PATTERN_ALTERNATE_032', '42, 45, 43, 46, 44, 47, ?, số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_ALTERNATE', 'NUMBER_PATTERN_ALTERNATE_033', '44, 46, 45, 47, 46, 48, ?, số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_ALTERNATE', 'NUMBER_PATTERN_ALTERNATE_034', '45, 48, 46, 49, 47, 50, ?, số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_ALTERNATE', 'NUMBER_PATTERN_ALTERNATE_035', '43, 45, 44, 46, 45, 47, ?, số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_ALTERNATE', 'NUMBER_PATTERN_ALTERNATE_036', '18, 23, 21, 26, 24, 29, 27, ?, số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_ALTERNATE', 'NUMBER_PATTERN_ALTERNATE_037', '20, 24, 23, 27, 26, 30, 29, ?, số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_ALTERNATE', 'NUMBER_PATTERN_ALTERNATE_038', '25, 28, 26, 29, 27, 30, 28, ?, số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_ALTERNATE', 'NUMBER_PATTERN_ALTERNATE_039', '30, 34, 32, 36, 34, 38, 36, ?, số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_ALTERNATE', 'NUMBER_PATTERN_ALTERNATE_040', '35, 38, 37, 40, 39, 42, 41, ?, số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL);
+
+-- Child: 2.7. Tìm số còn thiếu
+INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_001', '1, 2, ?, 4, 5, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_002', '5, 6, 7, ?, 9, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_003', '2, 3, ?, 5, 6, số nào thích hợp điền vào dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_004', '7, ?, 9, 10, 11, số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_005', '10, 11, 12, ?, 14, số nào thích hợp điền vào dấu ?', 5, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_006', '15, ?, 17, 18, 19, số nào thích hợp điền vào dấu ?', 6, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_007', '20, 21, ?, 23, 24, số nào thích hợp điền vào dấu ?', 7, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_008', '25, 26, 27, ?, 29, số nào thích hợp điền vào dấu ?', 8, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_009', '30, ?, 32, 33, 34, số nào thích hợp điền vào dấu ?', 9, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_010', '35, 36, ?, 38, 39, số nào thích hợp điền vào dấu ?', 10, 'ACTIVE', NULL, NULL),
+
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_011', '2, 4, ?, 8, 10, số nào thích hợp điền vào dấu ?', 11, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_012', '3, 5, 7, ?, 11, số nào thích hợp điền vào dấu ?', 12, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_013', '10, 12, ?, 16, 18, số nào thích hợp điền vào dấu ?', 13, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_014', '1, 3, 5, ?, 9, số nào thích hợp điền vào dấu ?', 14, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_015', '4, 6, ?, 10, 12, số nào thích hợp điền vào dấu ?', 15, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_016', '5, 8, ?, 14, 17, số nào thích hợp điền vào dấu ?', 16, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_017', '10, 13, 16, ?, 22, số nào thích hợp điền vào dấu ?', 17, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_018', '20, 24, ?, 32, 36, số nào thích hợp điền vào dấu ?', 18, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_019', '2, 5, 8, ?, 14, số nào thích hợp điền vào dấu ?', 19, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_020', '6, 10, ?, 18, 22, số nào thích hợp điền vào dấu ?', 20, 'ACTIVE', NULL, NULL),
+
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_021', '1, ?, 3, ?, 5, số nào thích hợp điền vào hai dấu ?', 21, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_022', '2, ?, 4, ?, 6, số nào thích hợp điền vào hai dấu ?', 22, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_023', '5, ?, 7, ?, 9, số nào thích hợp điền vào hai dấu ?', 23, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_024', '10, ?, 12, ?, 14, số nào thích hợp điền vào hai dấu ?', 24, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_025', '15, ?, 17, ?, 19, số nào thích hợp điền vào hai dấu ?', 25, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_026', '20, ?, 22, ?, 24, số nào thích hợp điền vào hai dấu ?', 26, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_027', '2, ?, 6, ?, 10, số nào thích hợp điền vào hai dấu ?', 27, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_028', '4, ?, 8, ?, 12, số nào thích hợp điền vào hai dấu ?', 28, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_029', '6, ?, 10, ?, 14, số nào thích hợp điền vào hai dấu ?', 29, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_030', '8, ?, 12, ?, 16, số nào thích hợp điền vào hai dấu ?', 30, 'ACTIVE', NULL, NULL),
+
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_031', '30, 27, ?, 21, 18, số nào thích hợp điền vào dấu ?', 31, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_032', '25, 23, ?, 19, 17, số nào thích hợp điền vào dấu ?', 32, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_033', '40, 36, ?, 28, 24, số nào thích hợp điền vào dấu ?', 33, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_034', '35, 30, ?, 20, 15, số nào thích hợp điền vào dấu ?', 34, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_035', '20, ?, 16, ?, 12, số nào thích hợp điền vào hai dấu ?', 35, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_036', '30, ?, 24, ?, 18, số nào thích hợp điền vào hai dấu ?', 36, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_037', '3, 7, 11, ?, 19, số nào thích hợp điền vào dấu ?', 37, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_038', '50, 45, ?, 35, 30, số nào thích hợp điền vào dấu ?', 38, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_039', '5, ?, 11, ?, 17, số nào thích hợp điền vào hai dấu ?', 39, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_040', '40, ?, 32, ?, 24, số nào thích hợp điền vào hai dấu ?', 40, 'ACTIVE', NULL, NULL);
+
 -- Child: 6.1. Hai bước cộng
 INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
 	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_001', 'Nam có 2 quả táo. Mẹ cho Nam thêm 3 quả táo, sau đó bố cho thêm 1 quả nữa. Hỏi Nam có tất cả bao nhiêu quả táo?', 1, 'ACTIVE', NULL, NULL),
