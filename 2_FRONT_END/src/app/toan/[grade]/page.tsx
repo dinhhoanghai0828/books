@@ -21,7 +21,7 @@ const MathGradePage = () => {
   const [categories, setCategories] = useState<MathCategoryType[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const [selectedCategoryName, setSelectedCategoryName] = useState<string>('');
+  const [categoryName, setCategoryName] = useState<string>('');
   const [questions, setQuestions] = useState<MathQuestionType[]>([]);
   const [loadingQuestions, setLoadingQuestions] = useState(false);
   const [userAnswers, setUserAnswers] = useState<Record<string, string>>({});
@@ -114,25 +114,14 @@ const MathGradePage = () => {
     });
   };
 
-  const handleMenuSelect = ({ key }: { key: string; item: any }) => {
+  const handleMenuSelect = ({ key, item }: { key: string; item: any }) => {
     if (key.startsWith('__TONGHOP__')) {
       const code = key.replace('__TONGHOP__', '');
       setSelectedCategory(`__TONGHOP__${code}`);
-      setSelectedCategoryName('Bài tập tổng hợp');
+      setCategoryName('Bài tập tổng hợp');
     } else {
       setSelectedCategory(key);
-      // Tìm tên category từ key
-      const findName = (cats: MathCategoryType[]): string => {
-        for (const cat of cats) {
-          if (cat.categoryCode === key) return cat.categoryName;
-          if (cat.children) {
-            const found = findName(cat.children);
-            if (found) return found;
-          }
-        }
-        return key;
-      };
-      setSelectedCategoryName(findName(categories));
+      setCategoryName(item.label);
     }
   };
 
@@ -243,7 +232,7 @@ const MathGradePage = () => {
             <div>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }}>
                 <Title level={3} style={{ margin: 0 }}>
-                  {selectedCategoryName}
+                  {categoryName}
                 </Title>
                 {isChecked && (
                   <div style={{ fontSize: '18px', fontWeight: 'bold', color: '#52c41a' }}>

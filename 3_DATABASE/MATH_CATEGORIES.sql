@@ -42,14 +42,15 @@ INSERT INTO MATH_CATEGORIES (CATEGORY_CODE, FULL_PATH, CATEGORY_NAME, CATEGORY_D
 	-- Child: 1.10. Số chẵn – số lẻ
 	('NUMBER_BASIC_EVEN_ODD', 'toan/lop-1', 'Số chẵn – số lẻ', 'Nhận biết và phân loại số chẵn, số lẻ.', 'NUMBER_BASIC', 'ACTIVE', NULL, NULL),
 
-	-- Child: 2.1. Dãy số tăng
-	('NUMBER_PATTERN_INCREASING', 'toan/lop-1', 'Dãy số tăng', 'Các số lần lượt lớn dần.', 'NUMBER_PATTERN', 'ACTIVE', NULL, NULL),
-	-- Child: 2.2. Dãy số giảm
-	('NUMBER_PATTERN_DECREASING', 'toan/lop-1', 'Dãy số giảm', 'Các số lần lượt nhỏ dần.', 'NUMBER_PATTERN', 'ACTIVE', NULL, NULL),
-	-- Child: 2.3. Dãy số thêm đều
+
+	-- Child: 2.1. Dãy số tăng đều
 	('NUMBER_PATTERN_ADD_EQUAL', 'toan/lop-1', 'Dãy số thêm đều', 'Mỗi lần tăng thêm cùng một số.', 'NUMBER_PATTERN', 'ACTIVE', NULL, NULL),
-	-- Child: 2.4. Dãy số bớt đều
+	-- Child: 2.2. Dãy số tăng
+	('NUMBER_PATTERN_INCREASING', 'toan/lop-1', 'Dãy số tăng', 'Các số lần lượt lớn dần.', 'NUMBER_PATTERN', 'ACTIVE', NULL, NULL),
+	-- Child: 2.3. Dãy số giảm đều
 	('NUMBER_PATTERN_SUB_EQUAL', 'toan/lop-1', 'Dãy số bớt đều', 'Mỗi lần giảm đi cùng một số.', 'NUMBER_PATTERN', 'ACTIVE', NULL, NULL),
+	-- Child: 2.4. Dãy số giảm
+	('NUMBER_PATTERN_DECREASING', 'toan/lop-1', 'Dãy số giảm', 'Các số lần lượt nhỏ dần.', 'NUMBER_PATTERN', 'ACTIVE', NULL, NULL),
 	-- Child: 2.5. Dãy số tăng – giảm xen kẽ
 	('NUMBER_PATTERN_ALTERNATE', 'toan/lop-1', 'Dãy số tăng – giảm xen kẽ', 'Các số thay đổi theo hai quy luật luân phiên.', 'NUMBER_PATTERN', 'ACTIVE', NULL, NULL),
 	-- Child: 2.6. Dãy số lặp lại
