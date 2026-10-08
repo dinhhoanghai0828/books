@@ -411,54 +411,7 @@ INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICU
 	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_038', '50, 45, ?, 35, 30, số nào thích hợp điền vào dấu ?', 38, 'ACTIVE', NULL, NULL),
 	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_039', '5, ?, 11, ?, 17, số nào thích hợp điền vào hai dấu ?', 39, 'ACTIVE', NULL, NULL),
 	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_040', '40, ?, 32, ?, 24, số nào thích hợp điền vào hai dấu ?', 40, 'ACTIVE', NULL, NULL);
-
--- Child: 6.1. Hai bước cộng
-INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_001', 'Nam có 2 quả táo. Mẹ cho Nam thêm 3 quả táo, sau đó bố cho thêm 1 quả nữa. Hỏi Nam có tất cả bao nhiêu quả táo?', 1, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_002', 'Lan có 4 bông hoa. Cô cho Lan thêm 2 bông, sau đó bạn Mai cho thêm 1 bông nữa. Hỏi Lan có tất cả bao nhiêu bông hoa?', 1, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_003', 'Bình có 3 viên bi. Bố cho Bình thêm 2 viên, rồi anh cho thêm 2 viên nữa. Hỏi Bình có tất cả bao nhiêu viên bi?', 1, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_004', 'Trong bể có 5 con cá. Mẹ thả thêm 1 con cá, sau đó thả thêm 2 con nữa. Hỏi trong bể có tất cả bao nhiêu con cá?', 1, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_005', 'Mai có 3 chiếc bút. Cô giáo cho Mai thêm 2 chiếc, rồi mẹ cho thêm 3 chiếc nữa. Hỏi Mai có tất cả bao nhiêu chiếc bút?', 1, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_006', 'Trong giỏ có 2 quả cam. Mẹ đặt thêm 4 quả cam vào giỏ, sau đó đặt thêm 1 quả nữa. Hỏi trong giỏ có tất cả bao nhiêu quả cam?', 1, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_007', 'An có 5 chiếc kẹo. Bà cho An thêm 2 chiếc, rồi mẹ cho thêm 1 chiếc nữa. Hỏi An có tất cả bao nhiêu chiếc kẹo?', 1, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_008', 'Trên cành có 3 con chim. Có thêm 3 con bay đến, sau đó thêm 1 con nữa. Hỏi trên cành có tất cả bao nhiêu con chim?', 1, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_009', 'Hoa có 4 quyển truyện. Chị cho Hoa thêm 2 quyển, rồi bố cho thêm 2 quyển nữa. Hỏi Hoa có tất cả bao nhiêu quyển truyện?', 1, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_010', 'Trong hộp có 1 chiếc xe đồ chơi. Nam đặt thêm 3 chiếc vào hộp, sau đó đặt thêm 2 chiếc nữa. Hỏi trong hộp có tất cả bao nhiêu chiếc xe đồ chơi?', 1, 'ACTIVE', NULL, NULL),
-
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_011', 'Trên bàn có 5 quyển vở. Buổi sáng cô đặt thêm 3 quyển, đến chiều cô đặt thêm 2 quyển nữa. Hỏi trên bàn có tất cả bao nhiêu quyển vở?', 2, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_012', 'Một giỏ có 4 quả táo. Mẹ đặt thêm 3 quả vào giỏ, sau đó bố đặt thêm 2 quả nữa. Hỏi trong giỏ có tất cả bao nhiêu quả táo?', 2, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_013', 'Minh có 6 chiếc tem. Bạn cho Minh thêm 2 chiếc tem, sau đó cô giáo cho thêm 3 chiếc nữa. Hỏi Minh có tất cả bao nhiêu chiếc tem?', 2, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_014', 'Trong sân có 5 quả bóng. Nam mang thêm 4 quả ra sân, sau đó Minh mang thêm 2 quả nữa. Hỏi trong sân có tất cả bao nhiêu quả bóng?', 2, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_015', 'Một lớp có 7 bạn đang chơi. Có thêm 2 bạn tham gia, sau đó thêm 3 bạn nữa. Hỏi lúc này có tất cả bao nhiêu bạn đang chơi?', 2, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_016', 'Trong tủ có 3 chiếc cốc. Mẹ đặt thêm 4 chiếc vào tủ, rồi bố đặt thêm 2 chiếc nữa. Hỏi trong tủ có tất cả bao nhiêu chiếc cốc?', 2, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_017', 'Có 6 con vịt dưới ao. Có thêm 3 con bơi đến, sau đó thêm 2 con nữa. Hỏi dưới ao có tất cả bao nhiêu con vịt?', 2, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_018', 'Một hộp có 5 viên phấn. Cô giáo cho thêm 4 viên, sau đó cho thêm 3 viên nữa. Hỏi trong hộp có tất cả bao nhiêu viên phấn?', 2, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_019', 'Nam có 4 chiếc ô tô đồ chơi. Sinh nhật Nam được tặng thêm 3 chiếc, sau đó bố mua thêm 4 chiếc nữa. Hỏi Nam có tất cả bao nhiêu chiếc ô tô đồ chơi?', 2, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_020', 'Trên giá có 6 quyển sách. Mẹ đặt thêm 4 quyển sách, sau đó bố đặt thêm 3 quyển nữa. Hỏi trên giá có tất cả bao nhiêu quyển sách?', 2, 'ACTIVE', NULL, NULL),
-
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_021', 'Một cửa hàng có 6 chiếc bánh. Buổi sáng cửa hàng nhập thêm 4 chiếc bánh. Đến chiều, cửa hàng nhập thêm 3 chiếc nữa. Hỏi sau hai lần nhập, cửa hàng có tất cả bao nhiêu chiếc bánh?', 3, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_022', 'Trong vườn có 7 bông hoa. Người làm vườn trồng thêm 3 bông vào buổi sáng, sau đó trồng thêm 4 bông vào buổi chiều. Hỏi trong vườn có tất cả bao nhiêu bông hoa?', 3, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_023', 'Một hộp có 8 chiếc bút màu. Cô giáo cho thêm 3 chiếc vào hộp, sau đó bạn Lan cho thêm 2 chiếc nữa. Hỏi trong hộp có tất cả bao nhiêu chiếc bút màu?', 3, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_024', 'Có 5 con chim trên cành. Lúc đầu có thêm 4 con bay đến, sau đó thêm 5 con nữa bay đến. Hỏi trên cành lúc này có tất cả bao nhiêu con chim?', 3, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_025', 'Một thư viện có 7 quyển truyện thiếu nhi. Buổi sáng thư viện nhận thêm 3 quyển, đến chiều nhận thêm 5 quyển nữa. Hỏi thư viện có tất cả bao nhiêu quyển truyện thiếu nhi?', 3, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_026', 'Trong bể có 6 con cá vàng. Bố thả thêm 5 con cá, sau đó mẹ thả thêm 3 con nữa. Hỏi trong bể có tất cả bao nhiêu con cá vàng?', 3, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_027', 'Một lớp có 8 chiếc hộp bút màu. Cô giáo mang thêm 2 chiếc hộp đến lớp, sau đó phụ huynh tặng thêm 4 chiếc nữa. Hỏi lớp có tất cả bao nhiêu chiếc hộp bút màu?', 3, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_028', 'Nam có 7 viên bi trong túi. Anh cho Nam thêm 4 viên, sau đó bố cho thêm 3 viên nữa. Hỏi trong túi Nam có tất cả bao nhiêu viên bi?', 3, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_029', 'Một cửa hàng có 5 chiếc xe đạp. Buổi sáng cửa hàng nhận thêm 5 chiếc, đến chiều nhận thêm 4 chiếc nữa. Hỏi cửa hàng có tất cả bao nhiêu chiếc xe đạp?', 3, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_030', 'Trên sân trường có 9 bạn đang chơi. Có thêm 2 bạn đến chơi, sau đó thêm 4 bạn nữa. Hỏi trên sân trường lúc này có tất cả bao nhiêu bạn?', 3, 'ACTIVE', NULL, NULL),
-
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_031', 'Trong giỏ có 7 quả cam. Buổi sáng mẹ đặt thêm 3 quả cam vào giỏ. Sau đó, bố đặt thêm 5 quả nữa. Hỏi sau cả hai lần thêm, trong giỏ có tất cả bao nhiêu quả cam?', 4, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_032', 'Một cửa hàng có 8 chiếc bánh. Cửa hàng nhập thêm 4 chiếc vào buổi sáng. Đến chiều, cửa hàng lại nhập thêm 3 chiếc nữa. Hỏi sau hai lần nhập hàng, cửa hàng có tất cả bao nhiêu chiếc bánh?', 4, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_033', 'Trên sân có 6 quả bóng. Nam mang thêm 5 quả bóng ra sân để chơi. Một lúc sau, Minh mang thêm 4 quả nữa. Hỏi sau hai lần mang bóng ra sân, trên sân có tất cả bao nhiêu quả bóng?', 4, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_034', 'Một giá sách có 7 quyển truyện. Mẹ đặt thêm 5 quyển vào giá. Sau đó bố đặt thêm 4 quyển nữa. Hỏi sau hai lần đặt thêm, giá sách có tất cả bao nhiêu quyển truyện?', 4, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_035', 'Trong vườn có 8 con bướm. Có 3 con bay đến vào buổi sáng. Một lúc sau, có thêm 5 con nữa bay đến. Hỏi trong vườn lúc này có tất cả bao nhiêu con bướm?', 4, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_036', 'Một hộp có 6 chiếc bút. Cô giáo cho thêm 5 chiếc bút vào hộp. Sau đó cô cho thêm 4 chiếc nữa. Hỏi sau hai lần thêm bút, trong hộp có tất cả bao nhiêu chiếc bút?', 4, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_037', 'Có 9 con chim trên cành. Buổi sáng có thêm 2 con bay đến. Sau đó có thêm 5 con nữa bay đến. Hỏi sau hai lần chim bay đến, trên cành có tất cả bao nhiêu con chim?', 4, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_038', 'Một giỏ có 7 quả táo. Mẹ đặt thêm 4 quả vào giỏ. Sau đó bố đặt thêm 5 quả nữa. Hỏi sau hai lần đặt thêm, trong giỏ có tất cả bao nhiêu quả táo?', 4, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_039', 'Nam có 8 chiếc xe đồ chơi. Anh cho Nam thêm 3 chiếc. Sau đó bố cho Nam thêm 5 chiếc nữa. Hỏi sau hai lần được cho thêm, Nam có tất cả bao nhiêu chiếc xe đồ chơi?', 4, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_040', 'Trong lớp có 6 hộp bút màu. Cô giáo mang thêm 5 hộp đến lớp. Sau đó phụ huynh tặng thêm 4 hộp nữa. Hỏi sau hai lần được thêm, lớp có tất cả bao nhiêu hộp bút màu?', 4, 'ACTIVE', NULL, NULL);
-
--- Child: 4.1. Tìm số khi biết tổng
+	
 -- Child: 4.1. Tìm số khi biết tổng
 INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
 	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_001', 'Tổng của hai số là 10. Một số là 4. Số còn lại là bao nhiêu?', 1, 'ACTIVE', NULL, NULL),
@@ -505,6 +458,52 @@ INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICU
 	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_039', 'Một trường có 100 quyển vở để phát cho học sinh. Đã phát 73 quyển. Hỏi còn lại bao nhiêu quyển vở?', 4, 'ACTIVE', NULL, NULL),
 	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_040', 'Một kho có 100 hộp sữa. Đã chuyển 79 hộp đến trường học. Hỏi kho còn lại bao nhiêu hộp sữa?', 4, 'ACTIVE', NULL, NULL);
 	
+-- Child: 6.1. Hai bước cộng
+INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_001', 'Nam có 2 quả táo. Mẹ cho Nam thêm 3 quả táo, sau đó bố cho thêm 1 quả nữa. Hỏi Nam có tất cả bao nhiêu quả táo?', 1, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_002', 'Lan có 4 bông hoa. Cô cho Lan thêm 2 bông, sau đó bạn Mai cho thêm 1 bông nữa. Hỏi Lan có tất cả bao nhiêu bông hoa?', 1, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_003', 'Bình có 3 viên bi. Bố cho Bình thêm 2 viên, rồi anh cho thêm 2 viên nữa. Hỏi Bình có tất cả bao nhiêu viên bi?', 1, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_004', 'Trong bể có 5 con cá. Mẹ thả thêm 1 con cá, sau đó thả thêm 2 con nữa. Hỏi trong bể có tất cả bao nhiêu con cá?', 1, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_005', 'Mai có 3 chiếc bút. Cô giáo cho Mai thêm 2 chiếc, rồi mẹ cho thêm 3 chiếc nữa. Hỏi Mai có tất cả bao nhiêu chiếc bút?', 1, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_006', 'Trong giỏ có 2 quả cam. Mẹ đặt thêm 4 quả cam vào giỏ, sau đó đặt thêm 1 quả nữa. Hỏi trong giỏ có tất cả bao nhiêu quả cam?', 1, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_007', 'An có 5 chiếc kẹo. Bà cho An thêm 2 chiếc, rồi mẹ cho thêm 1 chiếc nữa. Hỏi An có tất cả bao nhiêu chiếc kẹo?', 1, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_008', 'Trên cành có 3 con chim. Có thêm 3 con bay đến, sau đó thêm 1 con nữa. Hỏi trên cành có tất cả bao nhiêu con chim?', 1, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_009', 'Hoa có 4 quyển truyện. Chị cho Hoa thêm 2 quyển, rồi bố cho thêm 2 quyển nữa. Hỏi Hoa có tất cả bao nhiêu quyển truyện?', 1, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_010', 'Trong hộp có 1 chiếc xe đồ chơi. Nam đặt thêm 3 chiếc vào hộp, sau đó đặt thêm 2 chiếc nữa. Hỏi trong hộp có tất cả bao nhiêu chiếc xe đồ chơi?', 1, 'ACTIVE', NULL, NULL),
+
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_011', 'Trên bàn có 5 quyển vở. Buổi sáng cô đặt thêm 3 quyển, đến chiều cô đặt thêm 2 quyển nữa. Hỏi trên bàn có tất cả bao nhiêu quyển vở?', 2, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_012', 'Một giỏ có 4 quả táo. Mẹ đặt thêm 3 quả vào giỏ, sau đó bố đặt thêm 2 quả nữa. Hỏi trong giỏ có tất cả bao nhiêu quả táo?', 2, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_013', 'Minh có 6 chiếc tem. Bạn cho Minh thêm 2 chiếc tem, sau đó cô giáo cho thêm 3 chiếc nữa. Hỏi Minh có tất cả bao nhiêu chiếc tem?', 2, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_014', 'Trong sân có 5 quả bóng. Nam mang thêm 4 quả ra sân, sau đó Minh mang thêm 2 quả nữa. Hỏi trong sân có tất cả bao nhiêu quả bóng?', 2, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_015', 'Một lớp có 7 bạn đang chơi. Có thêm 2 bạn tham gia, sau đó thêm 3 bạn nữa. Hỏi lúc này có tất cả bao nhiêu bạn đang chơi?', 2, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_016', 'Trong tủ có 3 chiếc cốc. Mẹ đặt thêm 4 chiếc vào tủ, rồi bố đặt thêm 2 chiếc nữa. Hỏi trong tủ có tất cả bao nhiêu chiếc cốc?', 2, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_017', 'Có 6 con vịt dưới ao. Có thêm 3 con bơi đến, sau đó thêm 2 con nữa. Hỏi dưới ao có tất cả bao nhiêu con vịt?', 2, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_018', 'Một hộp có 5 viên phấn. Cô giáo cho thêm 4 viên, sau đó cho thêm 3 viên nữa. Hỏi trong hộp có tất cả bao nhiêu viên phấn?', 2, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_019', 'Nam có 4 chiếc ô tô đồ chơi. Sinh nhật Nam được tặng thêm 3 chiếc, sau đó bố mua thêm 4 chiếc nữa. Hỏi Nam có tất cả bao nhiêu chiếc ô tô đồ chơi?', 2, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_020', 'Trên giá có 6 quyển sách. Mẹ đặt thêm 4 quyển sách, sau đó bố đặt thêm 3 quyển nữa. Hỏi trên giá có tất cả bao nhiêu quyển sách?', 2, 'ACTIVE', NULL, NULL),
+
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_021', 'Một cửa hàng có 6 chiếc bánh. Buổi sáng cửa hàng nhập thêm 4 chiếc bánh. Đến chiều, cửa hàng nhập thêm 3 chiếc nữa. Hỏi sau hai lần nhập, cửa hàng có tất cả bao nhiêu chiếc bánh?', 3, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_022', 'Trong vườn có 7 bông hoa. Người làm vườn trồng thêm 3 bông vào buổi sáng, sau đó trồng thêm 4 bông vào buổi chiều. Hỏi trong vườn có tất cả bao nhiêu bông hoa?', 3, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_023', 'Một hộp có 8 chiếc bút màu. Cô giáo cho thêm 3 chiếc vào hộp, sau đó bạn Lan cho thêm 2 chiếc nữa. Hỏi trong hộp có tất cả bao nhiêu chiếc bút màu?', 3, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_024', 'Có 5 con chim trên cành. Lúc đầu có thêm 4 con bay đến, sau đó thêm 5 con nữa bay đến. Hỏi trên cành lúc này có tất cả bao nhiêu con chim?', 3, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_025', 'Một thư viện có 7 quyển truyện thiếu nhi. Buổi sáng thư viện nhận thêm 3 quyển, đến chiều nhận thêm 5 quyển nữa. Hỏi thư viện có tất cả bao nhiêu quyển truyện thiếu nhi?', 3, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_026', 'Trong bể có 6 con cá vàng. Bố thả thêm 5 con cá, sau đó mẹ thả thêm 3 con nữa. Hỏi trong bể có tất cả bao nhiêu con cá vàng?', 3, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_027', 'Một lớp có 8 chiếc hộp bút màu. Cô giáo mang thêm 2 chiếc hộp đến lớp, sau đó phụ huynh tặng thêm 4 chiếc nữa. Hỏi lớp có tất cả bao nhiêu chiếc hộp bút màu?', 3, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_028', 'Nam có 7 viên bi trong túi. Anh cho Nam thêm 4 viên, sau đó bố cho thêm 3 viên nữa. Hỏi trong túi Nam có tất cả bao nhiêu viên bi?', 3, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_029', 'Một cửa hàng có 5 chiếc xe đạp. Buổi sáng cửa hàng nhận thêm 5 chiếc, đến chiều nhận thêm 4 chiếc nữa. Hỏi cửa hàng có tất cả bao nhiêu chiếc xe đạp?', 3, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_030', 'Trên sân trường có 9 bạn đang chơi. Có thêm 2 bạn đến chơi, sau đó thêm 4 bạn nữa. Hỏi trên sân trường lúc này có tất cả bao nhiêu bạn?', 3, 'ACTIVE', NULL, NULL),
+
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_031', 'Trong giỏ có 7 quả cam. Buổi sáng mẹ đặt thêm 3 quả cam vào giỏ. Sau đó, bố đặt thêm 5 quả nữa. Hỏi sau cả hai lần thêm, trong giỏ có tất cả bao nhiêu quả cam?', 4, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_032', 'Một cửa hàng có 8 chiếc bánh. Cửa hàng nhập thêm 4 chiếc vào buổi sáng. Đến chiều, cửa hàng lại nhập thêm 3 chiếc nữa. Hỏi sau hai lần nhập hàng, cửa hàng có tất cả bao nhiêu chiếc bánh?', 4, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_033', 'Trên sân có 6 quả bóng. Nam mang thêm 5 quả bóng ra sân để chơi. Một lúc sau, Minh mang thêm 4 quả nữa. Hỏi sau hai lần mang bóng ra sân, trên sân có tất cả bao nhiêu quả bóng?', 4, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_034', 'Một giá sách có 7 quyển truyện. Mẹ đặt thêm 5 quyển vào giá. Sau đó bố đặt thêm 4 quyển nữa. Hỏi sau hai lần đặt thêm, giá sách có tất cả bao nhiêu quyển truyện?', 4, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_035', 'Trong vườn có 8 con bướm. Có 3 con bay đến vào buổi sáng. Một lúc sau, có thêm 5 con nữa bay đến. Hỏi trong vườn lúc này có tất cả bao nhiêu con bướm?', 4, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_036', 'Một hộp có 6 chiếc bút. Cô giáo cho thêm 5 chiếc bút vào hộp. Sau đó cô cho thêm 4 chiếc nữa. Hỏi sau hai lần thêm bút, trong hộp có tất cả bao nhiêu chiếc bút?', 4, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_037', 'Có 9 con chim trên cành. Buổi sáng có thêm 2 con bay đến. Sau đó có thêm 5 con nữa bay đến. Hỏi sau hai lần chim bay đến, trên cành có tất cả bao nhiêu con chim?', 4, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_038', 'Một giỏ có 7 quả táo. Mẹ đặt thêm 4 quả vào giỏ. Sau đó bố đặt thêm 5 quả nữa. Hỏi sau hai lần đặt thêm, trong giỏ có tất cả bao nhiêu quả táo?', 4, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_039', 'Nam có 8 chiếc xe đồ chơi. Anh cho Nam thêm 3 chiếc. Sau đó bố cho Nam thêm 5 chiếc nữa. Hỏi sau hai lần được cho thêm, Nam có tất cả bao nhiêu chiếc xe đồ chơi?', 4, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_040', 'Trong lớp có 6 hộp bút màu. Cô giáo mang thêm 5 hộp đến lớp. Sau đó phụ huynh tặng thêm 4 hộp nữa. Hỏi sau hai lần được thêm, lớp có tất cả bao nhiêu hộp bút màu?', 4, 'ACTIVE', NULL, NULL);
+
 -- Child: 6.2. Hai bước trừ
 INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
 	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_001', 'Mai có 12 quả táo. Mai cho bạn 3 quả rồi ăn 2 quả. Hỏi Mai còn lại bao nhiêu quả táo?', 1, 'ACTIVE', NULL, NULL),
