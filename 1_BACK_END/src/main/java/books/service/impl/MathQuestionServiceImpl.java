@@ -35,6 +35,12 @@ public class MathQuestionServiceImpl implements MathQuestionService {
         return mapQuestions(questions);
     }
 
+    @Override
+    public List<MathQuestionDTO> getAllQuestions() throws Exception {
+        List<MathQuestion> questions = mathQuestionAdapter.getAllQuestions();
+        return mapQuestions(questions);
+    }
+
     private List<MathQuestionDTO> mapQuestions(List<MathQuestion> questions) {
         return questions.stream()
                 .map(question -> {

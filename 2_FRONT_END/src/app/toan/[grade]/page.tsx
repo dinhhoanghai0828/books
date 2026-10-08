@@ -87,8 +87,9 @@ const MathGradePage = () => {
         setIsChecked(false);
         try {
           const isTongHop = selectedCategory.startsWith('__TONGHOP__');
+          const isComprehensive = selectedCategory === 'COMPREHENSIVE';
           const code = isTongHop ? selectedCategory.replace('__TONGHOP__', '') : selectedCategory;
-          const data = await getMathQuestionsByCategoryCode(code, isTongHop);
+          const data = await getMathQuestionsByCategoryCode(code, isTongHop || isComprehensive);
 
           // Filter by difficulty
           let filteredQuestions = data;
@@ -135,10 +136,19 @@ const MathGradePage = () => {
 
   const handleMenuSelect = ({ key, item }: { key: string; item: any }) => {
     if (key.startsWith('__TONGHOP__')) {
+      // Bài tập tổng hợp của từng phần
       const code = key.replace('__TONGHOP__', '');
       setSelectedCategory(`__TONGHOP__${code}`);
       setCategoryName('Bài tập tổng hợp');
+    } else if (key === 'COMPREHENSIVE') {
+      // Tư duy tổng hợp - lấy tất cả các dạng bài
+      setSelectedCategory(key);
+      setCategoryName(item.label);
+      // Mặc định 30 câu và ngẫu nhiên
+      setQuestionLimit(30);
+      setQuestionOrder('random');
     } else {
+      // Category bình thường
       setSelectedCategory(key);
       setCategoryName(item.label);
     }
@@ -186,15 +196,16 @@ const MathGradePage = () => {
 
   const handleReloadQuestions = async () => {
     if (!selectedCategory) return;
-    
+
     setLoadingQuestions(true);
     setUserAnswers({});
     setIsChecked(false);
-    
+
     try {
       const isTongHop = selectedCategory.startsWith('__TONGHOP__');
+      const isComprehensive = selectedCategory === 'COMPREHENSIVE';
       const code = isTongHop ? selectedCategory.replace('__TONGHOP__', '') : selectedCategory;
-      const data = await getMathQuestionsByCategoryCode(code, isTongHop);
+      const data = await getMathQuestionsByCategoryCode(code, isTongHop || isComprehensive);
 
       // Filter by difficulty
       let filteredQuestions = data;

@@ -51,8 +51,13 @@ public class MathController {
         try {
             List<MathQuestionDTO> questions;
             if (tongHop) {
-                // Lấy ngẫu nhiên câu hỏi từ tất cả categories con của cha
-                questions = mathQuestionService.getQuestionsByParentCategoryCode(categoryCode);
+                if (categoryCode.equals("COMPREHENSIVE")) {
+                    // Tư duy tổng hợp - lấy tất cả câu hỏi từ tất cả categories
+                    questions = mathQuestionService.getAllQuestions();
+                } else {
+                    // Bài tập tổng hợp của từng phần - lấy từ categories con
+                    questions = mathQuestionService.getQuestionsByParentCategoryCode(categoryCode);
+                }
             } else {
                 questions = mathQuestionService.getQuestionsByCategoryCode(categoryCode);
             }

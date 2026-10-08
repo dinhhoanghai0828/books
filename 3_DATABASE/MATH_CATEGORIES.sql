@@ -18,7 +18,9 @@ INSERT INTO MATH_CATEGORIES (CATEGORY_CODE, FULL_PATH, CATEGORY_NAME, CATEGORY_D
 	('CONDITION', 'toan/lop-1', 'Tìm đáp án theo nhiều điều kiện', 'Một đáp án phải đúng cùng lúc với nhiều yêu cầu.', NULL, 'ACTIVE', NULL, NULL),
 	-- Parent: 9. Chắc chắn – có thể – không thể
 	('POSSIBILITY', 'toan/lop-1', 'Chắc chắn – có thể – không thể', 'Phân biệt điều gì chắc chắn xảy ra, có thể xảy ra và không thể xảy ra.', NULL, 'ACTIVE', NULL, NULL),
-	-- Parent: 10. Tư duy tổng hợp
+	-- Parent: 10. Đo lường và thời gian
+	('MEASUREMENT_TIME', 'toan/lop-1', 'Đo lường và thời gian', 'Nhận biết, so sánh và giải các bài toán về độ dài, thời gian, ngày tháng và tiền.', NULL, 'ACTIVE', NULL, NULL),
+	-- Parent: 11. Tư duy tổng hợp
 	('COMPREHENSIVE', 'toan/lop-1', 'Tư duy tổng hợp', 'Kết hợp nhiều kỹ năng toán học và tư duy đã học để giải quyết bài toán.', NULL, 'ACTIVE', NULL, NULL),
 
 	-- Child: 1.1. Nhận biết số
@@ -78,9 +80,7 @@ INSERT INTO MATH_CATEGORIES (CATEGORY_CODE, FULL_PATH, CATEGORY_NAME, CATEGORY_D
 	('CALCULATION_SUBTRAHEND', 'toan/lop-1', 'Tìm số trừ', 'Biết số bị trừ và hiệu, tìm số đã bớt.', 'CALCULATION', 'ACTIVE', NULL, NULL),
 	-- Child: 3.8. Điền dấu + hoặc −
 	('CALCULATION_OPERATOR', 'toan/lop-1', 'Điền dấu + hoặc −', 'Chọn phép tính phù hợp để hoàn thành bài.', 'CALCULATION', 'ACTIVE', NULL, NULL),
-	-- Child: 3.9. Điền số thích hợp
-	('CALCULATION_FILL_NUMBER', 'toan/lop-1', 'Điền số thích hợp', 'Tìm số cần điền để phép tính đúng.', 'CALCULATION', 'ACTIVE', NULL, NULL),
-	-- Child: 3.10. So sánh kết quả
+	-- Child: 3.9. So sánh kết quả
 	('CALCULATION_COMPARE', 'toan/lop-1', 'So sánh kết quả', 'Tính hoặc suy luận để biết phép tính nào lớn hơn, nhỏ hơn hoặc bằng nhau.', 'CALCULATION', 'ACTIVE', NULL, NULL),
 
 	-- Child: 4.1. Tìm số khi biết tổng
@@ -97,28 +97,22 @@ INSERT INTO MATH_CATEGORIES (CATEGORY_CODE, FULL_PATH, CATEGORY_NAME, CATEGORY_D
 	('UNKNOWN_NUMBER_MULTI_CALC', 'toan/lop-1', 'Tìm số qua nhiều phép tính', 'Cần thực hiện từ hai phép tính trở lên để tìm số.', 'UNKNOWN_NUMBER', 'ACTIVE', NULL, NULL),
 	-- Child: 4.7. Tìm số theo điều kiện
 	('UNKNOWN_NUMBER_CONDITION', 'toan/lop-1', 'Tìm số theo điều kiện', 'Tìm số đáp ứng một hoặc nhiều yêu cầu.', 'UNKNOWN_NUMBER', 'ACTIVE', NULL, NULL),
-	-- Child: 4.8. Tìm số duy nhất
-	('UNKNOWN_NUMBER_UNIQUE', 'toan/lop-1', 'Tìm số duy nhất', 'Có nhiều khả năng nhưng chỉ một số thỏa mãn tất cả điều kiện.', 'UNKNOWN_NUMBER', 'ACTIVE', NULL, NULL),
-
+	
 	-- Child: 5.1. Thêm vào
 	('WORD_PROBLEM_ADD', 'toan/lop-1', 'Thêm vào', 'Có một số đồ vật, sau đó được thêm vào.', 'WORD_PROBLEM', 'ACTIVE', NULL, NULL),
 	-- Child: 5.2. Bớt đi
 	('WORD_PROBLEM_SUBTRACT', 'toan/lop-1', 'Bớt đi', 'Có một số đồ vật, sau đó bị lấy đi hoặc bớt đi.', 'WORD_PROBLEM', 'ACTIVE', NULL, NULL),
-	-- Child: 5.3. Cho đi
-	('WORD_PROBLEM_GIVE', 'toan/lop-1', 'Cho đi', 'Có một số đồ vật và đem cho người khác một phần.', 'WORD_PROBLEM', 'ACTIVE', NULL, NULL),
-	-- Child: 5.4. Nhận thêm
-	('WORD_PROBLEM_RECEIVE', 'toan/lop-1', 'Nhận thêm', 'Đang có một số đồ vật và nhận thêm.', 'WORD_PROBLEM', 'ACTIVE', NULL, NULL),
-	-- Child: 5.5. Tìm tất cả
+	-- Child: 5.3. Tìm tất cả
 	('WORD_PROBLEM_TOTAL', 'toan/lop-1', 'Tìm tất cả', 'Biết hai phần và cần tìm tổng số.', 'WORD_PROBLEM', 'ACTIVE', NULL, NULL),
-	-- Child: 5.6. Tìm phần còn lại
+	-- Child: 5.4. Tìm phần còn lại
 	('WORD_PROBLEM_REMAINING', 'toan/lop-1', 'Tìm phần còn lại', 'Biết tổng số và phần đã lấy đi, tìm phần còn lại.', 'WORD_PROBLEM', 'ACTIVE', NULL, NULL),
-	-- Child: 5.7. So sánh hơn
+	-- Child: 5.5. So sánh hơn
 	('WORD_PROBLEM_MORE', 'toan/lop-1', 'So sánh hơn', 'Một đối tượng nhiều hơn đối tượng khác bao nhiêu.', 'WORD_PROBLEM', 'ACTIVE', NULL, NULL),
-	-- Child: 5.8. So sánh kém
+	-- Child: 5.6. So sánh kém
 	('WORD_PROBLEM_LESS', 'toan/lop-1', 'So sánh kém', 'Một đối tượng ít hơn đối tượng khác bao nhiêu.', 'WORD_PROBLEM', 'ACTIVE', NULL, NULL),
-	-- Child: 5.9. Nhiều hơn – ít hơn
+	-- Child: 5.7. Nhiều hơn – ít hơn
 	('WORD_PROBLEM_MORE_LESS', 'toan/lop-1', 'Nhiều hơn – ít hơn', 'Tìm số lượng khi biết mối quan hệ nhiều hơn hoặc ít hơn.', 'WORD_PROBLEM', 'ACTIVE', NULL, NULL),
-	-- Child: 5.10. Chọn phép tính đúng
+	-- Child: 5.8. Chọn phép tính đúng
 	('WORD_PROBLEM_OPERATOR', 'toan/lop-1', 'Chọn phép tính đúng', 'Đọc bài toán và xác định nên dùng cộng hay trừ.', 'WORD_PROBLEM', 'ACTIVE', NULL, NULL),
 
 	-- Child: 6.1. Hai bước cộng
@@ -130,7 +124,7 @@ INSERT INTO MATH_CATEGORIES (CATEGORY_CODE, FULL_PATH, CATEGORY_NAME, CATEGORY_D
 	-- Child: 6.4. Trừ rồi cộng
 	('MULTI_STEP_SUB_ADD', 'toan/lop-1', 'Trừ rồi cộng', 'Trước tiên bớt đi, sau đó thêm vào.', 'MULTI_STEP', 'ACTIVE', NULL, NULL),
 	-- Child: 6.5. Thay đổi liên tiếp
-	('MULTI_STEP_SEQUENTIAL', 'toan/lop-1', 'Thay đổi liên tiếp', 'Số lượng thay đổi nhiều lần theo trình tự.', 'MULTI_STEP', 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_SEQUENTIAL', 'toan/lop-1', 'Cộng trừ nhiều bước', 'Cộng trừ nhiều bước', 'MULTI_STEP', 'ACTIVE', NULL, NULL),
 	-- Child: 6.6. Nhiều đối tượng
 	('MULTI_STEP_MULTI_OBJECT', 'toan/lop-1', 'Nhiều đối tượng', 'Có nhiều người, vật hoặc nhóm cần theo dõi cùng lúc.', 'MULTI_STEP', 'ACTIVE', NULL, NULL),
 	-- Child: 6.7. Chọn đúng thứ tự tính
@@ -167,18 +161,8 @@ INSERT INTO MATH_CATEGORIES (CATEGORY_CODE, FULL_PATH, CATEGORY_NAME, CATEGORY_D
 	('CONDITION_TWO', 'toan/lop-1', 'Hai điều kiện', 'Đáp án phải thỏa mãn hai yêu cầu cùng lúc.', 'CONDITION', 'ACTIVE', NULL, NULL),
 	-- Child: 8.3. Ba điều kiện
 	('CONDITION_THREE', 'toan/lop-1', 'Ba điều kiện', 'Đáp án phải thỏa mãn ba yêu cầu.', 'CONDITION', 'ACTIVE', NULL, NULL),
-	-- Child: 8.4. Lớn hơn + nhỏ hơn
-	('CONDITION_GREATER_SMALLER', 'toan/lop-1', 'Lớn hơn + nhỏ hơn', 'Tìm số nằm trong một khoảng nhất định.', 'CONDITION', 'ACTIVE', NULL, NULL),
-	-- Child: 8.5. Chẵn + điều kiện
-	('CONDITION_EVEN', 'toan/lop-1', 'Chẵn + điều kiện', 'Tìm số chẵn đồng thời thỏa mãn yêu cầu khác.', 'CONDITION', 'ACTIVE', NULL, NULL),
-	-- Child: 8.6. Lẻ + điều kiện
-	('CONDITION_ODD', 'toan/lop-1', 'Lẻ + điều kiện', 'Tìm số lẻ đồng thời thỏa mãn yêu cầu khác.', 'CONDITION', 'ACTIVE', NULL, NULL),
-	-- Child: 8.7. Vị trí + điều kiện
-	('CONDITION_POSITION', 'toan/lop-1', 'Vị trí + điều kiện', 'Tìm đối tượng đúng cả về vị trí và đặc điểm.', 'CONDITION', 'ACTIVE', NULL, NULL),
-	-- Child: 8.8. Số lượng + điều kiện
-	('CONDITION_QUANTITY', 'toan/lop-1', 'Số lượng + điều kiện', 'Tìm đáp án dựa trên số lượng được yêu cầu.', 'CONDITION', 'ACTIVE', NULL, NULL),
-	-- Child: 8.9. Nhiều điều kiện kết hợp
-	('CONDITION_COMBINATION', 'toan/lop-1', 'Nhiều điều kiện kết hợp', 'Kết hợp nhiều yêu cầu trong cùng một bài.', 'CONDITION', 'ACTIVE', NULL, NULL),
+	-- Child: 8.4. Nhiều điều kiện kết hợp
+	('CONDITION_COMBINATION', 'toan/lop-1', 'Nhiều điều kiện kết hợp, có thể là 4, 5, 6', 'Kết hợp nhiều yêu cầu trong cùng một bài.', 'CONDITION', 'ACTIVE', NULL, NULL),
 
 	-- Child: 9.1. Chắc chắn đúng
 	('POSSIBILITY_CERTAIN_TRUE', 'toan/lop-1', 'Chắc chắn đúng', 'Thông tin luôn đúng trong mọi trường hợp.', 'POSSIBILITY', 'ACTIVE', NULL, NULL),
@@ -190,28 +174,14 @@ INSERT INTO MATH_CATEGORIES (CATEGORY_CODE, FULL_PATH, CATEGORY_NAME, CATEGORY_D
 	('POSSIBILITY_IMPOSSIBLE', 'toan/lop-1', 'Không thể xảy ra', 'Một tình huống không thể xảy ra dựa trên các dữ kiện.', 'POSSIBILITY', 'ACTIVE', NULL, NULL),
 	-- Child: 9.5. Điều gì luôn đúng?
 	('POSSIBILITY_ALWAYS_TRUE', 'toan/lop-1', 'Điều gì luôn đúng?', 'Tìm kết luận đúng trong mọi trường hợp.', 'POSSIBILITY', 'ACTIVE', NULL, NULL),
-	-- Child: 9.6. Điều gì có thể xảy ra?
-	('POSSIBILITY_CAN_HAPPEN', 'toan/lop-1', 'Điều gì có thể xảy ra?', 'Tìm một khả năng phù hợp với dữ kiện.', 'POSSIBILITY', 'ACTIVE', NULL, NULL),
-	-- Child: 9.7. Điều gì chắc chắn không xảy ra?
-	('POSSIBILITY_CANNOT_HAPPEN', 'toan/lop-1', 'Điều gì chắc chắn không xảy ra?', 'Loại bỏ những khả năng không thể xảy ra.', 'POSSIBILITY', 'ACTIVE', NULL, NULL),
-	-- Child: 9.8. Tìm đáp án chắc chắn đúng
-	('POSSIBILITY_UNIQUE_CERTAIN', 'toan/lop-1', 'Tìm đáp án chắc chắn đúng', 'Cần xem xét tất cả dữ kiện trước khi chọn.', 'POSSIBILITY', 'ACTIVE', NULL, NULL),
-
-	-- Child: 10.1. Số + quy luật
-	('COMPREHENSIVE_NUMBER_PATTERN', 'toan/lop-1', 'Số + quy luật', 'Vừa nhận biết số vừa phát hiện quy luật.', 'COMPREHENSIVE', 'ACTIVE', NULL, NULL),
-	-- Child: 10.2. Số + điều kiện
-	('COMPREHENSIVE_NUMBER_CONDITION', 'toan/lop-1', 'Số + điều kiện', 'Tìm số đáp ứng nhiều yêu cầu.', 'COMPREHENSIVE', 'ACTIVE', NULL, NULL),
-	-- Child: 10.3. Phép tính + suy luận
-	('COMPREHENSIVE_CALCULATION_LOGIC', 'toan/lop-1', 'Phép tính + suy luận', 'Không chỉ tính mà còn phải suy nghĩ để chọn cách tính.', 'COMPREHENSIVE', 'ACTIVE', NULL, NULL),
-	-- Child: 10.4. Bài toán + nhiều bước
-	('COMPREHENSIVE_WORD_MULTI_STEP', 'toan/lop-1', 'Bài toán + nhiều bước', 'Đọc bài toán và giải theo nhiều bước.', 'COMPREHENSIVE', 'ACTIVE', NULL, NULL),
-	-- Child: 10.5. Logic + số học
-	('COMPREHENSIVE_LOGIC_MATH', 'toan/lop-1', 'Logic + số học', 'Kết hợp suy luận với phép tính.', 'COMPREHENSIVE', 'ACTIVE', NULL, NULL),
-	-- Child: 10.6. Nhiều điều kiện
-	('COMPREHENSIVE_MULTI_CONDITION', 'toan/lop-1', 'Nhiều điều kiện', 'Một bài có nhiều thông tin cần xử lý.', 'COMPREHENSIVE', 'ACTIVE', NULL, NULL),
-	-- Child: 10.7. Tìm tất cả khả năng
-	('COMPREHENSIVE_ALL_POSSIBILITIES', 'toan/lop-1', 'Tìm tất cả khả năng', 'Không chỉ tìm một đáp án mà phải tìm hết các đáp án có thể.', 'COMPREHENSIVE', 'ACTIVE', NULL, NULL),
-	-- Child: 10.8. Tìm đáp án duy nhất
-	('COMPREHENSIVE_UNIQUE_ANSWER', 'toan/lop-1', 'Tìm đáp án duy nhất', 'Có nhiều khả năng ban đầu nhưng chỉ một đáp án phù hợp hoàn toàn.', 'COMPREHENSIVE', 'ACTIVE', NULL, NULL),
-	-- Child: 10.9. Câu đố tư duy
-	('COMPREHENSIVE_BRAIN_TEASER', 'toan/lop-1', 'Câu đố tư duy', 'Bài toán yêu cầu kết hợp nhiều kỹ năng và suy nghĩ linh hoạt.', 'COMPREHENSIVE', 'ACTIVE', NULL, NULL);
+	
+	-- Child: 10.1. Nhận biết giờ
+	('TIME_READ_CLOCK', 'toan/lop-1', 'Nhận biết giờ', 'Đọc giờ trên đồng hồ và xác định thời điểm.', 'MEASUREMENT_TIME', 'ACTIVE', NULL, NULL),
+	-- Child: 10.2. Tính thời gian
+	('TIME_CALCULATION', 'toan/lop-1', 'Tính thời gian', 'Xác định thời điểm trước, sau hoặc khoảng thời gian đơn giản.', 'MEASUREMENT_TIME', 'ACTIVE', NULL, NULL),
+	-- Child: 10.3. Ngày trong tuần
+	('TIME_DAY_OF_WEEK', 'toan/lop-1', 'Ngày trong tuần', 'Xác định thứ, ngày trước hoặc ngày sau.', 'MEASUREMENT_TIME', 'ACTIVE', NULL, NULL),
+	-- Child: 10.4. Ngày và tháng
+	('TIME_DATE_MONTH', 'toan/lop-1', 'Ngày và tháng', 'Nhận biết và xác định ngày, tháng theo lịch.', 'MEASUREMENT_TIME', 'ACTIVE', NULL, NULL),
+	-- Child: 10.5. Bài toán về thời gian
+	('TIME_WORD_PROBLEM', 'toan/lop-1', 'Bài toán về thời gian', 'Giải bài toán thực tế có liên quan đến giờ, ngày hoặc khoảng thời gian.', 'MEASUREMENT_TIME', 'ACTIVE', NULL, NULL);
