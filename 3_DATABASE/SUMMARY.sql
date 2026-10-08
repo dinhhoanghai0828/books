@@ -74999,6 +74999,53 @@ INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICU
 	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_039', 'Nam có 8 chiếc xe đồ chơi. Anh cho Nam thêm 3 chiếc. Sau đó bố cho Nam thêm 5 chiếc nữa. Hỏi sau hai lần được cho thêm, Nam có tất cả bao nhiêu chiếc xe đồ chơi?', 4, 'ACTIVE', NULL, NULL),
 	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_040', 'Trong lớp có 6 hộp bút màu. Cô giáo mang thêm 5 hộp đến lớp. Sau đó phụ huynh tặng thêm 4 hộp nữa. Hỏi sau hai lần được thêm, lớp có tất cả bao nhiêu hộp bút màu?', 4, 'ACTIVE', NULL, NULL);
 
+-- Child: 4.1. Tìm số khi biết tổng
+-- Child: 4.1. Tìm số khi biết tổng
+INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_001', 'Tổng của hai số là 10. Một số là 4. Số còn lại là bao nhiêu?', 1, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_002', 'Tổng của hai số là 12. Một số là 5. Số còn lại là bao nhiêu?', 1, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_003', 'Tổng của hai số là 15. Một số là 7. Số còn lại là bao nhiêu?', 1, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_004', 'Tổng của hai số là 18. Một số là 6. Số còn lại là bao nhiêu?', 1, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_005', 'Tổng của hai số là 20. Một số là 8. Số còn lại là bao nhiêu?', 1, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_006', 'Tổng của hai số là 14. Một số là 9. Số còn lại là bao nhiêu?', 1, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_007', 'Tổng của hai số là 16. Một số là 7. Số còn lại là bao nhiêu?', 1, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_008', 'Tổng của hai số là 19. Một số là 11. Số còn lại là bao nhiêu?', 1, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_009', 'Tổng của hai số là 17. Một số là 5. Số còn lại là bao nhiêu?', 1, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_010', 'Tổng của hai số là 20. Một số là 13. Số còn lại là bao nhiêu?', 1, 'ACTIVE', NULL, NULL),
+
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_011', 'Tổng số quả táo và quả cam là 25 quả. Có 12 quả táo. Hỏi có bao nhiêu quả cam?', 2, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_012', 'Một hộp có tất cả 30 viên bi. Trong đó có 18 viên bi màu đỏ. Hỏi có bao nhiêu viên bi không màu đỏ?', 2, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_013', 'Lan có tất cả 28 chiếc bút. Lan có 15 chiếc bút chì. Hỏi Lan có bao nhiêu chiếc bút màu?', 2, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_014', 'Một cửa hàng có 35 chiếc bánh. Buổi sáng bán 17 chiếc. Số bánh còn lại là bao nhiêu chiếc?', 2, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_015', 'Lớp có 32 học sinh, trong đó có 19 bạn nữ. Hỏi lớp có bao nhiêu bạn nam?', 2, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_016', 'Nam có 27 viên bi gồm bi đỏ và bi xanh. Nam có 11 viên bi đỏ. Hỏi Nam có bao nhiêu viên bi xanh?', 2, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_017', 'Một giỏ có 40 quả bóng. Có 24 quả bóng màu vàng. Hỏi có bao nhiêu quả bóng không màu vàng?', 2, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_018', 'Thư viện có 36 quyển truyện và sách. Có 21 quyển là truyện. Hỏi có bao nhiêu quyển sách?', 2, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_019', 'Mẹ mua 45 quả trứng gồm trứng gà và trứng vịt. Có 28 quả trứng gà. Hỏi có bao nhiêu quả trứng vịt?', 2, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_020', 'Một hộp có 50 chiếc kẹo. Có 32 chiếc kẹo vị dâu. Hỏi có bao nhiêu chiếc kẹo vị khác?', 2, 'ACTIVE', NULL, NULL),
+
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_021', 'Hai ngăn tủ có tất cả 58 quyển sách. Ngăn thứ nhất có 34 quyển. Hỏi ngăn thứ hai có bao nhiêu quyển sách?', 3, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_022', 'Một trang trại có 63 con gà và vịt. Có 37 con gà. Hỏi có bao nhiêu con vịt?', 3, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_023', 'Một cửa hàng có 72 chiếc áo gồm áo trẻ em và áo người lớn. Có 45 chiếc áo trẻ em. Hỏi có bao nhiêu chiếc áo người lớn?', 3, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_024', 'Một trường có 80 quả bóng. Trong đó có 36 quả bóng đá. Số còn lại là bóng rổ. Hỏi có bao nhiêu quả bóng rổ?', 3, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_025', 'Minh có 65 que tính. Minh dùng một số que để làm hình và còn lại 29 que. Hỏi Minh đã dùng bao nhiêu que tính?', 3, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_026', 'Một kho có 74 thùng hàng. Đã chuyển đi 48 thùng. Hỏi trong kho còn lại bao nhiêu thùng?', 3, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_027', 'Một lớp có 67 quyển vở. Có 39 quyển vở mới và số còn lại là vở cũ. Hỏi có bao nhiêu quyển vở cũ?', 3, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_028', 'Một vườn có 85 cây cam và cây xoài. Có 47 cây cam. Hỏi có bao nhiêu cây xoài?', 3, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_029', 'Một cửa hàng có 91 món đồ chơi. Có 56 món đồ chơi đã được bán. Hỏi còn lại bao nhiêu món đồ chơi?', 3, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_030', 'Một thư viện có 100 quyển sách. Có 63 quyển sách ở ngăn trên. Hỏi ngăn dưới có bao nhiêu quyển sách?', 3, 'ACTIVE', NULL, NULL),
+
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_031', 'Một cửa hàng có 96 chiếc bút gồm bút mực và bút chì. Có 58 chiếc bút mực. Hỏi có bao nhiêu chiếc bút chì?', 4, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_032', 'Một trường có 98 học sinh lớp Một và lớp Hai. Có 67 học sinh lớp Một. Hỏi có bao nhiêu học sinh lớp Hai?', 4, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_033', 'Một trang trại có 95 con vật gồm gà, vịt và ngan. Trong đó có 62 con gà. Hỏi có bao nhiêu con vịt và ngan?', 4, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_034', 'Một kho có 100 thùng hàng. Buổi sáng chuyển đi 76 thùng. Hỏi kho còn lại bao nhiêu thùng hàng?', 4, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_035', 'Một cửa hàng có 88 chiếc bánh. Có 55 chiếc bánh ngọt và số còn lại là bánh mặn. Hỏi có bao nhiêu chiếc bánh mặn?', 4, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_036', 'Một thư viện có 99 quyển truyện và sách giáo khoa. Có 86 quyển truyện. Hỏi có bao nhiêu quyển sách giáo khoa?', 4, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_037', 'Một trang trại thu hoạch 100 quả gồm cam và xoài. Có 64 quả cam. Hỏi có bao nhiêu quả xoài?', 4, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_038', 'Một cửa hàng có 97 chiếc áo. Đã bán 68 chiếc. Hỏi cửa hàng còn lại bao nhiêu chiếc áo?', 4, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_039', 'Một trường có 100 quyển vở để phát cho học sinh. Đã phát 73 quyển. Hỏi còn lại bao nhiêu quyển vở?', 4, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_040', 'Một kho có 100 hộp sữa. Đã chuyển 79 hộp đến trường học. Hỏi kho còn lại bao nhiêu hộp sữa?', 4, 'ACTIVE', NULL, NULL);
+	
 -- Child: 6.2. Hai bước trừ
 INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
 	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_001', 'Mai có 12 quả táo. Mai cho bạn 3 quả rồi ăn 2 quả. Hỏi Mai còn lại bao nhiêu quả táo?', 1, 'ACTIVE', NULL, NULL),
@@ -76662,6 +76709,207 @@ INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, C
 	('NUMBER_PATTERN_MISSING_040', 'C', '35, 27', 'N', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_040', 'D', '38, 30', 'N', NULL, NULL);
 
+INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, CREATED_AT, UPDATED_AT) VALUES
+	('UNKNOWN_NUMBER_SUM_001', 'A', '6', 'Y', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_001', 'B', '5', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_001', 'C', '7', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_001', 'D', '8', 'N', NULL, NULL),
+
+	('UNKNOWN_NUMBER_SUM_002', 'A', '6', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_002', 'B', '7', 'Y', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_002', 'C', '8', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_002', 'D', '5', 'N', NULL, NULL),
+
+	('UNKNOWN_NUMBER_SUM_003', 'A', '9', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_003', 'B', '7', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_003', 'C', '8', 'Y', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_003', 'D', '6', 'N', NULL, NULL),
+
+	('UNKNOWN_NUMBER_SUM_004', 'A', '11', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_004', 'B', '12', 'Y', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_004', 'C', '10', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_004', 'D', '13', 'N', NULL, NULL),
+
+	('UNKNOWN_NUMBER_SUM_005', 'A', '13', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_005', 'B', '11', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_005', 'C', '12', 'Y', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_005', 'D', '14', 'N', NULL, NULL),
+
+	('UNKNOWN_NUMBER_SUM_006', 'A', '4', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_006', 'B', '6', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_006', 'C', '5', 'Y', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_006', 'D', '7', 'N', NULL, NULL),
+
+	('UNKNOWN_NUMBER_SUM_007', 'A', '8', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_007', 'B', '10', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_007', 'C', '9', 'Y', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_007', 'D', '7', 'N', NULL, NULL),
+
+	('UNKNOWN_NUMBER_SUM_008', 'A', '9', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_008', 'B', '8', 'Y', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_008', 'C', '7', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_008', 'D', '10', 'N', NULL, NULL),
+
+	('UNKNOWN_NUMBER_SUM_009', 'A', '12', 'Y', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_009', 'B', '11', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_009', 'C', '13', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_009', 'D', '10', 'N', NULL, NULL),
+
+	('UNKNOWN_NUMBER_SUM_010', 'A', '8', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_010', 'B', '6', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_010', 'C', '7', 'Y', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_010', 'D', '9', 'N', NULL, NULL),
+
+	('UNKNOWN_NUMBER_SUM_011', 'A', '14', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_011', 'B', '13', 'Y', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_011', 'C', '12', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_011', 'D', '15', 'N', NULL, NULL),
+
+	('UNKNOWN_NUMBER_SUM_012', 'A', '12', 'Y', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_012', 'B', '11', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_012', 'C', '13', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_012', 'D', '14', 'N', NULL, NULL),
+
+	('UNKNOWN_NUMBER_SUM_013', 'A', '12', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_013', 'B', '14', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_013', 'C', '13', 'Y', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_013', 'D', '15', 'N', NULL, NULL),
+
+	('UNKNOWN_NUMBER_SUM_014', 'A', '19', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_014', 'B', '18', 'Y', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_014', 'C', '17', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_014', 'D', '20', 'N', NULL, NULL),
+
+	('UNKNOWN_NUMBER_SUM_015', 'A', '14', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_015', 'B', '13', 'Y', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_015', 'C', '12', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_015', 'D', '15', 'N', NULL, NULL),
+
+	('UNKNOWN_NUMBER_SUM_016', 'A', '15', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_016', 'B', '16', 'Y', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_016', 'C', '17', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_016', 'D', '14', 'N', NULL, NULL),
+
+	('UNKNOWN_NUMBER_SUM_017', 'A', '16', 'Y', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_017', 'B', '18', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_017', 'C', '17', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_017', 'D', '19', 'N', NULL, NULL),
+
+	('UNKNOWN_NUMBER_SUM_018', 'A', '14', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_018', 'B', '15', 'Y', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_018', 'C', '16', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_018', 'D', '13', 'N', NULL, NULL),
+
+	('UNKNOWN_NUMBER_SUM_019', 'A', '18', 'Y', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_019', 'B', '17', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_019', 'C', '19', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_019', 'D', '16', 'N', NULL, NULL),
+
+	('UNKNOWN_NUMBER_SUM_020', 'A', '17', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_020', 'B', '18', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_020', 'C', '19', 'Y', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_020', 'D', '20', 'N', NULL, NULL),
+
+	('UNKNOWN_NUMBER_SUM_021', 'A', '24', 'Y', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_021', 'B', '25', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_021', 'C', '23', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_021', 'D', '26', 'N', NULL, NULL),
+
+	('UNKNOWN_NUMBER_SUM_022', 'A', '25', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_022', 'B', '26', 'Y', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_022', 'C', '27', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_022', 'D', '24', 'N', NULL, NULL),
+
+	('UNKNOWN_NUMBER_SUM_023', 'A', '27', 'Y', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_023', 'B', '28', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_023', 'C', '26', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_023', 'D', '29', 'N', NULL, NULL),
+
+	('UNKNOWN_NUMBER_SUM_024', 'A', '42', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_024', 'B', '44', 'Y', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_024', 'C', '43', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_024', 'D', '45', 'N', NULL, NULL),
+
+	('UNKNOWN_NUMBER_SUM_025', 'A', '35', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_025', 'B', '37', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_025', 'C', '36', 'Y', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_025', 'D', '38', 'N', NULL, NULL),
+
+	('UNKNOWN_NUMBER_SUM_026', 'A', '27', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_026', 'B', '26', 'Y', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_026', 'C', '25', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_026', 'D', '28', 'N', NULL, NULL),
+
+	('UNKNOWN_NUMBER_SUM_027', 'A', '29', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_027', 'B', '28', 'Y', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_027', 'C', '27', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_027', 'D', '30', 'N', NULL, NULL),
+
+	('UNKNOWN_NUMBER_SUM_028', 'A', '37', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_028', 'B', '38', 'Y', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_028', 'C', '39', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_028', 'D', '36', 'N', NULL, NULL),
+
+	('UNKNOWN_NUMBER_SUM_029', 'A', '34', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_029', 'B', '35', 'Y', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_029', 'C', '36', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_029', 'D', '33', 'N', NULL, NULL),
+
+	('UNKNOWN_NUMBER_SUM_030', 'A', '36', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_030', 'B', '38', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_030', 'C', '37', 'Y', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_030', 'D', '39', 'N', NULL, NULL),
+
+		('UNKNOWN_NUMBER_SUM_031', 'A', '38', 'Y', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_031', 'B', '48', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_031', 'C', '28', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_031', 'D', '40', 'N', NULL, NULL),
+
+	('UNKNOWN_NUMBER_SUM_032', 'A', '21', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_032', 'B', '31', 'Y', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_032', 'C', '41', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_032', 'D', '29', 'N', NULL, NULL),
+
+	('UNKNOWN_NUMBER_SUM_033', 'A', '23', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_033', 'B', '43', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_033', 'C', '33', 'Y', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_033', 'D', '35', 'N', NULL, NULL),
+
+	('UNKNOWN_NUMBER_SUM_034', 'A', '34', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_034', 'B', '24', 'Y', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_034', 'C', '26', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_034', 'D', '14', 'N', NULL, NULL),
+
+	('UNKNOWN_NUMBER_SUM_035', 'A', '43', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_035', 'B', '33', 'Y', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_035', 'C', '23', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_035', 'D', '35', 'N', NULL, NULL),
+
+	('UNKNOWN_NUMBER_SUM_036', 'A', '23', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_036', 'B', '14', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_036', 'C', '13', 'Y', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_036', 'D', '15', 'N', NULL, NULL),
+
+	('UNKNOWN_NUMBER_SUM_037', 'A', '46', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_037', 'B', '26', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_037', 'C', '34', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_037', 'D', '36', 'Y', NULL, NULL),
+
+	('UNKNOWN_NUMBER_SUM_038', 'A', '29', 'Y', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_038', 'B', '39', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_038', 'C', '19', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_038', 'D', '31', 'N', NULL, NULL),
+
+	('UNKNOWN_NUMBER_SUM_039', 'A', '37', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_039', 'B', '27', 'Y', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_039', 'C', '17', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_039', 'D', '29', 'N', NULL, NULL),
+
+	('UNKNOWN_NUMBER_SUM_040', 'A', '31', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_040', 'B', '21', 'Y', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_040', 'C', '29', 'N', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_040', 'D', '11', 'N', NULL, NULL);
+	
 -- Child: 6.1. Hai bước cộng
 INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, CREATED_AT, UPDATED_AT) VALUES
 	('MULTI_STEP_ADD_ADD_001', 'A', '6', 'Y', NULL, NULL),

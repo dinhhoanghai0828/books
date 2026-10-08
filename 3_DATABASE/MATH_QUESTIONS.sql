@@ -458,6 +458,53 @@ INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICU
 	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_039', 'Nam có 8 chiếc xe đồ chơi. Anh cho Nam thêm 3 chiếc. Sau đó bố cho Nam thêm 5 chiếc nữa. Hỏi sau hai lần được cho thêm, Nam có tất cả bao nhiêu chiếc xe đồ chơi?', 4, 'ACTIVE', NULL, NULL),
 	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_040', 'Trong lớp có 6 hộp bút màu. Cô giáo mang thêm 5 hộp đến lớp. Sau đó phụ huynh tặng thêm 4 hộp nữa. Hỏi sau hai lần được thêm, lớp có tất cả bao nhiêu hộp bút màu?', 4, 'ACTIVE', NULL, NULL);
 
+-- Child: 4.1. Tìm số khi biết tổng
+-- Child: 4.1. Tìm số khi biết tổng
+INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_001', 'Tổng của hai số là 10. Một số là 4. Số còn lại là bao nhiêu?', 1, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_002', 'Tổng của hai số là 12. Một số là 5. Số còn lại là bao nhiêu?', 1, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_003', 'Tổng của hai số là 15. Một số là 7. Số còn lại là bao nhiêu?', 1, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_004', 'Tổng của hai số là 18. Một số là 6. Số còn lại là bao nhiêu?', 1, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_005', 'Tổng của hai số là 20. Một số là 8. Số còn lại là bao nhiêu?', 1, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_006', 'Tổng của hai số là 14. Một số là 9. Số còn lại là bao nhiêu?', 1, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_007', 'Tổng của hai số là 16. Một số là 7. Số còn lại là bao nhiêu?', 1, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_008', 'Tổng của hai số là 19. Một số là 11. Số còn lại là bao nhiêu?', 1, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_009', 'Tổng của hai số là 17. Một số là 5. Số còn lại là bao nhiêu?', 1, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_010', 'Tổng của hai số là 20. Một số là 13. Số còn lại là bao nhiêu?', 1, 'ACTIVE', NULL, NULL),
+
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_011', 'Tổng số quả táo và quả cam là 25 quả. Có 12 quả táo. Hỏi có bao nhiêu quả cam?', 2, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_012', 'Một hộp có tất cả 30 viên bi. Trong đó có 18 viên bi màu đỏ. Hỏi có bao nhiêu viên bi không màu đỏ?', 2, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_013', 'Lan có tất cả 28 chiếc bút. Lan có 15 chiếc bút chì. Hỏi Lan có bao nhiêu chiếc bút màu?', 2, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_014', 'Một cửa hàng có 35 chiếc bánh. Buổi sáng bán 17 chiếc. Số bánh còn lại là bao nhiêu chiếc?', 2, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_015', 'Lớp có 32 học sinh, trong đó có 19 bạn nữ. Hỏi lớp có bao nhiêu bạn nam?', 2, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_016', 'Nam có 27 viên bi gồm bi đỏ và bi xanh. Nam có 11 viên bi đỏ. Hỏi Nam có bao nhiêu viên bi xanh?', 2, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_017', 'Một giỏ có 40 quả bóng. Có 24 quả bóng màu vàng. Hỏi có bao nhiêu quả bóng không màu vàng?', 2, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_018', 'Thư viện có 36 quyển truyện và sách. Có 21 quyển là truyện. Hỏi có bao nhiêu quyển sách?', 2, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_019', 'Mẹ mua 45 quả trứng gồm trứng gà và trứng vịt. Có 28 quả trứng gà. Hỏi có bao nhiêu quả trứng vịt?', 2, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_020', 'Một hộp có 50 chiếc kẹo. Có 32 chiếc kẹo vị dâu. Hỏi có bao nhiêu chiếc kẹo vị khác?', 2, 'ACTIVE', NULL, NULL),
+
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_021', 'Hai ngăn tủ có tất cả 58 quyển sách. Ngăn thứ nhất có 34 quyển. Hỏi ngăn thứ hai có bao nhiêu quyển sách?', 3, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_022', 'Một trang trại có 63 con gà và vịt. Có 37 con gà. Hỏi có bao nhiêu con vịt?', 3, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_023', 'Một cửa hàng có 72 chiếc áo gồm áo trẻ em và áo người lớn. Có 45 chiếc áo trẻ em. Hỏi có bao nhiêu chiếc áo người lớn?', 3, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_024', 'Một trường có 80 quả bóng. Trong đó có 36 quả bóng đá. Số còn lại là bóng rổ. Hỏi có bao nhiêu quả bóng rổ?', 3, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_025', 'Minh có 65 que tính. Minh dùng một số que để làm hình và còn lại 29 que. Hỏi Minh đã dùng bao nhiêu que tính?', 3, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_026', 'Một kho có 74 thùng hàng. Đã chuyển đi 48 thùng. Hỏi trong kho còn lại bao nhiêu thùng?', 3, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_027', 'Một lớp có 67 quyển vở. Có 39 quyển vở mới và số còn lại là vở cũ. Hỏi có bao nhiêu quyển vở cũ?', 3, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_028', 'Một vườn có 85 cây cam và cây xoài. Có 47 cây cam. Hỏi có bao nhiêu cây xoài?', 3, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_029', 'Một cửa hàng có 91 món đồ chơi. Có 56 món đồ chơi đã được bán. Hỏi còn lại bao nhiêu món đồ chơi?', 3, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_030', 'Một thư viện có 100 quyển sách. Có 63 quyển sách ở ngăn trên. Hỏi ngăn dưới có bao nhiêu quyển sách?', 3, 'ACTIVE', NULL, NULL),
+
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_031', 'Một cửa hàng có 96 chiếc bút gồm bút mực và bút chì. Có 58 chiếc bút mực. Hỏi có bao nhiêu chiếc bút chì?', 4, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_032', 'Một trường có 98 học sinh lớp Một và lớp Hai. Có 67 học sinh lớp Một. Hỏi có bao nhiêu học sinh lớp Hai?', 4, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_033', 'Một trang trại có 95 con vật gồm gà, vịt và ngan. Trong đó có 62 con gà. Hỏi có bao nhiêu con vịt và ngan?', 4, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_034', 'Một kho có 100 thùng hàng. Buổi sáng chuyển đi 76 thùng. Hỏi kho còn lại bao nhiêu thùng hàng?', 4, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_035', 'Một cửa hàng có 88 chiếc bánh. Có 55 chiếc bánh ngọt và số còn lại là bánh mặn. Hỏi có bao nhiêu chiếc bánh mặn?', 4, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_036', 'Một thư viện có 99 quyển truyện và sách giáo khoa. Có 86 quyển truyện. Hỏi có bao nhiêu quyển sách giáo khoa?', 4, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_037', 'Một trang trại thu hoạch 100 quả gồm cam và xoài. Có 64 quả cam. Hỏi có bao nhiêu quả xoài?', 4, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_038', 'Một cửa hàng có 97 chiếc áo. Đã bán 68 chiếc. Hỏi cửa hàng còn lại bao nhiêu chiếc áo?', 4, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_039', 'Một trường có 100 quyển vở để phát cho học sinh. Đã phát 73 quyển. Hỏi còn lại bao nhiêu quyển vở?', 4, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_040', 'Một kho có 100 hộp sữa. Đã chuyển 79 hộp đến trường học. Hỏi kho còn lại bao nhiêu hộp sữa?', 4, 'ACTIVE', NULL, NULL);
+	
 -- Child: 6.2. Hai bước trừ
 INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
 	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_001', 'Mai có 12 quả táo. Mai cho bạn 3 quả rồi ăn 2 quả. Hỏi Mai còn lại bao nhiêu quả táo?', 1, 'ACTIVE', NULL, NULL),

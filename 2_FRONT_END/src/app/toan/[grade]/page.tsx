@@ -365,6 +365,21 @@ const MathGradePage = () => {
                       </Button>
                     </div>
                   )}
+
+                  {isChecked && (
+                    <div style={{ marginTop: '24px', textAlign: 'center' }}>
+                      <Button
+                        size="large"
+                        onClick={() => {
+                          setIsChecked(false);
+                          setUserAnswers({});
+                          setOpenResultModal(false);
+                        }}
+                      >
+                        Làm lại
+                      </Button>
+                    </div>
+                  )}
                 </>
               )}
             </div>
