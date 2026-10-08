@@ -74910,96 +74910,49 @@ INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICU
 -- Child: 2.7. Tìm số còn thiếu
 INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
 	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_001', '1, 2, ?, 4, 5, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
-	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_002', '5, 6, 7, ?, 9, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
-	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_003', '2, 3, ?, 5, 6, số nào thích hợp điền vào dấu ?', 3, 'ACTIVE', NULL, NULL),
-	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_004', '7, ?, 9, 10, 11, số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
-	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_005', '10, 11, 12, ?, 14, số nào thích hợp điền vào dấu ?', 5, 'ACTIVE', NULL, NULL),
-	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_006', '15, ?, 17, 18, 19, số nào thích hợp điền vào dấu ?', 6, 'ACTIVE', NULL, NULL),
-	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_007', '20, 21, ?, 23, 24, số nào thích hợp điền vào dấu ?', 7, 'ACTIVE', NULL, NULL),
-	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_008', '25, 26, 27, ?, 29, số nào thích hợp điền vào dấu ?', 8, 'ACTIVE', NULL, NULL),
-	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_009', '30, ?, 32, 33, 34, số nào thích hợp điền vào dấu ?', 9, 'ACTIVE', NULL, NULL),
-	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_010', '35, 36, ?, 38, 39, số nào thích hợp điền vào dấu ?', 10, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_002', '5, 6, 7, ?, 9, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_003', '2, 3, ?, 5, 6, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_004', '7, ?, 9, 10, 11, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_005', '10, 11, 12, ?, 14, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_006', '15, ?, 17, 18, 19, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_007', '20, 21, ?, 23, 24, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_008', '25, 26, 27, ?, 29, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_009', '30, ?, 32, 33, 34, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_010', '35, 36, ?, 38, 39, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
 
-	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_011', '2, 4, ?, 8, 10, số nào thích hợp điền vào dấu ?', 11, 'ACTIVE', NULL, NULL),
-	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_012', '3, 5, 7, ?, 11, số nào thích hợp điền vào dấu ?', 12, 'ACTIVE', NULL, NULL),
-	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_013', '10, 12, ?, 16, 18, số nào thích hợp điền vào dấu ?', 13, 'ACTIVE', NULL, NULL),
-	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_014', '1, 3, 5, ?, 9, số nào thích hợp điền vào dấu ?', 14, 'ACTIVE', NULL, NULL),
-	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_015', '4, 6, ?, 10, 12, số nào thích hợp điền vào dấu ?', 15, 'ACTIVE', NULL, NULL),
-	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_016', '5, 8, ?, 14, 17, số nào thích hợp điền vào dấu ?', 16, 'ACTIVE', NULL, NULL),
-	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_017', '10, 13, 16, ?, 22, số nào thích hợp điền vào dấu ?', 17, 'ACTIVE', NULL, NULL),
-	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_018', '20, 24, ?, 32, 36, số nào thích hợp điền vào dấu ?', 18, 'ACTIVE', NULL, NULL),
-	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_019', '2, 5, 8, ?, 14, số nào thích hợp điền vào dấu ?', 19, 'ACTIVE', NULL, NULL),
-	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_020', '6, 10, ?, 18, 22, số nào thích hợp điền vào dấu ?', 20, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_011', '2, 4, ?, 8, 10, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_012', '3, 5, 7, ?, 11, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_013', '10, 12, ?, 16, 18, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_014', '1, 3, 5, ?, 9, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_015', '4, 6, ?, 10, 12, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_016', '5, 8, ?, 14, 17, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_017', '10, 13, 16, ?, 22, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_018', '20, 24, ?, 32, 36, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_019', '2, 5, 8, ?, 14, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_020', '6, 10, ?, 18, 22, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
 
-	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_021', '1, ?, 3, ?, 5, số nào thích hợp điền vào hai dấu ?', 21, 'ACTIVE', NULL, NULL),
-	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_022', '2, ?, 4, ?, 6, số nào thích hợp điền vào hai dấu ?', 22, 'ACTIVE', NULL, NULL),
-	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_023', '5, ?, 7, ?, 9, số nào thích hợp điền vào hai dấu ?', 23, 'ACTIVE', NULL, NULL),
-	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_024', '10, ?, 12, ?, 14, số nào thích hợp điền vào hai dấu ?', 24, 'ACTIVE', NULL, NULL),
-	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_025', '15, ?, 17, ?, 19, số nào thích hợp điền vào hai dấu ?', 25, 'ACTIVE', NULL, NULL),
-	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_026', '20, ?, 22, ?, 24, số nào thích hợp điền vào hai dấu ?', 26, 'ACTIVE', NULL, NULL),
-	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_027', '2, ?, 6, ?, 10, số nào thích hợp điền vào hai dấu ?', 27, 'ACTIVE', NULL, NULL),
-	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_028', '4, ?, 8, ?, 12, số nào thích hợp điền vào hai dấu ?', 28, 'ACTIVE', NULL, NULL),
-	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_029', '6, ?, 10, ?, 14, số nào thích hợp điền vào hai dấu ?', 29, 'ACTIVE', NULL, NULL),
-	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_030', '8, ?, 12, ?, 16, số nào thích hợp điền vào hai dấu ?', 30, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_021', '1, ?, 3, ?, 5, số nào thích hợp điền vào hai dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_022', '2, ?, 4, ?, 6, số nào thích hợp điền vào hai dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_023', '5, ?, 7, ?, 9, số nào thích hợp điền vào hai dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_024', '10, ?, 12, ?, 14, số nào thích hợp điền vào hai dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_025', '15, ?, 17, ?, 19, số nào thích hợp điền vào hai dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_026', '20, ?, 22, ?, 24, số nào thích hợp điền vào hai dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_027', '2, ?, 6, ?, 10, số nào thích hợp điền vào hai dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_028', '4, ?, 8, ?, 12, số nào thích hợp điền vào hai dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_029', '6, ?, 10, ?, 14, số nào thích hợp điền vào hai dấu ?', 3, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_030', '8, ?, 12, ?, 16, số nào thích hợp điền vào hai dấu ?', 3, 'ACTIVE', NULL, NULL),
 
-	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_031', '30, 27, ?, 21, 18, số nào thích hợp điền vào dấu ?', 31, 'ACTIVE', NULL, NULL),
-	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_032', '25, 23, ?, 19, 17, số nào thích hợp điền vào dấu ?', 32, 'ACTIVE', NULL, NULL),
-	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_033', '40, 36, ?, 28, 24, số nào thích hợp điền vào dấu ?', 33, 'ACTIVE', NULL, NULL),
-	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_034', '35, 30, ?, 20, 15, số nào thích hợp điền vào dấu ?', 34, 'ACTIVE', NULL, NULL),
-	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_035', '20, ?, 16, ?, 12, số nào thích hợp điền vào hai dấu ?', 35, 'ACTIVE', NULL, NULL),
-	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_036', '30, ?, 24, ?, 18, số nào thích hợp điền vào hai dấu ?', 36, 'ACTIVE', NULL, NULL),
-	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_037', '3, 7, 11, ?, 19, số nào thích hợp điền vào dấu ?', 37, 'ACTIVE', NULL, NULL),
-	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_038', '50, 45, ?, 35, 30, số nào thích hợp điền vào dấu ?', 38, 'ACTIVE', NULL, NULL),
-	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_039', '5, ?, 11, ?, 17, số nào thích hợp điền vào hai dấu ?', 39, 'ACTIVE', NULL, NULL),
-	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_040', '40, ?, 32, ?, 24, số nào thích hợp điền vào hai dấu ?', 40, 'ACTIVE', NULL, NULL);
-
--- Child: 6.1. Hai bước cộng
-INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_001', 'Nam có 2 quả táo. Mẹ cho Nam thêm 3 quả táo, sau đó bố cho thêm 1 quả nữa. Hỏi Nam có tất cả bao nhiêu quả táo?', 1, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_002', 'Lan có 4 bông hoa. Cô cho Lan thêm 2 bông, sau đó bạn Mai cho thêm 1 bông nữa. Hỏi Lan có tất cả bao nhiêu bông hoa?', 1, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_003', 'Bình có 3 viên bi. Bố cho Bình thêm 2 viên, rồi anh cho thêm 2 viên nữa. Hỏi Bình có tất cả bao nhiêu viên bi?', 1, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_004', 'Trong bể có 5 con cá. Mẹ thả thêm 1 con cá, sau đó thả thêm 2 con nữa. Hỏi trong bể có tất cả bao nhiêu con cá?', 1, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_005', 'Mai có 3 chiếc bút. Cô giáo cho Mai thêm 2 chiếc, rồi mẹ cho thêm 3 chiếc nữa. Hỏi Mai có tất cả bao nhiêu chiếc bút?', 1, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_006', 'Trong giỏ có 2 quả cam. Mẹ đặt thêm 4 quả cam vào giỏ, sau đó đặt thêm 1 quả nữa. Hỏi trong giỏ có tất cả bao nhiêu quả cam?', 1, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_007', 'An có 5 chiếc kẹo. Bà cho An thêm 2 chiếc, rồi mẹ cho thêm 1 chiếc nữa. Hỏi An có tất cả bao nhiêu chiếc kẹo?', 1, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_008', 'Trên cành có 3 con chim. Có thêm 3 con bay đến, sau đó thêm 1 con nữa. Hỏi trên cành có tất cả bao nhiêu con chim?', 1, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_009', 'Hoa có 4 quyển truyện. Chị cho Hoa thêm 2 quyển, rồi bố cho thêm 2 quyển nữa. Hỏi Hoa có tất cả bao nhiêu quyển truyện?', 1, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_010', 'Trong hộp có 1 chiếc xe đồ chơi. Nam đặt thêm 3 chiếc vào hộp, sau đó đặt thêm 2 chiếc nữa. Hỏi trong hộp có tất cả bao nhiêu chiếc xe đồ chơi?', 1, 'ACTIVE', NULL, NULL),
-
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_011', 'Trên bàn có 5 quyển vở. Buổi sáng cô đặt thêm 3 quyển, đến chiều cô đặt thêm 2 quyển nữa. Hỏi trên bàn có tất cả bao nhiêu quyển vở?', 2, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_012', 'Một giỏ có 4 quả táo. Mẹ đặt thêm 3 quả vào giỏ, sau đó bố đặt thêm 2 quả nữa. Hỏi trong giỏ có tất cả bao nhiêu quả táo?', 2, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_013', 'Minh có 6 chiếc tem. Bạn cho Minh thêm 2 chiếc tem, sau đó cô giáo cho thêm 3 chiếc nữa. Hỏi Minh có tất cả bao nhiêu chiếc tem?', 2, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_014', 'Trong sân có 5 quả bóng. Nam mang thêm 4 quả ra sân, sau đó Minh mang thêm 2 quả nữa. Hỏi trong sân có tất cả bao nhiêu quả bóng?', 2, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_015', 'Một lớp có 7 bạn đang chơi. Có thêm 2 bạn tham gia, sau đó thêm 3 bạn nữa. Hỏi lúc này có tất cả bao nhiêu bạn đang chơi?', 2, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_016', 'Trong tủ có 3 chiếc cốc. Mẹ đặt thêm 4 chiếc vào tủ, rồi bố đặt thêm 2 chiếc nữa. Hỏi trong tủ có tất cả bao nhiêu chiếc cốc?', 2, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_017', 'Có 6 con vịt dưới ao. Có thêm 3 con bơi đến, sau đó thêm 2 con nữa. Hỏi dưới ao có tất cả bao nhiêu con vịt?', 2, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_018', 'Một hộp có 5 viên phấn. Cô giáo cho thêm 4 viên, sau đó cho thêm 3 viên nữa. Hỏi trong hộp có tất cả bao nhiêu viên phấn?', 2, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_019', 'Nam có 4 chiếc ô tô đồ chơi. Sinh nhật Nam được tặng thêm 3 chiếc, sau đó bố mua thêm 4 chiếc nữa. Hỏi Nam có tất cả bao nhiêu chiếc ô tô đồ chơi?', 2, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_020', 'Trên giá có 6 quyển sách. Mẹ đặt thêm 4 quyển sách, sau đó bố đặt thêm 3 quyển nữa. Hỏi trên giá có tất cả bao nhiêu quyển sách?', 2, 'ACTIVE', NULL, NULL),
-
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_021', 'Một cửa hàng có 6 chiếc bánh. Buổi sáng cửa hàng nhập thêm 4 chiếc bánh. Đến chiều, cửa hàng nhập thêm 3 chiếc nữa. Hỏi sau hai lần nhập, cửa hàng có tất cả bao nhiêu chiếc bánh?', 3, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_022', 'Trong vườn có 7 bông hoa. Người làm vườn trồng thêm 3 bông vào buổi sáng, sau đó trồng thêm 4 bông vào buổi chiều. Hỏi trong vườn có tất cả bao nhiêu bông hoa?', 3, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_023', 'Một hộp có 8 chiếc bút màu. Cô giáo cho thêm 3 chiếc vào hộp, sau đó bạn Lan cho thêm 2 chiếc nữa. Hỏi trong hộp có tất cả bao nhiêu chiếc bút màu?', 3, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_024', 'Có 5 con chim trên cành. Lúc đầu có thêm 4 con bay đến, sau đó thêm 5 con nữa bay đến. Hỏi trên cành lúc này có tất cả bao nhiêu con chim?', 3, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_025', 'Một thư viện có 7 quyển truyện thiếu nhi. Buổi sáng thư viện nhận thêm 3 quyển, đến chiều nhận thêm 5 quyển nữa. Hỏi thư viện có tất cả bao nhiêu quyển truyện thiếu nhi?', 3, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_026', 'Trong bể có 6 con cá vàng. Bố thả thêm 5 con cá, sau đó mẹ thả thêm 3 con nữa. Hỏi trong bể có tất cả bao nhiêu con cá vàng?', 3, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_027', 'Một lớp có 8 chiếc hộp bút màu. Cô giáo mang thêm 2 chiếc hộp đến lớp, sau đó phụ huynh tặng thêm 4 chiếc nữa. Hỏi lớp có tất cả bao nhiêu chiếc hộp bút màu?', 3, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_028', 'Nam có 7 viên bi trong túi. Anh cho Nam thêm 4 viên, sau đó bố cho thêm 3 viên nữa. Hỏi trong túi Nam có tất cả bao nhiêu viên bi?', 3, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_029', 'Một cửa hàng có 5 chiếc xe đạp. Buổi sáng cửa hàng nhận thêm 5 chiếc, đến chiều nhận thêm 4 chiếc nữa. Hỏi cửa hàng có tất cả bao nhiêu chiếc xe đạp?', 3, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_030', 'Trên sân trường có 9 bạn đang chơi. Có thêm 2 bạn đến chơi, sau đó thêm 4 bạn nữa. Hỏi trên sân trường lúc này có tất cả bao nhiêu bạn?', 3, 'ACTIVE', NULL, NULL),
-
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_031', 'Trong giỏ có 7 quả cam. Buổi sáng mẹ đặt thêm 3 quả cam vào giỏ. Sau đó, bố đặt thêm 5 quả nữa. Hỏi sau cả hai lần thêm, trong giỏ có tất cả bao nhiêu quả cam?', 4, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_032', 'Một cửa hàng có 8 chiếc bánh. Cửa hàng nhập thêm 4 chiếc vào buổi sáng. Đến chiều, cửa hàng lại nhập thêm 3 chiếc nữa. Hỏi sau hai lần nhập hàng, cửa hàng có tất cả bao nhiêu chiếc bánh?', 4, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_033', 'Trên sân có 6 quả bóng. Nam mang thêm 5 quả bóng ra sân để chơi. Một lúc sau, Minh mang thêm 4 quả nữa. Hỏi sau hai lần mang bóng ra sân, trên sân có tất cả bao nhiêu quả bóng?', 4, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_034', 'Một giá sách có 7 quyển truyện. Mẹ đặt thêm 5 quyển vào giá. Sau đó bố đặt thêm 4 quyển nữa. Hỏi sau hai lần đặt thêm, giá sách có tất cả bao nhiêu quyển truyện?', 4, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_035', 'Trong vườn có 8 con bướm. Có 3 con bay đến vào buổi sáng. Một lúc sau, có thêm 5 con nữa bay đến. Hỏi trong vườn lúc này có tất cả bao nhiêu con bướm?', 4, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_036', 'Một hộp có 6 chiếc bút. Cô giáo cho thêm 5 chiếc bút vào hộp. Sau đó cô cho thêm 4 chiếc nữa. Hỏi sau hai lần thêm bút, trong hộp có tất cả bao nhiêu chiếc bút?', 4, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_037', 'Có 9 con chim trên cành. Buổi sáng có thêm 2 con bay đến. Sau đó có thêm 5 con nữa bay đến. Hỏi sau hai lần chim bay đến, trên cành có tất cả bao nhiêu con chim?', 4, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_038', 'Một giỏ có 7 quả táo. Mẹ đặt thêm 4 quả vào giỏ. Sau đó bố đặt thêm 5 quả nữa. Hỏi sau hai lần đặt thêm, trong giỏ có tất cả bao nhiêu quả táo?', 4, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_039', 'Nam có 8 chiếc xe đồ chơi. Anh cho Nam thêm 3 chiếc. Sau đó bố cho Nam thêm 5 chiếc nữa. Hỏi sau hai lần được cho thêm, Nam có tất cả bao nhiêu chiếc xe đồ chơi?', 4, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_040', 'Trong lớp có 6 hộp bút màu. Cô giáo mang thêm 5 hộp đến lớp. Sau đó phụ huynh tặng thêm 4 hộp nữa. Hỏi sau hai lần được thêm, lớp có tất cả bao nhiêu hộp bút màu?', 4, 'ACTIVE', NULL, NULL);
-
--- Child: 4.1. Tìm số khi biết tổng
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_031', '30, 27, ?, 21, 18, số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_032', '25, 23, ?, 19, 17, số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_033', '40, 36, ?, 28, 24, số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_034', '35, 30, ?, 20, 15, số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_035', '20, ?, 16, ?, 12, số nào thích hợp điền vào hai dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_036', '30, ?, 24, ?, 18, số nào thích hợp điền vào hai dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_037', '3, 7, 11, ?, 19, số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_038', '50, 45, ?, 35, 30, số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_039', '5, ?, 11, ?, 17, số nào thích hợp điền vào hai dấu ?', 4, 'ACTIVE', NULL, NULL),
+	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_040', '40, ?, 32, ?, 24, số nào thích hợp điền vào hai dấu ?', 4, 'ACTIVE', NULL, NULL);
+	
 -- Child: 4.1. Tìm số khi biết tổng
 INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
 	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_001', 'Tổng của hai số là 10. Một số là 4. Số còn lại là bao nhiêu?', 1, 'ACTIVE', NULL, NULL),
@@ -75046,6 +74999,52 @@ INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICU
 	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_039', 'Một trường có 100 quyển vở để phát cho học sinh. Đã phát 73 quyển. Hỏi còn lại bao nhiêu quyển vở?', 4, 'ACTIVE', NULL, NULL),
 	('UNKNOWN_NUMBER_SUM', 'UNKNOWN_NUMBER_SUM_040', 'Một kho có 100 hộp sữa. Đã chuyển 79 hộp đến trường học. Hỏi kho còn lại bao nhiêu hộp sữa?', 4, 'ACTIVE', NULL, NULL);
 	
+-- Child: 6.1. Hai bước cộng
+INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_001', 'Nam có 2 quả táo. Mẹ cho Nam thêm 3 quả táo, sau đó bố cho thêm 1 quả nữa. Hỏi Nam có tất cả bao nhiêu quả táo?', 1, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_002', 'Lan có 4 bông hoa. Cô cho Lan thêm 2 bông, sau đó bạn Mai cho thêm 1 bông nữa. Hỏi Lan có tất cả bao nhiêu bông hoa?', 1, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_003', 'Bình có 3 viên bi. Bố cho Bình thêm 2 viên, rồi anh cho thêm 2 viên nữa. Hỏi Bình có tất cả bao nhiêu viên bi?', 1, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_004', 'Trong bể có 5 con cá. Mẹ thả thêm 1 con cá, sau đó thả thêm 2 con nữa. Hỏi trong bể có tất cả bao nhiêu con cá?', 1, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_005', 'Mai có 3 chiếc bút. Cô giáo cho Mai thêm 2 chiếc, rồi mẹ cho thêm 3 chiếc nữa. Hỏi Mai có tất cả bao nhiêu chiếc bút?', 1, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_006', 'Trong giỏ có 2 quả cam. Mẹ đặt thêm 4 quả cam vào giỏ, sau đó đặt thêm 1 quả nữa. Hỏi trong giỏ có tất cả bao nhiêu quả cam?', 1, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_007', 'An có 5 chiếc kẹo. Bà cho An thêm 2 chiếc, rồi mẹ cho thêm 1 chiếc nữa. Hỏi An có tất cả bao nhiêu chiếc kẹo?', 1, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_008', 'Trên cành có 3 con chim. Có thêm 3 con bay đến, sau đó thêm 1 con nữa. Hỏi trên cành có tất cả bao nhiêu con chim?', 1, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_009', 'Hoa có 4 quyển truyện. Chị cho Hoa thêm 2 quyển, rồi bố cho thêm 2 quyển nữa. Hỏi Hoa có tất cả bao nhiêu quyển truyện?', 1, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_010', 'Trong hộp có 1 chiếc xe đồ chơi. Nam đặt thêm 3 chiếc vào hộp, sau đó đặt thêm 2 chiếc nữa. Hỏi trong hộp có tất cả bao nhiêu chiếc xe đồ chơi?', 1, 'ACTIVE', NULL, NULL),
+
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_011', 'Trên bàn có 5 quyển vở. Buổi sáng cô đặt thêm 3 quyển, đến chiều cô đặt thêm 2 quyển nữa. Hỏi trên bàn có tất cả bao nhiêu quyển vở?', 2, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_012', 'Một giỏ có 4 quả táo. Mẹ đặt thêm 3 quả vào giỏ, sau đó bố đặt thêm 2 quả nữa. Hỏi trong giỏ có tất cả bao nhiêu quả táo?', 2, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_013', 'Minh có 6 chiếc tem. Bạn cho Minh thêm 2 chiếc tem, sau đó cô giáo cho thêm 3 chiếc nữa. Hỏi Minh có tất cả bao nhiêu chiếc tem?', 2, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_014', 'Trong sân có 5 quả bóng. Nam mang thêm 4 quả ra sân, sau đó Minh mang thêm 2 quả nữa. Hỏi trong sân có tất cả bao nhiêu quả bóng?', 2, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_015', 'Một lớp có 7 bạn đang chơi. Có thêm 2 bạn tham gia, sau đó thêm 3 bạn nữa. Hỏi lúc này có tất cả bao nhiêu bạn đang chơi?', 2, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_016', 'Trong tủ có 3 chiếc cốc. Mẹ đặt thêm 4 chiếc vào tủ, rồi bố đặt thêm 2 chiếc nữa. Hỏi trong tủ có tất cả bao nhiêu chiếc cốc?', 2, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_017', 'Có 6 con vịt dưới ao. Có thêm 3 con bơi đến, sau đó thêm 2 con nữa. Hỏi dưới ao có tất cả bao nhiêu con vịt?', 2, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_018', 'Một hộp có 5 viên phấn. Cô giáo cho thêm 4 viên, sau đó cho thêm 3 viên nữa. Hỏi trong hộp có tất cả bao nhiêu viên phấn?', 2, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_019', 'Nam có 4 chiếc ô tô đồ chơi. Sinh nhật Nam được tặng thêm 3 chiếc, sau đó bố mua thêm 4 chiếc nữa. Hỏi Nam có tất cả bao nhiêu chiếc ô tô đồ chơi?', 2, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_020', 'Trên giá có 6 quyển sách. Mẹ đặt thêm 4 quyển sách, sau đó bố đặt thêm 3 quyển nữa. Hỏi trên giá có tất cả bao nhiêu quyển sách?', 2, 'ACTIVE', NULL, NULL),
+
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_021', 'Một cửa hàng có 6 chiếc bánh. Buổi sáng cửa hàng nhập thêm 4 chiếc bánh. Đến chiều, cửa hàng nhập thêm 3 chiếc nữa. Hỏi sau hai lần nhập, cửa hàng có tất cả bao nhiêu chiếc bánh?', 3, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_022', 'Trong vườn có 7 bông hoa. Người làm vườn trồng thêm 3 bông vào buổi sáng, sau đó trồng thêm 4 bông vào buổi chiều. Hỏi trong vườn có tất cả bao nhiêu bông hoa?', 3, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_023', 'Một hộp có 8 chiếc bút màu. Cô giáo cho thêm 3 chiếc vào hộp, sau đó bạn Lan cho thêm 2 chiếc nữa. Hỏi trong hộp có tất cả bao nhiêu chiếc bút màu?', 3, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_024', 'Có 5 con chim trên cành. Lúc đầu có thêm 4 con bay đến, sau đó thêm 5 con nữa bay đến. Hỏi trên cành lúc này có tất cả bao nhiêu con chim?', 3, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_025', 'Một thư viện có 7 quyển truyện thiếu nhi. Buổi sáng thư viện nhận thêm 3 quyển, đến chiều nhận thêm 5 quyển nữa. Hỏi thư viện có tất cả bao nhiêu quyển truyện thiếu nhi?', 3, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_026', 'Trong bể có 6 con cá vàng. Bố thả thêm 5 con cá, sau đó mẹ thả thêm 3 con nữa. Hỏi trong bể có tất cả bao nhiêu con cá vàng?', 3, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_027', 'Một lớp có 8 chiếc hộp bút màu. Cô giáo mang thêm 2 chiếc hộp đến lớp, sau đó phụ huynh tặng thêm 4 chiếc nữa. Hỏi lớp có tất cả bao nhiêu chiếc hộp bút màu?', 3, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_028', 'Nam có 7 viên bi trong túi. Anh cho Nam thêm 4 viên, sau đó bố cho thêm 3 viên nữa. Hỏi trong túi Nam có tất cả bao nhiêu viên bi?', 3, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_029', 'Một cửa hàng có 5 chiếc xe đạp. Buổi sáng cửa hàng nhận thêm 5 chiếc, đến chiều nhận thêm 4 chiếc nữa. Hỏi cửa hàng có tất cả bao nhiêu chiếc xe đạp?', 3, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_030', 'Trên sân trường có 9 bạn đang chơi. Có thêm 2 bạn đến chơi, sau đó thêm 4 bạn nữa. Hỏi trên sân trường lúc này có tất cả bao nhiêu bạn?', 3, 'ACTIVE', NULL, NULL),
+
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_031', 'Trong giỏ có 7 quả cam. Buổi sáng mẹ đặt thêm 3 quả cam vào giỏ. Sau đó, bố đặt thêm 5 quả nữa. Hỏi sau cả hai lần thêm, trong giỏ có tất cả bao nhiêu quả cam?', 4, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_032', 'Một cửa hàng có 8 chiếc bánh. Cửa hàng nhập thêm 4 chiếc vào buổi sáng. Đến chiều, cửa hàng lại nhập thêm 3 chiếc nữa. Hỏi sau hai lần nhập hàng, cửa hàng có tất cả bao nhiêu chiếc bánh?', 4, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_033', 'Trên sân có 6 quả bóng. Nam mang thêm 5 quả bóng ra sân để chơi. Một lúc sau, Minh mang thêm 4 quả nữa. Hỏi sau hai lần mang bóng ra sân, trên sân có tất cả bao nhiêu quả bóng?', 4, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_034', 'Một giá sách có 7 quyển truyện. Mẹ đặt thêm 5 quyển vào giá. Sau đó bố đặt thêm 4 quyển nữa. Hỏi sau hai lần đặt thêm, giá sách có tất cả bao nhiêu quyển truyện?', 4, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_035', 'Trong vườn có 8 con bướm. Có 3 con bay đến vào buổi sáng. Một lúc sau, có thêm 5 con nữa bay đến. Hỏi trong vườn lúc này có tất cả bao nhiêu con bướm?', 4, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_036', 'Một hộp có 6 chiếc bút. Cô giáo cho thêm 5 chiếc bút vào hộp. Sau đó cô cho thêm 4 chiếc nữa. Hỏi sau hai lần thêm bút, trong hộp có tất cả bao nhiêu chiếc bút?', 4, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_037', 'Có 9 con chim trên cành. Buổi sáng có thêm 2 con bay đến. Sau đó có thêm 5 con nữa bay đến. Hỏi sau hai lần chim bay đến, trên cành có tất cả bao nhiêu con chim?', 4, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_038', 'Một giỏ có 7 quả táo. Mẹ đặt thêm 4 quả vào giỏ. Sau đó bố đặt thêm 5 quả nữa. Hỏi sau hai lần đặt thêm, trong giỏ có tất cả bao nhiêu quả táo?', 4, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_039', 'Nam có 8 chiếc xe đồ chơi. Anh cho Nam thêm 3 chiếc. Sau đó bố cho Nam thêm 5 chiếc nữa. Hỏi sau hai lần được cho thêm, Nam có tất cả bao nhiêu chiếc xe đồ chơi?', 4, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_040', 'Trong lớp có 6 hộp bút màu. Cô giáo mang thêm 5 hộp đến lớp. Sau đó phụ huynh tặng thêm 4 hộp nữa. Hỏi sau hai lần được thêm, lớp có tất cả bao nhiêu hộp bút màu?', 4, 'ACTIVE', NULL, NULL);
+
 -- Child: 6.2. Hai bước trừ
 INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
 	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_001', 'Mai có 12 quả táo. Mai cho bạn 3 quả rồi ăn 2 quả. Hỏi Mai còn lại bao nhiêu quả táo?', 1, 'ACTIVE', NULL, NULL),
@@ -76519,8 +76518,8 @@ INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, C
 	('NUMBER_PATTERN_MISSING_002', 'C', '10', 'N', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_002', 'D', '6', 'N', NULL, NULL),
 
-	('NUMBER_PATTERN_MISSING_003', 'A', '4', 'N', NULL, NULL),
-	('NUMBER_PATTERN_MISSING_003', 'B', '5', 'Y', NULL, NULL),
+	('NUMBER_PATTERN_MISSING_003', 'A', '4', 'Y', NULL, NULL),
+	('NUMBER_PATTERN_MISSING_003', 'B', '5', 'N', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_003', 'C', '6', 'N', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_003', 'D', '7', 'N', NULL, NULL),
 
@@ -76534,17 +76533,17 @@ INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, C
 	('NUMBER_PATTERN_MISSING_005', 'C', '15', 'N', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_005', 'D', '11', 'N', NULL, NULL),
 
-	('NUMBER_PATTERN_MISSING_006', 'A', '16', 'N', NULL, NULL),
+	('NUMBER_PATTERN_MISSING_006', 'A', '16', 'Y', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_006', 'B', '18', 'N', NULL, NULL),
-	('NUMBER_PATTERN_MISSING_006', 'C', '17', 'Y', NULL, NULL),
+	('NUMBER_PATTERN_MISSING_006', 'C', '17', 'N', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_006', 'D', '20', 'N', NULL, NULL),
 
-	('NUMBER_PATTERN_MISSING_007', 'A', '22', 'Y', NULL, NULL),
+	('NUMBER_PATTERN_MISSING_007', 'A', '23', 'N', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_007', 'B', '21', 'N', NULL, NULL),
-	('NUMBER_PATTERN_MISSING_007', 'C', '24', 'N', NULL, NULL),
-	('NUMBER_PATTERN_MISSING_007', 'D', '25', 'N', NULL, NULL),
+	('NUMBER_PATTERN_MISSING_007', 'C', '22', 'Y', NULL, NULL),
+	('NUMBER_PATTERN_MISSING_007', 'D', '24', 'N', NULL, NULL),
 
-	('NUMBER_PATTERN_MISSING_008', 'A', '28', 'N', NULL, NULL),
+	('NUMBER_PATTERN_MISSING_008', 'A', '29', 'N', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_008', 'B', '27', 'N', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_008', 'C', '30', 'N', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_008', 'D', '28', 'Y', NULL, NULL),
@@ -76554,28 +76553,28 @@ INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, C
 	('NUMBER_PATTERN_MISSING_009', 'C', '30', 'N', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_009', 'D', '35', 'N', NULL, NULL),
 
-	('NUMBER_PATTERN_MISSING_010', 'A', '37', 'N', NULL, NULL),
-	('NUMBER_PATTERN_MISSING_010', 'B', '38', 'Y', NULL, NULL),
+	('NUMBER_PATTERN_MISSING_010', 'A', '39', 'N', NULL, NULL),
+	('NUMBER_PATTERN_MISSING_010', 'B', '38', 'N', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_010', 'C', '40', 'N', NULL, NULL),
-	('NUMBER_PATTERN_MISSING_010', 'D', '36', 'N', NULL, NULL),
+	('NUMBER_PATTERN_MISSING_010', 'D', '37', 'Y', NULL, NULL),
 
 	('NUMBER_PATTERN_MISSING_011', 'A', '5', 'N', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_011', 'B', '6', 'Y', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_011', 'C', '7', 'N', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_011', 'D', '9', 'N', NULL, NULL),
 
-	('NUMBER_PATTERN_MISSING_012', 'A', '9', 'N', NULL, NULL),
-	('NUMBER_PATTERN_MISSING_012', 'B', '8', 'N', NULL, NULL),
+	('NUMBER_PATTERN_MISSING_012', 'A', '8', 'N', NULL, NULL),
+	('NUMBER_PATTERN_MISSING_012', 'B', '10', 'N', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_012', 'C', '9', 'Y', NULL, NULL),
-	('NUMBER_PATTERN_MISSING_012', 'D', '10', 'N', NULL, NULL),
+	('NUMBER_PATTERN_MISSING_012', 'D', '12', 'N', NULL, NULL),
 
-	('NUMBER_PATTERN_MISSING_013', 'A', '14', 'N', NULL, NULL),
-	('NUMBER_PATTERN_MISSING_013', 'B', '15', 'Y', NULL, NULL),
+	('NUMBER_PATTERN_MISSING_013', 'A', '15', 'N', NULL, NULL),
+	('NUMBER_PATTERN_MISSING_013', 'B', '14', 'Y', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_013', 'C', '13', 'N', NULL, NULL),
-	('NUMBER_PATTERN_MISSING_013', 'D', '17', 'N', NULL, NULL),
+	('NUMBER_PATTERN_MISSING_013', 'D', '16', 'N', NULL, NULL),
 
-	('NUMBER_PATTERN_MISSING_014', 'A', '6', 'Y', NULL, NULL),
-	('NUMBER_PATTERN_MISSING_014', 'B', '7', 'N', NULL, NULL),
+	('NUMBER_PATTERN_MISSING_014', 'A', '6', 'N', NULL, NULL),
+	('NUMBER_PATTERN_MISSING_014', 'B', '7', 'Y', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_014', 'C', '8', 'N', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_014', 'D', '4', 'N', NULL, NULL),
 
@@ -76590,7 +76589,7 @@ INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, C
 	('NUMBER_PATTERN_MISSING_016', 'D', '13', 'N', NULL, NULL),
 
 	('NUMBER_PATTERN_MISSING_017', 'A', '18', 'N', NULL, NULL),
-	('NUMBER_PATTERN_MISSING_017', 'B', '19', 'N', NULL, NULL),
+	('NUMBER_PATTERN_MISSING_017', 'B', '20', 'N', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_017', 'C', '19', 'Y', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_017', 'D', '21', 'N', NULL, NULL),
 
@@ -76599,14 +76598,14 @@ INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, C
 	('NUMBER_PATTERN_MISSING_018', 'C', '30', 'N', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_018', 'D', '34', 'N', NULL, NULL),
 
-	('NUMBER_PATTERN_MISSING_019', 'A', '10', 'Y', NULL, NULL),
-	('NUMBER_PATTERN_MISSING_019', 'B', '11', 'N', NULL, NULL),
+	('NUMBER_PATTERN_MISSING_019', 'A', '11', 'Y', NULL, NULL),
+	('NUMBER_PATTERN_MISSING_019', 'B', '12', 'N', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_019', 'C', '9', 'N', NULL, NULL),
-	('NUMBER_PATTERN_MISSING_019', 'D', '12', 'N', NULL, NULL),
+	('NUMBER_PATTERN_MISSING_019', 'D', '13', 'N', NULL, NULL),
 
 	('NUMBER_PATTERN_MISSING_020', 'A', '12', 'N', NULL, NULL),
-	('NUMBER_PATTERN_MISSING_020', 'B', '14', 'N', NULL, NULL),
-	('NUMBER_PATTERN_MISSING_020', 'C', '14', 'Y', NULL, NULL),
+	('NUMBER_PATTERN_MISSING_020', 'B', '14', 'Y', NULL, NULL),
+	('NUMBER_PATTERN_MISSING_020', 'C', '15', 'N', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_020', 'D', '16', 'N', NULL, NULL),
 
 	('NUMBER_PATTERN_MISSING_021', 'A', '2, 4', 'Y', NULL, NULL),
@@ -76614,8 +76613,8 @@ INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, C
 	('NUMBER_PATTERN_MISSING_021', 'C', '3, 4', 'N', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_021', 'D', '1, 4', 'N', NULL, NULL),
 
-	('NUMBER_PATTERN_MISSING_022', 'A', '3, 5', 'Y', NULL, NULL),
-	('NUMBER_PATTERN_MISSING_022', 'B', '3, 4', 'N', NULL, NULL),
+	('NUMBER_PATTERN_MISSING_022', 'A', '1, 5', 'N', NULL, NULL),
+	('NUMBER_PATTERN_MISSING_022', 'B', '3, 5', 'Y', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_022', 'C', '4, 5', 'N', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_022', 'D', '1, 3', 'N', NULL, NULL),
 
@@ -76624,8 +76623,8 @@ INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, C
 	('NUMBER_PATTERN_MISSING_023', 'C', '5, 8', 'N', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_023', 'D', '7, 8', 'N', NULL, NULL),
 
-	('NUMBER_PATTERN_MISSING_024', 'A', '11, 13', 'N', NULL, NULL),
-	('NUMBER_PATTERN_MISSING_024', 'B', '11, 14', 'N', NULL, NULL),
+	('NUMBER_PATTERN_MISSING_024', 'A', '13, 15', 'N', NULL, NULL),
+	('NUMBER_PATTERN_MISSING_024', 'B', '10, 12', 'N', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_024', 'C', '11, 13', 'Y', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_024', 'D', '12, 13', 'N', NULL, NULL),
 
@@ -76634,7 +76633,7 @@ INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, C
 	('NUMBER_PATTERN_MISSING_025', 'C', '17, 18', 'N', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_025', 'D', '15, 17', 'N', NULL, NULL),
 
-	('NUMBER_PATTERN_MISSING_026', 'A', '21, 23', 'N', NULL, NULL),
+	('NUMBER_PATTERN_MISSING_026', 'A', '21, 24', 'N', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_026', 'B', '21, 23', 'Y', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_026', 'C', '22, 23', 'N', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_026', 'D', '20, 22', 'N', NULL, NULL),
@@ -76644,7 +76643,7 @@ INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, C
 	('NUMBER_PATTERN_MISSING_027', 'C', '5, 9', 'N', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_027', 'D', '4, 7', 'N', NULL, NULL),
 
-	('NUMBER_PATTERN_MISSING_028', 'A', '6, 10', 'N', NULL, NULL),
+	('NUMBER_PATTERN_MISSING_028', 'A', '6, 9', 'N', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_028', 'B', '6, 10', 'Y', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_028', 'C', '7, 11', 'N', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_028', 'D', '5, 9', 'N', NULL, NULL),
@@ -76654,15 +76653,15 @@ INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, C
 	('NUMBER_PATTERN_MISSING_029', 'C', '9, 13', 'N', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_029', 'D', '7, 11', 'N', NULL, NULL),
 
-	('NUMBER_PATTERN_MISSING_030', 'A', '10, 14', 'N', NULL, NULL),
+	('NUMBER_PATTERN_MISSING_030', 'A', '10, 13', 'N', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_030', 'B', '9, 13', 'N', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_030', 'C', '10, 14', 'Y', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_030', 'D', '11, 15', 'N', NULL, NULL),
 
 	('NUMBER_PATTERN_MISSING_031', 'A', '24', 'N', NULL, NULL),
-	('NUMBER_PATTERN_MISSING_031', 'B', '25', 'N', NULL, NULL),
+	('NUMBER_PATTERN_MISSING_031', 'B', '23', 'N', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_031', 'C', '24', 'Y', NULL, NULL),
-	('NUMBER_PATTERN_MISSING_031', 'D', '23', 'N', NULL, NULL),
+	('NUMBER_PATTERN_MISSING_031', 'D', '25', 'N', NULL, NULL),
 
 	('NUMBER_PATTERN_MISSING_032', 'A', '21', 'Y', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_032', 'B', '22', 'N', NULL, NULL),
@@ -76689,8 +76688,8 @@ INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, C
 	('NUMBER_PATTERN_MISSING_036', 'C', '26, 20', 'N', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_036', 'D', '25, 19', 'N', NULL, NULL),
 
-	('NUMBER_PATTERN_MISSING_037', 'A', '14', 'Y', NULL, NULL),
-	('NUMBER_PATTERN_MISSING_037', 'B', '15', 'N', NULL, NULL),
+	('NUMBER_PATTERN_MISSING_037', 'A', '15', 'N', NULL, NULL),
+	('NUMBER_PATTERN_MISSING_037', 'B', '14', 'Y', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_037', 'C', '13', 'N', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_037', 'D', '16', 'N', NULL, NULL),
 
@@ -76709,6 +76708,7 @@ INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, C
 	('NUMBER_PATTERN_MISSING_040', 'C', '35, 27', 'N', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_040', 'D', '38, 30', 'N', NULL, NULL);
 
+-- Child: 4.1. Tìm số khi biết tổng
 INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, CREATED_AT, UPDATED_AT) VALUES
 	('UNKNOWN_NUMBER_SUM_001', 'A', '6', 'Y', NULL, NULL),
 	('UNKNOWN_NUMBER_SUM_001', 'B', '5', 'N', NULL, NULL),
@@ -76860,7 +76860,7 @@ INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, C
 	('UNKNOWN_NUMBER_SUM_030', 'C', '37', 'Y', NULL, NULL),
 	('UNKNOWN_NUMBER_SUM_030', 'D', '39', 'N', NULL, NULL),
 
-		('UNKNOWN_NUMBER_SUM_031', 'A', '38', 'Y', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_031', 'A', '38', 'Y', NULL, NULL),
 	('UNKNOWN_NUMBER_SUM_031', 'B', '48', 'N', NULL, NULL),
 	('UNKNOWN_NUMBER_SUM_031', 'C', '28', 'N', NULL, NULL),
 	('UNKNOWN_NUMBER_SUM_031', 'D', '40', 'N', NULL, NULL),
