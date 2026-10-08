@@ -2,7 +2,7 @@
 import { MathCategoryType, MathQuestionType } from '@/interfaces/math';
 import { getMathCategories, getMathQuestionsByCategoryCode } from '@/utils/apiService';
 import { Layout, Menu, Spin, message, Button, Modal, Typography, Select, Space } from 'antd';
-import { FolderOutlined, FileTextOutlined, CheckCircleOutlined, ReloadOutlined } from '@ant-design/icons';
+import { FolderOutlined, FileTextOutlined, CheckCircleOutlined, CloseCircleOutlined, ReloadOutlined } from '@ant-design/icons';
 import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import MathQuizComponent from '@/components/math/MathQuizComponent';
@@ -27,6 +27,7 @@ const MathGradePage = () => {
   const [userAnswers, setUserAnswers] = useState<Record<string, string>>({});
   const [isChecked, setIsChecked] = useState(false);
   const [openConfirmModal, setOpenConfirmModal] = useState(false);
+  const [openResultModal, setOpenResultModal] = useState(false);
   const [defaultOpenKeys, setDefaultOpenKeys] = useState<string[]>([]);
 
   // Bộ lọc
@@ -160,7 +161,7 @@ const MathGradePage = () => {
   const handleConfirmSubmit = () => {
     setIsChecked(true);
     setOpenConfirmModal(false);
-    message.success('Đã nộp bài!');
+    setOpenResultModal(true);
   };
 
   const calculateScore = () => {
@@ -172,9 +173,13 @@ const MathGradePage = () => {
         correct++;
       }
     });
+    const answeredCount = Object.keys(userAnswers).length;
     return {
       correct,
+      incorrect: answeredCount - correct,
+      unanswered: questions.length - answeredCount,
       total: questions.length,
+      answered: answeredCount,
       score: questions.length > 0 ? Math.round((correct / questions.length) * 100) : 0,
     };
   };
@@ -254,11 +259,6 @@ const MathGradePage = () => {
                 <Title level={3} style={{ margin: 0 }}>
                   {categoryName}
                 </Title>
-                {isChecked && (
-                  <div style={{ fontSize: '18px', fontWeight: 'bold', color: '#52c41a' }}>
-                    Điểm: {score.score}/100 ({score.correct}/{score.total} câu đúng)
-                  </div>
-                )}
               </div>
 
               {!isChecked && (
@@ -351,6 +351,7 @@ const MathGradePage = () => {
                         onClick={() => {
                           setIsChecked(false);
                           setUserAnswers({});
+                          setOpenResultModal(false);
                         }}
                       >
                         Làm lại
@@ -378,6 +379,54 @@ const MathGradePage = () => {
       >
         <p>Bạn đã trả lời {Object.keys(userAnswers).length}/{questions.length} câu hỏi.</p>
         <p>Bạn có chắc chắn muốn nộp bài không?</p>
+      </Modal>
+
+      <Modal
+        title="Kết quả bài làm"
+        open={openResultModal}
+        onOk={() => setOpenResultModal(false)}
+        onCancel={() => setOpenResultModal(false)}
+        okText="Đóng"
+        footer={[
+          <Button key="close" onClick={() => setOpenResultModal(false)}>
+            Đóng
+          </Button>,
+        ]}
+      >
+        <div style={{ textAlign: 'center', padding: '20px 0' }}>
+          {score.score >= 80 ? (
+            <CheckCircleOutlined style={{ color: '#52c41a', fontSize: 80 }} />
+          ) : score.score >= 50 ? (
+            <CheckCircleOutlined style={{ color: '#faad14', fontSize: 80 }} />
+          ) : (
+            <CloseCircleOutlined style={{ color: '#ff4d4f', fontSize: 80 }} />
+          )}
+        </div>
+        <div style={{ marginTop: 20, fontSize: 18 }}>
+          <Typography.Text style={{ display: 'block', marginBottom: 10 }}>
+            <strong>Tổng số câu:</strong> {score.total}
+          </Typography.Text>
+          <Typography.Text style={{ display: 'block', marginBottom: 10, color: '#52c41a' }}>
+            <strong>Đúng:</strong> {score.correct}
+          </Typography.Text>
+          <Typography.Text style={{ display: 'block', marginBottom: 10, color: '#ff4d4f' }}>
+            <strong>Sai:</strong> {score.incorrect}
+          </Typography.Text>
+          <Typography.Text style={{ display: 'block', marginBottom: 10, color: '#faad14' }}>
+            <strong>Chưa làm:</strong> {score.unanswered}
+          </Typography.Text>
+          <Typography.Text
+            style={{
+              display: 'block',
+              marginTop: 10,
+              fontSize: 24,
+              fontWeight: 'bold',
+              color: score.score >= 80 ? '#52c41a' : score.score >= 50 ? '#faad14' : '#ff4d4f'
+            }}
+          >
+            Điểm: {score.score}/100 ({score.correct}/{score.total} câu đúng)
+          </Typography.Text>
+        </div>
       </Modal>
     </Layout>
   );

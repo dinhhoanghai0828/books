@@ -36,4 +36,4 @@ echo ===============================
 echo Starting Cloudflared...
 echo ===============================
 
-powershell -NoExit -Command "cloudflared tunnel --url http://192.168.1.3:80"
+powershell -NoExit -Command "cloudflared tunnel --url http://192.168.1.13:80"
