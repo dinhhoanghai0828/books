@@ -259,6 +259,28 @@ const MathGradePage = () => {
                 <Title level={3} style={{ margin: 0 }}>
                   {categoryName}
                 </Title>
+                {isChecked && (
+                  <Space>
+                    <Button
+                      type="primary"
+                      onClick={() => {
+                        setOpenResultModal(true);
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                      }}
+                    >
+                      Xem kết quả
+                    </Button>
+                    <Button
+                      onClick={() => {
+                        setIsChecked(false);
+                        setUserAnswers({});
+                        setOpenResultModal(false);
+                      }}
+                    >
+                      Làm lại
+                    </Button>
+                  </Space>
+                )}
               </div>
 
               {!isChecked && (
@@ -343,21 +365,6 @@ const MathGradePage = () => {
                       </Button>
                     </div>
                   )}
-
-                  {isChecked && (
-                    <div style={{ marginTop: '24px', textAlign: 'center' }}>
-                      <Button
-                        size="large"
-                        onClick={() => {
-                          setIsChecked(false);
-                          setUserAnswers({});
-                          setOpenResultModal(false);
-                        }}
-                      >
-                        Làm lại
-                      </Button>
-                    </div>
-                  )}
                 </>
               )}
             </div>
@@ -384,11 +391,23 @@ const MathGradePage = () => {
       <Modal
         title="Kết quả bài làm"
         open={openResultModal}
-        onOk={() => setOpenResultModal(false)}
-        onCancel={() => setOpenResultModal(false)}
+        onOk={() => {
+          setOpenResultModal(false);
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }}
+        onCancel={() => {
+          setOpenResultModal(false);
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }}
         okText="Đóng"
         footer={[
-          <Button key="close" onClick={() => setOpenResultModal(false)}>
+          <Button
+            key="close"
+            onClick={() => {
+              setOpenResultModal(false);
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+          >
             Đóng
           </Button>,
         ]}
