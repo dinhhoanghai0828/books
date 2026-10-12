@@ -4,158 +4,197 @@ INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, C
 	('NUMBER_BASIC_SORT_001', 'B', '1, 4, 3, 5, 7', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_001', 'C', '1, 3, 4, 5, 7', 'Y', NULL, NULL),
 	('NUMBER_BASIC_SORT_001', 'D', '1, 3, 5, 4, 7', 'N', NULL, NULL),
+	
 	('NUMBER_BASIC_SORT_002', 'A', '6, 9, 4, 2, 1', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_002', 'B', '9, 4, 6, 2, 1', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_002', 'C', '9, 6, 2, 4, 1', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_002', 'D', '9, 6, 4, 2, 1', 'Y', NULL, NULL),
+	
 	('NUMBER_BASIC_SORT_003', 'A', '1, 3, 5, 6, 8', 'Y', NULL, NULL),
 	('NUMBER_BASIC_SORT_003', 'B', '3, 1, 5, 6, 8', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_003', 'C', '1, 5, 3, 6, 8', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_003', 'D', '1, 3, 6, 5, 8', 'N', NULL, NULL),
+	
 	('NUMBER_BASIC_SORT_004', 'A', '7, 9, 5, 3, 2', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_004', 'B', '9, 7, 5, 3, 2', 'Y', NULL, NULL),
 	('NUMBER_BASIC_SORT_004', 'C', '9, 5, 7, 3, 2', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_004', 'D', '9, 7, 3, 5, 2', 'N', NULL, NULL),
+	
 	('NUMBER_BASIC_SORT_005', 'A', '1, 2, 4, 6, 9', 'Y', NULL, NULL),
 	('NUMBER_BASIC_SORT_005', 'B', '2, 1, 4, 6, 9', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_005', 'C', '1, 4, 2, 6, 9', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_005', 'D', '1, 2, 6, 4, 9', 'N', NULL, NULL),
+	
 	('NUMBER_BASIC_SORT_006', 'A', '7, 8, 5, 3, 2', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_006', 'B', '8, 5, 7, 3, 2', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_006', 'C', '8, 7, 5, 3, 2', 'Y', NULL, NULL),
 	('NUMBER_BASIC_SORT_006', 'D', '8, 7, 3, 5, 2', 'N', NULL, NULL),
+	
 	('NUMBER_BASIC_SORT_007', 'A', '2, 1, 4, 6, 9', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_007', 'B', '1, 4, 2, 6, 9', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_007', 'C', '1, 2, 6, 4, 9', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_007', 'D', '1, 2, 4, 6, 9', 'Y', NULL, NULL),
+	
 	('NUMBER_BASIC_SORT_008', 'A', '9, 7, 5, 3, 1', 'Y', NULL, NULL),
 	('NUMBER_BASIC_SORT_008', 'B', '7, 9, 5, 3, 1', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_008', 'C', '9, 5, 7, 3, 1', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_008', 'D', '9, 7, 3, 5, 1', 'N', NULL, NULL),
+	
 	('NUMBER_BASIC_SORT_009', 'A', '3, 1, 4, 6, 8', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_009', 'B', '1, 4, 3, 6, 8', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_009', 'C', '1, 3, 4, 6, 8', 'Y', NULL, NULL),
 	('NUMBER_BASIC_SORT_009', 'D', '1, 3, 6, 4, 8', 'N', NULL, NULL),
+	
 	('NUMBER_BASIC_SORT_010', 'A', '8, 9, 6, 4, 2', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_010', 'B', '9, 6, 8, 4, 2', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_010', 'C', '9, 8, 4, 6, 2', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_010', 'D', '9, 8, 6, 4, 2', 'Y', NULL, NULL),
+	
 	('NUMBER_BASIC_SORT_011', 'A', '5, 2, 7, 9, 12, 15', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_011', 'B', '2, 7, 5, 9, 12, 15', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_011', 'C', '2, 5, 9, 7, 12, 15', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_011', 'D', '2, 5, 7, 9, 12, 15', 'Y', NULL, NULL),
+	
 	('NUMBER_BASIC_SORT_012', 'A', '13, 17, 10, 8, 6, 4', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_012', 'B', '17, 13, 10, 8, 6, 4', 'Y', NULL, NULL),
 	('NUMBER_BASIC_SORT_012', 'C', '17, 10, 13, 8, 6, 4', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_012', 'D', '17, 13, 8, 10, 6, 4', 'N', NULL, NULL),
+	
 	('NUMBER_BASIC_SORT_013', 'A', '3, 5, 7, 11, 14, 19', 'Y', NULL, NULL),
 	('NUMBER_BASIC_SORT_013', 'B', '5, 3, 7, 11, 14, 19', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_013', 'C', '3, 7, 5, 11, 14, 19', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_013', 'D', '3, 5, 11, 7, 14, 19', 'N', NULL, NULL),
+	
 	('NUMBER_BASIC_SORT_014', 'A', '14, 18, 11, 9, 6, 2', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_014', 'B', '18, 14, 11, 9, 6, 2', 'Y', NULL, NULL),
 	('NUMBER_BASIC_SORT_014', 'C', '18, 11, 14, 9, 6, 2', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_014', 'D', '18, 14, 9, 11, 6, 2', 'N', NULL, NULL),
+	
 	('NUMBER_BASIC_SORT_015', 'A', '4, 5, 8, 12, 16, 20', 'Y', NULL, NULL),
 	('NUMBER_BASIC_SORT_015', 'B', '5, 4, 8, 12, 16, 20', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_015', 'C', '4, 8, 5, 12, 16, 20', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_015', 'D', '4, 5, 12, 8, 16, 20', 'N', NULL, NULL),
+	
 	('NUMBER_BASIC_SORT_016', 'A', '19, 15, 11, 7, 5, 3', 'Y', NULL, NULL),
 	('NUMBER_BASIC_SORT_016', 'B', '15, 19, 11, 7, 5, 3', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_016', 'C', '19, 11, 15, 7, 5, 3', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_016', 'D', '19, 15, 7, 11, 5, 3', 'N', NULL, NULL),
+	
 	('NUMBER_BASIC_SORT_017', 'A', '4, 2, 6, 10, 14, 18', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_017', 'B', '2, 6, 4, 10, 14, 18', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_017', 'C', '2, 4, 6, 10, 14, 18', 'Y', NULL, NULL),
 	('NUMBER_BASIC_SORT_017', 'D', '2, 4, 10, 6, 14, 18', 'N', NULL, NULL),
+	
 	('NUMBER_BASIC_SORT_018', 'A', '16, 20, 13, 8, 5, 3', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_018', 'B', '20, 13, 16, 8, 5, 3', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_018', 'C', '20, 16, 13, 8, 5, 3', 'Y', NULL, NULL),
 	('NUMBER_BASIC_SORT_018', 'D', '20, 16, 8, 13, 5, 3', 'N', NULL, NULL),
+	
 	('NUMBER_BASIC_SORT_019', 'A', '4, 1, 9, 12, 15, 17', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_019', 'B', '1, 4, 9, 12, 15, 17', 'Y', NULL, NULL),
 	('NUMBER_BASIC_SORT_019', 'C', '1, 9, 4, 12, 15, 17', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_019', 'D', '1, 4, 12, 9, 15, 17', 'N', NULL, NULL),
+	
 	('NUMBER_BASIC_SORT_020', 'A', '14, 19, 11, 8, 6, 2', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_020', 'B', '19, 14, 11, 8, 6, 2', 'Y', NULL, NULL),
 	('NUMBER_BASIC_SORT_020', 'C', '19, 11, 14, 8, 6, 2', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_020', 'D', '19, 14, 8, 11, 6, 2', 'N', NULL, NULL),
+	
 	('NUMBER_BASIC_SORT_021', 'A', '7, 3, 11, 15, 19, 24, 28', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_021', 'B', '3, 11, 7, 15, 19, 24, 28', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_021', 'C', '3, 7, 11, 15, 19, 24, 28', 'Y', NULL, NULL),
 	('NUMBER_BASIC_SORT_021', 'D', '3, 7, 15, 11, 19, 24, 28', 'N', NULL, NULL),
+	
 	('NUMBER_BASIC_SORT_022', 'A', '30, 25, 21, 18, 12, 9, 6', 'Y', NULL, NULL),
 	('NUMBER_BASIC_SORT_022', 'B', '25, 30, 21, 18, 12, 9, 6', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_022', 'C', '30, 21, 25, 18, 12, 9, 6', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_022', 'D', '30, 25, 18, 21, 12, 9, 6', 'N', NULL, NULL),
+	
 	('NUMBER_BASIC_SORT_023', 'A', '5, 2, 9, 13, 16, 20, 27', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_023', 'B', '2, 9, 5, 13, 16, 20, 27', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_023', 'C', '2, 5, 13, 9, 16, 20, 27', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_023', 'D', '2, 5, 9, 13, 16, 20, 27', 'Y', NULL, NULL),
+	
 	('NUMBER_BASIC_SORT_024', 'A', '29, 31, 22, 17, 14, 8, 5', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_024', 'B', '31, 22, 29, 17, 14, 8, 5', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_024', 'C', '31, 29, 17, 22, 14, 8, 5', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_024', 'D', '31, 29, 22, 17, 14, 8, 5', 'Y', NULL, NULL),
+	
 	('NUMBER_BASIC_SORT_025', 'A', '7, 4, 12, 18, 21, 26, 35', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_025', 'B', '4, 12, 7, 18, 21, 26, 35', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_025', 'C', '4, 7, 18, 12, 21, 26, 35', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_025', 'D', '4, 7, 12, 18, 21, 26, 35', 'Y', NULL, NULL),
+	
 	('NUMBER_BASIC_SORT_026', 'A', '32, 28, 23, 19, 15, 9, 6', 'Y', NULL, NULL),
 	('NUMBER_BASIC_SORT_026', 'B', '28, 32, 23, 19, 15, 9, 6', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_026', 'C', '32, 23, 28, 19, 15, 9, 6', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_026', 'D', '32, 28, 19, 23, 15, 9, 6', 'N', NULL, NULL),
+	
 	('NUMBER_BASIC_SORT_027', 'A', '8, 3, 11, 17, 20, 24, 29', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_027', 'B', '3, 11, 8, 17, 20, 24, 29', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_027', 'C', '3, 8, 17, 11, 20, 24, 29', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_027', 'D', '3, 8, 11, 17, 20, 24, 29', 'Y', NULL, NULL),
+	
 	('NUMBER_BASIC_SORT_028', 'A', '31, 36, 27, 19, 14, 10, 5', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_028', 'B', '36, 31, 27, 19, 14, 10, 5', 'Y', NULL, NULL),
 	('NUMBER_BASIC_SORT_028', 'C', '36, 27, 31, 19, 14, 10, 5', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_028', 'D', '36, 31, 19, 27, 14, 10, 5', 'N', NULL, NULL),
+	
 	('NUMBER_BASIC_SORT_029', 'A', '8, 4, 12, 16, 21, 25, 33', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_029', 'B', '4, 12, 8, 16, 21, 25, 33', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_029', 'C', '4, 8, 16, 12, 21, 25, 33', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_029', 'D', '4, 8, 12, 16, 21, 25, 33', 'Y', NULL, NULL),
+	
 	('NUMBER_BASIC_SORT_030', 'A', '30, 35, 24, 18, 13, 9, 7', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_030', 'B', '35, 30, 24, 18, 13, 9, 7', 'Y', NULL, NULL),
 	('NUMBER_BASIC_SORT_030', 'C', '35, 24, 30, 18, 13, 9, 7', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_030', 'D', '35, 30, 18, 24, 13, 9, 7', 'N', NULL, NULL),
+	
 	('NUMBER_BASIC_SORT_031', 'A', '11, 6, 15, 19, 28, 35, 42, 47', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_031', 'B', '6, 11, 15, 19, 28, 35, 42, 47', 'Y', NULL, NULL),
 	('NUMBER_BASIC_SORT_031', 'C', '6, 15, 11, 19, 28, 35, 42, 47', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_031', 'D', '6, 11, 19, 15, 28, 35, 42, 47', 'N', NULL, NULL),
+	
 	('NUMBER_BASIC_SORT_032', 'A', '45, 50, 38, 31, 22, 14, 9, 7', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_032', 'B', '50, 45, 38, 31, 22, 14, 9, 7', 'Y', NULL, NULL),
 	('NUMBER_BASIC_SORT_032', 'C', '50, 38, 45, 31, 22, 14, 9, 7', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_032', 'D', '50, 45, 31, 38, 22, 14, 9, 7', 'N', NULL, NULL),
+	
 	('NUMBER_BASIC_SORT_033', 'A', '12, 5, 18, 21, 27, 33, 39, 44', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_033', 'B', '5, 18, 12, 21, 27, 33, 39, 44', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_033', 'C', '5, 12, 18, 21, 27, 33, 39, 44', 'Y', NULL, NULL),
 	('NUMBER_BASIC_SORT_033', 'D', '5, 12, 21, 18, 27, 33, 39, 44', 'N', NULL, NULL),
+	
 	('NUMBER_BASIC_SORT_034', 'A', '49, 41, 37, 32, 25, 16, 13, 8', 'Y', NULL, NULL),
 	('NUMBER_BASIC_SORT_034', 'B', '41, 49, 37, 32, 25, 16, 13, 8', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_034', 'C', '49, 37, 41, 32, 25, 16, 13, 8', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_034', 'D', '49, 41, 32, 37, 25, 16, 13, 8', 'N', NULL, NULL),
+	
 	('NUMBER_BASIC_SORT_035', 'A', '9, 4, 17, 23, 29, 35, 46, 50', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_035', 'B', '4, 9, 17, 23, 29, 35, 46, 50', 'Y', NULL, NULL),
 	('NUMBER_BASIC_SORT_035', 'C', '4, 17, 9, 23, 29, 35, 46, 50', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_035', 'D', '4, 9, 23, 17, 29, 35, 46, 50', 'N', NULL, NULL),
+	
 	('NUMBER_BASIC_SORT_036', 'A', '45, 48, 39, 34, 26, 21, 12, 7', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_036', 'B', '48, 39, 45, 34, 26, 21, 12, 7', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_036', 'C', '48, 45, 39, 34, 26, 21, 12, 7', 'Y', NULL, NULL),
 	('NUMBER_BASIC_SORT_036', 'D', '48, 45, 34, 39, 26, 21, 12, 7', 'N', NULL, NULL),
+	
 	('NUMBER_BASIC_SORT_037', 'A', '11, 5, 16, 20, 28, 37, 43, 49', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_037', 'B', '5, 16, 11, 20, 28, 37, 43, 49', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_037', 'C', '5, 11, 16, 20, 28, 37, 43, 49', 'Y', NULL, NULL),
 	('NUMBER_BASIC_SORT_037', 'D', '5, 11, 20, 16, 28, 37, 43, 49', 'N', NULL, NULL),
+	
 	('NUMBER_BASIC_SORT_038', 'A', '42, 47, 36, 30, 24, 19, 15, 8', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_038', 'B', '47, 36, 42, 30, 24, 19, 15, 8', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_038', 'C', '47, 42, 30, 36, 24, 19, 15, 8', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_038', 'D', '47, 42, 36, 30, 24, 19, 15, 8', 'Y', NULL, NULL),
+	
 	('NUMBER_BASIC_SORT_039', 'A', '6, 11, 18, 22, 29, 34, 45, 50', 'Y', NULL, NULL),
 	('NUMBER_BASIC_SORT_039', 'B', '11, 6, 18, 22, 29, 34, 45, 50', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_039', 'C', '6, 18, 11, 22, 29, 34, 45, 50', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_039', 'D', '6, 11, 22, 18, 29, 34, 45, 50', 'N', NULL, NULL),
+	
 	('NUMBER_BASIC_SORT_040', 'A', '44, 48, 40, 32, 27, 17, 13, 5', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_040', 'B', '48, 40, 44, 32, 27, 17, 13, 5', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_040', 'C', '48, 44, 40, 32, 27, 17, 13, 5', 'Y', NULL, NULL),
