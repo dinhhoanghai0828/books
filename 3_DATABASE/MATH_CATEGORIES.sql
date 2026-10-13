@@ -8,19 +8,17 @@ INSERT INTO MATH_CATEGORIES (CATEGORY_CODE, FULL_PATH, CATEGORY_NAME, CATEGORY_D
 	('CALCULATION', 'toan/lop-1', 'Cộng, trừ và điền số', 'Rèn khả năng thực hiện phép tính và hiểu mối quan hệ giữa các số.', NULL, 'ACTIVE', NULL, NULL),
 	-- Parent: 4. Tìm số chưa biết
 	('UNKNOWN_NUMBER', 'toan/lop-1', 'Tìm số chưa biết', 'Không cho trực tiếp số cần tìm mà phải suy nghĩ từ các dữ kiện để tìm ra số đó.', NULL, 'ACTIVE', NULL, NULL),
-	-- Parent: 5. Bài toán có lời văn – một bước
-	('WORD_PROBLEM', 'toan/lop-1', 'Bài toán có lời văn – một bước', 'Đọc câu chuyện ngắn, hiểu tình huống, chọn phép tính và tìm đáp án.', NULL, 'ACTIVE', NULL, NULL),
-	-- Parent: 6. Bài toán nhiều bước
+	-- Parent: 5. Bài toán nhiều bước
 	('MULTI_STEP', 'toan/lop-1', 'Bài toán nhiều bước', 'Một bài toán không thể giải ngay bằng một phép tính mà cần làm từng bước.', NULL, 'ACTIVE', NULL, NULL),
-	-- Parent: 7. Suy luận logic
+	-- Parent: 6. Suy luận logic
 	('LOGIC', 'toan/lop-1', 'Suy luận logic', 'Không chỉ tính toán mà phải suy nghĩ từ thông tin được cho.', NULL, 'ACTIVE', NULL, NULL),
-	-- Parent: 8. Tìm đáp án theo nhiều điều kiện
+	-- Parent: 7. Tìm đáp án theo nhiều điều kiện
 	('CONDITION', 'toan/lop-1', 'Tìm đáp án theo nhiều điều kiện', 'Một đáp án phải đúng cùng lúc với nhiều yêu cầu.', NULL, 'ACTIVE', NULL, NULL),
-	-- Parent: 9. Chắc chắn – có thể – không thể
+	-- Parent: 8. Chắc chắn – có thể – không thể
 	('POSSIBILITY', 'toan/lop-1', 'Chắc chắn – có thể – không thể', 'Phân biệt điều gì chắc chắn xảy ra, có thể xảy ra và không thể xảy ra.', NULL, 'ACTIVE', NULL, NULL),
-	-- Parent: 10. Đo lường và thời gian
+	-- Parent: 9. Đo lường và thời gian
 	('MEASUREMENT_TIME', 'toan/lop-1', 'Đo lường và thời gian', 'Nhận biết, so sánh và giải các bài toán về độ dài, thời gian, ngày tháng và tiền.', NULL, 'ACTIVE', NULL, NULL),
-	-- Parent: 11. Tư duy tổng hợp
+	-- Parent: 10. Tư duy tổng hợp
 	('COMPREHENSIVE', 'toan/lop-1', 'Tư duy tổng hợp', 'Kết hợp nhiều kỹ năng toán học và tư duy đã học để giải quyết bài toán.', NULL, 'ACTIVE', NULL, NULL),
 
 	-- Child: 1.1. Nhận biết số
@@ -93,23 +91,6 @@ INSERT INTO MATH_CATEGORIES (CATEGORY_CODE, FULL_PATH, CATEGORY_NAME, CATEGORY_D
 	('UNKNOWN_NUMBER_MULTI_CALC', 'toan/lop-1', 'Tìm số qua nhiều phép tính', 'Cần thực hiện từ hai phép tính trở lên để tìm số.', 'UNKNOWN_NUMBER', 'ACTIVE', NULL, NULL),
 	-- Child: 4.7. Tìm số theo điều kiện
 	('UNKNOWN_NUMBER_CONDITION', 'toan/lop-1', 'Tìm số theo điều kiện', 'Tìm số đáp ứng một hoặc nhiều yêu cầu.', 'UNKNOWN_NUMBER', 'ACTIVE', NULL, NULL),
-	
-	-- Child: 5.1. Thêm vào
-	('WORD_PROBLEM_ADD', 'toan/lop-1', 'Thêm vào', 'Có một số đồ vật, sau đó được thêm vào.', 'WORD_PROBLEM', 'ACTIVE', NULL, NULL),
-	-- Child: 5.2. Bớt đi
-	('WORD_PROBLEM_SUBTRACT', 'toan/lop-1', 'Bớt đi', 'Có một số đồ vật, sau đó bị lấy đi hoặc bớt đi.', 'WORD_PROBLEM', 'ACTIVE', NULL, NULL),
-	-- Child: 5.3. Tìm tất cả
-	('WORD_PROBLEM_TOTAL', 'toan/lop-1', 'Tìm tất cả', 'Biết hai phần và cần tìm tổng số.', 'WORD_PROBLEM', 'ACTIVE', NULL, NULL),
-	-- Child: 5.4. Tìm phần còn lại
-	('WORD_PROBLEM_REMAINING', 'toan/lop-1', 'Tìm phần còn lại', 'Biết tổng số và phần đã lấy đi, tìm phần còn lại.', 'WORD_PROBLEM', 'ACTIVE', NULL, NULL),
-	-- Child: 5.5. So sánh hơn
-	('WORD_PROBLEM_MORE', 'toan/lop-1', 'So sánh hơn', 'Một đối tượng nhiều hơn đối tượng khác bao nhiêu.', 'WORD_PROBLEM', 'ACTIVE', NULL, NULL),
-	-- Child: 5.6. So sánh kém
-	('WORD_PROBLEM_LESS', 'toan/lop-1', 'So sánh kém', 'Một đối tượng ít hơn đối tượng khác bao nhiêu.', 'WORD_PROBLEM', 'ACTIVE', NULL, NULL),
-	-- Child: 5.7. Nhiều hơn – ít hơn
-	('WORD_PROBLEM_MORE_LESS', 'toan/lop-1', 'Nhiều hơn – ít hơn', 'Tìm số lượng khi biết mối quan hệ nhiều hơn hoặc ít hơn.', 'WORD_PROBLEM', 'ACTIVE', NULL, NULL),
-	-- Child: 5.8. Chọn phép tính đúng
-	('WORD_PROBLEM_OPERATOR', 'toan/lop-1', 'Chọn phép tính đúng', 'Đọc bài toán và xác định nên dùng cộng hay trừ.', 'WORD_PROBLEM', 'ACTIVE', NULL, NULL),
 
 	-- Child: 6.1. Hai bước cộng
 	('MULTI_STEP_ADD_ADD', 'toan/lop-1', 'Hai bước cộng', 'Thực hiện hai lần thêm vào.', 'MULTI_STEP', 'ACTIVE', NULL, NULL),
