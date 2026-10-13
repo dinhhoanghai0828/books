@@ -59,10 +59,6 @@ INSERT INTO MATH_CATEGORIES (CATEGORY_CODE, FULL_PATH, CATEGORY_NAME, CATEGORY_D
 	('NUMBER_PATTERN_REPEAT', 'toan/lop-1', 'Dãy số lặp lại', 'Một nhóm số hoặc quy luật được lặp đi lặp lại.', 'NUMBER_PATTERN', 'ACTIVE', NULL, NULL),
 	-- Child: 2.7. Tìm số còn thiếu
 	('NUMBER_PATTERN_MISSING', 'toan/lop-1', 'Tìm số còn thiếu', 'Tìm số bị thiếu ở giữa một dãy số.', 'NUMBER_PATTERN', 'ACTIVE', NULL, NULL),
-	-- Child: 2.8. Tìm quy luật của dãy
-	('NUMBER_PATTERN_RULE', 'toan/lop-1', 'Tìm quy luật của dãy', 'Quan sát các số và nói được chúng thay đổi như thế nào.', 'NUMBER_PATTERN', 'ACTIVE', NULL, NULL),
-	-- Child: 2.9. Tìm số sai
-	('NUMBER_PATTERN_WRONG', 'toan/lop-1', 'Tìm số sai', 'Phát hiện một số không tuân theo quy luật của cả dãy.', 'NUMBER_PATTERN', 'ACTIVE', NULL, NULL),
 
 	-- Child: 3.1. Phép cộng
 	('CALCULATION_ADDITION', 'toan/lop-1', 'Phép cộng', 'Tính tổng của hai hoặc nhiều số.', 'CALCULATION', 'ACTIVE', NULL, NULL),
