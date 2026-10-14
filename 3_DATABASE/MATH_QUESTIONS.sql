@@ -411,6 +411,53 @@ INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICU
 	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_038', '50, 45, ?, 35, 30, số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
 	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_039', '5, ?, 11, ?, 17, số nào thích hợp điền vào hai dấu ?', 4, 'ACTIVE', NULL, NULL),
 	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_040', '40, ?, 32, ?, 24, số nào thích hợp điền vào hai dấu ?', 4, 'ACTIVE', NULL, NULL);
+
+-- Child: 3.4. Tìm số bị trừ
+INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
+	('CALCULATION_MINUEND', 'CALCULATION_MINUEND_001', '? - 5 = 8. Số thích hợp điền vào dấu ? là:', 1, 'ACTIVE', NULL, NULL),
+	('CALCULATION_MINUEND', 'CALCULATION_MINUEND_002', '? - 4 = 9. Số thích hợp điền vào dấu ? là:', 1, 'ACTIVE', NULL, NULL),
+	('CALCULATION_MINUEND', 'CALCULATION_MINUEND_003', '? - 6 = 10. Số thích hợp điền vào dấu ? là:', 1, 'ACTIVE', NULL, NULL),
+	('CALCULATION_MINUEND', 'CALCULATION_MINUEND_004', '? - 3 = 7. Số thích hợp điền vào dấu ? là:', 1, 'ACTIVE', NULL, NULL),
+	('CALCULATION_MINUEND', 'CALCULATION_MINUEND_005', '? - 7 = 12. Số thích hợp điền vào dấu ? là:', 1, 'ACTIVE', NULL, NULL),
+	('CALCULATION_MINUEND', 'CALCULATION_MINUEND_006', '? - 2 = 11. Số thích hợp điền vào dấu ? là:', 1, 'ACTIVE', NULL, NULL),
+	('CALCULATION_MINUEND', 'CALCULATION_MINUEND_007', '? - 8 = 15. Số thích hợp điền vào dấu ? là:', 1, 'ACTIVE', NULL, NULL),
+	('CALCULATION_MINUEND', 'CALCULATION_MINUEND_008', '? - 5 = 13. Số thích hợp điền vào dấu ? là:', 1, 'ACTIVE', NULL, NULL),
+	('CALCULATION_MINUEND', 'CALCULATION_MINUEND_009', '? - 6 = 14. Số thích hợp điền vào dấu ? là:', 1, 'ACTIVE', NULL, NULL),
+	('CALCULATION_MINUEND', 'CALCULATION_MINUEND_010', '? - 9 = 16. Số thích hợp điền vào dấu ? là:', 1, 'ACTIVE', NULL, NULL),
+
+	('CALCULATION_MINUEND', 'CALCULATION_MINUEND_011', '? - 9 = 24. Số thích hợp điền vào dấu ? là:', 2, 'ACTIVE', NULL, NULL),
+	('CALCULATION_MINUEND', 'CALCULATION_MINUEND_012', '? - 12 = 31. Số thích hợp điền vào dấu ? là:', 2, 'ACTIVE', NULL, NULL),
+	('CALCULATION_MINUEND', 'CALCULATION_MINUEND_013', '? - 15 = 28. Số thích hợp điền vào dấu ? là:', 2, 'ACTIVE', NULL, NULL),
+	('CALCULATION_MINUEND', 'CALCULATION_MINUEND_014', '? - 17 = 35. Số thích hợp điền vào dấu ? là:', 2, 'ACTIVE', NULL, NULL),
+	('CALCULATION_MINUEND', 'CALCULATION_MINUEND_015', '? - 20 = 42. Số thích hợp điền vào dấu ? là:', 2, 'ACTIVE', NULL, NULL),
+	('CALCULATION_MINUEND', 'CALCULATION_MINUEND_016', '? - 8 = 27. Số thích hợp điền vào dấu ? là:', 2, 'ACTIVE', NULL, NULL),
+	('CALCULATION_MINUEND', 'CALCULATION_MINUEND_017', '? - 24 = 46. Số thích hợp điền vào dấu ? là:', 2, 'ACTIVE', NULL, NULL),
+	('CALCULATION_MINUEND', 'CALCULATION_MINUEND_018', '? - 18 = 39. Số thích hợp điền vào dấu ? là:', 2, 'ACTIVE', NULL, NULL),
+	('CALCULATION_MINUEND', 'CALCULATION_MINUEND_019', '? - 25 = 50. Số thích hợp điền vào dấu ? là:', 2, 'ACTIVE', NULL, NULL),
+	('CALCULATION_MINUEND', 'CALCULATION_MINUEND_020', '? - 14 = 33. Số thích hợp điền vào dấu ? là:', 2, 'ACTIVE', NULL, NULL),
+
+	('CALCULATION_MINUEND', 'CALCULATION_MINUEND_021', '? - 19 = 47. Số thích hợp điền vào dấu ? là:', 3, 'ACTIVE', NULL, NULL),
+	('CALCULATION_MINUEND', 'CALCULATION_MINUEND_022', '? - 27 = 52. Số thích hợp điền vào dấu ? là:', 3, 'ACTIVE', NULL, NULL),
+	('CALCULATION_MINUEND', 'CALCULATION_MINUEND_023', '? - 34 = 61. Số thích hợp điền vào dấu ? là:', 3, 'ACTIVE', NULL, NULL),
+	('CALCULATION_MINUEND', 'CALCULATION_MINUEND_024', '? - 26 = 58. Số thích hợp điền vào dấu ? là:', 3, 'ACTIVE', NULL, NULL),
+	('CALCULATION_MINUEND', 'CALCULATION_MINUEND_025', '? - 29 = 64. Số thích hợp điền vào dấu ? là:', 3, 'ACTIVE', NULL, NULL),
+	('CALCULATION_MINUEND', 'CALCULATION_MINUEND_026', '? - 20 = 71. Số thích hợp điền vào dấu ? là:', 3, 'ACTIVE', NULL, NULL),
+	('CALCULATION_MINUEND', 'CALCULATION_MINUEND_027', '? - 18 = 76. Số thích hợp điền vào dấu ? là:', 3, 'ACTIVE', NULL, NULL),
+	('CALCULATION_MINUEND', 'CALCULATION_MINUEND_028', '? - 7 = 83. Số thích hợp điền vào dấu ? là:', 3, 'ACTIVE', NULL, NULL),
+	('CALCULATION_MINUEND', 'CALCULATION_MINUEND_029', '? - 21 = 69. Số thích hợp điền vào dấu ? là:', 3, 'ACTIVE', NULL, NULL),
+	('CALCULATION_MINUEND', 'CALCULATION_MINUEND_030', '? - 5 = 90. Số thích hợp điền vào dấu ? là:', 3, 'ACTIVE', NULL, NULL),
+
+	('CALCULATION_MINUEND', 'CALCULATION_MINUEND_031', '? - 18 = 57. Số thích hợp điền vào dấu ? là:', 4, 'ACTIVE', NULL, NULL),
+	('CALCULATION_MINUEND', 'CALCULATION_MINUEND_032', '? - 29 = 68. Số thích hợp điền vào dấu ? là:', 4, 'ACTIVE', NULL, NULL),
+	('CALCULATION_MINUEND', 'CALCULATION_MINUEND_033', '? - 16 = 74. Số thích hợp điền vào dấu ? là:', 4, 'ACTIVE', NULL, NULL),
+	('CALCULATION_MINUEND', 'CALCULATION_MINUEND_034', '? - 17 = 81. Số thích hợp điền vào dấu ? là:', 4, 'ACTIVE', NULL, NULL),
+	('CALCULATION_MINUEND', 'CALCULATION_MINUEND_035', '? - 12 = 88. Số thích hợp điền vào dấu ? là:', 4, 'ACTIVE', NULL, NULL),
+	('CALCULATION_MINUEND', 'CALCULATION_MINUEND_036', '? - 7 = 93. Số thích hợp điền vào dấu ? là:', 4, 'ACTIVE', NULL, NULL),
+	('CALCULATION_MINUEND', 'CALCULATION_MINUEND_037', '? - 28 = 67. Số thích hợp điền vào dấu ? là:', 4, 'ACTIVE', NULL, NULL),
+	('CALCULATION_MINUEND', 'CALCULATION_MINUEND_038', '? - 14 = 79. Số thích hợp điền vào dấu ? là:', 4, 'ACTIVE', NULL, NULL),
+	('CALCULATION_MINUEND', 'CALCULATION_MINUEND_039', '? - 13 = 86. Số thích hợp điền vào dấu ? là:', 4, 'ACTIVE', NULL, NULL),
+	('CALCULATION_MINUEND', 'CALCULATION_MINUEND_040', '? - 1 = 99. Số thích hợp điền vào dấu ? là:', 4, 'ACTIVE', NULL, NULL);
+
 	
 -- Child: 4.1. Tìm số khi biết tổng
 INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES

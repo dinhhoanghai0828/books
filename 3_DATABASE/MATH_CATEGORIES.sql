@@ -64,17 +64,13 @@ INSERT INTO MATH_CATEGORIES (CATEGORY_CODE, FULL_PATH, CATEGORY_NAME, CATEGORY_D
 	('CALCULATION_SUBTRACTION', 'toan/lop-1', 'Phép trừ', 'Tính phần còn lại sau khi bớt đi.', 'CALCULATION', 'ACTIVE', NULL, NULL),
 	-- Child: 3.3. Tìm kết quả
 	('CALCULATION_RESULT', 'toan/lop-1', 'Tìm kết quả', 'Cho phép tính và tìm kết quả đúng.', 'CALCULATION', 'ACTIVE', NULL, NULL),
-	-- Child: 3.4. Tìm số còn thiếu
-	('CALCULATION_MISSING', 'toan/lop-1', 'Tìm số còn thiếu', 'Tìm số còn thiếu trong phép cộng hoặc phép trừ.', 'CALCULATION', 'ACTIVE', NULL, NULL),
-	-- Child: 3.5. Tìm số hạng chưa biết
-	('CALCULATION_UNKNOWN_ADDEND', 'toan/lop-1', 'Tìm số hạng chưa biết', 'Biết tổng và một số, tìm số còn lại.', 'CALCULATION', 'ACTIVE', NULL, NULL),
-	-- Child: 3.6. Tìm số bị trừ
+	-- Child: 3.4. Tìm số bị trừ
 	('CALCULATION_MINUEND', 'toan/lop-1', 'Tìm số bị trừ', 'Biết hiệu và số trừ, tìm số ban đầu.', 'CALCULATION', 'ACTIVE', NULL, NULL),
-	-- Child: 3.7. Tìm số trừ
+	-- Child: 3.5. Tìm số trừ
 	('CALCULATION_SUBTRAHEND', 'toan/lop-1', 'Tìm số trừ', 'Biết số bị trừ và hiệu, tìm số đã bớt.', 'CALCULATION', 'ACTIVE', NULL, NULL),
-	-- Child: 3.8. Điền dấu + hoặc −
+	-- Child: 3.6. Điền dấu + hoặc −
 	('CALCULATION_OPERATOR', 'toan/lop-1', 'Điền dấu + hoặc −', 'Chọn phép tính phù hợp để hoàn thành bài.', 'CALCULATION', 'ACTIVE', NULL, NULL),
-	-- Child: 3.9. So sánh kết quả
+	-- Child: 3.7. So sánh kết quả
 	('CALCULATION_COMPARE', 'toan/lop-1', 'So sánh kết quả', 'Tính hoặc suy luận để biết phép tính nào lớn hơn, nhỏ hơn hoặc bằng nhau.', 'CALCULATION', 'ACTIVE', NULL, NULL),
 
 	-- Child: 4.1. Tìm số khi biết tổng
