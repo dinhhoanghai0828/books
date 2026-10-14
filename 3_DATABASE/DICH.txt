@@ -46,8 +46,8 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE, ANSWER_TEXT, ANSWER_TEXT_VI, IS_
 
 
 Tạo cho t mỗi loại 40 câu bao gồm Dễ, Trung Bình, Khó, Rất Khó
--- Child: 6.1. Hai bước cộng
-	('MULTI_STEP_ADD_ADD', 'Hai bước cộng', 'Thực hiện hai lần thêm vào.', 'MULTI_STEP', 'ACTIVE', NULL, NULL),
+-- Child: 2.2. Dãy số giảm
+	('NUMBER_PATTERN_DECREASING', 'toan/lop-1', 'Dãy số giảm', 'Các số lần lượt nhỏ dần.', 'NUMBER_PATTERN', 'ACTIVE', NULL, NULL),
 tương tự
 
 INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
@@ -64,6 +64,6 @@ INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, C
 MATH_QUESTIONS: 40 câu
 MATH_ANSWERS: 160 đáp án
 Độ khó 1 → 4, mỗi mức 10 câu
-Đáp án đúng A/B/C/D được phân bố, xáo trộn xen kẽ ngẫu nhiên trong 4 đáp án A=10, B=10, C=10, D=10
+Đáp án đúng A/B/C/D được phân bố, khong trung lap, xáo trộn xen kẽ ngẫu nhiên trong 4 đáp án A=10, B=10, C=10, D=10
 Câu hỏi rõ ràng đầy đủ, dữ kiện chi tiết
 Toàn bộ vẫn trong phạm vi Toán lớp 1
