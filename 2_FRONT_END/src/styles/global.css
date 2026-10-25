@@ -102,6 +102,11 @@
   display: block !important;
 }
 
+/* Indent submenu items to distinguish from parent */
+.ant-menu-sub .ant-menu-item {
+  padding-left: 48px !important;
+}
+
 .breadCrumbClass {
   position: fixed; /* Cố định vị trí của Breadcrumb */
   left: 0;

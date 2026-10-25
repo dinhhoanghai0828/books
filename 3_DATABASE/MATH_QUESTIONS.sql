@@ -679,7 +679,51 @@ INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICU
 	('UNKNOWN_NUMBER_MULTI_CALC', 'UNKNOWN_NUMBER_MULTI_CALC_038', 'Biết một số cộng 22, sau đó trừ 9 thì được 59. Tìm số đó.', 4, 'ACTIVE', NULL, NULL),
 	('UNKNOWN_NUMBER_MULTI_CALC', 'UNKNOWN_NUMBER_MULTI_CALC_039', '□ + 17 - 8 = 69. Số thích hợp điền vào ô □ là số nào?', 4, 'ACTIVE', NULL, NULL),
 	('UNKNOWN_NUMBER_MULTI_CALC', 'UNKNOWN_NUMBER_MULTI_CALC_040', 'Có một số. Lấy số đó cộng 23 rồi bớt 9 thì được 65. Số ban đầu là bao nhiêu?', 4, 'ACTIVE', NULL, NULL);
-	
+
+-- Child: 4.2. Tìm hai số khi biết tổng và hiệu
+INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_001', 'Tìm hai số biết rằng tổng của hai số là 7 và hiệu của hai số là 1. Hai số đó là hai số nào?', 1, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_002', 'Biết tổng của hai số là 8, hiệu của hai số là 2. Hãy tìm hai số đó.', 1, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_003', 'Hai số có tổng bằng 9 và số lớn hơn số bé 3 đơn vị. Hai số đó là số nào?', 1, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_004', 'Tìm hai số, biết số lớn hơn số bé 4 đơn vị và tổng của hai số bằng 10.', 1, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_005', 'Tìm hai số biết rằng tổng của hai số là 6 và hiệu của hai số là 2. Hai số đó là hai số nào?', 1, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_006', 'Biết tổng của hai số là 10, hiệu của hai số là 2. Hãy tìm hai số đó.', 1, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_007', 'Hai số có tổng bằng 8 và số lớn hơn số bé 4 đơn vị. Hai số đó là số nào?', 1, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_008', 'Tìm hai số, biết số lớn hơn số bé 1 đơn vị và tổng của hai số bằng 9.', 1, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_009', 'Tìm hai số biết rằng tổng của hai số là 10 và hiệu của hai số là 6. Hai số đó là hai số nào?', 1, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_010', 'Biết tổng của hai số là 7, hiệu của hai số là 3. Hãy tìm hai số đó.', 1, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_011', 'Hai số có tổng bằng 12 và số lớn hơn số bé 4 đơn vị. Hai số đó là số nào?', 2, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_012', 'Tìm hai số, biết số lớn hơn số bé 5 đơn vị và tổng của hai số bằng 15.', 2, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_013', 'Tìm hai số biết rằng tổng của hai số là 18 và hiệu của hai số là 6. Hai số đó là hai số nào?', 2, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_014', 'Biết tổng của hai số là 20, hiệu của hai số là 8. Hãy tìm hai số đó.', 2, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_015', 'Hai số có tổng bằng 17 và số lớn hơn số bé 3 đơn vị. Hai số đó là số nào?', 2, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_016', 'Tìm hai số, biết số lớn hơn số bé 6 đơn vị và tổng của hai số bằng 22.', 2, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_017', 'Tìm hai số biết rằng tổng của hai số là 25 và hiệu của hai số là 5. Hai số đó là hai số nào?', 2, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_018', 'Biết tổng của hai số là 24, hiệu của hai số là 10. Hãy tìm hai số đó.', 2, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_019', 'Hai số có tổng bằng 28 và số lớn hơn số bé 8 đơn vị. Hai số đó là số nào?', 2, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_020', 'Tìm hai số, biết số lớn hơn số bé 12 đơn vị và tổng của hai số bằng 30.', 2, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_021', 'Tìm hai số biết rằng tổng của hai số là 31 và hiệu của hai số là 7. Hai số đó là hai số nào?', 3, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_022', 'Biết tổng của hai số là 36, hiệu của hai số là 8. Hãy tìm hai số đó.', 3, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_023', 'Hai số có tổng bằng 40 và số lớn hơn số bé 10 đơn vị. Hai số đó là số nào?', 3, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_024', 'Tìm hai số, biết số lớn hơn số bé 15 đơn vị và tổng của hai số bằng 45.', 3, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_025', 'Tìm hai số biết rằng tổng của hai số là 50 và hiệu của hai số là 12. Hai số đó là hai số nào?', 3, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_026', 'Biết tổng của hai số là 54, hiệu của hai số là 14. Hãy tìm hai số đó.', 3, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_027', 'Hai số có tổng bằng 42 và số lớn hơn số bé 18 đơn vị. Hai số đó là số nào?', 3, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_028', 'Tìm hai số, biết số lớn hơn số bé 16 đơn vị và tổng của hai số bằng 48.', 3, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_029', 'Tìm hai số biết rằng tổng của hai số là 56 và hiệu của hai số là 20. Hai số đó là hai số nào?', 3, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_030', 'Biết tổng của hai số là 60, hiệu của hai số là 22. Hãy tìm hai số đó.', 3, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_031', 'Hai số có tổng bằng 61 và số lớn hơn số bé 11 đơn vị. Hai số đó là số nào?', 4, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_032', 'Tìm hai số, biết số lớn hơn số bé 14 đơn vị và tổng của hai số bằng 64.', 4, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_033', 'Tìm hai số biết rằng tổng của hai số là 70 và hiệu của hai số là 20. Hai số đó là hai số nào?', 4, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_034', 'Biết tổng của hai số là 75, hiệu của hai số là 25. Hãy tìm hai số đó.', 4, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_035', 'Hai số có tổng bằng 80 và số lớn hơn số bé 30 đơn vị. Hai số đó là số nào?', 4, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_036', 'Tìm hai số, biết số lớn hơn số bé 28 đơn vị và tổng của hai số bằng 84.', 4, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_037', 'Tìm hai số biết rằng tổng của hai số là 90 và hiệu của hai số là 30. Hai số đó là hai số nào?', 4, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_038', 'Biết tổng của hai số là 96, hiệu của hai số là 36. Hãy tìm hai số đó.', 4, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_039', 'Hai số có tổng bằng 100 và số lớn hơn số bé 40 đơn vị. Hai số đó là số nào?', 4, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_040', 'Tìm hai số, biết số lớn hơn số bé 18 đơn vị và tổng của hai số bằng 88.', 4, 'ACTIVE', NULL, NULL);
+
+
 -- Child: 6.2. Hai bước trừ
 INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
 	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_001', 'Mai có 12 quả táo. Mai cho bạn 3 quả rồi ăn 2 quả. Hỏi Mai còn lại bao nhiêu quả táo?', 1, 'ACTIVE', NULL, NULL),
