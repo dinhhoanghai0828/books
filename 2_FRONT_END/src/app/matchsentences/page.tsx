@@ -869,20 +869,6 @@ const MatchSentencesPage = () => {
                               onTouchEnd={(e) => { e.stopPropagation(); }}
                           >{item.vi}</Text>
                           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                            {item.audio && (
-                                <Button
-                                    type="link"
-                                    icon={playingAudioId === item.id ? <PauseOutlined style={{ color: '#1677ff' }} /> : <PlayCircleOutlined />}
-                                    onClick={(e) => {
-                                      e.stopPropagation();
-                                      handlePlayAudio(item.audio, item.startTime || '0', item.endTime || '0', item.id);
-                                    }}
-                                    style={{
-                                      padding: 0,
-                                      height: 'auto',
-                                    }}
-                                />
-                            )}
                             {isMatched && match && (
                                 <div style={{
                                   backgroundColor: isCorrect === true ? '#52c41a' : isCorrect === false ? '#ff4d4f' : '#1890ff',
