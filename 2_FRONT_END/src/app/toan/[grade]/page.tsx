@@ -127,7 +127,11 @@ const MathGradePage = () => {
       const isTongHop = category.categoryName === 'Bài tập tổng hợp';
       return {
         key: isTongHop ? `__TONGHOP__${category.categoryCode}` : category.categoryCode,
-        label: category.categoryName,
+        label: (
+          <span style={{ whiteSpace: 'normal', wordWrap: 'break-word', display: 'block' }}>
+            {category.categoryName}
+          </span>
+        ),
         icon: hasChildren ? <FolderOutlined /> : <FileTextOutlined />,
         children: hasChildren ? buildMenuItems(category.children) : undefined,
       };
@@ -245,20 +249,25 @@ const MathGradePage = () => {
 
   return (
     <Layout style={{ minHeight: '100vh', paddingTop: '64px' }}>
-      <Sider width={250} style={{ background: '#fff', borderRight: '1px solid #f0f0f0', height: 'calc(100vh - 64px)', position: 'fixed', left: 0, top: '64px' }}>
+      <Sider width={280} style={{ background: '#fff', borderRight: '1px solid #f0f0f0', height: 'calc(100vh - 64px)', position: 'fixed', left: 0, top: '64px' }}>
         <div style={{ padding: '16px', borderBottom: '1px solid #f0f0f0', fontWeight: 'bold', fontSize: '16px' }}>
           {getGradeDisplayName(grade)}
         </div>
         <Menu
           mode="inline"
-          style={{ height: 'calc(100% - 48px)', borderRight: 0, overflowY: 'auto', overflowX: 'hidden' }}
+          style={{
+            height: 'calc(100% - 48px)',
+            borderRight: 0,
+            overflowY: 'auto',
+            overflowX: 'hidden'
+          }}
           items={buildMenuItems(categories)}
           onSelect={handleMenuSelect}
           defaultOpenKeys={defaultOpenKeys}
           defaultSelectedKeys={selectedCategory ? [selectedCategory] : []}
         />
       </Sider>
-      <Content style={{ padding: '24px', background: '#f5f5f5', marginLeft: '250px' }}>
+      <Content style={{ padding: '24px', background: '#f5f5f5', marginLeft: '280px' }}>
         {selectedCategory ? (
           loadingQuestions ? (
             <div style={{ display: 'flex', justifyContent: 'center', padding: '40px' }}>
