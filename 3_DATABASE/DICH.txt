@@ -46,9 +46,8 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE, ANSWER_TEXT, ANSWER_TEXT_VI, IS_
 
 
 Tạo cho t mỗi loại 40 câu bao gồm Dễ, Trung Bình, Khó, Rất Khó
-	-- Child: 3.1. Phép cộng
-	('CALCULATION_ADDITION', 'toan/lop-1', 'Phép cộng', 'Tính tổng của hai hoặc nhiều số.', 'CALCULATION', 'ACTIVE', NULL, NULL),
-	tuong tu mau duoi day cho lop 1 trong pham vi 100
+	-- Child: 1.4.1. Tìm số liền trước
+	('NUMBER_PREVIOUS', 'toan/lop-1', 'Tìm số liền trước', 'Tìm số đứng ngay trước một số đã cho, kém số đó 1 đơn vị.', 'NUMBER_NEIGHBOR', 'ACTIVE', NULL, NULL),
 
 INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
 	('NUMBER_INCREASING', 'NUMBER_INCREASING_001', '2, 3, 4, 5, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
@@ -61,9 +60,30 @@ INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, C
 	('NUMBER_INCREASING_001', 'C', '7', 'N', NULL, NULL),
 	('NUMBER_INCREASING_001', 'D', '8', 'N', NULL, NULL),
 
-MATH_QUESTIONS: 40 câu
+MATH_QUESTIONS: 40 câu2
 MATH_ANSWERS: 160 đáp án
 Độ khó 1 → 4, mỗi mức 10 câu
 Đáp án đúng A/B/C/D được phân bố, khong trung lap, xáo trộn xen kẽ ngẫu nhiên trong 4 đáp án A=10, B=10, C=10, D=10
 Câu hỏi rõ ràng đầy đủ, dữ kiện chi tiết
 Toàn bộ vẫn trong phạm vi Toán lớp 1
+
+
+
+2. Dạng kết hợp tuổi của nhiều người
+6. An hơn Bình 2 tuổi. Bình hơn Cường 3 tuổi. Cường 4 tuổi. Hỏi tổng số tuổi của ba bạn?
+7. Chị hơn em 4 tuổi. Tổng số tuổi của hai chị em là 14 tuổi. Biết em ít tuổi hơn chị. Hỏi mỗi người bao nhiêu tuổi?
+8. Mẹ hơn con 25 tuổi. Sau 3 năm nữa, tổng số tuổi của hai mẹ con là 43 tuổi. Hỏi hiện nay mỗi người bao nhiêu tuổi?
+9. An 8 tuổi. Bình ít hơn An 3 tuổi, còn Chi hơn Bình 2 tuổi. Hỏi tổng số tuổi của ba bạn?
+10. Ba anh em có tuổi lần lượt hơn kém nhau 2 tuổi. Em út 4 tuổi. Hỏi tổng số tuổi của ba anh em?
+3. Dạng tìm tuổi qua nhiều thời điểm
+11. Bốn năm trước, An 3 tuổi. Bình hiện nay hơn An 2 tuổi. Hỏi 2 năm nữa tổng số tuổi của hai bạn là bao nhiêu?
+12. Nam hiện nay 8 tuổi. Khi Nam bằng tuổi hiện nay của Nam cộng thêm 3 tuổi, em gái Nam sẽ 7 tuổi. Biết em gái Nam hiện nay ít hơn Nam 4 tuổi. Hỏi dữ kiện nào không phù hợp?
+13. Hai năm trước, chị 7 tuổi. Em kém chị 3 tuổi. Hỏi 4 năm nữa tổng số tuổi của hai chị em là bao nhiêu?
+14. Lan hiện nay 6 tuổi. Minh hơn Lan 2 tuổi. Hỏi cách đây 3 năm, tổng số tuổi của hai bạn là bao nhiêu?
+15. An hiện nay 9 tuổi. Bình hiện nay 5 tuổi. Hỏi sau bao nhiêu năm nữa tổng số tuổi của hai bạn là 20?
+4. Dạng suy luận từ phép tính và điều kiện ẩn
+16. Tuổi của Bình cộng với 2 rồi trừ đi 3 thì bằng 6. Hỏi 4 năm nữa Bình bao nhiêu tuổi?
+17. An và Bình có tổng số tuổi là 15. An hơn Bình 3 tuổi. Hỏi mỗi bạn bao nhiêu tuổi?
+18. Tuổi của chị bằng số lớn nhất có một chữ số. Tuổi của em bằng số bé nhất có hai chữ số trừ đi 6. Hỏi chị hơn em mấy tuổi?
+19. Ba năm nữa, tuổi của An bằng tuổi hiện nay của Bình. Bình 10 tuổi. An hơn em mình 2 tuổi. Hỏi em của An hiện nay bao nhiêu tuổi?
+20. Tổng số tuổi của hai chị em hiện nay là 12. Hai năm nữa, chị 9 tuổi. Hỏi em hiện nay bao nhiêu tuổi?
