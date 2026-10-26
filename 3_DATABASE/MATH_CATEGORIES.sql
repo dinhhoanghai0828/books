@@ -10,7 +10,7 @@ INSERT INTO MATH_CATEGORIES (CATEGORY_CODE, FULL_PATH, CATEGORY_NAME, CATEGORY_D
 	-- Child: 1.1. Sắp xếp các số
 	('NUMBER_BASIC_SORT', 'toan/lop-1', 'Sắp xếp các số', 'Sắp xếp các số từ bé đến lớn hoặc từ lớn đến bé.', 'MATH_LOGIC', 'ACTIVE', NULL, NULL),
 	-- Child: 1.2. Tìm số chẵn, số lẻ trong dãy số
-	('NUMBER_BASIC_EVEN_ODD', 'toan/lop-1', 'Tìm số chẵn, số lẻ trong dãy số', 'Nhận biết và phân loại số chẵn, số lẻ. Tìm số chẵn, số lẻ còn thiếu trong dãy số', 'MATH_LOGIC', 'ACTIVE', NULL, NULL),
+	('NUMBER_BASIC_EVEN_ODD', 'toan/lop-1', 'Tìm số chẵn, số lẻ trong dãy số', 'Nhận biết và phân loại số chẵn, số lẻ. Tìm số chẵn, số lẻ còn thiếu trong dãy số', 'NUMBER_BASIC_SORT', 'ACTIVE', NULL, NULL),
 	-- Child: 1.3. Tìm số với quy luật dãy số tăng đều
 	('NUMBER_PATTERN_ADD_EQUAL', 'toan/lop-1', 'Tìm số với quy luật dãy số tăng đều', 'Dãy số tăng theo một quy luật cố định, mỗi lần tăng thêm cùng một số. Tìm số còn thiếu trong dãy số', 'MATH_LOGIC', 'ACTIVE', NULL, NULL),
 	-- Child: 1.4. Tìm số với quy luật dãy số tăng không đều

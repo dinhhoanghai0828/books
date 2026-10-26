@@ -102,9 +102,29 @@
   display: block !important;
 }
 
-/* Indent submenu items to distinguish from parent */
+/* Indent level 2 submenu items */
 .ant-menu-sub .ant-menu-item {
   padding-left: 48px !important;
+}
+
+/* Indent level 2 submenu titles */
+.ant-menu-sub .ant-menu-submenu-title {
+  padding-left: 48px !important;
+}
+
+/* Indent level 3 submenu items */
+.ant-menu-sub .ant-menu-sub .ant-menu-item {
+  padding-left: 64px !important;
+}
+
+/* Indent level 3 submenu titles */
+.ant-menu-sub .ant-menu-sub .ant-menu-submenu-title {
+  padding-left: 64px !important;
+}
+
+/* Indent level 4 submenu items (if needed) */
+.ant-menu-sub .ant-menu-sub .ant-menu-sub .ant-menu-item {
+  padding-left: 80px !important;
 }
 
 .breadCrumbClass {
