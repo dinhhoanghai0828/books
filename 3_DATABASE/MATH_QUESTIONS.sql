@@ -723,6 +723,49 @@ INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICU
 	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_039', 'Hai số có tổng bằng 100 và số lớn hơn số bé 40 đơn vị. Hai số đó là số nào?', 4, 'ACTIVE', NULL, NULL),
 	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_040', 'Tìm hai số, biết số lớn hơn số bé 18 đơn vị và tổng của hai số bằng 88.', 4, 'ACTIVE', NULL, NULL);
 
+-- Child: 4.3. Tìm hai số khi biết tổng và hiệu qua biểu thức
+INSERT INTO MATH_QUESTIONS (QUESTION_CODE, CATEGORY_CODE, QUESTION_TEXT, DIFFICULTY_LEVEL, STATUS, CREATED_AT, UPDATED_AT) VALUES
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_001', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'Tìm hai số biết rằng tổng của chúng bằng số lớn nhất có một chữ số trừ đi 4, hiệu của chúng bằng 1.', 1, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_002', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'Tìm hai số biết rằng tổng của chúng bằng số lớn nhất có một chữ số, hiệu của chúng bằng số liền sau của số tự nhiên nhỏ nhất.', 1, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_003', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'Tìm hai số biết rằng tổng của chúng bằng số nhỏ nhất có hai chữ số trừ đi 2, hiệu của chúng bằng 2.', 1, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_004', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'Tìm hai số biết rằng tổng của chúng bằng số liền trước của 10, hiệu của chúng bằng 3.', 1, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_005', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'Tìm hai số biết rằng tổng của chúng bằng số lớn nhất có một chữ số trừ đi 2, hiệu của chúng bằng 1.', 1, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_006', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'Tìm hai số biết rằng tổng của chúng bằng số tự nhiên nhỏ nhất cộng 8, hiệu của chúng bằng 4.', 1, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_007', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'Tìm hai số biết rằng tổng của chúng bằng số liền sau của 6, hiệu của chúng bằng số tự nhiên nhỏ nhất cộng 3.', 1, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_008', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'Tìm hai số biết rằng tổng của chúng bằng số lớn nhất có một chữ số trừ đi 1, hiệu của chúng bằng 2.', 1, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_009', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'Tìm hai số biết rằng tổng của chúng bằng số nhỏ nhất có hai chữ số, hiệu của chúng bằng 2.', 1, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_010', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'Tìm hai số biết rằng tổng của chúng bằng số liền trước của 8, hiệu của chúng bằng số tự nhiên nhỏ nhất cộng 1.', 1, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_011', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'Tìm hai số biết rằng tổng của chúng bằng số lớn nhất có một chữ số cộng 3, hiệu của chúng bằng 4.', 2, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_012', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'Tìm hai số biết rằng tổng của chúng bằng số nhỏ nhất có hai chữ số cộng 2, hiệu của chúng bằng 2.', 2, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_013', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'Tìm hai số biết rằng tổng của chúng bằng số liền sau của 12, hiệu của chúng bằng 5.', 2, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_014', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'Tìm hai số biết rằng tổng của chúng bằng 20 trừ đi số lớn nhất có một chữ số, hiệu của chúng bằng 3.', 2, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_015', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'Tìm hai số biết rằng tổng của chúng bằng số lớn nhất có một chữ số cộng 7, hiệu của chúng bằng 6.', 2, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_016', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'Tìm hai số biết rằng tổng của chúng bằng số nhỏ nhất có hai chữ số cộng 6, hiệu của chúng bằng 4.', 2, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_017', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'Tìm hai số biết rằng tổng của chúng bằng 15 trừ đi số tự nhiên nhỏ nhất, hiệu của chúng bằng số liền sau của 4.', 2, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_018', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'Tìm hai số biết rằng tổng của chúng bằng số liền trước của 20, hiệu của chúng bằng 7.', 2, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_019', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'Tìm hai số biết rằng tổng của chúng bằng số lớn nhất có một chữ số cộng 9, hiệu của chúng bằng 2.', 2, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_020', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'Tìm hai số biết rằng tổng của chúng bằng số nhỏ nhất có hai chữ số cộng 8, hiệu của chúng bằng 6.', 2, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_021', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'Tìm hai số biết rằng tổng của chúng bằng 30 trừ đi số lớn nhất có một chữ số, hiệu của chúng bằng 5.', 3, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_022', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'Tìm hai số biết rằng tổng của chúng bằng số lớn nhất có một chữ số nhân đôi, hiệu của chúng bằng 4.', 3, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_023', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'Tìm hai số biết rằng tổng của chúng bằng 25 trừ đi số tự nhiên nhỏ nhất, hiệu của chúng bằng 7.', 3, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_024', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'Tìm hai số biết rằng tổng của chúng bằng số liền sau của 29, hiệu của chúng bằng 10.', 3, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_025', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'Tìm hai số biết rằng tổng của chúng bằng số lớn nhất có một chữ số cộng 21, hiệu của chúng bằng 8.', 3, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_026', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'Tìm hai số biết rằng tổng của chúng bằng 40 trừ đi số lớn nhất có một chữ số, hiệu của chúng bằng 9.', 3, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_027', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'Tìm hai số biết rằng tổng của chúng bằng số nhỏ nhất có hai chữ số cộng 24, hiệu của chúng bằng 6.', 3, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_028', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'Tìm hai số biết rằng tổng của chúng bằng 50 trừ đi số liền trước của 10, hiệu của chúng bằng 7.', 3, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_029', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'Tìm hai số biết rằng tổng của chúng bằng số lớn nhất có một chữ số cộng 35, hiệu của chúng bằng 8.', 3, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_030', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'Tìm hai số biết rằng tổng của chúng bằng số liền trước của 50, hiệu của chúng bằng 9.', 3, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_031', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'Tìm hai số biết rằng tổng của chúng bằng số lớn nhất có một chữ số cộng 51, hiệu của chúng bằng 12 trừ đi 4.', 4, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_032', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'Tìm hai số biết rằng tổng của chúng bằng 70 trừ đi số lớn nhất có một chữ số, hiệu của chúng bằng số lớn nhất có một chữ số.', 4, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_033', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'Tìm hai số biết rằng tổng của chúng bằng số nhỏ nhất có hai chữ số cộng 58, hiệu của chúng bằng 20 trừ đi 8.', 4, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_034', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'Tìm hai số biết rằng tổng của chúng bằng 80 trừ đi số liền trước của 10, hiệu của chúng bằng 15 trừ đi 6.', 4, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_035', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'Tìm hai số biết rằng tổng của chúng bằng số lớn nhất có một chữ số cộng 73, hiệu của chúng bằng 30 trừ đi 12.', 4, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_036', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'Tìm hai số biết rằng tổng của chúng bằng 90 trừ đi số lớn nhất có một chữ số, hiệu của chúng bằng 30 trừ đi 11.', 4, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_037', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'Tìm hai số biết rằng tổng của chúng bằng số nhỏ nhất có hai chữ số cộng 79, hiệu của chúng bằng 30 trừ đi 11.', 4, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_038', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'Tìm hai số biết rằng tổng của chúng bằng 100 trừ đi số lớn nhất có một chữ số, hiệu của chúng bằng 40 trừ đi 19.', 4, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_039', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'Tìm hai số biết rằng tổng của chúng bằng số lớn nhất có một chữ số cộng 84, hiệu của chúng bằng 30 trừ đi 9.', 4, 'ACTIVE', NULL, NULL),
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_040', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'Tìm hai số biết rằng tổng của chúng bằng 100 trừ đi số liền trước của 10, hiệu của chúng bằng 50 trừ đi 28.', 4, 'ACTIVE', NULL, NULL);
+
 
 -- Child: 6.2. Hai bước trừ
 INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
