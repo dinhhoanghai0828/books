@@ -88,8 +88,9 @@
   max-height: calc(100vh - 20px);
 }
 
-/* Make menu items support multi-line text */
-.ant-menu-item, .ant-menu-submenu-title {
+/* Make sidebar menu items support multi-line text */
+.ant-layout-sider .ant-menu-item,
+.ant-layout-sider .ant-menu-submenu-title {
   white-space: normal !important;
   word-wrap: break-word !important;
   line-height: 1.5 !important;
@@ -98,32 +99,33 @@
   min-height: 48px !important;
 }
 
-.ant-menu-item span, .ant-menu-submenu-title span {
+.ant-layout-sider .ant-menu-item span,
+.ant-layout-sider .ant-menu-submenu-title span {
   display: block !important;
 }
 
-/* Indent level 2 submenu items */
-.ant-menu-sub .ant-menu-item {
+/* Indent level 2 submenu items in sidebar */
+.ant-layout-sider .ant-menu-sub .ant-menu-item {
   padding-left: 48px !important;
 }
 
-/* Indent level 2 submenu titles */
-.ant-menu-sub .ant-menu-submenu-title {
+/* Indent level 2 submenu titles in sidebar */
+.ant-layout-sider .ant-menu-sub .ant-menu-submenu-title {
   padding-left: 48px !important;
 }
 
-/* Indent level 3 submenu items */
-.ant-menu-sub .ant-menu-sub .ant-menu-item {
+/* Indent level 3 submenu items in sidebar */
+.ant-layout-sider .ant-menu-sub .ant-menu-sub .ant-menu-item {
   padding-left: 64px !important;
 }
 
-/* Indent level 3 submenu titles */
-.ant-menu-sub .ant-menu-sub .ant-menu-submenu-title {
+/* Indent level 3 submenu titles in sidebar */
+.ant-layout-sider .ant-menu-sub .ant-menu-sub .ant-menu-submenu-title {
   padding-left: 64px !important;
 }
 
-/* Indent level 4 submenu items (if needed) */
-.ant-menu-sub .ant-menu-sub .ant-menu-sub .ant-menu-item {
+/* Indent level 4 submenu items in sidebar (if needed) */
+.ant-layout-sider .ant-menu-sub .ant-menu-sub .ant-menu-sub .ant-menu-item {
   padding-left: 80px !important;
 }
 
