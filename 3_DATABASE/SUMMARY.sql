@@ -18050,31 +18050,31 @@ INSERT INTO MATH_CATEGORIES (CATEGORY_CODE, FULL_PATH, CATEGORY_NAME, CATEGORY_D
 	-- Child: 1.3.5. Tìm số trừ của 2 hoặc nhiều số
 	('CALCULATION_SUBTRAHEND', 'toan/lop-1', 'Tìm số trừ của 2 hoặc nhiều số', 'Tìm số trừ của 2 hoặc nhiều số', 'CALCULATION', 'ACTIVE', NULL, NULL),
 
-	-- Child: 2.1. Tìm số qua một phép tính
-	('UNKNOWN_NUMBER_SINGLE_CALC', 'toan/lop-1', 'Tìm số qua một phép tính', 'Tìm số qua một phép tính', 'MATH_WORD_PROBLEMS', 'ACTIVE', NULL, NULL),
-	-- Child: 2.2. Tìm số qua nhiều phép tính
-	('UNKNOWN_NUMBER_MULTI_CALC', 'toan/lop-1', 'Tìm số qua nhiều phép tính', 'Cần thực hiện từ hai phép tính trở lên để tìm số.', 'MATH_WORD_PROBLEMS', 'ACTIVE', NULL, NULL),
-	-- Child: 2.3. Tìm hai số khi biết tổng và hiệu
-	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'toan/lop-1', 'Tìm hai số khi biết tổng và hiệu', 'Biết tổng và hiệu của hai số, tìm hai số đó.', 'MATH_WORD_PROBLEMS', 'ACTIVE', NULL, NULL),
-	-- Child: 2.4. Tìm hai số khi biết tổng và hiệu qua biểu thức
-	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'toan/lop-1', 'Tìm hai số khi biết tổng và hiệu qua biểu thức', 'Tính tổng hoặc hiệu từ biểu thức đã cho, sau đó tìm hai số.', 'MATH_WORD_PROBLEMS', 'ACTIVE', NULL, NULL),
-
-	-- Child: 2.5. Hai bước cộng
-	('MULTI_STEP_ADD_ADD', 'toan/lop-1', 'Hai bước cộng', 'Thực hiện hai lần thêm vào.', 'MATH_WORD_PROBLEMS', 'ACTIVE', NULL, NULL),
-	-- Child: 2.6. Hai bước trừ
-	('MULTI_STEP_SUB_SUB', 'toan/lop-1', 'Hai bước trừ', 'Thực hiện hai lần bớt đi.', 'MATH_WORD_PROBLEMS', 'ACTIVE', NULL, NULL),
-	-- Child: 2.7. Cộng rồi trừ
-	('MULTI_STEP_ADD_SUB', 'toan/lop-1', 'Cộng rồi trừ', 'Trước tiên thêm vào, sau đó bớt đi.', 'MATH_WORD_PROBLEMS', 'ACTIVE', NULL, NULL),
-	-- Child: 2.8. Trừ rồi cộng
-	('MULTI_STEP_SUB_ADD', 'toan/lop-1', 'Trừ rồi cộng', 'Trước tiên bớt đi, sau đó thêm vào.', 'MATH_WORD_PROBLEMS', 'ACTIVE', NULL, NULL),
-	-- Child: 2.9. Thay đổi liên tiếp
-	('MULTI_STEP_SEQUENTIAL', 'toan/lop-1', 'Cộng trừ nhiều bước', 'Cộng trừ nhiều bước', 'MATH_WORD_PROBLEMS', 'ACTIVE', NULL, NULL),
-	-- Child: 5.6. Nhiều đối tượng
-	('MULTI_STEP_MULTI_OBJECT', 'toan/lop-1', 'Nhiều đối tượng', 'Có nhiều người, vật hoặc nhóm cần theo dõi cùng lúc.', 'MATH_WORD_PROBLEMS', 'ACTIVE', NULL, NULL),
-	-- Child: 5.7. Chọn đúng thứ tự tính
-	('MULTI_STEP_ORDER', 'toan/lop-1', 'Chọn đúng thứ tự tính', 'Phải xác định bước nào làm trước, bước nào làm sau.', 'MATH_WORD_PROBLEMS', 'ACTIVE', NULL, NULL),
-	-- Child: 5.8. Bài toán có dữ kiện thừa
-	('MULTI_STEP_EXTRA_DATA', 'toan/lop-1', 'Bài toán có dữ kiện thừa', 'Có thông tin không cần dùng và phải biết bỏ qua.', 'MATH_WORD_PROBLEMS', 'ACTIVE', NULL, NULL);
+	-- Parent: 2.1. Tìm số chưa biết
+	('UNKNOWN_NUMBER', 'toan/lop-1', '2.1. Tìm số chưa biết', 'Tìm số chưa biết thông qua một hoặc nhiều phép tính, hoặc dựa vào tổng và hiệu của hai số.', 'MATH_WORD_PROBLEMS', 'ACTIVE', NULL, NULL),
+	-- Child: 2.1.1. Tìm số qua một phép tính
+	('UNKNOWN_NUMBER_SINGLE_CALC', 'toan/lop-1', '2.1.1. Tìm số qua một phép tính', 'Tìm số chưa biết bằng cách thực hiện một phép tính cộng hoặc trừ.', 'UNKNOWN_NUMBER', 'ACTIVE', NULL, NULL),
+	-- Child: 2.1.2. Tìm số qua nhiều phép tính
+	('UNKNOWN_NUMBER_MULTI_CALC', 'toan/lop-1', '2.1.2. Tìm số qua nhiều phép tính', 'Tìm số chưa biết bằng cách thực hiện từ hai phép tính trở lên.', 'UNKNOWN_NUMBER', 'ACTIVE', NULL, NULL),
+	-- Child: 2.1.3. Tìm hai số khi biết tổng và hiệu
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'toan/lop-1', '2.1.3. Tìm hai số khi biết tổng và hiệu', 'Biết tổng và hiệu của hai số, tìm hai số đó.', 'UNKNOWN_NUMBER', 'ACTIVE', NULL, NULL),
+	-- Child: 2.1.4. Tìm hai số khi biết tổng và hiệu qua biểu thức
+	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'toan/lop-1', '2.1.4. Tìm hai số khi biết tổng và hiệu qua biểu thức', 'Tính tổng hoặc hiệu từ biểu thức đã cho, sau đó tìm hai số.', 'UNKNOWN_NUMBER', 'ACTIVE', NULL, NULL),
+	
+	-- Parent: 2.2. Bài toán giải bằng nhiều bước
+	('MULTI_STEP', 'toan/lop-1', '2.2. Bài toán giải bằng nhiều bước', 'Giải bài toán có lời văn bằng cách thực hiện từ hai phép tính trở lên.', 'MATH_WORD_PROBLEMS', 'ACTIVE', NULL, NULL),
+	-- Child: 2.2.1. Hai bước cộng
+	('MULTI_STEP_ADD_ADD', 'toan/lop-1', '2.2.1. Hai bước cộng', 'Thực hiện hai lần thêm vào.', 'MULTI_STEP', 'ACTIVE', NULL, NULL),
+	-- Child: 2.2.2. Hai bước trừ
+	('MULTI_STEP_SUB_SUB', 'toan/lop-1', '2.2.2. Hai bước trừ', 'Thực hiện hai lần bớt đi.', 'MULTI_STEP', 'ACTIVE', NULL, NULL),
+	-- Child: 2.2.3. Cộng rồi trừ
+	('MULTI_STEP_ADD_SUB', 'toan/lop-1', '2.2.3. Cộng rồi trừ', 'Trước tiên thêm vào, sau đó bớt đi.', 'MULTI_STEP', 'ACTIVE', NULL, NULL),
+	-- Child: 2.2.4. Trừ rồi cộng
+	('MULTI_STEP_SUB_ADD', 'toan/lop-1', '2.2.4. Trừ rồi cộng', 'Trước tiên bớt đi, sau đó thêm vào.', 'MULTI_STEP', 'ACTIVE', NULL, NULL),
+	-- Child: 2.2.5. Thay đổi liên tiếp
+	('MULTI_STEP_SEQUENTIAL', 'toan/lop-1', '2.2.5. Thay đổi liên tiếp', 'Giải bài toán có số lượng thay đổi qua nhiều bước liên tiếp.', 'MULTI_STEP', 'ACTIVE', NULL, NULL),
+	-- Child: 2.2.6. Bài toán có dữ kiện thừa
+	('MULTI_STEP_EXTRA_DATA', 'toan/lop-1', '2.2.6. Bài toán có dữ kiện thừa', 'Xác định dữ kiện cần thiết và bỏ qua thông tin không cần dùng để giải bài toán.', 'MULTI_STEP', 'ACTIVE', NULL, NULL);
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	/* (UUID(),'esl-fast-beginner-1-1','Going to the Zoo','Đi tới sở thú','ESL_FAST_BEGINNER_1_001.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-beginner-1',1,1,1) */
@@ -74394,7 +74394,7 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE,ANSWER_TEXT,ANSWER_TEXT_VI,IS_COR
 	('Q-4000-essential-english-words-1-30-050','B','Beth sold a cat to the man','Beth bán một con mèo cho người đàn ông','N',2,NULL,NULL,NULL,NULL),
 	('Q-4000-essential-english-words-1-30-050','C','The judge bought the pig','Quan tòa mua con heo','N',3,NULL,NULL,NULL,NULL),
 	('Q-4000-essential-english-words-1-30-050','D','The people learned how to sell animals','Mọi người học cách bán động vật','N',4,NULL,NULL,NULL,NULL);
--- Child: 1.1. Sắp xếp các số
+-- Child: 1.1.1 Sắp xếp các số
 INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
 	('NUMBER_BASIC_SORT', 'NUMBER_BASIC_SORT_001', 'Cho các số 4, 1, 7, 3, 5. Sắp xếp các số theo thứ tự từ bé đến lớn. Thứ tự nào đúng?', 1, 'ACTIVE', NULL, NULL),
 	('NUMBER_BASIC_SORT', 'NUMBER_BASIC_SORT_002', 'Cho các số 9, 2, 6, 4, 1. Sắp xếp các số theo thứ tự từ lớn đến bé. Thứ tự nào đúng?', 1, 'ACTIVE', NULL, NULL),
@@ -74440,7 +74440,7 @@ INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICU
 	('NUMBER_BASIC_SORT', 'NUMBER_BASIC_SORT_039', 'Cho các số 6, 29, 45, 18, 34, 11, 50, 22. Sắp xếp các số theo thứ tự từ bé đến lớn. Thứ tự nào đúng?', 4, 'ACTIVE', NULL, NULL),
 	('NUMBER_BASIC_SORT', 'NUMBER_BASIC_SORT_040', 'Cho các số 40, 13, 27, 5, 48, 32, 17, 44. Sắp xếp các số theo thứ tự từ lớn đến bé. Thứ tự nào đúng?', 4, 'ACTIVE', NULL, NULL);
 
--- Child: 1.2. Tìm số chẵn, số lẻ trong dãy số
+-- Child: 1.2.1. Tìm số chẵn, số lẻ trong dãy số
 INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
 	('NUMBER_BASIC_EVEN_ODD', 'NUMBER_BASIC_EVEN_ODD_001', 'Cho các số 2, 5, 8, 11, 14. Hãy liệt kê tất cả các số chẵn trong các số đã cho.', 1, 'ACTIVE', NULL, NULL),
 	('NUMBER_BASIC_EVEN_ODD', 'NUMBER_BASIC_EVEN_ODD_002', 'Cho các số 3, 6, 9, 12, 15. Hãy liệt kê tất cả các số lẻ trong các số đã cho.', 1, 'ACTIVE', NULL, NULL),
@@ -74486,7 +74486,7 @@ INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICU
 	('NUMBER_BASIC_EVEN_ODD', 'NUMBER_BASIC_EVEN_ODD_039', 'Cho các số 7, 12, 15, 20, 23, 28, 31, 36. Có bao nhiêu số lẻ và số chẵn nhỏ nhất là số nào?', 4, 'ACTIVE', NULL, NULL),
 	('NUMBER_BASIC_EVEN_ODD', 'NUMBER_BASIC_EVEN_ODD_040', 'Cho các số 5, 10, 17, 22, 27, 32, 35, 40. Có bao nhiêu số chẵn và số lẻ nhỏ nhất là số nào?', 4, 'ACTIVE', NULL, NULL);
 
--- Child: 1.3. Tìm số với quy luật dãy số tăng đều
+-- Child: 1.2.2. Tìm số với quy luật dãy số tăng đều
 INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
 	('NUMBER_PATTERN_ADD_EQUAL', 'NUMBER_PATTERN_ADD_EQUAL_001', '2, 3, 4, 5, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
 	('NUMBER_PATTERN_ADD_EQUAL', 'NUMBER_PATTERN_ADD_EQUAL_002', '5, 6, 7, 8, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
@@ -74532,7 +74532,7 @@ INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICU
 	('NUMBER_PATTERN_ADD_EQUAL', 'NUMBER_PATTERN_ADD_EQUAL_039', '?, 14, 24, 34, 44, 54. Số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
 	('NUMBER_PATTERN_ADD_EQUAL', 'NUMBER_PATTERN_ADD_EQUAL_040', '?, 13, 22, 31, 40, 49. Số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL);
 
--- Child: 1.4. Tìm số với quy luật dãy số tăng không đều
+-- Child: 1.2.3. Tìm số với quy luật dãy số tăng không đều
 INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
 	('NUMBER_PATTERN_INCREASING', 'NUMBER_PATTERN_INCREASING_001', '1, 2, 4, 7, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
 	('NUMBER_PATTERN_INCREASING', 'NUMBER_PATTERN_INCREASING_002', '2, 3, 5, 8, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
@@ -74578,7 +74578,7 @@ INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICU
 	('NUMBER_PATTERN_INCREASING', 'NUMBER_PATTERN_INCREASING_039', '2, 7, 13, 20, 28, 37, ?, số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
 	('NUMBER_PATTERN_INCREASING', 'NUMBER_PATTERN_INCREASING_040', '3, 8, 14, 21, 29, 38, ?, số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL);
 
--- Child: 1.5. Tìm số với quy luật dãy số giảm đều
+-- Child: 1.2.4. Tìm số với quy luật dãy số giảm đều
 INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
 	('NUMBER_PATTERN_SUB_EQUAL', 'NUMBER_PATTERN_SUB_EQUAL_001', '10, 9, 8, 7, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
 	('NUMBER_PATTERN_SUB_EQUAL', 'NUMBER_PATTERN_SUB_EQUAL_002', '15, 14, 13, 12, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
@@ -74624,7 +74624,7 @@ INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICU
 	('NUMBER_PATTERN_SUB_EQUAL', 'NUMBER_PATTERN_SUB_EQUAL_039', '55, 50, 45, 40, ?, 30. Số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
 	('NUMBER_PATTERN_SUB_EQUAL', 'NUMBER_PATTERN_SUB_EQUAL_040', '70, 64, ?, 52, 46, 40. Số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL);
 	
--- Child: 1.6. Tìm số với quy luật dãy số giảm không đều
+-- Child: 1.2.5. Tìm số với quy luật dãy số giảm không đều
 INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
 	('NUMBER_PATTERN_DECREASING', 'NUMBER_PATTERN_DECREASING_001', '20, 19, 17, 14, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
 	('NUMBER_PATTERN_DECREASING', 'NUMBER_PATTERN_DECREASING_002', '25, 23, 20, 16, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
@@ -74670,7 +74670,7 @@ INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICU
 	('NUMBER_PATTERN_DECREASING', 'NUMBER_PATTERN_DECREASING_039', '75, ?, 66, 60, 53, 45, 36. Số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
 	('NUMBER_PATTERN_DECREASING', 'NUMBER_PATTERN_DECREASING_040', '80, 76, 71, 65, ?, 50, 41. Số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL);
 
--- Child: 1.7. Tìm số với quy luật dãy số tăng/giảm xen kẽ
+-- Child: 1.2.6. Tìm số với quy luật dãy số tăng/giảm xen kẽ
 INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
 	('NUMBER_PATTERN_ALTERNATE', 'NUMBER_PATTERN_ALTERNATE_001', '4, 6, 5, 7, 6, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
 	('NUMBER_PATTERN_ALTERNATE', 'NUMBER_PATTERN_ALTERNATE_002', '6, 9, 8, 11, 10, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
@@ -74716,7 +74716,7 @@ INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICU
 	('NUMBER_PATTERN_ALTERNATE', 'NUMBER_PATTERN_ALTERNATE_039', '30, 34, 32, 36, 34, 38, 36, ?, số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL),
 	('NUMBER_PATTERN_ALTERNATE', 'NUMBER_PATTERN_ALTERNATE_040', '35, 38, 37, 40, 39, 42, 41, ?, số nào thích hợp điền vào dấu ?', 4, 'ACTIVE', NULL, NULL);
 
--- Child: 1.8. Tìm số với quy luật dãy số lặp lại
+-- Child: 1.2.7. Tìm số với quy luật dãy số lặp lại
 INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
 	('NUMBER_PATTERN_REPEAT', 'NUMBER_PATTERN_REPEAT_001', 'Dãy số 2, 4, 2, 4, 2, __. Số thích hợp điền vào chỗ trống là số nào?', 1, 'ACTIVE', NULL, NULL),
 	('NUMBER_PATTERN_REPEAT', 'NUMBER_PATTERN_REPEAT_002', 'Dãy số 1, 3, 1, 3, 1, __. Số thích hợp điền vào chỗ trống là số nào?', 1, 'ACTIVE', NULL, NULL),
@@ -74762,7 +74762,7 @@ INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICU
 	('NUMBER_PATTERN_REPEAT', 'NUMBER_PATTERN_REPEAT_039', 'Dãy số 7, 14, 21, 28, 7, 14, 21, 28, 7, __. Số thích hợp điền vào chỗ trống là số nào?', 4, 'ACTIVE', NULL, NULL),
 	('NUMBER_PATTERN_REPEAT', 'NUMBER_PATTERN_REPEAT_040', 'Dãy số 30, 25, 20, 15, 30, 25, 20, 15, 30, __, __. Hai số thích hợp lần lượt là số nào?', 4, 'ACTIVE', NULL, NULL);
 	
--- Child: 1.9. Tìm số ở giữa một dãy số có quy luật
+-- Child: 1.2.8 Tìm số ở giữa một dãy số có quy luật
 INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
 	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_001', '1, 2, ?, 4, 5, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
 	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_002', '5, 6, 7, ?, 9, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
@@ -74809,7 +74809,7 @@ INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICU
 	('NUMBER_PATTERN_MISSING', 'NUMBER_PATTERN_MISSING_040', '40, ?, 32, ?, 24, số nào thích hợp điền vào hai dấu ?', 4, 'ACTIVE', NULL, NULL);
 
 
--- Child: 1.10. Tính tổng của hai hoặc nhiều số
+-- Child: 1.3.1. Tìm tổng của hai hoặc nhiều số
 INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
 	('CALCULATION_ADDITION', 'CALCULATION_ADDITION_001', '3 + 4 = ?', 1, 'ACTIVE', NULL, NULL),
 	('CALCULATION_ADDITION', 'CALCULATION_ADDITION_002', '6 + 7 = ?', 1, 'ACTIVE', NULL, NULL),
@@ -74873,7 +74873,7 @@ INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICU
 	('CALCULATION_ADDITION', 'CALCULATION_ADDITION_059', '26 + 24 + 17 = ?', 4, 'ACTIVE', NULL, NULL),
 	('CALCULATION_ADDITION', 'CALCULATION_ADDITION_060', '15 + 29 + 34 = ?', 4, 'ACTIVE', NULL, NULL);
 
--- Child: 1.11. Tìm hiệu của hai hoặc nhiều số
+-- Child: 1.3.2. Tìm hiệu của hai hoặc nhiều số
 INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
 	('CALCULATION_SUBTRACTION', 'CALCULATION_SUBTRACTION_001', '8 - 3 = ?', 1, 'ACTIVE', NULL, NULL),
 	('CALCULATION_SUBTRACTION', 'CALCULATION_SUBTRACTION_002', '9 - 4 = ?', 1, 'ACTIVE', NULL, NULL),
@@ -74939,7 +74939,7 @@ INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICU
 	('CALCULATION_SUBTRACTION', 'CALCULATION_SUBTRACTION_059', '88 - 26 - 17 = ?', 4, 'ACTIVE', NULL, NULL),
 	('CALCULATION_SUBTRACTION', 'CALCULATION_SUBTRACTION_060', '76 - 18 - 29 = ?', 4, 'ACTIVE', NULL, NULL);
 
--- Child: 1.12. Tìm kết quả của phép tính kết hợp + và -
+-- Child: 1.3.3. Tìm kết quả của phép tính kết hợp + và -
 INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
     ('CALCULATION_MIXED_ADDITION_SUBTRACTION', 'CALCULATION_MIXED_ADDITION_SUBTRACTION_001', '5 + 3 - 2 = ? Số thích hợp điền vào dấu ? là:', 1, 'ACTIVE', NULL, NULL),
     ('CALCULATION_MIXED_ADDITION_SUBTRACTION', 'CALCULATION_MIXED_ADDITION_SUBTRACTION_002', '9 - 4 + 2 = ? Số thích hợp điền vào dấu ? là:', 1, 'ACTIVE', NULL, NULL),
@@ -74985,7 +74985,7 @@ INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICU
     ('CALCULATION_MIXED_ADDITION_SUBTRACTION', 'CALCULATION_MIXED_ADDITION_SUBTRACTION_039', '68 + 17 - 39 = ? Số thích hợp điền vào dấu ? là:', 4, 'ACTIVE', NULL, NULL),
     ('CALCULATION_MIXED_ADDITION_SUBTRACTION', 'CALCULATION_MIXED_ADDITION_SUBTRACTION_040', '85 - 38 + 21 = ? Số thích hợp điền vào dấu ? là:', 4, 'ACTIVE', NULL, NULL);
 
--- Child: 1.13. Tìm số bị trừ khi biết số trừ và hiệu
+-- Child: 1.3.4. Tìm số bị trừ của 2 hoặc nhiều số
 INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
 	('CALCULATION_MINUEND', 'CALCULATION_MINUEND_001', '? - 5 = 8. Số thích hợp điền vào dấu ? là:', 1, 'ACTIVE', NULL, NULL),
 	('CALCULATION_MINUEND', 'CALCULATION_MINUEND_002', '? - 4 = 9. Số thích hợp điền vào dấu ? là:', 1, 'ACTIVE', NULL, NULL),
@@ -75061,7 +75061,7 @@ INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICU
     ('CALCULATION_MINUEND', 'CALCULATION_MINUEND_069', '? - 28 - 33 = 35. Số thích hợp điền vào dấu ? là:', 4, 'ACTIVE', NULL, NULL),
     ('CALCULATION_MINUEND', 'CALCULATION_MINUEND_070', '? - 16 - 29 = 29. Số thích hợp điền vào dấu ? là:', 4, 'ACTIVE', NULL, NULL);
 
--- Child: 1.14. Tìm số trừ của 2 hoặc nhiều số
+-- Child: 1.3.5. Tìm số trừ của 2 hoặc nhiều số
 INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
 	('CALCULATION_SUBTRAHEND', 'CALCULATION_SUBTRAHEND_001', '8 - ? = 5', 1, 'ACTIVE', NULL, NULL),
 	('CALCULATION_SUBTRAHEND', 'CALCULATION_SUBTRAHEND_002', '9 - ? = 4', 1, 'ACTIVE', NULL, NULL),
@@ -75107,7 +75107,7 @@ INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICU
 	('CALCULATION_SUBTRAHEND', 'CALCULATION_SUBTRAHEND_039', '88 - ? - 17 = 26', 4, 'ACTIVE', NULL, NULL),
 	('CALCULATION_SUBTRAHEND', 'CALCULATION_SUBTRAHEND_040', '76 - ? - 29 = 18', 4, 'ACTIVE', NULL, NULL);
 
--- Child: 2.1. Tìm số qua một phép tính
+-- Child: 2.1.1. Tìm số qua một phép tính
 INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
 	('UNKNOWN_NUMBER_SINGLE_CALC', 'UNKNOWN_NUMBER_SINGLE_CALC_001', 'Một số cộng 2 được 10. Số đó là số nào?', 1, 'ACTIVE', NULL, NULL),
 	('UNKNOWN_NUMBER_SINGLE_CALC', 'UNKNOWN_NUMBER_SINGLE_CALC_002', 'Một số trừ 2 được 8. Số đó là số nào?', 1, 'ACTIVE', NULL, NULL),
@@ -75150,7 +75150,7 @@ INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICU
 	('UNKNOWN_NUMBER_SINGLE_CALC', 'UNKNOWN_NUMBER_SINGLE_CALC_039', 'Một số cộng 19 được 98. Số đó là số nào?', 4, 'ACTIVE', NULL, NULL),
 	('UNKNOWN_NUMBER_SINGLE_CALC', 'UNKNOWN_NUMBER_SINGLE_CALC_040', 'Một số trừ 18 được 76. Số đó là số nào?', 4, 'ACTIVE', NULL, NULL);
 
--- Child: 2.2. Tìm số qua nhiều phép tính
+-- Child: 2.1.2. Tìm số qua nhiều phép tính
 INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
 	('UNKNOWN_NUMBER_MULTI_CALC', 'UNKNOWN_NUMBER_MULTI_CALC_001', 'Một số cộng 2 rồi trừ 1 được 6. Số đó là số nào?', 1, 'ACTIVE', NULL, NULL),
 	('UNKNOWN_NUMBER_MULTI_CALC', 'UNKNOWN_NUMBER_MULTI_CALC_002', 'Biết một số cộng 3, sau đó trừ 1 thì được 5. Tìm số đó.', 1, 'ACTIVE', NULL, NULL),
@@ -75196,7 +75196,7 @@ INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICU
 	('UNKNOWN_NUMBER_MULTI_CALC', 'UNKNOWN_NUMBER_MULTI_CALC_039', '□ + 17 - 8 = 69. Số thích hợp điền vào ô □ là số nào?', 4, 'ACTIVE', NULL, NULL),
 	('UNKNOWN_NUMBER_MULTI_CALC', 'UNKNOWN_NUMBER_MULTI_CALC_040', 'Có một số. Lấy số đó cộng 23 rồi bớt 9 thì được 65. Số ban đầu là bao nhiêu?', 4, 'ACTIVE', NULL, NULL);
 
--- Child: 4.2. Tìm hai số khi biết tổng và hiệu
+-- Child: 2.1.3. Tìm hai số khi biết tổng và hiệu
 INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
 	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_001', 'Tìm hai số biết rằng tổng của hai số là 7 và hiệu của hai số là 1. Hai số đó là hai số nào?', 1, 'ACTIVE', NULL, NULL),
 	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_002', 'Biết tổng của hai số là 8, hiệu của hai số là 2. Hãy tìm hai số đó.', 1, 'ACTIVE', NULL, NULL),
@@ -75239,53 +75239,8 @@ INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICU
 	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_039', 'Hai số có tổng bằng 100 và số lớn hơn số bé 40 đơn vị. Hai số đó là số nào?', 4, 'ACTIVE', NULL, NULL),
 	('UNKNOWN_NUMBER_SUM_DIFFERENCE', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_040', 'Tìm hai số, biết số lớn hơn số bé 18 đơn vị và tổng của hai số bằng 88.', 4, 'ACTIVE', NULL, NULL);
 
--- Child: 2.5. Hai bước cộng
-INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_001', 'Nam có 2 quả táo. Mẹ cho Nam thêm 3 quả táo, sau đó bố cho thêm 1 quả nữa. Hỏi Nam có tất cả bao nhiêu quả táo?', 1, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_002', 'Lan có 4 bông hoa. Cô cho Lan thêm 2 bông, sau đó bạn Mai cho thêm 1 bông nữa. Hỏi Lan có tất cả bao nhiêu bông hoa?', 1, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_003', 'Bình có 3 viên bi. Bố cho Bình thêm 2 viên, rồi anh cho thêm 2 viên nữa. Hỏi Bình có tất cả bao nhiêu viên bi?', 1, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_004', 'Trong bể có 5 con cá. Mẹ thả thêm 1 con cá, sau đó thả thêm 2 con nữa. Hỏi trong bể có tất cả bao nhiêu con cá?', 1, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_005', 'Mai có 3 chiếc bút. Cô giáo cho Mai thêm 2 chiếc, rồi mẹ cho thêm 3 chiếc nữa. Hỏi Mai có tất cả bao nhiêu chiếc bút?', 1, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_006', 'Trong giỏ có 2 quả cam. Mẹ đặt thêm 4 quả cam vào giỏ, sau đó đặt thêm 1 quả nữa. Hỏi trong giỏ có tất cả bao nhiêu quả cam?', 1, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_007', 'An có 5 chiếc kẹo. Bà cho An thêm 2 chiếc, rồi mẹ cho thêm 1 chiếc nữa. Hỏi An có tất cả bao nhiêu chiếc kẹo?', 1, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_008', 'Trên cành có 3 con chim. Có thêm 3 con bay đến, sau đó thêm 1 con nữa. Hỏi trên cành có tất cả bao nhiêu con chim?', 1, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_009', 'Hoa có 4 quyển truyện. Chị cho Hoa thêm 2 quyển, rồi bố cho thêm 2 quyển nữa. Hỏi Hoa có tất cả bao nhiêu quyển truyện?', 1, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_010', 'Trong hộp có 1 chiếc xe đồ chơi. Nam đặt thêm 3 chiếc vào hộp, sau đó đặt thêm 2 chiếc nữa. Hỏi trong hộp có tất cả bao nhiêu chiếc xe đồ chơi?', 1, 'ACTIVE', NULL, NULL),
 
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_011', 'Trên bàn có 5 quyển vở. Buổi sáng cô đặt thêm 3 quyển, đến chiều cô đặt thêm 2 quyển nữa. Hỏi trên bàn có tất cả bao nhiêu quyển vở?', 2, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_012', 'Một giỏ có 4 quả táo. Mẹ đặt thêm 3 quả vào giỏ, sau đó bố đặt thêm 2 quả nữa. Hỏi trong giỏ có tất cả bao nhiêu quả táo?', 2, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_013', 'Minh có 6 chiếc tem. Bạn cho Minh thêm 2 chiếc tem, sau đó cô giáo cho thêm 3 chiếc nữa. Hỏi Minh có tất cả bao nhiêu chiếc tem?', 2, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_014', 'Trong sân có 5 quả bóng. Nam mang thêm 4 quả ra sân, sau đó Minh mang thêm 2 quả nữa. Hỏi trong sân có tất cả bao nhiêu quả bóng?', 2, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_015', 'Một lớp có 7 bạn đang chơi. Có thêm 2 bạn tham gia, sau đó thêm 3 bạn nữa. Hỏi lúc này có tất cả bao nhiêu bạn đang chơi?', 2, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_016', 'Trong tủ có 3 chiếc cốc. Mẹ đặt thêm 4 chiếc vào tủ, rồi bố đặt thêm 2 chiếc nữa. Hỏi trong tủ có tất cả bao nhiêu chiếc cốc?', 2, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_017', 'Có 6 con vịt dưới ao. Có thêm 3 con bơi đến, sau đó thêm 2 con nữa. Hỏi dưới ao có tất cả bao nhiêu con vịt?', 2, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_018', 'Một hộp có 5 viên phấn. Cô giáo cho thêm 4 viên, sau đó cho thêm 3 viên nữa. Hỏi trong hộp có tất cả bao nhiêu viên phấn?', 2, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_019', 'Nam có 4 chiếc ô tô đồ chơi. Sinh nhật Nam được tặng thêm 3 chiếc, sau đó bố mua thêm 4 chiếc nữa. Hỏi Nam có tất cả bao nhiêu chiếc ô tô đồ chơi?', 2, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_020', 'Trên giá có 6 quyển sách. Mẹ đặt thêm 4 quyển sách, sau đó bố đặt thêm 3 quyển nữa. Hỏi trên giá có tất cả bao nhiêu quyển sách?', 2, 'ACTIVE', NULL, NULL),
-
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_021', 'Một cửa hàng có 6 chiếc bánh. Buổi sáng cửa hàng nhập thêm 4 chiếc bánh. Đến chiều, cửa hàng nhập thêm 3 chiếc nữa. Hỏi sau hai lần nhập, cửa hàng có tất cả bao nhiêu chiếc bánh?', 3, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_022', 'Trong vườn có 7 bông hoa. Người làm vườn trồng thêm 3 bông vào buổi sáng, sau đó trồng thêm 4 bông vào buổi chiều. Hỏi trong vườn có tất cả bao nhiêu bông hoa?', 3, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_023', 'Một hộp có 8 chiếc bút màu. Cô giáo cho thêm 3 chiếc vào hộp, sau đó bạn Lan cho thêm 2 chiếc nữa. Hỏi trong hộp có tất cả bao nhiêu chiếc bút màu?', 3, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_024', 'Có 5 con chim trên cành. Lúc đầu có thêm 4 con bay đến, sau đó thêm 5 con nữa bay đến. Hỏi trên cành lúc này có tất cả bao nhiêu con chim?', 3, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_025', 'Một thư viện có 7 quyển truyện thiếu nhi. Buổi sáng thư viện nhận thêm 3 quyển, đến chiều nhận thêm 5 quyển nữa. Hỏi thư viện có tất cả bao nhiêu quyển truyện thiếu nhi?', 3, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_026', 'Trong bể có 6 con cá vàng. Bố thả thêm 5 con cá, sau đó mẹ thả thêm 3 con nữa. Hỏi trong bể có tất cả bao nhiêu con cá vàng?', 3, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_027', 'Một lớp có 8 chiếc hộp bút màu. Cô giáo mang thêm 2 chiếc hộp đến lớp, sau đó phụ huynh tặng thêm 4 chiếc nữa. Hỏi lớp có tất cả bao nhiêu chiếc hộp bút màu?', 3, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_028', 'Nam có 7 viên bi trong túi. Anh cho Nam thêm 4 viên, sau đó bố cho thêm 3 viên nữa. Hỏi trong túi Nam có tất cả bao nhiêu viên bi?', 3, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_029', 'Một cửa hàng có 5 chiếc xe đạp. Buổi sáng cửa hàng nhận thêm 5 chiếc, đến chiều nhận thêm 4 chiếc nữa. Hỏi cửa hàng có tất cả bao nhiêu chiếc xe đạp?', 3, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_030', 'Trên sân trường có 9 bạn đang chơi. Có thêm 2 bạn đến chơi, sau đó thêm 4 bạn nữa. Hỏi trên sân trường lúc này có tất cả bao nhiêu bạn?', 3, 'ACTIVE', NULL, NULL),
-
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_031', 'Trong giỏ có 7 quả cam. Buổi sáng mẹ đặt thêm 3 quả cam vào giỏ. Sau đó, bố đặt thêm 5 quả nữa. Hỏi sau cả hai lần thêm, trong giỏ có tất cả bao nhiêu quả cam?', 4, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_032', 'Một cửa hàng có 8 chiếc bánh. Cửa hàng nhập thêm 4 chiếc vào buổi sáng. Đến chiều, cửa hàng lại nhập thêm 3 chiếc nữa. Hỏi sau hai lần nhập hàng, cửa hàng có tất cả bao nhiêu chiếc bánh?', 4, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_033', 'Trên sân có 6 quả bóng. Nam mang thêm 5 quả bóng ra sân để chơi. Một lúc sau, Minh mang thêm 4 quả nữa. Hỏi sau hai lần mang bóng ra sân, trên sân có tất cả bao nhiêu quả bóng?', 4, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_034', 'Một giá sách có 7 quyển truyện. Mẹ đặt thêm 5 quyển vào giá. Sau đó bố đặt thêm 4 quyển nữa. Hỏi sau hai lần đặt thêm, giá sách có tất cả bao nhiêu quyển truyện?', 4, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_035', 'Trong vườn có 8 con bướm. Có 3 con bay đến vào buổi sáng. Một lúc sau, có thêm 5 con nữa bay đến. Hỏi trong vườn lúc này có tất cả bao nhiêu con bướm?', 4, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_036', 'Một hộp có 6 chiếc bút. Cô giáo cho thêm 5 chiếc bút vào hộp. Sau đó cô cho thêm 4 chiếc nữa. Hỏi sau hai lần thêm bút, trong hộp có tất cả bao nhiêu chiếc bút?', 4, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_037', 'Có 9 con chim trên cành. Buổi sáng có thêm 2 con bay đến. Sau đó có thêm 5 con nữa bay đến. Hỏi sau hai lần chim bay đến, trên cành có tất cả bao nhiêu con chim?', 4, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_038', 'Một giỏ có 7 quả táo. Mẹ đặt thêm 4 quả vào giỏ. Sau đó bố đặt thêm 5 quả nữa. Hỏi sau hai lần đặt thêm, trong giỏ có tất cả bao nhiêu quả táo?', 4, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_039', 'Nam có 8 chiếc xe đồ chơi. Anh cho Nam thêm 3 chiếc. Sau đó bố cho Nam thêm 5 chiếc nữa. Hỏi sau hai lần được cho thêm, Nam có tất cả bao nhiêu chiếc xe đồ chơi?', 4, 'ACTIVE', NULL, NULL),
-	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_040', 'Trong lớp có 6 hộp bút màu. Cô giáo mang thêm 5 hộp đến lớp. Sau đó phụ huynh tặng thêm 4 hộp nữa. Hỏi sau hai lần được thêm, lớp có tất cả bao nhiêu hộp bút màu?', 4, 'ACTIVE', NULL, NULL);
-
--- Child: 4.3. Tìm hai số khi biết tổng và hiệu qua biểu thức
+-- Child: 2.1.4. Tìm hai số khi biết tổng và hiệu qua biểu thức
 INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
 	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_001', 'Tìm hai số biết rằng tổng của chúng bằng số lớn nhất có một chữ số trừ đi 4, hiệu của chúng bằng 1.', 1, 'ACTIVE', NULL, NULL),
 	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_002', 'Tìm hai số biết rằng tổng của chúng bằng số lớn nhất có một chữ số, hiệu của chúng bằng số liền sau của số tự nhiên nhỏ nhất.', 1, 'ACTIVE', NULL, NULL),
@@ -75331,7 +75286,54 @@ INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICU
 	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_039', 'Tìm hai số biết rằng tổng của chúng bằng số lớn nhất có một chữ số cộng 84, hiệu của chúng bằng 30 trừ đi 9.', 4, 'ACTIVE', NULL, NULL),
 	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_040', 'Tìm hai số biết rằng tổng của chúng bằng 100 trừ đi số liền trước của 10, hiệu của chúng bằng 50 trừ đi 28.', 4, 'ACTIVE', NULL, NULL);
 
--- Child: 2.6. Hai bước trừ
+
+-- Child: 2.2.1. Hai bước cộng
+INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_001', 'Nam có 2 quả táo. Mẹ cho Nam thêm 3 quả táo, sau đó bố cho thêm 1 quả nữa. Hỏi Nam có tất cả bao nhiêu quả táo?', 1, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_002', 'Lan có 4 bông hoa. Cô cho Lan thêm 2 bông, sau đó bạn Mai cho thêm 1 bông nữa. Hỏi Lan có tất cả bao nhiêu bông hoa?', 1, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_003', 'Bình có 3 viên bi. Bố cho Bình thêm 2 viên, rồi anh cho thêm 2 viên nữa. Hỏi Bình có tất cả bao nhiêu viên bi?', 1, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_004', 'Trong bể có 5 con cá. Mẹ thả thêm 1 con cá, sau đó thả thêm 2 con nữa. Hỏi trong bể có tất cả bao nhiêu con cá?', 1, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_005', 'Mai có 3 chiếc bút. Cô giáo cho Mai thêm 2 chiếc, rồi mẹ cho thêm 3 chiếc nữa. Hỏi Mai có tất cả bao nhiêu chiếc bút?', 1, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_006', 'Trong giỏ có 2 quả cam. Mẹ đặt thêm 4 quả cam vào giỏ, sau đó đặt thêm 1 quả nữa. Hỏi trong giỏ có tất cả bao nhiêu quả cam?', 1, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_007', 'An có 5 chiếc kẹo. Bà cho An thêm 2 chiếc, rồi mẹ cho thêm 1 chiếc nữa. Hỏi An có tất cả bao nhiêu chiếc kẹo?', 1, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_008', 'Trên cành có 3 con chim. Có thêm 3 con bay đến, sau đó thêm 1 con nữa. Hỏi trên cành có tất cả bao nhiêu con chim?', 1, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_009', 'Hoa có 4 quyển truyện. Chị cho Hoa thêm 2 quyển, rồi bố cho thêm 2 quyển nữa. Hỏi Hoa có tất cả bao nhiêu quyển truyện?', 1, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_010', 'Trong hộp có 1 chiếc xe đồ chơi. Nam đặt thêm 3 chiếc vào hộp, sau đó đặt thêm 2 chiếc nữa. Hỏi trong hộp có tất cả bao nhiêu chiếc xe đồ chơi?', 1, 'ACTIVE', NULL, NULL),
+
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_011', 'Trên bàn có 5 quyển vở. Buổi sáng cô đặt thêm 3 quyển, đến chiều cô đặt thêm 2 quyển nữa. Hỏi trên bàn có tất cả bao nhiêu quyển vở?', 2, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_012', 'Một giỏ có 4 quả táo. Mẹ đặt thêm 3 quả vào giỏ, sau đó bố đặt thêm 2 quả nữa. Hỏi trong giỏ có tất cả bao nhiêu quả táo?', 2, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_013', 'Minh có 6 chiếc tem. Bạn cho Minh thêm 2 chiếc tem, sau đó cô giáo cho thêm 3 chiếc nữa. Hỏi Minh có tất cả bao nhiêu chiếc tem?', 2, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_014', 'Trong sân có 5 quả bóng. Nam mang thêm 4 quả ra sân, sau đó Minh mang thêm 2 quả nữa. Hỏi trong sân có tất cả bao nhiêu quả bóng?', 2, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_015', 'Một lớp có 7 bạn đang chơi. Có thêm 2 bạn tham gia, sau đó thêm 3 bạn nữa. Hỏi lúc này có tất cả bao nhiêu bạn đang chơi?', 2, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_016', 'Trong tủ có 3 chiếc cốc. Mẹ đặt thêm 4 chiếc vào tủ, rồi bố đặt thêm 2 chiếc nữa. Hỏi trong tủ có tất cả bao nhiêu chiếc cốc?', 2, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_017', 'Có 6 con vịt dưới ao. Có thêm 3 con bơi đến, sau đó thêm 2 con nữa. Hỏi dưới ao có tất cả bao nhiêu con vịt?', 2, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_018', 'Một hộp có 5 viên phấn. Cô giáo cho thêm 4 viên, sau đó cho thêm 3 viên nữa. Hỏi trong hộp có tất cả bao nhiêu viên phấn?', 2, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_019', 'Nam có 4 chiếc ô tô đồ chơi. Sinh nhật Nam được tặng thêm 3 chiếc, sau đó bố mua thêm 4 chiếc nữa. Hỏi Nam có tất cả bao nhiêu chiếc ô tô đồ chơi?', 2, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_020', 'Trên giá có 6 quyển sách. Mẹ đặt thêm 4 quyển sách, sau đó bố đặt thêm 3 quyển nữa. Hỏi trên giá có tất cả bao nhiêu quyển sách?', 2, 'ACTIVE', NULL, NULL),
+
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_021', 'Một cửa hàng có 6 chiếc bánh. Buổi sáng cửa hàng nhập thêm 4 chiếc bánh. Đến chiều, cửa hàng nhập thêm 3 chiếc nữa. Hỏi sau hai lần nhập, cửa hàng có tất cả bao nhiêu chiếc bánh?', 3, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_022', 'Trong vườn có 7 bông hoa. Người làm vườn trồng thêm 3 bông vào buổi sáng, sau đó trồng thêm 4 bông vào buổi chiều. Hỏi trong vườn có tất cả bao nhiêu bông hoa?', 3, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_023', 'Một hộp có 8 chiếc bút màu. Cô giáo cho thêm 3 chiếc vào hộp, sau đó bạn Lan cho thêm 2 chiếc nữa. Hỏi trong hộp có tất cả bao nhiêu chiếc bút màu?', 3, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_024', 'Có 5 con chim trên cành. Lúc đầu có thêm 4 con bay đến, sau đó thêm 5 con nữa bay đến. Hỏi trên cành lúc này có tất cả bao nhiêu con chim?', 3, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_025', 'Một thư viện có 7 quyển truyện thiếu nhi. Buổi sáng thư viện nhận thêm 3 quyển, đến chiều nhận thêm 5 quyển nữa. Hỏi thư viện có tất cả bao nhiêu quyển truyện thiếu nhi?', 3, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_026', 'Trong bể có 6 con cá vàng. Bố thả thêm 5 con cá, sau đó mẹ thả thêm 3 con nữa. Hỏi trong bể có tất cả bao nhiêu con cá vàng?', 3, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_027', 'Một lớp có 8 chiếc hộp bút màu. Cô giáo mang thêm 2 chiếc hộp đến lớp, sau đó phụ huynh tặng thêm 4 chiếc nữa. Hỏi lớp có tất cả bao nhiêu chiếc hộp bút màu?', 3, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_028', 'Nam có 7 viên bi trong túi. Anh cho Nam thêm 4 viên, sau đó bố cho thêm 3 viên nữa. Hỏi trong túi Nam có tất cả bao nhiêu viên bi?', 3, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_029', 'Một cửa hàng có 5 chiếc xe đạp. Buổi sáng cửa hàng nhận thêm 5 chiếc, đến chiều nhận thêm 4 chiếc nữa. Hỏi cửa hàng có tất cả bao nhiêu chiếc xe đạp?', 3, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_030', 'Trên sân trường có 9 bạn đang chơi. Có thêm 2 bạn đến chơi, sau đó thêm 4 bạn nữa. Hỏi trên sân trường lúc này có tất cả bao nhiêu bạn?', 3, 'ACTIVE', NULL, NULL),
+
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_031', 'Trong giỏ có 7 quả cam. Buổi sáng mẹ đặt thêm 3 quả cam vào giỏ. Sau đó, bố đặt thêm 5 quả nữa. Hỏi sau cả hai lần thêm, trong giỏ có tất cả bao nhiêu quả cam?', 4, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_032', 'Một cửa hàng có 8 chiếc bánh. Cửa hàng nhập thêm 4 chiếc vào buổi sáng. Đến chiều, cửa hàng lại nhập thêm 3 chiếc nữa. Hỏi sau hai lần nhập hàng, cửa hàng có tất cả bao nhiêu chiếc bánh?', 4, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_033', 'Trên sân có 6 quả bóng. Nam mang thêm 5 quả bóng ra sân để chơi. Một lúc sau, Minh mang thêm 4 quả nữa. Hỏi sau hai lần mang bóng ra sân, trên sân có tất cả bao nhiêu quả bóng?', 4, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_034', 'Một giá sách có 7 quyển truyện. Mẹ đặt thêm 5 quyển vào giá. Sau đó bố đặt thêm 4 quyển nữa. Hỏi sau hai lần đặt thêm, giá sách có tất cả bao nhiêu quyển truyện?', 4, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_035', 'Trong vườn có 8 con bướm. Có 3 con bay đến vào buổi sáng. Một lúc sau, có thêm 5 con nữa bay đến. Hỏi trong vườn lúc này có tất cả bao nhiêu con bướm?', 4, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_036', 'Một hộp có 6 chiếc bút. Cô giáo cho thêm 5 chiếc bút vào hộp. Sau đó cô cho thêm 4 chiếc nữa. Hỏi sau hai lần thêm bút, trong hộp có tất cả bao nhiêu chiếc bút?', 4, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_037', 'Có 9 con chim trên cành. Buổi sáng có thêm 2 con bay đến. Sau đó có thêm 5 con nữa bay đến. Hỏi sau hai lần chim bay đến, trên cành có tất cả bao nhiêu con chim?', 4, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_038', 'Một giỏ có 7 quả táo. Mẹ đặt thêm 4 quả vào giỏ. Sau đó bố đặt thêm 5 quả nữa. Hỏi sau hai lần đặt thêm, trong giỏ có tất cả bao nhiêu quả táo?', 4, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_039', 'Nam có 8 chiếc xe đồ chơi. Anh cho Nam thêm 3 chiếc. Sau đó bố cho Nam thêm 5 chiếc nữa. Hỏi sau hai lần được cho thêm, Nam có tất cả bao nhiêu chiếc xe đồ chơi?', 4, 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'MULTI_STEP_ADD_ADD_040', 'Trong lớp có 6 hộp bút màu. Cô giáo mang thêm 5 hộp đến lớp. Sau đó phụ huynh tặng thêm 4 hộp nữa. Hỏi sau hai lần được thêm, lớp có tất cả bao nhiêu hộp bút màu?', 4, 'ACTIVE', NULL, NULL);
+
+-- Child: 2.2.2. Hai bước trừ
 INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
 	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_001', 'Mai có 12 quả táo. Mai cho bạn 3 quả rồi ăn 2 quả. Hỏi Mai còn lại bao nhiêu quả táo?', 1, 'ACTIVE', NULL, NULL),
 	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_002', 'Nam có 15 viên bi. Nam cho em 4 viên rồi cho bạn 3 viên. Hỏi Nam còn lại bao nhiêu viên bi?', 1, 'ACTIVE', NULL, NULL),
@@ -75376,7 +75378,7 @@ INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICU
 	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_038', 'Một cửa hàng có 94 chiếc áo. Buổi sáng bán 37 chiếc, buổi chiều bán thêm 26 chiếc. Hỏi cửa hàng còn lại bao nhiêu chiếc áo?', 4, 'ACTIVE', NULL, NULL),
 	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_039', 'Một thư viện có 88 quyển truyện. Các bạn mượn 39 quyển vào ngày thứ nhất và 24 quyển vào ngày thứ hai. Hỏi thư viện còn lại bao nhiêu quyển truyện?', 4, 'ACTIVE', NULL, NULL),
 	('MULTI_STEP_SUB_SUB', 'MULTI_STEP_SUB_SUB_040', 'Một cửa hàng có 100 chiếc bánh. Buổi sáng bán 42 chiếc, buổi chiều bán thêm 31 chiếc. Hỏi cửa hàng còn lại bao nhiêu chiếc bánh?', 4, 'ACTIVE', NULL, NULL);
--- Child: 1.1. Sắp xếp các số
+-- Child: 1.1.1 Sắp xếp các số
 INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, CREATED_AT, UPDATED_AT) VALUES
 	('NUMBER_BASIC_SORT_001', 'A', '3, 1, 4, 5, 7', 'N', NULL, NULL),
 	('NUMBER_BASIC_SORT_001', 'B', '1, 4, 3, 5, 7', 'N', NULL, NULL),
@@ -75578,7 +75580,7 @@ INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, C
 	('NUMBER_BASIC_SORT_040', 'C', '48, 44, 40, 32, 27, 17, 13, 5', 'Y', NULL, NULL),
 	('NUMBER_BASIC_SORT_040', 'D', '48, 44, 32, 40, 27, 17, 13, 5', 'N', NULL, NULL);
 
--- Child: 1.2. Tìm số chẵn, số lẻ trong dãy số
+-- Child: 1.2.1. Tìm số chẵn, số lẻ trong dãy số
 INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, CREATED_AT, UPDATED_AT) VALUES
 	('NUMBER_BASIC_EVEN_ODD_001', 'A', '2, 8, 14', 'Y', NULL, NULL),
 	('NUMBER_BASIC_EVEN_ODD_001', 'B', '2, 8', 'N', NULL, NULL),
@@ -75744,7 +75746,7 @@ INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, C
 	('NUMBER_BASIC_EVEN_ODD_040', 'C', '5, 4', 'N', NULL, NULL),
 	('NUMBER_BASIC_EVEN_ODD_040', 'D', '4, 5', 'Y', NULL, NULL);
 	
--- Child: 1.3. Tìm số với quy luật dãy số tăng đều
+-- Child: 1.2.2. Tìm số với quy luật dãy số tăng đều
 INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, CREATED_AT, UPDATED_AT) VALUES
 	('NUMBER_PATTERN_ADD_EQUAL_001', 'A', '5', 'N', NULL, NULL),
 	('NUMBER_PATTERN_ADD_EQUAL_001', 'B', '6', 'Y', NULL, NULL),
@@ -75946,7 +75948,7 @@ INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, C
 	('NUMBER_PATTERN_ADD_EQUAL_040', 'C', '5', 'N', NULL, NULL),
 	('NUMBER_PATTERN_ADD_EQUAL_040', 'D', '6', 'N', NULL, NULL);
 	
--- Child: 1.4. Tìm số với quy luật dãy số tăng không đều
+-- Child: 1.2.3. Tìm số với quy luật dãy số tăng không đều
 INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, CREATED_AT, UPDATED_AT) VALUES
 	('NUMBER_PATTERN_INCREASING_001', 'A', '11', 'Y', NULL, NULL),
 	('NUMBER_PATTERN_INCREASING_001', 'B', '10', 'N', NULL, NULL),
@@ -76148,7 +76150,7 @@ INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, C
 	('NUMBER_PATTERN_INCREASING_040', 'C', '49', 'N', NULL, NULL),
 	('NUMBER_PATTERN_INCREASING_040', 'D', '50', 'N', NULL, NULL);
 
--- Child: 1.5. Tìm số với quy luật dãy số giảm đều
+-- Child: 1.2.4. Tìm số với quy luật dãy số giảm đều
 INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, CREATED_AT, UPDATED_AT) VALUES
 	('NUMBER_PATTERN_SUB_EQUAL_001', 'A', '5', 'Y', NULL, NULL),
 	('NUMBER_PATTERN_SUB_EQUAL_001', 'B', '4', 'N', NULL, NULL),
@@ -76350,7 +76352,7 @@ INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, C
 	('NUMBER_PATTERN_SUB_EQUAL_040', 'C', '58', 'Y', NULL, NULL),
 	('NUMBER_PATTERN_SUB_EQUAL_040', 'D', '57', 'N', NULL, NULL);
 
--- Child: 1.6. Tìm số với quy luật dãy số giảm không đều
+-- Child: 1.2.5. Tìm số với quy luật dãy số giảm không đều
 INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, CREATED_AT, UPDATED_AT) VALUES
 	('NUMBER_PATTERN_DECREASING_001', 'A', '10', 'Y', NULL, NULL),
 	('NUMBER_PATTERN_DECREASING_001', 'B', '11', 'N', NULL, NULL),
@@ -76552,7 +76554,7 @@ INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, C
 	('NUMBER_PATTERN_DECREASING_040', 'C', '60', 'N', NULL, NULL),
 	('NUMBER_PATTERN_DECREASING_040', 'D', '57', 'N', NULL, NULL);
 	
--- Child: 1.7. Tìm số với quy luật dãy số tăng/giảm xen kẽ
+-- Child: 1.2.6. Tìm số với quy luật dãy số tăng/giảm xen kẽ
 INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, CREATED_AT, UPDATED_AT) VALUES
 	('NUMBER_PATTERN_ALTERNATE_001', 'A', '6', 'N', NULL, NULL),
 	('NUMBER_PATTERN_ALTERNATE_001', 'B', '7', 'N', NULL, NULL),
@@ -76754,7 +76756,7 @@ INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, C
 	('NUMBER_PATTERN_ALTERNATE_040', 'C', '42', 'N', NULL, NULL),
 	('NUMBER_PATTERN_ALTERNATE_040', 'D', '43', 'N', NULL, NULL);
 	
--- Child: 1.8. Tìm số với quy luật dãy số lặp lại
+-- Child: 1.2.7. Tìm số với quy luật dãy số lặp lại
 INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, CREATED_AT, UPDATED_AT) VALUES
 	('NUMBER_PATTERN_REPEAT_001', 'A', '5', 'N', NULL, NULL),
 	('NUMBER_PATTERN_REPEAT_001', 'B', '4', 'Y', NULL, NULL),
@@ -76920,7 +76922,7 @@ INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, C
 	('NUMBER_PATTERN_REPEAT_040', 'C', '25, 20', 'Y', NULL, NULL),
 	('NUMBER_PATTERN_REPEAT_040', 'D', '24, 20', 'N', NULL, NULL);
 	
--- Child: 1.9. Tìm số ở giữa một dãy số có quy luật
+-- Child: 1.2.8 Tìm số ở giữa một dãy số có quy luật
 INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, CREATED_AT, UPDATED_AT) VALUES
 	('NUMBER_PATTERN_MISSING_001', 'A', '3', 'Y', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_001', 'B', '4', 'N', NULL, NULL),
@@ -77122,7 +77124,7 @@ INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, C
 	('NUMBER_PATTERN_MISSING_040', 'C', '35, 27', 'N', NULL, NULL),
 	('NUMBER_PATTERN_MISSING_040', 'D', '38, 30', 'N', NULL, NULL);
 
--- Child: 1.10. Tính tổng của hai hoặc nhiều số
+-- Child: 1.3.1. Tìm tổng của hai hoặc nhiều số
 INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, CREATED_AT, UPDATED_AT) VALUES
 	('CALCULATION_ADDITION_001', 'A', '5', 'N', NULL, NULL),
 	('CALCULATION_ADDITION_001', 'B', '9', 'N', NULL, NULL),
@@ -77367,7 +77369,7 @@ INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, C
 	('CALCULATION_ADDITION_060', 'C', '78', 'Y', NULL, NULL),
 	('CALCULATION_ADDITION_060', 'D', '75', 'N', NULL, NULL);
 
--- Child: 1.11. Tìm hiệu của hai hoặc nhiều số
+-- Child: 1.3.2. Tìm hiệu của hai hoặc nhiều số
 INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, CREATED_AT, UPDATED_AT) VALUES
 	('CALCULATION_SUBTRACTION_001', 'A', '6', 'N', NULL, NULL),
 	('CALCULATION_SUBTRACTION_001', 'B', '5', 'Y', NULL, NULL),
@@ -77611,7 +77613,7 @@ INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, C
 	('CALCULATION_SUBTRACTION_060', 'C', '29', 'Y', NULL, NULL),
 	('CALCULATION_SUBTRACTION_060', 'D', '27', 'N', NULL, NULL);
 
--- Child: 1.12. Tìm kết quả của phép tính kết hợp + và -
+-- Child: 1.3.3. Tìm kết quả của phép tính kết hợp + và -
 INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, CREATED_AT, UPDATED_AT) VALUES
     ('CALCULATION_MIXED_ADDITION_SUBTRACTION_001', 'A', '4', 'N', NULL, NULL),
     ('CALCULATION_MIXED_ADDITION_SUBTRACTION_001', 'B', '6', 'Y', NULL, NULL),
@@ -77774,7 +77776,7 @@ INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, C
     ('CALCULATION_MIXED_ADDITION_SUBTRACTION_040', 'C', '66', 'N', NULL, NULL),
     ('CALCULATION_MIXED_ADDITION_SUBTRACTION_040', 'D', '70', 'N', NULL, NULL);
 
--- Child: 1.13. Tìm số bị trừ của một hiệu 2 hoặc nhiều số
+-- Child: 1.3.4. Tìm số bị trừ của 2 hoặc nhiều số
 INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, CREATED_AT, UPDATED_AT) VALUES
 	('CALCULATION_MINUEND_001', 'A', '13', 'Y', NULL, NULL),
 	('CALCULATION_MINUEND_001', 'B', '12', 'N', NULL, NULL),
@@ -78061,7 +78063,7 @@ INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, C
     ('CALCULATION_MINUEND_070', 'C', '77', 'N', NULL, NULL),
     ('CALCULATION_MINUEND_070', 'D', '71', 'N', NULL, NULL);
 
--- Child: 1.14. Tìm số trừ của 2 hoặc nhiều số
+-- Child: 1.3.5. Tìm số trừ của 2 hoặc nhiều số
 INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, CREATED_AT, UPDATED_AT) VALUES
 	('CALCULATION_SUBTRAHEND_001', 'A', '2', 'N', NULL, NULL),
 	('CALCULATION_SUBTRAHEND_001', 'B', '3', 'N', NULL, NULL),
@@ -78224,7 +78226,7 @@ INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, C
 	('CALCULATION_SUBTRAHEND_040', 'C', '30', 'N', NULL, NULL),
 	('CALCULATION_SUBTRAHEND_040', 'D', '27', 'N', NULL, NULL);
 
--- Child: 2.1. Tìm số qua một phép tính
+-- Child: 2.1.1. Tìm số qua một phép tính
 INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, CREATED_AT, UPDATED_AT) VALUES
 	('UNKNOWN_NUMBER_SINGLE_CALC_001', 'A', '9', 'N', NULL, NULL),
 	('UNKNOWN_NUMBER_SINGLE_CALC_001', 'B', '10', 'N', NULL, NULL),
@@ -78390,8 +78392,8 @@ INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, C
 	('UNKNOWN_NUMBER_SINGLE_CALC_040', 'C', '89', 'N', NULL, NULL),
 	('UNKNOWN_NUMBER_SINGLE_CALC_040', 'D', '96', 'N', NULL, NULL);
 
--- Child: 2.2. Tìm số qua nhiều phép tính
-	INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, CREATED_AT, UPDATED_AT) VALUES
+-- Child: 2.1.2. Tìm số qua nhiều phép tính
+INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, CREATED_AT, UPDATED_AT) VALUES
 	('UNKNOWN_NUMBER_MULTI_CALC_001', 'A', '6', 'N', NULL, NULL),
 	('UNKNOWN_NUMBER_MULTI_CALC_001', 'B', '5', 'Y', NULL, NULL),
 	('UNKNOWN_NUMBER_MULTI_CALC_001', 'C', '8', 'N', NULL, NULL),
@@ -78553,7 +78555,7 @@ INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, C
 	('UNKNOWN_NUMBER_MULTI_CALC_040', 'C', '49', 'N', NULL, NULL),
 	('UNKNOWN_NUMBER_MULTI_CALC_040', 'D', '51', 'Y', NULL, NULL);
 	
--- Child: 2.3. Tìm hai số khi biết tổng và hiệu
+-- Child: 2.1.3. Tìm hai số khi biết tổng và hiệu
 INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, CREATED_AT, UPDATED_AT) VALUES
 	('UNKNOWN_NUMBER_SUM_DIFFERENCE_001', 'A', '3 và 4', 'Y', NULL, NULL),
 	('UNKNOWN_NUMBER_SUM_DIFFERENCE_001', 'B', '2 và 5', 'N', NULL, NULL),
@@ -78716,7 +78718,7 @@ INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, C
 	('UNKNOWN_NUMBER_SUM_DIFFERENCE_040', 'C', '36 và 52', 'N', NULL, NULL),
 	('UNKNOWN_NUMBER_SUM_DIFFERENCE_040', 'D', '35 và 54', 'N', NULL, NULL);
 
--- Child: 4.3. Tìm hai số khi biết tổng và hiệu qua biểu thức
+-- Child: 2.1.4. Tìm hai số khi biết tổng và hiệu qua biểu thức
 INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, CREATED_AT, UPDATED_AT) VALUES
 	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_001', 'A', '2 và 3', 'Y', NULL, NULL),
 	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_001', 'B', '1 và 3', 'N', NULL, NULL),
@@ -78880,7 +78882,7 @@ INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, C
 	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_040', 'D', '35 và 57', 'Y', NULL, NULL);
 
 
--- Child: 2.5. Hai bước cộng
+-- Child: 2.2.1. Hai bước cộng
 INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, CREATED_AT, UPDATED_AT) VALUES
 	('MULTI_STEP_ADD_ADD_001', 'A', '6', 'Y', NULL, NULL),
 	('MULTI_STEP_ADD_ADD_001', 'B', '5', 'N', NULL, NULL),
@@ -79082,7 +79084,7 @@ INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, C
 	('MULTI_STEP_ADD_ADD_040', 'C', '16', 'N', NULL, NULL),
 	('MULTI_STEP_ADD_ADD_040', 'D', '17', 'N', NULL, NULL);
 	
--- Child: 2.6. Hai bước trừ
+-- Child: 2.2.2. Hai bước trừ
 INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, CREATED_AT, UPDATED_AT) VALUES
 	('MULTI_STEP_SUB_SUB_001', 'A', '6', 'N', NULL, NULL),
 	('MULTI_STEP_SUB_SUB_001', 'B', '7', 'Y', NULL, NULL),
