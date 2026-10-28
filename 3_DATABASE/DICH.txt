@@ -46,8 +46,8 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE, ANSWER_TEXT, ANSWER_TEXT_VI, IS_
 
 
 Tạo cho t mỗi loại 40 câu bao gồm Dễ, Trung Bình, Khó, Rất Khó
-	-- Child: 1.4.1. Tìm số liền trước
-	('NUMBER_PREVIOUS', 'toan/lop-1', 'Tìm số liền trước', 'Tìm số đứng ngay trước một số đã cho, kém số đó 1 đơn vị.', 'NUMBER_NEIGHBOR', 'ACTIVE', NULL, NULL),
+	-- Child: 2.3.1 Tìm tuổi hiện tại
+	('AGE_FIND_CURRENT', 'toan/lop-1', 'Tìm tuổi hiện tại', 'Tìm tuổi hiện tại của một người dựa vào các dữ kiện tuổi và mối quan hệ tuổi đã cho.', 'AGE_PROBLEMS', 'ACTIVE', NULL, NULL),
 
 INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
 	('NUMBER_INCREASING', 'NUMBER_INCREASING_001', '2, 3, 4, 5, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
