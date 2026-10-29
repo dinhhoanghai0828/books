@@ -46,9 +46,9 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE, ANSWER_TEXT, ANSWER_TEXT_VI, IS_
 
 
 Tạo cho t mỗi loại 40 câu bao gồm Dễ, Trung Bình, Khó, Rất Khó
-	-- Child: 2.3.1 Tìm tuổi hiện tại
-	('AGE_FIND_CURRENT', 'toan/lop-1', 'Tìm tuổi hiện tại', 'Tìm tuổi hiện tại của một người dựa vào các dữ kiện tuổi và mối quan hệ tuổi đã cho.', 'AGE_PROBLEMS', 'ACTIVE', NULL, NULL),
-
+	-- Child: 2.3.2. Tìm chênh lệch qua quan hệ hơn kém
+	('RELATION_MORE_LESS_CHAIN', 'toan/lop-1', 'Tìm chênh lệch qua quan hệ hơn kém', 'Tìm số chênh lệch giữa hai đối tượng thông qua một hoặc nhiều quan hệ hơn kém liên tiếp.', 'WORD_PROBLEM_RELATIONS_QUANTITY', 'ACTIVE', NULL, NULL),
+	
 INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
 	('NUMBER_INCREASING', 'NUMBER_INCREASING_001', '2, 3, 4, 5, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
 ('NUMBER_INCREASING', 'NUMBER_INCREASING_011', '2, 4, 6, 8, ?, số nào thích hợp điền vào dấu ?', 2, 'ACTIVE', NULL, NULL),
@@ -66,6 +66,13 @@ MATH_ANSWERS: 160 đáp án
 Đáp án đúng A/B/C/D được phân bố, khong trung lap, xáo trộn xen kẽ ngẫu nhiên trong 4 đáp án A=10, B=10, C=10, D=10
 Câu hỏi rõ ràng đầy đủ, dữ kiện chi tiết
 Toàn bộ vẫn trong phạm vi Toán lớp 1
+
+TUng co 10 quyen vo, BInh co it hon Tung 4 quyen nhung lai nhieu hon Lan 2 quyen, hoi TUng nhieu hon Lan may quyen
+
+
+
+Lan noi to nhin thay 8 cai chan meo, hoi Lan nhin thay may con meo
+Trong chuong co 3 con vua ga vua vit, biet so vit it hon so ga. Hoi so ga va so vit la bao nhieu con
 
 
 

@@ -65,24 +65,35 @@ INSERT INTO MATH_CATEGORIES (CATEGORY_CODE, FULL_PATH, CATEGORY_NAME, CATEGORY_D
 	-- Parent: 2.2. Bài toán giải bằng nhiều bước
 	('MULTI_STEP', 'toan/lop-1', '2.2. Bài toán giải bằng nhiều bước', 'Giải bài toán có lời văn bằng cách thực hiện từ hai phép tính trở lên.', 'MATH_WORD_PROBLEMS', 'ACTIVE', NULL, NULL),
 	-- Child: 2.2.1. Hai bước cộng
-	('MULTI_STEP_ADD_ADD', 'toan/lop-1', '2.2.1. Hai bước cộng', 'Thực hiện hai lần thêm vào.', 'MULTI_STEP', 'ACTIVE', NULL, NULL),
+	('MULTI_STEP_ADD_ADD', 'toan/lop-1', 'Hai bước cộng', 'Thực hiện hai lần thêm vào.', 'MULTI_STEP', 'ACTIVE', NULL, NULL),
 	-- Child: 2.2.2. Hai bước trừ
-	('MULTI_STEP_SUB_SUB', 'toan/lop-1', '2.2.2. Hai bước trừ', 'Thực hiện hai lần bớt đi.', 'MULTI_STEP', 'ACTIVE', NULL, NULL),
-	-- Child: 2.2.3. Cộng rồi trừ
-	('MULTI_STEP_ADD_SUB', 'toan/lop-1', '2.2.3. Cộng rồi trừ', 'Trước tiên thêm vào, sau đó bớt đi.', 'MULTI_STEP', 'ACTIVE', NULL, NULL),
-	-- Child: 2.2.4. Trừ rồi cộng
+	('MULTI_STEP_SUB_SUB', 'toan/lop-1', 'Hai bước trừ', 'Thực hiện hai lần bớt đi.', 'MULTI_STEP', 'ACTIVE', NULL, NULL),
+	-- Child: 2.2.3. Cộng rồi trừ, trừ rồi cộng
+	('MULTI_STEP_ADD_SUB', 'toan/lop-1', 'Cộng rồi trừ, trừ rồi cộng', 'Trước tiên thêm vào, sau đó bớt đi.', 'MULTI_STEP', 'ACTIVE', NULL, NULL),
+	
+	
+	-- Parent: 2.3. Bài toán về quan hệ và số lượng
+	('WORD_PROBLEM_RELATIONS_QUANTITY', 'toan/lop-1', '2.3. Bài toán về quan hệ và số lượng', 'Giải các bài toán có lời văn dựa vào quan hệ giữa các số lượng, tổng và phần, số bộ phận và số đối tượng.', 'MATH_WORD_PROBLEMS', 'ACTIVE', NULL, NULL),
+	-- Child: 2.3.1. Tìm phần còn lại khi biết tổng và một phần
+	('FIND_REMAINING_PART_FROM_TOTAL', 'toan/lop-1', 'Tìm phần còn lại khi biết tổng và một phần', 'Biết tổng số lượng và số lượng của một phần, tìm số lượng của phần còn lại.', 'WORD_PROBLEM_RELATIONS_QUANTITY', 'ACTIVE', NULL, NULL),
+	-- Child: 2.3.2. Tìm chênh lệch qua quan hệ hơn kém
+	('RELATION_MORE_LESS_CHAIN', 'toan/lop-1', 'Tìm chênh lệch qua quan hệ hơn kém', 'Tìm số chênh lệch giữa hai đối tượng thông qua một hoặc nhiều quan hệ hơn kém liên tiếp.', 'WORD_PROBLEM_RELATIONS_QUANTITY', 'ACTIVE', NULL, NULL),
+	-- Child: 2.3.3. Tìm số đối tượng từ số bộ phận
+	('FIND_OBJECTS_FROM_PARTS', 'toan/lop-1', 'Tìm số đối tượng từ số bộ phận', 'Biết tổng số bộ phận và số bộ phận của mỗi đối tượng, tìm số đối tượng.', 'WORD_PROBLEM_RELATIONS_QUANTITY', 'ACTIVE', NULL, NULL),
+	-- Child: 2.3.4. Tìm hai số khi biết tổng và hơn kém
+	('FIND_TWO_NUMBERS_FROM_SUM_MORE_LESS', 'toan/lop-1', 'Tìm hai số khi biết tổng và hơn kém', 'Biết tổng và quan hệ nhiều hơn hoặc ít hơn giữa hai số, tìm số lượng của từng nhóm.', 'WORD_PROBLEM_RELATIONS_QUANTITY', 'ACTIVE', NULL, NULL),
 
-	-- Parent: 2.3. Bài toán về tuổi
+	-- Parent: 2.4. Bài toán về tuổi
 	('AGE_PROBLEMS', 'toan/lop-1', 'Bài toán về tuổi', 'Giải bài toán có lời văn liên quan đến tuổi của một hoặc nhiều người, bao gồm tìm tuổi, so sánh tuổi, tính tuổi ở các thời điểm khác nhau và giải bài toán tuổi bằng nhiều bước tính.', 'MATH_WORD_PROBLEMS', 'ACTIVE', NULL, NULL),
-	-- Child: 2.3.1 Tìm tuổi hiện tại
+	-- Child: 2.4.1 Tìm tuổi hiện tại
 	('AGE_FIND_CURRENT', 'toan/lop-1', 'Tìm tuổi hiện tại', 'Tìm tuổi hiện tại của một người dựa vào các dữ kiện tuổi và mối quan hệ tuổi đã cho.', 'AGE_PROBLEMS', 'ACTIVE', NULL, NULL),
-	-- Child: 2.3.2 Tìm tuổi sau một số năm
+	-- Child: 2.4.2 Tìm tuổi sau một số năm
 	('AGE_AFTER_YEARS', 'toan/lop-1', 'Tìm tuổi sau một số năm', 'Biết tuổi hiện tại của một người, tính tuổi của người đó sau một số năm nữa bằng phép cộng.', 'AGE_PROBLEMS', 'ACTIVE', NULL, NULL),
-	-- Child: 2.3.3 Suy luận ngược từ tuổi tương lai
+	-- Child: 2.4.3 Suy luận ngược từ tuổi tương lai
 	('AGE_REVERSE_FUTURE', 'toan/lop-1', 'Suy luận ngược từ tuổi tương lai', 'Tìm tuổi hiện tại hoặc tuổi ở một thời điểm khác dựa vào tuổi tương lai kết hợp với các dữ kiện và phép tính trung gian.', 'AGE_PROBLEMS', 'ACTIVE', NULL, NULL),
-	-- Child: 2.3.4 Bài toán kết hợp tuổi của nhiều người
+	-- Child: 2.4.4 Bài toán kết hợp tuổi của nhiều người
 	('AGE_RELATIONSHIP_MULTI', 'toan/lop-1', 'Bài toán kết hợp tuổi của nhiều người', 'Giải bài toán dựa trên mối quan hệ tuổi giữa từ hai người trở lên, kết hợp dữ kiện hơn kém tuổi, tổng số tuổi và các phép tính trung gian.', 'AGE_PROBLEMS', 'ACTIVE', NULL, NULL),
-	-- Child: 2.3.5 Bài toán tuổi qua nhiều thời điểm
+	-- Child: 2.4.5 Bài toán tuổi qua nhiều thời điểm
 	('AGE_MULTI_TIMELINE', 'toan/lop-1', 'Bài toán tuổi qua nhiều thời điểm', 'Giải bài toán liên kết tuổi hiện tại, tuổi trong quá khứ và tuổi trong tương lai để tìm tuổi hoặc tổng số tuổi tại một thời điểm.', 'AGE_PROBLEMS', 'ACTIVE', NULL, NULL),
-	-- Child: 2.3.6 Suy luận tuổi từ phép tính và điều kiện ẩn
+	-- Child: 2.4.6 Suy luận tuổi từ phép tính và điều kiện ẩn
 	('AGE_LOGIC_CALCULATION', 'toan/lop-1', 'Suy luận tuổi từ phép tính và điều kiện ẩn', 'Tìm tuổi dựa vào biểu thức cộng trừ, số chưa biết, điều kiện gián tiếp hoặc nhiều dữ kiện cần suy luận để xác định kết quả.', 'AGE_PROBLEMS', 'ACTIVE', NULL, NULL);
