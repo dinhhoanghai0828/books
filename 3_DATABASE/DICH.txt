@@ -46,8 +46,9 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE, ANSWER_TEXT, ANSWER_TEXT_VI, IS_
 
 
 Tạo cho t mỗi loại 40 câu bao gồm Dễ, Trung Bình, Khó, Rất Khó
-	-- Child: 2.3.2. Tìm chênh lệch qua quan hệ hơn kém
-	('RELATION_MORE_LESS_CHAIN', 'toan/lop-1', 'Tìm chênh lệch qua quan hệ hơn kém', 'Tìm số chênh lệch giữa hai đối tượng thông qua một hoặc nhiều quan hệ hơn kém liên tiếp.', 'WORD_PROBLEM_RELATIONS_QUANTITY', 'ACTIVE', NULL, NULL),
+-- Child: 2.4.2 Tìm tuổi sau một số năm
+	('AGE_AFTER_YEARS', 'toan/lop-1', 'Tìm tuổi sau một số năm', 'Biết tuổi hiện tại của một người, tính tuổi của người đó sau một số năm nữa bằng phép cộng.', 'AGE_PROBLEMS', 'ACTIVE', NULL, NULL),
+	
 	
 INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
 	('NUMBER_INCREASING', 'NUMBER_INCREASING_001', '2, 3, 4, 5, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
@@ -67,27 +68,17 @@ MATH_ANSWERS: 160 đáp án
 Câu hỏi rõ ràng đầy đủ, dữ kiện chi tiết
 Toàn bộ vẫn trong phạm vi Toán lớp 1
 
-TUng co 10 quyen vo, BInh co it hon Tung 4 quyen nhung lai nhieu hon Lan 2 quyen, hoi TUng nhieu hon Lan may quyen
-
-
 
 Lan noi to nhin thay 8 cai chan meo, hoi Lan nhin thay may con meo
+
 Trong chuong co 3 con vua ga vua vit, biet so vit it hon so ga. Hoi so ga va so vit la bao nhieu con
 
 
 
-2. Dạng kết hợp tuổi của nhiều người
-6. An hơn Bình 2 tuổi. Bình hơn Cường 3 tuổi. Cường 4 tuổi. Hỏi tổng số tuổi của ba bạn?
-7. Chị hơn em 4 tuổi. Tổng số tuổi của hai chị em là 14 tuổi. Biết em ít tuổi hơn chị. Hỏi mỗi người bao nhiêu tuổi?
-8. Mẹ hơn con 25 tuổi. Sau 3 năm nữa, tổng số tuổi của hai mẹ con là 43 tuổi. Hỏi hiện nay mỗi người bao nhiêu tuổi?
-9. An 8 tuổi. Bình ít hơn An 3 tuổi, còn Chi hơn Bình 2 tuổi. Hỏi tổng số tuổi của ba bạn?
-10. Ba anh em có tuổi lần lượt hơn kém nhau 2 tuổi. Em út 4 tuổi. Hỏi tổng số tuổi của ba anh em?
-3. Dạng tìm tuổi qua nhiều thời điểm
-11. Bốn năm trước, An 3 tuổi. Bình hiện nay hơn An 2 tuổi. Hỏi 2 năm nữa tổng số tuổi của hai bạn là bao nhiêu?
-12. Nam hiện nay 8 tuổi. Khi Nam bằng tuổi hiện nay của Nam cộng thêm 3 tuổi, em gái Nam sẽ 7 tuổi. Biết em gái Nam hiện nay ít hơn Nam 4 tuổi. Hỏi dữ kiện nào không phù hợp?
-13. Hai năm trước, chị 7 tuổi. Em kém chị 3 tuổi. Hỏi 4 năm nữa tổng số tuổi của hai chị em là bao nhiêu?
-14. Lan hiện nay 6 tuổi. Minh hơn Lan 2 tuổi. Hỏi cách đây 3 năm, tổng số tuổi của hai bạn là bao nhiêu?
-15. An hiện nay 9 tuổi. Bình hiện nay 5 tuổi. Hỏi sau bao nhiêu năm nữa tổng số tuổi của hai bạn là 20?
+
+
+
+
 4. Dạng suy luận từ phép tính và điều kiện ẩn
 16. Tuổi của Bình cộng với 2 rồi trừ đi 3 thì bằng 6. Hỏi 4 năm nữa Bình bao nhiêu tuổi?
 17. An và Bình có tổng số tuổi là 15. An hơn Bình 3 tuổi. Hỏi mỗi bạn bao nhiêu tuổi?

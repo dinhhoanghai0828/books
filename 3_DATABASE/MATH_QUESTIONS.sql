@@ -1202,8 +1202,58 @@ INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICU
 	('AGE_FIND_CURRENT', 'AGE_FIND_CURRENT_038', 'Bố 40 tuổi. Mẹ ít hơn bố 4 tuổi. Anh hơn em 3 tuổi. Em kém mẹ 29 tuổi. Hỏi anh hiện nay bao nhiêu tuổi?', 4, 'ACTIVE', NULL, NULL),
 	('AGE_FIND_CURRENT', 'AGE_FIND_CURRENT_039', 'Tổng tuổi của mẹ và con là 50 tuổi. Mẹ hơn con 26 tuổi. Sau 5 năm nữa, mẹ hơn con bao nhiêu tuổi?', 4, 'ACTIVE', NULL, NULL),
 	('AGE_FIND_CURRENT', 'AGE_FIND_CURRENT_040', 'Ba anh em có tổng 29 tuổi. Anh cả hơn anh hai 2 tuổi, anh hai hơn em út 3 tuổi. Hỏi em út hiện nay bao nhiêu tuổi?', 4, 'ACTIVE', NULL, NULL);
+
+-- Child: 2.4.2 Tìm tuổi sau một số năm
+INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
+	-- Độ khó 1: Dễ (001-010)
+	('AGE_AFTER_YEARS', 'AGE_AFTER_YEARS_001', 'Nam hiện nay 5 tuổi. Hỏi sau 1 năm nữa Nam bao nhiêu tuổi?', 1, 'ACTIVE', NULL, NULL),
+	('AGE_AFTER_YEARS', 'AGE_AFTER_YEARS_002', 'Lan hiện nay 6 tuổi. Hỏi sau 2 năm nữa Lan bao nhiêu tuổi?', 1, 'ACTIVE', NULL, NULL),
+	('AGE_AFTER_YEARS', 'AGE_AFTER_YEARS_003', 'Bình hiện nay 4 tuổi. Hỏi sau 3 năm nữa Bình bao nhiêu tuổi?', 1, 'ACTIVE', NULL, NULL),
+	('AGE_AFTER_YEARS', 'AGE_AFTER_YEARS_004', 'Hoa hiện nay 7 tuổi. Khi lên lớp 2 sau 1 năm nữa, Hoa sẽ bao nhiêu tuổi?', 1, 'ACTIVE', NULL, NULL),
+	('AGE_AFTER_YEARS', 'AGE_AFTER_YEARS_005', 'Minh hiện nay 3 tuổi. Hỏi sau 2 năm nữa Minh sẽ được bao nhiêu tuổi?', 1, 'ACTIVE', NULL, NULL),
+	('AGE_AFTER_YEARS', 'AGE_AFTER_YEARS_006', 'An hiện nay 8 tuổi. Hỏi sau 1 năm nữa An sẽ được bao nhiêu tuổi?', 1, 'ACTIVE', NULL, NULL),
+	('AGE_AFTER_YEARS', 'AGE_AFTER_YEARS_007', 'Mai hiện nay 5 tuổi. Hỏi sau 3 năm nữa Mai sẽ được bao nhiêu tuổi?', 1, 'ACTIVE', NULL, NULL),
+	('AGE_AFTER_YEARS', 'AGE_AFTER_YEARS_008', 'Tuấn hiện nay 6 tuổi. Hỏi sau 1 năm nữa Tuấn sẽ được bao nhiêu tuổi?', 1, 'ACTIVE', NULL, NULL),
+	('AGE_AFTER_YEARS', 'AGE_AFTER_YEARS_009', 'Bé Hà hiện nay 4 tuổi. Hỏi sau 2 năm nữa bé Hà sẽ được bao nhiêu tuổi?', 1, 'ACTIVE', NULL, NULL),
+	('AGE_AFTER_YEARS', 'AGE_AFTER_YEARS_010', 'Đức hiện nay 7 tuổi. Hỏi sau 2 năm nữa Đức sẽ được bao nhiêu tuổi?', 1, 'ACTIVE', NULL, NULL),
+
+	-- Độ khó 2: Trung Bình (011-020)
+	('AGE_AFTER_YEARS', 'AGE_AFTER_YEARS_011', 'Hùng hiện nay 6 tuổi. Hỏi sau 4 năm nữa Hùng sẽ được bao nhiêu tuổi?', 2, 'ACTIVE', NULL, NULL),
+	('AGE_AFTER_YEARS', 'AGE_AFTER_YEARS_012', 'Thảo hiện nay 7 tuổi. Hỏi sau 5 năm nữa Thảo sẽ được bao nhiêu tuổi?', 2, 'ACTIVE', NULL, NULL),
+	('AGE_AFTER_YEARS', 'AGE_AFTER_YEARS_013', 'Quân hiện nay 8 tuổi. Khi thêm 4 tuổi nữa, Quân sẽ bao nhiêu tuổi?', 2, 'ACTIVE', NULL, NULL),
+	('AGE_AFTER_YEARS', 'AGE_AFTER_YEARS_014', 'Ngọc hiện nay 5 tuổi. Hỏi sau 5 năm nữa Ngọc sẽ được bao nhiêu tuổi?', 2, 'ACTIVE', NULL, NULL),
+	('AGE_AFTER_YEARS', 'AGE_AFTER_YEARS_015', 'Phúc hiện nay 9 tuổi. Hỏi sau 4 năm nữa Phúc sẽ được bao nhiêu tuổi?', 2, 'ACTIVE', NULL, NULL),
+	('AGE_AFTER_YEARS', 'AGE_AFTER_YEARS_016', 'Vy hiện nay 6 tuổi. Khi sinh nhật lần thứ 10 đến, Vy còn phải chờ bao nhiêu năm nữa và lúc đó Vy bao nhiêu tuổi?', 2, 'ACTIVE', NULL, NULL),
+	('AGE_AFTER_YEARS', 'AGE_AFTER_YEARS_017', 'Long hiện nay 7 tuổi. Hỏi sau 4 năm nữa Long sẽ được bao nhiêu tuổi?', 2, 'ACTIVE', NULL, NULL),
+	('AGE_AFTER_YEARS', 'AGE_AFTER_YEARS_018', 'My hiện nay 8 tuổi. Hỏi sau 5 năm nữa My sẽ được bao nhiêu tuổi?', 2, 'ACTIVE', NULL, NULL),
+	('AGE_AFTER_YEARS', 'AGE_AFTER_YEARS_019', 'Duy hiện nay 4 tuổi. Hỏi sau 5 năm nữa Duy sẽ được bao nhiêu tuổi?', 2, 'ACTIVE', NULL, NULL),
+	('AGE_AFTER_YEARS', 'AGE_AFTER_YEARS_020', 'Trang hiện nay 9 tuổi. Hỏi sau 5 năm nữa Trang sẽ được bao nhiêu tuổi?', 2, 'ACTIVE', NULL, NULL),
+
+	-- Độ khó 3: Khó (021-030)
+	('AGE_AFTER_YEARS', 'AGE_AFTER_YEARS_021', 'Mẹ hiện nay 30 tuổi. Hỏi sau 5 năm nữa mẹ sẽ bao nhiêu tuổi?', 3, 'ACTIVE', NULL, NULL),
+	('AGE_AFTER_YEARS', 'AGE_AFTER_YEARS_022', 'Bố hiện nay 35 tuổi. Hỏi sau 4 năm nữa bố sẽ bao nhiêu tuổi?', 3, 'ACTIVE', NULL, NULL),
+	('AGE_AFTER_YEARS', 'AGE_AFTER_YEARS_023', 'Chị hiện nay 10 tuổi, em hiện nay 5 tuổi. Hỏi sau 3 năm nữa chị bao nhiêu tuổi?', 3, 'ACTIVE', NULL, NULL),
+	('AGE_AFTER_YEARS', 'AGE_AFTER_YEARS_024', 'Nam hiện nay 8 tuổi, Bình hiện nay 6 tuổi. Hỏi sau 5 năm nữa Nam bao nhiêu tuổi?', 3, 'ACTIVE', NULL, NULL),
+	('AGE_AFTER_YEARS', 'AGE_AFTER_YEARS_025', 'Bà hiện nay 60 tuổi. Hỏi sau 5 năm nữa bà sẽ bao nhiêu tuổi?', 3, 'ACTIVE', NULL, NULL),
+	('AGE_AFTER_YEARS', 'AGE_AFTER_YEARS_026', 'Anh hiện nay 12 tuổi, em hiện nay 7 tuổi. Hỏi sau 4 năm nữa anh bao nhiêu tuổi?', 3, 'ACTIVE', NULL, NULL),
+	('AGE_AFTER_YEARS', 'AGE_AFTER_YEARS_027', 'Lan hiện nay 9 tuổi. Sau 3 năm nữa, rồi thêm 2 năm nữa, Lan sẽ bao nhiêu tuổi?', 3, 'ACTIVE', NULL, NULL),
+	('AGE_AFTER_YEARS', 'AGE_AFTER_YEARS_028', 'Ông hiện nay 65 tuổi. Hỏi sau 5 năm nữa ông sẽ bao nhiêu tuổi?', 3, 'ACTIVE', NULL, NULL),
+	('AGE_AFTER_YEARS', 'AGE_AFTER_YEARS_029', 'Hoa hiện nay 7 tuổi. Anh trai hơn Hoa 5 tuổi. Hỏi sau 3 năm nữa anh trai Hoa bao nhiêu tuổi?', 3, 'ACTIVE', NULL, NULL),
+	('AGE_AFTER_YEARS', 'AGE_AFTER_YEARS_030', 'Minh hiện nay 8 tuổi. Chị gái hơn Minh 4 tuổi. Hỏi sau 5 năm nữa chị gái Minh bao nhiêu tuổi?', 3, 'ACTIVE', NULL, NULL),
+
+	-- Độ khó 4: Rất Khó (031-040)
+	('AGE_AFTER_YEARS', 'AGE_AFTER_YEARS_031', 'An hiện nay 6 tuổi. Bình hơn An 2 tuổi. Hỏi sau 4 năm nữa Bình bao nhiêu tuổi?', 4, 'ACTIVE', NULL, NULL),
+	('AGE_AFTER_YEARS', 'AGE_AFTER_YEARS_032', 'Lan hiện nay 8 tuổi. Mai kém Lan 3 tuổi. Hỏi sau 5 năm nữa Mai bao nhiêu tuổi?', 4, 'ACTIVE', NULL, NULL),
+	('AGE_AFTER_YEARS', 'AGE_AFTER_YEARS_033', 'Nam hiện nay 7 tuổi. Tuấn hơn Nam 4 tuổi. Hỏi sau 3 năm nữa Tuấn bao nhiêu tuổi?', 4, 'ACTIVE', NULL, NULL),
+	('AGE_AFTER_YEARS', 'AGE_AFTER_YEARS_034', 'Hoa hiện nay 9 tuổi. Bình kém Hoa 2 tuổi. Hỏi sau 4 năm nữa Bình bao nhiêu tuổi?', 4, 'ACTIVE', NULL, NULL),
+	('AGE_AFTER_YEARS', 'AGE_AFTER_YEARS_035', 'Mẹ hiện nay 30 tuổi, con hiện nay 6 tuổi. Hỏi sau 4 năm nữa mẹ bao nhiêu tuổi?', 4, 'ACTIVE', NULL, NULL),
+	('AGE_AFTER_YEARS', 'AGE_AFTER_YEARS_036', 'Bố hiện nay 35 tuổi, con hiện nay 8 tuổi. Hỏi sau 5 năm nữa bố bao nhiêu tuổi?', 4, 'ACTIVE', NULL, NULL),
+	('AGE_AFTER_YEARS', 'AGE_AFTER_YEARS_037', 'Chị hiện nay 11 tuổi, em hiện nay 6 tuổi. Hỏi sau 3 năm nữa tổng số tuổi của hai chị em là bao nhiêu?', 4, 'ACTIVE', NULL, NULL),
+	('AGE_AFTER_YEARS', 'AGE_AFTER_YEARS_038', 'Nam hiện nay 7 tuổi. Sau 2 năm nữa, Nam thêm 3 tuổi nữa. Hỏi khi đó Nam bao nhiêu tuổi?', 4, 'ACTIVE', NULL, NULL),
+	('AGE_AFTER_YEARS', 'AGE_AFTER_YEARS_039', 'Mẹ hiện nay 32 tuổi, con hiện nay 7 tuổi. Hỏi sau 5 năm nữa tổng số tuổi của mẹ và con là bao nhiêu?', 4, 'ACTIVE', NULL, NULL),
+	('AGE_AFTER_YEARS', 'AGE_AFTER_YEARS_040', 'Anh hiện nay 12 tuổi, em hiện nay 8 tuổi. Hỏi sau 4 năm nữa tổng số tuổi của hai anh em là bao nhiêu?', 4, 'ACTIVE', NULL, NULL);	
 	
-	-- Child: 2.4.3 Suy luận ngược từ tuổi tương lai
+-- Child: 2.4.4 Suy luận ngược từ tuổi tương lai
 INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
 	('AGE_REVERSE_FUTURE', 'AGE_REVERSE_FUTURE_001', 'Hai năm nữa, An sẽ tròn 8 tuổi. Hỏi hiện nay An bao nhiêu tuổi?', 1, 'ACTIVE', NULL, NULL),
 	('AGE_REVERSE_FUTURE', 'AGE_REVERSE_FUTURE_002', 'Ba năm nữa, Bình sẽ tròn 9 tuổi. Hỏi hiện nay Bình bao nhiêu tuổi?', 1, 'ACTIVE', NULL, NULL),
@@ -1248,3 +1298,92 @@ INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICU
 	('AGE_REVERSE_FUTURE', 'AGE_REVERSE_FUTURE_038', 'Ba năm nữa, Vy sẽ 9 tuổi. An hiện nay hơn Vy 2 tuổi. Hỏi hai năm trước An bao nhiêu tuổi?', 4, 'ACTIVE', NULL, NULL),
 	('AGE_REVERSE_FUTURE', 'AGE_REVERSE_FUTURE_039', 'Hai năm nữa, Bình sẽ 9 tuổi. Chị Bình hiện nay hơn Bình 6 tuổi. Hỏi ba năm nữa chị Bình bao nhiêu tuổi?', 4, 'ACTIVE', NULL, NULL),
 	('AGE_REVERSE_FUTURE', 'AGE_REVERSE_FUTURE_040', 'Năm năm nữa, An sẽ 11 tuổi. Bình hiện nay kém An 3 tuổi. Hỏi hai năm nữa tổng số tuổi của hai bạn là bao nhiêu?', 4, 'ACTIVE', NULL, NULL);
+	
+-- Child: 2.4.5 Bài toán kết hợp tuổi của nhiều người
+INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
+	('AGE_RELATIONSHIP_MULTI', 'AGE_RELATIONSHIP_MULTI_001', 'An hơn Bình 2 tuổi. Bình 4 tuổi. Cường hơn Bình 1 tuổi. Hỏi tổng số tuổi của ba bạn?', 1, 'ACTIVE', NULL, NULL),
+	('AGE_RELATIONSHIP_MULTI', 'AGE_RELATIONSHIP_MULTI_002', 'Lan 7 tuổi, Mai ít hơn Lan 2 tuổi, Hoa hơn Mai 1 tuổi. Hỏi tổng số tuổi của ba bạn?', 1, 'ACTIVE', NULL, NULL),
+	('AGE_RELATIONSHIP_MULTI', 'AGE_RELATIONSHIP_MULTI_003', 'Nam 6 tuổi. Minh hơn Nam 2 tuổi. An hơn Minh 1 tuổi. Hỏi tổng số tuổi của ba bạn?', 1, 'ACTIVE', NULL, NULL),
+	('AGE_RELATIONSHIP_MULTI', 'AGE_RELATIONSHIP_MULTI_004', 'Chị 8 tuổi, em 4 tuổi. Hỏi tổng số tuổi của hai chị em?', 1, 'ACTIVE', NULL, NULL),
+	('AGE_RELATIONSHIP_MULTI', 'AGE_RELATIONSHIP_MULTI_005', 'Ba anh em lần lượt 4 tuổi, 6 tuổi và 8 tuổi. Hỏi tổng số tuổi của ba anh em?', 1, 'ACTIVE', NULL, NULL),
+	('AGE_RELATIONSHIP_MULTI', 'AGE_RELATIONSHIP_MULTI_006', 'Mẹ 30 tuổi, con 6 tuổi. Hỏi mẹ hơn con bao nhiêu tuổi?', 1, 'ACTIVE', NULL, NULL),
+	('AGE_RELATIONSHIP_MULTI', 'AGE_RELATIONSHIP_MULTI_007', 'An 8 tuổi. Bình ít hơn An 3 tuổi, còn Chi hơn Bình 2 tuổi. Hỏi tổng số tuổi của ba bạn?', 1, 'ACTIVE', NULL, NULL),
+	('AGE_RELATIONSHIP_MULTI', 'AGE_RELATIONSHIP_MULTI_008', 'Chị hơn em 3 tuổi. Em 5 tuổi. Hỏi chị bao nhiêu tuổi?', 1, 'ACTIVE', NULL, NULL),
+	('AGE_RELATIONSHIP_MULTI', 'AGE_RELATIONSHIP_MULTI_009', 'Bố 35 tuổi, mẹ 30 tuổi, con 5 tuổi. Hỏi tổng số tuổi của ba người?', 1, 'ACTIVE', NULL, NULL),
+	('AGE_RELATIONSHIP_MULTI', 'AGE_RELATIONSHIP_MULTI_010', 'Mai 9 tuổi. Lan kém Mai 3 tuổi. Hỏi tổng số tuổi của Mai và Lan?', 1, 'ACTIVE', NULL, NULL),
+
+	('AGE_RELATIONSHIP_MULTI', 'AGE_RELATIONSHIP_MULTI_011', 'An hơn Bình 3 tuổi. Bình 7 tuổi. Cường ít hơn An 2 tuổi. Hỏi tổng số tuổi của ba bạn?', 2, 'ACTIVE', NULL, NULL),
+	('AGE_RELATIONSHIP_MULTI', 'AGE_RELATIONSHIP_MULTI_012', 'Chị hơn em 4 tuổi. Em 6 tuổi. Mẹ hơn chị 20 tuổi. Hỏi tổng số tuổi của ba người?', 2, 'ACTIVE', NULL, NULL),
+	('AGE_RELATIONSHIP_MULTI', 'AGE_RELATIONSHIP_MULTI_013', 'Nam 9 tuổi. Bình hơn Nam 3 tuổi. An kém Bình 2 tuổi. Hỏi tổng số tuổi của ba bạn?', 2, 'ACTIVE', NULL, NULL),
+	('AGE_RELATIONSHIP_MULTI', 'AGE_RELATIONSHIP_MULTI_014', 'Hai chị em có tổng số tuổi là 18 tuổi. Chị hơn em 4 tuổi. Hỏi em bao nhiêu tuổi?', 2, 'ACTIVE', NULL, NULL),
+	('AGE_RELATIONSHIP_MULTI', 'AGE_RELATIONSHIP_MULTI_015', 'Hai anh em có tổng số tuổi 20 tuổi. Anh hơn em 2 tuổi. Hỏi anh bao nhiêu tuổi?', 2, 'ACTIVE', NULL, NULL),
+	('AGE_RELATIONSHIP_MULTI', 'AGE_RELATIONSHIP_MULTI_016', 'Mẹ hơn con 24 tuổi. Con 6 tuổi. Sau 2 năm nữa, tổng số tuổi của hai mẹ con là bao nhiêu?', 2, 'ACTIVE', NULL, NULL),
+	('AGE_RELATIONSHIP_MULTI', 'AGE_RELATIONSHIP_MULTI_017', 'Ba bạn An, Bình, Cường có tuổi lần lượt hơn kém nhau 2 tuổi. An 10 tuổi và lớn nhất. Hỏi tổng số tuổi của ba bạn?', 2, 'ACTIVE', NULL, NULL),
+	('AGE_RELATIONSHIP_MULTI', 'AGE_RELATIONSHIP_MULTI_018', 'Bố hơn con 28 tuổi. Con 7 tuổi. Mẹ ít hơn bố 3 tuổi. Hỏi tổng số tuổi của ba người?', 2, 'ACTIVE', NULL, NULL),
+	('AGE_RELATIONSHIP_MULTI', 'AGE_RELATIONSHIP_MULTI_019', 'Lan 8 tuổi. Mai hơn Lan 2 tuổi. Hoa kém Mai 3 tuổi. Hỏi tổng số tuổi của ba bạn?', 2, 'ACTIVE', NULL, NULL),
+	('AGE_RELATIONSHIP_MULTI', 'AGE_RELATIONSHIP_MULTI_020', 'Anh hơn em 5 tuổi. Em 7 tuổi. Sau 3 năm nữa, tổng số tuổi của hai anh em là bao nhiêu?', 2, 'ACTIVE', NULL, NULL),
+
+	('AGE_RELATIONSHIP_MULTI', 'AGE_RELATIONSHIP_MULTI_021', 'An hơn Bình 2 tuổi. Bình hơn Cường 3 tuổi. Cường 4 tuổi. Hỏi tổng số tuổi của ba bạn?', 3, 'ACTIVE', NULL, NULL),
+	('AGE_RELATIONSHIP_MULTI', 'AGE_RELATIONSHIP_MULTI_022', 'Chị hơn em 4 tuổi. Tổng số tuổi của hai chị em là 14 tuổi. Hỏi chị bao nhiêu tuổi?', 3, 'ACTIVE', NULL, NULL),
+	('AGE_RELATIONSHIP_MULTI', 'AGE_RELATIONSHIP_MULTI_023', 'Mẹ hơn con 25 tuổi. Sau 3 năm nữa, tổng số tuổi của hai mẹ con là 43 tuổi. Hỏi hiện nay con bao nhiêu tuổi?', 3, 'ACTIVE', NULL, NULL),
+	('AGE_RELATIONSHIP_MULTI', 'AGE_RELATIONSHIP_MULTI_024', 'An 8 tuổi. Bình ít hơn An 3 tuổi, còn Chi hơn Bình 2 tuổi. Hỏi tổng số tuổi của ba bạn?', 3, 'ACTIVE', NULL, NULL),
+	('AGE_RELATIONSHIP_MULTI', 'AGE_RELATIONSHIP_MULTI_025', 'Ba anh em có tuổi lần lượt hơn kém nhau 2 tuổi. Em út 4 tuổi. Hỏi tổng số tuổi của ba anh em?', 3, 'ACTIVE', NULL, NULL),
+	('AGE_RELATIONSHIP_MULTI', 'AGE_RELATIONSHIP_MULTI_026', 'Bố hơn con 30 tuổi. Mẹ hơn con 26 tuổi. Tổng số tuổi của ba người hiện nay là 71 tuổi. Hỏi con bao nhiêu tuổi?', 3, 'ACTIVE', NULL, NULL),
+	('AGE_RELATIONSHIP_MULTI', 'AGE_RELATIONSHIP_MULTI_027', 'Hai chị em có tổng số tuổi 22 tuổi. Chị hơn em 6 tuổi. Mẹ hơn chị 25 tuổi. Hỏi mẹ bao nhiêu tuổi?', 3, 'ACTIVE', NULL, NULL),
+	('AGE_RELATIONSHIP_MULTI', 'AGE_RELATIONSHIP_MULTI_028', 'Nam hơn Bình 4 tuổi. Bình hơn An 2 tuổi. Tổng số tuổi của ba bạn là 24 tuổi. Hỏi Nam bao nhiêu tuổi?', 3, 'ACTIVE', NULL, NULL),
+	('AGE_RELATIONSHIP_MULTI', 'AGE_RELATIONSHIP_MULTI_029', 'Mẹ hơn con 24 tuổi. Sau 4 năm nữa, mẹ sẽ gấp 3 lần tuổi con. Hỏi hiện nay con bao nhiêu tuổi?', 3, 'ACTIVE', NULL, NULL),
+	('AGE_RELATIONSHIP_MULTI', 'AGE_RELATIONSHIP_MULTI_030', 'Ba anh em có tổng số tuổi 30 tuổi. Anh cả hơn anh hai 2 tuổi, anh hai hơn em út 2 tuổi. Hỏi anh cả bao nhiêu tuổi?', 3, 'ACTIVE', NULL, NULL),
+
+	('AGE_RELATIONSHIP_MULTI', 'AGE_RELATIONSHIP_MULTI_031', 'Bố hơn con 30 tuổi. Mẹ hơn con 26 tuổi. Sau 4 năm nữa, tổng số tuổi của ba người là 83 tuổi. Hỏi hiện nay con bao nhiêu tuổi?', 4, 'ACTIVE', NULL, NULL),
+	('AGE_RELATIONSHIP_MULTI', 'AGE_RELATIONSHIP_MULTI_032', 'An hơn Bình 3 tuổi. Bình hơn Cường 2 tuổi. Sau 2 năm nữa, tổng số tuổi của ba bạn là 43 tuổi. Hỏi hiện nay Cường bao nhiêu tuổi?', 4, 'ACTIVE', NULL, NULL),
+	('AGE_RELATIONSHIP_MULTI', 'AGE_RELATIONSHIP_MULTI_033', 'Hai chị em có tổng số tuổi 24 tuổi. Chị hơn em 4 tuổi. Mẹ hơn chị 27 tuổi. Hỏi tổng số tuổi của ba mẹ con hiện nay?', 4, 'ACTIVE', NULL, NULL),
+	('AGE_RELATIONSHIP_MULTI', 'AGE_RELATIONSHIP_MULTI_034', 'Bố hơn mẹ 5 tuổi. Mẹ hơn con 25 tuổi. Tổng số tuổi của ba người là 79 tuổi. Hỏi con bao nhiêu tuổi?', 4, 'ACTIVE', NULL, NULL),
+	('AGE_RELATIONSHIP_MULTI', 'AGE_RELATIONSHIP_MULTI_035', 'Ba anh em có tổng số tuổi 27 tuổi. Anh cả hơn anh hai 3 tuổi, anh hai hơn em út 3 tuổi. Sau 3 năm nữa, anh cả bao nhiêu tuổi?', 4, 'ACTIVE', NULL, NULL),
+	('AGE_RELATIONSHIP_MULTI', 'AGE_RELATIONSHIP_MULTI_036', 'Lan hơn Mai 2 tuổi. Mai hơn Hoa 3 tuổi. Tổng số tuổi của ba bạn là 27 tuổi. Hỏi sau 2 năm nữa tổng số tuổi của ba bạn là bao nhiêu?', 4, 'ACTIVE', NULL, NULL),
+	('AGE_RELATIONSHIP_MULTI', 'AGE_RELATIONSHIP_MULTI_037', 'Mẹ hơn con 24 tuổi. Bố hơn mẹ 4 tuổi. Sau 2 năm nữa tổng số tuổi của ba người là 70 tuổi. Hỏi hiện nay bố bao nhiêu tuổi?', 4, 'ACTIVE', NULL, NULL),
+	('AGE_RELATIONSHIP_MULTI', 'AGE_RELATIONSHIP_MULTI_038', 'Anh hơn em 6 tuổi. Chị hơn em 3 tuổi. Tổng số tuổi của ba anh em là 30 tuổi. Hỏi anh bao nhiêu tuổi?', 4, 'ACTIVE', NULL, NULL),
+	('AGE_RELATIONSHIP_MULTI', 'AGE_RELATIONSHIP_MULTI_039', 'Nam hơn Bình 2 tuổi. Bình hơn Cường 2 tuổi. Cường 5 tuổi. Sau 3 năm nữa, tổng số tuổi của ba bạn là bao nhiêu?', 4, 'ACTIVE', NULL, NULL),
+	('AGE_RELATIONSHIP_MULTI', 'AGE_RELATIONSHIP_MULTI_040', 'Bố hơn con 28 tuổi. Mẹ hơn con 24 tuổi. Sau 5 năm nữa tổng số tuổi của ba người là 79 tuổi. Hỏi hiện nay mẹ bao nhiêu tuổi?', 4, 'ACTIVE', NULL, NULL);
+
+-- Child: 2.4.6 Bài toán tuổi qua nhiều thời điểm
+INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
+	('AGE_MULTI_TIMELINE', 'AGE_MULTI_TIMELINE_001', 'Bốn năm trước, An 3 tuổi. Bình hiện nay 6 tuổi. Hỏi 2 năm nữa tổng số tuổi của hai bạn là bao nhiêu?', 1, 'ACTIVE', NULL, NULL),
+	('AGE_MULTI_TIMELINE', 'AGE_MULTI_TIMELINE_002', 'Nam hiện nay 8 tuổi, em gái Nam 4 tuổi. Hỏi 3 năm nữa tổng số tuổi của hai anh em là bao nhiêu?', 1, 'ACTIVE', NULL, NULL),
+	('AGE_MULTI_TIMELINE', 'AGE_MULTI_TIMELINE_003', 'Hai năm trước, chị 7 tuổi và em kém chị 3 tuổi. Hỏi 4 năm nữa tổng số tuổi của hai chị em là bao nhiêu?', 1, 'ACTIVE', NULL, NULL),
+	('AGE_MULTI_TIMELINE', 'AGE_MULTI_TIMELINE_004', 'Lan hiện nay 6 tuổi. Minh hơn Lan 2 tuổi. Hỏi cách đây 3 năm, tổng số tuổi của hai bạn là bao nhiêu?', 1, 'ACTIVE', NULL, NULL),
+	('AGE_MULTI_TIMELINE', 'AGE_MULTI_TIMELINE_005', 'An hiện nay 9 tuổi. Bình hiện nay 5 tuổi. Hỏi sau bao nhiêu năm nữa tổng số tuổi của hai bạn là 20 tuổi?', 1, 'ACTIVE', NULL, NULL),
+	('AGE_MULTI_TIMELINE', 'AGE_MULTI_TIMELINE_006', 'Năm năm trước, An 4 tuổi. Bình hơn An 3 tuổi. Hỏi 2 năm nữa tổng số tuổi của hai bạn là bao nhiêu?', 1, 'ACTIVE', NULL, NULL),
+	('AGE_MULTI_TIMELINE', 'AGE_MULTI_TIMELINE_007', 'Ba năm trước, Mai 6 tuổi. Lan kém Mai 4 tuổi. Hỏi 5 năm nữa tổng số tuổi của hai bạn là bao nhiêu?', 1, 'ACTIVE', NULL, NULL),
+	('AGE_MULTI_TIMELINE', 'AGE_MULTI_TIMELINE_008', 'Hai năm nữa, Nam sẽ 10 tuổi và em gái Nam sẽ 7 tuổi. Hỏi 4 năm trước tổng số tuổi của hai anh em là bao nhiêu?', 1, 'ACTIVE', NULL, NULL),
+	('AGE_MULTI_TIMELINE', 'AGE_MULTI_TIMELINE_009', 'Sáu năm trước, bố 30 tuổi và con 5 tuổi. Hỏi 4 năm nữa tổng số tuổi của bố và con là bao nhiêu?', 1, 'ACTIVE', NULL, NULL),
+	('AGE_MULTI_TIMELINE', 'AGE_MULTI_TIMELINE_010', 'Ba năm trước, mẹ 28 tuổi và con 4 tuổi. Hỏi 2 năm nữa tổng số tuổi của mẹ và con là bao nhiêu?', 1, 'ACTIVE', NULL, NULL),
+	('AGE_MULTI_TIMELINE', 'AGE_MULTI_TIMELINE_011', 'Bốn năm trước, An 3 tuổi. Bình hiện nay hơn An 2 tuổi. Hỏi 2 năm nữa tổng số tuổi của hai bạn là bao nhiêu?', 2, 'ACTIVE', NULL, NULL),
+	('AGE_MULTI_TIMELINE', 'AGE_MULTI_TIMELINE_012', 'Nam hiện nay 8 tuổi, em gái Nam ít hơn Nam 4 tuổi. Hỏi 3 năm nữa tổng số tuổi của hai anh em là bao nhiêu?', 2, 'ACTIVE', NULL, NULL),
+	('AGE_MULTI_TIMELINE', 'AGE_MULTI_TIMELINE_013', 'Hai năm trước, chị 7 tuổi. Em kém chị 3 tuổi. Hỏi 4 năm nữa tổng số tuổi của hai chị em là bao nhiêu?', 2, 'ACTIVE', NULL, NULL),
+	('AGE_MULTI_TIMELINE', 'AGE_MULTI_TIMELINE_014', 'Lan hiện nay 6 tuổi. Minh hơn Lan 2 tuổi. Hỏi cách đây 3 năm, tổng số tuổi của hai bạn là bao nhiêu?', 2, 'ACTIVE', NULL, NULL),
+	('AGE_MULTI_TIMELINE', 'AGE_MULTI_TIMELINE_015', 'An hiện nay 9 tuổi. Bình hiện nay 5 tuổi. Hỏi sau bao nhiêu năm nữa tổng số tuổi của hai bạn là 20 tuổi?', 2, 'ACTIVE', NULL, NULL),
+	('AGE_MULTI_TIMELINE', 'AGE_MULTI_TIMELINE_016', 'Năm năm trước, Hoa 5 tuổi. Mai hơn Hoa 2 tuổi. Hỏi 3 năm nữa tổng số tuổi của hai bạn là bao nhiêu?', 2, 'ACTIVE', NULL, NULL),
+	('AGE_MULTI_TIMELINE', 'AGE_MULTI_TIMELINE_017', 'Bốn năm trước, Nam 6 tuổi. Minh hơn Nam 1 tuổi. Hỏi 2 năm nữa tổng số tuổi của hai bạn là bao nhiêu?', 2, 'ACTIVE', NULL, NULL),
+	('AGE_MULTI_TIMELINE', 'AGE_MULTI_TIMELINE_018', 'Ba năm trước, bố 32 tuổi và con 6 tuổi. Hỏi 5 năm nữa tổng số tuổi của hai bố con là bao nhiêu?', 2, 'ACTIVE', NULL, NULL),
+	('AGE_MULTI_TIMELINE', 'AGE_MULTI_TIMELINE_019', 'Hai năm nữa, Lan sẽ 9 tuổi và Mai sẽ 6 tuổi. Hỏi hiện nay tổng số tuổi của hai bạn là bao nhiêu?', 2, 'ACTIVE', NULL, NULL),
+	('AGE_MULTI_TIMELINE', 'AGE_MULTI_TIMELINE_020', 'Mẹ hiện nay 35 tuổi, con 7 tuổi. Hỏi 4 năm trước tổng số tuổi của mẹ và con là bao nhiêu?', 2, 'ACTIVE', NULL, NULL),
+	('AGE_MULTI_TIMELINE', 'AGE_MULTI_TIMELINE_021', 'Bốn năm trước, An 5 tuổi. Bình hơn An 3 tuổi. Cường hiện nay 10 tuổi. Hỏi 2 năm nữa tổng số tuổi của ba bạn là bao nhiêu?', 3, 'ACTIVE', NULL, NULL),
+	('AGE_MULTI_TIMELINE', 'AGE_MULTI_TIMELINE_022', 'Hai năm trước, chị 8 tuổi, em kém chị 3 tuổi. Hỏi 5 năm nữa tổng số tuổi của hai chị em là bao nhiêu?', 3, 'ACTIVE', NULL, NULL),
+	('AGE_MULTI_TIMELINE', 'AGE_MULTI_TIMELINE_023', 'Ba năm trước, bố 30 tuổi, mẹ kém bố 4 tuổi, con kém mẹ 25 tuổi. Hỏi 2 năm nữa tổng số tuổi của ba người là bao nhiêu?', 3, 'ACTIVE', NULL, NULL),
+	('AGE_MULTI_TIMELINE', 'AGE_MULTI_TIMELINE_024', 'Năm năm trước, An 7 tuổi. Bình hơn An 2 tuổi. Hỏi 3 năm nữa Bình bao nhiêu tuổi?', 3, 'ACTIVE', NULL, NULL),
+	('AGE_MULTI_TIMELINE', 'AGE_MULTI_TIMELINE_025', 'Hai năm nữa, mẹ sẽ 34 tuổi và con sẽ 9 tuổi. Hỏi 3 năm trước tổng số tuổi của mẹ và con là bao nhiêu?', 3, 'ACTIVE', NULL, NULL),
+	('AGE_MULTI_TIMELINE', 'AGE_MULTI_TIMELINE_026', 'Bốn năm trước, anh 9 tuổi, em kém anh 4 tuổi. Hỏi sau 6 năm nữa tổng số tuổi của hai anh em là bao nhiêu?', 3, 'ACTIVE', NULL, NULL),
+	('AGE_MULTI_TIMELINE', 'AGE_MULTI_TIMELINE_027', 'Ba năm trước, Lan 5 tuổi, Minh hơn Lan 4 tuổi. Hỏi sau 4 năm nữa tổng số tuổi của hai bạn là bao nhiêu?', 3, 'ACTIVE', NULL, NULL),
+	('AGE_MULTI_TIMELINE', 'AGE_MULTI_TIMELINE_028', 'Sáu năm trước, bố 28 tuổi và con 4 tuổi. Hỏi sau 3 năm nữa bố hơn con bao nhiêu tuổi?', 3, 'ACTIVE', NULL, NULL),
+	('AGE_MULTI_TIMELINE', 'AGE_MULTI_TIMELINE_029', 'Hiện nay An 8 tuổi, Bình 5 tuổi. Sau 4 năm nữa, Chi sẽ bằng tuổi Bình hiện nay cộng 6 tuổi. Hỏi sau 4 năm nữa tổng số tuổi của ba bạn là bao nhiêu?', 3, 'ACTIVE', NULL, NULL),
+	('AGE_MULTI_TIMELINE', 'AGE_MULTI_TIMELINE_030', 'Ba năm trước, mẹ 30 tuổi, con 6 tuổi. Hỏi 2 năm trước tổng số tuổi của hai mẹ con là bao nhiêu?', 3, 'ACTIVE', NULL, NULL),
+	('AGE_MULTI_TIMELINE', 'AGE_MULTI_TIMELINE_031', 'Bốn năm trước, An 6 tuổi, Bình 4 tuổi. Cường hiện nay hơn Bình 5 tuổi. Hỏi 3 năm nữa tổng số tuổi của ba bạn là bao nhiêu?', 4, 'ACTIVE', NULL, NULL),
+	('AGE_MULTI_TIMELINE', 'AGE_MULTI_TIMELINE_032', 'Hai năm trước, bố 31 tuổi, mẹ kém bố 5 tuổi, con kém mẹ 24 tuổi. Hỏi 4 năm nữa tổng số tuổi của ba người là bao nhiêu?', 4, 'ACTIVE', NULL, NULL),
+	('AGE_MULTI_TIMELINE', 'AGE_MULTI_TIMELINE_033', 'Ba năm nữa, An sẽ 12 tuổi. Bình hiện nay kém An 3 tuổi. Hỏi 2 năm trước tổng số tuổi của hai bạn là bao nhiêu?', 4, 'ACTIVE', NULL, NULL),
+	('AGE_MULTI_TIMELINE', 'AGE_MULTI_TIMELINE_034', 'Năm năm trước, chị 10 tuổi, em kém chị 4 tuổi. Hỏi 3 năm trước tổng số tuổi của hai chị em là bao nhiêu?', 4, 'ACTIVE', NULL, NULL),
+	('AGE_MULTI_TIMELINE', 'AGE_MULTI_TIMELINE_035', 'Bốn năm trước, bố 35 tuổi, mẹ kém bố 4 tuổi, con kém mẹ 26 tuổi. Hỏi 3 năm nữa tổng số tuổi của ba người là bao nhiêu?', 4, 'ACTIVE', NULL, NULL),
+	('AGE_MULTI_TIMELINE', 'AGE_MULTI_TIMELINE_036', 'Hai năm trước, Lan 7 tuổi, Mai hơn Lan 3 tuổi. Hoa hiện nay kém Mai 2 tuổi. Hỏi 4 năm nữa tổng số tuổi của ba bạn là bao nhiêu?', 4, 'ACTIVE', NULL, NULL),
+	('AGE_MULTI_TIMELINE', 'AGE_MULTI_TIMELINE_037', 'Ba năm nữa, bố sẽ 40 tuổi. Con hiện nay kém bố 32 tuổi. Hỏi 2 năm trước tổng số tuổi của bố và con là bao nhiêu?', 4, 'ACTIVE', NULL, NULL),
+	('AGE_MULTI_TIMELINE', 'AGE_MULTI_TIMELINE_038', 'Bốn năm trước, An 4 tuổi. Bình hiện nay hơn An 5 tuổi. Chi hiện nay hơn Bình 2 tuổi. Hỏi 3 năm nữa tổng số tuổi của ba bạn là bao nhiêu?', 4, 'ACTIVE', NULL, NULL),
+	('AGE_MULTI_TIMELINE', 'AGE_MULTI_TIMELINE_039', 'Hai năm trước, mẹ 29 tuổi, con 5 tuổi. Hỏi sau 5 năm nữa tổng số tuổi của hai mẹ con là bao nhiêu?', 4, 'ACTIVE', NULL, NULL),
+	('AGE_MULTI_TIMELINE', 'AGE_MULTI_TIMELINE_040', 'Năm năm trước, anh 8 tuổi, chị hơn anh 2 tuổi, em kém anh 3 tuổi. Hỏi 4 năm nữa tổng số tuổi của ba anh chị em là bao nhiêu?', 4, 'ACTIVE', NULL, NULL);
