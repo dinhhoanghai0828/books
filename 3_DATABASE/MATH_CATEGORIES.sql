@@ -31,8 +31,8 @@ INSERT INTO MATH_CATEGORIES (CATEGORY_CODE, FULL_PATH, CATEGORY_NAME, CATEGORY_D
 	-- Child: 1.2.8 Tìm số ở giữa một dãy số có quy luật
 	('NUMBER_PATTERN_MISSING', 'toan/lop-1', 'Tìm số ở giữa một dãy số có quy luật', 'Tìm số bị thiếu ở giữa một dãy số có quy luật', 'NUMBER_PATTERN', 'ACTIVE', NULL, NULL),
 	
-	-- Parent: 1.3. Phép tính
-	('CALCULATION', 'toan/lop-1', '1.3. Phép tính', 'Thực hiện các phép tính cộng, trừ và tìm thành phần chưa biết của phép tính.', 'MATH_LOGIC', 'ACTIVE', NULL, NULL),
+	-- Parent: 1.3. Phép tính cộng trừ
+	('CALCULATION', 'toan/lop-1', '1.3. Phép tính cộng trừ', 'Thực hiện các phép tính cộng, trừ và tìm thành phần chưa biết của phép tính.', 'MATH_LOGIC', 'ACTIVE', NULL, NULL),
 	-- Child: 1.3.1. Tìm tổng của hai hoặc nhiều số
 	('CALCULATION_ADDITION', 'toan/lop-1', 'Tìm tổng của hai hoặc nhiều số', 'Tính tổng của hai hoặc nhiều số', 'CALCULATION', 'ACTIVE', NULL, NULL),
 	-- Child: 1.3.2. Tìm hiệu của hai hoặc nhiều số
@@ -44,11 +44,36 @@ INSERT INTO MATH_CATEGORIES (CATEGORY_CODE, FULL_PATH, CATEGORY_NAME, CATEGORY_D
 	-- Child: 1.3.5. Tìm số trừ của 2 hoặc nhiều số
 	('CALCULATION_SUBTRAHEND', 'toan/lop-1', 'Tìm số trừ của 2 hoặc nhiều số', 'Tìm số trừ của 2 hoặc nhiều số', 'CALCULATION', 'ACTIVE', NULL, NULL),
 
-	-- Parent: 1.4. Số liền trước, số liền sau
-	('NUMBER_NEIGHBOR', 'toan/lop-1', '1.4. Số liền trước, số liền sau', 'Xác định số liền trước và số liền sau của một số đã cho.', 'MATH_LOGIC', 'ACTIVE', NULL, NULL),
-	-- Child: 1.4.1. Tìm số liền trước
+
+	-- Parent: 1.4. Phép tính nhân chia
+	('MULTIPLICATION_DIVISION', 'toan/lop-1', '1.4. Phép tính nhân chia', 'Thực hiện các phép tính nhân, chia và tìm thành phần chưa biết của phép tính.', 'MATH_LOGIC', 'ACTIVE', NULL, NULL),
+
+	-- Child: 1.4.1. Tìm tích của hai hoặc nhiều số
+	('CALCULATION_MULTIPLICATION', 'toan/lop-1', 'Tìm tích của hai hoặc nhiều số', 'Tính tích của hai hoặc nhiều số bằng phép nhân.', 'MULTIPLICATION_DIVISION', 'ACTIVE', NULL, NULL),
+
+	-- Child: 1.4.2. Tìm thương của hai số
+	('CALCULATION_DIVISION', 'toan/lop-1', 'Tìm thương của hai số', 'Tính thương của hai số bằng phép chia.', 'MULTIPLICATION_DIVISION', 'ACTIVE', NULL, NULL),
+
+	-- Child: 1.4.3. Tìm kết quả của phép tính kết hợp nhân và chia
+	('CALCULATION_MIXED_MULTIPLICATION_DIVISION', 'toan/lop-1', 'Tìm kết quả của phép tính kết hợp nhân và chia', 'Tìm kết quả của biểu thức có chứa cả phép nhân và phép chia.', 'MULTIPLICATION_DIVISION', 'ACTIVE', NULL, NULL),
+
+	-- Child: 1.4.4. Tìm thừa số chưa biết
+	('CALCULATION_UNKNOWN_FACTOR', 'toan/lop-1', 'Tìm thừa số chưa biết', 'Tìm thừa số chưa biết khi biết tích và thừa số còn lại.', 'MULTIPLICATION_DIVISION', 'ACTIVE', NULL, NULL),
+
+	-- Child: 1.4.5. Tìm số bị chia
+	('CALCULATION_DIVIDEND', 'toan/lop-1', 'Tìm số bị chia', 'Tìm số bị chia khi biết thương và số chia.', 'MULTIPLICATION_DIVISION', 'ACTIVE', NULL, NULL),
+
+	-- Child: 1.4.6. Tìm số chia
+	('CALCULATION_DIVISOR', 'toan/lop-1', 'Tìm số chia', 'Tìm số chia khi biết số bị chia và thương.', 'MULTIPLICATION_DIVISION', 'ACTIVE', NULL, NULL),
+
+	-- Child: 1.4.7. Tìm kết quả biểu thức kết hợp cộng, trừ, nhân và chia
+	('CALCULATION_MIXED_ARITHMETIC', 'toan/lop-1', 'Tìm kết quả biểu thức kết hợp cộng, trừ, nhân và chia', 'Tính giá trị biểu thức có sự kết hợp của các phép cộng, trừ, nhân và chia.', 'MULTIPLICATION_DIVISION', 'ACTIVE', NULL, NULL),
+
+	-- Parent: 1.5. Số liền trước, số liền sau
+	('NUMBER_NEIGHBOR', 'toan/lop-1', '1.5. Số liền trước, số liền sau', 'Xác định số liền trước và số liền sau của một số đã cho.', 'MATH_LOGIC', 'ACTIVE', NULL, NULL),
+	-- Child: 1.5.1. Tìm số liền trước
 	('NUMBER_PREVIOUS', 'toan/lop-1', 'Tìm số liền trước', 'Tìm số đứng ngay trước một số đã cho, kém số đó 1 đơn vị.', 'NUMBER_NEIGHBOR', 'ACTIVE', NULL, NULL),
-	-- Child: 1.4.2. Tìm số liền sau
+	-- Child: 1.5.2. Tìm số liền sau
 	('NUMBER_NEXT', 'toan/lop-1', 'Tìm số liền sau', 'Tìm số đứng ngay sau một số đã cho, hơn số đó 1 đơn vị.', 'NUMBER_NEIGHBOR', 'ACTIVE', NULL, NULL),
 		
 	-- Parent: 2.1. Tìm số chưa biết
@@ -84,16 +109,18 @@ INSERT INTO MATH_CATEGORIES (CATEGORY_CODE, FULL_PATH, CATEGORY_NAME, CATEGORY_D
 	('FIND_TWO_NUMBERS_FROM_SUM_MORE_LESS', 'toan/lop-1', 'Tìm hai số khi biết tổng và hơn kém', 'Biết tổng và quan hệ nhiều hơn hoặc ít hơn giữa hai số, tìm số lượng của từng nhóm.', 'WORD_PROBLEM_RELATIONS_QUANTITY', 'ACTIVE', NULL, NULL),
 
 	-- Parent: 2.4. Bài toán về tuổi
-	('AGE_PROBLEMS', 'toan/lop-1', 'Bài toán về tuổi', 'Giải bài toán có lời văn liên quan đến tuổi của một hoặc nhiều người, bao gồm tìm tuổi, so sánh tuổi, tính tuổi ở các thời điểm khác nhau và giải bài toán tuổi bằng nhiều bước tính.', 'MATH_WORD_PROBLEMS', 'ACTIVE', NULL, NULL),
+	('AGE_PROBLEMS', 'toan/lop-1', '2.4. Bài toán về tuổi', 'Giải bài toán có lời văn liên quan đến tuổi của một hoặc nhiều người, bao gồm tìm tuổi, so sánh tuổi, tính tuổi ở các thời điểm khác nhau và giải bài toán tuổi bằng nhiều bước tính.', 'MATH_WORD_PROBLEMS', 'ACTIVE', NULL, NULL),
 	-- Child: 2.4.1 Tìm tuổi hiện tại
 	('AGE_FIND_CURRENT', 'toan/lop-1', 'Tìm tuổi hiện tại', 'Tìm tuổi hiện tại của một người dựa vào các dữ kiện tuổi và mối quan hệ tuổi đã cho.', 'AGE_PROBLEMS', 'ACTIVE', NULL, NULL),
 	-- Child: 2.4.2 Tìm tuổi sau một số năm
 	('AGE_AFTER_YEARS', 'toan/lop-1', 'Tìm tuổi sau một số năm', 'Biết tuổi hiện tại của một người, tính tuổi của người đó sau một số năm nữa bằng phép cộng.', 'AGE_PROBLEMS', 'ACTIVE', NULL, NULL),
-	-- Child: 2.4.3 Suy luận ngược từ tuổi tương lai
+	-- Child: 2.4.3 Tìm tuổi trước một số năm
+	('AGE_BEFORE_YEARS', 'toan/lop-1', 'Tìm tuổi trước một số năm', 'Biết tuổi hiện tại của một người, tính tuổi của người đó trước một số năm bằng phép trừ.', 'AGE_PROBLEMS', 'ACTIVE', NULL, NULL),
+	-- Child: 2.4.4 Suy luận ngược từ tuổi tương lai
 	('AGE_REVERSE_FUTURE', 'toan/lop-1', 'Suy luận ngược từ tuổi tương lai', 'Tìm tuổi hiện tại hoặc tuổi ở một thời điểm khác dựa vào tuổi tương lai kết hợp với các dữ kiện và phép tính trung gian.', 'AGE_PROBLEMS', 'ACTIVE', NULL, NULL),
-	-- Child: 2.4.4 Bài toán kết hợp tuổi của nhiều người
+	-- Child: 2.4.5 Bài toán kết hợp tuổi của nhiều người
 	('AGE_RELATIONSHIP_MULTI', 'toan/lop-1', 'Bài toán kết hợp tuổi của nhiều người', 'Giải bài toán dựa trên mối quan hệ tuổi giữa từ hai người trở lên, kết hợp dữ kiện hơn kém tuổi, tổng số tuổi và các phép tính trung gian.', 'AGE_PROBLEMS', 'ACTIVE', NULL, NULL),
-	-- Child: 2.4.5 Bài toán tuổi qua nhiều thời điểm
+	-- Child: 2.4.6 Bài toán tuổi qua nhiều thời điểm
 	('AGE_MULTI_TIMELINE', 'toan/lop-1', 'Bài toán tuổi qua nhiều thời điểm', 'Giải bài toán liên kết tuổi hiện tại, tuổi trong quá khứ và tuổi trong tương lai để tìm tuổi hoặc tổng số tuổi tại một thời điểm.', 'AGE_PROBLEMS', 'ACTIVE', NULL, NULL),
-	-- Child: 2.4.6 Suy luận tuổi từ phép tính và điều kiện ẩn
+	-- Child: 2.4.7 Suy luận tuổi từ phép tính và điều kiện ẩn
 	('AGE_LOGIC_CALCULATION', 'toan/lop-1', 'Suy luận tuổi từ phép tính và điều kiện ẩn', 'Tìm tuổi dựa vào biểu thức cộng trừ, số chưa biết, điều kiện gián tiếp hoặc nhiều dữ kiện cần suy luận để xác định kết quả.', 'AGE_PROBLEMS', 'ACTIVE', NULL, NULL);
