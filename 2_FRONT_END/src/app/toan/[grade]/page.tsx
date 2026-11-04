@@ -128,7 +128,7 @@ const MathGradePage = () => {
       return {
         key: isTongHop ? `__TONGHOP__${category.categoryCode}` : category.categoryCode,
         label: (
-          <span style={{ whiteSpace: 'normal', wordWrap: 'break-word', display: 'block' }}>
+          <span style={{ whiteSpace: 'normal', wordWrap: 'break-word', display: 'block', maxWidth: '100%', overflow: 'hidden', textOverflow: 'ellipsis' }}>
             {category.categoryName}
           </span>
         ),
@@ -249,7 +249,7 @@ const MathGradePage = () => {
 
   return (
     <Layout style={{ minHeight: '100vh', paddingTop: '64px' }}>
-      <Sider width={280} style={{ background: '#fff', borderRight: '1px solid #f0f0f0', height: 'calc(100vh - 64px)', position: 'fixed', left: 0, top: '64px' }}>
+      <Sider width={320} style={{ background: '#fff', borderRight: '1px solid #f0f0f0', height: 'calc(100vh - 64px)', position: 'fixed', left: 0, top: '64px' }}>
         <div style={{ padding: '16px', borderBottom: '1px solid #f0f0f0', fontWeight: 'bold', fontSize: '16px' }}>
           {getGradeDisplayName(grade)}
         </div>
@@ -267,7 +267,7 @@ const MathGradePage = () => {
           defaultSelectedKeys={selectedCategory ? [selectedCategory] : []}
         />
       </Sider>
-      <Content style={{ padding: '24px', background: '#f5f5f5', marginLeft: '280px' }}>
+      <Content style={{ padding: '24px', background: '#f5f5f5', marginLeft: '320px' }}>
         {selectedCategory ? (
           loadingQuestions ? (
             <div style={{ display: 'flex', justifyContent: 'center', padding: '40px' }}>
