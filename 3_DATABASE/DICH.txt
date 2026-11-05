@@ -46,8 +46,9 @@ INSERT INTO ANSWERS (QUESTION_CODE,ANSWER_CODE, ANSWER_TEXT, ANSWER_TEXT_VI, IS_
 
 
 Tạo cho t mỗi loại 40 câu bao gồm Dễ, Trung Bình, Khó, Rất Khó
-	-- Child: 2.4.7 Suy luận tuổi từ phép tính và điều kiện ẩn
-	('AGE_LOGIC_CALCULATION', 'toan/lop-1', 'Suy luận tuổi từ phép tính và điều kiện ẩn', 'Tìm tuổi dựa vào biểu thức cộng trừ, số chưa biết, điều kiện gián tiếp hoặc nhiều dữ kiện cần suy luận để xác định kết quả.', 'AGE_PROBLEMS', 'ACTIVE', NULL, NULL);
+		-- Child: 1.3.6. Tìm số thỏa mãn điều kiện của phép tính
+	('CALCULATION_FIND_NUMBER_CONDITION', 'toan/lop-1', 'Tìm số thỏa mãn điều kiện của phép tính', 'Tìm các số tự nhiên hoặc số lớn hơn 0 có thể điền vào ô trống để phép tính hoặc bất đẳng thức thỏa mãn điều kiện cho trước.', 'CALCULATION', 'ACTIVE', NULL, NULL),
+
 	
 INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
 	('NUMBER_INCREASING', 'NUMBER_INCREASING_001', '2, 3, 4, 5, ?, số nào thích hợp điền vào dấu ?', 1, 'ACTIVE', NULL, NULL),
@@ -65,8 +66,14 @@ MATH_ANSWERS: 160 đáp án
 Độ khó 1 → 4, mỗi mức 10 câu
 Đáp án đúng A/B/C/D được phân bố, khong trung lap, xáo trộn xen kẽ ngẫu nhiên trong 4 đáp án A=10, B=10, C=10, D=10
 Câu hỏi rõ ràng đầy đủ, dữ kiện chi tiết
-Toàn bộ vẫn trong phạm vi Toán lớp 1
+Toàn bộ vẫn trong phạm vi Toán lớp 1, pham vi 20
 
+4. Dạng suy luận từ phép tính và điều kiện ẩn
+16. Tuổi của Bình cộng với 2 rồi trừ đi 3 thì bằng 6. Hỏi 4 năm nữa Bình bao nhiêu tuổi?
+17. An và Bình có tổng số tuổi là 15. An hơn Bình 3 tuổi. Hỏi mỗi bạn bao nhiêu tuổi?
+18. Tuổi của chị bằng số lớn nhất có một chữ số. Tuổi của em bằng số bé nhất có hai chữ số trừ đi 6. Hỏi chị hơn em mấy tuổi?
+19. Ba năm nữa, tuổi của An bằng tuổi hiện nay của Bình. Bình 10 tuổi. An hơn em mình 2 tuổi. Hỏi em của An hiện nay bao nhiêu tuổi?
+20. Tổng số tuổi của hai chị em hiện nay là 12. Hai năm nữa, chị 9 tuổi. Hỏi em hiện nay bao nhiêu tuổi?
 
 Lan noi to nhin thay 8 cai chan meo, hoi Lan nhin thay may con meo
 
@@ -77,10 +84,3 @@ Trong chuong co 3 con vua ga vua vit, biet so vit it hon so ga. Hoi so ga va so 
 
 
 
-
-4. Dạng suy luận từ phép tính và điều kiện ẩn
-16. Tuổi của Bình cộng với 2 rồi trừ đi 3 thì bằng 6. Hỏi 4 năm nữa Bình bao nhiêu tuổi?
-17. An và Bình có tổng số tuổi là 15. An hơn Bình 3 tuổi. Hỏi mỗi bạn bao nhiêu tuổi?
-18. Tuổi của chị bằng số lớn nhất có một chữ số. Tuổi của em bằng số bé nhất có hai chữ số trừ đi 6. Hỏi chị hơn em mấy tuổi?
-19. Ba năm nữa, tuổi của An bằng tuổi hiện nay của Bình. Bình 10 tuổi. An hơn em mình 2 tuổi. Hỏi em của An hiện nay bao nhiêu tuổi?
-20. Tổng số tuổi của hai chị em hiện nay là 12. Hai năm nữa, chị 9 tuổi. Hỏi em hiện nay bao nhiêu tuổi?

@@ -43,7 +43,8 @@ INSERT INTO MATH_CATEGORIES (CATEGORY_CODE, FULL_PATH, CATEGORY_NAME, CATEGORY_D
 	('CALCULATION_MINUEND', 'toan/lop-1', 'Tìm số bị trừ của 2 hoặc nhiều số', 'Tìm số bị trừ của 2 hoặc nhiều số', 'CALCULATION', 'ACTIVE', NULL, NULL),
 	-- Child: 1.3.5. Tìm số trừ của 2 hoặc nhiều số
 	('CALCULATION_SUBTRAHEND', 'toan/lop-1', 'Tìm số trừ của 2 hoặc nhiều số', 'Tìm số trừ của 2 hoặc nhiều số', 'CALCULATION', 'ACTIVE', NULL, NULL),
-
+	-- Child: 1.3.6. Tìm số thỏa mãn điều kiện của phép tính
+	('CALCULATION_FIND_NUMBER_CONDITION', 'toan/lop-1', 'Tìm số thỏa mãn điều kiện của phép tính', 'Tìm các số tự nhiên hoặc số lớn hơn 0 có thể điền vào ô trống để phép tính hoặc bất đẳng thức thỏa mãn điều kiện cho trước.', 'CALCULATION', 'ACTIVE', NULL, NULL),
 
 	-- Parent: 1.4. Phép tính nhân chia
 	('MULTIPLICATION_DIVISION', 'toan/lop-1', '1.4. Phép tính nhân chia', 'Thực hiện các phép tính nhân, chia và tìm thành phần chưa biết của phép tính.', 'MATH_LOGIC', 'ACTIVE', NULL, NULL),
