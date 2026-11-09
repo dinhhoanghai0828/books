@@ -48,7 +48,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He scooped some dirt','Jeb xúc một ít đất','00:01:35.100','00:01:36.700','little-cat-tire-town-school-2'),
 	('Hey, Eddie, said Jeb','Jeb gọi: "Này, Eddie!"','00:01:42.530','00:01:44.630','little-cat-tire-town-school-2'),
 	('Want to carry this dirt?','Cậu có muốn chở chỗ đất này không?','00:01:45.270','00:01:47.070','little-cat-tire-town-school-2'),
-	('No, thanks, said Eddie','Eddie đáp: "Thôi, cảm ơn nhé!"','00:01:48.250','00:01:50.270','little-cat-tire-town-school-2'),
+	('"No, thanks," said Eddie','Eddie đáp: "Thôi, cảm ơn nhé"','00:01:48.250','00:01:50.270','little-cat-tire-town-school-2'),
 	('I don''t like to carry dirt','Mình không thích chở đất đâu','00:01:50.870','00:01:52.610','little-cat-tire-town-school-2'),
 	('Everyone looked surprised','Mọi người đều tỏ vẻ ngạc nhiên','00:01:53.470','00:01:55.670','little-cat-tire-town-school-2'),
 	('"What do you like to do?" asked Dipper','Dipper hỏi: "Vậy cậu thích làm gì?"','00:01:56.590','00:02:00.090','little-cat-tire-town-school-2'),
