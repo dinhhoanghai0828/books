@@ -42,7 +42,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Two trucks rolled over','Hai chiếc xe tải tiến lại gần','00:00:58.990','00:01:00.850','little-cat-tire-town-school-2'),
 	('Eddie, said Poppy "Meet Dipper and Jeb"','Eddie, Poppy nói "Đây là Dipper và Jeb"','00:01:04.880','00:01:10.500','little-cat-tire-town-school-2'),
 	('I''m an ice cream truck, said Dipper','Dipper nói: "Tôi là xe bán kem"','00:01:11.080','00:01:13.980','little-cat-tire-town-school-2'),
-	('I play music','Tôi phát nhạc nữa','00:00:16.040','00:01:18.140','little-cat-tire-town-school-2'),
+	('I play music','Tôi phát nhạc nữa','00:01:16.200','00:01:18.140','little-cat-tire-town-school-2'),
 	('"I move dirt," said Jeb','Jeb nói: "Tôi chuyên xúc đất"','00:01:25.320','00:01:28.360','little-cat-tire-town-school-2'),
 	('He rolled off the lot','Jeb lái xe ra khỏi sân','00:01:29.260','00:01:31.380','little-cat-tire-town-school-2'),
 	('He scooped some dirt','Jeb xúc một ít đất','00:01:35.100','00:01:36.700','little-cat-tire-town-school-2'),
