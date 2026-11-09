@@ -4171,6 +4171,7 @@ INSERT INTO `WORDS` (`ENG`,`VI`) VALUES
 	('environment','môi trường'),
 	('envy','ghen tị'),
 	('eonomic','kinh tế'),
+	('episode','tập'),
 	('equal','bằng'),
 	('equal','cân bằng'),
 	('equal','tương tự'),
