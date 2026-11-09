@@ -91,11 +91,11 @@ public class RunSQLComponent {
         scripts.add(path + "APP_BOOK_4000_ESSENTIAL_ENGLISH_WORDS.sql");
         scripts.add(path + "APP_NEWS_NEWS.sql");
         scripts.add(path + "APP_PRESENTATION_TRO_CHUYEN_HANG_NGAY.sql");
-        scripts.add(path + "APP_TRUYEN_TRUYEN_CO_TICH.sql");
-        scripts.add(path + "APP_TRUYEN_TRUYEN_CUOC_SONG.sql");
-        scripts.add(path + "APP_TRUYEN_TRUYEN_KINH_DI.sql");
-        scripts.add(path + "APP_TRUYEN_TRUYEN_TRUYEN_CAM_HUNG.sql");
-        scripts.add(path + "APP_TRUYEN_TRUYEN_TUOI_TEEN.sql");
+        scripts.add(path + "APP_STORY_TRUYEN_CO_TICH.sql");
+        scripts.add(path + "APP_STORY_TRUYEN_CUOC_SONG.sql");
+        scripts.add(path + "APP_STORY_TRUYEN_KINH_DI.sql");
+        scripts.add(path + "APP_STORY_TRUYEN_TRUYEN_CAM_HUNG.sql");
+        scripts.add(path + "APP_STORY_TRUYEN_TUOI_TEEN.sql");
         scripts.add(path + "APP_WEB_ESL_FAST_BEGINNER.sql");
         scripts.add(path + "APP_WEB_ESL_FAST_ELEMENTARY.sql");
         scripts.add(path + "APP_WEB_LITTLE_CAT_LEVEL_1.sql");

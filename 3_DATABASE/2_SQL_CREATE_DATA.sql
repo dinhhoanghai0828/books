@@ -5,7 +5,7 @@ TRUNCATE TABLE CONTENTS;
 
 INSERT INTO CATEGORIES(UUID, SLUG, ENG, VI, PARENT_SLUG, NUMBER) VALUES 
     -- Category cha
-    (UUID(), 'truyen', 'Story', 'Truyện', NULL, 1),
+    (UUID(), 'story', 'Story', 'Truyện', NULL, 1),
     (UUID(), 'book', 'Book', 'Sách', NULL, 2),
     (UUID(), 'news', 'News', 'Báo', NULL, 3),
     (UUID(), 'presentation', 'Presentation', 'Thuyết trình', NULL, 4),
@@ -14,7 +14,7 @@ INSERT INTO CATEGORIES(UUID, SLUG, ENG, VI, PARENT_SLUG, NUMBER) VALUES
 
     -- Truyện
 	-- Truyện - Truyện truyền cảm hứng
-    (UUID(), 'truyen-truyen-cam-hung', 'Inspirational stories', 'Truyện truyền cảm hứng', 'truyen', 1),
+    (UUID(), 'truyen-truyen-cam-hung', 'Inspirational stories', 'Truyện truyền cảm hứng', 'story', 1),
 	-- Truyện - Truyện kinh dị
     (UUID(), 'truyen-kinh-di', 'Horror story', 'Truyện kinh dị', 'truyen', 2),
 	-- Truyện - Truyện cổ tích
