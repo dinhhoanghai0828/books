@@ -655,9 +655,11 @@ public class RunSQLComponent {
     public List<String> generalContents() throws SQLException, IOException {
         List<String> generatedFiles = new ArrayList<>();
 
-        String sqlGetBooks = "SELECT DISTINCT B.SLUG AS BOOK_SLUG FROM BOOKS B " +
+        String sqlGetBooks = "SELECT DISTINCT B.SLUG AS BOOK_SLUG, B.CATEGORY_SLUG AS CATEGORY_SLUG, CAT.PARENT_SLUG AS CATEGORY_PARENT_SLUG " +
+                "FROM BOOKS B " +
                 "INNER JOIN VOLUMES V ON V.BOOK_SLUG = B.SLUG " +
                 "INNER JOIN CONTENTS C ON C.VOLUME_SLUG = V.SLUG " +
+                "LEFT JOIN CATEGORIES CAT ON B.CATEGORY_SLUG = CAT.SLUG " +
                 "ORDER BY B.SLUG";
 
         String sqlGetContents =
@@ -679,9 +681,13 @@ public class RunSQLComponent {
             pstmtBooks = connection.prepareStatement(sqlGetBooks);
             rsBooks = pstmtBooks.executeQuery();
 
-            List<String> bookSlugs = new ArrayList<>();
+            List<Map<String, String>> bookInfoList = new ArrayList<>();
             while (rsBooks.next()) {
-                bookSlugs.add(rsBooks.getString("BOOK_SLUG"));
+                Map<String, String> bookInfo = new HashMap<>();
+                bookInfo.put("BOOK_SLUG", rsBooks.getString("BOOK_SLUG"));
+                bookInfo.put("CATEGORY_SLUG", rsBooks.getString("CATEGORY_SLUG"));
+                bookInfo.put("CATEGORY_PARENT_SLUG", rsBooks.getString("CATEGORY_PARENT_SLUG"));
+                bookInfoList.add(bookInfo);
             }
             DBUtils.closeAll("generalContents-books", null, pstmtBooks, rsBooks);
 
@@ -689,8 +695,12 @@ public class RunSQLComponent {
             final int VOLUMES_PER_BATCH = 5;    // gom tối đa 5 tập vào 1 INSERT
             final String SEPARATOR = "\n/*=====================================================================================================================================================================================================================================================*/\n\n";
 
-            for (String bookSlug : bookSlugs) {
-                String fileNameKey  = bookSlug.toUpperCase().replace("-", "_");
+            for (Map<String, String> bookInfo : bookInfoList) {
+                String bookSlug = bookInfo.get("BOOK_SLUG");
+                String categoryParentSlug = bookInfo.get("CATEGORY_PARENT_SLUG");
+                String fileNameKey = (categoryParentSlug != null && !categoryParentSlug.isEmpty())
+                        ? categoryParentSlug.toUpperCase().replace("-", "_") + "_" + bookSlug.toUpperCase().replace("-", "_")
+                        : bookSlug.toUpperCase().replace("-", "_");
                 String outputFilePath = path + "APP_" + fileNameKey + ".sql";
 
                 PreparedStatement pstmtContents = null;
@@ -831,10 +841,12 @@ public class RunSQLComponent {
      */
     public List<String> insertContentFromExport() throws SQLException, IOException {
 
-        // Lấy danh sách BOOK_SLUG có contents trong DB
-        String sqlGetBooks = "SELECT DISTINCT B.SLUG AS BOOK_SLUG FROM BOOKS B " +
+        // Lấy danh sách book slugs có contents trong DB
+        String sqlGetBooks = "SELECT DISTINCT B.SLUG AS BOOK_SLUG, B.CATEGORY_SLUG AS CATEGORY_SLUG, CAT.PARENT_SLUG AS CATEGORY_PARENT_SLUG " +
+                "FROM BOOKS B " +
                 "INNER JOIN VOLUMES V ON V.BOOK_SLUG = B.SLUG " +
                 "INNER JOIN CONTENTS C ON C.VOLUME_SLUG = V.SLUG " +
+                "LEFT JOIN CATEGORIES CAT ON B.CATEGORY_SLUG = CAT.SLUG " +
                 "ORDER BY B.SLUG";
 
         List<String> scripts = new ArrayList<>();
@@ -844,7 +856,10 @@ public class RunSQLComponent {
             ResultSet rs = pstmt.executeQuery();
             while (rs.next()) {
                 String bookSlug = rs.getString("BOOK_SLUG");
-                String fileNameKey = bookSlug.toUpperCase().replace("-", "_");
+                String categoryParentSlug = rs.getString("CATEGORY_PARENT_SLUG");
+                String fileNameKey = (categoryParentSlug != null && !categoryParentSlug.isEmpty())
+                        ? categoryParentSlug.toUpperCase().replace("-", "_") + "_" + bookSlug.toUpperCase().replace("-", "_")
+                        : bookSlug.toUpperCase().replace("-", "_");
                 String filePath = path + "APP_" + fileNameKey + ".sql";
                 scripts.add(filePath);
             }
