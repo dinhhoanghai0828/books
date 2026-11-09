@@ -11655,6 +11655,8 @@ INSERT INTO `WORDS` (`ENG`,`VI`) VALUES
 	('scolds','chửi'),
 	('scolds','mắng'),
 	('scolds','mắng mỏ'),
+	('scooped','múc'),
+	('scooped','xúc'),
 	('score','điểm'),
 	('scowled','cau mày'),
 	('scowled','nhăn mặt'),
