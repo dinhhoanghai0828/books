@@ -9744,6 +9744,7 @@ INSERT INTO `WORDS` (`ENG`,`VI`) VALUES
 	('parents','bố mẹ'),
 	('parents','cha mẹ'),
 	('park','công viên'),
+	('parked','đỗ xe'),
 	('parking lot','bãi đậu xe'),
 	('parking lot','bãi đỗ xe'),
 	('part','khu vực'),
