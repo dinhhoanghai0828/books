@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 @RestController
 @CrossOrigin("*")
@@ -90,7 +91,11 @@ public class WordController {
     @PostMapping("/insert")
     public ResponseEntity<?> insertWords(@RequestBody InsertWordsRequest request) {
         try {
-            int inserted = wordService.insertWords(request.getEng(), request.getViList());
+            String eng = request.getEng().trim().toLowerCase();
+            List<String> viList = request.getViList().stream()
+                    .map(vi -> vi.trim().toLowerCase())
+                    .collect(Collectors.toList());
+            int inserted = wordService.insertWords(eng, viList);
             return new ResponseEntity<>(
                     new BaseResponse("00", "Đã insert được " + inserted + " bản ghi"),
                     HttpStatus.OK);

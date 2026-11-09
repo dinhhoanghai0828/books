@@ -10082,7 +10082,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Kainiska smiled','Kainiska mỉm cười','00:06:20.420','00:06:21.500','english-fairy-tales-48'),
 	('She is mightily impressed by the young man\'s zeal and passion','Cô rất ấn tượng bởi sự nhiệt huyết và đam mê của chàng trai trẻ','00:06:22.180','00:06:25.480','english-fairy-tales-48'),
 	('Very well, Leonidas','Được rồi, Leonidas','00:06:26.200','00:06:27.200','english-fairy-tales-48'),
-	('You may ride for me, but you know this will be a challenging bath','Anh có thể cưỡi ngựa cho tôi, nhưng anh biết điều này sẽ là một thử thách lớn','00:06:27.560','00:06:31.360','english-fairy-tales-48'),
+	('You may ride for me, but you know this will be a challenging bath','Anh có thể cưỡi ngựa cho tôi, nhưng anh biết đây sẽ là một thử thách lớn','00:06:27.560','00:06:31.360','english-fairy-tales-48'),
 	('Are you ready for that?','Anh đã sẵn sàng cho điều đó chưa?','00:06:31.640','00:06:32.480','english-fairy-tales-48'),
 	('Yes, princess','Vâng, công chúa','00:06:33.800','00:06:34.500','english-fairy-tales-48'),
 	('I will do whatever it takes to help you achieve your dreams','Tôi sẽ làm bất cứ điều gì để giúp bà thực hiện ước mơ của mình','00:06:34.920','00:06:38.240','english-fairy-tales-48'),
