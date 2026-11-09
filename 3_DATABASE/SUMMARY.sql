@@ -247,13 +247,13 @@ INSERT INTO CATEGORIES(UUID, SLUG, ENG, VI, PARENT_SLUG, NUMBER) VALUES
 	-- Truyện - Truyện truyền cảm hứng
     (UUID(), 'truyen-truyen-cam-hung', 'Inspirational stories', 'Truyện truyền cảm hứng', 'story', 1),
 	-- Truyện - Truyện kinh dị
-    (UUID(), 'truyen-kinh-di', 'Horror story', 'Truyện kinh dị', 'truyen', 2),
+    (UUID(), 'truyen-kinh-di', 'Horror story', 'Truyện kinh dị', 'story', 2),
 	-- Truyện - Truyện cổ tích
-    (UUID(), 'truyen-co-tich', 'Fairy tales story', 'Truyện cổ tích', 'truyen', 3),
+    (UUID(), 'truyen-co-tich', 'Fairy tales story', 'Truyện cổ tích', 'story', 3),
 	-- Truyện - Truyện tuổi teen
-    (UUID(), 'truyen-tuoi-teen', 'Teen stories', 'Truyện tuổi teen', 'truyen', 4),
+    (UUID(), 'truyen-tuoi-teen', 'Teen stories', 'Truyện tuổi teen', 'story', 4),
 	-- Truyện - Truyện cuộc sống
-    (UUID(), 'truyen-cuoc-song', 'Adult stories', 'Truyện người lớn', 'truyen', 5),
+    (UUID(), 'truyen-cuoc-song', 'Adult stories', 'Truyện người lớn', 'story', 5),
 	
 	-- Web
 	-- Web - Little Cat
