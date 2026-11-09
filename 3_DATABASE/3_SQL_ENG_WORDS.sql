@@ -3859,6 +3859,7 @@ INSERT INTO `WORDS` (`ENG`,`VI`) VALUES
 	('dull','nhàm chán'),
 	('dull','tẻ nhạt'),
 	('dump','bãi rác'),
+	('dumper','thùng ben'),
 	('duo','bộ đôi'),
 	('duo','cặp'),
 	('duo','cặp đôi'),
