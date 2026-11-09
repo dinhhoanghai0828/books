@@ -1190,6 +1190,7 @@ INSERT INTO `WORDS` (`ENG`,`VI`) VALUES
 	('ball','cầu'),
 	('ball','quả bóng'),
 	('ball','quả cầu'),
+	('Balloons','bóng bay'),
 	('balls','bóng'),
 	('balls','quả bóng'),
 	('ban','cấm'),

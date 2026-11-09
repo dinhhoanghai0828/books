@@ -3779,6 +3779,7 @@ INSERT INTO `WORDS` (`ENG`,`VI`) VALUES
 	('ball','cầu'),
 	('ball','quả bóng'),
 	('ball','quả cầu'),
+	('Balloons','bóng bay'),
 	('balls','bóng'),
 	('balls','quả bóng'),
 	('ban','cấm'),
@@ -18310,7 +18311,7 @@ INSERT INTO MATH_CATEGORIES (CATEGORY_CODE, FULL_PATH, CATEGORY_NAME, CATEGORY_D
 	-- Child: 2.4.7 Suy luận tuổi từ phép tính và điều kiện ẩn
 	('AGE_LOGIC_CALCULATION', 'toan/lop-1', 'Suy luận tuổi từ phép tính và điều kiện ẩn', 'Tìm tuổi dựa vào biểu thức cộng trừ, số chưa biết, điều kiện gián tiếp hoặc nhiều dữ kiện cần suy luận để xác định kết quả.', 'AGE_PROBLEMS', 'ACTIVE', NULL, NULL);
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES 
-	('Tire Town School - Episode 1, Eddie''s First Day','Trường học Tire Town - Tập 1: Ngày đầu tiên của Eddie','00:00:01.850','00:00:06.900','little-cat-tire-town-school-1'),
+	('Tire Town School - Episode 1: Eddie''s First Day','Trường học Tire Town - Tập 1: Ngày đầu tiên của Eddie','00:00:01.850','00:00:06.900','little-cat-tire-town-school-1'),
 	('Eddie rolled onto the school lot','Eddie lái xe vào sân trường','00:00:32.090','00:00:35.170','little-cat-tire-town-school-1'),
 	('His tires were new','Lốp xe của cậu còn mới tinh','00:00:36.490','00:00:38.130','little-cat-tire-town-school-1'),
 	('His dumper was clean','Thùng ben của cậu sạch bong','00:00:41.410','00:00:43.190','little-cat-tire-town-school-1'),
@@ -18338,8 +18339,8 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('"I''m Poppy!", said the car','"Mình là Poppy!", chiếc xe nói','00:02:01.990','00:02:04.510','little-cat-tire-town-school-1'),
 	('Wanna see something funny?','Muốn xem một trò vui không?','00:02:05.310','00:02:07.090','little-cat-tire-town-school-1'),
 
-	('Tire Town School - Episode 2 New Friends','Trường học Tire Town – Tập 2: Những người bạn mới','00:00:01.670','00:00:12.930','little-cat-tire-town-school-2'),
-	('"Watch this!" said Poppy','Poppy nói: "Nhìn này!"','00:00:12.830','00:00:14.650','little-cat-tire-town-school-2'),
+	('Tire Town School - Episode 2: New Friends','Trường học Tire Town – Tập 2: Những người bạn mới','00:00:01.670','00:00:07.000','little-cat-tire-town-school-2'),
+	('"Watch this!" said Poppy','Poppy nói: "Nhìn này!"','00:00:12.400','00:00:14.650','little-cat-tire-town-school-2'),
 	('She took a deep breath','Cô ấy hít một hơi thật sâu','00:00:15.210','00:00:16.930','little-cat-tire-town-school-2'),
 	('Bang!','Đoàng!','00:00:19.050','00:00:20.250','little-cat-tire-town-school-2'),
 	('Her trunk flew open','Cốp xe của cô ấy bật tung','00:00:21.570','00:00:24.130','little-cat-tire-town-school-2'),
