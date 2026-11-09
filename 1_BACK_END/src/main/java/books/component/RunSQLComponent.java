@@ -108,10 +108,8 @@ public class RunSQLComponent {
         scripts.add(path + "APP_GOD_OF_MOTIVE.sql");
         scripts.add(path + "APP_I_AM_MARY.sql");
         scripts.add(path + "APP_NIGHTMARE_TALES.sql");
-        scripts.add(path + "APP_PEPPA_PIG.sql");
         scripts.add(path + "APP_TEDTALKS.sql");
         scripts.add(path + "APP_THE_FICTIONIST.sql");
-        scripts.add(path + "APP_TIGER_CLUB_LEARNING.sql");
         scripts.add(path + "APP_VOA.sql");
         scripts.add(path + "APP_YOUR_ANIMATED_STORY_SHOW.sql");
         scripts.add(path + "APP_QUESTIONS.sql");

@@ -14,11 +14,16 @@ INSERT INTO CATEGORIES(UUID, SLUG, ENG, VI, PARENT_SLUG, NUMBER) VALUES
 	(UUID(), 'web', 'Web', 'Trang Web', NULL, 7),
 
     -- Truyện
+	-- Truyện - Truyện truyền cảm hứng
     (UUID(), 'truyen-truyen-cam-hung', 'Inspirational stories', 'Truyện truyền cảm hứng', 'truyen', 1),
+	-- Truyện - Truyện kinh dị
     (UUID(), 'truyen-kinh-di', 'Horror story', 'Truyện kinh dị', 'truyen', 2),
+	-- Truyện - Truyện cổ tích
     (UUID(), 'truyen-co-tich', 'Fairy tales story', 'Truyện cổ tích', 'truyen', 3),
+	-- Truyện - Truyện tuổi teen
     (UUID(), 'truyen-tuoi-teen', 'Teen stories', 'Truyện tuổi teen', 'truyen', 4),
-    (UUID(), 'truyen-nguoi-lon', 'Adult stories', 'Truyện người lớn', 'truyen', 5),
+	-- Truyện - Truyện cuộc sống
+    (UUID(), 'truyen-cuoc-song', 'Adult stories', 'Truyện người lớn', 'truyen', 5),
 	
 	-- Web
 	-- Web - Little Cat
@@ -35,18 +40,17 @@ INSERT INTO CATEGORIES(UUID, SLUG, ENG, VI, PARENT_SLUG, NUMBER) VALUES
 	(UUID(), 'esl-fast-elementary', 'Elementary (A2)', 'Elementary (A2)', 'esl-fast', NULL),
 	(UUID(), 'esl-fast-intermediate', 'Intermediate (B1)', 'Intermediate (B1)', 'esl-fast', NULL),
 	(UUID(), 'esl-fast-upper-intermediate', 'Upper Intermediate (B2)', 'Upper Intermediate (B2)', 'esl-fast', NULL),
-
+/* ============================================================================================================================================================================================ */
     -- Sách
-	-- Sách - 4000 Essential English Words
+	-- Sách - Sách IELTS
 	(UUID(), 'ielts-books', 'Sách IELTS', 'Sách IELTS', 'book', NULL),
+	-- Sách - 4000 Essential English Words
 	(UUID(), '4000-essential-english-words', '4000 Essential English Words', '4000 Essential English Words', 'ielts-books', NULL),
-
-	(UUID(), 'sach-triet-ly', 'Philosophy book', 'Sách triết lý', 'book', NULL),
+/* ============================================================================================================================================================================================ */	
     -- Thuyết trình - TEDTALKS
     (UUID(), 'tedtalks', 'TEDTALKS', 'TEDTALKS', 'presentation', NULL),
-
     (UUID(), 'tro-chuyen-hang-ngay', 'Daily Conversations', 'Trò chuyện hàng ngày', 'presentation', NULL),
-
+/* ============================================================================================================================================================================================ */
     -- Tiếng Anh cơ bản
     (UUID(), 'tieng-anh-co-ban-cap-do-1', 'Basic English Level 1', 'Tiếng anh cơ bản cấp độ 1', 'tieng-anh-co-ban', NULL),
 	-- Toán
@@ -62,6 +66,7 @@ INSERT INTO BOOKS(UUID,SLUG,ENG,VI,AUTHOR,DESCRIPTION,CATEGORY_SLUG,IMG,NUMBER) 
 	-- Web - Little Cat
 	(UUID(),'little-cat-bat-and-friends','Bat and Friends','Bat and Friends','Nhiều tác giả','Học các câu tiếng anh đơn giản','little-cat-level-1','LITTLE_CAT_BAT_AND_FRIENDS.png',1),
 	(UUID(),'little-cat-tire-town-school','Tire Town School','Tire Town School','Nhiều tác giả','Học các câu tiếng anh đơn giản','little-cat-level-1','LITTLE_CAT_TIRE_TOWN_SCHOOL.png',1),
+	(UUID(),'little-cat-the-big-green-forest','The Big Green Forest','The Big Green Forest','Nhiều tác giả','Học các câu tiếng anh đơn giản','little-cat-level-1','LITTLE_CAT_THE_BIG_GREEN_FOREST.png',1),
 	--	Web - ESL Fast, co 6 cap do
 	(UUID(),'esl-fast-beginner-1','Beginner 1','Beginner 1','Nhiều tác giả','Học các câu tiếng anh đơn giản','esl-fast-beginner','ESLFAST.png',1),
 	(UUID(),'esl-fast-beginner-2','Beginner 2','Beginner 2','Nhiều tác giả','Học các câu tiếng anh đơn giản','esl-fast-beginner','ESLFAST.png',2),
@@ -75,14 +80,19 @@ INSERT INTO BOOKS(UUID,SLUG,ENG,VI,AUTHOR,DESCRIPTION,CATEGORY_SLUG,IMG,NUMBER) 
 	(UUID(),'esl-fast-intermediate-1','Intermediate 1','Intermediate 1','Nhiều tác giả','Học các câu tiếng anh phức tạp','esl-fast-intermediate','ESLFAST.png',1),
 	(UUID(),'esl-fast-intermediate-2','Intermediate 2','Intermediate 2','Nhiều tác giả','Học các câu tiếng anh phức tạp','esl-fast-upper-intermediate','ESLFAST.png',1),
 
+	-- Truyện - Truyện truyền cảm hứng
 	(UUID(),'the-fictionist','The Fictionist','Người viết tiểu thuyết','The Fictionist','Những câu chuyện ngắn, những bài học từ những người thành đạt giúp truyền động lực, cảm hứng','truyen-truyen-cam-hung','THE_FICTIONIST.png',1),
 	(UUID(),'god-of-motive','God Of Motive','Vị thần động lực','Shibin Sibi','Những câu chuyện ngắn, những bài học từ những người thành đạt truyền cảm hứng','truyen-truyen-cam-hung','GOD_OF_MOTIVE.png',2),
+	(UUID(),'I-am-Mary','I\'m Mary','Tôi là Mary','Mary','Những triết lý, bài học trong cuộc sống hiện đại','truyen-truyen-cam-hung','I_AM_MARY.png',1),
+	-- Truyện - Truyện kinh dị
 	(UUID(),'nightmare-tales','Nightmare Tales','Câu chuyện lúc nửa đêm','Patreon','Những câu chuyện ngắn kinh dị lúc nửa đêm','truyen-kinh-di','NIGHTMARE_TALES.png', 1),
+	-- Truyện - Truyện cổ tích
 	(UUID(),'english-fairy-tales','English Fairy Tales','Chuyện Cổ Tích','Nhiều tác giả','Những câu chuyện cổ tích','truyen-co-tich','ENGLISH_FAIRY_TALES.png', 1),
+	-- Truyện - Truyện tuổi teen
 	(UUID(),'your-animated-story-show','Your Animated Story Show','Chương trình hoạt hình','Nhiều tác giả','Những câu chuyện tuổi teen về tình yêu, gia đình, tình bạn và những mối quan hệ trong cuộc sống','truyen-tuoi-teen','YOUR_ANIMATED_STORY_SHOW.png', 2),
-	(UUID(),'animatters','Animatters','Hoạt hình','Nhiều tác giả','Những câu chuyện người lớn','truyen-nguoi-lon','ANIMATTERS.png', 1),
+	-- Truyện - Truyện cuộc sống
+	(UUID(),'animatters','Animatters','Hoạt hình','Nhiều tác giả','Những câu chuyện người lớn','truyen-cuoc-song','ANIMATTERS.png', 1),
 	
-	(UUID(),'I-am-Mary','I\'m Mary','Tôi là Mary','Mary','Những triết lý, bài học trong cuộc sống hiện đại','sach-triet-ly','I_AM_MARY.png',1),
 	(UUID(),'economist','Economist','Kinh tế học','Nhiều tác giả','Thông tin kinh tế, chính trị, khoa học, xã hội','news','THE_ECONOMIST.png',1),
 	(UUID(),'voa','VOA','Báo nước ngoài','Nhiều tác giả','Thông tin kinh tế, chính trị, khoa học, xã hội, giáo dục, du lịch','news','VOA.png',2),
 	/* Thuyết trình */
@@ -92,9 +102,6 @@ INSERT INTO BOOKS(UUID,SLUG,ENG,VI,AUTHOR,DESCRIPTION,CATEGORY_SLUG,IMG,NUMBER) 
 	(UUID(),'all-ears-english','All Ears English','All Ears English','Nhiều tác giả','Thảo luận về các vấn đề trong cuộc sống','doi-thoai-hoc-thuat','ALL_EARS_ENGLISH.png',2),
 	/* tro-chuyen-hang-ngay */
 	(UUID(),'dhar-mann-studio','Dhar Mann Studio','Dhar Mann Studio','Nhiều tác giả','Các cuộc hội thoại ngắn thường ngày','tro-chuyen-hang-ngay','DHAR_MANN_STUDIO.png',1),
-	/* tieng-anh-co-ban-cap-do-1 */
-	(UUID(),'tiger-club-learning','TigerCub Learning','TigerCub Learning','Nhiều tác giả','Học các câu tiếng anh đơn giản','tieng-anh-co-ban-cap-do-1','TIGER_CLUB_LEARNING.png',1),
-	(UUID(),'peppa-pig','Peppa Pig','Lợn Peppa','Nhiều tác giả','Học các câu tiếng anh đơn giản','tieng-anh-co-ban-cap-do-1','PEPPA_PIG.png',2),
 
 	
 	(UUID(),'4000-essential-english-words-1','4000 Essential English Words 1','4000 từ Tiếng Anh quan trọng tập 1','Nadin Miles & Artur Krotkov','Sách 4000 từ tiếng anh thông dụng','4000-essential-english-words','4000_ESSENTIAL_ENGLISH_WORDS_1.png',1),
@@ -2067,17 +2074,6 @@ INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,IS_
 	(UUID(),'nightmare-tales-5','The Nanny','Người Giữ Trẻ','STORIES_HORROR_STORY_01_NIGHTMARE_TALE_005.mp3',NULL,'00:00:06.020','00:04:57.620','nightmare-tales',0,0,0,5),
 	(UUID(),'nightmare-tales-6','The dinner','Quán ăn','STORIES_HORROR_STORY_01_NIGHTMARE_TALE_006.mp3',NULL,'00:00:06.020','00:04:57.620','nightmare-tales',0,0,0,6);
 
-INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,IS_LANGUAGE_APPROVED,IS_REVIEW_COMPLETED,IS_READ,NUMBER) VALUES
-	(UUID(),'peppa-pig-1','Muddy Puddles','Vũng Bùn','BASIC_ENGLISH_BASIC_ENGLISH_02_PEPPA_PIG_001.mp3',NULL,'00:00:00.000','00:04:56.100','peppa-pig',1,0,0,1),
-	(UUID(),'peppa-pig-2','Mr Dinosaur Is Lost','Ông khủng long bị lạc','BASIC_ENGLISH_BASIC_ENGLISH_02_PEPPA_PIG_002.mp3',NULL,'00:00:00.000','00:03:56.900','peppa-pig',1,0,0,2),
-	(UUID(),'peppa-pig-3','Best Friend','Bạn thân','BASIC_ENGLISH_BASIC_ENGLISH_02_PEPPA_PIG_003.mp3',NULL,'00:00:00.000','00:03:56.900','peppa-pig',1,0,0,3),
-	(UUID(),'peppa-pig-4','Polly Parrot','Con vẹt Polly','BASIC_ENGLISH_BASIC_ENGLISH_02_PEPPA_PIG_004.mp3',NULL,'00:00:00.000','00:03:56.900','peppa-pig',1,0,0,4),
-	(UUID(),'peppa-pig-5','Hide and Seek','Trốn tìm','BASIC_ENGLISH_BASIC_ENGLISH_02_PEPPA_PIG_005.mp3',NULL,'00:00:00.000','00:03:56.900','peppa-pig',1,0,0,5),
-	(UUID(),'peppa-pig-6','The Playgroup','Chương trình sinh hoạt – học tập dành cho trẻ nhỏ','BASIC_ENGLISH_BASIC_ENGLISH_02_PEPPA_PIG_006.mp3',NULL,'00:00:00.000','00:03:56.900','peppa-pig',1,0,0,6),
-	(UUID(),'peppa-pig-7','Mummy Pig At Work','Heo mẹ đang làm việc','BASIC_ENGLISH_BASIC_ENGLISH_02_PEPPA_PIG_007.mp3',NULL,'00:00:00.000','00:03:56.900','peppa-pig',1,0,0,7),
-	(UUID(),'peppa-pig-8','Piggy In The Middle','Người kẹt ở giữa','BASIC_ENGLISH_BASIC_ENGLISH_02_PEPPA_PIG_008.mp3',NULL,'00:00:00.000','00:03:56.900','peppa-pig',1,0,0,8),
-	(UUID(),'peppa-pig-9','Daddy Loses His Glasses','Bố làm mất kính','BASIC_ENGLISH_BASIC_ENGLISH_02_PEPPA_PIG_009.mp3',NULL,'00:00:00.000','00:03:56.900','peppa-pig',1,0,0,9),
-	(UUID(),'peppa-pig-10','Gardening','Làm vườn','BASIC_ENGLISH_BASIC_ENGLISH_02_PEPPA_PIG_010.mp3',NULL,'00:00:00.000','00:03:56.900','peppa-pig',1,0,0,10);
 
 INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,IS_LANGUAGE_APPROVED,IS_REVIEW_COMPLETED,IS_READ,NUMBER) VALUES
 	(UUID(),'tedtalks-1','What do all languages have in common?','Tất cả các ngôn ngữ có điểm chung gì?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_001.mp3',NULL,'00:00:06.000','00:05:01.121','tedtalks',0,0,0,1),
@@ -2222,19 +2218,6 @@ INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,IS_
 	(UUID(),'the-fictionist-39','The unseen road','Con đường vô hình','STORIES_INSPIRATIONAL_STORY_01_THE_FICTIONIST_039.mp3',NULL,'00:00:00.000','00:05:07.580','the-fictionist',0,0,0,39),
 	(UUID(),'the-fictionist-40','The two wolves inside you','Hai con sói bên trong bạn','STORIES_INSPIRATIONAL_STORY_01_THE_FICTIONIST_040.mp3',NULL,'00:00:00.000','00:04:40.320','the-fictionist',0,0,0,40);
 
-INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,IS_LANGUAGE_APPROVED,IS_REVIEW_COMPLETED,IS_READ,NUMBER) VALUES
-	(UUID(),'tiger-club-learning-1','Farm Fun','Niềm vui từ nông trại','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_001.mp3',NULL,'00:00:00.000','00:04:07.000','tiger-club-learning',1,0,0,1),
-	(UUID(),'tiger-club-learning-2','Farm Play','Vui chơi cùng nông trại','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_002.mp3',NULL,'00:00:00.000','00:03:56.900','tiger-club-learning',1,0,0,2),
-	(UUID(),'tiger-club-learning-3','Big And Little On The Farm','Lớn và nhỏ trong trang trại','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_003.mp3',NULL,'00:00:00.000','00:04:26.000','tiger-club-learning',1,0,0,3),
-	(UUID(),'tiger-club-learning-4','Hide \'N\' Seek On The Farm','Lớn và nhỏ trong trang trại','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_004.mp3',NULL,'00:00:00.000','00:03:56.900','tiger-club-learning',1,0,0,4),
-	(UUID(),'tiger-club-learning-5','Moving Along','Tiếp tục di chuyển','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_005.mp3',NULL,'00:00:00.000','00:04:10.000','tiger-club-learning',1,0,0,5),
-	(UUID(),'tiger-club-learning-6','Green, Yellow, Red. Stop!','Đèn xanh, đèn vàng, đèn đỏ. Dừng lại!','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_006.mp3',NULL,'00:00:00.000','00:03:56.900','tiger-club-learning',1,0,0,6),
-	(UUID(),'tiger-club-learning-7','Toot! Toot! Mountain Ride!','Bíp bíp! Chuyến đi trên núi!','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_007.mp3',NULL,'00:00:00.000','00:03:56.900','tiger-club-learning',1,0,0,7),
-	(UUID(),'tiger-club-learning-8','Look What I Do','Nhìn xem tôi làm gì','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_008.mp3',NULL,'00:00:00.000','00:03:56.900','tiger-club-learning',1,0,0,8),
-	(UUID(),'tiger-club-learning-9','Look What I Do','Nhìn xem tôi làm gì','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_009.mp3',NULL,'00:00:00.000','00:03:56.900','tiger-club-learning',1,0,0,9),
-	(UUID(),'tiger-club-learning-10','Look What I Do','Nhìn xem tôi làm gì','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_010.mp3',NULL,'00:00:00.000','00:03:56.900','tiger-club-learning',1,0,0,10),
-	(UUID(),'tiger-club-learning-11','Look What I Do','Nhìn xem tôi làm gì','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_011.mp3',NULL,'00:00:00.000','00:03:56.900','tiger-club-learning',1,0,0,11),
-	(UUID(),'tiger-club-learning-12','Look What I Do','Nhìn xem tôi làm gì','BASIC_ENGLISH_BASIC_ENGLISH_01_TIGER_CLUB_LEARNING_012.mp3',NULL,'00:00:00.000','00:03:56.900','tiger-club-learning',1,0,0,12);
 
 INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,IS_LANGUAGE_APPROVED,IS_REVIEW_COMPLETED,IS_READ,NUMBER) VALUES
 	(UUID(),'voa-1','Teachers Use Games for More Enjoyable Learning','Giáo viên sử dụng trò chơi để việc học trở nên thú vị hơn','NEWS_DAILY_NEW_02_VOA_001.mp3',NULL,'00:00:00.000','00:05:08.900','voa',1,0,0,1),
