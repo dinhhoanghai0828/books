@@ -76,8 +76,8 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('She drove through the puddle again','Cô ấy lại lái xe lao qua vũng nước một lần nữa','00:01:54.800','00:01:56.760','little-cat-tire-town-school-3'),
 	('Eddy won!','Eddy thắng cuộc rồi!','00:02:16.180','00:02:17.380','little-cat-tire-town-school-3'),
 	('"Yay!" his friends cheered','Các bạn của cậu reo hò: "Hoan hô!"','00:02:22.900','00:02:26.220','little-cat-tire-town-school-3'),
-	('"You''re fast," they said','Các bạn nói: "Cậu chạy nhanh thật đấy"','00:02:27.280','00:02:29.820','little-cat-tire-town-school-3'),
+	('"You''re fast," they said','Các bạn nói: "Cậu chạy nhanh thật đấy"','00:02:27.280','00:02:30.000','little-cat-tire-town-school-3'),
 	('A race car drove over','Một chiếc xe đua chạy tới','00:02:32.810','00:02:34.930','little-cat-tire-town-school-3'),
-	('He had fancy stripes','Chiếc xe có những đường sọc rất bắt mắt','00:02:35.600','00:02:37.790','little-cat-tire-town-school-3'),
+	('He had fancy stripes','Chiếc xe có những đường sọc rất bắt mắt','00:02:35.800','00:02:37.790','little-cat-tire-town-school-3'),
 	('"You''re not fast," said the car. "You''re just a slow dump truck"','Chiếc xe nói: "Cậu chẳng nhanh chút nào! Cậu chỉ là một chiếc xe ben chậm chạp thôi!"','00:02:41.050','00:02:46.550','little-cat-tire-town-school-3');
 
