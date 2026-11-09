@@ -713,47 +713,51 @@ INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICU
 
 -- Child: 1.3.6. Tìm số thỏa mãn điều kiện của phép tính
 INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
-	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_001', '3 - ? > 0. Điền số tự nhiên lớn hơn 0 vào ô trống. Có tất cả bao nhiêu số thỏa mãn?', 1, 'ACTIVE', NULL, NULL),
-	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_002', '4 - ? > 1. Điền số tự nhiên lớn hơn 0 vào ô trống. Có tất cả bao nhiêu số thỏa mãn?', 1, 'ACTIVE', NULL, NULL),
-	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_003', '? + 2 < 6. Điền số tự nhiên lớn hơn 0 vào ô trống. Có tất cả bao nhiêu số thỏa mãn?', 1, 'ACTIVE', NULL, NULL),
-	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_004', '8 - ? > 3. Điền số tự nhiên lớn hơn 0 vào ô trống. Có tất cả bao nhiêu số thỏa mãn?', 1, 'ACTIVE', NULL, NULL),
-	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_005', '? + 3 < 9. Điền số tự nhiên lớn hơn 0 vào ô trống. Có tất cả bao nhiêu số thỏa mãn?', 1, 'ACTIVE', NULL, NULL),
-	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_006', '10 - ? > 4. Điền số tự nhiên lớn hơn 0 vào ô trống. Có tất cả bao nhiêu số thỏa mãn?', 1, 'ACTIVE', NULL, NULL),
-	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_007', '? + 1 < 5. Điền số tự nhiên lớn hơn 0 vào ô trống. Có tất cả bao nhiêu số thỏa mãn?', 1, 'ACTIVE', NULL, NULL),
-	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_008', '7 - ? > 1. Điền số tự nhiên lớn hơn 0 vào ô trống. Có tất cả bao nhiêu số thỏa mãn?', 1, 'ACTIVE', NULL, NULL),
-	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_009', '? + 4 < 10. Điền số tự nhiên lớn hơn 0 vào ô trống. Có tất cả bao nhiêu số thỏa mãn?', 1, 'ACTIVE', NULL, NULL),
-	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_010', '9 - ? > 6. Điền số tự nhiên lớn hơn 0 vào ô trống. Có tất cả bao nhiêu số thỏa mãn?', 1, 'ACTIVE', NULL, NULL),
-	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_011', '12 - ? > 5. Điền số tự nhiên lớn hơn 0 vào ô trống. Có tất cả bao nhiêu số thỏa mãn?', 2, 'ACTIVE', NULL, NULL),
-	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_012', '? + 4 < 13. Điền số tự nhiên lớn hơn 0 vào ô trống. Có tất cả bao nhiêu số thỏa mãn?', 2, 'ACTIVE', NULL, NULL),
-	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_013', '15 - ? < 10. Điền số tự nhiên lớn hơn 0 vào ô trống. Có tất cả bao nhiêu số thỏa mãn?', 2, 'ACTIVE', NULL, NULL),
-	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_014', '? - 3 > 4. Điền số tự nhiên lớn hơn 0 vào ô trống. Có tất cả bao nhiêu số thỏa mãn?', 2, 'ACTIVE', NULL, NULL),
-	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_015', '18 - ? > 8. Điền số tự nhiên lớn hơn 0 vào ô trống. Có tất cả bao nhiêu số thỏa mãn?', 2, 'ACTIVE', NULL, NULL),
-	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_016', '? + 5 > 12. Điền số tự nhiên lớn hơn 0 vào ô trống. Có tất cả bao nhiêu số thỏa mãn?', 2, 'ACTIVE', NULL, NULL),
-	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_017', '14 - ? < 6. Điền số tự nhiên lớn hơn 0 vào ô trống. Có tất cả bao nhiêu số thỏa mãn?', 2, 'ACTIVE', NULL, NULL),
-	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_018', '? - 2 < 9. Điền số tự nhiên lớn hơn 0 vào ô trống. Có tất cả bao nhiêu số thỏa mãn?', 2, 'ACTIVE', NULL, NULL),
-	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_019', '? + 3 > 15. Điền số tự nhiên lớn hơn 0 vào ô trống. Có tất cả bao nhiêu số thỏa mãn?', 2, 'ACTIVE', NULL, NULL),
-	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_020', '20 - ? > 12. Điền số tự nhiên lớn hơn 0 vào ô trống. Có tất cả bao nhiêu số thỏa mãn?', 2, 'ACTIVE', NULL, NULL),
-	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_021', '5 < ? + 2 < 11. Điền số tự nhiên lớn hơn 0 vào ô trống. Có tất cả bao nhiêu số thỏa mãn?', 3, 'ACTIVE', NULL, NULL),
-	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_022', '4 < 12 - ? < 9. Điền số tự nhiên lớn hơn 0 vào ô trống. Có tất cả bao nhiêu số thỏa mãn?', 3, 'ACTIVE', NULL, NULL),
-	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_023', '6 < ? + 3 < 15. Điền số tự nhiên lớn hơn 0 vào ô trống. Có tất cả bao nhiêu số thỏa mãn?', 3, 'ACTIVE', NULL, NULL),
-	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_024', '3 < 16 - ? < 10. Điền số tự nhiên lớn hơn 0 vào ô trống. Có tất cả bao nhiêu số thỏa mãn?', 3, 'ACTIVE', NULL, NULL),
-	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_025', '8 < ? + 1 < 16. Điền số tự nhiên lớn hơn 0 vào ô trống. Có tất cả bao nhiêu số thỏa mãn?', 3, 'ACTIVE', NULL, NULL),
-	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_026', '2 < 13 - ? < 8. Điền số tự nhiên lớn hơn 0 vào ô trống. Có tất cả bao nhiêu số thỏa mãn?', 3, 'ACTIVE', NULL, NULL),
-	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_027', '5 < 18 - ? < 12. Điền số tự nhiên lớn hơn 0 vào ô trống. Có tất cả bao nhiêu số thỏa mãn?', 3, 'ACTIVE', NULL, NULL),
-	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_028', '7 < ? + 4 < 17. Điền số tự nhiên lớn hơn 0 vào ô trống. Có tất cả bao nhiêu số thỏa mãn?', 3, 'ACTIVE', NULL, NULL),
-	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_029', '4 < 19 - ? < 13. Điền số tự nhiên lớn hơn 0 vào ô trống. Có tất cả bao nhiêu số thỏa mãn?', 3, 'ACTIVE', NULL, NULL),
-	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_030', '9 < ? + 2 < 18. Điền số tự nhiên lớn hơn 0 vào ô trống. Có tất cả bao nhiêu số thỏa mãn?', 3, 'ACTIVE', NULL, NULL),
-	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_031', '? + 3 > 10 và 16 - ? > 4. Có tất cả bao nhiêu số tự nhiên lớn hơn 0 thỏa mãn đồng thời hai điều kiện?', 4, 'ACTIVE', NULL, NULL),
-	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_032', '? + 2 > 9 và ? + 5 < 17. Có tất cả bao nhiêu số tự nhiên lớn hơn 0 thỏa mãn đồng thời hai điều kiện?', 4, 'ACTIVE', NULL, NULL),
-	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_033', '18 - ? > 6 và ? + 1 > 8. Có tất cả bao nhiêu số tự nhiên lớn hơn 0 thỏa mãn đồng thời hai điều kiện?', 4, 'ACTIVE', NULL, NULL),
-	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_034', '? + 4 > 11 và 20 - ? > 6. Có tất cả bao nhiêu số tự nhiên lớn hơn 0 thỏa mãn đồng thời hai điều kiện?', 4, 'ACTIVE', NULL, NULL),
-	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_035', '17 - ? < 10 và ? + 2 < 14. Có tất cả bao nhiêu số tự nhiên lớn hơn 0 thỏa mãn đồng thời hai điều kiện?', 4, 'ACTIVE', NULL, NULL),
-	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_036', '? + 5 > 13 và 15 - ? > 2. Có tất cả bao nhiêu số tự nhiên lớn hơn 0 thỏa mãn đồng thời hai điều kiện?', 4, 'ACTIVE', NULL, NULL),
-	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_037', '19 - ? < 12 và ? + 3 < 16. Có tất cả bao nhiêu số tự nhiên lớn hơn 0 thỏa mãn đồng thời hai điều kiện?', 4, 'ACTIVE', NULL, NULL),
-	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_038', '? + 1 > 12 và 18 - ? > 2. Có tất cả bao nhiêu số tự nhiên lớn hơn 0 thỏa mãn đồng thời hai điều kiện?', 4, 'ACTIVE', NULL, NULL),
-	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_039', '16 - ? < 7 và ? + 2 < 15. Có tất cả bao nhiêu số tự nhiên lớn hơn 0 thỏa mãn đồng thời hai điều kiện?', 4, 'ACTIVE', NULL, NULL),
-	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_040', '? + 4 > 14 và 20 - ? > 3. Có tất cả bao nhiêu số tự nhiên lớn hơn 0 thỏa mãn đồng thời hai điều kiện?', 4, 'ACTIVE', NULL, NULL);
-		
+	-- Dễ
+	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_001', '3 - ? > 0. Có tất cả bao nhiêu số tự nhiên lớn hơn 0 thỏa mãn?', 1, 'ACTIVE', NULL, NULL),
+	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_002', '4 - ? > 1. Có tất cả bao nhiêu số tự nhiên lớn hơn 1 thỏa mãn?', 1, 'ACTIVE', NULL, NULL),
+	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_003', '? + 2 < 6. Có tất cả bao nhiêu số tự nhiên bé hơn 4 thỏa mãn?', 1, 'ACTIVE', NULL, NULL),
+	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_004', '8 - ? > 3. Có tất cả bao nhiêu số tự nhiên lớn hơn 2 thỏa mãn?', 1, 'ACTIVE', NULL, NULL),
+	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_005', '? + 3 < 9. Có tất cả bao nhiêu số tự nhiên lớn hơn 1 thỏa mãn?', 1, 'ACTIVE', NULL, NULL),
+	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_006', '10 - ? > 4. Có tất cả bao nhiêu số tự nhiên lớn hơn 3 thỏa mãn?', 1, 'ACTIVE', NULL, NULL),
+	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_007', '? + 1 < 5. Có tất cả bao nhiêu số tự nhiên bé hơn 3 thỏa mãn?', 1, 'ACTIVE', NULL, NULL),
+	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_008', '7 - ? > 1. Có tất cả bao nhiêu số tự nhiên lớn hơn 3 thỏa mãn?', 1, 'ACTIVE', NULL, NULL),
+	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_009', '? + 4 < 10. Có tất cả bao nhiêu số tự nhiên lớn hơn 2 thỏa mãn?', 1, 'ACTIVE', NULL, NULL),
+	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_010', '9 - ? > 6. Có tất cả bao nhiêu số tự nhiên bé hơn 2 thỏa mãn?', 1, 'ACTIVE', NULL, NULL),
+	-- Trung bình
+	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_011', '12 - ? > 5. Có tất cả bao nhiêu số tự nhiên lớn hơn 2 thỏa mãn?', 2, 'ACTIVE', NULL, NULL),
+	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_012', '? + 4 < 13. Có tất cả bao nhiêu số tự nhiên bé hơn 6 thỏa mãn?', 2, 'ACTIVE', NULL, NULL),
+	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_013', '15 - ? < 10. Có tất cả bao nhiêu số tự nhiên lớn hơn 8 thỏa mãn?', 2, 'ACTIVE', NULL, NULL),
+	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_014', '? - 3 > 4. Có tất cả bao nhiêu số tự nhiên bé hơn 12 thỏa mãn?', 2, 'ACTIVE', NULL, NULL),
+	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_015', '18 - ? > 8. Có tất cả bao nhiêu số tự nhiên lớn hơn 5 thỏa mãn?', 2, 'ACTIVE', NULL, NULL),
+	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_016', '? + 5 > 12. Có tất cả bao nhiêu số tự nhiên lớn hơn 10 thỏa mãn?', 2, 'ACTIVE', NULL, NULL),
+	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_017', '14 - ? < 6. Có tất cả bao nhiêu số tự nhiên bé hơn 15 thỏa mãn?', 2, 'ACTIVE', NULL, NULL),
+	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_018', '? - 2 < 9. Có tất cả bao nhiêu số tự nhiên lớn hơn 6 thỏa mãn?', 2, 'ACTIVE', NULL, NULL),
+	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_019', '? + 3 > 15. Có tất cả bao nhiêu số tự nhiên bé hơn 18 thỏa mãn?', 2, 'ACTIVE', NULL, NULL),
+	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_020', '20 - ? > 12. Có tất cả bao nhiêu số tự nhiên bé hơn 5 thỏa mãn?', 2, 'ACTIVE', NULL, NULL),
+	-- Khó
+	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_021', '5 < ? + 2 < 11. Có tất cả bao nhiêu số tự nhiên lớn hơn 5 thỏa mãn?', 3, 'ACTIVE', NULL, NULL),
+	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_022', '4 < 12 - ? < 9. Có tất cả bao nhiêu số tự nhiên bé hơn 6 thỏa mãn?', 3, 'ACTIVE', NULL, NULL),
+	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_023', '6 < ? + 3 < 15. Có tất cả bao nhiêu số tự nhiên lớn hơn 7 thỏa mãn?', 3, 'ACTIVE', NULL, NULL),
+	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_024', '3 < 16 - ? < 10. Có tất cả bao nhiêu số tự nhiên bé hơn 10 thỏa mãn?', 3, 'ACTIVE', NULL, NULL),
+	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_025', '8 < ? + 1 < 16. Có tất cả bao nhiêu số tự nhiên lớn hơn 10 thỏa mãn?', 3, 'ACTIVE', NULL, NULL),
+	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_026', '2 < 13 - ? < 8. Có tất cả bao nhiêu số tự nhiên lớn hơn 7 thỏa mãn?', 3, 'ACTIVE', NULL, NULL),
+	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_027', '5 < 18 - ? < 12. Có tất cả bao nhiêu số tự nhiên bé hơn 10 thỏa mãn?', 3, 'ACTIVE', NULL, NULL),
+	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_028', '7 < ? + 4 < 17. Có tất cả bao nhiêu số tự nhiên lớn hơn 8 thỏa mãn?', 3, 'ACTIVE', NULL, NULL),
+	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_029', '4 < 19 - ? < 13. Có tất cả bao nhiêu số tự nhiên bé hơn 11 thỏa mãn?', 3, 'ACTIVE', NULL, NULL),
+	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_030', '9 < ? + 2 < 18. Có tất cả bao nhiêu số tự nhiên lớn hơn 11 thỏa mãn?', 3, 'ACTIVE', NULL, NULL),
+	-- Rất khó
+	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_031', '? + 3 > 10 và 16 - ? > 4. Có tất cả bao nhiêu số tự nhiên lớn hơn 9 thỏa mãn đồng thời hai điều kiện?', 4, 'ACTIVE', NULL, NULL),
+	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_032', '? + 2 > 9 và ? + 5 < 17. Có tất cả bao nhiêu số tự nhiên bé hơn 10 thỏa mãn đồng thời hai điều kiện?', 4, 'ACTIVE', NULL, NULL),
+	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_033', '18 - ? > 6 và ? + 1 > 8. Có tất cả bao nhiêu số tự nhiên lớn hơn 9 thỏa mãn đồng thời hai điều kiện?', 4, 'ACTIVE', NULL, NULL),
+	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_034', '? + 4 > 11 và 20 - ? > 6. Có tất cả bao nhiêu số tự nhiên bé hơn 12 thỏa mãn đồng thời hai điều kiện?', 4, 'ACTIVE', NULL, NULL),
+	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_035', '17 - ? < 10 và ? + 2 < 14. Có tất cả bao nhiêu số tự nhiên lớn hơn 9 thỏa mãn đồng thời hai điều kiện?', 4, 'ACTIVE', NULL, NULL),
+	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_036', '? + 5 > 13 và 15 - ? > 2. Có tất cả bao nhiêu số tự nhiên bé hơn 11 thỏa mãn đồng thời hai điều kiện?', 4, 'ACTIVE', NULL, NULL),
+	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_037', '19 - ? < 12 và ? + 3 < 16. Có tất cả bao nhiêu số tự nhiên lớn hơn 10 thỏa mãn đồng thời hai điều kiện?', 4, 'ACTIVE', NULL, NULL),
+	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_038', '? + 1 > 12 và 18 - ? > 2. Có tất cả bao nhiêu số tự nhiên bé hơn 14 thỏa mãn đồng thời hai điều kiện?', 4, 'ACTIVE', NULL, NULL),
+	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_039', '16 - ? < 7 và ? + 2 < 15. Có tất cả bao nhiêu số tự nhiên lớn hơn 10 thỏa mãn đồng thời hai điều kiện?', 4, 'ACTIVE', NULL, NULL),
+	('CALCULATION_FIND_NUMBER_CONDITION', 'CALCULATION_FIND_NUMBER_CONDITION_040', '? + 4 > 14 và 20 - ? > 3. Có tất cả bao nhiêu số tự nhiên bé hơn 14 thỏa mãn đồng thời hai điều kiện?', 4, 'ACTIVE', NULL, NULL);
+
 -- Child: 1.4.1. Tìm số liền trước
 INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
 	('NUMBER_PREVIOUS', 'NUMBER_PREVIOUS_001', 'Số liền trước của số 2 là số nào?', 1, 'ACTIVE', NULL, NULL),
@@ -1019,7 +1023,6 @@ INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICU
 	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_038', 'Tìm hai số biết rằng tổng của chúng bằng 100 trừ đi số lớn nhất có một chữ số, hiệu của chúng bằng 40 trừ đi 19.', 4, 'ACTIVE', NULL, NULL),
 	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_039', 'Tìm hai số biết rằng tổng của chúng bằng số lớn nhất có một chữ số cộng 84, hiệu của chúng bằng 30 trừ đi 9.', 4, 'ACTIVE', NULL, NULL),
 	('UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC', 'UNKNOWN_NUMBER_SUM_DIFFERENCE_CALC_040', 'Tìm hai số biết rằng tổng của chúng bằng 100 trừ đi số liền trước của 10, hiệu của chúng bằng 50 trừ đi 28.', 4, 'ACTIVE', NULL, NULL);
-
 
 -- Child: 2.2.1. Hai bước cộng
 INSERT INTO MATH_QUESTIONS (CATEGORY_CODE, QUESTION_CODE, QUESTION_TEXT, DIFFICULTY, STATUS, CREATED_AT, UPDATED_AT) VALUES
