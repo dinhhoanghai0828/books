@@ -79,39 +79,29 @@ public class RunSQLComponent {
 
     //    @PostConstruct
     public void insertContent() throws SQLException, IOException {
-        // Lấy danh sách BOOK_SLUG có contents trong DB
-//        String sqlGetBooks = "SELECT DISTINCT B.SLUG AS BOOK_SLUG FROM BOOKS B " +
-//                "INNER JOIN VOLUMES V ON V.BOOK_SLUG = B.SLUG " +
-//                "INNER JOIN CONTENTS C ON C.VOLUME_SLUG = V.SLUG " +
-//                "ORDER BY B.SLUG";
-
         List<String> scripts = new ArrayList<>();
+        // Thêm các file cấu trúc cơ bản trước
         scripts.add(path + "1_SQL_CREATE_TABLES.sql");
         scripts.add(path + "2_SQL_CREATE_DATA.sql");
         scripts.add(path + "3_SQL_ENG_MISSING_WORDS.sql");
         scripts.add(path + "3_SQL_ENG_WORDS.sql");
         scripts.add(path + "MATH_CATEGORIES.sql");
 
+        // Thêm các file APP_*.sql theo format APP_<ROOT_PARENT>_<CATEGORY>.sql
+        scripts.add(path + "APP_BOOK_4000_ESSENTIAL_ENGLISH_WORDS.sql");
+        scripts.add(path + "APP_NEWS_NEWS.sql");
+        scripts.add(path + "APP_PRESENTATION_TRO_CHUYEN_HANG_NGAY.sql");
+        scripts.add(path + "APP_TRUYEN_TRUYEN_CO_TICH.sql");
+        scripts.add(path + "APP_TRUYEN_TRUYEN_CUOC_SONG.sql");
+        scripts.add(path + "APP_TRUYEN_TRUYEN_KINH_DI.sql");
+        scripts.add(path + "APP_TRUYEN_TRUYEN_TRUYEN_CAM_HUNG.sql");
+        scripts.add(path + "APP_TRUYEN_TRUYEN_TUOI_TEEN.sql");
+        scripts.add(path + "APP_WEB_ESL_FAST_BEGINNER.sql");
+        scripts.add(path + "APP_WEB_ESL_FAST_ELEMENTARY.sql");
+        scripts.add(path + "APP_WEB_LITTLE_CAT_LEVEL_1.sql");
 
-        scripts.add(path + "APP_WEB_LITTLE_CAT_TIRE_TOWN_SCHOOL.sql");
-        scripts.add(path + "APP_WEB_ESL_FAST_BEGINNER_1.sql");
-        scripts.add(path + "APP_WEB_ESL_FAST_BEGINNER_2.sql");
-        scripts.add(path + "APP_WEB_ESL_FAST_BEGINNER_3.sql");
-        scripts.add(path + "APP_WEB_ESL_FAST_ELEMENTARY_1.sql");
-        scripts.add(path + "APP_4000_ESSENTIAL_ENGLISH_WORDS_1.sql");
-        scripts.add(path + "APP_4000_ESSENTIAL_ENGLISH_WORDS_2.sql");
-        scripts.add(path + "APP_ALL_EARS_ENGLISH.sql");
-        scripts.add(path + "APP_ANIMATTERS.sql");
-        scripts.add(path + "APP_DHAR_MANN_STUDIO.sql");
-        scripts.add(path + "APP_ECONOMIST.sql");
-        scripts.add(path + "APP_ENGLISH_FAIRY_TALES.sql");
-        scripts.add(path + "APP_GOD_OF_MOTIVE.sql");
-        scripts.add(path + "APP_I_AM_MARY.sql");
-        scripts.add(path + "APP_NIGHTMARE_TALES.sql");
-        scripts.add(path + "APP_TEDTALKS.sql");
-        scripts.add(path + "APP_THE_FICTIONIST.sql");
-        scripts.add(path + "APP_VOA.sql");
-        scripts.add(path + "APP_YOUR_ANIMATED_STORY_SHOW.sql");
+
+        // Thêm các file MATH cố định
         scripts.add(path + "APP_QUESTIONS.sql");
         scripts.add(path + "APP_QUESTIONS_ANSWERS.sql");
         scripts.add(path + "MATH_QUESTIONS.sql");
