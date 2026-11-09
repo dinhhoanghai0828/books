@@ -13901,6 +13901,8 @@ INSERT INTO `WORDS` (`ENG`,`VI`) VALUES
 	('tired of','kiệt sức'),
 	('tired of','mệt mỏi'),
 	('tirelessly','không mệt mỏi'),
+	('tires','lốp'),
+	('tires','lốp xe'),
 	('tiresome','mệt mỏi'),
 	('to be able to','có thể'),
 	('to be forced to','buộc phải'),
