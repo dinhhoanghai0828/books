@@ -6,7 +6,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('"Oh, boy!", said Eddie','"Ôi, thích quá!", Eddie reo lên','00:00:45.310','00:00:47.750','little-cat-tire-town-school-1'),
 	('My first day of school!','Hôm nay là ngày đầu tiên mình đi học!','00:00:48.250','00:00:49.850','little-cat-tire-town-school-1'),
 	('Eddie looked at the big garage','Eddie nhìn tòa nhà để xe rộng lớn','00:00:51.230','00:00:53.430','little-cat-tire-town-school-1'),
-	('A sign read, Tire Town School','Trên tấm biển ghi: Trường học Tire Town','00:00:54.230','00:00:56.570','little-cat-tire-town-school-1'),
+	('A sign read, Tire Town School','Trên tấm biển ghi: Trường học Tire Town','00:00:54.000','00:00:56.570','little-cat-tire-town-school-1'),
 	('Beep!','Bíp!','00:00:58.850','00:00:59.430','little-cat-tire-town-school-1'),
 	('Beep!','Bíp!','00:00:59.430','00:00:59.990','little-cat-tire-town-school-1'),
 	('said a long car','một chiếc ô tô dài lên tiếng','00:01:00.130','00:01:01.830','little-cat-tire-town-school-1'),
