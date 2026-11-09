@@ -1,0 +1,1925 @@
+INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
+	/* (UUID(),'esl-fast-beginner-1-1','Going to the Zoo','Đi tới sở thú','ESL_FAST_BEGINNER_1_001.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-beginner-1',1,1,1) */
+	('She goes to the zoo','Cô bé đi đến sở thú','00:00:00.520','00:00:03.301','esl-fast-beginner-1-1'),
+	('She sees a lion','Cô bé nhìn thấy một con sư tử','00:00:04.120','00:00:06.200','esl-fast-beginner-1-1'),
+	('The lion roars','Con sư tử gầm lên','00:00:06.960','00:00:09.200','esl-fast-beginner-1-1'),
+	('She sees an elephant','Cô bé nhìn thấy một con voi','00:00:09.840','00:00:12.100','esl-fast-beginner-1-1'),
+	('The elephant has a long trunk','Con voi có chiếc vòi dài','00:00:13.020','00:00:16.300','esl-fast-beginner-1-1'),
+	('She sees a turtle','Cô bé nhìn thấy một con rùa','00:00:16.960','00:00:19.000','esl-fast-beginner-1-1'),
+	('The turtle is slow','Con rùa chậm chạp','00:00:19.440','00:00:22.200','esl-fast-beginner-1-1'),
+	('She sees a rabbit','Cô bé nhìn thấy một con thỏ','00:00:22.880','00:00:25.100','esl-fast-beginner-1-1'),
+	('The rabbit has soft fur','Con thỏ có bộ lông mềm mại','00:00:25.740','00:00:28.500','esl-fast-beginner-1-1'),
+	('She sees a gorilla','Cô bé nhìn thấy một con khỉ đột','00:00:28.600','00:00:31.400','esl-fast-beginner-1-1'),
+	('The gorilla is eating a banana','Con khỉ đột đang ăn một quả chuối','00:00:32.000','00:00:34.900','esl-fast-beginner-1-1'),
+
+	/* (UUID(),'esl-fast-beginner-1-2','Christmas Time','Giáng sinh','ESL_FAST_BEGINNER_1_002.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-beginner-1',1,1,2) */
+	('It is Christmas','Vào ngày Giáng sinh','00:00:00.390','00:00:02.300','esl-fast-beginner-1-2'),
+	('Dad gives Tim a toy','Bố tặng Tim một món đồ chơi','00:00:03.000','00:00:05.200','esl-fast-beginner-1-2'),
+	('The toy is in the box','Món đồ chơi được đặt trong hộp','00:00:05.830','00:00:08.400','esl-fast-beginner-1-2'),
+	('Tim takes off the lid','Tim mở nắp hộp ra','00:00:09.150','00:00:11.400','esl-fast-beginner-1-2'),
+	('He sees the toy','Cậu bé nhìn thấy món đồ chơi bên trong','00:00:12.130','00:00:13.900','esl-fast-beginner-1-2'),
+	('It is a car','Đó là một chiếc ô tô đồ chơi','00:00:14.530','00:00:16.200','esl-fast-beginner-1-2'),
+	('The car is red','Chiếc xe có màu đỏ','00:00:16.850','00:00:19.200','esl-fast-beginner-1-2'),
+	('The car makes noises','Chiếc xe phát ra tiếng ồn','00:00:19.830','00:00:21.900','esl-fast-beginner-1-2'),
+	('The car moves fast','Chiếc xe chạy rất nhanh','00:00:22.670','00:00:25.400','esl-fast-beginner-1-2'),
+	('Tim likes the gift','Tim rất thích món quà này','00:00:26.230','00:00:27.900','esl-fast-beginner-1-2'),
+	('He hugs Dad','Cậu bé ôm chặt bố','00:00:27.900','00:00:30.500','esl-fast-beginner-1-2'),
+	('Dad smiles','Bố mỉm cười hiền hậu','00:00:30.830','00:00:32.400','esl-fast-beginner-1-2'),
+
+	/* (UUID(),'esl-fast-beginner-1-3','She Goes to the Nurse','Cô ấy đến gặp y tá','ESL_FAST_BEGINNER_1_003.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-beginner-1',1,1,3) */
+	('She goes out to play','Cô bé ra ngoài chơi','00:00:00.580','00:00:02.900','esl-fast-beginner-1-3'),
+	('She runs around','Cô bé chạy vòng quanh','00:00:03.440','00:00:04.920','esl-fast-beginner-1-3'),
+	('She falls down','Cô bé bị ngã','00:00:05.640','00:00:07.300','esl-fast-beginner-1-3'),
+	('It hurts','Rất đau','00:00:07.900','00:00:08.990','esl-fast-beginner-1-3'),
+	('She cries','Cô bé bật khóc','00:00:09.580','00:00:10.900','esl-fast-beginner-1-3'),
+	('She gets up','Cô bé đứng dậy','00:00:11.480','00:00:12.700','esl-fast-beginner-1-3'),
+	('She goes to the nurse','Cô bé đi gặp y tá','00:00:13.380','00:00:15.200','esl-fast-beginner-1-3'),
+	('The nurse is nice','Y tá rất tốt bụng','00:00:15.620','00:00:17.900','esl-fast-beginner-1-3'),
+	('She looks friendly','Cô ấy trông rất thân thiện','00:00:18.480','00:00:19.900','esl-fast-beginner-1-3'),
+	('The nurse gives her a lollipop','Y tá cho cô bé một cây kẹo mút','00:00:20.840','00:00:23.200','esl-fast-beginner-1-3'),
+	('It tastes good','Nó rất ngon','00:00:23.580','00:00:25.600','esl-fast-beginner-1-3'),
+	('The nurse gives her a bandage','Y tá băng vết thương cho cô bé','00:00:26.180','00:00:29.100','esl-fast-beginner-1-3'),
+	('She is okay now','Giờ cô bé đã ổn rồi','00:00:29.200','00:00:31.200','esl-fast-beginner-1-3'),
+	('She walks back to class','Cô bé đi trở lại lớp học','00:00:31.820','00:00:33.800','esl-fast-beginner-1-3'),
+
+	/* (UUID(),'esl-fast-beginner-1-4','Waiting','Chờ đợi','ESL_FAST_BEGINNER_1_004.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-beginner-1',1,1,4) */
+	('The kids are in class','Bọn trẻ đang ở trong lớp học','00:00:00.580','00:00:02.740','esl-fast-beginner-1-4'),
+	('The teacher is teaching math','Giáo viên đang dạy môn toán','00:00:03.540','00:00:05.980','esl-fast-beginner-1-4'),
+	('The kids are tired','Bọn trẻ cảm thấy mệt mỏi','00:00:06.700','00:00:08.520','esl-fast-beginner-1-4'),
+	('They want to play','Chúng muốn được vui chơi','00:00:09.200','00:00:10.660','esl-fast-beginner-1-4'),
+	('They want to see the sun','Chúng muốn ra ngoài đón nắng','00:00:11.380','00:00:13.500','esl-fast-beginner-1-4'),
+	('They like slides','Chúng thích chơi cầu trượt','00:00:14.260','00:00:15.940','esl-fast-beginner-1-4'),
+	('They also like swings','Chúng cũng thích chơi xích đu','00:00:16.560','00:00:18.780','esl-fast-beginner-1-4'),
+	('They don\'t like math','Chúng không thích môn toán','00:00:19.500','00:00:21.780','esl-fast-beginner-1-4'),
+	('They stare at the clock','Chúng nhìn chằm chằm vào đồng hồ','00:00:22.560','00:00:24.700','esl-fast-beginner-1-4'),
+	('The clock moves slowly','Kim đồng hồ trôi thật chậm','00:00:25.060','00:00:27.800','esl-fast-beginner-1-4'),
+	('The kids continue to wait','Bọn trẻ vẫn tiếp tục chờ đợi','00:00:28.100','00:00:31.000','esl-fast-beginner-1-4'),
+
+	/* (UUID(),'esl-fast-beginner-1-5','Chores','Việc nhà','ESL_FAST_BEGINNER_1_005.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-beginner-1',1,1,5) */
+	('He is playing video games','Cậu bé đang chơi điện tử','00:00:00.650','00:00:03.500','esl-fast-beginner-1-5'),
+	('Mom gets mad','Mẹ rất tức giận','00:00:03.990','00:00:05.810','esl-fast-beginner-1-5'),
+	('She thinks he is lazy','Mẹ nghĩ cậu bé lười biếng','00:00:06.170','00:00:08.600','esl-fast-beginner-1-5'),
+	('She gives him a list of chores','Mẹ đưa cho cậu bé một danh sách việc nhà','00:00:08.950','00:00:11.930','esl-fast-beginner-1-5'),
+	('He frowns','Cậu bé cau mày','00:00:12.230','00:00:14.130','esl-fast-beginner-1-5'),
+	('He looks at the list','Cậu bé nhìn vào danh sách','00:00:14.390','00:00:16.100','esl-fast-beginner-1-5'),
+	('He has to clean the floors','Cậu bé phải lau sàn nhà','00:00:16.450','00:00:18.950','esl-fast-beginner-1-5'),
+	('Then, he has to wash the dishes','Sau đó, cậu bé phải rửa bát đĩa','00:00:19.250','00:00:22.730','esl-fast-beginner-1-5'),
+	('Finally, he has to feed the dog','Cuối cùng, cậu bé phải cho chó ăn','00:00:23.190','00:00:26.890','esl-fast-beginner-1-5'),
+	('He starts doing his chores','Cậu bé bắt đầu làm việc nhà','00:00:27.070','00:00:29.400','esl-fast-beginner-1-5');
+
+/*=====================================================================================================================================================================================================================================================*/
+
+INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
+	/* (UUID(),'esl-fast-beginner-1-6','The First Song','Bài hát đầu tiên','ESL_FAST_BEGINNER_1_006.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-beginner-1',1,1,6) */
+	('She sits in the car','Cô bé ngồi trong xe','00:00:00.390','00:00:02.870','esl-fast-beginner-1-6'),
+	('Her dad turns on the radio','Bố cô bé bật radio','00:00:03.550','00:00:05.710','esl-fast-beginner-1-6'),
+	('A song plays','Một bài hát vang lên','00:00:06.450','00:00:07.930','esl-fast-beginner-1-6'),
+	('She taps her feet','Cô bé gõ nhịp bằng chân','00:00:08.530','00:00:10.100','esl-fast-beginner-1-6'),
+	('She sways her head','Cô bé lắc lư cái đầu','00:00:10.790','00:00:12.750','esl-fast-beginner-1-6'),
+	('Her dad laughs at her','Bố cô bé bật cười với cô bé','00:00:13.430','00:00:15.609','esl-fast-beginner-1-6'),
+	('He likes the song, too','Ông ấy cũng thích bài hát này','00:00:16.030','00:00:17.970','esl-fast-beginner-1-6'),
+	('The song is over','Bài hát kết thúc','00:00:18.830','00:00:20.190','esl-fast-beginner-1-6'),
+	('The radio plays a different song','Radio phát một bài hát khác','00:00:20.990','00:00:23.690','esl-fast-beginner-1-6'),
+	('She does not like the new song','Cô bé không thích bài hát mới','00:00:24.250','00:00:26.570','esl-fast-beginner-1-6'),
+	('She sits quietly','Cô bé ngồi im lặng','00:00:27.010','00:00:28.670','esl-fast-beginner-1-6'),
+
+	/* (UUID(),'esl-fast-beginner-1-7','Visiting the Doctor','Đi khám bác sĩ','ESL_FAST_BEGINNER_1_007.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-beginner-1',1,1,7) */
+	('Hayley feels hot','Hayley cảm thấy nóng bừng','00:00:00.260','00:00:02.720','esl-fast-beginner-1-7'),
+	('Her mom touches her forehead','Mẹ cô bé chạm tay lên trán con','00:00:03.320','00:00:05.560','esl-fast-beginner-1-7'),
+	('Hayley has a fever','Hayley bị sốt','00:00:06.460','00:00:08.120','esl-fast-beginner-1-7'),
+	('The mom takes Hayley to a doctor','Mẹ đưa Hayley đi khám bác sĩ','00:00:09.080','00:00:12.320','esl-fast-beginner-1-7'),
+	('The doctor is kind','Bác sĩ rất ân cần','00:00:13.060','00:00:15.180','esl-fast-beginner-1-7'),
+	('He gives her a sticker','Ông ấy tặng cô bé một miếng dán sticker','00:00:15.800','00:00:17.480','esl-fast-beginner-1-7'),
+	('He tells her to take a pill','Ông ấy dặn cô bé uống thuốc','00:00:18.140','00:00:20.700','esl-fast-beginner-1-7'),
+	('He tells her to drink a lot of water','Ông ấy dặn cô bé uống thật nhiều nước','00:00:21.120','00:00:24.300','esl-fast-beginner-1-7'),
+	('Hayley goes home','Hayley về nhà','00:00:25.060','00:00:26.680','esl-fast-beginner-1-7'),
+	('She takes the pill and drinks water','Cô bé uống thuốc và uống nhiều nước','00:00:27.080','00:00:30.760','esl-fast-beginner-1-7'),
+	('She does this for three days','Cô bé làm như vậy suốt ba ngày','00:00:31.360','00:00:33.880','esl-fast-beginner-1-7'),
+	('She is healthy again','Cô bé khỏe lại','00:00:34.400','00:00:36.140','esl-fast-beginner-1-7'),
+
+	/* (UUID(),'esl-fast-beginner-1-8','Different Foods','Các loại thức ăn khác nhau','ESL_FAST_BEGINNER_1_008.mp3',NULL,'00:00:00.000','00:00:34.000','esl-fast-beginner-1',1,1,8) */
+	('Sarah is hungry','Sarah cảm thấy đói bụng','00:00:00.330','00:00:02.530','esl-fast-beginner-1-8'),
+	('She goes to the kitchen','Cô bé đi vào bếp','00:00:03.150','00:00:04.930','esl-fast-beginner-1-8'),
+	('She opens the cabinet','Cô bé mở tủ','00:00:05.530','00:00:07.370','esl-fast-beginner-1-8'),
+	('There are a lot of snacks','Trong đó có rất nhiều đồ ăn vặt','00:00:08.210','00:00:10.450','esl-fast-beginner-1-8'),
+	('The marshmallows are too sweet','Kẹo dẻo ngọt quá','00:00:11.190','00:00:13.550','esl-fast-beginner-1-8'),
+	('The potato chips are too salty','Khoai tây chiên mặn quá','00:00:13.950','00:00:16.630','esl-fast-beginner-1-8'),
+	('The ice cream is too watery','Kem thì quá loãng','00:00:17.210','00:00:19.890','esl-fast-beginner-1-8'),
+	('The kiwis are too sour','Kiwi chua quá','00:00:20.410','00:00:23.350','esl-fast-beginner-1-8'),
+	('The cereal is too bland','Ngũ cốc thì quá nhạt nhẽo','00:00:24.010','00:00:26.550','esl-fast-beginner-1-8'),
+	('Her dad comes home','Bố cô bé trở về nhà','00:00:27.230','00:00:28.810','esl-fast-beginner-1-8'),
+	('He gives her crackers','Ông ấy đưa cho cô bé vài chiếc bánh quy','00:00:28.510','00:00:30.810','esl-fast-beginner-1-8'),
+	('The crackers are perfect','Những chiếc bánh quy ấy thật hoàn hảo','00:00:31.350','00:00:33.330','esl-fast-beginner-1-8'),
+
+	/* (UUID(),'esl-fast-beginner-1-9','The Corner','Góc phố','ESL_FAST_BEGINNER_1_009.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-beginner-1',1,1,9) */
+	('Jill does not like math','Jill không thích môn toán','00:00:00.650','00:00:03.010','esl-fast-beginner-1-9'),
+	('Jill starts talking about food','Jill bắt đầu nói chuyện về đồ ăn','00:00:03.530','00:00:05.790','esl-fast-beginner-1-9'),
+	('Her friends laugh','Bạn bè cô bé bật cười','00:00:06.370','00:00:08.090','esl-fast-beginner-1-9'),
+	('They stop doing their homework','Họ ngừng làm bài tập','00:00:08.570','00:00:10.810','esl-fast-beginner-1-9'),
+	('The teacher is upset','Cô giáo cảm thấy không hài lòng','00:00:11.270','00:00:13.030','esl-fast-beginner-1-9'),
+	('She tells them to stand in the corner','Cô giáo bảo họ đứng vào góc lớp','00:00:13.510','00:00:15.930','esl-fast-beginner-1-9'),
+	('Jill goes to the corner','Jill bước vào góc lớp','00:00:16.690','00:00:18.230','esl-fast-beginner-1-9'),
+	('It is hard to be quiet','Giữ im lặng thật khó','00:00:18.850','00:00:20.790','esl-fast-beginner-1-9'),
+	('She thinks about her family','Cô bé nghĩ về gia đình mình','00:00:21.590','00:00:23.470','esl-fast-beginner-1-9'),
+	('She thinks about her dog','Cô bé nghĩ về chú chó của mình','00:00:23.830','00:00:25.990','esl-fast-beginner-1-9'),
+	('Five minutes pass','Năm phút trôi qua','00:00:26.570','00:00:28.310','esl-fast-beginner-1-9'),
+	('The teacher lets her go','Cô giáo cho cô bé quay lại chỗ','00:00:28.310','00:00:30.650','esl-fast-beginner-1-9'),
+
+	/* (UUID(),'esl-fast-beginner-1-10','A Surprise Party','Bữa tiệc bất ngờ','ESL_FAST_BEGINNER_1_010.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-beginner-1',1,1,10) */
+	('It is Lily\'s birthday','Hôm nay là sinh nhật của Lily','00:00:00.390','00:00:02.850','esl-fast-beginner-1-10'),
+	('She gets out of bed','Cô bé bước xuống giường','00:00:03.510','00:00:05.310','esl-fast-beginner-1-10'),
+	('Nobody says anything to her','Không ai nói gì với cô bé cả','00:00:05.990','00:00:08.090','esl-fast-beginner-1-10'),
+	('Her mom takes her to school','Mẹ đưa cô bé đến trường','00:00:08.710','00:00:10.650','esl-fast-beginner-1-10'),
+	('Her friends do not say anything','Bạn bè của cô bé cũng chẳng nói gì','00:00:11.250','00:00:13.510','esl-fast-beginner-1-10'),
+	('The teacher does not say anything','Ngay cả cô giáo cũng không nói gì','00:00:13.950','00:00:16.590','esl-fast-beginner-1-10'),
+	('Lily is sad','Lily rất buồn','00:00:17.430','00:00:18.790','esl-fast-beginner-1-10'),
+	('Lily walks home alone','Lily đi bộ về nhà một mình','00:00:19.570','00:00:21.270','esl-fast-beginner-1-10'),
+	('She opens the door','Cô bé mở cửa','00:00:21.970','00:00:23.610','esl-fast-beginner-1-10'),
+	('Her friends and family are holding a cake','Bạn bè và gia đình đang cầm một chiếc bánh','00:00:24.330','00:00:27.250','esl-fast-beginner-1-10'),
+	('They say, "Surprise Lily!"','Mọi người đồng thanh nói, "Ngạc nhiên chưa, Lily!"','00:00:26.950','00:00:30.190','esl-fast-beginner-1-10');
+
+/*=====================================================================================================================================================================================================================================================*/
+
+INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
+	/* (UUID(),'esl-fast-beginner-1-11','A New Pet','Thú cưng mới','ESL_FAST_BEGINNER_1_011.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-beginner-1',1,1,11) */
+	('Kate is walking','Kate đang đi dạo','00:00:00.650','00:00:02.890','esl-fast-beginner-1-11'),
+	('She sees a dog','Cô bé nhìn thấy một chú chó','00:00:03.210','00:00:05.230','esl-fast-beginner-1-11'),
+	('The dog wags its tail','Chú chó vui vẻ vẫy đuôi','00:00:05.250','00:00:07.950','esl-fast-beginner-1-11'),
+	('Kate likes the dog','Kate rất thích chú chó ấy','00:00:08.490','00:00:10.590','esl-fast-beginner-1-11'),
+	('It has no collar','Nó không đeo vòng cổ','00:00:10.770','00:00:12.930','esl-fast-beginner-1-11'),
+	('Kate takes it home','Kate đưa nó về nhà','00:00:13.590','00:00:15.650','esl-fast-beginner-1-11'),
+	('She washes the dog','Cô bé tắm cho chú chó','00:00:16.150','00:00:18.290','esl-fast-beginner-1-11'),
+	('She names him "Toby"','Cô bé đặt tên cho nó là "Toby"','00:00:18.670','00:00:20.810','esl-fast-beginner-1-11'),
+	('She takes Toby to the vet','Cô bé đưa Toby đến bác sĩ thú y','00:00:21.270','00:00:24.350','esl-fast-beginner-1-11'),
+	('Toby is healthy','Toby rất khỏe mạnh','00:00:24.870','00:00:27.110','esl-fast-beginner-1-11'),
+	('Kate walks Toby every day','Kate dắt Toby đi dạo mỗi ngày','00:00:27.350','00:00:30.970','esl-fast-beginner-1-11'),
+	('They love each other','Họ rất yêu quý nhau','00:00:31.190','00:00:33.030','esl-fast-beginner-1-11'),
+
+	/* (UUID(),'esl-fast-beginner-1-12','Group Project','Dự án nhóm','ESL_FAST_BEGINNER_1_012.mp3',NULL,'00:00:00.000','00:00:34.000','esl-fast-beginner-1',1,1,12) */
+	('Ms. Howard assigns a project','Cô Howard giao cho lớp một dự án','00:00:00.260','00:00:03.580','esl-fast-beginner-1-12'),
+	('She wants the students to work in groups','Cô muốn các học sinh làm việc theo nhóm','00:00:04.380','00:00:07.339','esl-fast-beginner-1-12'),
+	('Adam works with Joe and Bill','Adam làm cùng nhóm với Joe và Bill','00:00:08.160','00:00:10.700','esl-fast-beginner-1-12'),
+	('Adam is smart','Adam rất thông minh','00:00:11.320','00:00:12.840','esl-fast-beginner-1-12'),
+	('Joe draws well','Joe vẽ rất đẹp','00:00:13.560','00:00:15.160','esl-fast-beginner-1-12'),
+	('Bill is cooperative','Bill rất hợp tác','00:00:15.960','00:00:17.760','esl-fast-beginner-1-12'),
+	('They make a good group','Họ tạo thành một nhóm rất ăn ý','00:00:18.780','00:00:20.560','esl-fast-beginner-1-12'),
+	('They turn in their project','Cả nhóm nộp bài dự án của mình','00:00:21.200','00:00:23.220','esl-fast-beginner-1-12'),
+	('Ms. Howard likes it','Cô Howard rất hài lòng với bài làm','00:00:23.920','00:00:26.040','esl-fast-beginner-1-12'),
+	('She gives them a high grade','Cô chấm cho họ điểm số rất cao','00:00:26.460','00:00:28.920','esl-fast-beginner-1-12'),
+	('Adam, Joe, and Bill are joyful','Adam, Joe và Bill vô cùng vui mừng','00:00:29.480','00:00:33.240','esl-fast-beginner-1-12'),
+
+	/* (UUID(),'esl-fast-beginner-1-13','A Cat and A Mouse','Một con mèo và một con chuột','ESL_FAST_BEGINNER_1_013.mp3',NULL,'00:00:00.000','00:00:40.000','esl-fast-beginner-1',1,1,13) */
+	('The cat is bored','Con mèo cảm thấy rất buồn chán','00:00:00.710','00:00:02.950','esl-fast-beginner-1-13'),
+	('He tries to have fun','Nó cố tìm cách tự giải trí','00:00:03.370','00:00:05.770','esl-fast-beginner-1-13'),
+	('He plays with yarn','Nó chơi với cuộn len','00:00:06.270','00:00:08.530','esl-fast-beginner-1-13'),
+	('He scratches his tummy','Nó gãi bụng của mình','00:00:09.330','00:00:11.710','esl-fast-beginner-1-13'),
+	('He takes a nap','Nó chợp mắt một giấc','00:00:12.270','00:00:14.870','esl-fast-beginner-1-13'),
+	('He drinks milk','Nó uống sữa','00:00:15.530','00:00:17.430','esl-fast-beginner-1-13'),
+	('He is still bored','Nó vẫn thấy chán','00:00:18.230','00:00:20.110','esl-fast-beginner-1-13'),
+	('He sees a mouse','Nó nhìn thấy một con chuột','00:00:20.890','00:00:22.890','esl-fast-beginner-1-13'),
+	('The mouse is eating cheese','Con chuột đang ăn phô mai','00:00:23.450','00:00:26.670','esl-fast-beginner-1-13'),
+	('The cat steals the cheese','Con mèo cướp miếng phô mai','00:00:26.700','00:00:30.690','esl-fast-beginner-1-13'),
+	('The mouse is angry','Con chuột nổi giận','00:00:31.430','00:00:33.530','esl-fast-beginner-1-13'),
+	('The mouse chases the cat','Con chuột đuổi theo con mèo','00:00:34.170','00:00:36.910','esl-fast-beginner-1-13'),
+	('The cat is having fun','Con mèo đang rất thích thú','00:00:37.510','00:00:40.000','esl-fast-beginner-1-13'),
+
+	/* (UUID(),'esl-fast-beginner-1-14','Lemonade Stand','Quầy nước chanh','ESL_FAST_BEGINNER_1_014.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-beginner-1',1,1,14) */
+	('John wants to go to his school field trip','John muốn tham gia chuyến dã ngoại của trường','00:00:00.580','00:00:04.660','esl-fast-beginner-1-14'),
+	('He needs fifty dollars','Cậu bé cần 50 đô la','00:00:05.240','00:00:07.100','esl-fast-beginner-1-14'),
+	('He wants to earn it himself','Cậu bé muốn tự mình kiếm tiền','00:00:07.460','00:00:10.180','esl-fast-beginner-1-14'),
+	('He plans to open up a lemonade stand','Cậu bé dự định mở một quầy bán nước chanh','00:00:10.940','00:00:14.540','esl-fast-beginner-1-14'),
+	('He goes to the market','Cậu bé đến chợ','00:00:15.120','00:00:16.960','esl-fast-beginner-1-14'),
+	('The lemons are cheap','Những quả chanh rất rẻ','00:00:17.500','00:00:19.560','esl-fast-beginner-1-14'),
+	('They are also ripe','Chúng cũng đã chín mọng','00:00:20.180','00:00:22.000','esl-fast-beginner-1-14'),
+	('He buys fifty lemons','Cậu bé mua 50 quả chanh','00:00:22.640','00:00:24.820','esl-fast-beginner-1-14'),
+	('He starts making lemonade','Cậu bé bắt đầu pha nước chanh','00:00:25.320','00:00:27.440','esl-fast-beginner-1-14'),
+	('A lot of people are in line','Rất nhiều người đang xếp hàng','00:00:28.140','00:00:31.200','esl-fast-beginner-1-14'),
+	('His lemonade stand is a success','Quầy bán nước chanh của cậu bé rất thành công','00:00:31.500','00:00:34.640','esl-fast-beginner-1-14'),
+	('He makes enough money','Cậu bé kiếm đủ tiền','00:00:35.100','00:00:37.000','esl-fast-beginner-1-14'),
+
+	/* (UUID(),'esl-fast-beginner-1-15','New and Old','Mới và cũ','ESL_FAST_BEGINNER_1_015.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-beginner-1',1,1,15) */
+	('Tomorrow is the first day of school','Ngày mai là ngày đầu tiên đi học','00:00:00.330','00:00:03.430','esl-fast-beginner-1-15'),
+	('Barbara looks at her backpack','Barbara nhìn chiếc ba lô của mình','00:00:03.800','00:00:05.970','esl-fast-beginner-1-15'),
+	('It has holes','Nó bị thủng lỗ','00:00:06.750','00:00:08.210','esl-fast-beginner-1-15'),
+	('It is dirty','Nó rất bẩn','00:00:08.730','00:00:09.930','esl-fast-beginner-1-15'),
+	('She needs a new one','Cô bé cần một chiếc ba lô mới','00:00:10.590','00:00:12.330','esl-fast-beginner-1-15'),
+	('Her mom takes her shopping','Mẹ đưa cô bé đi mua sắm','00:00:13.070','00:00:15.210','esl-fast-beginner-1-15'),
+	('There are so many backpacks','Có rất nhiều chiếc ba lô','00:00:16.030','00:00:18.350','esl-fast-beginner-1-15'),
+	('One backpack has yellow stars','Một chiếc ba lô có những ngôi sao màu vàng','00:00:18.970','00:00:21.990','esl-fast-beginner-1-15'),
+	('Another one has rainbow stripes','Một chiếc khác có các sọc cầu vồng','00:00:22.630','00:00:25.810','esl-fast-beginner-1-15'),
+	('Another one has dogs','Một chiếc khác có hình những chú chó','00:00:26.350','00:00:28.590','esl-fast-beginner-1-15'),
+	('Barbara likes this one','Barbara thích chiếc này','00:00:28.590','00:00:31.309','esl-fast-beginner-1-15'),
+	('She buys it','Cô bé mua nó','00:00:31.670','00:00:33.000','esl-fast-beginner-1-15');
+
+/*=====================================================================================================================================================================================================================================================*/
+
+INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
+	/* (UUID(),'esl-fast-beginner-1-16','The Kind Dentist','Nha sĩ tốt bụng','ESL_FAST_BEGINNER_1_016.mp3',NULL,'00:00:00.000','00:00:40.000','esl-fast-beginner-1',1,1,16) */
+	('Maria feels pain in her teeth','Maria bị đau răng','00:00:00.460','00:00:04.440','esl-fast-beginner-1-16'),
+	('She tells her mom','Cô bé nói với mẹ','00:00:05.120','00:00:06.660','esl-fast-beginner-1-16'),
+	('Her mom takes her to the dentist','Mẹ đưa cô bé đến nha sĩ','00:00:07.340','00:00:09.780','esl-fast-beginner-1-16'),
+	('Maria is scared','Maria rất sợ','00:00:10.840','00:00:12.700','esl-fast-beginner-1-16'),
+	('She enters the waiting room','Cô bé bước vào phòng chờ','00:00:13.500','00:00:15.740','esl-fast-beginner-1-16'),
+	('The secretary calls Maria\'s name','Lễ tân gọi tên Maria','00:00:16.200','00:00:19.460','esl-fast-beginner-1-16'),
+	('Maria goes in','Maria bước vào','00:00:20.100','00:00:21.820','esl-fast-beginner-1-16'),
+	('Maria sits in a big chair','Maria ngồi lên chiếc ghế lớn','00:00:22.500','00:00:25.380','esl-fast-beginner-1-16'),
+	('She waits for the dentist','Cô bé chờ nha sĩ','00:00:26.000','00:00:27.860','esl-fast-beginner-1-16'),
+	('The dentist arrives','Nha sĩ bước vào','00:00:27.950','00:00:30.720','esl-fast-beginner-1-16'),
+	('He is careful with Maria\'s teeth','Ông ấy khám răng cho Maria rất cẩn thận','00:00:31.439','00:00:34.400','esl-fast-beginner-1-16'),
+	('He gives her a new toothbrush','Ông tặng cô bé một chiếc bàn chải đánh răng mới','00:00:34.600','00:00:37.160','esl-fast-beginner-1-16'),
+	('Maria feels good','Maria cảm thấy dễ chịu hơn','00:00:37.600','00:00:39.500','esl-fast-beginner-1-16'),
+
+	/* (UUID(),'esl-fast-beginner-1-17','A Trip to the Library','Chuyến đi đến thư viện','ESL_FAST_BEGINNER_1_017.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-beginner-1',1,1,17) */
+	('Mark needs a book','Mark cần một quyển sách','00:00:00.200','00:00:02.480','esl-fast-beginner-1-17'),
+	('He does not have money','Cậu bé không có tiền','00:00:02.960','00:00:05.220','esl-fast-beginner-1-17'),
+	('His mom takes him to the library','Mẹ đưa cậu đến thư viện','00:00:05.920','00:00:08.360','esl-fast-beginner-1-17'),
+	('Mark can borrow books for free','Mark có thể mượn sách miễn phí','00:00:08.980','00:00:12.020','esl-fast-beginner-1-17'),
+	('Mark enters the library','Mark bước vào thư viện','00:00:12.760','00:00:14.900','esl-fast-beginner-1-17'),
+	('There are so many books','Có rất nhiều sách','00:00:15.600','00:00:18.040','esl-fast-beginner-1-17'),
+	('There are books about animals','Có những quyển sách về động vật','00:00:18.560','00:00:20.680','esl-fast-beginner-1-17'),
+	('There are books about pirates','Có những quyển sách về cướp biển','00:00:21.340','00:00:23.400','esl-fast-beginner-1-17'),
+	('There are books about science','Có những quyển sách về khoa học','00:00:24.020','00:00:26.520','esl-fast-beginner-1-17'),
+	('Mark borrows them all','Mark mượn toàn bộ sách','00:00:27.100','00:00:29.280','esl-fast-beginner-1-17'),
+
+	/* (UUID(),'esl-fast-beginner-1-18','A Lot of Ants','Rất nhiều con kiến','ESL_FAST_BEGINNER_1_018.mp3',NULL,'00:00:00.000','00:00:28.000','esl-fast-beginner-1',1,1,18) */
+	('She eats a slice of cake','Cô ấy ăn một miếng bánh ngọt','00:00:00.460','00:00:03.359','esl-fast-beginner-1-18'),
+	('She drops a crumb','Cô ấy làm rơi một vụn bánh','00:00:04.000','00:00:05.740','esl-fast-beginner-1-18'),
+	('The ants can smell it','Đàn kiến ngửi thấy mùi vụn bánh','00:00:06.440','00:00:08.480','esl-fast-beginner-1-18'),
+	('They crawl towards the crumb','Chúng bò về phía vụn bánh','00:00:09.100','00:00:11.360','esl-fast-beginner-1-18'),
+	('She notices the ants','Cô ấy nhìn thấy đàn kiến','00:00:12.060','00:00:14.000','esl-fast-beginner-1-18'),
+	('She does not want to kill them','Cô ấy không muốn giết chúng','00:00:14.640','00:00:16.920','esl-fast-beginner-1-18'),
+	('She gets a cup','Cô ấy lấy một cái cốc','00:00:17.620','00:00:19.200','esl-fast-beginner-1-18'),
+	('She puts the ants inside','Cô ấy cho đàn kiến vào trong cốc','00:00:20.000','00:00:22.140','esl-fast-beginner-1-18'),
+	('She opens the window','Cô ấy mở cửa sổ','00:00:22.860','00:00:24.760','esl-fast-beginner-1-18'),
+	('She lets the ants go','Cô ấy thả đàn kiến đi','00:00:25.560','00:00:27.520','esl-fast-beginner-1-18'),
+
+	/* (UUID(),'esl-fast-beginner-1-19','Picking a Costume','Chọn trang phục','ESL_FAST_BEGINNER_1_019.mp3',NULL,'00:00:00.000','00:00:32.500','esl-fast-beginner-1',1,1,19) */
+	('It is Halloween','Hôm nay là lễ Halloween','00:00:00.330','00:00:02.230','esl-fast-beginner-1-19'),
+	('Nancy is dressed as a princess','Nancy hóa trang thành công chúa','00:00:03.000','00:00:05.530','esl-fast-beginner-1-19'),
+	('She goes trick-or-treating','Cô bé đi xin kẹo Halloween','00:00:06.450','00:00:08.290','esl-fast-beginner-1-19'),
+	('She walks to one house','Cô bé đi đến một ngôi nhà','00:00:09.290','00:00:11.310','esl-fast-beginner-1-19'),
+	('She rings the doorbell','Cô bé bấm chuông cửa','00:00:11.910','00:00:13.870','esl-fast-beginner-1-19'),
+	('A young couple opens the door','Một cặp vợ chồng trẻ mở cửa','00:00:14.750','00:00:17.490','esl-fast-beginner-1-19'),
+	('Nancy holds out her bag','Nancy đưa chiếc túi của mình ra','00:00:18.410','00:00:20.650','esl-fast-beginner-1-19'),
+	('She receives candy','Cô bé nhận được kẹo','00:00:21.430','00:00:23.490','esl-fast-beginner-1-19'),
+	('She says, "Thank you!"','Cô bé nói: "Cảm ơn!"','00:00:24.230','00:00:26.430','esl-fast-beginner-1-19'),
+	('The couple smiles','Hai vợ chồng mỉm cười','00:00:26.890','00:00:28.850','esl-fast-beginner-1-19'),
+	('Nancy goes to the next house','Nancy đi đến ngôi nhà kế tiếp','00:00:29.310','00:00:31.790','esl-fast-beginner-1-19'),
+
+	/* (UUID(),'esl-fast-beginner-1-20','Petting Zoo','Vườn thú cưng','ESL_FAST_BEGINNER_1_020.mp3',NULL,'00:00:00.000','00:00:40.000','esl-fast-beginner-1',1,1,20) */
+	('He goes to the petting zoo','Cậu bé đi tới vườn thú cưng','00:00:00.390','00:00:03.110','esl-fast-beginner-1-20'),
+	('There are many different animals','Có rất nhiều loài động vật khác nhau','00:00:03.670','00:00:06.330','esl-fast-beginner-1-20'),
+	('He pets the turtles','Cậu bé vuốt ve những chú rùa','00:00:06.790','00:00:08.870','esl-fast-beginner-1-20'),
+	('The turtles feel rough','Những chú rùa sờ vào có cảm giác thô ráp','00:00:09.470','00:00:11.990','esl-fast-beginner-1-20'),
+	('He pets the sheep','Cậu bé vuốt ve những chú cừu','00:00:12.610','00:00:14.890','esl-fast-beginner-1-20'),
+	('The sheep feel wooly','Những con cừu sờ vào có cảm giác mềm như len','00:00:15.050','00:00:17.890','esl-fast-beginner-1-20'),
+	('He pets the cows','Cậu bé vuốt ve những con bò','00:00:18.570','00:00:20.850','esl-fast-beginner-1-20'),
+	('The cows feel smooth','Những con bò sờ vào có cảm giác rất mượt mà','00:00:21.510','00:00:24.130','esl-fast-beginner-1-20'),
+	('He pets the bunnies','Cậu bé vuốt ve những chú thỏ','00:00:24.630','00:00:27.390','esl-fast-beginner-1-20'),
+	('The bunnies feel fluffy','Những chú thỏ sờ vào có cảm giác mềm mại','00:00:27.870','00:00:30.670','esl-fast-beginner-1-20'),
+	('He tells his mom he wants a pet','Cậu bé nói với mẹ rằng cậu muốn có một con vật nuôi','00:00:31.770','00:00:34.830','esl-fast-beginner-1-20'),
+	('His mom says he can get one tomorrow','Mẹ bảo cậu bé có thể nuôi một con ngày mai','00:00:35.510','00:00:39.110','esl-fast-beginner-1-20');
+
+/*=====================================================================================================================================================================================================================================================*/
+
+INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
+	/* (UUID(),'esl-fast-beginner-1-21','Mom is Mad','Mẹ đang tức giận','ESL_FAST_BEGINNER_1_021.mp3',NULL,'00:00:00.000','00:00:35.500','esl-fast-beginner-1',1,1,21) */
+	('Robert\'s room is messy','Phòng của Robert rất bừa bộn','00:00:00.200','00:00:03.340','esl-fast-beginner-1-21'),
+	('There is pizza under his bed','Bánh pizza ở dưới gầm giường của cậu bé','00:00:03.600','00:00:06.820','esl-fast-beginner-1-21'),
+	('There is glue on the wall','Keo thì dính trên tường','00:00:07.340','00:00:10.040','esl-fast-beginner-1-21'),
+	('There is a pile of clothes','Có một đống quần áo','00:00:10.460','00:00:13.180','esl-fast-beginner-1-21'),
+	('There are toys on the floor','Đồ chơi nằm trên sàn nhà','00:00:13.960','00:00:16.440','esl-fast-beginner-1-21'),
+	('Robert does not care','Robert chẳng bận tâm','00:00:17.420','00:00:19.420','esl-fast-beginner-1-21'),
+	('He watches a television show','Cậu bé xem một chương trình truyền hình trên tivi','00:00:20.040','00:00:22.440','esl-fast-beginner-1-21'),
+	('His mom goes into his room','Mẹ cậu bé bước vào phòng','00:00:23.040','00:00:25.740','esl-fast-beginner-1-21'),
+	('She turns off the television','Bà ấy tắt tivi','00:00:26.320','00:00:28.720','esl-fast-beginner-1-21'),
+	('She yells at him','Bà ấy la mắng cậu bé','00:00:28.900','00:00:31.360','esl-fast-beginner-1-21'),
+	('He starts to clean his room','Cậu bé bắt đầu dọn dẹp phòng của mình','00:00:31.880','00:00:34.540','esl-fast-beginner-1-21'),
+
+	/* (UUID(),'esl-fast-beginner-1-22','Father\'s Day','Ngày của cha','ESL_FAST_BEGINNER_1_022.mp3',NULL,'00:00:00.000','00:00:39.000','esl-fast-beginner-1',1,1,22) */
+	('Today is Father\'s Day','Hôm nay là Ngày của Cha','00:00:00.260','00:00:02.780','esl-fast-beginner-1-22'),
+	('Daniel surprises his father','Daniel tạo bất ngờ cho bố mình','00:00:03.000','00:00:05.680','esl-fast-beginner-1-22'),
+	('He serves him breakfast','Cậu ấy mang bữa sáng đến cho bố','00:00:06.200','00:00:08.780','esl-fast-beginner-1-22'),
+	('There are eggs, bacon, and orange juice on the tray','Trên khay có trứng, thịt xông khói và nước cam','00:00:08.900','00:00:15.000','esl-fast-beginner-1-22'),
+	('Daniel\'s father is happy','Bố của Daniel rất vui','00:00:15.500','00:00:17.980','esl-fast-beginner-1-22'),
+	('Later, they go play tennis','Sau đó, hai bố con đi chơi quần vợt','00:00:18.500','00:00:21.900','esl-fast-beginner-1-22'),
+	('Daniel stands on one side','Daniel đứng một bên','00:00:22.800','00:00:25.400','esl-fast-beginner-1-22'),
+	('He swings the ball','Cậu bé đánh bóng','00:00:25.900','00:00:27.520','esl-fast-beginner-1-22'),
+	('Daniel\'s father hits the ball back','Bố của Daniel đánh trả bóng lại','00:00:28.380','00:00:31.640','esl-fast-beginner-1-22'),
+	('Finally, they watch the sunset','Cuối cùng, họ ngắm hoàng hôn','00:00:32.100','00:00:35.220','esl-fast-beginner-1-22'),
+	('What a great day!','Thật là một ngày tuyệt vời','00:00:35.480','00:00:37.500','esl-fast-beginner-1-22'),
+
+	/* (UUID(),'esl-fast-beginner-1-23','The Baby Sister','Em bé gái','ESL_FAST_BEGINNER_1_023.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-beginner-1',1,1,23) */
+	('Betty loves her baby sister','Betty rất yêu quý cô em gái bé bỏng của mình','00:00:00.900','00:00:03.640','esl-fast-beginner-1-23'),
+	('Betty takes care of her','Betty trông em','00:00:04.300','00:00:06.800','esl-fast-beginner-1-23'),
+	('She changes her diaper','Cô bé thay tã cho em','00:00:07.200','00:00:09.440','esl-fast-beginner-1-23'),
+	('She feeds her','Cô bé cho em ăn','00:00:10.000','00:00:11.740','esl-fast-beginner-1-23'),
+	('She teaches her how to walk','Cô bé dạy em tập đi','00:00:12.200','00:00:14.980','esl-fast-beginner-1-23'),
+	('She teaches her new words','Cô bé dạy em những từ mới','00:00:15.200','00:00:18.100','esl-fast-beginner-1-23'),
+	('It is not easy to take care of babies','Chăm sóc em bé không hề dễ','00:00:19.020','00:00:22.020','esl-fast-beginner-1-23'),
+	('Betty\'s baby sister cries sometimes','Đôi khi em gái bé bỏng của Betty khóc','00:00:22.900','00:00:25.880','esl-fast-beginner-1-23'),
+	('Betty plays peek-a-boo with her','Betty chơi ú òa với em','00:00:26.900','00:00:29.800','esl-fast-beginner-1-23'),
+	('She covers her eyes, then opens them','Cô bé che mắt rồi lại mở ra','00:00:30.100','00:00:33.960','esl-fast-beginner-1-23'),
+	('The baby laughs','Em bé bật cười','00:00:34.540','00:00:36.240','esl-fast-beginner-1-23'),
+
+	/* (UUID(),'esl-fast-beginner-1-24','Sometimes You Lose','Đôi khi bạn thua','ESL_FAST_BEGINNER_1_024.mp3',NULL,'00:00:00.000','00:00:39.000','esl-fast-beginner-1',1,1,24) */
+	('Sarah\'s basketball team lost today','Đội bóng rổ của Sarah hôm nay đã thua','00:00:00.520','00:00:04.040','esl-fast-beginner-1-24'),
+	('She is upset','Cô bé rất buồn','00:00:04.460','00:00:06.380','esl-fast-beginner-1-24'),
+	('She walks home sadly','Cô bé buồn bã đi bộ về nhà','00:00:06.960','00:00:09.320','esl-fast-beginner-1-24'),
+	('She sits down on the couch','Cô bé ngồi xuống ghế sofa','00:00:09.840','00:00:12.540','esl-fast-beginner-1-24'),
+	('She starts crying','Cô bắt đầu bật khóc','00:00:13.080','00:00:14.860','esl-fast-beginner-1-24'),
+	('Her mom sees her','Mẹ cô bé nhìn thấy cô bé','00:00:15.700','00:00:17.380','esl-fast-beginner-1-24'),
+	('She gives her a hug','Mẹ ôm cô bé vào lòng','00:00:17.600','00:00:19.700','esl-fast-beginner-1-24'),
+	('Then, she bakes Sarah\'s favorite cookies','Sau đó, mẹ nướng món bánh quy Sarah thích nhất','00:00:20.200','00:00:24.360','esl-fast-beginner-1-24'),
+	('The warm cookies make Sarah smile','Những chiếc bánh nóng hổi khiến Sarah mỉm cười','00:00:24.680','00:00:28.120','esl-fast-beginner-1-24'),
+	('Sarah wipes her tears away','Sarah lau những giọt nước mắt','00:00:28.760','00:00:31.459','esl-fast-beginner-1-24'),
+	('She realizes that sometimes you win and sometimes you lose','Cô bé nhận ra rằng có lúc thắng thì cũng có lúc thua','00:00:31.800','00:00:37.560','esl-fast-beginner-1-24'),
+
+	/* (UUID(),'esl-fast-beginner-1-25','A New Home','Ngôi nhà mới','ESL_FAST_BEGINNER_1_025.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-beginner-1',1,1,25) */
+	('He moves to a new city','Cậu bé chuyển đến một thành phố mới','00:00:00.200','00:00:02.800','esl-fast-beginner-1-25'),
+	('There are many buildings','Có rất nhiều tòa nhà','00:00:03.000','00:00:05.410','esl-fast-beginner-1-25'),
+	('There are a lot of people walking','Có rất nhiều người đang đi lại','00:00:06.000','00:00:08.610','esl-fast-beginner-1-25'),
+	('There are many taxis','Có rất nhiều xe taxi','00:00:09.000','00:00:11.690','esl-fast-beginner-1-25'),
+	('He feels lonely','Cậu bé cảm thấy cô đơn','00:00:12.000','00:00:14.090','esl-fast-beginner-1-25'),
+	('Everyone acts so different here','Mọi người ở đây cư xử rất khác','00:00:14.800','00:00:18.030','esl-fast-beginner-1-25'),
+	('He goes to his new school','Cậu bé đến ngôi trường mới của mình','00:00:18.730','00:00:20.970','esl-fast-beginner-1-25'),
+	('He sees a friendly-looking person','Cậu bé gặp một người trông rất thân thiện','00:00:21.300','00:00:24.510','esl-fast-beginner-1-25'),
+	('He asks him to show him around','Cậu bé nhờ người đó dẫn mình đi tham quan','00:00:25.370','00:00:28.190','esl-fast-beginner-1-25');
+
+/*=====================================================================================================================================================================================================================================================*/
+
+INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
+	/* (UUID(),'esl-fast-beginner-1-26','Chris and His Fish','Chris và những chú cá của cậu ấy','ESL_FAST_BEGINNER_1_026.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-beginner-1',1,1,26) */
+	('Christopher wants a pet','Christopher muốn một con thú cưng','00:00:00.200','00:00:02.670','esl-fast-beginner-1-26'),
+	('He likes fish','Cậu bé thích cá','00:00:02.900','00:00:04.400','esl-fast-beginner-1-26'),
+	('Fish are easy to take care of','Cá rất dễ chăm sóc','00:00:04.700','00:00:07.550','esl-fast-beginner-1-26'),
+	('Fish are pretty','Cá rất đẹp','00:00:07.900','00:00:09.470','esl-fast-beginner-1-26'),
+	('Christopher thinks he is responsible enough, too','Christopher nghĩ mình cũng có đủ trách nhiệm','00:00:09.800','00:00:13.670','esl-fast-beginner-1-26'),
+	('He decides to go to the pet store himself','Cậu bé quyết định tự đến cửa hàng thú cưng','00:00:14.100','00:00:17.850','esl-fast-beginner-1-26'),
+	('He buys a fish','Cậu bé mua một con cá','00:00:18.300','00:00:20.190','esl-fast-beginner-1-26'),
+	('It is small','Nó rất nhỏ','00:00:20.600','00:00:22.110','esl-fast-beginner-1-26'),
+	('It is red and black','Nó có màu đỏ và đen','00:00:22.400','00:00:24.800','esl-fast-beginner-1-26'),
+	('It swims slowly','Nó bơi rất chậm','00:00:25.100','00:00:27.300','esl-fast-beginner-1-26'),
+	('Christopher puts it in a tank','Christopher thả nó vào bể','00:00:27.900','00:00:30.710','esl-fast-beginner-1-26'),
+
+	/* (UUID(),'esl-fast-beginner-1-27','The Oldest Brother','Anh cả','ESL_FAST_BEGINNER_1_027.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-beginner-1',1,1,27) */
+	('Brian is the oldest brother','Brian là anh cả','00:00:00.200','00:00:02.850','esl-fast-beginner-1-27'),
+	('He has two younger brothers','Cậu bé có hai em trai','00:00:03.100','00:00:05.570','esl-fast-beginner-1-27'),
+	('Brian helps his parents around the house','Brian phụ giúp bố mẹ làm việc nhà','00:00:06.000','00:00:09.350','esl-fast-beginner-1-27'),
+	('He washes the dishes','Cậu bé rửa bát đĩa','00:00:09.600','00:00:11.590','esl-fast-beginner-1-27'),
+	('He mops the floor','Cậu ấy lau nhà','00:00:12.000','00:00:13.770','esl-fast-beginner-1-27'),
+	('He picks up his younger brothers from school','Cậu bé đến trường đón các em trai','00:00:14.330','00:00:17.430','esl-fast-beginner-1-27'),
+	('Brian also teaches his brothers to do the right thing','Brian còn dạy các em làm điều đúng đắn','00:00:17.900','00:00:22.370','esl-fast-beginner-1-27'),
+	('He tells them to be honest, kind, and friendly','Cậu bé dặn các em phải sống thật thà, tốt bụng và thân thiện','00:00:22.900','00:00:27.470','esl-fast-beginner-1-27'),
+	('Brian loves his family','Brian rất yêu gia đình mình','00:00:27.770','00:00:30.430','esl-fast-beginner-1-27'),
+
+	/* (UUID(),'esl-fast-beginner-1-28','A Successful Trade','Một giao dịch thành công','ESL_FAST_BEGINNER_1_028.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-beginner-1',1,1,28) */
+	('It is lunchtime','Đến giờ ăn trưa rồi','00:00:00.200','00:00:02.200','esl-fast-beginner-1-28'),
+	('The kids go out to eat','Bọn trẻ ra ngoài ăn','00:00:02.500','00:00:04.760','esl-fast-beginner-1-28'),
+	('They are excited and hungry','Chúng rất háo hức và đói bụng','00:00:04.950','00:00:08.180','esl-fast-beginner-1-28'),
+	('Paul has a ham sandwich','Paul có một chiếc bánh mì kẹp giăm bông','00:00:08.700','00:00:11.080','esl-fast-beginner-1-28'),
+	('He does not like ham','Cậu bé không thích thịt nguội','00:00:11.620','00:00:13.800','esl-fast-beginner-1-28'),
+	('He wants a tuna sandwich','Cậu bé muốn ăn bánh mì kẹp cá ngừ','00:00:14.300','00:00:16.900','esl-fast-beginner-1-28'),
+	('Sarah has a tuna sandwich','Sarah có một chiếc bánh mì kẹp cá ngừ','00:00:17.780','00:00:19.920','esl-fast-beginner-1-28'),
+	('She thinks tuna is smelly','Cô bé nghĩ cá ngừ rất hôi','00:00:20.740','00:00:23.580','esl-fast-beginner-1-28'),
+	('She wants a ham sandwich','Cô bé muốn ăn bánh mì kẹp thịt nguội','00:00:23.920','00:00:27.040','esl-fast-beginner-1-28'),
+	('Paul and Sarah meet up','Paul và Sarah gặp nhau','00:00:27.480','00:00:30.280','esl-fast-beginner-1-28'),
+	('They trade their sandwiches','Hai bạn đổi bánh mì cho nhau','00:00:30.520','00:00:32.700','esl-fast-beginner-1-28'),
+	('They get what they want','Cả hai đều có được thứ mình muốn','00:00:33.420','00:00:35.400','esl-fast-beginner-1-28'),
+
+	/* (UUID(),'esl-fast-beginner-1-29','Making a Snowman','Đắp người tuyết','ESL_FAST_BEGINNER_1_029.mp3',NULL,'00:00:00.000','00:00:38.000','esl-fast-beginner-1',1,1,29) */
+	('She wants to make a snowman','Cô bé muốn nặn một người tuyết','00:00:00.390','00:00:03.290','esl-fast-beginner-1-29'),
+	('First, she rolls a large ball of snow','Đầu tiên, cô bé lăn một quả cầu tuyết thật to','00:00:03.690','00:00:07.690','esl-fast-beginner-1-29'),
+	('Second, she rolls a medium ball of snow','Tiếp theo, cô bé lăn một quả cầu tuyết cỡ vừa','00:00:08.000','00:00:12.310','esl-fast-beginner-1-29'),
+	('Finally, she rolls a small ball of snow for the snowman\'s head','Cuối cùng, cô bé lăn một quả cầu tuyết nhỏ để làm đầu người tuyết','00:00:12.500','00:00:19.050','esl-fast-beginner-1-29'),
+	('She stacks them up','Cô bé chồng chúng lên nhau','00:00:19.430','00:00:21.300','esl-fast-beginner-1-29'),
+	('The largest ball is on the bottom','Quả cầu lớn nhất ở dưới cùng','00:00:21.500','00:00:24.790','esl-fast-beginner-1-29'),
+	('She puts a carrot for the nose','Cô bé dùng một củ cà rốt làm mũi','00:00:25.000','00:00:27.800','esl-fast-beginner-1-29'),
+	('She uses buttons for the eyes and mouth','Cô bé dùng những chiếc cúc áo để làm mắt và miệng','00:00:28.000','00:00:32.610','esl-fast-beginner-1-29'),
+	('The last thing she adds is a scarf','Thứ cuối cùng cô bé thêm vào là một chiếc khăn quàng cổ','00:00:33.000','00:00:36.590','esl-fast-beginner-1-29'),
+
+	/* (UUID(),'esl-fast-beginner-1-30','English Skills','Kỹ năng tiếng Anh','ESL_FAST_BEGINNER_1_030.mp3',NULL,'00:00:00.000','00:00:26.000','esl-fast-beginner-1',1,1,30) */
+	('Donald is in the second grade','Donald đang học lớp hai','00:00:00.200','00:00:03.000','esl-fast-beginner-1-30'),
+	('His reading level is not as good as the other students','Trình độ đọc của cậu ấy chưa tốt bằng các bạn trong lớp','00:00:03.200','00:00:07.419','esl-fast-beginner-1-30'),
+	('He wants to improve his English skills','Cậu ấy muốn cải thiện kỹ năng tiếng Anh của mình','00:00:07.700','00:00:10.700','esl-fast-beginner-1-30'),
+	('He starts to read more','Cậu ấy bắt đầu đọc nhiều sách hơn','00:00:10.900','00:00:13.060','esl-fast-beginner-1-30'),
+	('He looks up words he does not know in the dictionary','Cậu ấy tra từ điển những từ mình không biết','00:00:13.320','00:00:17.280','esl-fast-beginner-1-30'),
+	('He writes down what the words mean','Cậu ấy ghi lại nghĩa của các từ','00:00:18.180','00:00:20.960','esl-fast-beginner-1-30'),
+	('Afterwards, he reads the book again','Sau đó, cậu ấy đọc lại cuốn sách một lần nữa','00:00:21.380','00:00:24.800','esl-fast-beginner-1-30');
+
+/*=====================================================================================================================================================================================================================================================*/
+
+INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
+	/* (UUID(),'esl-fast-beginner-1-31','Practicing Drawing','Luyện tập vẽ','ESL_FAST_BEGINNER_1_031.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-beginner-1',1,1,31) */
+	('I am practicing drawing','Tôi đang luyện vẽ','00:00:00.140','00:00:02.900','esl-fast-beginner-1-31'),
+	('I practice drawing every Saturday and Sunday','Tôi luyện vẽ mỗi thứ bảy và chủ nhật','00:00:03.200','00:00:07.419','esl-fast-beginner-1-31'),
+	('My teacher shows me new things','Thầy cô chỉ cho tôi nhiều điều mới','00:00:07.700','00:00:10.860','esl-fast-beginner-1-31'),
+	('I know how to draw people, animals, and objects now','Giờ tôi đã biết vẽ người, động vật và nhiều đồ vật','00:00:11.300','00:00:16.460','esl-fast-beginner-1-31'),
+	('I always want to get better, so I practice every day','Tôi luôn muốn giỏi hơn, nên ngày nào cũng luyện tập','00:00:16.900','00:00:21.820','esl-fast-beginner-1-31'),
+	('My parents always tell me that I am a good artist','Bố mẹ lúc nào cũng bảo tôi rằng tôi là một họa sĩ giỏi','00:00:22.200','00:00:26.880','esl-fast-beginner-1-31'),
+	('They think I can do it as a job','Họ nghĩ tôi có thể làm nghề này','00:00:27.100','00:00:30.540','esl-fast-beginner-1-31'),
+
+	/* (UUID(),'esl-fast-beginner-1-32','A Day for Ice Cream','Một ngày dành cho kem','ESL_FAST_BEGINNER_1_032.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-beginner-1',1,1,32) */
+	('It is a sunny day','Hôm nay trời nắng đẹp','00:00:00.390','00:00:02.650','esl-fast-beginner-1-32'),
+	('She feels hot','Cô bé thấy nóng bừng','00:00:02.900','00:00:04.800','esl-fast-beginner-1-32'),
+	('She fans herself with a book','Cô bé dùng quyển sách để tự quạt','00:00:05.200','00:00:07.830','esl-fast-beginner-1-32'),
+	('It is still hot','Vẫn nóng quá','00:00:08.100','00:00:10.170','esl-fast-beginner-1-32'),
+	('She turns on the air conditioner','Cô bé bật điều hòa','00:00:10.400','00:00:13.210','esl-fast-beginner-1-32'),
+	('It is still hot','Vẫn nóng quá','00:00:13.830','00:00:15.870','esl-fast-beginner-1-32'),
+	('She jumps into a pool','Cô bé nhảy xuống hồ bơi','00:00:16.390','00:00:18.830','esl-fast-beginner-1-32'),
+	('It is still hot','Vẫn nóng quá','00:00:19.300','00:00:21.400','esl-fast-beginner-1-32'),
+	('Her dad has an idea','Bố cô bé chợt nảy ra một ý','00:00:21.600','00:00:24.470','esl-fast-beginner-1-32'),
+	('He takes her to the ice cream shop','Bố đưa cô bé đến tiệm kem','00:00:24.810','00:00:27.490','esl-fast-beginner-1-32'),
+	('They share a banana split','Họ chia nhau một phần kem chuối bổ đôi','00:00:27.700','00:00:30.450','esl-fast-beginner-1-32'),
+	('She does not feel hot anymore','Cô bé không còn thấy nóng nữa','00:00:30.800','00:00:33.190','esl-fast-beginner-1-32'),
+
+	/* (UUID(),'esl-fast-beginner-1-33','Taking Tests','Làm bài kiểm tra','ESL_FAST_BEGINNER_1_033.mp3',NULL,'00:00:00.000','00:00:25.000','esl-fast-beginner-1',1,1,33) */
+	('He has a test tomorrow','Ngày mai cậu bé có một bài kiểm tra','00:00:00.330','00:00:02.670','esl-fast-beginner-1-33'),
+	('He does not want to study','Cậu bé không muốn học bài','00:00:03.000','00:00:05.010','esl-fast-beginner-1-33'),
+	('Instead, he plays video games','Thay vào đó, cậu bé chơi điện tử','00:00:05.400','00:00:08.630','esl-fast-beginner-1-33'),
+	('The next day, he takes the test','Hôm sau, cậu bé làm bài kiểm tra','00:00:09.000','00:00:11.800','esl-fast-beginner-1-33'),
+	('It is very hard','Bài kiểm tra rất khó','00:00:12.000','00:00:13.830','esl-fast-beginner-1-33'),
+	('He does not know anything','Cậu bé chẳng biết gì cả','00:00:14.100','00:00:15.930','esl-fast-beginner-1-33'),
+	('He turns in his test blank','Cậu bé nộp bài kiểm tra bị bỏ trắng','00:00:16.300','00:00:19.590','esl-fast-beginner-1-33'),
+	('The teacher scolds him and gives him an "F"','Giáo viên mắng cậu bé và cho cậu bé điểm "F"','00:00:20.000','00:00:23.670','esl-fast-beginner-1-33'),
+
+	/* (UUID(),'esl-fast-beginner-1-34','Helen is Busy','Helen đang bận rộn','ESL_FAST_BEGINNER_1_034.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-beginner-1',1,1,34) */
+	('Helen wants to do well on the math test tomorrow','Helen muốn làm thật tốt bài kiểm tra Toán ngày mai','00:00:00.200','00:00:04.200','esl-fast-beginner-1-34'),
+	('She takes out her book and studies','Cô bé lấy sách ra và học','00:00:04.500','00:00:07.500','esl-fast-beginner-1-34'),
+	('Her brother then comes into her room','Rồi em trai của cô bé bước vào phòng','00:00:07.800','00:00:10.420','esl-fast-beginner-1-34'),
+	('He starts making loud noises','Cậu em bắt đầu làm ồn','00:00:10.800','00:00:13.440','esl-fast-beginner-1-34'),
+	('Helen yells at him','Helen quát cậu bé','00:00:14.000','00:00:16.100','esl-fast-beginner-1-34'),
+	('Her mother then comes into her room','Sau đó mẹ cô bé cũng đi vào phòng của cô','00:00:16.400','00:00:18.920','esl-fast-beginner-1-34'),
+	('She asks Helen to cook dinner','Mẹ nhờ Helen nấu bữa tối','00:00:19.300','00:00:22.400','esl-fast-beginner-1-34'),
+	('Helen yells at her','Helen lớn tiếng với mẹ','00:00:22.900','00:00:24.500','esl-fast-beginner-1-34'),
+	('Helen finally tells her family that she is busy','Cuối cùng Helen nói với cả nhà rằng mình đang bận','00:00:25.000','00:00:28.820','esl-fast-beginner-1-34'),
+
+	/* (UUID(),'esl-fast-beginner-1-35','Messing Up','Làm hỏng việc','ESL_FAST_BEGINNER_1_035.mp3',NULL,'00:00:00.000','00:00:28.000','esl-fast-beginner-1',1,1,35) */
+	('He pours a glass of soda for himself','Cậu bé rót một cốc nước ngọt cho mình','00:00:00.200','00:00:03.300','esl-fast-beginner-1-35'),
+	('He accidentally spills some on his shirt','Cậu ấy vô tình làm đổ một ít lên áo','00:00:03.600','00:00:07.380','esl-fast-beginner-1-35'),
+	('Oh no','Ôi chết rồi','00:00:07.680','00:00:08.640','esl-fast-beginner-1-35'),
+	('His mom will get mad','Mẹ cậu ấy sẽ nổi giận mất','00:00:09.120','00:00:11.060','esl-fast-beginner-1-35'),
+	('His shirt is very expensive','Chiếc áo của cậu bé rất đắt tiền','00:00:11.580','00:00:13.760','esl-fast-beginner-1-35'),
+	('He tries to clean it up','Cậu bé cố làm sạch nó','00:00:14.320','00:00:16.220','esl-fast-beginner-1-35'),
+	('He pours water on it','Cậu ấy đổ nước lên áo','00:00:16.420','00:00:18.660','esl-fast-beginner-1-35'),
+	('He uses a stain remover','Cậu bé dùng chất tẩy vết bẩn','00:00:19.100','00:00:21.580','esl-fast-beginner-1-35'),
+	('He takes the shirt to a dry cleaner\'s','Cậu bé mang chiếc áo đến tiệm giặt khô','00:00:22.220','00:00:25.060','esl-fast-beginner-1-35'),
+	('Nothing works','Nhưng chẳng hiệu quả','00:00:25.480','00:00:26.800','esl-fast-beginner-1-35');
+
+/*=====================================================================================================================================================================================================================================================*/
+
+INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
+	/* (UUID(),'esl-fast-beginner-1-36','Introducing Myself','Giới thiệu bản thân','ESL_FAST_BEGINNER_1_036.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-beginner-1',1,1,36) */
+	('I am a new student in school','Tôi là học sinh mới của trường','00:00:00.460','00:00:03.500','esl-fast-beginner-1-36'),
+	('I tell the class about myself','Tôi kể với cả lớp về bản thân mình','00:00:04.000','00:00:06.360','esl-fast-beginner-1-36'),
+	('I am from Canada, but now I live in Nevada','Tôi đến từ Canada nhưng hiện tại tôi sống ở Nevada','00:00:06.800','00:00:10.880','esl-fast-beginner-1-36'),
+	('I live with my mom, dad, and brother','Tôi sống cùng bố, mẹ và em trai','00:00:11.400','00:00:15.300','esl-fast-beginner-1-36'),
+	('My brother is five years younger than me','Em trai tôi nhỏ hơn tôi năm tuổi','00:00:15.800','00:00:18.940','esl-fast-beginner-1-36'),
+	('Music is very important to me','Âm nhạc rất quan trọng với tôi','00:00:19.400','00:00:22.040','esl-fast-beginner-1-36'),
+	('I like to sing and dance','Tôi thích ca hát và nhảy múa','00:00:22.400','00:00:24.520','esl-fast-beginner-1-36'),
+	('I also play the saxophone','Tôi còn biết chơi kèn saxophone','00:00:24.800','00:00:27.000','esl-fast-beginner-1-36'),
+	('One day, I hope to be a music teacher','Một ngày nào đó, tôi hy vọng sẽ trở thành giáo viên dạy nhạc','00:00:27.200','00:00:31.180','esl-fast-beginner-1-36'),
+
+	/* (UUID(),'esl-fast-beginner-1-37','A Long Wait','Chờ lâu','ESL_FAST_BEGINNER_1_037.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-beginner-1',1,1,37) */
+	('The rollercoaster ride is fun and fast','Chuyến tàu lượn siêu tốc vừa vui vừa nhanh','00:00:00.330','00:00:04.390','esl-fast-beginner-1-37'),
+	('The line is so long','Hàng người xếp dài quá','00:00:04.700','00:00:07.010','esl-fast-beginner-1-37'),
+	('John and his friends decide to wait','John và các bạn quyết định chờ','00:00:07.400','00:00:10.830','esl-fast-beginner-1-37'),
+	('John tried to find ways to pass time','John cố tìm cách giết thời gian','00:00:11.400','00:00:15.090','esl-fast-beginner-1-37'),
+	('He taps his foot for ten minutes','Cậu bé gõ chân suốt mười phút','00:00:15.500','00:00:18.230','esl-fast-beginner-1-37'),
+	('Then, he plays games on his phone','Sau đó, cậu bé chơi game trên điện thoại','00:00:18.600','00:00:21.950','esl-fast-beginner-1-37'),
+	('Later, he tells his friends jokes','Một lát sau, cậu bé kể chuyện cười cho các bạn nghe','00:00:22.400','00:00:25.930','esl-fast-beginner-1-37'),
+	('Two hours pass','Hai tiếng đồng hồ trôi qua','00:00:26.300','00:00:28.490','esl-fast-beginner-1-37'),
+	('The boys are still in line','Mấy cậu bé vẫn đang xếp hàng','00:00:28.800','00:00:30.770','esl-fast-beginner-1-37'),
+
+	/* (UUID(),'esl-fast-beginner-1-38','The Teacher Takes Away His Phone','Giáo viên tịch thu điện thoại của cậu bé','ESL_FAST_BEGINNER_1_038.mp3',NULL,'00:00:00.000','00:00:29.000','esl-fast-beginner-1',1,1,38) */
+	('Mr. Brown\'s lectures are boring','Những bài giảng của thầy Brown rất nhàm chán','00:00:00.070','00:00:03.210','esl-fast-beginner-1-38'),
+	('A student looks up at Mr. Brown to check what he is doing','Một học sinh ngước lên nhìn thầy Brown để kiểm tra xem thầy đang làm gì','00:00:03.600','00:00:07.790','esl-fast-beginner-1-38'),
+	('Mr. Brown is writing something on the board','Thầy Brown đang viết gì đó lên bảng','00:00:08.200','00:00:12.200','esl-fast-beginner-1-38'),
+	('The student takes out his phone','Cậu học sinh lấy điện thoại ra','00:00:12.500','00:00:15.300','esl-fast-beginner-1-38'),
+	('He starts playing games','Cậu bé bắt đầu chơi game','00:00:15.600','00:00:18.150','esl-fast-beginner-1-38'),
+	('Mr. Brown walks over to his desk','Thầy Brown bước đến chỗ bàn của cậu bé','00:00:18.600','00:00:22.190','esl-fast-beginner-1-38'),
+	('Mr. Brown takes the student\'s phone away','Thầy Brown thu điện thoại của cậu học sinh','00:00:22.700','00:00:26.050','esl-fast-beginner-1-38'),
+	('He is in trouble','Cậu bé gặp rắc rối rồi','00:00:26.500','00:00:28.190','esl-fast-beginner-1-38'),
+
+	/* (UUID(),'esl-fast-beginner-1-39','No One Likes the Flu','Không ai thích bị cúm','ESL_FAST_BEGINNER_1_039.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-beginner-1',1,1,39) */
+	('He is sick','Cậu bé bị ốm','00:00:00.580','00:00:02.400','esl-fast-beginner-1-39'),
+	('He goes to the doctor','Cậu bé đến gặp bác sĩ','00:00:02.400','00:00:04.520','esl-fast-beginner-1-39'),
+	('The doctor gives him some medicine','Bác sĩ đưa cho cậu bé một ít thuốc','00:00:05.120','00:00:07.840','esl-fast-beginner-1-39'),
+	('He is still sick after one week','Sau một tuần cậu bé vẫn bị ốm','00:00:08.760','00:00:11.660','esl-fast-beginner-1-39'),
+	('His mom tells him to go to sleep','Mẹ bảo cậu bé đi ngủ','00:00:12.140','00:00:15.300','esl-fast-beginner-1-39'),
+	('He lies in bed all day','Cậu bé nằm trên giường cả ngày','00:00:15.600','00:00:18.980','esl-fast-beginner-1-39'),
+	('He rests','Cậu bé nghỉ ngơi','00:00:19.720','00:00:21.200','esl-fast-beginner-1-39'),
+	('He drinks chicken soup and eats vegetables','Cậu bé uống súp gà và ăn rau','00:00:21.200','00:00:25.460','esl-fast-beginner-1-39'),
+	('He is still sick','Cậu bé vẫn bị ốm','00:00:26.140','00:00:28.000','esl-fast-beginner-1-39'),
+	('No one likes the flu','Chẳng ai thích bị cúm cả','00:00:28.300','00:00:30.580','esl-fast-beginner-1-39'),
+
+	/* (UUID(),'esl-fast-beginner-1-40','The Circus','Rạp xiếc','ESL_FAST_BEGINNER_1_040.mp3',NULL,'00:00:00.000','00:00:38.000','esl-fast-beginner-1',1,1,40) */
+	('She goes to the circus','Cô bé đi xem xiếc','00:00:00.650','00:00:02.870','esl-fast-beginner-1-40'),
+	('She sees a clown','Cô bé nhìn thấy một chú hề','00:00:03.300','00:00:05.310','esl-fast-beginner-1-40'),
+	('He is very colorful','Chú hề trông rất sặc sỡ','00:00:05.600','00:00:07.690','esl-fast-beginner-1-40'),
+	('She sees magicians','Cô bé nhìn thấy các ảo thuật gia','00:00:08.300','00:00:10.610','esl-fast-beginner-1-40'),
+	('They take rabbits out of hats','Họ lấy những chú thỏ từ trong chiếc mũ ra','00:00:10.900','00:00:13.670','esl-fast-beginner-1-40'),
+	('She sees people walking on rope up in the air','Cô bé thấy những người đi trên dây ở trên không trung','00:00:14.100','00:00:18.910','esl-fast-beginner-1-40'),
+	('She sees people juggling balls','Cô bé thấy mọi người tung hứng những quả bóng','00:00:19.300','00:00:22.590','esl-fast-beginner-1-40'),
+	('She sees a lot of animals, too','Cô bé còn nhìn thấy rất nhiều con vật','00:00:23.000','00:00:26.030','esl-fast-beginner-1-40'),
+	('There are lions that jump through hoops of fire','Có những con sư tử nhảy qua những vòng lửa','00:00:26.500','00:00:30.270','esl-fast-beginner-1-40'),
+	('There are elephants that dance','Có những chú voi biết nhảy múa','00:00:30.500','00:00:33.210','esl-fast-beginner-1-40'),
+	('She never wants to leave the circus','Cô bé chẳng muốn rời rạp xiếc chút nào','00:00:33.600','00:00:36.490','esl-fast-beginner-1-40');
+
+/*=====================================================================================================================================================================================================================================================*/
+
+INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
+	/* (UUID(),'esl-fast-beginner-1-41','An Unhealthy Boy','Một cậu bé không khỏe mạnh','ESL_FAST_BEGINNER_1_041.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-beginner-1',1,1,41) */
+	('He is fat','Cậu bé rất mập','00:00:00.390','00:00:02.270','esl-fast-beginner-1-41'),
+	('He only eats red meat, chips, and candy','Cậu ấy chỉ ăn thịt đỏ, khoai tây chiên và kẹo','00:00:02.600','00:00:07.050','esl-fast-beginner-1-41'),
+	('His parents worry about him','Bố mẹ cậu ấy rất lo cho cậu','00:00:07.400','00:00:10.030','esl-fast-beginner-1-41'),
+	('They ban him from eating fattening foods','Họ cấm cậu bé ăn những món dễ tăng cân','00:00:10.400','00:00:13.710','esl-fast-beginner-1-41'),
+	('They cook healthy meals only from now on','Từ giờ họ chỉ nấu những bữa ăn lành mạnh','00:00:14.000','00:00:17.990','esl-fast-beginner-1-41'),
+	('They eat oatmeal for breakfast','Họ ăn cháo yến mạch vào bữa sáng','00:00:18.400','00:00:20.950','esl-fast-beginner-1-41'),
+	('They eat fish, carrots, and vegetables for lunch','Họ ăn cá, cà rốt và rau vào bữa trưa','00:00:21.300','00:00:25.490','esl-fast-beginner-1-41'),
+	('They eat chicken and salad for dinner','Họ ăn thịt gà và salad vào bữa tối','00:00:25.800','00:00:28.830','esl-fast-beginner-1-41'),
+
+	/* (UUID(),'esl-fast-beginner-1-42','Ferris Wheel','Vòng đu quay','ESL_FAST_BEGINNER_1_042.mp3',NULL,'00:00:00.000','00:00:39.000','esl-fast-beginner-1',1,1,42) */
+	('A Ferris wheel is a huge rotating wheel','Vòng đu quay là một bánh xe khổng lồ quay tròn','00:00:00.330','00:00:04.370','esl-fast-beginner-1-42'),
+	('It has many seats','Có rất nhiều ghế ngồi','00:00:04.800','00:00:06.890','esl-fast-beginner-1-42'),
+	('He sits on one of them','Cậu bé ngồi vào một trong những chỗ đó','00:00:07.300','00:00:09.370','esl-fast-beginner-1-42'),
+	('His seat is yellow','Ghế của cậu bé có màu vàng','00:00:09.700','00:00:11.450','esl-fast-beginner-1-42'),
+	('He is excited','Cậu bé rất háo hức','00:00:11.800','00:00:13.470','esl-fast-beginner-1-42'),
+	('He puts his seat belt on','Cậu bé thắt dây an toàn','00:00:13.800','00:00:16.550','esl-fast-beginner-1-42'),
+	('He holds on to the metal bar','Cậu ấy bám chặt vào thanh kim loại','00:00:16.800','00:00:19.370','esl-fast-beginner-1-42'),
+	('He wants to be safe','Cậu bé muốn bảo đảm an toàn','00:00:19.700','00:00:21.870','esl-fast-beginner-1-42'),
+	('The wheel moves','Vòng quay chuyển động','00:00:22.200','00:00:24.290','esl-fast-beginner-1-42'),
+	('He starts to go up, higher and higher','Cậu bé bắt đầu lên cao, càng lúc càng cao','00:00:24.600','00:00:28.700','esl-fast-beginner-1-42'),
+	('He looks down','Cậu ấy nhìn xuống dưới','00:00:29.000','00:00:31.030','esl-fast-beginner-1-42'),
+	('The people are so small','Mọi người trông nhỏ xíu','00:00:31.300','00:00:34.130','esl-fast-beginner-1-42'),
+	('The view is so nice','Khung cảnh thật đẹp','00:00:34.500','00:00:37.270','esl-fast-beginner-1-42'),
+
+	/* (UUID(),'esl-fast-beginner-1-43','More Money','Nhiều tiền hơn','ESL_FAST_BEGINNER_1_043.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-beginner-1',1,1,43) */
+	('She gets an allowance from her parents','Cô bé được bố mẹ cho tiền tiêu vặt','00:00:00.330','00:00:03.710','esl-fast-beginner-1-43'),
+	('They give her $10 a week','Mỗi tuần,  bố mẹ cho cô bé 10 đô la','00:00:04.000','00:00:06.790','esl-fast-beginner-1-43'),
+	('She wants more','Cô bé muốn được nhiều hơn','00:00:07.100','00:00:08.600','esl-fast-beginner-1-43'),
+	('She asks her parents nicely','Cô bé khéo léo xin bố mẹ','00:00:09.000','00:00:11.700','esl-fast-beginner-1-43'),
+	('They say no','Bố mẹ từ chối','00:00:12.100','00:00:13.570','esl-fast-beginner-1-43'),
+	('She tries to change their minds','Cô bé cố gắng thay đổi suy nghĩ của bố mẹ','00:00:14.000','00:00:16.600','esl-fast-beginner-1-43'),
+	('She washes their cars','Cô bé rửa xe cho bố mẹ','00:00:17.000','00:00:19.330','esl-fast-beginner-1-43'),
+	('She makes them dinner','Cô bé nấu bữa tối cho họ','00:00:19.700','00:00:21.590','esl-fast-beginner-1-43'),
+	('She compliments them','Cô bé khen ngợi họ','00:00:21.900','00:00:23.970','esl-fast-beginner-1-43'),
+	('Her parents decide to give her a raise','Bố mẹ quyết định tăng tiền cho cô bé','00:00:24.300','00:00:27.300','esl-fast-beginner-1-43'),
+	('She will get $15 a week','Cô bé sẽ được 15 đô la mỗi tuần','00:00:27.500','00:00:31.090','esl-fast-beginner-1-43'),
+
+	/* (UUID(),'esl-fast-beginner-1-44','Loving Dance','Yêu thích khiêu vũ','ESL_FAST_BEGINNER_1_044.mp3',NULL,'00:00:00.000','00:00:29.000','esl-fast-beginner-1',1,1,44) */
+	('She loves to dance','Cô bé rất thích nhảy múa','00:00:00.200','00:00:02.500','esl-fast-beginner-1-44'),
+	('She dances on her school\'s team','Cô bé nhảy trong đội của trường','00:00:02.800','00:00:05.900','esl-fast-beginner-1-44'),
+	('She dances after school','Cô bé nhảy sau khi tan học','00:00:06.400','00:00:08.880','esl-fast-beginner-1-44'),
+	('She loves to dance in her room','Cô bé thích nhảy trong phòng mình','00:00:09.200','00:00:11.840','esl-fast-beginner-1-44'),
+	('She loves to dance in the kitchen','Cô bé thích nhảy trong bếp','00:00:12.200','00:00:14.700','esl-fast-beginner-1-44'),
+	('She even loves to dance in the bathroom','Thậm chí cô bé còn thích nhảy trong phòng tắm','00:00:15.100','00:00:18.680','esl-fast-beginner-1-44'),
+	('Anyone can see that she is passionate','Ai cũng có thể thấy cô bé rất đam mê','00:00:19.000','00:00:22.640','esl-fast-beginner-1-44'),
+	('People say she is the best dancer in the world','Mọi người nói cô bé là vũ công giỏi nhất thế giới','00:00:23.100','00:00:27.360','esl-fast-beginner-1-44'),
+
+	/* (UUID(),'esl-fast-beginner-1-45','A Fun Sleepover','Một buổi ngủ qua đêm vui vẻ','ESL_FAST_BEGINNER_1_045.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-beginner-1',1,1,45) */
+	('She sleeps over at a friend\'s house','Cô bé ngủ lại qua đêm ở nhà bạn','00:00:00.260','00:00:03.600','esl-fast-beginner-1-45'),
+	('They do a lot of fun activities','Họ làm rất nhiều hoạt động vui vẻ','00:00:03.900','00:00:06.380','esl-fast-beginner-1-45'),
+	('They fight with their pillows','Họ chiến đấu bằng gối','00:00:06.800','00:00:08.960','esl-fast-beginner-1-45'),
+	('They roast marshmallows over a fire','Họ nướng kẹo dẻo trên bếp lửa','00:00:09.300','00:00:12.480','esl-fast-beginner-1-45'),
+	('They sing songs','Họ hát những bài hát','00:00:12.900','00:00:14.900','esl-fast-beginner-1-45'),
+	('They watch movies','Họ xem phim','00:00:15.200','00:00:17.160','esl-fast-beginner-1-45'),
+	('The movies are funny','Những bộ phim rất hài hước','00:00:17.400','00:00:19.140','esl-fast-beginner-1-45'),
+	('They eat popcorn while they watch','Họ ăn bỏng ngô trong khi xem','00:00:19.600','00:00:22.560','esl-fast-beginner-1-45'),
+	('They braid each other\'s hair','Họ tết tóc cho nhau','00:00:22.800','00:00:25.700','esl-fast-beginner-1-45'),
+	('They use sleeping bags','Họ dùng túi ngủ','00:00:26.000','00:00:28.200','esl-fast-beginner-1-45'),
+	('They fall asleep','Rồi cả hai ngủ thiếp đi','00:00:28.500','00:00:30.700','esl-fast-beginner-1-45');
+
+/*=====================================================================================================================================================================================================================================================*/
+
+INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
+	/* (UUID(),'esl-fast-beginner-1-46','Apology','Lời xin lỗi','ESL_FAST_BEGINNER_1_046.mp3',NULL,'00:00:00.000','00:00:32.000','esl-fast-beginner-1',1,1,46) */
+	('He does not like school','Cậu bé không thích đi học','00:00:00.390','00:00:03.050','esl-fast-beginner-1-46'),
+	('He hates his teachers','Cậu bé ghét các thầy cô giáo','00:00:03.400','00:00:05.550','esl-fast-beginner-1-46'),
+	('He hates learning','Cậu bé ghét học hành','00:00:05.900','00:00:08.010','esl-fast-beginner-1-46'),
+	('He hates his classmates','Cậu bé ghét các bạn cùng lớp','00:00:08.400','00:00:10.830','esl-fast-beginner-1-46'),
+	('He picks on them','Cậu bé hay bắt nạt các bạn','00:00:11.200','00:00:13.000','esl-fast-beginner-1-46'),
+	('He bothers them','Cậu bé thường làm phiền các bạn','00:00:13.350','00:00:15.010','esl-fast-beginner-1-46'),
+	('He rips up their homework','Cậu bé xé nát bài tập của các bạn','00:00:15.250','00:00:17.470','esl-fast-beginner-1-46'),
+	('He steals their lunch money','Cậu bé lấy trộm tiền ăn trưa của các bạn','00:00:17.800','00:00:20.390','esl-fast-beginner-1-46'),
+	('One day, his teacher sees him being mean','Một hôm, cô giáo bắt gặp cậu bé đang bắt nạt các bạn','00:00:20.800','00:00:24.950','esl-fast-beginner-1-46'),
+	('She yells at him','Cô giáo mắng cậu bé','00:00:25.270','00:00:26.300','esl-fast-beginner-1-46'),
+	('She makes him say sorry to his classmates','Cô giáo bắt cậu bé xin lỗi các bạn cùng lớp','00:00:26.600','00:00:30.530','esl-fast-beginner-1-46'),
+
+	/* (UUID(),'esl-fast-beginner-1-47','Glass of Milk on the Desk','Ly sữa trên bàn học','ESL_FAST_BEGINNER_1_047.mp3',NULL,'00:00:00.000','00:00:34.000','esl-fast-beginner-1',1,1,47) */
+	('A glass of milk is on the desk','Một ly sữa được đặt trên bàn','00:00:00.330','00:00:03.250','esl-fast-beginner-1-47'),
+	('It is near the edge','Ly sữa ở sát mép bàn','00:00:03.600','00:00:05.610','esl-fast-beginner-1-47'),
+	('The child looks at the milk','Đứa trẻ nhìn ly sữa','00:00:06.000','00:00:08.390','esl-fast-beginner-1-47'),
+	('The child wants to drink it','Đứa trẻ muốn uống sữa','00:00:08.700','00:00:11.250','esl-fast-beginner-1-47'),
+	('The cat looks at the milk','Con mèo nhìn ly sữa','00:00:11.500','00:00:13.890','esl-fast-beginner-1-47'),
+	('The cat wants to drink it, too','Con mèo cũng muốn uống sữa','00:00:14.200','00:00:17.170','esl-fast-beginner-1-47'),
+	('They both walk towards the desk','Cả hai cùng tiến về phía chiếc bàn','00:00:17.700','00:00:20.530','esl-fast-beginner-1-47'),
+	('The cat is faster','Con mèo nhanh hơn','00:00:20.900','00:00:23.030','esl-fast-beginner-1-47'),
+	('It jumps on the desk','Nó nhảy lên bàn','00:00:23.500','00:00:25.790','esl-fast-beginner-1-47'),
+	('The glass of milk tips over','Ly sữa bị nghiêng rồi đổ xuống','00:00:26.100','00:00:28.300','esl-fast-beginner-1-47'),
+	('The milk is all over the floor','Sữa lênh láng khắp sàn nhà','00:00:28.600','00:00:32.230','esl-fast-beginner-1-47'),
+
+	/* (UUID(),'esl-fast-beginner-1-48','A Simple Gift','Một món quà đơn giản','ESL_FAST_BEGINNER_1_048.mp3',NULL,'00:00:00.000','00:00:25.000','esl-fast-beginner-1',1,1,48) */
+	('He wants to get something for his teacher','Cậu bé muốn mua thứ gì đó cho cô giáo','00:00:00.330','00:00:03.370','esl-fast-beginner-1-48'),
+	('He has no money though','Nhưng cậu bé lại không có tiền','00:00:03.670','00:00:05.700','esl-fast-beginner-1-48'),
+	('He gets creative','Cậu bé liền sáng tạo','00:00:06.000','00:00:07.910','esl-fast-beginner-1-48'),
+	('He goes to his backyard','Cậu bé ra sân sau nhà','00:00:08.210','00:00:10.470','esl-fast-beginner-1-48'),
+	('He looks at his rose bush','Cậu bé nhìn bụi hoa hồng của mình','00:00:10.800','00:00:13.130','esl-fast-beginner-1-48'),
+	('He cuts a nice red one','Cậu bé cắt một bông hồng đỏ thật đẹp','00:00:13.490','00:00:15.950','esl-fast-beginner-1-48'),
+	('He puts it in a vase','Cậu bé cho nó vào bình hoa','00:00:16.300','00:00:18.410','esl-fast-beginner-1-48'),
+	('He pours some water in the vase','Cậu bé đổ một ít nước vào bình','00:00:18.800','00:00:21.750','esl-fast-beginner-1-48'),
+	('The gift is complete','Món quà đã hoàn thành','00:00:22.100','00:00:23.950','esl-fast-beginner-1-48'),
+
+	/* (UUID(),'esl-fast-beginner-1-49','Hide-and-Seek','Trò chơi trốn tìm','ESL_FAST_BEGINNER_1_049.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-beginner-1',1,1,49) */
+	('John covers his eyes','John che mắt lại','00:00:00.710','00:00:03.070','esl-fast-beginner-1-49'),
+	('Sandra finds a place to hide','Sandra tìm một chỗ để trốn','00:00:03.430','00:00:06.110','esl-fast-beginner-1-49'),
+	('John counts to ten','John đếm đến mười','00:00:06.600','00:00:08.790','esl-fast-beginner-1-49'),
+	('At ten, he opens his eyes','Đếm đến mười, cậu bé mở mắt ra','00:00:09.200','00:00:13.110','esl-fast-beginner-1-49'),
+	('He tries to find Sandra','Cậu bé cố gắng tìm Sandra','00:00:13.500','00:00:15.670','esl-fast-beginner-1-49'),
+	('He walks around their room','Cậu bé đi quanh phòng','00:00:16.000','00:00:18.410','esl-fast-beginner-1-49'),
+	('He checks the kitchen','Cậu bé kiểm tra nhà bếp','00:00:18.800','00:00:20.490','esl-fast-beginner-1-49'),
+	('He checks under the bed','Cậu bé kiểm tra dưới gầm giường','00:00:20.800','00:00:23.000','esl-fast-beginner-1-49'),
+	('He checks the laundry room','Cậu bé kiểm tra phòng giặt đồ','00:00:23.300','00:00:26.010','esl-fast-beginner-1-49'),
+	('He does not find her yet','Nhưng cậu bé không tìm thấy cô bé','00:00:26.400','00:00:28.000','esl-fast-beginner-1-49'),
+	('Sandra is in their parents\' room','Sandra đang ở trong phòng của bố mẹ','00:00:28.300','00:00:31.690','esl-fast-beginner-1-49'),
+
+	/* (UUID(),'esl-fast-beginner-1-50','Excited for the Mail','Hồi hộp chờ thư','ESL_FAST_BEGINNER_1_050.mp3',NULL,'00:00:00.000','00:00:28.000','esl-fast-beginner-1',1,1,50) */
+	('The boy waits for the mailman','Cậu bé đợi người đưa thư','00:00:00.780','00:00:03.260','esl-fast-beginner-1-50'),
+	('A package is supposed to come today','Hôm nay một kiện hàng dự kiến sẽ đến','00:00:03.600','00:00:06.300','esl-fast-beginner-1-50'),
+	('He sits by the window','Cậu bé ngồi bên cửa sổ','00:00:06.700','00:00:08.980','esl-fast-beginner-1-50'),
+	('He sees the mailman walking','Cậu bé thấy người đưa thư đang đi tới','00:00:09.300','00:00:11.720','esl-fast-beginner-1-50'),
+	('He goes outside','Cậu bé đi ra ngoài','00:00:12.100','00:00:13.920','esl-fast-beginner-1-50'),
+	('He says hello to the mailman','Cậu bé chào người đưa thư','00:00:14.300','00:00:17.060','esl-fast-beginner-1-50'),
+	('The mailman gives him the package','Người đưa thư trao kiện hàng cho cậu bé','00:00:17.400','00:00:20.080','esl-fast-beginner-1-50'),
+	('They say goodbye to each other','Hai người chào tạm biệt nhau','00:00:20.400','00:00:23.880','esl-fast-beginner-1-50'),
+	('The boy goes back in the house','Cậu bé quay trở về nhà của mình','00:00:24.200','00:00:26.580','esl-fast-beginner-1-50');
+
+/*=====================================================================================================================================================================================================================================================*/
+
+INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
+	/* (UUID(),'esl-fast-beginner-1-51','Having Fun on a Swing','Vui chơi trên xích đu','ESL_FAST_BEGINNER_1_051.mp3',NULL,'00:00:00.000','00:00:28.000','esl-fast-beginner-1',1,1,51) */
+	('Michael and his grandmother go to the park\'s playground','Michael cùng bà đến khu vui chơi trong công viên','00:00:00.330','00:00:04.490','esl-fast-beginner-1-51'),
+	('There are so many things to do','Ở đó có rất nhiều việc để làm','00:00:05.000','00:00:07.970','esl-fast-beginner-1-51'),
+	('Michael runs over to the swing set','Michael chạy đến khu xích đu','00:00:08.300','00:00:11.090','esl-fast-beginner-1-51'),
+	('He sits on a swing','Cậu bé ngồi lên một chiếc xích đu','00:00:11.400','00:00:13.270','esl-fast-beginner-1-51'),
+	('He kicks the ground','Cậu bé đạp chân xuống đất','00:00:13.600','00:00:15.470','esl-fast-beginner-1-51'),
+	('His legs are in the air','Đôi chân cậu bé đưa lên không trung','00:00:15.800','00:00:18.110','esl-fast-beginner-1-51'),
+	('His grandmother pushes him','Bà đẩy cậu bé','00:00:18.500','00:00:20.770','esl-fast-beginner-1-51'),
+	('He is even higher','Cậu bé thậm chí còn lên cao hơn nữa','00:00:21.000','00:00:23.150','esl-fast-beginner-1-51'),
+	('He feels like he can touch the sky','Cậu bé có cảm giác như mình có thể chạm tới bầu trời','00:00:23.500','00:00:26.770','esl-fast-beginner-1-51'),
+
+	/* (UUID(),'esl-fast-beginner-1-52','He Walks His Dogs','Cậu ấy dắt chó đi dạo','ESL_FAST_BEGINNER_1_052.mp3',NULL,'00:00:00.000','00:00:34.000','esl-fast-beginner-1',1,1,52) */
+	('Brian has three dogs','Brian có ba chú chó','00:00:00.580','00:00:03.080','esl-fast-beginner-1-52'),
+	('The first one is black','Con đầu tiên có màu đen','00:00:03.400','00:00:05.260','esl-fast-beginner-1-52'),
+	('The second one is brown','Con thứ hai có màu nâu','00:00:05.600','00:00:07.540','esl-fast-beginner-1-52'),
+	('The third one is gray','Con thứ ba có màu xám','00:00:08.000','00:00:10.120','esl-fast-beginner-1-52'),
+	('The black dog is very big','Chú chó đen rất to','00:00:10.500','00:00:13.580','esl-fast-beginner-1-52'),
+	('The brown dog is medium-sized','Chú chó màu nâu có kích thước trung bình','00:00:13.880','00:00:17.000','esl-fast-beginner-1-52'),
+	('The gray dog is very small','Chú chó màu xám rất nhỏ','00:00:17.400','00:00:20.660','esl-fast-beginner-1-52'),
+	('Brian loves all of them','Brian yêu quý tất cả chúng','00:00:21.000','00:00:23.520','esl-fast-beginner-1-52'),
+	('He walks with his dogs at the park','Cậu bé đi dạo cùng những chú chó trong công viên','00:00:23.800','00:00:26.680','esl-fast-beginner-1-52'),
+	('The dogs enjoy it','Những chú chó rất thích điều đó','00:00:27.000','00:00:28.900','esl-fast-beginner-1-52'),
+	('They always seem happy when they are walking','Chúng dường như lúc nào cũng vui vẻ khi chúng đi dạo','00:00:29.200','00:00:32.740','esl-fast-beginner-1-52'),
+
+	/* (UUID(),'esl-fast-beginner-1-53','A Pencil for Everything','Một cây bút chì cho mọi việc','ESL_FAST_BEGINNER_1_053.mp3',NULL,'00:00:00.000','00:00:26.000','esl-fast-beginner-1',1,1,53) */
+	('She has a pencil','Cô bé có một cây bút chì','00:00:00.200','00:00:02.000','esl-fast-beginner-1-53'),
+	('It is four inches long','Nó dài bốn inch','00:00:02.100','00:00:04.600','esl-fast-beginner-1-53'),
+	('It is shiny and pink','Nó lấp lánh và có màu hồng','00:00:05.000','00:00:06.880','esl-fast-beginner-1-53'),
+	('It has an eraser on one end','Một đầu của nó có cục tẩy','00:00:07.300','00:00:10.400','esl-fast-beginner-1-53'),
+	('It even has her name on it','Thậm chí trên đó còn có cả tên của cô bé','00:00:10.900','00:00:13.220','esl-fast-beginner-1-53'),
+	('She uses her pencil for everything','Cô bé dùng cây bút chì này cho mọi việc','00:00:13.600','00:00:16.180','esl-fast-beginner-1-53'),
+	('She uses it to write letters','Cô bé dùng nó để viết chữ','00:00:16.600','00:00:19.040','esl-fast-beginner-1-53'),
+	('She uses it to do her homework','Cô bé dùng nó để làm bài tập về nhà','00:00:19.400','00:00:22.120','esl-fast-beginner-1-53'),
+	('She uses it on her tests','Cô bé dùng nó khi làm bài kiểm tra','00:00:22.400','00:00:25.060','esl-fast-beginner-1-53'),
+
+	/* (UUID(),'esl-fast-beginner-1-54','Being Careless','Sự bất cẩn','ESL_FAST_BEGINNER_1_054.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-beginner-1',1,1,54) */
+	('Two brothers are bored','Hai anh em cảm thấy chán','00:00:00.200','00:00:02.640','esl-fast-beginner-1-54'),
+	('They play catch with each other inside the house','Hai anh em chơi ném và bắt bóng với nhau trong nhà','00:00:03.000','00:00:06.860','esl-fast-beginner-1-54'),
+	('The older brother throws the ball to the younger brother','Người anh ném bóng cho em trai','00:00:07.200','00:00:11.400','esl-fast-beginner-1-54'),
+	('He catches it','Cậu em bắt được bóng','00:00:11.700','00:00:13.360','esl-fast-beginner-1-54'),
+	('He throws it back','Cậu bé ném trả lại','00:00:13.700','00:00:15.180','esl-fast-beginner-1-54'),
+	('The ball hits the window','Quả bóng đập trúng cửa sổ','00:00:15.500','00:00:17.660','esl-fast-beginner-1-54'),
+	('The window breaks','Cửa sổ bị vỡ','00:00:18.000','00:00:20.180','esl-fast-beginner-1-54'),
+	('Their mom hears the loud sound','Mẹ của hai anh em nghe thấy tiếng động lớn','00:00:20.500','00:00:23.580','esl-fast-beginner-1-54'),
+	('She is mad','Mẹ rất tức giận','00:00:23.900','00:00:25.860','esl-fast-beginner-1-54'),
+	('She takes the ball away','Mẹ tịch thu quả bóng','00:00:26.200','00:00:28.320','esl-fast-beginner-1-54'),
+
+	/* (UUID(),'esl-fast-beginner-1-55','Fluffy the Rabbit','Fluffy chú thỏ nhỏ','ESL_FAST_BEGINNER_1_055.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-beginner-1',1,1,55) */
+	('He has a pet','Cậu bé có một con vật cưng','00:00:00.520','00:00:02.520','esl-fast-beginner-1-55'),
+	('It is a rabbit','Đó là một chú thỏ','00:00:02.900','00:00:04.440','esl-fast-beginner-1-55'),
+	('His rabbit\'s name is Fluffy','Chú thỏ của cậu bé tên là Fluffy','00:00:04.900','00:00:07.560','esl-fast-beginner-1-55'),
+	('Fluffy is a female','Fluffy là thỏ cái','00:00:08.000','00:00:10.540','esl-fast-beginner-1-55'),
+	('She is white','Nó có bộ lông màu trắng','00:00:10.900','00:00:12.420','esl-fast-beginner-1-55'),
+	('She has black eyes','Nó có đôi mắt màu đen','00:00:12.900','00:00:14.760','esl-fast-beginner-1-55'),
+	('She is very soft','Nó rất mềm mại','00:00:15.100','00:00:17.260','esl-fast-beginner-1-55'),
+	('She is playful','Nó rất hiếu động','00:00:17.600','00:00:19.300','esl-fast-beginner-1-55'),
+	('She weighs seven pounds','Nó nặng bảy pao','00:00:19.800','00:00:22.480','esl-fast-beginner-1-55'),
+	('She likes to hop around the house','Nó thích nhảy tung tăng khắp nhà','00:00:22.800','00:00:26.360','esl-fast-beginner-1-55'),
+	('She likes to eat carrots','Nó thích ăn cà rốt','00:00:26.800','00:00:29.580','esl-fast-beginner-1-55'),
+	('He gives Fluffy five carrots a day','Mỗi ngày cậu bé cho Fluffy ăn năm củ cà rốt','00:00:30.000','00:00:34.240','esl-fast-beginner-1-55');
+
+/*=====================================================================================================================================================================================================================================================*/
+
+INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
+	/* (UUID(),'esl-fast-beginner-1-56','Three Friends and a Jump Rope','Ba người bạn và dây nhảy','ESL_FAST_BEGINNER_1_056.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-beginner-1',1,1,56) */
+	('It is break time','Đến giờ ra chơi rồi','00:00:00.260','00:00:02.360','esl-fast-beginner-1-56'),
+	('The students go out to play','Các học sinh ra ngoài chơi','00:00:02.800','00:00:05.220','esl-fast-beginner-1-56'),
+	('Three friends play with a jump rope','Ba người bạn cùng chơi nhảy dây','00:00:05.800','00:00:09.080','esl-fast-beginner-1-56'),
+	('Elizabeth holds one end','Elizabeth cầm một đầu dây','00:00:09.500','00:00:12.060','esl-fast-beginner-1-56'),
+	('Susan holds the other end','Susan cầm đầu dây còn lại','00:00:12.400','00:00:15.180','esl-fast-beginner-1-56'),
+	('They stand apart from each other','Hai bạn đứng cách nhau','00:00:15.600','00:00:18.260','esl-fast-beginner-1-56'),
+	('They swing the rope','Hai bạn quay dây','00:00:18.600','00:00:20.720','esl-fast-beginner-1-56'),
+	('Maria jumps in','Maria nhảy vào','00:00:21.200','00:00:23.320','esl-fast-beginner-1-56'),
+	('The rope goes over her head','Sợi dây lướt qua đầu cô bé','00:00:23.800','00:00:26.840','esl-fast-beginner-1-56'),
+	('She is good','Cô bé rất giỏi','00:00:27.200','00:00:28.600','esl-fast-beginner-1-56'),
+	('She keeps jumping over the rope','Cô bé tiếp tục nhảy qua sợi dây','00:00:28.900','00:00:31.820','esl-fast-beginner-1-56'),
+
+	/* (UUID(),'esl-fast-beginner-1-57','He Plays with the Ladybug','Cậu ấy chơi với bọ rùa','ESL_FAST_BEGINNER_1_057.mp3',NULL,'00:00:00.000','00:00:38.000','esl-fast-beginner-1',1,1,57) */
+	('He goes outside','Cậu bé đi ra ngoài','00:00:00.260','00:00:02.160','esl-fast-beginner-1-57'),
+	('He sees a ladybug','Cậu bé nhìn thấy một con bọ rùa','00:00:02.500','00:00:04.700','esl-fast-beginner-1-57'),
+	('The ladybug is red','Con bọ rùa có màu đỏ','00:00:05.000','00:00:07.640','esl-fast-beginner-1-57'),
+	('It has black spots too','Nó còn có những chấm màu đen','00:00:08.300','00:00:10.680','esl-fast-beginner-1-57'),
+	('It has six legs','Nó có sáu chân','00:00:11.300','00:00:13.540','esl-fast-beginner-1-57'),
+	('It has two wings','Nó có hai cánh','00:00:14.300','00:00:16.080','esl-fast-beginner-1-57'),
+	('It is small','Nó rất nhỏ','00:00:16.400','00:00:18.380','esl-fast-beginner-1-57'),
+	('He puts the ladybug on his finger','Cậu bé đặt con bọ rùa lên ngón tay','00:00:19.000','00:00:22.520','esl-fast-beginner-1-57'),
+	('It tickles','Nó gây nhột','00:00:22.900','00:00:24.400','esl-fast-beginner-1-57'),
+	('The ladybug crawls all over him','Con bọ rùa bò khắp người cậu bé','00:00:24.700','00:00:28.720','esl-fast-beginner-1-57'),
+	('He wants to keep it','Cậu bé muốn giữ nó lại','00:00:29.000','00:00:31.260','esl-fast-beginner-1-57'),
+	('The ladybug flies away','Con bọ rùa bay mất','00:00:31.600','00:00:34.240','esl-fast-beginner-1-57'),
+	('He tries to catch it','Cậu bé cố bắt nó lại','00:00:34.600','00:00:36.780','esl-fast-beginner-1-57'),
+
+	/* (UUID(),'esl-fast-beginner-1-58','The Dog That Digs','Con chó hay đào đất','ESL_FAST_BEGINNER_1_058.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-beginner-1',1,1,58) */
+	('The dog likes to dig','Chú chó rất thích đào bới','00:00:00.390','00:00:03.010','esl-fast-beginner-1-58'),
+	('It is his favorite thing to do','Đó là việc nó thích làm nhất','00:00:03.310','00:00:06.010','esl-fast-beginner-1-58'),
+	('He goes into his owner\'s house','Nó đi vào nhà của chủ','00:00:06.500','00:00:09.750','esl-fast-beginner-1-58'),
+	('He takes a necklace','Nó tha một chiếc vòng cổ','00:00:10.100','00:00:11.930','esl-fast-beginner-1-58'),
+	('He puts the necklace in his mouth','Nó cho chiếc vòng cổ vào trong miệng','00:00:12.400','00:00:16.050','esl-fast-beginner-1-58'),
+	('He runs into the backyard','Nó chạy ra sân sau','00:00:16.400','00:00:18.930','esl-fast-beginner-1-58'),
+	('He digs a hole with his paws','Nó dùng hai chân trước đào một cái hố','00:00:19.400','00:00:22.690','esl-fast-beginner-1-58'),
+	('He puts the necklace inside','Nó để chiếc vòng cổ vào trong hố','00:00:23.000','00:00:26.150','esl-fast-beginner-1-58'),
+	('He covers the hole with dirt','Rồi nó che hố lại bằng đất','00:00:27.000','00:00:29.830','esl-fast-beginner-1-58'),
+
+	/* (UUID(),'esl-fast-beginner-1-59','Playing with the Monkey Bars','Chơi xà đơn trong sân chơi','ESL_FAST_BEGINNER_1_059.mp3',NULL,'00:00:00.000','00:00:33.000','esl-fast-beginner-1',1,1,59) */
+	('She likes the monkey bars','Cô bé thích chơi xà ngang','00:00:00.580','00:00:03.500','esl-fast-beginner-1-59'),
+	('She grabs the first bar with her hands','Cô bé dùng hai tay nắm thanh xà ngang đầu tiên','00:00:03.900','00:00:07.160','esl-fast-beginner-1-59'),
+	('Her legs are swinging from the ground','Đôi chân cô bé đung đưa trên không','00:00:07.600','00:00:10.540','esl-fast-beginner-1-59'),
+	('She puts her right hand on the second bar','Cô bé đưa tay phải sang thanh xà  ngang thứ hai','00:00:11.000','00:00:14.900','esl-fast-beginner-1-59'),
+	('She then puts her left hand on the second bar','Rồi cô bé đưa tay trái sang thanh xà ngang thứ hai','00:00:15.000','00:00:19.260','esl-fast-beginner-1-59'),
+	('She continues doing this','Cô bé cứ tiếp tục làm như vậy','00:00:19.700','00:00:22.300','esl-fast-beginner-1-59'),
+	('She reaches the last bar','Cuối cùng cô bé chạm tới thanh xà ngang cuối cùng','00:00:22.700','00:00:25.220','esl-fast-beginner-1-59'),
+	('She jumps down','Cô bé nhảy xuống','00:00:25.600','00:00:27.500','esl-fast-beginner-1-59'),
+	('She starts over again for fun','Rồi cô bé lại bắt đầu lại từ đầu cho vui','00:00:27.800','00:00:31.100','esl-fast-beginner-1-59'),
+
+	/* (UUID(),'esl-fast-beginner-1-60','Playing a Doctor','Đóng vai bác sĩ','ESL_FAST_BEGINNER_1_060.mp3',NULL,'00:00:00.000','00:00:31.000','esl-fast-beginner-1',1,1,60) */
+	('She likes to pretend she is a doctor for fun','Cô bé thích giả làm bác sĩ để giải trí','00:00:00.460','00:00:05.040','esl-fast-beginner-1-60'),
+	('She wears a white coat','Cô bé mặc một chiếc áo khoác trắng','00:00:05.400','00:00:07.720','esl-fast-beginner-1-60'),
+	('She pretends her room is a medical office','Cô bé giả vờ phòng mình thành một phòng khám','00:00:08.300','00:00:11.880','esl-fast-beginner-1-60'),
+	('Her dad pretends he is a patient','Bố cô bé giả làm một bệnh nhân','00:00:12.400','00:00:15.519','esl-fast-beginner-1-60'),
+	('Her dad goes into her room','Bố cô bé bước vào phòng','00:00:16.000','00:00:19.000','esl-fast-beginner-1-60'),
+	('He tells her how he is feeling','Bố nói với cô bé rằng bố đang cảm thấy thế nào','00:00:19.500','00:00:22.560','esl-fast-beginner-1-60'),
+	('He says that he keeps coughing','Ông nói mình cứ ho mãi','00:00:23.000','00:00:25.920','esl-fast-beginner-1-60'),
+	('She tells him to drink a lot of water','Cô bé bảo ông uống nhiều nước','00:00:26.300','00:00:29.900','esl-fast-beginner-1-60');
+
+/*=====================================================================================================================================================================================================================================================*/
+
+INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
+	/* (UUID(),'esl-fast-beginner-1-61','Art Class','Giờ học mỹ thuật','ESL_FAST_BEGINNER_1_061.mp3',NULL,'00:00:00.000','00:00:35.000','esl-fast-beginner-1',1,1,61) */
+	('She goes to her art class','Cô bé đến lớp học vẽ','00:00:00.260','00:00:03.359','esl-fast-beginner-1-61'),
+	('She wears a special white coat','Cô bé mặc một chiếc áo choàng trắng chuyên dụng','00:00:03.780','00:00:06.680','esl-fast-beginner-1-61'),
+	('Now, her inside clothes will be clean','Giờ thì quần áo bên trong của cô bé sẽ rất sạch sẽ','00:00:07.320','00:00:11.580','esl-fast-beginner-1-61'),
+	('She is going to draw a sunflower','Cô bé định vẽ một bông hoa hướng dương','00:00:12.360','00:00:15.600','esl-fast-beginner-1-61'),
+	('She gets a paintbrush','Cô bé lấy một cây cọ vẽ','00:00:16.000','00:00:18.420','esl-fast-beginner-1-61'),
+	('She gets green, yellow, and brown paint','Cô bé lấy nước sơn màu xanh lá, màu vàng và màu nâu','00:00:19.020','00:00:23.700','esl-fast-beginner-1-61'),
+	('She gets a white piece of paper','Cô bé lấy một tờ giấy trắng','00:00:23.900','00:00:27.500','esl-fast-beginner-1-61'),
+	('She dips her paintbrush in the paint','Cô bé nhúng cọ vẽ vào màu','00:00:28.000','00:00:30.980','esl-fast-beginner-1-61'),
+	('She starts to draw','Cô bé bắt đầu vẽ','00:00:31.720','00:00:33.740','esl-fast-beginner-1-61'),
+
+	/* (UUID(),'esl-fast-beginner-1-62','Getting Ready for Soccer Practice','Chuẩn bị cho buổi tập bóng đá','ESL_FAST_BEGINNER_1_062.mp3',NULL,'00:00:00.000','00:00:27.000','esl-fast-beginner-1',1,1,62) */
+	('She is getting ready for soccer practice','Cô bé đang chuẩn bị đi tập bóng đá','00:00:00.060','00:00:03.680','esl-fast-beginner-1-62'),
+	('She wears her uniform','Cô bé mặc đồng phục','00:00:04.000','00:00:06.240','esl-fast-beginner-1-62'),
+	('She gets a soccer ball','Cô bé lấy một quả bóng đá','00:00:06.940','00:00:09.080','esl-fast-beginner-1-62'),
+	('Her mom drives her to the soccer field','Mẹ chở cô bé đến sân bóng đá','00:00:09.560','00:00:12.420','esl-fast-beginner-1-62'),
+	('She gets out of the car','Cô bé bước xuống xe','00:00:12.720','00:00:15.120','esl-fast-beginner-1-62'),
+	('She says hi to all her teammates','Cô bé chào tất cả đồng đội','00:00:15.800','00:00:19.180','esl-fast-beginner-1-62'),
+	('They stretch','Bọn họ đang giãn cơ','00:00:19.700','00:00:21.160','esl-fast-beginner-1-62'),
+	('They put their legs together','Họ khép hai chân lại cùng nhau','00:00:21.600','00:00:23.700','esl-fast-beginner-1-62'),
+	('They reach their toes with their hands','Họ dùng tay chạm vào các ngón chân','00:00:24.240','00:00:27.200','esl-fast-beginner-1-62'),
+
+	/* (UUID(),'esl-fast-beginner-1-63','The Pouch of a Kangaroo','Túi của con chuột túi','ESL_FAST_BEGINNER_1_063.mp3',NULL,'00:00:00.000','00:00:30.000','esl-fast-beginner-1',1,1,63) */
+	('A kangaroo is an interesting animal','Chuột túi là một loài động vật rất thú vị','00:00:00.130','00:00:04.310','esl-fast-beginner-1-63'),
+	('It has a pouch','Nó có một chiếc túi','00:00:04.990','00:00:06.830','esl-fast-beginner-1-63'),
+	('A kangaroo\'s baby goes into the pouch','Chuột túi con sẽ chui vào chiếc túi đó','00:00:07.490','00:00:11.830','esl-fast-beginner-1-63'),
+	('It is safe there','Ở đó rất an toàn','00:00:12.210','00:00:14.170','esl-fast-beginner-1-63'),
+	('James would like to have a pouch','James muốn có một chiếc túi như thế','00:00:14.870','00:00:17.390','esl-fast-beginner-1-63'),
+	('He would not put a baby in there','Cậu bé sẽ không cho em bé vào trong đó','00:00:17.950','00:00:20.570','esl-fast-beginner-1-63'),
+	('He would put food and video games inside','Cậu ấy sẽ bỏ đồ ăn và trò chơi điện tử vào trong','00:00:20.910','00:00:25.010','esl-fast-beginner-1-63'),
+	('People and kangaroos are different','Con người và chuột túi rất khác nhau','00:00:25.770','00:00:28.970','esl-fast-beginner-1-63'),
+
+	/* (UUID(),'esl-fast-beginner-1-64','Aunt and Uncle','Dì và chú','ESL_FAST_BEGINNER_1_064.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,1,64) */
+	('He visits his aunt and uncle','Cậu bé đến thăm cô và chú của mình','00:00:00.130','00:00:03.390','esl-fast-beginner-1-64'),
+	('They are very different from each other','Hai người rất khác nhau','00:00:03.910','00:00:06.550','esl-fast-beginner-1-64'),
+	('His aunt is tall and skinny','Cô của cậu ấy cao và gầy','00:00:07.190','00:00:10.030','esl-fast-beginner-1-64'),
+	('His uncle is fat and short','Chú của cậu ấy mập và thấp','00:00:10.490','00:00:13.710','esl-fast-beginner-1-64'),
+	('His aunt likes vegetables','Cô của cậu ấy thích ăn rau','00:00:14.630','00:00:16.990','esl-fast-beginner-1-64'),
+	('His uncle only eats meat','Chú của cậu ấy chỉ ăn thịt','00:00:17.550','00:00:20.470','esl-fast-beginner-1-64'),
+	('His aunt is quiet','Cô của cậu ấy rất ít nói','00:00:21.130','00:00:23.450','esl-fast-beginner-1-64'),
+	('His uncle is loud','Chú của cậu ấy nói rất to','00:00:24.050','00:00:26.310','esl-fast-beginner-1-64'),
+	('They still love each other','Họ vẫn yêu thương nhau','00:00:26.710','00:00:28.970','esl-fast-beginner-1-64'),
+	('They like it when he visits','Họ rất vui khi cậu bé đến thăm','00:00:29.470','00:00:31.930','esl-fast-beginner-1-64'),
+	('He always has fun with his aunt and uncle','Cậu bé luôn vui vẻ khi ở cùng cô và chú của mình','00:00:32.610','00:00:36.130','esl-fast-beginner-1-64'),
+
+	/* (UUID(),'esl-fast-beginner-1-65','A Busy Boy','Một cậu bé bận rộn','ESL_FAST_BEGINNER_1_065.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,1,65) */
+	('The boy is always busy','Cậu bé lúc nào cũng bận rộn','00:00:00.320','00:00:03.420','esl-fast-beginner-1-65'),
+	('He goes to school for eight hours','Cậu ấy đi học suốt tám tiếng mỗi ngày','00:00:03.840','00:00:06.780','esl-fast-beginner-1-65'),
+	('He has seven classes','Cậu ấy có bảy tiết học','00:00:07.340','00:00:09.440','esl-fast-beginner-1-65'),
+	('They are all hard','Tiết nào cũng khó','00:00:10.080','00:00:12.080','esl-fast-beginner-1-65'),
+	('He has a lot of homework','Cậu ấy có rất nhiều bài tập về nhà','00:00:12.680','00:00:14.860','esl-fast-beginner-1-65'),
+	('It takes him five hours to finish it','Cậu ấy mất năm tiếng mới làm xong','00:00:15.280','00:00:18.380','esl-fast-beginner-1-65'),
+	('He also has piano practice','Cậu ấy còn phải tập đàn piano','00:00:18.860','00:00:21.520','esl-fast-beginner-1-65'),
+	('He spends two hours playing the piano','Cậu ấy dành hai tiếng để chơi đàn piano','00:00:22.100','00:00:25.520','esl-fast-beginner-1-65'),
+	('He only sleeps for four hours','Cậu ấy chỉ ngủ bốn tiếng','00:00:25.920','00:00:29.200','esl-fast-beginner-1-65'),
+	('He is tired','Cậu ấy rất mệt','00:00:28.700','00:00:31.559','esl-fast-beginner-1-65');
+
+/*=====================================================================================================================================================================================================================================================*/
+
+INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
+	/* (UUID(),'esl-fast-beginner-1-66','Fruit Salad','Salad trái cây','ESL_FAST_BEGINNER_1_066.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,1,66) */
+	('She pours some chips in a bowl','Cô bé đổ khoai tây chiên vào một cái bát','00:00:00.770','00:00:04.210','esl-fast-beginner-1-66'),
+	('Her dad sees her','Bố nhìn cô bé','00:00:04.610','00:00:06.300','esl-fast-beginner-1-66'),
+	('He tells her chips are bad','Ông nói với cô bé rằng khoai tây chiên không tốt','00:00:06.500','00:00:09.100','esl-fast-beginner-1-66'),
+	('They are unhealthy','Chúng không tốt cho sức khỏe','00:00:09.100','00:00:10.910','esl-fast-beginner-1-66'),
+	('She throws away the chips','Cô bé vứt khoai tây chiên đi','00:00:11.290','00:00:13.830','esl-fast-beginner-1-66'),
+	('She goes back to the kitchen','Cô bé quay lại nhà bếp','00:00:14.150','00:00:16.710','esl-fast-beginner-1-66'),
+	('She starts to make fruit salad','Cô bé bắt đầu làm món salad trái cây','00:00:17.270','00:00:20.110','esl-fast-beginner-1-66'),
+	('She gets bananas, strawberries, kiwis, and apples','Cô bé lấy chuối, dâu tây, kiwi và táo','00:00:20.570','00:00:27.850','esl-fast-beginner-1-66'),
+	('She cuts them up in small pieces','Cô bé cắt chúng thành những miếng nhỏ','00:00:28.000','00:00:31.150','esl-fast-beginner-1-66'),
+	('She puts them all together in a bowl','Cô bé cho tất cả vào chung một cái bát','00:00:31.570','00:00:34.800','esl-fast-beginner-1-66'),
+
+	/* (UUID(),'esl-fast-beginner-1-67','He Takes His Test','Cậu ấy làm bài kiểm tra','ESL_FAST_BEGINNER_1_067.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,1,67) */
+	('The teacher announces that there is a test','Thầy giáo thông báo rằng có một bài kiểm tra','00:00:00.000','00:00:03.750','esl-fast-beginner-1-67'),
+	('The students clear off their desks','Các học sinh dọn hết đồ trên bàn','00:00:04.090','00:00:07.290','esl-fast-beginner-1-67'),
+	('The teacher passes out the tests','Thầy giáo phát đề kiểm tra','00:00:07.630','00:00:10.750','esl-fast-beginner-1-67'),
+	('The student takes a deep breath','Cậu học sinh hít một hơi thật sâu','00:00:11.130','00:00:14.570','esl-fast-beginner-1-67'),
+	('He takes out his pencil','Cậu ấy lấy bút chì ra','00:00:14.730','00:00:17.030','esl-fast-beginner-1-67'),
+	('He looks at the questions','Cậu ấy nhìn các câu hỏi','00:00:17.610','00:00:19.710','esl-fast-beginner-1-67'),
+	('He knows the answers','Cậu ấy biết đáp án','00:00:20.130','00:00:22.250','esl-fast-beginner-1-67'),
+	('He writes them down','Cậu ấy viết các đáp án xuống','00:00:22.690','00:00:25.010','esl-fast-beginner-1-67'),
+	('He finishes the test','Cậu ấy hoàn thành bài kiểm tra','00:00:25.430','00:00:27.730','esl-fast-beginner-1-67'),
+	('He feels good','Cậu ấy cảm thấy rất vui','00:00:27.770','00:00:29.910','esl-fast-beginner-1-67'),
+
+	/* (UUID(),'esl-fast-beginner-1-68','Parent-teacher Conference','Buổi họp phụ huynh và giáo viên','ESL_FAST_BEGINNER_1_068.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,1,68) */
+	('Lisa and her mom go to school','Lisa và mẹ đến trường','00:00:00.320','00:00:03.660','esl-fast-beginner-1-68'),
+	('They meet with Lisa\'s teacher','Họ gặp cô giáo của Lisa','00:00:04.300','00:00:06.500','esl-fast-beginner-1-68'),
+	('The teacher smiles','Cô giáo mỉm cười','00:00:07.200','00:00:09.160','esl-fast-beginner-1-68'),
+	('They all sit down','Mọi người cùng ngồi xuống','00:00:09.760','00:00:11.940','esl-fast-beginner-1-68'),
+	('The teacher talks about Lisa\'s grades','Cô giáo nói về kết quả học tập của Lisa','00:00:12.620','00:00:15.600','esl-fast-beginner-1-68'),
+	('She is doing very well','Cô bé học rất tốt','00:00:16.120','00:00:18.360','esl-fast-beginner-1-68'),
+	('She is very smart','Cô bé rất thông minh','00:00:18.720','00:00:20.880','esl-fast-beginner-1-68'),
+	('The teacher also talks about Lisa\'s behavior','Cô giáo cũng nói về cách cư xử của Lisa','00:00:21.480','00:00:25.000','esl-fast-beginner-1-68'),
+	('She is friendly to everyone','Cô bé rất thân thiện với mọi người','00:00:25.720','00:00:27.940','esl-fast-beginner-1-68'),
+	('Her mom is happy','Mẹ của Lisa rất vui','00:00:28.180','00:00:29.920','esl-fast-beginner-1-68'),
+
+	/* (UUID(),'esl-fast-beginner-1-69','The Second Dog','Con chó thứ hai','ESL_FAST_BEGINNER_1_069.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,1,69) */
+	('She has one dog already','Cô bé đã có một chú chó rồi','00:00:00.190','00:00:03.170','esl-fast-beginner-1-69'),
+	('It has black fur','Nó có bộ lông màu đen','00:00:03.630','00:00:05.510','esl-fast-beginner-1-69'),
+	('It is very big','Nó rất to','00:00:05.970','00:00:07.830','esl-fast-beginner-1-69'),
+	('She wants another one','Cô bé muốn nuôi thêm một con nữa','00:00:08.250','00:00:10.090','esl-fast-beginner-1-69'),
+	('She goes to the pet store','Cô bé đến cửa hàng thú cưng','00:00:10.490','00:00:12.630','esl-fast-beginner-1-69'),
+	('She buys another dog','Cô bé mua thêm một chú chó','00:00:13.150','00:00:15.270','esl-fast-beginner-1-69'),
+	('It has brown fur','Nó có bộ lông màu nâu','00:00:15.450','00:00:17.570','esl-fast-beginner-1-69'),
+	('It is medium-sized','Nó có kích thước trung bình','00:00:18.030','00:00:20.130','esl-fast-beginner-1-69'),
+	('She brings it home','Cô bé đưa nó về nhà','00:00:20.630','00:00:22.350','esl-fast-beginner-1-69'),
+	('She puts her two dogs together','Cô bé để hai chú chó của mình bên nhau','00:00:22.810','00:00:25.290','esl-fast-beginner-1-69'),
+	('They run away from each other','Chúng chạy tránh nhau','00:00:25.890','00:00:28.210','esl-fast-beginner-1-69'),
+	('They do not like each other','Chúng không thích nhau','00:00:28.350','00:00:30.870','esl-fast-beginner-1-69'),
+
+	/* (UUID(),'esl-fast-beginner-1-70','A Cat and a Ball of Yarn','Một con mèo và cuộn len','ESL_FAST_BEGINNER_1_070.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,1,70) */
+	('The boy tries to study for his quiz tomorrow','Cậu bé cố gắng học bài chuẩn bị cho bài kiểm tra ngày mai','00:00:00.060','00:00:04.000','esl-fast-beginner-1-70'),
+	('His cat keeps bothering him','Con mèo của cậu cứ quấy rầy cậu ấy','00:00:04.660','00:00:07.060','esl-fast-beginner-1-70'),
+	('It keeps pulling his leg','Nó cứ kéo chân cậu ấy','00:00:07.520','00:00:09.900','esl-fast-beginner-1-70'),
+	('It keeps making noises','Nó cứ liên tục kêu ầm lên','00:00:10.260','00:00:12.640','esl-fast-beginner-1-70'),
+	('He gets a ball of yarn','Cậu bé lấy một cuộn len','00:00:13.500','00:00:15.820','esl-fast-beginner-1-70'),
+	('He throws it across the room','Cậu bé ném nó sang bên kia phòng','00:00:16.140','00:00:19.240','esl-fast-beginner-1-70'),
+	('The cat chases the ball of yarn','Con mèo đuổi theo cuộn len','00:00:20.020','00:00:22.860','esl-fast-beginner-1-70'),
+	('The cat catches the yarn','Con mèo chộp được cuộn len','00:00:23.260','00:00:26.480','esl-fast-beginner-1-70'),
+	('It plays with it','Nó chơi với cuộn len','00:00:26.780','00:00:28.760','esl-fast-beginner-1-70'),
+	('The boy can finally study','Cuối cùng cậu bé cũng có thể học bài','00:00:28.260','00:00:31.700','esl-fast-beginner-1-70');
+
+/*=====================================================================================================================================================================================================================================================*/
+
+INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
+	/* (UUID(),'esl-fast-beginner-1-71','Taking Care of His Orange Tree','Chăm sóc cây cam của cậu ấy','ESL_FAST_BEGINNER_1_071.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,71) */
+	('He wants to grow an orange tree','Cậu bé muốn trồng một cây cam','00:00:00.060','00:00:03.520','esl-fast-beginner-1-71'),
+	('He digs a small hole','Cậu bé đào một cái hố nhỏ','00:00:04.100','00:00:06.260','esl-fast-beginner-1-71'),
+	('He puts the seeds in it','Cậu bé cho hạt giống vào đó','00:00:06.640','00:00:09.060','esl-fast-beginner-1-71'),
+	('He covers the seeds with soil','Cậu bé lấp đất lên hạt giống','00:00:09.280','00:00:12.480','esl-fast-beginner-1-71'),
+	('He waters it for a week','Cậu bé tưới nước suốt một tuần','00:00:12.900','00:00:15.500','esl-fast-beginner-1-71'),
+	('No oranges have grown','Vẫn chưa có quả cam nào mọc lên','00:00:16.260','00:00:18.300','esl-fast-beginner-1-71'),
+	('He asks his mom what he is doing wrong','Cậu bé hỏi mẹ mình đã làm sai điều gì','00:00:19.100','00:00:23.120','esl-fast-beginner-1-71'),
+	('She says, "You have to be patient"','Mẹ nói: "Con phải kiên nhẫn"','00:00:23.460','00:00:26.860','esl-fast-beginner-1-71'),
+	('He continues to water the tree for a month','Cậu bé tiếp tục tưới cây suốt một tháng','00:00:27.180','00:00:31.080','esl-fast-beginner-1-71'),
+	('He sees an orange start to grow','Cậu bé nhìn thấy một quả cam bắt đầu lớn lên','00:00:31.760','00:00:34.680','esl-fast-beginner-1-71'),
+
+	/* (UUID(),'esl-fast-beginner-1-72','The Missing Notebook','Cuốn vở bị mất','ESL_FAST_BEGINNER_1_072.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,72) */
+	('Helen leaves her notebook in the cafeteria','Helen để quên quyển vở ở căng tin','00:00:00.450','00:00:03.930','esl-fast-beginner-1-72'),
+	('She does not know this yet','Lúc này cô bé vẫn chưa biết điều đó','00:00:04.370','00:00:06.430','esl-fast-beginner-1-72'),
+	('She goes to class','Cô bé đi vào lớp học','00:00:06.770','00:00:08.750','esl-fast-beginner-1-72'),
+	('Kevin enters the cafeteria','Kevin bước vào căng tin','00:00:09.230','00:00:11.530','esl-fast-beginner-1-72'),
+	('He sees a notebook','Cậu ấy nhìn thấy một quyển vở','00:00:12.130','00:00:14.170','esl-fast-beginner-1-72'),
+	('He does not know whose it is','Cậu ấy không biết đó là của ai','00:00:14.490','00:00:17.130','esl-fast-beginner-1-72'),
+	('He puts it in the lost and found box','Cậu ấy bỏ nó vào hộp đồ thất lạc','00:00:17.450','00:00:20.590','esl-fast-beginner-1-72'),
+	('Helen realizes her notebook is gone','Helen nhận ra quyển vở của mình đã mất','00:00:20.990','00:00:23.870','esl-fast-beginner-1-72'),
+	('She checks the lost and found box','Cô bé kiểm tra hộp đồ thất lạc','00:00:24.210','00:00:27.090','esl-fast-beginner-1-72'),
+	('She finds her notebook','Cô bé tìm thấy quyển vở của mình','00:00:27.350','00:00:29.370','esl-fast-beginner-1-72'),
+
+	/* (UUID(),'esl-fast-beginner-1-73','Tag, You\'re It!','Trò chơi đuổi bắt, đến lượt bạn rồi!','ESL_FAST_BEGINNER_1_073.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,73) */
+	('Tag is a very fun game','Đuổi bắt là một trò chơi rất vui','00:00:00.260','00:00:03.700','esl-fast-beginner-1-73'),
+	('George, Lisa, and Laura play tag every day','George, Lisa và Laura ngày nào cũng chơi đuổi bắt','00:00:04.000','00:00:09.020','esl-fast-beginner-1-73'),
+	('Lisa and Laura run around','Lisa và Laura chạy khắp nơi','00:00:09.460','00:00:12.160','esl-fast-beginner-1-73'),
+	('George tries to chase them','George cố đuổi theo hai bạn','00:00:12.780','00:00:15.280','esl-fast-beginner-1-73'),
+	('He runs as fast as he can','Cậu ấy chạy nhanh hết sức có thể','00:00:15.740','00:00:18.540','esl-fast-beginner-1-73'),
+	('He decides to find Lisa','Cậu ấy quyết định đuổi theo Lisa','00:00:18.820','00:00:21.320','esl-fast-beginner-1-73'),
+	('She is a slow runner','Lisa chạy khá chậm','00:00:22.000','00:00:24.320','esl-fast-beginner-1-73'),
+	('He sees her running','Cậu ấy nhìn thấy Lisa đang chạy','00:00:24.740','00:00:26.500','esl-fast-beginner-1-73'),
+	('He catches up to her','Cậu ấy đuổi kịp Lisa','00:00:26.720','00:00:28.760','esl-fast-beginner-1-73'),
+	('He taps her on the shoulder','Cậu ấy chạm nhẹ vào vai Lisa','00:00:29.120','00:00:31.220','esl-fast-beginner-1-73'),
+	('He says to her, "Tag, you\'re it!"','Cậu ấy nói: "Bắt được rồi, giờ đến lượt cậu đuổi nhé!"','00:00:31.600','00:00:35.180','esl-fast-beginner-1-73'),
+
+	/* (UUID(),'esl-fast-beginner-1-74','Different Flavors','Những hương vị khác nhau','ESL_FAST_BEGINNER_1_074.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,74) */
+	('I like cupcakes and lollipops','Tôi thích bánh cupcake và kẹo mút','00:00:00.000','00:00:03.780','esl-fast-beginner-1-74'),
+	('Both of them are sweet','Cả hai đều có vị ngọt','00:00:04.060','00:00:05.940','esl-fast-beginner-1-74'),
+	('My mom likes hamburgers and french fries','Mẹ tôi thích bánh hamburger và khoai tây chiên','00:00:06.460','00:00:10.460','esl-fast-beginner-1-74'),
+	('Both of them are salty','Cả hai đều có vị mặn','00:00:10.880','00:00:12.880','esl-fast-beginner-1-74'),
+	('My dad likes lemons and grapefruits','Bố tôi thích chanh và bưởi','00:00:13.880','00:00:18.140','esl-fast-beginner-1-74'),
+	('Both of them are sour','Cả hai đều có vị chua','00:00:18.520','00:00:21.060','esl-fast-beginner-1-74'),
+	('My sister likes coffee and dark chocolate','Chị gái tôi thích cà phê và sô-cô-la đen','00:00:21.900','00:00:26.020','esl-fast-beginner-1-74'),
+	('Both of them are bitter','Cả hai đều có vị đắng','00:00:26.360','00:00:28.780','esl-fast-beginner-1-74'),
+	('My brother likes everything','Em trai tôi thích tất cả mọi thứ','00:00:28.280','00:00:32.100','esl-fast-beginner-1-74'),
+
+	/* (UUID(),'esl-fast-beginner-1-75','Daydreaming at School','Mơ mộng trong giờ học','ESL_FAST_BEGINNER_1_075.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,75) */
+	('The teacher is talking about U.S. government','Cô giáo đang giảng về chính phủ Hoa Kỳ','00:00:00.190','00:00:04.250','esl-fast-beginner-1-75'),
+	('She thinks it is boring','Cô bé thấy bài học thật nhàm chán','00:00:04.630','00:00:06.610','esl-fast-beginner-1-75'),
+	('She stares at her desk','Cô bé nhìn chằm chằm xuống bàn học','00:00:07.070','00:00:09.150','esl-fast-beginner-1-75'),
+	('She starts to daydream','Cô bé bắt đầu mơ màng','00:00:09.750','00:00:11.890','esl-fast-beginner-1-75'),
+	('She dreams about her friends','Cô bé mơ về những người bạn của mình','00:00:12.490','00:00:14.770','esl-fast-beginner-1-75'),
+	('They invite her to a party','Họ mời cô bé đến một bữa tiệc','00:00:15.150','00:00:17.690','esl-fast-beginner-1-75'),
+	('The party is fun','Bữa tiệc rất vui','00:00:18.130','00:00:20.510','esl-fast-beginner-1-75'),
+	('She dances and sings','Cô bé vừa nhảy vừa hát','00:00:21.090','00:00:24.010','esl-fast-beginner-1-75'),
+	('She listens to good music','Cô bé nghe những bản nhạc hay','00:00:24.230','00:00:26.830','esl-fast-beginner-1-75'),
+	('The teacher wakes her up','Cô giáo gọi cô bé tỉnh lại','00:00:26.330','00:00:29.590','esl-fast-beginner-1-75');
+
+/*=====================================================================================================================================================================================================================================================*/
+
+INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
+	/* (UUID(),'esl-fast-beginner-1-76','A Pet for Dad','Một thú cưng dành cho bố','ESL_FAST_BEGINNER_1_076.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,76) */
+	('Her dad is lonely','Bố cô ấy sống rất cô đơn','00:00:00.320','00:00:03.040','esl-fast-beginner-1-76'),
+	('He lives in a big house with no one','Ông sống một mình trong một ngôi nhà rộng lớn','00:00:03.540','00:00:07.260','esl-fast-beginner-1-76'),
+	('He is divorced','Ông đã ly hôn','00:00:07.540','00:00:09.180','esl-fast-beginner-1-76'),
+	('His friends live far away','Bạn bè của ông đều sống ở xa','00:00:09.680','00:00:11.920','esl-fast-beginner-1-76'),
+	('He does not work anymore','Ông không còn đi làm nữa','00:00:12.100','00:00:14.600','esl-fast-beginner-1-76'),
+	('He just sits at home and watches movies','Ông chỉ quanh quẩn ở nhà xem phim','00:00:14.820','00:00:18.520','esl-fast-beginner-1-76'),
+	('She feels bad for her dad','Cô ấy thấy thương bố mình','00:00:19.280','00:00:21.760','esl-fast-beginner-1-76'),
+	('She surprises him with a dog','Cô ấy tạo bất ngờ cho bố bằng cách tặng ông một chú chó','00:00:22.140','00:00:24.940','esl-fast-beginner-1-76'),
+	('He loves the dog so much','Ông rất yêu chú chó đó','00:00:25.160','00:00:28.040','esl-fast-beginner-1-76'),
+	('He takes care of it','Ông chăm sóc nó rất chu đáo','00:00:28.320','00:00:30.300','esl-fast-beginner-1-76'),
+
+	/* (UUID(),'esl-fast-beginner-1-77','Too Sick','Bị ốm nặng','ESL_FAST_BEGINNER_1_077.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,77) */
+	('She is too sick','Cô ấy bị ốm nặng','00:00:00.380','00:00:02.900','esl-fast-beginner-1-77'),
+	('She has a cold','Cô ấy bị cảm','00:00:03.280','00:00:05.060','esl-fast-beginner-1-77'),
+	('She can\'t stop sneezing','Cô ấy cứ hắt hơi mãi không ngừng','00:00:05.800','00:00:08.260','esl-fast-beginner-1-77'),
+	('She keeps a tissue box near her','Cô ấy để một hộp khăn giấy ngay bên cạnh','00:00:08.960','00:00:11.640','esl-fast-beginner-1-77'),
+	('Her nose is so red','Mũi cô ấy đỏ ửng lên','00:00:12.220','00:00:14.660','esl-fast-beginner-1-77'),
+	('She also has a fever','Cô ấy còn bị sốt nữa','00:00:15.480','00:00:17.700','esl-fast-beginner-1-77'),
+	('She puts a cold towel over her forehead','Cô ấy đắp một chiếc khăn lạnh lên trán','00:00:18.620','00:00:22.100','esl-fast-beginner-1-77'),
+	('She is too sick to go to school','Cô ấy ốm quá nên không thể đến trường','00:00:22.880','00:00:25.780','esl-fast-beginner-1-77'),
+	('Her friends visit her','Bạn bè đến thăm cô ấy','00:00:26.420','00:00:28.260','esl-fast-beginner-1-77'),
+	('They give her the homework assignments','Họ đưa cho cô ấy bài tập về nhà','00:00:28.660','00:00:31.480','esl-fast-beginner-1-77'),
+	('They try to make her feel better','Họ cố gắng làm cô ấy thấy vui hơn','00:00:31.920','00:00:34.240','esl-fast-beginner-1-77'),
+
+	/* (UUID(),'esl-fast-beginner-1-78','The Worst Student','Học sinh tệ nhất','ESL_FAST_BEGINNER_1_078.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,78) */
+	('Ronald is the worst student','Ronald là học sinh tệ nhất lớp','00:00:00.380','00:00:03.540','esl-fast-beginner-1-78'),
+	('He does not do his homework','Cậu ấy không làm bài tập về nhà','00:00:04.060','00:00:06.480','esl-fast-beginner-1-78'),
+	('Instead, he plays video games','Thay vào đó, cậu ấy chơi game','00:00:07.000','00:00:10.200','esl-fast-beginner-1-78'),
+	('His teacher yells at him','Giáo viên mắng cậu ấy','00:00:10.680','00:00:12.820','esl-fast-beginner-1-78'),
+	('Ronald does not care','Ronald chẳng quan tâm','00:00:13.380','00:00:15.379','esl-fast-beginner-1-78'),
+	('He listens to music when the teacher is talking','Cậu ấy nghe nhạc trong khi giáo viên đang giảng bài','00:00:15.920','00:00:19.460','esl-fast-beginner-1-78'),
+	('He does not study','Cậu ấy không chịu học hành','00:00:19.980','00:00:21.720','esl-fast-beginner-1-78'),
+	('His test scores are bad','Điểm kiểm tra của cậu ấy rất tệ','00:00:22.180','00:00:24.440','esl-fast-beginner-1-78'),
+	('He is mean to his classmates, too','Cậu ấy còn đối xử không tốt với các bạn cùng lớp','00:00:24.640','00:00:27.920','esl-fast-beginner-1-78'),
+	('Charles asks to borrow his eraser','Charles xin mượn cục tẩy của cậu ấy','00:00:28.460','00:00:31.840','esl-fast-beginner-1-78'),
+	('Ronald hits him','Ronald đánh cậu ấy','00:00:32.300','00:00:34.000','esl-fast-beginner-1-78'),
+
+	/* (UUID(),'esl-fast-beginner-1-79','Bad Manners','Cư xử không đúng mực','ESL_FAST_BEGINNER_1_079.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,79) */
+	('She has bad manners','Cô ấy cư xử rất thiếu lịch sự','00:00:00.320','00:00:02.980','esl-fast-beginner-1-79'),
+	('She never shows any respect','Cô ấy chẳng bao giờ biết tôn trọng người khác','00:00:03.440','00:00:06.100','esl-fast-beginner-1-79'),
+	('Her mother buys her a present','Mẹ mua cho cô ấy một món quà','00:00:06.700','00:00:08.940','esl-fast-beginner-1-79'),
+	('She does not say thank you','Cô ấy chẳng nói lời cảm ơn','00:00:09.680','00:00:11.980','esl-fast-beginner-1-79'),
+	('Her grandparents come to her house','Ông bà đến nhà thăm cô ấy','00:00:12.620','00:00:15.580','esl-fast-beginner-1-79'),
+	('She asks them to leave','Cô ấy còn bảo ông bà về đi','00:00:16.140','00:00:18.320','esl-fast-beginner-1-79'),
+	('Her classmate has something she wants','Một bạn cùng lớp có thứ mà cô ấy muốn','00:00:18.640','00:00:22.000','esl-fast-beginner-1-79'),
+	('She steals it','Cô ấy lấy trộm món đồ đó','00:00:22.320','00:00:24.060','esl-fast-beginner-1-79'),
+	('Her dad asks her for a favor','Bố nhờ cô ấy làm giúp một việc','00:00:24.540','00:00:27.360','esl-fast-beginner-1-79'),
+	('She does not do it','Cô ấy không chịu làm','00:00:27.660','00:00:29.800','esl-fast-beginner-1-79'),
+
+	/* (UUID(),'esl-fast-beginner-1-80','Transferring to Another Class','Chuyển sang lớp khác','ESL_FAST_BEGINNER_1_080.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,80) */
+	('He does not like Ms. Garcia, his math teacher','Cậu ấy không thích cô Garcia, giáo viên môn Toán của mình','00:00:00.060','00:00:04.760','esl-fast-beginner-1-80'),
+	('She always separates him from his classmates','Cô ấy luôn tách cậu ấy khỏi các bạn cùng lớp','00:00:05.500','00:00:08.640','esl-fast-beginner-1-80'),
+	('She always gives him a lot of homework','Cô ấy luôn giao cho cậu ấy rất nhiều bài tập về nhà','00:00:09.180','00:00:12.320','esl-fast-beginner-1-80'),
+	('She always calls him mean names','Cô ấy luôn gọi cậu ấy bằng những cái tên khó nghe','00:00:12.820','00:00:15.960','esl-fast-beginner-1-80'),
+	('She never helps him','Cô ấy chẳng bao giờ giúp đỡ cậu ấy','00:00:16.580','00:00:18.440','esl-fast-beginner-1-80'),
+	('He drops out of Ms. Garcia\'s class','Cậu ấy bỏ học môn của cô Garcia','00:00:18.920','00:00:21.940','esl-fast-beginner-1-80'),
+	('He transfers to Ms. Moore\'s class','Cậu ấy chuyển sang lớp của cô Moore','00:00:22.320','00:00:25.580','esl-fast-beginner-1-80'),
+	('She is much better','Cô ấy tốt hơn nhiều','00:00:25.980','00:00:27.580','esl-fast-beginner-1-80');
+
+/*=====================================================================================================================================================================================================================================================*/
+
+INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
+	/* (UUID(),'esl-fast-beginner-1-81','Good Manners','Cư xử lịch sự','ESL_FAST_BEGINNER_1_081.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,81) */
+	('Michelle eats with her family','Michelle ăn cơm cùng gia đình','00:00:00.000','00:00:02.760','esl-fast-beginner-1-81'),
+	('She wants to eat peas','Cô bé muốn ăn đậu Hà Lan','00:00:03.180','00:00:05.140','esl-fast-beginner-1-81'),
+	('She asks her mom, "Will you please pass me the peas?"','Cô bé hỏi mẹ: "Mẹ lấy đậu Hà Lan đưa cho con được không ạ?"','00:00:05.700','00:00:10.520','esl-fast-beginner-1-81'),
+	('Mom smiles','Mẹ mỉm cười','00:00:11.180','00:00:12.840','esl-fast-beginner-1-81'),
+	('She gives her the plate','Mẹ đưa đĩa đậu cho cô bé','00:00:13.240','00:00:15.220','esl-fast-beginner-1-81'),
+	('Michelle gets a gift from her dad','Michelle nhận được một món quà từ bố','00:00:15.740','00:00:18.580','esl-fast-beginner-1-81'),
+	('She thanks him','Cô bé cảm ơn bố','00:00:18.820','00:00:20.440','esl-fast-beginner-1-81'),
+	('Michelle sees a classmate cry','Michelle thấy một bạn cùng lớp đang khóc','00:00:21.040','00:00:23.600','esl-fast-beginner-1-81'),
+	('She gives the classmate a tissue','Cô bé đưa cho bạn ấy một tờ khăn giấy','00:00:23.920','00:00:26.360','esl-fast-beginner-1-81'),
+	('Michelle has really good manners','Michelle là một cô bé rất lịch sự','00:00:27.160','00:00:29.780','esl-fast-beginner-1-81'),
+
+	/* (UUID(),'esl-fast-beginner-1-82','The Trouble with Braces','Rắc rối với niềng răng','ESL_FAST_BEGINNER_1_082.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,82) */
+	('He has bad teeth','Răng của cậu ấy không được đẹp','00:00:00.000','00:00:02.540','esl-fast-beginner-1-82'),
+	('He gets braces','Cậu ấy đeo niềng răng','00:00:02.780','00:00:04.320','esl-fast-beginner-1-82'),
+	('He goes to school','Cậu ấy đi học','00:00:04.760','00:00:06.800','esl-fast-beginner-1-82'),
+	('He starts to talk','Cậu ấy bắt đầu nói chuyện','00:00:07.220','00:00:09.140','esl-fast-beginner-1-82'),
+	('His classmates see his braces','Các bạn cùng lớp nhìn thấy cậu ấy niềng răng','00:00:09.740','00:00:12.440','esl-fast-beginner-1-82'),
+	('They make fun of him','Họ trêu chọc cậu ấy','00:00:13.120','00:00:14.940','esl-fast-beginner-1-82'),
+	('He feels sad','Cậu ấy cảm thấy buồn','00:00:15.440','00:00:17.320','esl-fast-beginner-1-82'),
+	('He closes his mouth','Cậu ấy ngậm miệng lại','00:00:17.740','00:00:19.900','esl-fast-beginner-1-82'),
+	('He stops talking','Cậu ấy không nói chuyện nữa','00:00:20.340','00:00:22.420','esl-fast-beginner-1-82'),
+	('His teacher asks him a question','Giáo viên hỏi cậu ấy một câu hỏi','00:00:22.880','00:00:25.740','esl-fast-beginner-1-82'),
+	('He decides to talk','Cậu ấy quyết định cứ nói chuyện','00:00:26.100','00:00:28.280','esl-fast-beginner-1-82'),
+	('He does not care if people make fun of him anymore','Cậu ấy không còn quan tâm nếu mọi người trêu chọc mình nữa','00:00:28.440','00:00:32.380','esl-fast-beginner-1-82'),
+
+	/* (UUID(),'esl-fast-beginner-1-83','Lost on the First Day','Lạc trong ngày đầu tiên','ESL_FAST_BEGINNER_1_083.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,83) */
+	('It is the first day of high school','Hôm nay là ngày đầu tiên cô ấy học cấp ba','00:00:00.060','00:00:03.340','esl-fast-beginner-1-83'),
+	('She is completely lost','Cô ấy hoàn toàn không biết đường','00:00:03.740','00:00:05.960','esl-fast-beginner-1-83'),
+	('She has never been here before','Cô ấy chưa từng đến đây bao giờ','00:00:06.400','00:00:08.620','esl-fast-beginner-1-83'),
+	('Her first class is Spanish','Tiết học đầu tiên của cô ấy là tiếng Tây Ban Nha','00:00:09.140','00:00:11.480','esl-fast-beginner-1-83'),
+	('The class is in the A building','Lớp học ở tòa nhà A','00:00:11.880','00:00:14.720','esl-fast-beginner-1-83'),
+	('A staff member sees her wandering around','Một nhân viên thấy cô ấy đang đi loanh quanh','00:00:15.179','00:00:18.500','esl-fast-beginner-1-83'),
+	('He gives her a map','Anh ấy đưa cho cô ấy một tấm bản đồ','00:00:18.980','00:00:20.840','esl-fast-beginner-1-83'),
+	('She looks at it','Cô ấy nhìn vào tấm bản đồ','00:00:21.260','00:00:22.720','esl-fast-beginner-1-83'),
+	('She finds her Spanish class','Cô ấy tìm được lớp tiếng Tây Ban Nha của mình','00:00:23.080','00:00:25.460','esl-fast-beginner-1-83'),
+
+	/* (UUID(),'esl-fast-beginner-1-84','Stealing is Bad','Ăn cắp là xấu','ESL_FAST_BEGINNER_1_084.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,84) */
+	('Donna and her uncle go to a school supplies shop','Donna và chú đi đến cửa hàng bán đồ dùng học tập','00:00:00.060','00:00:05.140','esl-fast-beginner-1-84'),
+	('Donna sees a pink eraser','Donna nhìn thấy một cục tẩy màu hồng','00:00:05.400','00:00:07.760','esl-fast-beginner-1-84'),
+	('She likes it','Cô bé rất thích nó','00:00:08.180','00:00:09.640','esl-fast-beginner-1-84'),
+	('She does not have any money','Cô bé không có tiền','00:00:09.940','00:00:12.040','esl-fast-beginner-1-84'),
+	('She puts the eraser in her pocket','Cô bé bỏ cục tẩy vào túi','00:00:12.440','00:00:15.140','esl-fast-beginner-1-84'),
+	('She runs out of the store','Cô bé chạy ra khỏi cửa hàng','00:00:15.740','00:00:17.960','esl-fast-beginner-1-84'),
+	('Her uncle sees her','Chú của cô bé nhìn thấy','00:00:18.500','00:00:20.340','esl-fast-beginner-1-84'),
+	('He tells her that stealing is bad','Chú nói với cô bé rằng ăn cắp là việc xấu','00:00:20.640','00:00:23.620','esl-fast-beginner-1-84'),
+	('He puts the eraser back','Chú đem cục tẩy trả lại chỗ cũ','00:00:23.780','00:00:26.000','esl-fast-beginner-1-84'),
+	('He makes Donna apologize to the manager','Chú bắt Donna xin lỗi người quản lý','00:00:26.220','00:00:29.380','esl-fast-beginner-1-84'),
+
+	/* (UUID(),'esl-fast-beginner-1-85','Picking Her Up','Đón cô ấy','ESL_FAST_BEGINNER_1_085.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,85) */
+	('He is talking to his friends','Anh ấy đang nói chuyện với bạn bè','00:00:00.000','00:00:03.359','esl-fast-beginner-1-85'),
+	('His cell phone rings','Điện thoại của anh ấy reo','00:00:03.200','00:00:04.980','esl-fast-beginner-1-85'),
+	('He answers it','Anh ấy nghe máy','00:00:05.220','00:00:06.840','esl-fast-beginner-1-85'),
+	('It is his sister','Là em gái anh ấy gọi','00:00:07.080','00:00:08.800','esl-fast-beginner-1-85'),
+	('She asks if he could pick her up at school','Cô bé hỏi anh có thể đến trường đón cô bé được không','00:00:09.120','00:00:12.600','esl-fast-beginner-1-85'),
+	('He tells her to wait','Anh ấy bảo cô bé đợi một chút','00:00:12.900','00:00:14.840','esl-fast-beginner-1-85'),
+	('He gets off the couch','Anh ấy đứng dậy khỏi ghế sofa','00:00:15.100','00:00:17.000','esl-fast-beginner-1-85'),
+	('He tells his friends to leave','Anh ấy bảo bạn bè về trước','00:00:17.280','00:00:19.660','esl-fast-beginner-1-85'),
+	('He drives his car','Anh ấy lái xe đi','00:00:19.860','00:00:21.880','esl-fast-beginner-1-85'),
+	('He parks on the street','Anh ấy đỗ xe bên đường','00:00:22.100','00:00:24.460','esl-fast-beginner-1-85'),
+	('His sister gets in the car','Em gái anh ấy lên xe','00:00:24.880','00:00:27.040','esl-fast-beginner-1-85');
+
+/*=====================================================================================================================================================================================================================================================*/
+
+INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
+	/* (UUID(),'esl-fast-beginner-1-86','Saving the Princess','Giải cứu công chúa','ESL_FAST_BEGINNER_1_086.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,86) */
+	('The princess is stuck in the tower','Công chúa bị mắc kẹt trong tòa tháp','00:00:00.060','00:00:03.000','esl-fast-beginner-1-86'),
+	('A dragon will eat her soon','Một con rồng sắp ăn thịt cô ấy','00:00:03.100','00:00:05.760','esl-fast-beginner-1-86'),
+	('The king and queen are sad','Nhà vua và hoàng hậu rất buồn','00:00:05.900','00:00:08.920','esl-fast-beginner-1-86'),
+	('They offer to give money to the person who saves her','Họ hứa sẽ thưởng tiền cho người cứu được cô ấy','00:00:09.220','00:00:13.100','esl-fast-beginner-1-86'),
+	('They put up posters around town','Họ dán áp phích khắp thị trấn','00:00:13.460','00:00:16.560','esl-fast-beginner-1-86'),
+	('A poor farmer sees it','Một người nông dân nghèo nhìn thấy tờ thông báo','00:00:16.880','00:00:19.260','esl-fast-beginner-1-86'),
+	('He climbs up the tower','Anh ấy trèo lên tòa tháp','00:00:19.540','00:00:21.520','esl-fast-beginner-1-86'),
+	('He gets the princess','Anh ấy cứu được công chúa','00:00:21.840','00:00:23.440','esl-fast-beginner-1-86'),
+	('He takes her to his horse','Anh ấy đưa cô ấy đến chỗ con ngựa của mình','00:00:23.800','00:00:25.860','esl-fast-beginner-1-86'),
+	('They ride back to town','Họ cưỡi ngựa trở về thị trấn','00:00:25.960','00:00:27.980','esl-fast-beginner-1-86'),
+
+	/* (UUID(),'esl-fast-beginner-1-87','Make It Hot, Make It Cold','Làm nóng lên, làm lạnh đi','ESL_FAST_BEGINNER_1_087.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,87) */
+	('He wants to eat some pizza','Anh ấy muốn ăn một ít pizza','00:00:00.000','00:00:02.680','esl-fast-beginner-1-87'),
+	('He opens the refrigerator','Anh ấy mở tủ lạnh','00:00:03.080','00:00:05.040','esl-fast-beginner-1-87'),
+	('He reaches for the frozen pizza','Anh ấy lấy chiếc pizza đông lạnh','00:00:05.700','00:00:08.080','esl-fast-beginner-1-87'),
+	('It is cold','Nó lạnh ngắt','00:00:08.340','00:00:09.760','esl-fast-beginner-1-87'),
+	('He wants it to be hot','Anh ấy muốn nó nóng lên','00:00:09.900','00:00:12.140','esl-fast-beginner-1-87'),
+	('He puts it in the microwave','Anh ấy cho nó vào lò vi sóng','00:00:12.240','00:00:14.380','esl-fast-beginner-1-87'),
+	('He heats the pizza for five minutes','Anh ấy hâm nóng pizza trong năm phút','00:00:14.980','00:00:18.480','esl-fast-beginner-1-87'),
+	('His sister wants to drink cold water','Em gái anh ấy muốn uống nước lạnh','00:00:18.900','00:00:21.720','esl-fast-beginner-1-87'),
+	('She gets a bottle of water from the kitchen','Cô bé lấy một chai nước từ trong bếp','00:00:22.040','00:00:24.780','esl-fast-beginner-1-87'),
+	('It is warm','Nó còn ấm','00:00:25.020','00:00:26.340','esl-fast-beginner-1-87'),
+	('She puts it in the refrigerator','Cô bé cho chai nước vào tủ lạnh','00:00:26.560','00:00:28.460','esl-fast-beginner-1-87'),
+
+	/* (UUID(),'esl-fast-beginner-1-88','A Good Shower','Một buổi tắm sảng khoái','ESL_FAST_BEGINNER_1_088.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,88) */
+	('She goes to the market','Cô ấy đi chợ','00:00:00.000','00:00:02.180','esl-fast-beginner-1-88'),
+	('She buys ingredients for lunch and dinner','Cô ấy mua nguyên liệu cho bữa trưa và bữa tối','00:00:02.680','00:00:06.100','esl-fast-beginner-1-88'),
+	('She goes to the pharmacy','Cô ấy đi đến hiệu thuốc','00:00:06.520','00:00:08.320','esl-fast-beginner-1-88'),
+	('She picks up her medicine','Cô ấy đến lấy thuốc','00:00:08.560','00:00:10.840','esl-fast-beginner-1-88'),
+	('She goes to school','Cô ấy đi học','00:00:11.440','00:00:13.200','esl-fast-beginner-1-88'),
+	('She takes three tests','Cô ấy làm ba bài kiểm tra','00:00:13.640','00:00:16.120','esl-fast-beginner-1-88'),
+	('She goes to the park','Cô ấy đi đến công viên','00:00:16.460','00:00:18.460','esl-fast-beginner-1-88'),
+	('She runs ten laps','Cô ấy chạy mười vòng','00:00:18.860','00:00:21.160','esl-fast-beginner-1-88'),
+	('She finally goes home','Cuối cùng cô ấy cũng về nhà','00:00:21.500','00:00:23.860','esl-fast-beginner-1-88'),
+	('She is tired and sweaty','Cô ấy mệt và mồ hôi nhễ nhại','00:00:24.080','00:00:26.680','esl-fast-beginner-1-88'),
+	('What a day!','Một ngày thật dài!','00:00:27.080','00:00:28.760','esl-fast-beginner-1-88'),
+	('She takes a cold shower','Cô ấy tắm nước lạnh','00:00:28.980','00:00:31.459','esl-fast-beginner-1-88'),
+	('She feels good','Cô ấy cảm thấy dễ chịu','00:00:31.860','00:00:33.480','esl-fast-beginner-1-88'),
+
+	/* (UUID(),'esl-fast-beginner-1-89','The Wrong Color','Màu sắc bị chọn sai','ESL_FAST_BEGINNER_1_089.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,89) */
+	('He waits for his package','Anh ấy chờ bưu kiện của mình','00:00:00.130','00:00:02.650','esl-fast-beginner-1-89'),
+	('He is excited','Anh ấy rất háo hức','00:00:03.090','00:00:04.590','esl-fast-beginner-1-89'),
+	('He will finally get his T-shirt today','Cuối cùng hôm nay anh ấy cũng sẽ nhận được chiếc áo phông của mình','00:00:04.930','00:00:08.190','esl-fast-beginner-1-89'),
+	('He waits outside his house','Anh ấy đứng chờ bên ngoài nhà','00:00:08.550','00:00:11.050','esl-fast-beginner-1-89'),
+	('The mail carrier gives him the package','Nhân viên giao thư đưa bưu kiện cho anh ấy','00:00:11.370','00:00:14.410','esl-fast-beginner-1-89'),
+	('He opens it up','Anh ấy mở bưu kiện ra','00:00:14.870','00:00:16.790','esl-fast-beginner-1-89'),
+	('The T-shirt is red','Chiếc áo phông màu đỏ','00:00:17.110','00:00:19.450','esl-fast-beginner-1-89'),
+	('He ordered the blue one','Anh ấy đã đặt chiếc màu xanh','00:00:19.770','00:00:22.490','esl-fast-beginner-1-89'),
+	('He is upset','Anh ấy rất bực mình','00:00:22.890','00:00:24.670','esl-fast-beginner-1-89'),
+	('He calls the company','Anh ấy gọi điện cho công ty','00:00:24.870','00:00:26.930','esl-fast-beginner-1-89'),
+	('The manager apologizes','Quản lý xin lỗi anh ấy','00:00:27.450','00:00:30.130','esl-fast-beginner-1-89'),
+	('He will send the blue T-shirt for free','Họ sẽ gửi chiếc áo phông màu xanh cho anh ấy miễn phí','00:00:30.130','00:00:33.670','esl-fast-beginner-1-89'),
+
+	/* (UUID(),'esl-fast-beginner-1-90','Forgetting Her Glasses','Quên kính của cô ấy','ESL_FAST_BEGINNER_1_090.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,90) */
+	('She goes to English class','Cô ấy đến lớp tiếng Anh','00:00:00.580','00:00:03.260','esl-fast-beginner-1-90'),
+	('She reaches into her backpack','Cô ấy thò tay vào ba lô','00:00:03.480','00:00:05.540','esl-fast-beginner-1-90'),
+	('Her glasses are not inside','Kính của cô ấy không có trong đó','00:00:06.060','00:00:08.460','esl-fast-beginner-1-90'),
+	('She cannot see anything','Cô ấy chẳng nhìn thấy gì cả','00:00:08.960','00:00:11.140','esl-fast-beginner-1-90'),
+	('Her teacher writes the sentence: "The cat chases the ball"','Giáo viên viết câu: "Con mèo đuổi theo quả bóng"','00:00:11.600','00:00:16.560','esl-fast-beginner-1-90'),
+	('The teacher asks the students to copy this sentence','Giáo viên yêu cầu học sinh chép lại câu này','00:00:16.900','00:00:20.980','esl-fast-beginner-1-90'),
+	('She squints','Cô ấy nheo mắt','00:00:21.520','00:00:22.980','esl-fast-beginner-1-90'),
+	('She still cannot see the sentence','Cô ấy vẫn không nhìn rõ câu đó','00:00:23.260','00:00:25.680','esl-fast-beginner-1-90'),
+	('She sits closer to the board','Cô ấy ngồi gần bảng hơn','00:00:26.140','00:00:28.800','esl-fast-beginner-1-90'),
+	('She will never forget her glasses again','Cô ấy sẽ không bao giờ quên kính nữa','00:00:28.300','00:00:32.040','esl-fast-beginner-1-90');
+
+/*=====================================================================================================================================================================================================================================================*/
+
+INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
+	/* (UUID(),'esl-fast-beginner-1-91','Quitting His Job','Nghỉ việc','ESL_FAST_BEGINNER_1_091.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,91) */
+	('He works at a fast-food restaurant','Anh ấy làm việc tại một nhà hàng đồ ăn nhanh','00:00:00.130','00:00:03.870','esl-fast-beginner-1-91'),
+	('He hates his job','Anh ấy ghét công việc của mình','00:00:03.650','00:00:06.050','esl-fast-beginner-1-91'),
+	('He flips burgers','Anh ấy lật những miếng bánh burger','00:00:06.310','00:00:08.010','esl-fast-beginner-1-91'),
+	('He cuts potatoes','Anh ấy cắt khoai tây','00:00:08.110','00:00:10.190','esl-fast-beginner-1-91'),
+	('He pours soda in cups','Anh ấy rót nước ngọt vào cốc','00:00:10.490','00:00:13.530','esl-fast-beginner-1-91'),
+	('He thinks doing these things is boring','Anh ấy thấy làm những việc này thật chán','00:00:13.670','00:00:16.910','esl-fast-beginner-1-91'),
+	('He does not like talking to customers','Anh ấy không thích nói chuyện với khách hàng','00:00:17.270','00:00:20.270','esl-fast-beginner-1-91'),
+	('His boss, Susan Wright, is mean','Sếp của anh ấy, Susan Wright, rất khó tính','00:00:20.910','00:00:24.470','esl-fast-beginner-1-91'),
+	('She always makes him work extra hours','Bà ấy luôn bắt anh ấy làm thêm giờ','00:00:24.690','00:00:28.070','esl-fast-beginner-1-91'),
+	('He finally quits his job','Cuối cùng anh ấy cũng nghỉ việc','00:00:27.570','00:00:30.750','esl-fast-beginner-1-91'),
+
+	/* (UUID(),'esl-fast-beginner-1-92','Future Goals','Mục tiêu tương lai','ESL_FAST_BEGINNER_1_092.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,92) */
+	('She thinks about the future a lot','Cô ấy thường suy nghĩ rất nhiều về tương lai','00:00:00.060','00:00:03.319','esl-fast-beginner-1-92'),
+	('She wants to be a doctor','Cô ấy muốn trở thành bác sĩ','00:00:03.700','00:00:05.640','esl-fast-beginner-1-92'),
+	('Doctors have cool uniforms','Bác sĩ có những bộ đồng phục rất đẹp','00:00:06.280','00:00:08.740','esl-fast-beginner-1-92'),
+	('Doctors make people feel better','Bác sĩ giúp mọi người cảm thấy khỏe hơn','00:00:09.420','00:00:11.820','esl-fast-beginner-1-92'),
+	('Doctors make a lot of money','Bác sĩ kiếm được rất nhiều tiền','00:00:12.500','00:00:14.820','esl-fast-beginner-1-92'),
+	('She wants to live in Beverly Hills, California','Cô ấy muốn sống ở Beverly Hills, California','00:00:15.400','00:00:19.040','esl-fast-beginner-1-92'),
+	('The city is very clean','Thành phố đó rất sạch sẽ','00:00:19.640','00:00:21.820','esl-fast-beginner-1-92'),
+	('The houses there are nice','Những ngôi nhà ở đó rất đẹp','00:00:22.020','00:00:24.420','esl-fast-beginner-1-92'),
+	('She wants to get married and have kids, too','Cô ấy cũng muốn kết hôn và có con','00:00:24.820','00:00:28.280','esl-fast-beginner-1-92'),
+
+	/* (UUID(),'esl-fast-beginner-1-93','A Kind Stranger','Một người lạ tốt bụng','ESL_FAST_BEGINNER_1_093.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,93) */
+	('She walks across the street','Cô ấy đi bộ băng qua đường','00:00:00.000','00:00:02.820','esl-fast-beginner-1-93'),
+	('She has four boxes in her hand','Cô ấy cầm bốn chiếc hộp trên tay','00:00:03.160','00:00:05.920','esl-fast-beginner-1-93'),
+	('They are very heavy','Chúng rất nặng','00:00:06.100','00:00:07.900','esl-fast-beginner-1-93'),
+	('She falls down','Cô ấy bị ngã','00:00:08.280','00:00:10.080','esl-fast-beginner-1-93'),
+	('She drops the boxes','Cô ấy làm rơi những chiếc hộp','00:00:10.460','00:00:12.280','esl-fast-beginner-1-93'),
+	('A stranger helps her','Một người lạ đến giúp cô ấy','00:00:12.760','00:00:14.900','esl-fast-beginner-1-93'),
+	('He asks if she is okay','Anh ấy hỏi cô ấy có sao không','00:00:15.220','00:00:17.820','esl-fast-beginner-1-93'),
+	('She nods her head','Cô ấy gật đầu','00:00:18.220','00:00:20.080','esl-fast-beginner-1-93'),
+	('He picks up her boxes','Anh ấy nhặt những chiếc hộp lên giúp cô ấy','00:00:20.600','00:00:22.540','esl-fast-beginner-1-93'),
+	('He carries them to her car','Anh ấy mang chúng đến xe của cô ấy','00:00:22.960','00:00:25.560','esl-fast-beginner-1-93'),
+	('She says, thank you','Cô ấy nói: Cảm ơn anh','00:00:25.960','00:00:28.120','esl-fast-beginner-1-93'),
+
+	/* (UUID(),'esl-fast-beginner-1-94','Excited for Thanksgiving','Háo hức chờ Lễ Tạ Ơn','ESL_FAST_BEGINNER_1_094.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,94) */
+	('He loves Thanksgiving','Cậu bé rất thích Lễ Tạ Ơn','00:00:00.400','00:00:02.420','esl-fast-beginner-1-94'),
+	('He looks at his calendar','Cậu bé nhìn vào tờ lịch của mình','00:00:03.180','00:00:04.780','esl-fast-beginner-1-94'),
+	('He gets out his pen','Cậu bé lấy bút ra','00:00:05.700','00:00:07.339','esl-fast-beginner-1-94'),
+	('He crosses out the days that have passed','Cậu bé gạch bỏ những ngày đã qua','00:00:08.220','00:00:11.000','esl-fast-beginner-1-94'),
+	('He puts an X through them','Cậu bé đánh dấu X lên những ngày đó','00:00:11.720','00:00:14.120','esl-fast-beginner-1-94'),
+	('There are only two more days until Thanksgiving','Chỉ còn hai ngày nữa là đến Lễ Tạ Ơn','00:00:15.000','00:00:18.340','esl-fast-beginner-1-94'),
+	('He is so happy','Cậu bé vui lắm','00:00:19.440','00:00:20.820','esl-fast-beginner-1-94'),
+	('He is excited to eat turkey','Cậu bé háo hức được ăn thịt gà tây','00:00:21.620','00:00:23.760','esl-fast-beginner-1-94'),
+	('He is excited to see his entire family','Cậu bé háo hức được gặp mặt cả gia đình','00:00:24.620','00:00:27.540','esl-fast-beginner-1-94'),
+
+	/* (UUID(),'esl-fast-beginner-1-95','A Sad Book and a Happy Book','Một cuốn sách buồn và một cuốn sách vui','ESL_FAST_BEGINNER_1_095.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,95) */
+	('He reads a book','Cậu bé đọc một cuốn sách','00:00:00.590','00:00:02.350','esl-fast-beginner-1-95'),
+	('The main character is a wolf','Nhân vật chính là một con sói','00:00:03.030','00:00:04.910','esl-fast-beginner-1-95'),
+	('It tries to find its family','Nó cố gắng tìm lại gia đình của mình','00:00:05.610','00:00:07.890','esl-fast-beginner-1-95'),
+	('It travels all over the world','Nó đi khắp nơi trên thế giới','00:00:08.830','00:00:11.310','esl-fast-beginner-1-95'),
+	('In the end, the wolf dies','Cuối cùng, con sói chết','00:00:12.230','00:00:14.790','esl-fast-beginner-1-95'),
+	('This book is too sad','Cuốn sách này buồn quá','00:00:15.490','00:00:17.250','esl-fast-beginner-1-95'),
+	('He reads another one','Cậu bé đọc thêm một cuốn khác','00:00:18.010','00:00:19.430','esl-fast-beginner-1-95'),
+	('The main character is a girl','Nhân vật chính là một cô bé','00:00:20.030','00:00:22.370','esl-fast-beginner-1-95'),
+	('She wants to win a swimming competition','Cô bé muốn giành chiến thắng trong một cuộc thi bơi','00:00:23.150','00:00:25.650','esl-fast-beginner-1-95'),
+	('She practices a lot','Cô bé luyện tập rất nhiều','00:00:26.550','00:00:28.250','esl-fast-beginner-1-95'),
+	('In the end, she gets first place','Cuối cùng, cô bé giành được vị trí thứ nhất','00:00:28.850','00:00:32.010','esl-fast-beginner-1-95'),
+	('He likes this book','Cậu bé thích cuốn sách này','00:00:32.670','00:00:33.930','esl-fast-beginner-1-95');
+
+/*=====================================================================================================================================================================================================================================================*/
+
+INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
+	/* (UUID(),'esl-fast-beginner-1-96','The Water Slide at the Amusement Park','Cầu trượt nước ở công viên giải trí','ESL_FAST_BEGINNER_1_096.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,96) */
+	('Betty and Brian go to the amusement park','Betty và Brian đi đến công viên giải trí','00:00:00.460','00:00:04.100','esl-fast-beginner-1-96'),
+	('It is hot and sunny','Trời nóng và nắng','00:00:04.580','00:00:06.860','esl-fast-beginner-1-96'),
+	('They want to cool off','Họ muốn làm mát người','00:00:07.620','00:00:09.320','esl-fast-beginner-1-96'),
+	('They see a water slide','Họ nhìn thấy một cầu trượt nước','00:00:10.000','00:00:11.900','esl-fast-beginner-1-96'),
+	('There is a long line','Có một hàng người xếp hàng rất dài','00:00:12.520','00:00:14.340','esl-fast-beginner-1-96'),
+	('Everyone wants to get wet','Ai cũng muốn được ướt người','00:00:15.360','00:00:17.420','esl-fast-beginner-1-96'),
+	('Betty and Brian finally reach the front of the line','Cuối cùng Betty và Brian cũng đến được đầu hàng','00:00:18.340','00:00:21.700','esl-fast-beginner-1-96'),
+	('They get into their bathing suits','Họ mặc đồ bơi vào','00:00:22.500','00:00:24.400','esl-fast-beginner-1-96'),
+	('They go down the slide','Họ trượt xuống cầu trượt','00:00:24.980','00:00:26.720','esl-fast-beginner-1-96'),
+	('They are completely wet','Họ ướt sũng từ đầu đến chân','00:00:27.440','00:00:29.420','esl-fast-beginner-1-96'),
+
+	/* (UUID(),'esl-fast-beginner-1-97','Keeping a Diary','Viết nhật ký','ESL_FAST_BEGINNER_1_097.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,97) */
+	('Dorothy has a diary','Dorothy có một cuốn nhật ký','00:00:00.590','00:00:02.750','esl-fast-beginner-1-97'),
+	('It has a pink cover','Cuốn nhật ký có bìa màu hồng','00:00:03.690','00:00:05.490','esl-fast-beginner-1-97'),
+	('It is four inches in length','Cuốn nhật ký dài bốn inch','00:00:06.470','00:00:08.390','esl-fast-beginner-1-97'),
+	('It is three inches in width','Cuốn nhật ký rộng ba inch','00:00:08.830','00:00:11.050','esl-fast-beginner-1-97'),
+	('It has two hundred pages','Cuốn nhật ký có hai trăm trang','00:00:11.930','00:00:13.830','esl-fast-beginner-1-97'),
+	('There are lines on the pages','Các trang giấy có những dòng kẻ','00:00:14.990','00:00:17.050','esl-fast-beginner-1-97'),
+	('She writes in it every day','Cô bé viết nhật ký mỗi ngày','00:00:18.270','00:00:20.290','esl-fast-beginner-1-97'),
+	('She writes about how she is feeling','Cô bé viết về cảm xúc của mình','00:00:21.110','00:00:23.830','esl-fast-beginner-1-97'),
+	('She writes about what happened in school','Cô bé viết về những chuyện xảy ra ở trường','00:00:24.510','00:00:27.000','esl-fast-beginner-1-97'),
+	('Sometimes, she draws in her diary','Đôi khi, cô bé còn vẽ vào nhật ký','00:00:27.170','00:00:31.170','esl-fast-beginner-1-97'),
+
+	/* (UUID(),'esl-fast-beginner-1-98','Trying on Shoes','Thử giày','ESL_FAST_BEGINNER_1_098.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,98) */
+	('He goes to a shoe store','Cậu bé đi đến một cửa hàng giày','00:00:00.340','00:00:02.840','esl-fast-beginner-1-98'),
+	('He sees a pair he likes','Cậu bé thấy một đôi giày mà mình thích','00:00:03.360','00:00:05.640','esl-fast-beginner-1-98'),
+	('It is black and white','Đôi giày có màu đen và trắng','00:00:06.300','00:00:08.060','esl-fast-beginner-1-98'),
+	('He tries it on','Cậu bé mang thử đôi giày','00:00:08.700','00:00:10.020','esl-fast-beginner-1-98'),
+	('It is too tight','Đôi giày chật quá','00:00:10.620','00:00:12.160','esl-fast-beginner-1-98'),
+	('He asks if there is a bigger size','Cậu bé hỏi xem có cỡ lớn hơn không','00:00:12.980','00:00:15.700','esl-fast-beginner-1-98'),
+	('There is not','Không có cỡ lớn hơn','00:00:16.440','00:00:17.560','esl-fast-beginner-1-98'),
+	('He looks at the other shoes','Cậu bé xem những đôi giày khác','00:00:18.280','00:00:20.260','esl-fast-beginner-1-98'),
+	('He sees another pair he likes','Cậu bé thấy một đôi khác mà mình thích','00:00:21.040','00:00:23.400','esl-fast-beginner-1-98'),
+	('It is bright yellow','Đôi giày có màu vàng tươi','00:00:23.860','00:00:25.460','esl-fast-beginner-1-98'),
+	('He tries it on','Cậu bé mang thử đôi giày','00:00:26.280','00:00:27.500','esl-fast-beginner-1-98'),
+	('It fits perfectly','Đôi giày vừa chân hoàn hảo','00:00:27.600','00:00:30.060','esl-fast-beginner-1-98'),
+
+	/* (UUID(),'esl-fast-beginner-1-99','A Lot of Pants','Rất nhiều quần','ESL_FAST_BEGINNER_1_099.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-1',1,0,99) */
+	('She has a lot of pants','Cô bé có rất nhiều quần','00:00:00.400','00:00:03.500','esl-fast-beginner-1-99'),
+	('She has two pairs of jeans','Cô bé có hai chiếc quần jean','00:00:04.240','00:00:06.440','esl-fast-beginner-1-99'),
+	('One of them is light blue','Một chiếc có màu xanh nhạt','00:00:07.120','00:00:09.080','esl-fast-beginner-1-99'),
+	('The other one is navy blue','Chiếc còn lại có màu xanh nước biển đậm','00:00:09.720','00:00:11.900','esl-fast-beginner-1-99'),
+	('She has two pairs of formal pants','Cô bé có hai chiếc quần dài để mặc trang trọng','00:00:12.840','00:00:15.440','esl-fast-beginner-1-99'),
+	('One of them is khaki','Một chiếc có màu kaki','00:00:16.200','00:00:17.980','esl-fast-beginner-1-99'),
+	('The other one is gray','Chiếc còn lại có màu xám','00:00:18.700','00:00:20.200','esl-fast-beginner-1-99'),
+	('She has two pairs of casual pants','Cô bé có hai chiếc quần mặc thường ngày','00:00:21.240','00:00:24.400','esl-fast-beginner-1-99'),
+	('One of them has flowers on it','Một chiếc có hình những bông hoa','00:00:25.020','00:00:27.220','esl-fast-beginner-1-99'),
+	('The other one has hearts on it','Chiếc còn lại có hình những trái tim','00:00:27.720','00:00:29.600','esl-fast-beginner-1-99'),
+	('She wears pants every day','Cô bé mặc quần mỗi ngày','00:00:29.700','00:00:32.900','esl-fast-beginner-1-99'),
+
+	/* (UUID(),'esl-fast-beginner-2-1','Going to School','Đi tới trường','ESL_FAST_BEGINNER_2_001.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-2',1,1,1) */
+	('He eats his breakfast','Cậu bé ăn bữa sáng','00:00:00.130','00:00:03.400','esl-fast-beginner-2-1'),
+	('He leaves his house','Cậu bé rời khỏi nhà','00:00:03.810','00:00:06.490','esl-fast-beginner-2-1'),
+	('He walks to the bus stop','Cậu bé đi bộ đến trạm xe buýt','00:00:07.310','00:00:10.230','esl-fast-beginner-2-1'),
+	('He waits five minutes','Cậu bé đợi năm phút','00:00:10.890','00:00:13.630','esl-fast-beginner-2-1'),
+	('He gets on the bus','Cậu bé lên xe buýt','00:00:14.410','00:00:16.650','esl-fast-beginner-2-1'),
+	('He puts in a quarter','Cậu bé bỏ vào một đồng 25 xu','00:00:17.410','00:00:20.110','esl-fast-beginner-2-1'),
+	('He sits down','Cậu bé ngồi xuống','00:00:21.410','00:00:23.270','esl-fast-beginner-2-1'),
+	('He looks outside the window','Cậu bé nhìn ra ngoài cửa sổ','00:00:24.090','00:00:26.770','esl-fast-beginner-2-1'),
+	('He sees his school','Cậu bé nhìn thấy trường của mình','00:00:26.470','00:00:30.210','esl-fast-beginner-2-1'),
+	('He walks to the bus door','Cậu bé đi đến cửa xe buýt','00:00:30.990','00:00:34.150','esl-fast-beginner-2-1'),
+	('He thanks the bus driver','Cậu bé cảm ơn tài xế xe buýt','00:00:34.850','00:00:37.490','esl-fast-beginner-2-1'),
+	('He exits the bus','Cậu bé xuống xe buýt','00:00:38.390','00:00:40.990','esl-fast-beginner-2-1');
+
+/*=====================================================================================================================================================================================================================================================*/
+
+INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
+	/* (UUID(),'esl-fast-beginner-2-2','A Nice Teacher','Một giáo viên tốt','ESL_FAST_BEGINNER_2_002.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-2',1,0,2) */
+	('She is a teacher','Cô là một giáo viên','00:00:00.720','00:00:02.220','esl-fast-beginner-2-2'),
+	('She teaches third graders','Cô dạy học sinh lớp Ba','00:00:02.300','00:00:05.220','esl-fast-beginner-2-2'),
+	('She says, Good morning every day','Ngày nào cô cũng chào: "Chào buổi sáng!"','00:00:06.360','00:00:10.100','esl-fast-beginner-2-2'),
+	('She asks her students how they are doing','Cô hỏi các em học sinh hôm nay thế nào','00:00:10.700','00:00:13.980','esl-fast-beginner-2-2'),
+	('The students love her','Các em học sinh rất yêu quý cô','00:00:14.940','00:00:17.200','esl-fast-beginner-2-2'),
+	('She is good at her job','Cô rất giỏi trong công việc của mình','00:00:18.440','00:00:20.780','esl-fast-beginner-2-2'),
+	('She does not get a lot of money','Cô không kiếm được nhiều tiền','00:00:21.900','00:00:24.420','esl-fast-beginner-2-2'),
+	('Teachers should get more money','Giáo viên nên được trả lương cao hơn','00:00:25.800','00:00:27.900','esl-fast-beginner-2-2'),
+	('They work so hard','Họ làm việc rất vất vả','00:00:27.900','00:00:31.419','esl-fast-beginner-2-2'),
+
+	/* (UUID(),'esl-fast-beginner-2-3','Harry Studies Everywhere','Harry học ở mọi nơi','ESL_FAST_BEGINNER_2_003.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-2',1,0,3) */
+	('Harry thinks his grades are very important','Harry nghĩ rằng điểm số của mình rất quan trọng','00:00:00.760','00:00:04.100','esl-fast-beginner-2-3'),
+	('He studies a lot','Cậu bé học rất chăm','00:00:04.100','00:00:07.100','esl-fast-beginner-2-3'),
+	('He studies everywhere he goes','Đi đến đâu cậu bé cũng học','00:00:07.880','00:00:11.000','esl-fast-beginner-2-3'),
+	('He studies at the library','Cậu bé học ở thư viện','00:00:11.540','00:00:14.200','esl-fast-beginner-2-3'),
+	('He studies when he goes out to eat','Ngay cả khi đi ăn ngoài, cậu bé cũng học','00:00:15.020','00:00:18.580','esl-fast-beginner-2-3'),
+	('He even studies when he goes to parties','Thậm chí khi đi dự tiệc, cậu bé vẫn học','00:00:19.300','00:00:23.060','esl-fast-beginner-2-3'),
+	('His friends make fun of him','Bạn bè trêu chọc cậu bé','00:00:24.020','00:00:26.640','esl-fast-beginner-2-3'),
+	('Harry does not care','Harry chẳng bận tâm','00:00:27.340','00:00:29.700','esl-fast-beginner-2-3'),
+	('He gets A\'s all the time','Lúc nào cậu bé cũng đạt điểm A','00:00:30.620','00:00:33.600','esl-fast-beginner-2-3'),
+
+	/* (UUID(),'esl-fast-beginner-2-4','The Coloring Book','Cuốn sách tô màu','ESL_FAST_BEGINNER_2_004.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-2',1,0,4) */
+	('She takes out her coloring book','Cô bé lấy quyển sách tô màu của mình ra','00:00:00.660','00:00:03.200','esl-fast-beginner-2-4'),
+	('She gets her crayons','Cô bé lấy hộp bút sáp màu của mình','00:00:03.300','00:00:06.200','esl-fast-beginner-2-4'),
+	('She opens the book','Cô bé mở quyển sách ra','00:00:07.119','00:00:09.400','esl-fast-beginner-2-4'),
+	('There is a drawing of a bunny dancing','Trong đó có một bức vẽ chú thỏ đang nhảy múa','00:00:10.340','00:00:14.000','esl-fast-beginner-2-4'),
+	('She colors the bunny with a brown crayon','Cô bé tô chú thỏ bằng màu nâu','00:00:14.900','00:00:19.180','esl-fast-beginner-2-4'),
+	('She colors the sky with a blue crayon','Cô bé tô bầu trời bằng màu xanh dương','00:00:19.860','00:00:24.220','esl-fast-beginner-2-4'),
+	('She colors the flower with a red crayon','Cô bé tô bông hoa bằng màu đỏ','00:00:24.720','00:00:29.400','esl-fast-beginner-2-4'),
+	('She rips the page out','Cô bé xé trang giấy đó ra','00:00:29.880','00:00:32.920','esl-fast-beginner-2-4'),
+	('She sticks it to the wall','Cô bé dán nó lên tường','00:00:33.400','00:00:36.220','esl-fast-beginner-2-4'),
+
+	/* (UUID(),'esl-fast-beginner-2-5','Picking a Book','Chọn một cuốn sách','ESL_FAST_BEGINNER_2_005.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-2',1,0,5) */
+	('She goes to the library','Cô bé đi đến thư viện','00:00:00.070','00:00:03.100','esl-fast-beginner-2-5'),
+	('She looks at the shelves','Cô bé nhìn lên các kệ sách','00:00:03.300','00:00:06.150','esl-fast-beginner-2-5'),
+	('She pulls out a book','Cô bé lấy một quyển sách xuống','00:00:06.630','00:00:09.310','esl-fast-beginner-2-5'),
+	('She opens the book','Cô bé mở quyển sách ra','00:00:09.950','00:00:12.390','esl-fast-beginner-2-5'),
+	('She reads the first page','Cô bé đọc trang đầu tiên','00:00:13.310','00:00:16.390','esl-fast-beginner-2-5'),
+	('She laughs','Cô bé bật cười','00:00:17.190','00:00:18.950','esl-fast-beginner-2-5'),
+	('The book is funny','Cuốn sách rất hài hước','00:00:19.810','00:00:21.650','esl-fast-beginner-2-5'),
+	('She goes to the checkout desk','Cô bé đến quầy làm thủ tục mượn sách','00:00:22.670','00:00:25.200','esl-fast-beginner-2-5'),
+	('She gives the book to the librarian','Cô bé đưa quyển sách cho thủ thư','00:00:25.200','00:00:29.690','esl-fast-beginner-2-5'),
+	('She takes out her library card','Cô bé lấy thẻ thư viện ra','00:00:30.590','00:00:33.990','esl-fast-beginner-2-5'),
+	('She gives it to the librarian','Cô bé đưa thẻ cho thủ thư','00:00:35.050','00:00:38.110','esl-fast-beginner-2-5'),
+	('The librarian gives her back the card and the book','Thủ thư trả lại thẻ và quyển sách cho cô bé','00:00:39.070','00:00:45.010','esl-fast-beginner-2-5'),
+
+	/* (UUID(),'esl-fast-beginner-2-6','Getting Ready to Study','Chuẩn bị học','ESL_FAST_BEGINNER_2_006.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-2',1,0,6) */
+	('He gets ready to study at the library','Cậu bé chuẩn bị học ở thư viện','00:00:00.010','00:00:04.300','esl-fast-beginner-2-6'),
+	('He puts his science textbook in his backpack','Cậu bé bỏ sách giáo khoa môn Khoa học vào ba lô','00:00:04.400','00:00:09.270','esl-fast-beginner-2-6'),
+	('He puts his pencils and pens in his backpack','Cậu bé bỏ bút chì và bút mực vào ba lô','00:00:10.550','00:00:15.290','esl-fast-beginner-2-6'),
+	('He puts an eraser in his backpack','Cậu bé bỏ một cục tẩy vào ba lô','00:00:16.770','00:00:20.210','esl-fast-beginner-2-6'),
+	('He puts a snack in his backpack','Cậu bé bỏ một món ăn nhẹ vào ba lô','00:00:21.510','00:00:24.830','esl-fast-beginner-2-6'),
+	('He might get hungry','Có thể cậu bé sẽ thấy đói','00:00:25.590','00:00:27.600','esl-fast-beginner-2-6'),
+	('He puts a notebook in his backpack','Cậu bé bỏ một quyển vở vào ba lô','00:00:27.650','00:00:32.490','esl-fast-beginner-2-6'),
+	('He is ready to study','Cậu bé đã sẵn sàng để học','00:00:33.190','00:00:36.210','esl-fast-beginner-2-6');
+
+/*=====================================================================================================================================================================================================================================================*/
+
+INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
+	/* (UUID(),'esl-fast-beginner-2-7','Studying at the Library','Học ở thư viện','ESL_FAST_BEGINNER_2_007.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-2',1,0,7) */
+	('He is at the library','Cậu bé đang ở thư viện','00:00:00.520','00:00:02.660','esl-fast-beginner-2-7'),
+	('There are a lot of people','Ở đó có rất nhiều người','00:00:03.100','00:00:05.940','esl-fast-beginner-2-7'),
+	('Everyone is studying for their final exams','Mọi người đều đang ôn thi cuối kỳ','00:00:07.220','00:00:10.940','esl-fast-beginner-2-7'),
+	('He finally finds a seat','Cuối cùng cậu bé cũng tìm được một chỗ ngồi','00:00:11.700','00:00:14.800','esl-fast-beginner-2-7'),
+	('He sits down','Cậu bé ngồi xuống','00:00:15.860','00:00:17.580','esl-fast-beginner-2-7'),
+	('He takes out his book','Cậu bé lấy sách ra','00:00:18.500','00:00:20.640','esl-fast-beginner-2-7'),
+	('He takes out a pen','Cậu bé lấy một cây bút ra','00:00:21.460','00:00:24.100','esl-fast-beginner-2-7'),
+	('He takes out a highlighter','Cậu bé lấy một cây bút dạ quang ra','00:00:24.780','00:00:27.940','esl-fast-beginner-2-7'),
+	('He highlights the important parts','Cậu bé tô nổi bật những phần quan trọng','00:00:28.680','00:00:32.500','esl-fast-beginner-2-7'),
+	('Then, he takes a study break','Sau đó, cậu bé nghỉ giải lao một lúc','00:00:33.040','00:00:36.260','esl-fast-beginner-2-7'),
+
+	/* (UUID(),'esl-fast-beginner-2-8','Taking Notes','Ghi chú','ESL_FAST_BEGINNER_2_008.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-2',0,0,8) */
+	('He takes out his notebook','Cậu bé lấy quyển vở ra','00:00:00.010','00:00:02.790','esl-fast-beginner-2-8'),
+	('He reads his textbook','Cậu bé đọc sách giáo khoa','00:00:02.890','00:00:05.610','esl-fast-beginner-2-8'),
+	('He copies the chapter title on top of the page','Cậu bé chép tiêu đề chương lên đầu trang','00:00:06.570','00:00:11.390','esl-fast-beginner-2-8'),
+	('He writes down important information','Cậu bé ghi lại những thông tin quan trọng','00:00:12.010','00:00:15.850','esl-fast-beginner-2-8'),
+	('He highlights words he should remember','Cậu bé tô nổi bật những từ cần ghi nhớ','00:00:16.570','00:00:20.130','esl-fast-beginner-2-8'),
+	('He turns the page','Cậu bé lật sang trang tiếp theo','00:00:20.550','00:00:23.390','esl-fast-beginner-2-8'),
+	('He takes more notes','Cậu bé ghi chép thêm','00:00:24.350','00:00:26.700','esl-fast-beginner-2-8'),
+	('He writes a summary of the chapter at the end','Cuối cùng, cậu bé viết phần tóm tắt của chương','00:00:26.800','00:00:32.450','esl-fast-beginner-2-8'),
+
+	/* (UUID(),'esl-fast-beginner-2-9','She Writes an Essay','Cô ấy viết một bài luận','ESL_FAST_BEGINNER_2_009.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-2',0,0,9) */
+	('She is taking an English class','Cô bé đang học một lớp tiếng Anh','00:00:00.070','00:00:03.470','esl-fast-beginner-2-9'),
+	('She has to write an essay','Cô bé phải viết một bài luận','00:00:03.710','00:00:06.330','esl-fast-beginner-2-9'),
+	('The essay is on penguins','Bài luận nói về loài chim cánh cụt','00:00:07.490','00:00:09.870','esl-fast-beginner-2-9'),
+	('She finds information on penguins from the Internet','Cô bé tìm thông tin về chim cánh cụt trên Internet','00:00:10.550','00:00:15.370','esl-fast-beginner-2-9'),
+	('She finds information on penguins from books','Cô bé tìm thông tin về chim cánh cụt trong sách','00:00:16.270','00:00:21.090','esl-fast-beginner-2-9'),
+	('Her first sentence is a riddle about penguins','Câu đầu tiên là một câu đố về chim cánh cụt','00:00:21.790','00:00:26.200','esl-fast-beginner-2-9'),
+	('Her last sentence is the answer to the riddle','Câu cuối cùng là lời giải cho câu đố đó','00:00:26.250','00:00:31.950','esl-fast-beginner-2-9'),
+
+	/* (UUID(),'esl-fast-beginner-2-10','He Takes a Test','Anh ấy làm bài kiểm tra','ESL_FAST_BEGINNER_2_010.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-2',0,0,10) */
+	('It is Lily\'s birthday','Hôm nay là sinh nhật của Lily','00:00:00.390','00:00:02.850','esl-fast-beginner-2-10'),
+	('She gets out of bed','Cô bé bước xuống giường','00:00:03.510','00:00:05.310','esl-fast-beginner-2-10'),
+	('Nobody says anything to her','Không ai nói gì với cô bé','00:00:05.990','00:00:08.090','esl-fast-beginner-2-10'),
+	('Her mom takes her to school','Mẹ đưa cô bé đến trường','00:00:08.710','00:00:10.650','esl-fast-beginner-2-10'),
+	('Her friends do not say anything','Các bạn của cô bé cũng không nói gì','00:00:11.250','00:00:13.510','esl-fast-beginner-2-10'),
+	('The teacher does not say anything','Cô giáo cũng không nói gì','00:00:13.950','00:00:16.590','esl-fast-beginner-2-10'),
+	('Lily is sad','Lily cảm thấy buồn','00:00:17.430','00:00:18.790','esl-fast-beginner-2-10'),
+	('Lily walks home alone','Lily một mình đi bộ về nhà','00:00:19.570','00:00:21.270','esl-fast-beginner-2-10'),
+	('She opens the door','Cô bé mở cửa','00:00:21.970','00:00:23.610','esl-fast-beginner-2-10'),
+	('Her friends and family are holding a cake','Bạn bè và gia đình cô bé đang cầm một chiếc bánh kem','00:00:24.330','00:00:27.250','esl-fast-beginner-2-10'),
+	('They say, surprise Lily','Mọi người đồng thanh nói: "Bất ngờ chưa, Lily!"','00:00:26.950','00:00:30.190','esl-fast-beginner-2-10'),
+
+	/* (UUID(),'esl-fast-beginner-2-11','Punching a Wall','Đấm vào tường','ESL_FAST_BEGINNER_2_011.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-2',0,0,11) */
+	('Kate is walking','Kate đang đi dạo','00:00:00.650','00:00:02.590','esl-fast-beginner-2-11'),
+	('She sees a dog','Cô bé nhìn thấy một chú chó','00:00:03.210','00:00:04.930','esl-fast-beginner-2-11'),
+	('The dog wags its tail','Chú chó vẫy đuôi','00:00:05.250','00:00:07.650','esl-fast-beginner-2-11'),
+	('Kate likes the dog','Kate thích chú chó ấy','00:00:08.490','00:00:10.290','esl-fast-beginner-2-11'),
+	('It has no collar','Nó không đeo vòng cổ','00:00:10.770','00:00:12.630','esl-fast-beginner-2-11'),
+	('Kate takes it home','Kate đưa nó về nhà','00:00:13.590','00:00:15.350','esl-fast-beginner-2-11'),
+	('She washes the dog','Cô bé tắm cho chú chó','00:00:16.150','00:00:17.990','esl-fast-beginner-2-11'),
+	('She names him Toby','Cô bé đặt tên cho nó là Toby','00:00:18.670','00:00:20.510','esl-fast-beginner-2-11'),
+	('She takes Toby to the vet','Cô bé đưa Toby đến bác sĩ thú y','00:00:21.270','00:00:24.050','esl-fast-beginner-2-11'),
+	('Toby is healthy','Toby rất khỏe mạnh','00:00:24.870','00:00:26.810','esl-fast-beginner-2-11'),
+	('Kate walks Toby every day','Ngày nào Kate cũng dắt Toby đi dạo','00:00:27.350','00:00:30.670','esl-fast-beginner-2-11'),
+	('They love each other','Cả hai rất yêu quý nhau','00:00:31.390','00:00:32.730','esl-fast-beginner-2-11');
+
+/*=====================================================================================================================================================================================================================================================*/
+
+INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
+	/* (UUID(),'esl-fast-beginner-2-12','School Supplies Box','Hộp đồ dùng học tập','ESL_FAST_BEGINNER_2_012.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-2',0,0,12) */
+	('Ms Howard assigns a project','Cô Howard giao một bài làm theo dự án','00:00:00.260','00:00:03.580','esl-fast-beginner-2-12'),
+	('She wants the students to work in groups','Cô muốn các học sinh làm việc theo nhóm','00:00:04.380','00:00:07.339','esl-fast-beginner-2-12'),
+	('Adam works with Joe and Bill','Adam làm chung nhóm với Joe và Bill','00:00:08.160','00:00:10.700','esl-fast-beginner-2-12'),
+	('Adam is smart','Adam rất thông minh','00:00:11.320','00:00:12.840','esl-fast-beginner-2-12'),
+	('Joe draws well','Joe vẽ rất đẹp','00:00:13.560','00:00:15.160','esl-fast-beginner-2-12'),
+	('Bill is cooperative','Bill rất hợp tác','00:00:15.960','00:00:17.760','esl-fast-beginner-2-12'),
+	('They make a good group','Họ là một nhóm làm việc rất ăn ý','00:00:18.780','00:00:20.560','esl-fast-beginner-2-12'),
+	('They turn in their project','Họ nộp bài dự án','00:00:21.200','00:00:23.220','esl-fast-beginner-2-12'),
+	('Ms Howard likes it','Cô Howard rất hài lòng với bài làm','00:00:23.920','00:00:26.040','esl-fast-beginner-2-12'),
+	('She gives them a high grade','Cô cho cả nhóm điểm cao','00:00:26.460','00:00:28.920','esl-fast-beginner-2-12'),
+	('Adam, Joe, and Bill are joyful','Adam, Joe và Bill đều rất vui','00:00:29.480','00:00:33.240','esl-fast-beginner-2-12'),
+
+	/* (UUID(),'esl-fast-beginner-2-13','He Loses the Cap','Anh ấy làm mất mũ','ESL_FAST_BEGINNER_2_013.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-2',0,0,13) */
+	('He takes out a pen','Cậu bé lấy một chiếc bút ra','00:00:00.260','00:00:02.220','esl-fast-beginner-2-13'),
+	('He takes off the cap','Cậu bé tháo nắp bút ra','00:00:02.540','00:00:05.080','esl-fast-beginner-2-13'),
+	('He drops it','Cậu bé làm rơi nó','00:00:05.380','00:00:07.360','esl-fast-beginner-2-13'),
+	('He looks down','Cậu bé nhìn xuống','00:00:07.920','00:00:09.700','esl-fast-beginner-2-13'),
+	('He does not see the cap','Cậu bé không nhìn thấy nắp bút','00:00:10.100','00:00:12.780','esl-fast-beginner-2-13'),
+	('He looks around his desk','Cậu bé nhìn quanh bàn làm việc','00:00:12.960','00:00:15.760','esl-fast-beginner-2-13'),
+	('He still does not see the cap','Cậu bé vẫn không nhìn thấy nắp bút','00:00:16.280','00:00:19.520','esl-fast-beginner-2-13'),
+	('Where could it be?','Nó có thể ở đâu nhỉ?','00:00:19.920','00:00:21.920','esl-fast-beginner-2-13'),
+	('He has to find it','Cậu bé phải tìm nó','00:00:22.260','00:00:24.480','esl-fast-beginner-2-13'),
+	('The pen will dry out without the cap','Không có nắp, mực bút sẽ bị khô','00:00:23.980','00:00:28.420','esl-fast-beginner-2-13'),
+	('He goes to the other side of the room','Cậu bé đi sang phía bên kia căn phòng','00:00:28.760','00:00:31.860','esl-fast-beginner-2-13'),
+	('He sees the cap','Cậu bé nhìn thấy nắp bút','00:00:32.580','00:00:34.920','esl-fast-beginner-2-13'),
+
+	/* (UUID(),'esl-fast-beginner-2-14','The Lunch Bag','Túi đựng bữa trưa','ESL_FAST_BEGINNER_2_014.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-2',0,0,14) */
+	('She has a lunch bag','Cô bé có một chiếc túi đựng đồ ăn trưa','00:00:00.400','00:00:02.580','esl-fast-beginner-2-14'),
+	('It has two pockets','Nó có hai ngăn','00:00:03.160','00:00:05.480','esl-fast-beginner-2-14'),
+	('There is one on top','Có một ngăn ở phía trên','00:00:06.180','00:00:08.740','esl-fast-beginner-2-14'),
+	('That is the big pocket','Đó là ngăn lớn','00:00:09.140','00:00:11.100','esl-fast-beginner-2-14'),
+	('She puts a sandwich inside','Cô bé cho một chiếc bánh sandwich vào bên trong','00:00:11.980','00:00:14.720','esl-fast-beginner-2-14'),
+	('There is another in the front','Có một ngăn khác ở phía trước','00:00:15.440','00:00:18.320','esl-fast-beginner-2-14'),
+	('That is the small pocket','Đó là ngăn nhỏ','00:00:18.920','00:00:21.280','esl-fast-beginner-2-14'),
+	('She puts a pack of gum inside','Cô bé cho một gói kẹo cao su vào bên trong','00:00:21.900','00:00:24.580','esl-fast-beginner-2-14'),
+	('There is a long strap, too','Nó cũng có một dây đeo dài','00:00:25.020','00:00:28.500','esl-fast-beginner-2-14'),
+	('She can put it over her shoulder','Cô bé có thể đeo nó lên vai','00:00:28.720','00:00:31.779','esl-fast-beginner-2-14'),
+
+	/* (UUID(),'esl-fast-beginner-2-15','School Cafeteria','Căng tin trường học','ESL_FAST_BEGINNER_2_015.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-2',0,0,15) */
+	('He gets school lunch','Cậu bé ăn trưa ở trường','00:00:00.170','00:00:02.650','esl-fast-beginner-2-15'),
+	('It is not good','Đồ ăn không ngon','00:00:02.690','00:00:04.890','esl-fast-beginner-2-15'),
+	('At least it is free','Ít nhất thì đồ ăn cũng miễn phí','00:00:04.810','00:00:07.710','esl-fast-beginner-2-15'),
+	('He looks around the cafeteria','Cậu bé nhìn quanh nhà ăn','00:00:08.530','00:00:11.310','esl-fast-beginner-2-15'),
+	('He thinks about sitting with new people','Cậu bé nghĩ đến việc ngồi cùng những người bạn mới','00:00:11.990','00:00:16.010','esl-fast-beginner-2-15'),
+	('There are a lot of different groups','Có rất nhiều nhóm khác nhau','00:00:16.610','00:00:19.770','esl-fast-beginner-2-15'),
+	('He could sit with the athletes','Cậu bé có thể ngồi cùng nhóm các vận động viên','00:00:20.430','00:00:23.150','esl-fast-beginner-2-15'),
+	('He could sit with the drama club kids','Cậu bé có thể ngồi cùng các bạn trong câu lạc bộ kịch','00:00:23.470','00:00:27.050','esl-fast-beginner-2-15'),
+	('He could sit with the rich kids group','Cậu bé có thể ngồi cùng nhóm những bạn con nhà giàu','00:00:27.390','00:00:30.610','esl-fast-beginner-2-15'),
+	('He had a lot of choices','Cậu bé có rất nhiều lựa chọn','00:00:31.349','00:00:33.670','esl-fast-beginner-2-15'),
+
+	/* (UUID(),'esl-fast-beginner-2-16','Ice Cream in the Summer','Kem vào mùa hè','ESL_FAST_BEGINNER_2_016.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-2',0,0,16) */
+	('It is summer','Bây giờ là mùa hè','00:00:00.340','00:00:01.740','esl-fast-beginner-2-16'),
+	('It is three o\'clock','Bây giờ là ba giờ','00:00:01.900','00:00:04.260','esl-fast-beginner-2-16'),
+	('It is very hot','Trời rất nóng','00:00:04.300','00:00:06.560','esl-fast-beginner-2-16'),
+	('He goes to the ice cream shop','Cậu bé đi đến cửa hàng kem','00:00:07.300','00:00:10.260','esl-fast-beginner-2-16'),
+	('He looks at all the flavors','Cậu bé nhìn tất cả các vị kem','00:00:10.640','00:00:13.480','esl-fast-beginner-2-16'),
+	('There are so many!','Có nhiều vị quá!','00:00:14.020','00:00:16.620','esl-fast-beginner-2-16'),
+	('He wants to get chocolate, but he also wants vanilla','Cậu bé muốn ăn vị sô-cô-la, nhưng cũng muốn vị vani','00:00:17.500','00:00:23.600','esl-fast-beginner-2-16'),
+	('He decides to get both','Cậu bé quyết định lấy cả hai vị','00:00:23.100','00:00:27.360','esl-fast-beginner-2-16'),
+	('The line is long','Hàng người xếp hàng rất dài','00:00:27.780','00:00:30.300','esl-fast-beginner-2-16'),
+	('Everyone wants ice cream in the summer','Mùa hè ai cũng muốn ăn kem','00:00:31.140','00:00:34.140','esl-fast-beginner-2-16');
+
+/*=====================================================================================================================================================================================================================================================*/
+
+INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
+	/* (UUID(),'esl-fast-beginner-2-17','A Trip to the Library','Một chuyến đi đến thư viện','ESL_FAST_BEGINNER_2_017.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-2',0,0,17) */
+	('She likes sour stuff','Cô bé thích những thứ có vị chua','00:00:00.420','00:00:02.780','esl-fast-beginner-2-17'),
+	('Lemons are sour','Chanh có vị chua','00:00:03.480','00:00:05.360','esl-fast-beginner-2-17'),
+	('Lemons are yellow','Chanh có màu vàng','00:00:06.440','00:00:08.020','esl-fast-beginner-2-17'),
+	('She peels the skin off the lemon','Cô bé bóc vỏ quả chanh','00:00:08.800','00:00:12.440','esl-fast-beginner-2-17'),
+	('She bites into the lemon','Cô bé cắn một miếng chanh','00:00:12.920','00:00:15.700','esl-fast-beginner-2-17'),
+	('It tastes good','Nó có vị rất ngon','00:00:16.220','00:00:18.840','esl-fast-beginner-2-17'),
+	('She spits out the seeds','Cô bé nhổ hạt ra','00:00:19.160','00:00:21.980','esl-fast-beginner-2-17'),
+	('The seeds are not good','Hạt chanh không ngon','00:00:22.520','00:00:25.240','esl-fast-beginner-2-17'),
+	('Her mom says she is weird','Mẹ cô bé nói rằng cô bé thật kỳ lạ','00:00:25.940','00:00:29.080','esl-fast-beginner-2-17'),
+	('Most people eat lemon with other food','Hầu hết mọi người ăn chanh cùng với những món ăn khác','00:00:28.580','00:00:33.620','esl-fast-beginner-2-17'),
+
+	/* (UUID(),'esl-fast-beginner-2-18','A Lot of Ants','Rất nhiều kiến','ESL_FAST_BEGINNER_2_018.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-2',0,0,18) */
+	('He is hungry','Cậu bé đói bụng','00:00:00.000','00:00:02.230','esl-fast-beginner-2-18'),
+	('He smells something good','Cậu bé ngửi thấy mùi thơm của một món gì đó','00:00:02.230','00:00:05.550','esl-fast-beginner-2-18'),
+	('It is coming from the kitchen','Mùi đó bay ra từ nhà bếp','00:00:05.610','00:00:08.530','esl-fast-beginner-2-18'),
+	('He leaves the living room','Cậu bé rời khỏi phòng khách','00:00:09.490','00:00:11.990','esl-fast-beginner-2-18'),
+	('He goes to the kitchen','Cậu bé đi vào bếp','00:00:12.210','00:00:14.510','esl-fast-beginner-2-18'),
+	('He sees a plate of chicken','Cậu bé nhìn thấy một đĩa thịt gà','00:00:14.970','00:00:18.130','esl-fast-beginner-2-18'),
+	('It is hot','Thịt gà vẫn còn nóng','00:00:18.510','00:00:20.370','esl-fast-beginner-2-18'),
+	('He gets a fork and a knife','Cậu bé lấy một chiếc nĩa và một con dao','00:00:20.910','00:00:23.830','esl-fast-beginner-2-18'),
+	('He cuts a piece of chicken','Cậu bé cắt một miếng thịt gà','00:00:23.890','00:00:26.810','esl-fast-beginner-2-18'),
+	('He sticks the fork in it','Cậu bé xiên nĩa vào miếng thịt','00:00:27.290','00:00:30.210','esl-fast-beginner-2-18'),
+	('He eats the chicken','Cậu bé ăn thịt gà','00:00:29.810','00:00:32.510','esl-fast-beginner-2-18'),
+
+	/* (UUID(),'esl-fast-beginner-2-19','Picking a Costume','Chọn trang phục hóa trang','ESL_FAST_BEGINNER_2_019.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-2',0,0,19) */
+	('He slices up tofu in ten pieces','Cậu bé cắt đậu phụ thành mười miếng','00:00:00.300','00:00:03.920','esl-fast-beginner-2-19'),
+	('He puts the pan on the stove','Cậu bé đặt chảo lên bếp','00:00:04.360','00:00:07.680','esl-fast-beginner-2-19'),
+	('He turns on the stove','Cậu bé bật bếp','00:00:08.080','00:00:10.780','esl-fast-beginner-2-19'),
+	('He puts oil in the pan','Cậu bé cho dầu vào chảo','00:00:11.200','00:00:14.500','esl-fast-beginner-2-19'),
+	('He puts the tofu in the pan','Cậu bé cho đậu phụ vào chảo','00:00:15.039','00:00:18.160','esl-fast-beginner-2-19'),
+	('He waits for the tofu to turn brown','Cậu bé chờ đậu phụ chuyển sang màu vàng nâu','00:00:18.600','00:00:22.580','esl-fast-beginner-2-19'),
+	('He flips over the tofu','Cậu bé lật mặt đậu phụ lại','00:00:23.140','00:00:25.960','esl-fast-beginner-2-19'),
+	('Now the other side is frying','Bây giờ mặt còn lại đang được chiên','00:00:26.680','00:00:29.320','esl-fast-beginner-2-19'),
+	('He waits for the tofu to turn brown again','Cậu bé chờ đậu phụ chuyển sang màu vàng nâu một lần nữa','00:00:30.160','00:00:34.240','esl-fast-beginner-2-19'),
+	('He turns off the stove','Cậu bé tắt bếp','00:00:34.440','00:00:37.280','esl-fast-beginner-2-19'),
+
+	/* (UUID(),'esl-fast-beginner-2-20','Petting Zoo','Sở thú cưng','ESL_FAST_BEGINNER_2_020.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-2',0,0,20) */
+	('He stands in front of the supermarket','Cậu bé đứng trước siêu thị','00:00:00.220','00:00:03.260','esl-fast-beginner-2-20'),
+	('He stands behind a table','Cậu bé đứng phía sau một chiếc bàn','00:00:03.320','00:00:06.780','esl-fast-beginner-2-20'),
+	('His chocolate is on the table','Những thanh sô-cô-la của cậu bé ở trên bàn','00:00:07.640','00:00:10.560','esl-fast-beginner-2-20'),
+	('He has four boxes of chocolate','Cậu bé có bốn hộp sô-cô-la','00:00:11.180','00:00:14.300','esl-fast-beginner-2-20'),
+	('They are all different kinds','Tất cả đều là những loại khác nhau','00:00:14.600','00:00:17.960','esl-fast-beginner-2-20'),
+	('One chocolate bar costs one dollar','Một thanh sô-cô-la có giá một đô la','00:00:18.720','00:00:22.060','esl-fast-beginner-2-20'),
+	('He is fundraising for the soccer team','Cậu bé đang gây quỹ cho đội bóng đá','00:00:22.700','00:00:26.060','esl-fast-beginner-2-20'),
+	('A family buys one whole box','Một gia đình mua nguyên cả một hộp','00:00:26.440','00:00:29.940','esl-fast-beginner-2-20'),
+	('It costs forty dollars','Hộp đó có giá bốn mươi đô la','00:00:29.620','00:00:33.400','esl-fast-beginner-2-20'),
+
+	/* (UUID(),'esl-fast-beginner-2-21','Mom is Mad','Mẹ tức giận','ESL_FAST_BEGINNER_2_021.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-2',0,0,21) */
+	('Kelly and Julie are best friends','Kelly và Julie là đôi bạn thân nhất','00:00:00.000','00:00:03.910','esl-fast-beginner-2-21'),
+	('They do everything together','Hai bạn làm mọi việc cùng nhau','00:00:04.290','00:00:06.510','esl-fast-beginner-2-21'),
+	('They walk to school together every morning','Sáng nào hai bạn cũng cùng nhau đi bộ đến trường','00:00:07.150','00:00:10.590','esl-fast-beginner-2-21'),
+	('They eat breakfast together','Hai bạn cùng nhau ăn sáng','00:00:10.870','00:00:13.410','esl-fast-beginner-2-21'),
+	('Kelly eats bacon and eggs','Kelly ăn thịt xông khói và trứng','00:00:14.290','00:00:17.270','esl-fast-beginner-2-21'),
+	('Julie eats cereal','Julie ăn ngũ cốc','00:00:17.930','00:00:19.950','esl-fast-beginner-2-21'),
+	('They take the same classes','Hai bạn học cùng các lớp','00:00:20.950','00:00:23.610','esl-fast-beginner-2-21'),
+	('Kelly is good at math','Kelly giỏi môn toán','00:00:24.470','00:00:27.090','esl-fast-beginner-2-21'),
+	('Julie is good at English','Julie giỏi môn tiếng Anh','00:00:27.590','00:00:30.710','esl-fast-beginner-2-21'),
+	('They help each other out','Hai bạn giúp đỡ lẫn nhau','00:00:30.910','00:00:33.710','esl-fast-beginner-2-21'),
+	('They plan to go to the same college','Hai bạn dự định sẽ học cùng một trường đại học','00:00:34.250','00:00:37.470','esl-fast-beginner-2-21');
+
+/*=====================================================================================================================================================================================================================================================*/
+
+INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
+	/* (UUID(),'esl-fast-beginner-2-22','Father\'s Day','Ngày của Cha','ESL_FAST_BEGINNER_2_022.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-2',0,0,22) */
+	('Howard goes to a backpack store','Howard đến một cửa hàng bán ba lô','00:00:00.500','00:00:03.160','esl-fast-beginner-2-22'),
+	('He likes the red backpack','Cậu bé thích chiếc ba lô màu đỏ','00:00:03.140','00:00:06.240','esl-fast-beginner-2-22'),
+	('He looks at the tag','Cậu bé nhìn vào bảng giá','00:00:06.720','00:00:09.300','esl-fast-beginner-2-22'),
+	('The backpack is $40','Chiếc ba lô có giá 40 đô la','00:00:09.600','00:00:12.280','esl-fast-beginner-2-22'),
+	('He asks the cashier if he can lower the price','Cậu bé hỏi nhân viên thu ngân xem có thể giảm giá không','00:00:13.460','00:00:17.580','esl-fast-beginner-2-22'),
+	('I will sell it to you for $39','Tôi sẽ bán cho bạn với giá 39 đô la','00:00:18.060','00:00:21.200','esl-fast-beginner-2-22'),
+	('Howard shakes his head','Howard lắc đầu','00:00:21.740','00:00:24.420','esl-fast-beginner-2-22'),
+	('How about $30, and I tell my friends to come here?','30 đô la nhé, và tôi sẽ bảo bạn bè tôi đến đây mua hàng?','00:00:24.840','00:00:30.140','esl-fast-beginner-2-22'),
+	('The cashier agrees to that deal','Nhân viên thu ngân đồng ý với thỏa thuận đó','00:00:30.740','00:00:33.860','esl-fast-beginner-2-22'),
+
+	/* (UUID(),'esl-fast-beginner-2-23','He Goes to a Hat Store','Anh ấy đi đến cửa hàng mũ','ESL_FAST_BEGINNER_2_023.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-2',0,0,23) */
+	('He is bald','Anh ấy bị hói','00:00:00.340','00:00:01.880','esl-fast-beginner-2-23'),
+	('He wants to get a hat to cover his baldness','Anh ấy muốn mua một chiếc mũ để che chỗ hói','00:00:02.000','00:00:06.420','esl-fast-beginner-2-23'),
+	('He goes to a hat store','Anh ấy đến một cửa hàng bán mũ','00:00:07.080','00:00:09.620','esl-fast-beginner-2-23'),
+	('There are a lot of different hats','Có rất nhiều loại mũ khác nhau','00:00:09.960','00:00:12.680','esl-fast-beginner-2-23'),
+	('There are caps','Có những chiếc mũ lưỡi trai','00:00:12.960','00:00:14.760','esl-fast-beginner-2-23'),
+	('They are good to wear in the summer','Những chiếc mũ này thích hợp để đội vào mùa hè','00:00:15.120','00:00:17.780','esl-fast-beginner-2-23'),
+	('There are beanies','Có cả những chiếc mũ len','00:00:18.460','00:00:20.440','esl-fast-beginner-2-23'),
+	('They are good to wear in the winter','Những chiếc mũ này thích hợp để đội vào mùa đông','00:00:20.800','00:00:23.060','esl-fast-beginner-2-23'),
+	('He buys a beanie and a cap','Anh ấy mua một chiếc mũ len và một chiếc mũ lưỡi trai','00:00:23.660','00:00:27.280','esl-fast-beginner-2-23'),
+
+	/* (UUID(),'esl-fast-beginner-2-24','She Needs New Clothes','Cô ấy cần quần áo mới','ESL_FAST_BEGINNER_2_024.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-2',0,0,24) */
+	('She needs to get new clothes','Cô bé cần mua quần áo mới','00:00:00.210','00:00:03.010','esl-fast-beginner-2-24'),
+	('She does not fit into her old clothes anymore','Cô bé không còn mặc vừa quần áo cũ nữa','00:00:03.510','00:00:07.350','esl-fast-beginner-2-24'),
+	('She goes to the mall','Cô bé đến trung tâm mua sắm','00:00:07.770','00:00:10.130','esl-fast-beginner-2-24'),
+	('She buys some dresses','Cô bé mua vài chiếc váy','00:00:10.590','00:00:13.130','esl-fast-beginner-2-24'),
+	('She buys some skirts','Cô bé mua vài chiếc chân váy','00:00:13.550','00:00:16.350','esl-fast-beginner-2-24'),
+	('She buys some jackets','Cô bé mua vài chiếc áo khoác','00:00:17.130','00:00:20.010','esl-fast-beginner-2-24'),
+	('She buys some pants','Cô bé mua vài chiếc quần dài','00:00:20.650','00:00:23.830','esl-fast-beginner-2-24'),
+	('She buys some shirts','Cô bé mua vài chiếc áo sơ mi','00:00:24.590','00:00:27.770','esl-fast-beginner-2-24'),
+	('She has a lot of shopping bags','Cô bé có rất nhiều túi mua sắm','00:00:28.470','00:00:32.090','esl-fast-beginner-2-24'),
+	('She can\'t wait to wear her new clothes','Cô bé nóng lòng muốn mặc những bộ quần áo mới','00:00:32.690','00:00:36.170','esl-fast-beginner-2-24'),
+
+	/* (UUID(),'esl-fast-beginner-2-25','She Buys a Skirt','Cô ấy mua một chiếc váy','ESL_FAST_BEGINNER_2_025.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-2',0,0,25) */
+	('She goes to the mall','Cô bé đến trung tâm mua sắm','00:00:00.360','00:00:02.420','esl-fast-beginner-2-25'),
+	('She goes inside a store','Cô bé bước vào một cửa hàng','00:00:02.360','00:00:05.640','esl-fast-beginner-2-25'),
+	('She sees a nice skirt','Cô bé nhìn thấy một chiếc chân váy rất đẹp','00:00:06.080','00:00:09.320','esl-fast-beginner-2-25'),
+	('She takes it off the rack','Cô bé lấy chiếc váy ra khỏi giá treo','00:00:10.020','00:00:12.620','esl-fast-beginner-2-25'),
+	('She touches it','Cô bé sờ thử chiếc váy','00:00:13.040','00:00:15.180','esl-fast-beginner-2-25'),
+	('She goes to the fitting room','Cô bé đi đến phòng thử đồ','00:00:15.700','00:00:18.820','esl-fast-beginner-2-25'),
+	('She tries it on','Cô bé mặc thử','00:00:19.180','00:00:21.840','esl-fast-beginner-2-25'),
+	('It fits perfectly','Nó vừa vặn hoàn hảo','00:00:22.440','00:00:25.020','esl-fast-beginner-2-25'),
+	('She goes to the cash register','Cô bé đi đến quầy thu ngân','00:00:25.660','00:00:28.520','esl-fast-beginner-2-25'),
+	('She hands the cashier ten dollars','Cô bé đưa cho nhân viên thu ngân 10 đô la','00:00:28.020','00:00:33.760','esl-fast-beginner-2-25'),
+	('The cashier puts the skirt in a bag','Nhân viên thu ngân cho chiếc váy vào túi','00:00:34.500','00:00:37.980','esl-fast-beginner-2-25'),
+
+	/* (UUID(),'esl-fast-beginner-2-26','White Shirt','Áo sơ mi trắng','ESL_FAST_BEGINNER_2_026.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-2',1,0,26) */
+	('He puts on his white shirt','Cậu bé mặc chiếc áo sơ mi trắng vào','00:00:00.340','00:00:03.540','esl-fast-beginner-2-26'),
+	('His mom tells him to be careful','Mẹ cậu bé bảo cậu bé phải cẩn thận','00:00:03.800','00:00:07.440','esl-fast-beginner-2-26'),
+	('White shirts get dirty easily','Áo sơ mi trắng rất dễ bị bẩn','00:00:08.340','00:00:10.940','esl-fast-beginner-2-26'),
+	('He says okay','Cậu bé nói được ạ','00:00:11.060','00:00:13.260','esl-fast-beginner-2-26'),
+	('He eats a pizza','Cậu bé ăn một chiếc pizza','00:00:13.500','00:00:15.940','esl-fast-beginner-2-26'),
+	('His brother accidentally pushes him','Em trai cậu bé vô tình đẩy cậu bé','00:00:16.440','00:00:20.260','esl-fast-beginner-2-26'),
+	('He drops his pizza on his shirt','Cậu bé làm rơi miếng pizza lên áo','00:00:20.920','00:00:25.300','esl-fast-beginner-2-26'),
+	('He screams','Cậu bé hét lên','00:00:24.800','00:00:27.480','esl-fast-beginner-2-26'),
+	('He takes off the pizza','Cậu bé lấy miếng pizza ra khỏi áo','00:00:27.760','00:00:30.380','esl-fast-beginner-2-26'),
+	('There is an orange triangle stain','Có một vết bẩn hình tam giác màu cam','00:00:31.020','00:00:34.980','esl-fast-beginner-2-26');
+
+/*=====================================================================================================================================================================================================================================================*/
+
+INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
+	/* (UUID(),'esl-fast-beginner-2-27','Ugly Boots','Đôi ủng xấu xí','ESL_FAST_BEGINNER_2_027.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-2',1,0,27) */
+	('People think his boots are ugly','Mọi người nghĩ đôi bốt của cậu bé xấu','00:00:00.000','00:00:03.750','esl-fast-beginner-2-27'),
+	('They are brown','Chúng có màu nâu','00:00:04.530','00:00:05.890','esl-fast-beginner-2-27'),
+	('They have yellow spots','Chúng có những đốm màu vàng','00:00:06.310','00:00:08.550','esl-fast-beginner-2-27'),
+	('He does not care what other people think','Cậu bé không quan tâm người khác nghĩ gì','00:00:09.030','00:00:12.590','esl-fast-beginner-2-27'),
+	('He loves his boots','Cậu bé rất thích đôi bốt của mình','00:00:12.890','00:00:15.650','esl-fast-beginner-2-27'),
+	('He thinks that they are unique','Cậu bé nghĩ đôi bốt này rất độc đáo','00:00:15.950','00:00:19.050','esl-fast-beginner-2-27'),
+	('Other boots are too plain for him','Những đôi bốt khác quá đơn điệu đối với cậu bé','00:00:19.790','00:00:22.910','esl-fast-beginner-2-27'),
+	('The yellow spots make the boots special','Những đốm màu vàng làm cho đôi bốt trở nên đặc biệt','00:00:23.490','00:00:27.470','esl-fast-beginner-2-27'),
+	('His mom tells him to get new boots','Mẹ cậu bé bảo cậu bé mua một đôi bốt mới','00:00:27.930','00:00:33.090','esl-fast-beginner-2-27'),
+	('He says no','Cậu bé nói không','00:00:33.250','00:00:35.850','esl-fast-beginner-2-27'),
+
+	/* (UUID(),'esl-fast-beginner-2-28','Shoe Collection','Bộ sưu tập giày','ESL_FAST_BEGINNER_2_028.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-2',1,0,28) */
+	('He collects shoes','Cậu bé sưu tầm giày','00:00:00.000','00:00:02.940','esl-fast-beginner-2-28'),
+	('He has 50 pairs of shoes','Cậu bé có 50 đôi giày','00:00:03.120','00:00:06.760','esl-fast-beginner-2-28'),
+	('Some shoes are for running','Một số đôi giày dùng để chạy bộ','00:00:07.560','00:00:10.100','esl-fast-beginner-2-28'),
+	('Other shoes are for walking','Những đôi khác dùng để đi bộ','00:00:10.500','00:00:12.980','esl-fast-beginner-2-28'),
+	('His parents tell him to stop buying shoes','Bố mẹ bảo cậu bé đừng mua giày nữa','00:00:13.820','00:00:17.880','esl-fast-beginner-2-28'),
+	('He is addicted','Cậu bé bị nghiện việc này','00:00:18.340','00:00:19.780','esl-fast-beginner-2-28'),
+	('He works three jobs to get money for shoes','Cậu bé làm ba công việc để kiếm tiền mua giày','00:00:20.620','00:00:25.440','esl-fast-beginner-2-28'),
+	('His favorite pair is designed by Michael Jordan','Đôi giày cậu bé thích nhất được thiết kế bởi Michael Jordan','00:00:25.640','00:00:29.100','esl-fast-beginner-2-28'),
+	('Michael Jordan is a retired basketball player','Michael Jordan là một cầu thủ bóng rổ đã giải nghệ','00:00:29.100','00:00:34.060','esl-fast-beginner-2-28'),
+
+	/* (UUID(),'esl-fast-beginner-2-29','Ear Piercings','Xỏ khuyên tai','ESL_FAST_BEGINNER_2_029.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-2',1,0,29) */
+	('He wants to pierce his ears','Cậu bé muốn xỏ khuyên tai','00:00:00.000','00:00:03.190','esl-fast-beginner-2-29'),
+	('His mom does not want him to','Mẹ cậu bé không muốn cậu bé làm vậy','00:00:03.630','00:00:06.750','esl-fast-beginner-2-29'),
+	('She thinks boys should not have earrings','Bà ấy nghĩ con trai không nên đeo khuyên tai','00:00:07.050','00:00:10.450','esl-fast-beginner-2-29'),
+	('He tells his mom that it looks good','Cậu bé nói với mẹ rằng trông như vậy rất đẹp','00:00:10.670','00:00:14.430','esl-fast-beginner-2-29'),
+	('He asks his friends what they think','Cậu bé hỏi bạn bè xem họ nghĩ thế nào','00:00:14.470','00:00:17.990','esl-fast-beginner-2-29'),
+	('Some friends say he should do it','Một số người bạn nói cậu bé nên làm vậy','00:00:18.410','00:00:21.390','esl-fast-beginner-2-29'),
+	('Others say it would look terrible','Những người khác nói trông sẽ rất xấu','00:00:21.730','00:00:24.950','esl-fast-beginner-2-29'),
+	('He thinks about getting a fake earring','Cậu bé nghĩ đến việc mua một chiếc khuyên tai giả','00:00:25.250','00:00:28.710','esl-fast-beginner-2-29'),
+
+	/* (UUID(),'esl-fast-beginner-2-30','Black Friday','Thứ Sáu Đen','ESL_FAST_BEGINNER_2_030.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-2',1,0,30) */
+	('It is Black Friday','Hôm nay là ngày Black Friday','00:00:00.340','00:00:02.240','esl-fast-beginner-2-30'),
+	('Black Friday is always the day after Thanksgiving','Black Friday luôn là ngày ngay sau Lễ Tạ ơn','00:00:02.660','00:00:07.300','esl-fast-beginner-2-30'),
+	('A lot of stores have good deals','Nhiều cửa hàng có những món hàng giảm giá rất hấp dẫn','00:00:08.220','00:00:11.220','esl-fast-beginner-2-30'),
+	('The stores are busy','Các cửa hàng rất đông khách','00:00:11.660','00:00:13.940','esl-fast-beginner-2-30'),
+	('The lines are long','Các hàng người xếp hàng rất dài','00:00:14.300','00:00:16.980','esl-fast-beginner-2-30'),
+	('People want to buy things','Mọi người muốn mua đồ','00:00:17.500','00:00:20.140','esl-fast-beginner-2-30'),
+	('They buy clothes','Họ mua quần áo','00:00:20.460','00:00:22.320','esl-fast-beginner-2-30'),
+	('They buy electronics','Họ mua đồ điện tử','00:00:22.640','00:00:25.080','esl-fast-beginner-2-30'),
+	('They buy cooking items','Họ mua các đồ dùng nhà bếp','00:00:25.640','00:00:28.280','esl-fast-beginner-2-30'),
+	('Sometimes, people fight for items','Đôi khi mọi người còn tranh giành đồ với nhau','00:00:28.670','00:00:32.120','esl-fast-beginner-2-30'),
+	('It can get crazy','Mọi chuyện có thể trở nên rất hỗn loạn','00:00:32.500','00:00:34.580','esl-fast-beginner-2-30'),
+
+	/* (UUID(),'esl-fast-beginner-3-1','Going to School','Đi tới trường','ESL_FAST_BEGINNER_3_001.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-3',0,0,1) */
+	('Claire is five years old','Claire năm nay 5 tuổi','00:00:00.000','00:00:02.970','esl-fast-beginner-3-1'),
+	('She watches a lot of TV','Cô bé xem TV rất nhiều','00:00:03.290','00:00:06.090','esl-fast-beginner-3-1'),
+	('Her parents want her to read more','Bố mẹ muốn cô bé đọc sách nhiều hơn','00:00:06.610','00:00:10.150','esl-fast-beginner-3-1'),
+	('She likes the TV too much','Cô bé mê xem TV quá','00:00:10.410','00:00:13.490','esl-fast-beginner-3-1'),
+	('Her mom asks her to read a book','Mẹ bảo cô bé đọc một cuốn sách','00:00:13.930','00:00:16.890','esl-fast-beginner-3-1'),
+	('She says no','Cô bé nói không','00:00:17.190','00:00:18.910','esl-fast-beginner-3-1'),
+	('Her mom asks her to read a picture book','Mẹ bảo cô bé đọc một cuốn truyện tranh','00:00:19.150','00:00:23.010','esl-fast-beginner-3-1'),
+	('She says no','Cô bé vẫn nói không','00:00:23.210','00:00:25.170','esl-fast-beginner-3-1'),
+	('Claire\'s dad asks her to read books','Bố Claire bảo cô bé đọc sách','00:00:25.630','00:00:29.410','esl-fast-beginner-3-1'),
+	('She says no','Cô bé nói không','00:00:29.710','00:00:31.510','esl-fast-beginner-3-1'),
+	('Her dad asks her to read a book about Barbie','Bố bảo cô bé đọc một cuốn sách về Barbie','00:00:31.850','00:00:36.350','esl-fast-beginner-3-1'),
+	('She says no','Cô bé vẫn nói không','00:00:36.750','00:00:38.410','esl-fast-beginner-3-1'),
+	('Her parents force her to read','Bố mẹ bắt cô bé phải đọc sách','00:00:38.790','00:00:41.730','esl-fast-beginner-3-1'),
+	('Claire cries','Claire khóc','00:00:42.310','00:00:44.510','esl-fast-beginner-3-1'),
+	('Claire\'s teacher asks her to read','Cô giáo của Claire bảo cô bé đọc sách','00:00:44.910','00:00:47.870','esl-fast-beginner-3-1'),
+	('She says no','Cô bé nói không','00:00:48.210','00:00:50.090','esl-fast-beginner-3-1'),
+	('Claire\'s older sister has an idea','Chị gái của Claire nảy ra một ý tưởng','00:00:50.870','00:00:53.690','esl-fast-beginner-3-1'),
+	('She gives her a book based on a movie','Chị đưa cho cô bé một cuốn sách dựa theo một bộ phim','00:00:54.130','00:00:57.590','esl-fast-beginner-3-1'),
+	('Claire reads it','Claire đọc cuốn sách đó','00:00:58.070','00:00:59.830','esl-fast-beginner-3-1');
+
+/*=====================================================================================================================================================================================================================================================*/
+
+INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
+	/* (UUID(),'esl-fast-beginner-3-2','Claire Reads a Book','Claire đọc sách','ESL_FAST_BEGINNER_3_002.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-3',0,0,2) */
+	('Sally and her mom went shopping','Sally và mẹ đi mua sắm','00:00:00.460','00:00:03.319','esl-fast-beginner-3-2'),
+	('They are looking for a chair','Hai mẹ con đang tìm mua một chiếc ghế','00:00:03.820','00:00:05.980','esl-fast-beginner-3-2'),
+	('The mom sees a nice brown stool','Mẹ nhìn thấy một chiếc ghế đẩu màu nâu rất đẹp','00:00:06.400','00:00:09.780','esl-fast-beginner-3-2'),
+	('It is of good quality','Chiếc ghế có chất lượng rất tốt','00:00:10.040','00:00:12.160','esl-fast-beginner-3-2'),
+	('It will last forever','Nó có thể dùng được rất lâu','00:00:12.360','00:00:14.360','esl-fast-beginner-3-2'),
+	('Sally thinks it is ugly though','Nhưng Sally lại thấy nó xấu','00:00:15.039','00:00:17.840','esl-fast-beginner-3-2'),
+	('She sees a pink plastic chair','Cô bé nhìn thấy một chiếc ghế nhựa màu hồng','00:00:18.080','00:00:21.360','esl-fast-beginner-3-2'),
+	('She points at it','Cô bé chỉ vào chiếc ghế đó','00:00:21.580','00:00:23.440','esl-fast-beginner-3-2'),
+	('Mom, let\'s get that one','Mẹ ơi, mình lấy chiếc kia đi','00:00:23.340','00:00:26.260','esl-fast-beginner-3-2'),
+	('Her mom says no','Mẹ cô bé nói không','00:00:26.540','00:00:28.880','esl-fast-beginner-3-2'),
+	('Sally throws a fit','Sally bắt đầu ăn vạ','00:00:28.380','00:00:31.880','esl-fast-beginner-3-2'),
+	('She knows she can get what she wants if she cries','Cô bé biết rằng cứ khóc thì sẽ được thứ mình muốn','00:00:32.280','00:00:36.840','esl-fast-beginner-3-2'),
+	('She starts crying loudly','Cô bé bắt đầu khóc thật to','00:00:37.140','00:00:40.120','esl-fast-beginner-3-2'),
+	('Other shoppers stare at Sally','Những người mua hàng khác nhìn chằm chằm vào Sally','00:00:40.740','00:00:43.500','esl-fast-beginner-3-2'),
+	('Her mom gets embarrassed','Mẹ cô bé thấy rất ngượng','00:00:43.880','00:00:46.140','esl-fast-beginner-3-2'),
+	('She ends up buying the pink chair','Cuối cùng, mẹ đành mua chiếc ghế màu hồng','00:00:46.600','00:00:49.820','esl-fast-beginner-3-2'),
+	('At home, Sally sits on it','Về nhà, Sally ngồi lên chiếc ghế','00:00:50.320','00:00:53.480','esl-fast-beginner-3-2'),
+	('It quickly breaks','Chiếc ghế nhanh chóng bị gãy','00:00:53.660','00:00:55.540','esl-fast-beginner-3-2'),
+	('Sally is on the floor','Sally ngã xuống sàn nhà','00:00:56.140','00:00:58.340','esl-fast-beginner-3-2'),
+	('She cries from the pain','Cô bé đau quá nên bật khóc','00:00:57.840','00:01:01.420','esl-fast-beginner-3-2'),
+
+	/* (UUID(),'esl-fast-beginner-3-3','A Broken Chair','Một chiếc ghế bị hỏng','ESL_FAST_BEGINNER_3_003.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-3',0,0,3) */
+	('Barb was celebrating her birthday today','Hôm nay Barb tổ chức sinh nhật','00:00:00.000','00:00:03.410','esl-fast-beginner-3-3'),
+	('She was turning seven years old','Cô bé tròn 7 tuổi','00:00:03.550','00:00:07.010','esl-fast-beginner-3-3'),
+	('All her friends were coming','Tất cả bạn bè của cô bé đều đến dự','00:00:07.510','00:00:09.730','esl-fast-beginner-3-3'),
+	('Her relatives were also coming','Người thân của cô bé cũng đến','00:00:09.970','00:00:12.510','esl-fast-beginner-3-3'),
+	('She was going to see her cousins, uncles, and aunts','Cô bé sẽ được gặp các anh chị em họ, các chú, các bác và các cô','00:00:12.930','00:00:19.290','esl-fast-beginner-3-3'),
+	('Even her neighbor was coming','Ngay cả hàng xóm của cô bé cũng đến','00:00:19.650','00:00:22.110','esl-fast-beginner-3-3'),
+	('Her parents got her a cake with a horse on it','Bố mẹ mua cho cô bé một chiếc bánh có hình con ngựa','00:00:22.570','00:00:26.570','esl-fast-beginner-3-3'),
+	('Horses were her favorite animal','Ngựa là con vật cô bé thích nhất','00:00:27.290','00:00:29.970','esl-fast-beginner-3-3'),
+	('Her dad spent all day decorating their house','Bố cô bé dành cả ngày để trang trí nhà cửa','00:00:30.720','00:00:35.250','esl-fast-beginner-3-3'),
+	('There were balloons, banners, and streamers','Có bóng bay, băng rôn và dây trang trí khắp nơi','00:00:35.990','00:00:40.510','esl-fast-beginner-3-3'),
+	('She was so happy when she saw the decorations and everyone','Cô bé vui sướng khi nhìn thấy những đồ trang trí và mọi người','00:00:40.990','00:00:46.010','esl-fast-beginner-3-3'),
+	('This was her best birthday ever','Đây là sinh nhật tuyệt vời nhất của cô bé từ trước đến giờ','00:00:46.450','00:00:49.910','esl-fast-beginner-3-3'),
+	('She had a jumper for her and her friends to play with','Cô bé có một chiếc nhà phao để chơi cùng các bạn','00:00:50.510','00:00:55.050','esl-fast-beginner-3-3'),
+	('She also had party gifts','Cô bé còn có những món quà dành cho khách dự tiệc','00:00:55.190','00:00:58.270','esl-fast-beginner-3-3'),
+	('Barb got a lot of presents','Barb nhận được rất nhiều quà','00:00:57.770','00:01:01.210','esl-fast-beginner-3-3'),
+	('She thanked everyone for coming','Cô bé cảm ơn mọi người đã đến dự sinh nhật','00:01:01.610','00:01:04.250','esl-fast-beginner-3-3'),
+	('She hugged her parents','Cô bé ôm bố mẹ','00:01:04.430','00:01:06.790','esl-fast-beginner-3-3'),
+
+	/* (UUID(),'esl-fast-beginner-3-4','Birthday Celebration','Lễ kỷ niệm sinh nhật','ESL_FAST_BEGINNER_3_004.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-3',0,0,4) */
+	('Donna decided to buy her two daughters water bottles','Donna quyết định mua cho hai cô con gái mỗi đứa một chiếc bình nước','00:00:00.500','00:00:04.840','esl-fast-beginner-3-4'),
+	('They were going to school soon','Hai cô bé sắp đi học','00:00:05.340','00:00:07.660','esl-fast-beginner-3-4'),
+	('She bought a pink one and a blue one','Cô mua một chiếc màu hồng và một chiếc màu xanh','00:00:08.000','00:00:11.780','esl-fast-beginner-3-4'),
+	('She drove back home','Cô lái xe về nhà','00:00:11.880','00:00:14.160','esl-fast-beginner-3-4'),
+	('Girls, I have something for you, her mom yelled','Các con ơi, mẹ có thứ này cho hai đứa đây, mẹ cô bé gọi lớn','00:00:14.380','00:00:19.020','esl-fast-beginner-3-4'),
+	('Sarah and Barbara ran to her','Sarah và Barbara chạy đến chỗ mẹ','00:00:19.380','00:00:22.520','esl-fast-beginner-3-4'),
+	('What is it?','Là gì vậy mẹ?','00:00:22.660','00:00:24.080','esl-fast-beginner-3-4'),
+	('Sarah asked','Sarah hỏi','00:00:23.880','00:00:25.360','esl-fast-beginner-3-4'),
+	('She showed them the water bottles','Mẹ đưa cho hai cô bé xem những chiếc bình nước','00:00:25.420','00:00:28.220','esl-fast-beginner-3-4'),
+	('They both grabbed the pink one','Cả hai cô bé đều chộp lấy chiếc màu hồng','00:00:28.580','00:00:31.200','esl-fast-beginner-3-4'),
+	('They started pulling it','Hai cô bé bắt đầu giằng co chiếc bình','00:00:31.480','00:00:33.780','esl-fast-beginner-3-4'),
+	('I grabbed it first, Barbara said','Con lấy nó trước mà, Barbara nói','00:00:33.940','00:00:37.480','esl-fast-beginner-3-4'),
+	('No, I did, Sarah argued','Không, con mới là người lấy trước, Sarah cãi lại','00:00:37.500','00:00:40.600','esl-fast-beginner-3-4'),
+	('The mom did not know what to do','Mẹ cô bé chẳng biết phải làm sao','00:00:40.960','00:00:43.960','esl-fast-beginner-3-4'),
+	('She thought one of them would like the blue one','Mẹ nghĩ chắc một trong hai đứa sẽ thích chiếc màu xanh','00:00:44.180','00:00:47.600','esl-fast-beginner-3-4'),
+	('She could just flip a coin','Mẹ có thể tung đồng xu để quyết định','00:00:47.760','00:00:50.480','esl-fast-beginner-3-4'),
+	('One of them would still be mad though','Nhưng kiểu gì cũng sẽ có một đứa không vui','00:00:50.880','00:00:53.580','esl-fast-beginner-3-4'),
+	('Donna decided not to give the water bottle to any of them','Donna quyết định không đưa chiếc bình nước cho đứa nào cả','00:00:53.940','00:00:58.360','esl-fast-beginner-3-4'),
+
+	/* (UUID(),'esl-fast-beginner-3-5','The Pink One is Popular','Cái màu hồng được ưa chuộng','ESL_FAST_BEGINNER_3_005.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-3',0,0,5) */
+	('Joy was going to the petting zoo','Joy chuẩn bị đi sở thú cho khách vuốt ve và cho động vật ăn','00:00:00.320','00:00:02.740','esl-fast-beginner-3-5'),
+	('She was excited','Cô bé háo hức lắm','00:00:02.819','00:00:04.680','esl-fast-beginner-3-5'),
+	('It was going to be her first time seeing animals','Đây sẽ là lần đầu tiên cô bé được tận mắt nhìn thấy các con vật','00:00:05.140','00:00:09.380','esl-fast-beginner-3-5'),
+	('When her dad parked the car, she opened the car door right away','Bố vừa đỗ xe xong là cô bé lập tức mở cửa xe','00:00:10.200','00:00:16.080','esl-fast-beginner-3-5'),
+	('Joy, wait for us, her dad said','Joy, chờ bố mẹ với, bố cô bé nói','00:00:16.320','00:00:19.980','esl-fast-beginner-3-5'),
+	('Once her mom and dad got out of the car, Joy made them run to the zoo with her','Bố mẹ vừa bước xuống xe, Joy đã kéo cả hai chạy vào sở thú cùng mình','00:00:19.980','00:00:26.700','esl-fast-beginner-3-5'),
+	('They arrived','Họ đã đến nơi','00:00:26.820','00:00:28.320','esl-fast-beginner-3-5'),
+	('Joy saw the animals','Joy nhìn thấy những con vật','00:00:28.480','00:00:30.400','esl-fast-beginner-3-5'),
+	('Her smile disappeared','Nụ cười trên môi cô bé vụt tắt','00:00:30.800','00:00:33.120','esl-fast-beginner-3-5'),
+	('The animals were not that impressive','Những con vật này chẳng có gì đặc biệt cả','00:00:33.560','00:00:36.120','esl-fast-beginner-3-5'),
+	('There were only rabbits, horses, and dogs','Ở đây chỉ có thỏ, ngựa và chó','00:00:36.660','00:00:40.760','esl-fast-beginner-3-5'),
+	('They were very boring','Chúng trông chán ngắt','00:00:41.080','00:00:43.160','esl-fast-beginner-3-5'),
+	('She was hoping to see more wild animals','Cô bé cứ mong được nhìn thấy nhiều loài động vật hoang dã hơn','00:00:43.680','00:00:47.220','esl-fast-beginner-3-5'),
+	('Let\'s go home, Joy said','Mình về nhà đi, Joy nói','00:00:47.640','00:00:51.140','esl-fast-beginner-3-5'),
+	('No way, we came all the way here to pet animals, her dad said','Không được đâu, mình đã đi cả quãng đường đến đây để vuốt ve các con vật mà, bố cô bé nói','00:00:51.220','00:00:57.160','esl-fast-beginner-3-5'),
+
+	/* (UUID(),'esl-fast-beginner-3-6','The Petting Zoo','Sở thú vuốt ve','ESL_FAST_BEGINNER_3_006.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-3',0,0,6) */
+	('Parents have different ways of punishing their kids','Bố mẹ có nhiều cách khác nhau để phạt con cái','00:00:00.260','00:00:04.880','esl-fast-beginner-3-6'),
+	('Some parents ground their kids','Một số bố mẹ phạt con bằng cách cấm không cho đi chơi','00:00:05.240','00:00:08.000','esl-fast-beginner-3-6'),
+	('Grounding means that kids are not allowed to do fun things','Phạt kiểu này có nghĩa là trẻ không được làm những việc mình thích','00:00:08.340','00:00:12.920','esl-fast-beginner-3-6'),
+	('This includes watching TV, going out with friends, and playing video games','Chẳng hạn như không được xem TV, đi chơi với bạn bè hay chơi điện tử','00:00:13.360','00:00:20.520','esl-fast-beginner-3-6'),
+	('Some parents give their kids long speeches','Một số bố mẹ lại nói chuyện, giảng giải cho con một hồi lâu','00:00:20.600','00:00:24.420','esl-fast-beginner-3-6'),
+	('They would yell at them or tell them what they did wrong','Họ có thể la mắng hoặc nói cho con biết mình đã làm sai điều gì','00:00:24.700','00:00:28.380','esl-fast-beginner-3-6'),
+	('Some parents give their kids the silent treatment','Một số bố mẹ lại chọn cách im lặng, không nói chuyện với con','00:00:28.780','00:00:32.760','esl-fast-beginner-3-6'),
+	('The silent treatment is when the parents don\'t talk to the kids','Đó là khi bố mẹ không nói chuyện hay đáp lời con','00:00:33.260','00:00:37.840','esl-fast-beginner-3-6'),
+	('Some parents make their kids do more chores','Một số bố mẹ bắt con làm thêm việc nhà','00:00:38.380','00:00:42.160','esl-fast-beginner-3-6'),
+	('Some parents don\'t even punish their kids','Một số bố mẹ thậm chí còn chẳng phạt con','00:00:42.820','00:00:46.440','esl-fast-beginner-3-6'),
+	('They are very lenient','Họ khá là dễ tính với con','00:00:46.480','00:00:48.760','esl-fast-beginner-3-6');
+
+/*=====================================================================================================================================================================================================================================================*/
+
+INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
+	/* (UUID(),'esl-fast-beginner-3-7','Parental Punishment','Hình phạt của cha mẹ','ESL_FAST_BEGINNER_3_007.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-3',0,0,7) */
+	('Pat found a bunny','Pat nhặt được một chú thỏ','00:00:00.000','00:00:02.200','esl-fast-beginner-3-7'),
+	('She found it on the street','Cô bé thấy nó trên đường','00:00:02.320','00:00:04.860','esl-fast-beginner-3-7'),
+	('There was blood on the bunny','Trên người chú thỏ có dính máu','00:00:05.300','00:00:07.380','esl-fast-beginner-3-7'),
+	('It looked like it was in pain','Trông nó có vẻ đang rất đau','00:00:07.540','00:00:10.140','esl-fast-beginner-3-7'),
+	('Pat did not want to leave it alone','Pat không nỡ bỏ mặc chú thỏ','00:00:10.580','00:00:13.400','esl-fast-beginner-3-7'),
+	('She carried it home','Cô bé bế nó về nhà','00:00:13.900','00:00:15.800','esl-fast-beginner-3-7'),
+	('She put it in a shoebox','Cô bé đặt nó vào một chiếc hộp đựng giày','00:00:15.920','00:00:18.580','esl-fast-beginner-3-7'),
+	('She asked her mom if she could keep it','Cô bé hỏi mẹ xem mình có thể nuôi nó không','00:00:18.740','00:00:22.080','esl-fast-beginner-3-7'),
+	('Her mom said no','Mẹ cô bé nói không','00:00:22.420','00:00:24.700','esl-fast-beginner-3-7'),
+	('The bunny might have rabies','Chú thỏ có thể bị bệnh dại','00:00:24.820','00:00:27.120','esl-fast-beginner-3-7'),
+	('Pat took the bunny to the veterinarian','Pat đưa chú thỏ đến gặp bác sĩ thú y','00:00:27.600','00:00:30.840','esl-fast-beginner-3-7'),
+	('The bunny probably could not live','Có lẽ chú thỏ không thể sống được','00:00:30.900','00:00:34.080','esl-fast-beginner-3-7'),
+	('It was too injured','Nó bị thương quá nặng','00:00:34.700','00:00:36.600','esl-fast-beginner-3-7'),
+	('Pat asked her mom again if she could keep it','Pat lại hỏi mẹ xem mình có thể nuôi chú thỏ không','00:00:37.320','00:00:40.760','esl-fast-beginner-3-7'),
+	('She said that the bunny would die in a week','Bác sĩ nói chú thỏ có thể sẽ chết trong vòng một tuần','00:00:40.900','00:00:43.980','esl-fast-beginner-3-7'),
+	('Her mom said okay','Mẹ cô bé đồng ý','00:00:44.340','00:00:46.020','esl-fast-beginner-3-7'),
+	('Pat took really good care of the bunny','Pat chăm sóc chú thỏ rất cẩn thận','00:00:46.460','00:00:49.500','esl-fast-beginner-3-7'),
+
+	/* (UUID(),'esl-fast-beginner-3-8','Alexa\'s Bunny','Chú thỏ của Alexa','ESL_FAST_BEGINNER_3_008.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-3',0,0,8) */
+	('Yvonne loved drawing','Yvonne rất thích vẽ','00:00:00.700','00:00:02.580','esl-fast-beginner-3-8'),
+	('She practiced drawing a lot','Cô bé luyện vẽ rất nhiều','00:00:03.020','00:00:05.680','esl-fast-beginner-3-8'),
+	('She knew how to draw nature','Cô bé biết vẽ cảnh thiên nhiên','00:00:06.020','00:00:08.000','esl-fast-beginner-3-8'),
+	('She could draw people','Cô bé cũng biết vẽ người','00:00:08.440','00:00:10.440','esl-fast-beginner-3-8'),
+	('She did not know how to draw animals','Nhưng cô bé lại không biết vẽ con vật','00:00:10.800','00:00:13.460','esl-fast-beginner-3-8'),
+	('She decided it was time to learn','Cô bé quyết định đã đến lúc phải học vẽ động vật','00:00:13.820','00:00:17.320','esl-fast-beginner-3-8'),
+	('She looked up instructions online','Cô bé tìm hướng dẫn trên mạng','00:00:17.780','00:00:21.320','esl-fast-beginner-3-8'),
+	('She also borrowed books','Cô bé còn mượn thêm sách','00:00:21.460','00:00:24.180','esl-fast-beginner-3-8'),
+	('She studied the techniques','Cô bé tìm hiểu các kỹ thuật vẽ','00:00:24.460','00:00:27.060','esl-fast-beginner-3-8'),
+	('She looked at many images','Cô bé xem rất nhiều hình ảnh','00:00:27.480','00:00:29.740','esl-fast-beginner-3-8'),
+	('She decided to practice','Cô bé quyết định bắt tay vào luyện tập','00:00:30.160','00:00:32.600','esl-fast-beginner-3-8'),
+	('She wanted to start with something easy','Cô bé muốn bắt đầu với thứ gì đó đơn giản','00:00:33.160','00:00:36.260','esl-fast-beginner-3-8'),
+	('She first attempted a dog','Đầu tiên, cô bé thử vẽ một chú chó','00:00:36.640','00:00:39.900','esl-fast-beginner-3-8'),
+	('After several tries, she finally got it','Sau vài lần thử, cuối cùng cô bé cũng vẽ được','00:00:40.240','00:00:43.840','esl-fast-beginner-3-8'),
+	('She traced the outline','Cô bé tô theo đường viền','00:00:44.120','00:00:46.400','esl-fast-beginner-3-8'),
+	('She then colored it','Sau đó, cô bé tô màu cho bức vẽ','00:00:46.860','00:00:48.900','esl-fast-beginner-3-8'),
+	('She was proud of herself','Cô bé cảm thấy rất tự hào về bản thân','00:00:49.460','00:00:51.560','esl-fast-beginner-3-8'),
+	('She decided to take a break','Cô bé quyết định nghỉ một lát','00:00:51.980','00:00:54.720','esl-fast-beginner-3-8'),
+	('Tomorrow, she would learn how to draw a bear','Ngày mai, cô bé sẽ học cách vẽ một chú gấu','00:00:55.080','00:00:58.860','esl-fast-beginner-3-8'),
+
+	/* (UUID(),'esl-fast-beginner-3-9','Drawing Animals','Vẽ động vật','ESL_FAST_BEGINNER_3_009.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-3',0,0,9) */
+	('Andrea was playing tag with her friends','Andrea đang chơi đuổi bắt với các bạn','00:00:00.460','00:00:03.359','esl-fast-beginner-3-9'),
+	('Tag is a game where one person is it and chases the other players','Đuổi bắt là trò chơi mà một người làm người đuổi và chạy theo những người còn lại','00:00:03.900','00:00:09.460','esl-fast-beginner-3-9'),
+	('Andrea is it','Andrea là người đuổi','00:00:09.940','00:00:11.720','esl-fast-beginner-3-9'),
+	('She is playing with five other people','Cô bé đang chơi cùng năm người khác','00:00:11.640','00:00:14.800','esl-fast-beginner-3-9'),
+	('She runs after Joe','Cô bé chạy đuổi theo Joe','00:00:15.179','00:00:17.160','esl-fast-beginner-3-9'),
+	('Joe is ahead of her, but Joe is a slow runner','Joe chạy phía trước cô bé, nhưng cậu ấy chạy khá chậm','00:00:17.480','00:00:21.960','esl-fast-beginner-3-9'),
+	('Andrea taps him on the shoulder','Andrea vỗ nhẹ vào vai Joe','00:00:22.520','00:00:24.740','esl-fast-beginner-3-9'),
+	('Joe falls down','Joe ngã xuống đất','00:00:25.060','00:00:27.120','esl-fast-beginner-3-9'),
+	('He starts crying','Cậu bé bắt đầu khóc','00:00:27.300','00:00:29.000','esl-fast-beginner-3-9'),
+	('A teacher runs towards him','Một cô giáo chạy về phía cậu bé','00:00:28.900','00:00:31.900','esl-fast-beginner-3-9'),
+	('Did you push him down, Andrea?','Andrea, có phải em đẩy bạn ấy ngã không?','00:00:32.020','00:00:35.040','esl-fast-beginner-3-9'),
+	('The teacher asked','Cô giáo hỏi','00:00:34.840','00:00:36.560','esl-fast-beginner-3-9'),
+	('No, he tripped','Không ạ, bạn ấy tự vấp ngã','00:00:36.620','00:00:39.200','esl-fast-beginner-3-9'),
+	('I just tapped his shoulder, Andrea said','Em chỉ vỗ nhẹ vào vai bạn ấy thôi, Andrea nói','00:00:39.100','00:00:42.820','esl-fast-beginner-3-9'),
+	('The teacher did not believe her','Cô giáo không tin lời cô bé','00:00:42.760','00:00:45.620','esl-fast-beginner-3-9'),
+	('She asks Joe if Andrea pushed her','Cô hỏi Joe xem Andrea có đẩy cậu ấy không','00:00:45.840','00:00:49.420','esl-fast-beginner-3-9'),
+	('He said no','Cậu bé nói không','00:00:49.680','00:00:51.160','esl-fast-beginner-3-9'),
+	('The teacher said sorry to Andrea','Cô giáo xin lỗi Andrea','00:00:50.660','00:00:54.780','esl-fast-beginner-3-9'),
+
+	/* (UUID(),'esl-fast-beginner-3-10','Falling Down in the Game','Ngã trong trò chơi','ESL_FAST_BEGINNER_3_010.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-3',0,0,10) */
+	('Mrs. U was working on arts and crafts with her kids at school','Cô U đang cùng các bé làm đồ thủ công ở trường','00:00:03.190','00:00:05.370','esl-fast-beginner-3-10'),
+	('The children wanted to make something','Các bé muốn làm một thứ gì đó','00:00:05.810','00:00:08.210','esl-fast-beginner-3-10'),
+	('They were very excited','Các bé rất hào hứng','00:00:08.490','00:00:10.390','esl-fast-beginner-3-10'),
+	('Mrs. U had a lot of paper and supplies','Cô U có rất nhiều giấy và đồ dùng thủ công','00:00:13.690','00:00:14.710','esl-fast-beginner-3-10'),
+	('The children wondered what they were going to make','Các bé tò mò không biết mình sẽ làm gì','00:00:15.330','00:00:18.630','esl-fast-beginner-3-10'),
+	('Mrs. U announced that they were going to make animal masks','Cô U thông báo rằng các bé sẽ làm mặt nạ hình con vật','00:00:21.790','00:00:23.730','esl-fast-beginner-3-10'),
+	('She passed out the paper','Cô phát giấy cho mọi người','00:00:24.150','00:00:26.170','esl-fast-beginner-3-10'),
+	('Everyone began coloring and cutting','Mọi người bắt đầu tô màu và cắt giấy','00:00:26.750','00:00:29.670','esl-fast-beginner-3-10'),
+	('The fun began','Cuộc vui bắt đầu','00:00:30.010','00:00:32.090','esl-fast-beginner-3-10'),
+	('Some made bunny masks','Một số bé làm mặt nạ thỏ','00:00:33.090','00:00:35.630','esl-fast-beginner-3-10'),
+	('Some made lion masks','Một số bé làm mặt nạ sư tử','00:00:35.990','00:00:38.510','esl-fast-beginner-3-10'),
+	('All of them had fun','Tất cả các bé đều rất vui','00:00:38.770','00:00:41.510','esl-fast-beginner-3-10'),
+	('When they were done, they all put their masks on','Khi làm xong, tất cả các bé đều đeo mặt nạ lên','00:00:41.950','00:00:46.590','esl-fast-beginner-3-10'),
+	('After having a lot of fun, the kids cleaned up their mess','Sau khi chơi rất vui, các bé cùng dọn dẹp đồ đạc bừa bộn','00:00:46.970','00:00:51.890','esl-fast-beginner-3-10'),
+	('It was a very fun day for everyone','Đó là một ngày thật vui đối với tất cả mọi người','00:00:52.090','00:00:56.190','esl-fast-beginner-3-10'),
+
+	/* (UUID(),'esl-fast-beginner-3-11','Arts and Crafts','Thủ công mỹ nghệ','ESL_FAST_BEGINNER_3_011.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-3',0,0,11) */
+	('Charlie was going to visit a candy factory','Charlie sắp đi tham quan một nhà máy kẹo','00:00:00.460','00:00:03.440','esl-fast-beginner-3-11'),
+	('He was going with his parents','Cậu bé đi cùng bố mẹ','00:00:03.920','00:00:06.360','esl-fast-beginner-3-11'),
+	('On this trip, he would take a tour of the factory','Trong chuyến đi này, cậu bé sẽ được tham quan nhà máy','00:00:06.940','00:00:11.060','esl-fast-beginner-3-11'),
+	('He would be with other children and their families','Cậu bé sẽ đi cùng những bạn nhỏ khác và gia đình của họ','00:00:11.540','00:00:15.480','esl-fast-beginner-3-11'),
+	('At the end of the trip, they could fill up one bag of candy they wanted','Cuối chuyến đi, mỗi người có thể lấy đầy một túi kẹo mà mình thích','00:00:16.100','00:00:21.260','esl-fast-beginner-3-11'),
+	('He was very excited','Cậu bé rất hào hứng','00:00:21.620','00:00:23.560','esl-fast-beginner-3-11'),
+	('He was in a group with three other families','Cậu bé ở cùng một nhóm với ba gia đình khác','00:00:23.820','00:00:27.040','esl-fast-beginner-3-11'),
+	('They took a tour of the factory','Họ đi tham quan nhà máy','00:00:27.560','00:00:30.260','esl-fast-beginner-3-11'),
+	('They saw how the chocolate and candy were made','Họ được xem cách sô-cô-la và kẹo được làm ra như thế nào','00:00:30.660','00:00:34.760','esl-fast-beginner-3-11'),
+	('It was fascinating to see what happened before it went into their mouths','Thật thú vị khi được xem mọi thứ diễn ra như thế nào trước khi những món kẹo ấy được đưa vào miệng','00:00:35.140','00:00:40.420','esl-fast-beginner-3-11'),
+	('At the end of the trip, they each got a plastic bag','Cuối chuyến đi, mỗi người được phát một chiếc túi nhựa','00:00:40.940','00:00:45.320','esl-fast-beginner-3-11'),
+	('Charlie filled his up with sour candy, chocolate, and soda candy','Charlie cho đầy túi của mình bằng kẹo chua, sô-cô-la và kẹo vị soda','00:00:45.880','00:00:51.280','esl-fast-beginner-3-11'),
+	('He was very happy','Cậu bé rất vui','00:00:51.560','00:00:53.680','esl-fast-beginner-3-11');
+
+/*=====================================================================================================================================================================================================================================================*/
+
+INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
+	/* (UUID(),'esl-fast-beginner-3-12','Visiting a Candy Factory','Thăm nhà máy kẹo','ESL_FAST_BEGINNER_3_012.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-3',0,0,12) */
+	('The kids are at a water park for a field trip','Các bé đang ở công viên nước trong một chuyến đi tham quan','00:00:00.000','00:00:04.400','esl-fast-beginner-3-12'),
+	('It is time to go on the water slide','Đã đến lúc chơi cầu trượt nước','00:00:04.460','00:00:08.020','esl-fast-beginner-3-12'),
+	('Hector is scared to go on the slide','Hector sợ không dám chơi cầu trượt','00:00:08.560','00:00:11.440','esl-fast-beginner-3-12'),
+	('He looks up and sees how high the slide is','Cậu bé ngước lên và thấy cầu trượt cao đến mức nào','00:00:11.560','00:00:15.640','esl-fast-beginner-3-12'),
+	('Afraid of heights, he does not want to go on','Vì sợ độ cao nên cậu bé không muốn chơi','00:00:16.020','00:00:20.040','esl-fast-beginner-3-12'),
+	('He sees all the other kids having fun on the slide','Cậu bé thấy những bạn nhỏ khác đang chơi cầu trượt rất vui','00:00:20.220','00:00:24.640','esl-fast-beginner-3-12'),
+	('Hector gets very upset','Hector cảm thấy rất buồn và lo lắng','00:00:25.100','00:00:27.280','esl-fast-beginner-3-12'),
+	('The teacher goes up to talk to him','Cô giáo đến nói chuyện với cậu bé','00:00:27.600','00:00:30.160','esl-fast-beginner-3-12'),
+	('She explains to him that it is safe and nothing will happen','Cô giải thích rằng trò chơi này an toàn và sẽ không có chuyện gì xảy ra','00:00:30.480','00:00:35.220','esl-fast-beginner-3-12'),
+	('Hector decides to take the risk','Hector quyết định thử một lần','00:00:35.760','00:00:38.460','esl-fast-beginner-3-12'),
+	('He climbs up the slide','Cậu bé leo lên cầu trượt','00:00:38.680','00:00:41.520','esl-fast-beginner-3-12'),
+	('He takes a pause before he goes down','Cậu bé dừng lại một chút trước khi trượt xuống','00:00:41.760','00:00:45.440','esl-fast-beginner-3-12'),
+	('As he goes down, he screams','Khi trượt xuống, cậu bé hét lên','00:00:45.680','00:00:49.060','esl-fast-beginner-3-12'),
+	('At the bottom, he realizes it is not so bad','Khi xuống đến cuối, cậu bé nhận ra rằng trò này cũng không đáng sợ lắm','00:00:48.560','00:00:54.320','esl-fast-beginner-3-12'),
+	('He is now ready to line up and go again','Bây giờ cậu bé đã sẵn sàng xếp hàng để chơi lại','00:00:54.500','00:00:58.900','esl-fast-beginner-3-12'),
+
+	/* (UUID(),'esl-fast-beginner-3-13','Water Slide','Cầu trượt nước','ESL_FAST_BEGINNER_3_013.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-3',0,0,13) */
+	('Luke was moving to a new school','Luke chuyển đến một ngôi trường mới','00:00:00.000','00:00:03.070','esl-fast-beginner-3-13'),
+	('His dad got a new job, so he had to move','Bố của cậu bé có công việc mới nên cả gia đình phải chuyển nhà','00:00:03.590','00:00:07.670','esl-fast-beginner-3-13'),
+	('He felt sad','Cậu bé cảm thấy buồn','00:00:07.910','00:00:09.690','esl-fast-beginner-3-13'),
+	('He had to leave all his friends behind','Cậu bé phải rời xa tất cả những người bạn của mình','00:00:10.090','00:00:13.330','esl-fast-beginner-3-13'),
+	('He was scared he would have a hard time making new friends','Cậu bé sợ rằng mình sẽ khó kết bạn mới','00:00:13.670','00:00:17.870','esl-fast-beginner-3-13'),
+	('He was also scared because he would not be used to the new place and the new school','Cậu bé cũng lo lắng vì chưa quen với nơi ở mới và ngôi trường mới','00:00:18.370','00:00:24.570','esl-fast-beginner-3-13'),
+	('His parents told him everything would be fine','Bố mẹ nói với cậu bé rằng mọi chuyện rồi sẽ ổn','00:00:25.290','00:00:28.910','esl-fast-beginner-3-13'),
+	('When he got there, everything felt weird','Khi đến nơi, mọi thứ đều khiến cậu bé cảm thấy lạ lẫm','00:00:28.410','00:00:33.010','esl-fast-beginner-3-13'),
+	('It felt out of place','Cậu bé cảm thấy mọi thứ thật xa lạ','00:00:33.290','00:00:35.350','esl-fast-beginner-3-13'),
+	('His house looked so different from his old house','Ngôi nhà mới trông rất khác so với ngôi nhà cũ','00:00:35.730','00:00:39.230','esl-fast-beginner-3-13'),
+	('The next day, he went to school','Ngày hôm sau, cậu bé đi học','00:00:39.450','00:00:42.490','esl-fast-beginner-3-13'),
+	('He made a lot of new friends','Cậu bé đã kết bạn với rất nhiều người bạn mới','00:00:42.850','00:00:45.010','esl-fast-beginner-3-13'),
+	('He was happy with his new school','Cậu bé cảm thấy vui với ngôi trường mới','00:00:45.410','00:00:48.170','esl-fast-beginner-3-13'),
+
+	/* (UUID(),'esl-fast-beginner-3-14','Luke\'s New School','Trường mới của Luke','ESL_FAST_BEGINNER_3_014.mp3',NULL,'00:00:00.000','00:00:00.000','esl-fast-beginner-3',0,0,14) */
+	('Frank\'s cousins were coming to town','Anh chị em họ của Frank sắp đến thành phố','00:00:00.000','00:00:03.200','esl-fast-beginner-3-14'),
+	('He was excited','Cậu bé rất hào hứng','00:00:03.520','00:00:05.340','esl-fast-beginner-3-14'),
+	('This was the first time he would see them in person','Đây là lần đầu tiên cậu bé được gặp họ ngoài đời','00:00:05.720','00:00:09.700','esl-fast-beginner-3-14'),
+	('His cousins lived in another country','Anh chị em họ của cậu bé sống ở một đất nước khác','00:00:10.300','00:00:13.200','esl-fast-beginner-3-14'),
+	('He never saw them','Cậu bé chưa bao giờ gặp họ','00:00:13.680','00:00:15.580','esl-fast-beginner-3-14'),
+	('The only time he saw them was when he webbed Cam with them','Lần duy nhất cậu bé nhìn thấy họ là khi cậu gọi video với họ','00:00:15.940','00:00:20.820','esl-fast-beginner-3-14'),
+	('He also talked on the phone with them','Cậu bé cũng nói chuyện với họ qua điện thoại','00:00:21.220','00:00:24.460','esl-fast-beginner-3-14'),
+	('Frank was excited to have someone his age to talk to','Frank rất vui vì có người cùng tuổi để trò chuyện','00:00:24.940','00:00:29.600','esl-fast-beginner-3-14'),
+	('Frank got all his video games ready','Frank chuẩn bị sẵn tất cả trò chơi điện tử của mình','00:00:30.000','00:00:33.080','esl-fast-beginner-3-14'),
+	('He could not wait to play with them','Cậu bé nóng lòng muốn chơi cùng họ','00:00:33.260','00:00:35.680','esl-fast-beginner-3-14'),
+	('His cousins came','Anh chị em họ của cậu bé đã đến','00:00:35.880','00:00:37.720','esl-fast-beginner-3-14'),
+	('They hugged and laughed','Họ ôm nhau và cười nói vui vẻ','00:00:37.920','00:00:40.720','esl-fast-beginner-3-14'),
+	('Frank told them stories about his country','Frank kể cho họ nghe những câu chuyện về đất nước của mình','00:00:41.060','00:00:44.060','esl-fast-beginner-3-14'),
+	('They told him stories about their country','Họ kể cho Frank nghe những câu chuyện về đất nước của họ','00:00:44.240','00:00:48.600','esl-fast-beginner-3-14'),
+	('They played games','Họ cùng nhau chơi trò chơi','00:00:48.500','00:00:50.660','esl-fast-beginner-3-14'),
+	('Then they ate dinner','Sau đó, họ cùng ăn tối','00:00:51.020','00:00:53.260','esl-fast-beginner-3-14'),
+	('After dinner, they continued to play games','Sau bữa tối, họ tiếp tục chơi trò chơi','00:00:52.760','00:00:57.380','esl-fast-beginner-3-14');
