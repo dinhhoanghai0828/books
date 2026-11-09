@@ -9,9 +9,8 @@ INSERT INTO CATEGORIES(UUID, SLUG, ENG, VI, PARENT_SLUG, NUMBER) VALUES
     (UUID(), 'book', 'Book', 'Sách', NULL, 2),
     (UUID(), 'news', 'News', 'Báo', NULL, 3),
     (UUID(), 'presentation', 'Presentation', 'Thuyết trình', NULL, 4),
-    (UUID(), 'tieng-anh-co-ban', 'Basic English', 'Tiếng anh cơ bản', NULL, 5),
-    (UUID(), 'toan', 'Toán', 'Toán', NULL, 6),
-	(UUID(), 'web', 'Web', 'Trang Web', NULL, 7),
+    (UUID(), 'toan', 'Toán', 'Toán', NULL, 5),
+	(UUID(), 'web', 'Web', 'Trang Web', NULL, 6),
 
     -- Truyện
 	-- Truyện - Truyện truyền cảm hứng
@@ -51,8 +50,6 @@ INSERT INTO CATEGORIES(UUID, SLUG, ENG, VI, PARENT_SLUG, NUMBER) VALUES
     (UUID(), 'tedtalks', 'TEDTALKS', 'TEDTALKS', 'presentation', NULL),
     (UUID(), 'tro-chuyen-hang-ngay', 'Daily Conversations', 'Trò chuyện hàng ngày', 'presentation', NULL),
 /* ============================================================================================================================================================================================ */
-    -- Tiếng Anh cơ bản
-    (UUID(), 'tieng-anh-co-ban-cap-do-1', 'Basic English Level 1', 'Tiếng anh cơ bản cấp độ 1', 'tieng-anh-co-ban', NULL),
 	-- Toán
     (UUID(), 'toan/lop-1', 'Lớp 1', 'Lớp 1', 'toan', 1),
     (UUID(), 'toan/lop-2', 'Lớp 2', 'Lớp 2', 'toan', 2),
@@ -99,7 +96,7 @@ INSERT INTO BOOKS(UUID,SLUG,ENG,VI,AUTHOR,DESCRIPTION,CATEGORY_SLUG,IMG,NUMBER) 
 	-- Thuyết trình - TEDTALKS
 	(UUID(),'technology','Technology','Công Nghệ','Nhiều tác giả','Thảo luận về các vấn đề trong cuộc sống','tedtalks','TEDTALKS.png',1),
 	(UUID(),'hon-tap','Hỗn tạp','Hỗn tạp','Nhiều tác giả','Thảo luận về các vấn đề trong cuộc sống','tedtalks','TEDTALKS.png',1),
-	(UUID(),'all-ears-english','All Ears English','All Ears English','Nhiều tác giả','Thảo luận về các vấn đề trong cuộc sống','doi-thoai-hoc-thuat','ALL_EARS_ENGLISH.png',2),
+
 	/* tro-chuyen-hang-ngay */
 	(UUID(),'dhar-mann-studio','Dhar Mann Studio','Dhar Mann Studio','Nhiều tác giả','Các cuộc hội thoại ngắn thường ngày','tro-chuyen-hang-ngay','DHAR_MANN_STUDIO.png',1),
 
@@ -298,9 +295,6 @@ INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,IS_
 	(UUID(),'4000-essential-english-words-2-28','The Fisherman','Người ngư dân','4000_ESSENTIAL_ENGLISH_WORDS_058.mp3',NULL,'00:00:00.000','00:01:26.900','4000-essential-english-words-2',0,0,0,58),
 	(UUID(),'4000-essential-english-words-2-29','Osiris and the Nile','Thần Osiris và dòng sông Nile','4000_ESSENTIAL_ENGLISH_WORDS_059.mp3',NULL,'00:00:00.000','00:01:38.200','4000-essential-english-words-2',0,0,0,59),
 	(UUID(),'4000-essential-english-words-2-30','The Taxi Driver','Tài xế taxi','4000_ESSENTIAL_ENGLISH_WORDS_060.mp3',NULL,'00:00:00.000','00:01:32.800','4000-essential-english-words-2',0,0,0,60);
-
-INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,IS_LANGUAGE_APPROVED,IS_REVIEW_COMPLETED,IS_READ,NUMBER) VALUES
-	(UUID(),'all-ears-english-1','How to lead a conversation between people who disagree?','Làm thế nào để dẫn dắt đối thoại giữa những người đối nghịch?','CONVERSATIONS_ACADEMIC_CONVERSATION_02_ALL_EARS_ENGLISH_001.mp3',NULL,'00:00:13.205','00:09:05.362','all-ears-english',0,0,0,1);
 
 INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,IS_LANGUAGE_APPROVED,IS_REVIEW_COMPLETED,IS_READ,NUMBER) VALUES
 	(UUID(),'animatters-1','I fell in love with the man who robbed me','Tôi đã yêu người đàn ông cướp của mình','STORIES_ADULT_STORY_01_ANIMATERS_001.mp3',NULL,'00:00:00.120','00:10:10.000','animatters',0,0,0,1),
@@ -2074,7 +2068,6 @@ INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,IS_
 	(UUID(),'nightmare-tales-5','The Nanny','Người Giữ Trẻ','STORIES_HORROR_STORY_01_NIGHTMARE_TALE_005.mp3',NULL,'00:00:06.020','00:04:57.620','nightmare-tales',0,0,0,5),
 	(UUID(),'nightmare-tales-6','The dinner','Quán ăn','STORIES_HORROR_STORY_01_NIGHTMARE_TALE_006.mp3',NULL,'00:00:06.020','00:04:57.620','nightmare-tales',0,0,0,6);
 
-
 INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,IS_LANGUAGE_APPROVED,IS_REVIEW_COMPLETED,IS_READ,NUMBER) VALUES
 	(UUID(),'tedtalks-1','What do all languages have in common?','Tất cả các ngôn ngữ có điểm chung gì?','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_001.mp3',NULL,'00:00:06.000','00:05:01.121','tedtalks',0,0,0,1),
 	(UUID(),'tedtalks-2','The medical potential of AI and metabolites','Tiềm năng y học và các chất chuyển hóa','CONVERSATIONS_ACADEMIC_CONVERSATION_01_TEDTALKS_002.mp3',NULL,'00:00:13.507','00:05:08.900','tedtalks',0,0,0,2),
@@ -2217,7 +2210,6 @@ INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,IS_
 	(UUID(),'the-fictionist-38','How to prioritize what really matters in life','Cách ưu tiên những điều thực sự quan trọng trong cuộc sống','STORIES_INSPIRATIONAL_STORY_01_THE_FICTIONIST_038.mp3',NULL,'00:00:00.000','00:03:11.380','the-fictionist',0,0,0,38),
 	(UUID(),'the-fictionist-39','The unseen road','Con đường vô hình','STORIES_INSPIRATIONAL_STORY_01_THE_FICTIONIST_039.mp3',NULL,'00:00:00.000','00:05:07.580','the-fictionist',0,0,0,39),
 	(UUID(),'the-fictionist-40','The two wolves inside you','Hai con sói bên trong bạn','STORIES_INSPIRATIONAL_STORY_01_THE_FICTIONIST_040.mp3',NULL,'00:00:00.000','00:04:40.320','the-fictionist',0,0,0,40);
-
 
 INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,IS_LANGUAGE_APPROVED,IS_REVIEW_COMPLETED,IS_READ,NUMBER) VALUES
 	(UUID(),'voa-1','Teachers Use Games for More Enjoyable Learning','Giáo viên sử dụng trò chơi để việc học trở nên thú vị hơn','NEWS_DAILY_NEW_02_VOA_001.mp3',NULL,'00:00:00.000','00:05:08.900','voa',1,0,0,1),

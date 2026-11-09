@@ -655,12 +655,11 @@ public class RunSQLComponent {
     public List<String> generalContents() throws SQLException, IOException {
         List<String> generatedFiles = new ArrayList<>();
 
-        String sqlGetBooks = "SELECT DISTINCT B.SLUG AS BOOK_SLUG, B.CATEGORY_SLUG AS CATEGORY_SLUG, CAT.PARENT_SLUG AS CATEGORY_PARENT_SLUG " +
+        String sqlGetCategories = "SELECT DISTINCT B.CATEGORY_SLUG AS CATEGORY_SLUG " +
                 "FROM BOOKS B " +
                 "INNER JOIN VOLUMES V ON V.BOOK_SLUG = B.SLUG " +
                 "INNER JOIN CONTENTS C ON C.VOLUME_SLUG = V.SLUG " +
-                "LEFT JOIN CATEGORIES CAT ON B.CATEGORY_SLUG = CAT.SLUG " +
-                "ORDER BY B.SLUG";
+                "ORDER BY B.CATEGORY_SLUG";
 
         String sqlGetContents =
                 "SELECT C.ENG, C.VI, C.START_TIME, C.END_TIME, C.VOLUME_SLUG, " +
@@ -669,45 +668,61 @@ public class RunSQLComponent {
                 "V.IS_LANGUAGE_APPROVED AS V_IS_LANGUAGE_APPROVED, V.IS_REVIEW_COMPLETED AS V_IS_REVIEW_COMPLETED, V.NUMBER AS V_NUMBER, V.ID AS V_ID " +
                 "FROM CONTENTS C " +
                 "INNER JOIN VOLUMES V ON C.VOLUME_SLUG = V.SLUG " +
-                "WHERE V.BOOK_SLUG = ? " +
+                "INNER JOIN BOOKS B ON V.BOOK_SLUG = B.SLUG " +
+                "WHERE B.CATEGORY_SLUG = ? " +
                 "ORDER BY V.ID, C.ID";
 
+        String sqlGetRootParent = "WITH RECURSIVE CategoryTree AS (" +
+                "  SELECT SLUG, PARENT_SLUG FROM CATEGORIES WHERE SLUG = ? " +
+                "  UNION ALL " +
+                "  SELECT C.SLUG, C.PARENT_SLUG FROM CATEGORIES C " +
+                "  INNER JOIN CategoryTree CT ON C.SLUG = CT.PARENT_SLUG " +
+                ") " +
+                "SELECT SLUG FROM CategoryTree WHERE PARENT_SLUG IS NULL OR PARENT_SLUG = '' LIMIT 1";
+
         Connection connection = null;
-        PreparedStatement pstmtBooks = null;
-        ResultSet rsBooks = null;
+        PreparedStatement pstmtCategories = null;
+        ResultSet rsCategories = null;
 
         try {
             connection = resolveDataSource().getConnection();
-            pstmtBooks = connection.prepareStatement(sqlGetBooks);
-            rsBooks = pstmtBooks.executeQuery();
+            pstmtCategories = connection.prepareStatement(sqlGetCategories);
+            rsCategories = pstmtCategories.executeQuery();
 
-            List<Map<String, String>> bookInfoList = new ArrayList<>();
-            while (rsBooks.next()) {
-                Map<String, String> bookInfo = new HashMap<>();
-                bookInfo.put("BOOK_SLUG", rsBooks.getString("BOOK_SLUG"));
-                bookInfo.put("CATEGORY_SLUG", rsBooks.getString("CATEGORY_SLUG"));
-                bookInfo.put("CATEGORY_PARENT_SLUG", rsBooks.getString("CATEGORY_PARENT_SLUG"));
-                bookInfoList.add(bookInfo);
+            List<String> categorySlugs = new ArrayList<>();
+            while (rsCategories.next()) {
+                categorySlugs.add(rsCategories.getString("CATEGORY_SLUG"));
             }
-            DBUtils.closeAll("generalContents-books", null, pstmtBooks, rsBooks);
+            DBUtils.closeAll("generalContents-categories", null, pstmtCategories, rsCategories);
 
             final int ROWS_PER_BATCH    = 1000; // tách INSERT nếu 1 tập quá dài
             final int VOLUMES_PER_BATCH = 5;    // gom tối đa 5 tập vào 1 INSERT
             final String SEPARATOR = "\n/*=====================================================================================================================================================================================================================================================*/\n\n";
 
-            for (Map<String, String> bookInfo : bookInfoList) {
-                String bookSlug = bookInfo.get("BOOK_SLUG");
-                String categoryParentSlug = bookInfo.get("CATEGORY_PARENT_SLUG");
-                String fileNameKey = (categoryParentSlug != null && !categoryParentSlug.isEmpty())
-                        ? categoryParentSlug.toUpperCase().replace("-", "_") + "_" + bookSlug.toUpperCase().replace("-", "_")
-                        : bookSlug.toUpperCase().replace("-", "_");
+            for (String categorySlug : categorySlugs) {
+                // Find root parent of this category
+                String rootParentSlug = categorySlug;
+                PreparedStatement pstmtRootParent = null;
+                ResultSet rsRootParent = null;
+                try {
+                    pstmtRootParent = connection.prepareStatement(sqlGetRootParent);
+                    pstmtRootParent.setString(1, categorySlug);
+                    rsRootParent = pstmtRootParent.executeQuery();
+                    if (rsRootParent.next()) {
+                        rootParentSlug = rsRootParent.getString("SLUG");
+                    }
+                } finally {
+                    DBUtils.closeAll("generalContents-rootparent-" + categorySlug, null, pstmtRootParent, rsRootParent);
+                }
+
+                String fileNameKey = rootParentSlug.toUpperCase().replace("-", "_") + "_" + categorySlug.toUpperCase().replace("-", "_");
                 String outputFilePath = path + "APP_" + fileNameKey + ".sql";
 
                 PreparedStatement pstmtContents = null;
                 ResultSet rsContents = null;
                 try {
                     pstmtContents = connection.prepareStatement(sqlGetContents);
-                    pstmtContents.setString(1, bookSlug);
+                    pstmtContents.setString(1, categorySlug);
                     rsContents = pstmtContents.executeQuery();
 
                     StringBuilder sb        = new StringBuilder();
@@ -823,7 +838,7 @@ public class RunSQLComponent {
                         System.out.println("Generated: " + outputFilePath);
                     }
                 } finally {
-                    DBUtils.closeAll("generalContents-contents-" + bookSlug, null, pstmtContents, rsContents);
+                    DBUtils.closeAll("generalContents-contents-" + categorySlug, null, pstmtContents, rsContents);
                 }
             }
         } finally {
@@ -841,25 +856,45 @@ public class RunSQLComponent {
      */
     public List<String> insertContentFromExport() throws SQLException, IOException {
 
-        // Lấy danh sách book slugs có contents trong DB
-        String sqlGetBooks = "SELECT DISTINCT B.SLUG AS BOOK_SLUG, B.CATEGORY_SLUG AS CATEGORY_SLUG, CAT.PARENT_SLUG AS CATEGORY_PARENT_SLUG " +
+        // Lấy danh sách category slugs có contents trong DB
+        String sqlGetCategories = "SELECT DISTINCT B.CATEGORY_SLUG AS CATEGORY_SLUG " +
                 "FROM BOOKS B " +
                 "INNER JOIN VOLUMES V ON V.BOOK_SLUG = B.SLUG " +
                 "INNER JOIN CONTENTS C ON C.VOLUME_SLUG = V.SLUG " +
-                "LEFT JOIN CATEGORIES CAT ON B.CATEGORY_SLUG = CAT.SLUG " +
-                "ORDER BY B.SLUG";
+                "ORDER BY B.CATEGORY_SLUG";
+
+        String sqlGetRootParent = "WITH RECURSIVE CategoryTree AS (" +
+                "  SELECT SLUG, PARENT_SLUG FROM CATEGORIES WHERE SLUG = ? " +
+                "  UNION ALL " +
+                "  SELECT C.SLUG, C.PARENT_SLUG FROM CATEGORIES C " +
+                "  INNER JOIN CategoryTree CT ON C.SLUG = CT.PARENT_SLUG " +
+                ") " +
+                "SELECT SLUG FROM CategoryTree WHERE PARENT_SLUG IS NULL OR PARENT_SLUG = '' LIMIT 1";
 
         List<String> scripts = new ArrayList<>();
         Connection conQuery = resolveDataSource().getConnection();
         try {
-            PreparedStatement pstmt = conQuery.prepareStatement(sqlGetBooks);
+            PreparedStatement pstmt = conQuery.prepareStatement(sqlGetCategories);
             ResultSet rs = pstmt.executeQuery();
             while (rs.next()) {
-                String bookSlug = rs.getString("BOOK_SLUG");
-                String categoryParentSlug = rs.getString("CATEGORY_PARENT_SLUG");
-                String fileNameKey = (categoryParentSlug != null && !categoryParentSlug.isEmpty())
-                        ? categoryParentSlug.toUpperCase().replace("-", "_") + "_" + bookSlug.toUpperCase().replace("-", "_")
-                        : bookSlug.toUpperCase().replace("-", "_");
+                String categorySlug = rs.getString("CATEGORY_SLUG");
+
+                // Find root parent of this category
+                String rootParentSlug = categorySlug;
+                PreparedStatement pstmtRootParent = null;
+                ResultSet rsRootParent = null;
+                try {
+                    pstmtRootParent = conQuery.prepareStatement(sqlGetRootParent);
+                    pstmtRootParent.setString(1, categorySlug);
+                    rsRootParent = pstmtRootParent.executeQuery();
+                    if (rsRootParent.next()) {
+                        rootParentSlug = rsRootParent.getString("SLUG");
+                    }
+                } finally {
+                    DBUtils.closeAll("insertContentFromExport-rootparent-" + categorySlug, null, pstmtRootParent, rsRootParent);
+                }
+
+                String fileNameKey = rootParentSlug.toUpperCase().replace("-", "_") + "_" + categorySlug.toUpperCase().replace("-", "_");
                 String filePath = path + "APP_" + fileNameKey + ".sql";
                 scripts.add(filePath);
             }
