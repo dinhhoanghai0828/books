@@ -18297,12 +18297,11 @@ INSERT INTO MATH_CATEGORIES (CATEGORY_CODE, FULL_PATH, CATEGORY_NAME, CATEGORY_D
 	-- Child: 2.4.7 Suy luận tuổi từ phép tính và điều kiện ẩn
 	('AGE_LOGIC_CALCULATION', 'toan/lop-1', 'Suy luận tuổi từ phép tính và điều kiện ẩn', 'Tìm tuổi dựa vào biểu thức cộng trừ, số chưa biết, điều kiện gián tiếp hoặc nhiều dữ kiện cần suy luận để xác định kết quả.', 'AGE_PROBLEMS', 'ACTIVE', NULL, NULL);
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES 
-	('Tire Town School - Episode 1, Eddie''s First Day','Trường học Tire Town - Tập 1: Ngày đầu tiên của Eddie','00:00:01.850','00:00:06.770','little-cat-tire-town-school-1'),
+	('Tire Town School - Episode 1, Eddie''s First Day','Trường học Tire Town - Tập 1: Ngày đầu tiên của Eddie','00:00:01.850','00:00:06.900','little-cat-tire-town-school-1'),
 	('Eddie rolled onto the school lot','Eddie lái xe vào sân trường','00:00:32.090','00:00:35.170','little-cat-tire-town-school-1'),
 	('His tires were new','Lốp xe của cậu còn mới tinh','00:00:36.490','00:00:38.130','little-cat-tire-town-school-1'),
 	('His dumper was clean','Thùng ben của cậu sạch bong','00:00:41.410','00:00:43.190','little-cat-tire-town-school-1'),
-	('Oh, boy!','Ôi, thích quá!','00:00:45.310','00:00:46.650','little-cat-tire-town-school-1'),
-	('said Eddie','Eddie reo lên','00:00:46.990','00:00:47.750','little-cat-tire-town-school-1'),
+	('"Oh, boy!", said Eddie','"Ôi, thích quá!", Eddie reo lên','00:00:45.310','00:00:47.750','little-cat-tire-town-school-1'),
 	('My first day of school!','Hôm nay là ngày đầu tiên mình đi học!','00:00:48.250','00:00:49.850','little-cat-tire-town-school-1'),
 	('Eddie looked at the big garage','Eddie nhìn tòa nhà để xe rộng lớn','00:00:51.230','00:00:53.430','little-cat-tire-town-school-1'),
 	('A sign read, Tire Town School','Trên tấm biển ghi: Trường học Tire Town','00:00:54.230','00:00:56.570','little-cat-tire-town-school-1'),
