@@ -92,10 +92,12 @@ public class RunSQLComponent {
         scripts.add(path + "3_SQL_ENG_WORDS.sql");
         scripts.add(path + "MATH_CATEGORIES.sql");
 
-        scripts.add(path + "APP_ESL_FAST_BEGINNER_1.sql");
-        scripts.add(path + "APP_ESL_FAST_BEGINNER_2.sql");
-        scripts.add(path + "APP_ESL_FAST_BEGINNER_3.sql");
-        scripts.add(path + "APP_ESL_FAST_ELEMENTARY_1.sql");
+
+        scripts.add(path + "APP_WEB_LITTLE_CAT_TIRE_TOWN_SCHOOL.sql");
+        scripts.add(path + "APP_WEB_ESL_FAST_BEGINNER_1.sql");
+        scripts.add(path + "APP_WEB_ESL_FAST_BEGINNER_2.sql");
+        scripts.add(path + "APP_WEB_ESL_FAST_BEGINNER_3.sql");
+        scripts.add(path + "APP_WEB_ESL_FAST_ELEMENTARY_1.sql");
         scripts.add(path + "APP_4000_ESSENTIAL_ENGLISH_WORDS_1.sql");
         scripts.add(path + "APP_4000_ESSENTIAL_ENGLISH_WORDS_2.sql");
         scripts.add(path + "APP_ALL_EARS_ENGLISH.sql");
