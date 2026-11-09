@@ -183,13 +183,13 @@ public class WordAdapterImpl implements WordAdapter {
             String sqlCheck = "SELECT COUNT(*) FROM WORDS WHERE LOWER(ENG) = LOWER(?) AND LOWER(VI) = LOWER(?)";
             for (String vi : viList) {
                 pstmtCheck = DBUtils.prepareStatement(con, sqlCheck);
-                pstmtCheck.setString(1, eng.trim());
-                pstmtCheck.setString(2, vi.trim());
+                pstmtCheck.setString(1, eng.trim().toLowerCase());
+                pstmtCheck.setString(2, vi.trim().toLowerCase());
                 ResultSet rs = pstmtCheck.executeQuery();
                 if (rs.next() && rs.getInt(1) > 0) {
                     rs.close();
                     throw new Exception(
-                        "Từ \"" + eng.trim() + "\" có nghĩa tiếng Việt \"" + vi.trim()
+                        "Từ \"" + eng.trim().toLowerCase() + "\" có nghĩa tiếng Việt \"" + vi.trim().toLowerCase()
                         + "\" đã tồn tại. Vui lòng thêm nghĩa tiếng Việt khác."
                     );
                 }
@@ -201,8 +201,8 @@ public class WordAdapterImpl implements WordAdapter {
             // Tat ca cac cap deu hop le, thuc hien insert
             pstmt = DBUtils.prepareStatement(con, SQL_INSERT_WORD);
             for (String vi : viList) {
-                pstmt.setString(1, eng);
-                pstmt.setString(2, vi);
+                pstmt.setString(1, eng.trim().toLowerCase());
+                pstmt.setString(2, vi.trim().toLowerCase());
                 pstmt.addBatch();
             }
             int[] results = pstmt.executeBatch();
