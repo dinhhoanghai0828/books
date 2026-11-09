@@ -87,28 +87,28 @@ public class RunSQLComponent {
         scripts.add(path + "3_SQL_ENG_WORDS.sql");
         scripts.add(path + "MATH_CATEGORIES.sql");
 
-        // Thêm các file APP_*.sql theo format APP_<ROOT_PARENT>_<CATEGORY>.sql
-        scripts.add(path + "APP_BOOK_4000_ESSENTIAL_ENGLISH_WORDS.sql");
-        scripts.add(path + "APP_NEWS_NEWS.sql");
-        scripts.add(path + "APP_PRESENTATION_TRO_CHUYEN_HANG_NGAY.sql");
-        scripts.add(path + "APP_STORY_TRUYEN_CO_TICH.sql");
-        scripts.add(path + "APP_STORY_TRUYEN_CUOC_SONG.sql");
-        scripts.add(path + "APP_STORY_TRUYEN_KINH_DI.sql");
-        scripts.add(path + "APP_STORY_TRUYEN_TRUYEN_CAM_HUNG.sql");
-        scripts.add(path + "APP_STORY_TRUYEN_TUOI_TEEN.sql");
-        scripts.add(path + "APP_WEB_ESL_FAST_BEGINNER.sql");
-        scripts.add(path + "APP_WEB_ESL_FAST_ELEMENTARY.sql");
-        scripts.add(path + "APP_WEB_LITTLE_CAT_LEVEL_1.sql");
+        // Thêm các file ENGLISH_*.sql theo format ENGLISH_<ROOT_PARENT>_<CATEGORY>.sql
+        scripts.add(path + "ENGLISH_BOOK_4000_ESSENTIAL_ENGLISH_WORDS.sql");
+        scripts.add(path + "ENGLISH_NEWS_NEWS.sql");
+        scripts.add(path + "ENGLISH_PRESENTATION_TRO_CHUYEN_HANG_NGAY.sql");
+        scripts.add(path + "ENGLISH_STORY_TRUYEN_CO_TICH.sql");
+        scripts.add(path + "ENGLISH_STORY_TRUYEN_CUOC_SONG.sql");
+        scripts.add(path + "ENGLISH_STORY_TRUYEN_KINH_DI.sql");
+        scripts.add(path + "ENGLISH_STORY_TRUYEN_TRUYEN_CAM_HUNG.sql");
+        scripts.add(path + "ENGLISH_STORY_TRUYEN_TUOI_TEEN.sql");
+        scripts.add(path + "ENGLISH_WEB_ESL_FAST_BEGINNER.sql");
+        scripts.add(path + "ENGLISH_WEB_ESL_FAST_ELEMENTARY.sql");
+        scripts.add(path + "ENGLISH_WEB_LITTLE_CAT_LEVEL_1.sql");
 
 
         // Thêm các file MATH cố định
-        scripts.add(path + "APP_QUESTIONS.sql");
-        scripts.add(path + "APP_QUESTIONS_ANSWERS.sql");
+        scripts.add(path + "ENGLISH_QUESTIONS.sql");
+        scripts.add(path + "ENGLISH_QUESTIONS_ANSWERS.sql");
         scripts.add(path + "MATH_QUESTIONS.sql");
         scripts.add(path + "MATH_ANSWERS.sql");
 
         if (scripts.isEmpty()) {
-            System.out.println("insertContentFromExport: no APP_*.sql files found from DB.");
+            System.out.println("insertContentFromExport: no ENGLISH_*.sql files found from DB.");
         };
 
         //  Tong hop ra file Z_SQL_RESULTS_SENTENCE.sql
@@ -640,7 +640,7 @@ public class RunSQLComponent {
 
     /**
      * Đọc toàn bộ CONTENTS từ DB, nhóm theo BOOK_SLUG,
-     * và ghi mỗi nhóm ra file APP_<BOOK_SLUG>.sql trong thư mục path.
+     * và ghi mỗi nhóm ra file ENGLISH_<BOOK_SLUG>.sql trong thư mục path.
      */
     public List<String> generalContents() throws SQLException, IOException {
         List<String> generatedFiles = new ArrayList<>();
@@ -706,7 +706,7 @@ public class RunSQLComponent {
                 }
 
                 String fileNameKey = rootParentSlug.toUpperCase().replace("-", "_") + "_" + categorySlug.toUpperCase().replace("-", "_");
-                String outputFilePath = path + "APP_" + fileNameKey + ".sql";
+                String outputFilePath = path + "ENGLISH_" + fileNameKey + ".sql";
 
                 PreparedStatement pstmtContents = null;
                 ResultSet rsContents = null;
@@ -841,8 +841,8 @@ public class RunSQLComponent {
 
     /**
      * Tương đương RunSQLContentService nhưng thay scripts hardcode bằng
-     * danh sách file APP_<BOOK_SLUG>.sql được build động từ DB.
-     * Thực hiện: TRUNCATE CONTENTS → execute từng APP_*.sql → ghi SUMMARY.sql
+     * danh sách file ENGLISH_<BOOK_SLUG>.sql được build động từ DB.
+     * Thực hiện: TRUNCATE CONTENTS → execute từng ENGLISH_*.sql → ghi SUMMARY.sql
      */
     public List<String> insertContentFromExport() throws SQLException, IOException {
 
@@ -885,7 +885,7 @@ public class RunSQLComponent {
                 }
 
                 String fileNameKey = rootParentSlug.toUpperCase().replace("-", "_") + "_" + categorySlug.toUpperCase().replace("-", "_");
-                String filePath = path + "APP_" + fileNameKey + ".sql";
+                String filePath = path + "ENGLISH_" + fileNameKey + ".sql";
                 scripts.add(filePath);
             }
             DBUtils.closeAll("insertContentFromExport-query", null, pstmt, rs);
@@ -894,11 +894,11 @@ public class RunSQLComponent {
         }
 
         if (scripts.isEmpty()) {
-            System.out.println("insertContentFromExport: no APP_*.sql files found from DB.");
+            System.out.println("insertContentFromExport: no ENGLISH_*.sql files found from DB.");
             return scripts;
         }
 
-        // Ghi SUMMARY.sql từ các file APP_*.sql
+        // Ghi SUMMARY.sql từ các file ENGLISH_*.sql
         String summaryPath = path + "SUMMARY.sql";
         try (OutputStreamWriter outputWriter = new OutputStreamWriter(new FileOutputStream(summaryPath), StandardCharsets.UTF_8)) {
             for (String filePath : scripts) {
