@@ -84,7 +84,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('"You\'re not fast," said the car. "You\'re just a slow dump truck"','Chiếc xe nói: "Cậu chẳng nhanh chút nào! Cậu chỉ là một chiếc xe ben chậm chạp thôi!"','00:02:41.050','00:02:46.550','little-cat-tire-town-school-3'),
 
 	/* (UUID(),'little-cat-tire-town-school-4','Crash!','Vụ va chạm!','LITTLE_CAT_TIRE_TOWN_SCHOOL_4.mp3',NULL,'00:00:00.000','00:00:00.000','little-cat-tire-town-school',0,0,4) */
-	('Tire Town School, Episode 4, Crash Ha ha ha!','Trường học Tire Town, Tập 4: Cú va chạm – Ha ha ha!','00:00:01.530','00:00:12.370','little-cat-tire-town-school-4'),
+	('Tire Town School - Episode 4: Crash','Trường học Tire Town - Tập 4: Cú va chạm','00:00:01.530','00:00:06.500','little-cat-tire-town-school-4'),
 	('"You''re mean, Zippy," said Dipper','"Cậu thật xấu tính, Zippy!" Dipper nói.','00:00:15.350','00:00:18.890','little-cat-tire-town-school-4'),
 	('"Eddie is fast," said Jeb','"Eddie chạy nhanh lắm!" Jeb nói.','00:00:19.710','00:00:22.650','little-cat-tire-town-school-4'),
 	('"He won our race," said Poppy','"Cậu ấy đã thắng cuộc đua của chúng ta!" Poppy nói.','00:00:22.550','00:00:25.950','little-cat-tire-town-school-4'),
@@ -115,7 +115,8 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('But Eddie had three new friends','Nhưng Eddie đã có thêm ba người bạn mới.','00:02:16.920','00:02:20.600','little-cat-tire-town-school-4'),
 
 	/* (UUID(),'little-cat-tire-town-school-5','Field Trip','Chuyến tham quan','LITTLE_CAT_TIRE_TOWN_SCHOOL_5.mp3',NULL,'00:00:00.000','00:00:00.000','little-cat-tire-town-school',0,0,5) */
-	('Tire Town School Episode 5 Field Trip Eddie saw his friends at school','Trường học Tire Town, Tập 5: Chuyến tham quan – Eddie gặp các bạn ở trường.','00:00:00.550','00:00:26.330','little-cat-tire-town-school-5'),
+	('Tire Town School - Episode 5: Field Trip','Trường học Tire Town - Tập 5: Chuyến tham quan','00:00:00.550','00:00:06.500','little-cat-tire-town-school-5'),
+	('Eddie saw his friends at school','Eddie gặp các bạn ở trường','00:00:23.800','00:00:26.330','little-cat-tire-town-school-5'),
 	('"Hi, Eddie," called Poppy','"Chào Eddie!" Poppy gọi.','00:00:33.380','00:00:36.400','little-cat-tire-town-school-5'),
 	('Honk, honk! She tooted her horn','Bíp, bíp! Cô nàng bấm còi xe inh ỏi.','00:00:44.700','00:00:49.080','little-cat-tire-town-school-5'),
 	('Eddie laughed','Eddie bật cười.','00:00:49.960','00:00:51.300','little-cat-tire-town-school-5'),
@@ -146,7 +147,8 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	/* (UUID(),'little-cat-tire-town-school-6','The Car Wash','Tiệm rửa xe','LITTLE_CAT_TIRE_TOWN_SCHOOL_6.mp3',NULL,'00:00:00.000','00:00:00.000','little-cat-tire-town-school',0,0,6) */
-	('Tire Town School Episode 6 The Car Wash The car wash stinks, said Jeb','Trường học Tire Town, Tập 6: Tiệm rửa xe – Jeb nói: "Tiệm rửa xe này có mùi khó chịu quá!"','00:00:01.570','00:00:19.290','little-cat-tire-town-school-6'),
+	('Tire Town School - Episode 6: The Car Wash','Trường học Tire Town - Tập 6: Tiệm rửa xe','00:00:01.570','00:00:06.500','little-cat-tire-town-school-6'),
+	('"The car wash stinks," said Jeb','Jeb nói: "Tiệm rửa xe này có mùi khó chịu quá!"','00:00:15.700','00:00:19.290','little-cat-tire-town-school-6'),
 	('"This field trip is terrible!"','"Chuyến tham quan này thật tệ!"','00:00:19.430','00:00:21.670','little-cat-tire-town-school-6'),
 	('The car wash made loud sounds','Tiệm rửa xe phát ra những âm thanh ầm ĩ.','00:00:22.170','00:00:24.750','little-cat-tire-town-school-6'),
 	('Hiss, whomp, whomp, whomp!','Xììì! Phụp, phụp, phụp!','00:00:25.550','00:00:27.750','little-cat-tire-town-school-6'),
@@ -169,7 +171,8 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('"I''ll go first," said Eddie','"Để con đi đầu tiên ạ!" Eddie nói.','00:02:11.460','00:02:14.120','little-cat-tire-town-school-6'),
 
 	/* (UUID(),'little-cat-tire-town-school-7','Eddy in the Car Wash','Eddy ở tiệm rửa xe','LITTLE_CAT_TIRE_TOWN_SCHOOL_7.mp3',NULL,'00:00:00.000','00:00:00.000','little-cat-tire-town-school',0,0,7) */
-	('Tire Town School, Episode 7, Eddie and the Car Wash Eddie drove into the car wash','Trường học Tire Town, Tập 7: Eddie và tiệm rửa xe – Eddie lái xe tiến vào tiệm rửa xe.','00:00:01.510','00:00:28.730','little-cat-tire-town-school-7'),
+	('Tire Town School - Episode 7: Eddie and the Car Wash','Trường học Tire Town - Tập 7: Eddie và tiệm rửa xe','00:00:01.510','00:00:07.500','little-cat-tire-town-school-7'),
+	('Eddie drove into the car wash','Eddie lái xe tiến vào tiệm rửa xe','00:00:26.200','00:00:28.730','little-cat-tire-town-school-7'),
 	('Hiss! Wump! Wump! Wump!','Xììì! Phụp! Phụp! Phụp!','00:00:30.870','00:00:33.690','little-cat-tire-town-school-7'),
 	('The building was noisy','Tòa nhà phát ra những âm thanh ầm ĩ.','00:00:34.390','00:00:37.430','little-cat-tire-town-school-7'),
 	('Water splashed on Eddie','Nước bắn tung tóe lên người Eddie.','00:00:39.910','00:00:42.750','little-cat-tire-town-school-7'),
@@ -195,7 +198,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('"I am not going in there!"','"Tớ không vào trong đó đâu!"','00:02:18.460','00:02:21.400','little-cat-tire-town-school-7'),
 
 	/* (UUID(),'little-cat-tire-town-school-8','Poppy Is Scared','Poppy sợ hãi','LITTLE_CAT_TIRE_TOWN_SCHOOL_8.mp3',NULL,'00:00:00.000','00:00:00.000','little-cat-tire-town-school',0,0,8) */
-	('Tire Town School, Episode 8, Poppy is Scared','Trường học Tire Town, Tập 8: Poppy sợ hãi.','00:00:01.610','00:00:06.630','little-cat-tire-town-school-8'),
+	('Tire Town School - Episode 8: Poppy is Scared','Trường học Tire Town - Tập 8: Poppy sợ hãi','00:00:01.610','00:00:06.630','little-cat-tire-town-school-8'),
 	('Poppy looked at the noisy building','Poppy nhìn tòa nhà ồn ào trước mặt.','00:00:17.430','00:00:20.170','little-cat-tire-town-school-8'),
 	('"I''m not going in," she said','"Tớ không vào trong đâu," cô nàng nói.','00:00:23.910','00:00:27.070','little-cat-tire-town-school-8'),
 	('The car wash is scary','Tiệm rửa xe này đáng sợ quá!','00:00:27.410','00:00:29.710','little-cat-tire-town-school-8'),
@@ -227,7 +230,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('That was the best field trip','Đó là chuyến tham quan tuyệt vời nhất!','00:02:23.650','00:02:26.810','little-cat-tire-town-school-8'),
 
 	/* (UUID(),'little-cat-tire-town-school-9','Fast Eddy','Eddy nhanh nhẹn','LITTLE_CAT_TIRE_TOWN_SCHOOL_9.mp3',NULL,'00:00:00.000','00:00:00.000','little-cat-tire-town-school',0,0,9) */
-	('Tire Town School, Episode 9, Fast Eddie Vroom!','Trường học Tire Town, Tập 9: Eddie thần tốc – Vù! Vù!','00:00:01.560','00:00:15.070','little-cat-tire-town-school-9'),
+	('Tire Town School - Episode 9: Fast Eddie','Trường học Tire Town - Tập 9: Eddie thần tốc','00:00:01.560','00:00:06.800','little-cat-tire-town-school-9'),
 	('Eddie zoomed around','Eddie phóng vun vút khắp nơi.','00:00:15.730','00:00:18.190','little-cat-tire-town-school-9'),
 	('"Way to go, Eddie!" said Jeb','"Giỏi lắm, Eddie!" Jeb reo lên.','00:00:22.830','00:00:25.810','little-cat-tire-town-school-9'),
 	('"You''re fast," said Dipper','"Cậu chạy nhanh thật đấy!" Dipper nói.','00:00:26.270','00:00:29.050','little-cat-tire-town-school-9'),
