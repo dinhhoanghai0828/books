@@ -52837,7 +52837,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He had fancy stripes','Chiếc xe có những đường sọc rất bắt mắt','00:02:35.800','00:02:37.790','little-cat-tire-town-school-3'),
 	('"You\'re not fast," said the car. "You\'re just a slow dump truck"','Chiếc xe nói: "Cậu chẳng nhanh chút nào! Cậu chỉ là một chiếc xe ben chậm chạp thôi!"','00:02:41.050','00:02:46.550','little-cat-tire-town-school-3'),
 
-
+	/* (UUID(),'little-cat-tire-town-school-4','Crash!','Vụ va chạm!','LITTLE_CAT_TIRE_TOWN_SCHOOL_4.mp3',NULL,'00:00:00.000','00:00:00.000','little-cat-tire-town-school',0,0,4) */
 	('Tire Town School, Episode 4, Crash Ha ha ha!','','00:00:01.730','00:00:12.070','little-cat-tire-town-school-4'),
 	('You\'re mean, Zippy, said Dipper','','00:00:15.550','00:00:18.590','little-cat-tire-town-school-4'),
 	('Eddie is fast, said Jeb','','00:00:19.910','00:00:22.350','little-cat-tire-town-school-4'),
@@ -52869,6 +52869,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Zippy was mean','','00:02:14.500','00:02:15.680','little-cat-tire-town-school-4'),
 	('But Eddie had three new friends','','00:02:17.120','00:02:20.300','little-cat-tire-town-school-4'),
 
+	/* (UUID(),'little-cat-tire-town-school-5','Field Trip','Chuyến tham quan','LITTLE_CAT_TIRE_TOWN_SCHOOL_5.mp3',NULL,'00:00:00.000','00:00:00.000','little-cat-tire-town-school',0,0,5) */
 	('Tire Town School Episode 5 Field Trip Tire Town School Episode 5 Field Trip Eddie saw his friends at school','','00:00:00.750','00:00:26.030','little-cat-tire-town-school-5'),
 	('Hi, Eddie, called Poppy','','00:00:33.580','00:00:36.100','little-cat-tire-town-school-5'),
 	('Honk, honk, she tooted her horn','','00:00:44.900','00:00:48.780','little-cat-tire-town-school-5'),
@@ -52898,7 +52899,10 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('It\'s bath time','','00:02:14.690','00:02:16.210','little-cat-tire-town-school-5'),
 	('The end','','00:02:17.670','00:02:20.710','little-cat-tire-town-school-5');
 
-INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES 
+/*=====================================================================================================================================================================================================================================================*/
+
+INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
+	/* (UUID(),'little-cat-tire-town-school-6','The Car Wash','Tiệm rửa xe','LITTLE_CAT_TIRE_TOWN_SCHOOL_6.mp3',NULL,'00:00:00.000','00:00:00.000','little-cat-tire-town-school',0,0,6) */
 	('Tire Town School Episode 6 The Car Wash The car wash stinks, said Jeb','','00:00:01.770','00:00:18.990','little-cat-tire-town-school-6'),
 	('This field trip is terrible','','00:00:19.630','00:00:21.370','little-cat-tire-town-school-6'),
 	('The car wash made loud sounds','','00:00:22.370','00:00:24.450','little-cat-tire-town-school-6'),
@@ -52921,7 +52925,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He looked at Mr. Grill','','00:02:04.100','00:02:05.560','little-cat-tire-town-school-6'),
 	('I\'ll go first, said Eddie','','00:02:11.660','00:02:13.820','little-cat-tire-town-school-6'),
 
-
+	/* (UUID(),'little-cat-tire-town-school-7','Eddy in the Car Wash','Eddy ở tiệm rửa xe','LITTLE_CAT_TIRE_TOWN_SCHOOL_7.mp3',NULL,'00:00:00.000','00:00:00.000','little-cat-tire-town-school',0,0,7) */
 	('Tire Town School, Episode 7, Eddie and the Car Wash Eddie drove into the car wash','','00:00:01.710','00:00:28.430','little-cat-tire-town-school-7'),
 	('Hiss!','','00:00:31.070','00:00:32.270','little-cat-tire-town-school-7'),
 	('Wump!','','00:00:32.510','00:00:32.750','little-cat-tire-town-school-7'),
@@ -52955,7 +52959,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Poppy frowned','','00:02:16.300','00:02:18.080','little-cat-tire-town-school-7'),
 	('I am not going in there!','','00:02:18.660','00:02:21.100','little-cat-tire-town-school-7'),
 
-
+	/* (UUID(),'little-cat-tire-town-school-8','Poppy Is Scared','Poppy sợ hãi','LITTLE_CAT_TIRE_TOWN_SCHOOL_8.mp3',NULL,'00:00:00.000','00:00:00.000','little-cat-tire-town-school',0,0,8) */
 	('Tire Town School, Episode 8, Poppy is Scared','','00:00:01.810','00:00:06.330','little-cat-tire-town-school-8'),
 	('Poppy looked at the noisy building','','00:00:17.630','00:00:19.870','little-cat-tire-town-school-8'),
 	('I\'m not going in, she said','','00:00:24.110','00:00:26.770','little-cat-tire-town-school-8'),
@@ -52988,7 +52992,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('I love the car wash, said Poppy','','00:02:19.890','00:02:22.630','little-cat-tire-town-school-8'),
 	('That was the best field trip','','00:02:23.850','00:02:26.510','little-cat-tire-town-school-8'),
 
-
+	/* (UUID(),'little-cat-tire-town-school-9','Fast Eddy','Eddy nhanh nhẹn','LITTLE_CAT_TIRE_TOWN_SCHOOL_9.mp3',NULL,'00:00:00.000','00:00:00.000','little-cat-tire-town-school',0,0,9) */
 	('Tire Town School, Episode 9, Fast Eddie Vroom!','','00:00:01.760','00:00:14.190','little-cat-tire-town-school-9'),
 	('Vroom!','','00:00:14.390','00:00:14.770','little-cat-tire-town-school-9'),
 	('Eddie zoomed around','','00:00:15.930','00:00:17.890','little-cat-tire-town-school-9'),
@@ -53017,7 +53021,6 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Don\'t go too fast, Zippy laughed','','00:01:56.810','00:02:00.690','little-cat-tire-town-school-9'),
 	('This will be easy for Eddie','','00:02:01.430','00:02:04.370','little-cat-tire-town-school-9'),
 	('He\'s slow','','00:02:06.270','00:02:07.810','little-cat-tire-town-school-9');
-
 INSERT INTO QUESTIONS (QUESTION_CODE, VOLUME_SLUG, QUESTION_TEXT, QUESTION_TEXT_VI, STATUS, CREATED_AT, UPDATED_AT, CREATED_BY, UPDATED_BY) VALUES
 	/* (UUID(),'esl-fast-beginner-1-1','Going to the Zoo','Đi tới sở thú','ESL_FAST_BEGINNER_1_001.mp3',NULL,'00:00:00.000','00:00:37.000','esl-fast-children-1',1,1,1,1), */
     ('Q-esl-fast-beginner-1-1-001', 'esl-fast-beginner-1-1', 'Where does she go?', 'Cô bé đi đâu?', 'ACTIVE', NULL, NULL, NULL, NULL),
