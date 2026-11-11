@@ -54,7 +54,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('I don\'t like to carry dirt','Mình không thích chở đất đâu','00:01:50.870','00:01:52.610','little-cat-tire-town-school-2'),
 	('Everyone looked surprised','Mọi người đều tỏ vẻ ngạc nhiên','00:01:53.470','00:01:55.670','little-cat-tire-town-school-2'),
 	('"What do you like to do?" asked Dipper','Dipper hỏi: "Vậy cậu thích làm gì?"','00:01:56.590','00:02:00.090','little-cat-tire-town-school-2'),
-	('Eddie grinned','Eddie nở nụ cười tươi','00:02:03.790','00:02:05.230','little-cat-tire-town-school-2'),
+	('Eddie grinned','Eddie cười tươi','00:02:03.790','00:02:05.230','little-cat-tire-town-school-2'),
 	('I like to race','Mình thích đua xe!','00:02:06.810','00:02:08.290','little-cat-tire-town-school-2'),
 
 	/* (UUID(),'little-cat-tire-town-school-3','The Race','Cuộc đua','LITTLE_CAT_TIRE_TOWN_SCHOOL_3.mp3',NULL,'00:00:00.000','00:00:00.000','little-cat-tire-town-school',1,1,3) */

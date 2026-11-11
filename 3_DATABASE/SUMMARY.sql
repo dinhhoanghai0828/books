@@ -14682,6 +14682,7 @@ INSERT INTO `WORDS` (`ENG`,`VI`) VALUES
 	('sight','cái nhìn'),
 	('sight','cảnh tượng'),
 	('sight','tầm mắt'),
+	('sign','biển'),
 	('sign','biển báo'),
 	('sign','dấu hiệu'),
 	('sign','ký'),
@@ -15061,6 +15062,7 @@ INSERT INTO `WORDS` (`ENG`,`VI`) VALUES
 	('something about that','điều gì đó'),
 	('something else','thứ khác'),
 	('something else','việc khác'),
+	('something funny','trò vui'),
 	('something wrong','sai chỗ nào'),
 	('sometime','một lúc'),
 	('sometime','thời gian'),
@@ -18215,7 +18217,16 @@ INSERT INTO `WORDS` (`ENG`,`VI`) VALUES
 	('zen master','thiền sư'),
 	('zodiac sign','cung hoàng đạo'),
 	('zoo','sở thú'),
-	('zoo','vườn thú');
+	('zoo','vườn thú'),
+	('zoom','lao'),
+	('zoom','lao nhanh'),
+	('zoom','lao vun vút'),
+	('zoomed','lao'),
+	('zoomed','lao nhanh'),
+	('zoomed','lao vun vút'),
+	('zoomed by','lao nhanh qua'),
+	('zoomed by','lao qua'),
+	('zoomed by','lao vun vút qua');
 
 INSERT INTO MATH_CATEGORIES (CATEGORY_CODE, FULL_PATH, CATEGORY_NAME, CATEGORY_DESC, PARENT_CODE, STATUS, CREATED_AT, UPDATED_AT) VALUES
 	-- Parent: 1. Toán tư duy
@@ -72084,12 +72095,12 @@ INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, C
 	('MULTI_STEP_SUB_SUB_030', 'D', '33', 'N', NULL, NULL),
 
 	('MULTI_STEP_SUB_SUB_031', 'A', '30', 'N', NULL, NULL),
-	('MULTI_STEP_SUB_SUB_031', 'B', '31', 'N', NULL, NULL),
+	('MULTI_STEP_SUB_SUB_031', 'B', '33', 'N', NULL, NULL),
 	('MULTI_STEP_SUB_SUB_031', 'C', '31', 'Y', NULL, NULL),
 	('MULTI_STEP_SUB_SUB_031', 'D', '32', 'N', NULL, NULL),
 
 	('MULTI_STEP_SUB_SUB_032', 'A', '34', 'N', NULL, NULL),
-	('MULTI_STEP_SUB_SUB_032', 'B', '35', 'N', NULL, NULL),
+	('MULTI_STEP_SUB_SUB_032', 'B', '37', 'N', NULL, NULL),
 	('MULTI_STEP_SUB_SUB_032', 'C', '36', 'N', NULL, NULL),
 	('MULTI_STEP_SUB_SUB_032', 'D', '35', 'Y', NULL, NULL),
 
@@ -72124,7 +72135,7 @@ INSERT INTO MATH_ANSWERS (QUESTION_CODE, ANSWER_CODE, ANSWER_TEXT, IS_CORRECT, C
 	('MULTI_STEP_SUB_SUB_038', 'D', '34', 'N', NULL, NULL),
 
 	('MULTI_STEP_SUB_SUB_039', 'A', '24', 'N', NULL, NULL),
-	('MULTI_STEP_SUB_SUB_039', 'B', '25', 'N', NULL, NULL),
+	('MULTI_STEP_SUB_SUB_039', 'B', '27', 'N', NULL, NULL),
 	('MULTI_STEP_SUB_SUB_039', 'C', '25', 'Y', NULL, NULL),
 	('MULTI_STEP_SUB_SUB_039', 'D', '26', 'N', NULL, NULL),
 
