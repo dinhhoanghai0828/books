@@ -432,9 +432,9 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
                           fontWeight: 'bold',
                           height: 'auto'
                         }}
-                        title={volume.isReviewCompleted === 1 ? 'Đánh dấu chưa duyệt' : 'Đánh dấu đã duyệt'}
+                        title={volume.isReviewCompleted === 1 ? 'Đánh dấu chưa dịch ngôn ngữ' : 'Đánh dấu đã dịch ngôn ngữ'}
                       >
-                        {volume.isReviewCompleted === 1 ? 'Đã duyệt' : 'Chưa duyệt'}
+                        {volume.isReviewCompleted === 1 ? 'Đã dịch' : 'Chưa dịch'}
                       </Button>
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
