@@ -257,7 +257,8 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('He\'s slow','Cậu ấy chậm chạp mà!','00:02:06.070','00:02:08.110','little-cat-tire-town-school-9'),
 
 	/* (UUID(),'little-cat-tire-town-school-10','Safety Class','Lớp học an toàn','LITTLE_CAT_TIRE_TOWN_SCHOOL_10.mp3',NULL,'00:00:00.000','00:00:00.000','little-cat-tire-town-school',0,0,10) */
-	('Tire Town School Episode 10 Safety Class Jeb drove between the cones','Trường học Tire Town – Tập 10: Buổi học an toàn – Jeb lái xe đi qua các cọc tiêu','00:00:01.350','00:00:21.140','little-cat-tire-town-school-10'),
+	('Tire Town School - Episode 10: Safety Class','Trường học Tire Town – Tập 10: Buổi học an toàn','00:00:01.350','00:00:21.140','little-cat-tire-town-school-10'),
+	('Jeb drove between the cones','Jeb lái xe đi qua các cọc tiêu','00:00:01.350','00:00:21.140','little-cat-tire-town-school-10'),
 	('Very safe driving, said Ms. Fender','Lái xe rất an toàn đấy, cô Fender nói','00:00:22.580','00:00:26.660','little-cat-tire-town-school-10'),
 	('Jeb drove toward a stop sign','Jeb lái xe tiến đến biển báo dừng','00:00:33.410','00:00:36.350','little-cat-tire-town-school-10'),
 	('Obey the sign, said Ms. Fender','Hãy tuân thủ biển báo nhé, cô Fender nói','00:00:37.950','00:00:41.230','little-cat-tire-town-school-10'),
@@ -286,7 +287,8 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	/* (UUID(),'little-cat-tire-town-school-11','Not Too Fast','Đừng chạy quá nhanh','LITTLE_CAT_TIRE_TOWN_SCHOOL_11.mp3',NULL,'00:00:00.000','00:00:00.000','little-cat-tire-town-school',0,0,11) */
-	('Tire Town School, Episode 11, Not Too Fast Zippy drove very fast, but he didn\'t hit the cones','Trường học Tire Town – Tập 11: Đừng lái xe quá nhanh – Zippy lái xe rất nhanh nhưng không va phải các cọc tiêu','00:00:01.510','00:00:28.290','little-cat-tire-town-school-11'),
+	('Tire Town School - Episode 11: Not Too Fast','Trường học Tire Town – Tập 11: Đừng lái xe quá nhanh','00:00:01.510','00:00:28.290','little-cat-tire-town-school-11'),
+	('Zippy drove very fast, but he didn\'t hit the cones','Zippy lái xe rất nhanh nhưng không va phải các cọc tiêu','00:00:01.510','00:00:28.290','little-cat-tire-town-school-11'),
 	('And he stopped at the sign','Và cậu đã dừng lại trước biển báo','00:00:29.550','00:00:31.870','little-cat-tire-town-school-11'),
 	('Good job, Zippy, said Ms. Fender','Làm tốt lắm, Zippy, cô Fender nói','00:00:39.160','00:00:42.700','little-cat-tire-town-school-11'),
 	('But next time, go slow','Nhưng lần sau hãy lái chậm thôi nhé','00:00:43.220','00:00:45.640','little-cat-tire-town-school-11'),
@@ -314,7 +316,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Eddie\'s engine roared','Động cơ của Eddie gầm lên ầm ĩ','00:01:56.840','00:02:02.120','little-cat-tire-town-school-11'),
 
 	/* (UUID(),'little-cat-tire-town-school-12','Eddy Is Not Safe','Eddy không an toàn','LITTLE_CAT_TIRE_TOWN_SCHOOL_12.mp3',NULL,'00:00:00.000','00:00:00.000','little-cat-tire-town-school',0,0,12) */
-	('Tire Town School, Episode 12, Eddie is not safe','Trường học Tire Town – Tập 12: Eddie lái xe không an toàn','00:00:01.530','00:00:07.210','little-cat-tire-town-school-12'),
+	('Tire Town School - Episode 12: Eddie is not safe','Trường học Tire Town – Tập 12: Eddie lái xe không an toàn','00:00:01.530','00:00:07.210','little-cat-tire-town-school-12'),
 	('Eddie drove onto the track','Eddie lái xe vào đường tập lái','00:00:11.400','00:00:14.140','little-cat-tire-town-school-12'),
 	('Slow, slow, slow, Zippy sang','Chậm thôi, chậm thôi, chậm thôi, Zippy hát','00:00:15.870','00:00:19.710','little-cat-tire-town-school-12'),
 	('Eddie gritted his teeth','Eddie nghiến chặt răng','00:00:20.790','00:00:23.310','little-cat-tire-town-school-12'),
@@ -342,7 +344,8 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Everyone honked','Mọi người cùng bấm còi reo vui','00:02:19.330','00:02:21.590','little-cat-tire-town-school-12'),
 
 	/* (UUID(),'little-cat-tire-town-school-13','Something New','Điều mới mẻ','LITTLE_CAT_TIRE_TOWN_SCHOOL_13.mp3',NULL,'00:00:00.000','00:00:00.000','little-cat-tire-town-school',0,0,13) */
-	('Tire Town School, Episode 13, Something New Good morning, said Mr. Grill','Trường học Tire Town – Tập 13: Một điều mới mẻ – Chào buổi sáng, thầy Grill nói','00:00:01.450','00:00:32.970','little-cat-tire-town-school-13'),
+	('Tire Town School - Episode 13: Something New','Trường học Tire Town – Tập 13: Một điều mới mẻ','00:00:01.450','00:00:32.970','little-cat-tire-town-school-13'),
+	('"Good morning," said Mr.Grill','"Chào buổi sáng," thầy Grill nói','00:00:01.450','00:00:32.970','little-cat-tire-town-school-13'),
 	('We will do something new today','Hôm nay chúng ta sẽ làm một điều mới mẻ','00:00:35.630','00:00:38.730','little-cat-tire-town-school-13'),
 	('Will we go fast, asked Zippy','Hôm nay chúng ta có được chạy thật nhanh không ạ?, Zippy hỏi','00:00:39.910','00:00:43.230','little-cat-tire-town-school-13'),
 	('He looked at Eddie and grinned','Cậu nhìn Eddie rồi咧 miệng cười','00:00:43.350','00:00:45.630','little-cat-tire-town-school-13'),
@@ -370,7 +373,8 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('I hate going off-road','Tớ ghét lái xe địa hình','00:02:09.400','00:02:12.180','little-cat-tire-town-school-13'),
 
 	/* (UUID(),'little-cat-tire-town-school-14','The Dirt Path','Con đường đất','LITTLE_CAT_TIRE_TOWN_SCHOOL_14.mp3',NULL,'00:00:00.000','00:00:00.000','little-cat-tire-town-school',0,0,14) */
-	('Tire Town School, Episode 14, The Dirt Path Eddie smiled','Trường học Tire Town – Tập 14: Con đường đất – Eddie mỉm cười','00:00:01.490','00:00:15.410','little-cat-tire-town-school-14'),
+	('Tire Town School - Episode 14: The Dirt Path','Trường học Tire Town – Tập 14: Con đường đất','00:00:01.490','00:00:15.410','little-cat-tire-town-school-14'),
+	('Eddie smiled','Eddie mỉm cười','00:00:01.490','00:00:15.410','little-cat-tire-town-school-14'),
 	('I love driving off-road','Tớ thích lái xe địa hình lắm','00:00:16.150','00:00:18.510','little-cat-tire-town-school-14'),
 	('Dirt and rocks feel good','Đường đất và đá sỏi khiến tớ cảm thấy rất thích thú','00:00:20.390','00:00:22.910','little-cat-tire-town-school-14'),
 	('Poppy tooted her horn','Poppy bấm còi xe','00:00:36.810','00:00:39.590','little-cat-tire-town-school-14'),
@@ -405,7 +409,8 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Moaned Zippy','Zippy rên rỉ','00:02:14.690','00:02:16.030','little-cat-tire-town-school-14'),
 
 	/* (UUID(),'little-cat-tire-town-school-15','Mud','Bùn đất','LITTLE_CAT_TIRE_TOWN_SCHOOL_15.mp3',NULL,'00:00:00.000','00:00:00.000','little-cat-tire-town-school',0,0,15) */
-	('Tire Town School, Episode 15, Mud Zippy did not like dirt paths','Trường học Tire Town – Tập 15: Bùn lầy – Zippy không thích những con đường đất','00:00:01.570','00:00:22.790','little-cat-tire-town-school-15'),
+	('Tire Town School - Episode 15: Mud','Trường học Tire Town – Tập 15: Bùn lầy','00:00:01.570','00:00:22.790','little-cat-tire-town-school-15'),
+	('Zippy did not like dirt paths','Zippy không thích những con đường đất','00:00:01.570','00:00:22.790','little-cat-tire-town-school-15'),
 	('He did not like rocks','Cậu cũng không thích những tảng đá','00:00:25.710','00:00:28.210','little-cat-tire-town-school-15'),
 	('This stinks, said Zippy','Chán chết đi được!, Zippy than thở','00:00:33.790','00:00:36.850','little-cat-tire-town-school-15'),
 	('I have to drive slowly','Tớ phải lái xe thật chậm','00:00:36.950','00:00:39.670','little-cat-tire-town-school-15'),
@@ -440,7 +445,8 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	/* (UUID(),'little-cat-tire-town-school-16','Deep Mud','Bùn lầy sâu','LITTLE_CAT_TIRE_TOWN_SCHOOL_16.mp3',NULL,'00:00:00.000','00:00:00.000','little-cat-tire-town-school',0,0,16) */
-	('Tire Town School, Episode 16, Deep Mud Zippy spun his tires','Trường học Tire Town – Tập 16: Bùn lầy sâu – Zippy quay bánh xe tại chỗ','00:00:01.450','00:00:19.670','little-cat-tire-town-school-16'),
+	('Tire Town School - Episode 16: Deep Mud','Trường học Tire Town – Tập 16: Bùn lầy sâu','00:00:01.450','00:00:19.670','little-cat-tire-town-school-16'),
+	('Zippy spun his tires','Zippy quay bánh xe tại chỗ','00:00:01.450','00:00:19.670','little-cat-tire-town-school-16'),
 	('He spun them very fast','Cậu quay bánh xe thật nhanh','00:00:20.250','00:00:22.410','little-cat-tire-town-school-16'),
 	('Mud sprayed everywhere, but Zippy didn\'t move','Bùn bắn tung tóe khắp nơi nhưng Zippy vẫn không nhúc nhích','00:00:23.410','00:00:28.070','little-cat-tire-town-school-16'),
 	('Zippy sank deeper','Zippy càng lún sâu hơn','00:00:28.870','00:00:31.150','little-cat-tire-town-school-16'),
@@ -469,7 +475,8 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('I don\'t','Còn tớ thì không thích','00:02:32.540','00:02:33.960','little-cat-tire-town-school-16'),
 
 	/* (UUID(),'little-cat-tire-town-school-17','Tag','Trò chơi đuổi bắt','LITTLE_CAT_TIRE_TOWN_SCHOOL_17.mp3',NULL,'00:00:00.000','00:00:00.000','little-cat-tire-town-school',0,0,17) */
-	('Tire Town School, Episode 17, Tag Poppy raced over to Dipper','Trường học Tire Town – Tập 17: Trò chơi đuổi bắt – Poppy phóng nhanh đến chỗ Dipper','00:00:01.410','00:00:22.590','little-cat-tire-town-school-17'),
+	('Tire Town School - Episode 17: Tag','Trường học Tire Town – Tập 17: Trò chơi đuổi bắt','00:00:01.410','00:00:22.590','little-cat-tire-town-school-17'),
+	('Poppy raced over to Dipper','Poppy phóng nhanh đến chỗ Dipper','00:00:01.410','00:00:22.590','little-cat-tire-town-school-17'),
 	('Tag, said Poppy','Bắt được cậu rồi!, Poppy nói','00:00:25.610','00:00:28.390','little-cat-tire-town-school-17'),
 	('You\'re it!','Bây giờ đến lượt cậu đuổi bắt!','00:00:27.890','00:00:29.710','little-cat-tire-town-school-17'),
 	('Eddie and Jeb laughed','Eddie và Jeb bật cười','00:00:32.770','00:00:34.690','little-cat-tire-town-school-17'),
@@ -504,7 +511,8 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Something is wrong','Có chuyện gì đó không ổn rồi','00:02:00.530','00:02:02.690','little-cat-tire-town-school-17'),
 
 	/* (UUID(),'little-cat-tire-town-school-18','Flat Tire','Lốp xe bị xẹp','LITTLE_CAT_TIRE_TOWN_SCHOOL_18.mp3',NULL,'00:00:00.000','00:00:00.000','little-cat-tire-town-school',0,0,18) */
-	('Tire Town School Episode 18 Flat Tire Poppy, said Eddy','Trường học Tire Town – Tập 18: Lốp xe bị xẹp – Poppy này, Eddy gọi','00:00:01.510','00:00:14.770','little-cat-tire-town-school-18'),
+	('Tire Town School Episode 18 Flat Tire','Trường học Tire Town – Tập 18: Lốp xe bị xẹp','00:00:01.510','00:00:14.770','little-cat-tire-town-school-18'),
+	('"Poppy," said Eddy','"Poppy này," Eddy gọi','00:00:01.510','00:00:14.770','little-cat-tire-town-school-18'),
 	('You have a flat tire','Lốp xe của cậu bị xẹp rồi','00:00:16.750','00:00:19.230','little-cat-tire-town-school-18'),
 	('I don\'t care, said Poppy','Tớ chẳng quan tâm đâu, Poppy nói','00:00:25.610','00:00:28.590','little-cat-tire-town-school-18'),
 	('Thump, thump, thump','Thình thịch, thình thịch, thình thịch','00:00:34.460','00:00:36.640','little-cat-tire-town-school-18'),
