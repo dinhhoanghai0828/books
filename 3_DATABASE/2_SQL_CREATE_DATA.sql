@@ -1992,7 +1992,7 @@ INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,IS_
 	(UUID(),'little-cat-tire-town-school-3','The Race','Cuộc đua','LITTLE_CAT_TIRE_TOWN_SCHOOL_3.mp3',NULL,'00:00:00.000','00:00:00.000','little-cat-tire-town-school',1,1,0,3),
 	(UUID(),'little-cat-tire-town-school-4','Crash!','Vụ va chạm!','LITTLE_CAT_TIRE_TOWN_SCHOOL_4.mp3',NULL,'00:00:00.000','00:00:00.000','little-cat-tire-town-school',1,1,0,4),
 	(UUID(),'little-cat-tire-town-school-5','Field Trip','Chuyến tham quan','LITTLE_CAT_TIRE_TOWN_SCHOOL_5.mp3',NULL,'00:00:00.000','00:00:00.000','little-cat-tire-town-school',1,1,0,5),
-	(UUID(),'little-cat-tire-town-school-6','The Car Wash','Tiệm rửa xe','LITTLE_CAT_TIRE_TOWN_SCHOOL_6.mp3',NULL,'00:00:00.000','00:00:00.000','little-cat-tire-town-school',1,0,0,6),
+	(UUID(),'little-cat-tire-town-school-6','The Car Wash','Tiệm rửa xe','LITTLE_CAT_TIRE_TOWN_SCHOOL_6.mp3',NULL,'00:00:00.000','00:00:00.000','little-cat-tire-town-school',1,1,0,6),
 	(UUID(),'little-cat-tire-town-school-7','Eddy in the Car Wash','Eddy ở tiệm rửa xe','LITTLE_CAT_TIRE_TOWN_SCHOOL_7.mp3',NULL,'00:00:00.000','00:00:00.000','little-cat-tire-town-school',1,0,0,7),
 	(UUID(),'little-cat-tire-town-school-8','Poppy Is Scared','Poppy sợ hãi','LITTLE_CAT_TIRE_TOWN_SCHOOL_8.mp3',NULL,'00:00:00.000','00:00:00.000','little-cat-tire-town-school',1,0,0,8),
 	(UUID(),'little-cat-tire-town-school-9','Fast Eddy','Eddy nhanh nhẹn','LITTLE_CAT_TIRE_TOWN_SCHOOL_9.mp3',NULL,'00:00:00.000','00:00:00.000','little-cat-tire-town-school',1,0,0,9),
