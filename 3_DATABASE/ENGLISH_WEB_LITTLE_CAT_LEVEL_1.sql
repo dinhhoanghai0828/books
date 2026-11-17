@@ -85,22 +85,22 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 
 	/* (UUID(),'little-cat-tire-town-school-4','Crash!','Vụ va chạm!','LITTLE_CAT_TIRE_TOWN_SCHOOL_4.mp3',NULL,'00:00:00.000','00:00:00.000','little-cat-tire-town-school',1,1,4) */
 	('Tire Town School - Episode 4: Crash','Trường học Tire Town - Tập 4: Cú va chạm','00:00:01.530','00:00:06.500','little-cat-tire-town-school-4'),
-	('"You\'re mean, Zippy," said Dipper','"Cậu thật xấu tính, Zippy!" Dipper nói.','00:00:15.350','00:00:18.890','little-cat-tire-town-school-4'),
-	('"Eddie is fast," said Jeb','"Eddie chạy nhanh lắm!" Jeb nói.','00:00:19.710','00:00:22.650','little-cat-tire-town-school-4'),
+	('"You\'re mean, Zippy," said Dipper','"Cậu thật xấu tính, Zippy!" Dipper nói','00:00:15.350','00:00:18.890','little-cat-tire-town-school-4'),
+	('"Eddie is fast," said Jeb','"Eddie chạy nhanh lắm!" Jeb nói','00:00:19.710','00:00:22.650','little-cat-tire-town-school-4'),
 	('"He won our race," said Poppy','"Cậu ấy đã chiến thắng cuộc đua của chúng ta!" Poppy nói.','00:00:22.550','00:00:25.950','little-cat-tire-town-school-4'),
-	('"Eddie is not fast," said Zippy','"Eddie chẳng nhanh chút nào!" Zippy nói.','00:00:27.350','00:00:30.970','little-cat-tire-town-school-4'),
-	('He won because you\'re all slow','Cậu ấy thắng vì tất cả các cậu đều chậm chạp.','00:00:31.349','00:00:33.970','little-cat-tire-town-school-4'),
-	('Eddie felt sad','Eddie cảm thấy buồn.','00:00:37.740','00:00:40.140','little-cat-tire-town-school-4'),
+	('"Eddie is not fast," said Zippy','"Eddie chẳng nhanh chút nào!" Zippy nói','00:00:27.350','00:00:30.970','little-cat-tire-town-school-4'),
+	('He won because you\'re all slow','Cậu ấy thắng vì tất cả các cậu đều chậm chạp','00:00:31.349','00:00:33.970','little-cat-tire-town-school-4'),
+	('Eddie felt sad','Eddie cảm thấy buồn','00:00:37.740','00:00:40.140','little-cat-tire-town-school-4'),
 	('"I\'m fast," said Zippy','"Tớ mới là người chạy nhanh!" Zippy nói.','00:00:40.460','00:00:43.200','little-cat-tire-town-school-4'),
-	('He zoomed off','Cậu ta phóng vụt đi.','00:00:43.560','00:00:45.420','little-cat-tire-town-school-4'),
+	('He zoomed off','Cậu ta phóng vụt đi','00:00:43.560','00:00:45.420','little-cat-tire-town-school-4'),
 	('Vroom, vroom!','Vù! Vù!','00:00:46.880','00:00:48.860','little-cat-tire-town-school-4'),
-	('Zippy turned left','Zippy rẽ trái.','00:00:50.920','00:00:52.720','little-cat-tire-town-school-4'),
-	('He turned right','Cậu ta rẽ phải.','00:00:52.220','00:00:54.860','little-cat-tire-town-school-4'),
-	('"Wow," thought Eddie','"Chà!" Eddie thầm nghĩ.','00:00:55.340','00:00:57.680','little-cat-tire-town-school-4'),
+	('Zippy turned left','Zippy rẽ trái','00:00:50.920','00:00:52.720','little-cat-tire-town-school-4'),
+	('He turned right','Cậu ta rẽ phải','00:00:52.220','00:00:54.860','little-cat-tire-town-school-4'),
+	('"Wow," thought Eddie','"Chà!" Eddie thầm nghĩ','00:00:55.340','00:00:57.680','little-cat-tire-town-school-4'),
 	('Crash!','Rầm!','00:01:09.260','00:01:10.800','little-cat-tire-town-school-4'),
-	('Zippy hit a wall','Zippy đâm sầm vào tường.','00:01:13.300','00:01:15.300','little-cat-tire-town-school-4'),
+	('Zippy hit a wall','Zippy đâm sầm vào tường','00:01:13.300','00:01:15.300','little-cat-tire-town-school-4'),
 	('Something rolled across the lot','Một thứ gì đó lăn ngang qua bãi xe','00:01:19.400','00:01:22.350','little-cat-tire-town-school-4'),
-	('"My wheel!" cried Zippy','"Bánh xe của tôi!" Zippy kêu lên.','00:01:22.970','00:01:25.770','little-cat-tire-town-school-4'),
+	('"My wheel!" cried Zippy','"Bánh xe của tôi!" Zippy kêu lên','00:01:22.970','00:01:25.770','little-cat-tire-town-school-4'),
 	('I can\'t drive now','Giờ thì tớ không thể lái xe được nữa rồi','00:01:26.230','00:01:28.410','little-cat-tire-town-school-4'),
 	('Zippy looked sad','Zippy trông thật buồn bã','00:01:28.870','00:01:31.090','little-cat-tire-town-school-4'),
 	('"I\'ll help," said Eddie','"Để tớ giúp cậu!" Eddie nói','00:01:36.800','00:01:39.240','little-cat-tire-town-school-4'),
@@ -140,7 +140,8 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The building was noisy','Tòa nhà phát ra những âm thanh ồn ào','00:02:04.500','00:02:06.890','little-cat-tire-town-school-5'),
 	('A sign said, "Car Wash"','Trên một tấm biển có ghi: "Rửa xe"','00:02:08.330','00:02:11.170','little-cat-tire-town-school-5'),
 	('Mr. Grill smiled','Thầy Grill mỉm cười','00:02:11.890','00:02:14.070','little-cat-tire-town-school-5'),
-	('"It\'s bath time!"','"Đến giờ tắm rửa rồi!"','00:02:14.490','00:02:16.510','little-cat-tire-town-school-5');
+	('"It\'s bath time!"','"Đến giờ tắm rửa rồi!"','00:02:14.490','00:02:16.510','little-cat-tire-town-school-5'),
+	('The end','Hết.','00:02:17.470','00:02:21.010','little-cat-tire-town-school-5');
 
 /*=====================================================================================================================================================================================================================================================*/
 
