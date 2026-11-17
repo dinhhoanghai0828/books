@@ -2222,7 +2222,7 @@ INSERT INTO VOLUMES(UUID,SLUG,ENG,VI,AUDIO,IMG,START_TIME,END_TIME,BOOK_SLUG,IS_
 	(UUID(),'little-cat-tire-town-school-2','New Friends','Những người bạn mới','LITTLE_CAT_TIRE_TOWN_SCHOOL_2.mp3',NULL,'00:00:00.000','00:00:00.000','little-cat-tire-town-school',1,1,1,2),
 	(UUID(),'little-cat-tire-town-school-3','The Race','Cuộc đua','LITTLE_CAT_TIRE_TOWN_SCHOOL_3.mp3',NULL,'00:00:00.000','00:00:00.000','little-cat-tire-town-school',1,1,0,3),
 	(UUID(),'little-cat-tire-town-school-4','Crash!','Vụ va chạm!','LITTLE_CAT_TIRE_TOWN_SCHOOL_4.mp3',NULL,'00:00:00.000','00:00:00.000','little-cat-tire-town-school',1,1,0,4),
-	(UUID(),'little-cat-tire-town-school-5','Field Trip','Chuyến tham quan','LITTLE_CAT_TIRE_TOWN_SCHOOL_5.mp3',NULL,'00:00:00.000','00:00:00.000','little-cat-tire-town-school',1,0,0,5),
+	(UUID(),'little-cat-tire-town-school-5','Field Trip','Chuyến tham quan','LITTLE_CAT_TIRE_TOWN_SCHOOL_5.mp3',NULL,'00:00:00.000','00:00:00.000','little-cat-tire-town-school',1,1,0,5),
 	(UUID(),'little-cat-tire-town-school-6','The Car Wash','Tiệm rửa xe','LITTLE_CAT_TIRE_TOWN_SCHOOL_6.mp3',NULL,'00:00:00.000','00:00:00.000','little-cat-tire-town-school',1,0,0,6),
 	(UUID(),'little-cat-tire-town-school-7','Eddy in the Car Wash','Eddy ở tiệm rửa xe','LITTLE_CAT_TIRE_TOWN_SCHOOL_7.mp3',NULL,'00:00:00.000','00:00:00.000','little-cat-tire-town-school',1,0,0,7),
 	(UUID(),'little-cat-tire-town-school-8','Poppy Is Scared','Poppy sợ hãi','LITTLE_CAT_TIRE_TOWN_SCHOOL_8.mp3',NULL,'00:00:00.000','00:00:00.000','little-cat-tire-town-school',1,0,0,8),
@@ -52889,7 +52889,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('Zippy was mean','Zippy thật xấu tính','00:02:14.300','00:02:15.980','little-cat-tire-town-school-4'),
 	('But Eddie had three new friends','Nhưng Eddie đã có thêm ba người bạn mới','00:02:17.200','00:02:20.800','little-cat-tire-town-school-4'),
 
-	/* (UUID(),'little-cat-tire-town-school-5','Field Trip','Chuyến tham quan','LITTLE_CAT_TIRE_TOWN_SCHOOL_5.mp3',NULL,'00:00:00.000','00:00:00.000','little-cat-tire-town-school',1,1,5) */
+	/* (UUID(),'little-cat-tire-town-school-5','Field Trip','Chuyến tham quan','LITTLE_CAT_TIRE_TOWN_SCHOOL_5.mp3',NULL,'00:00:00.000','00:00:00.000','little-cat-tire-town-school',1,0,5) */
 	('Tire Town School - Episode 5: Field Trip','Trường học Tire Town - Tập 5: Chuyến tham quan','00:00:01.700','00:00:06.500','little-cat-tire-town-school-5'),
 	('Eddie saw his friends at school','Eddie gặp các bạn ở trường','00:00:23.800','00:00:26.330','little-cat-tire-town-school-5'),
 	('"Hi, Eddie," called Poppy','"Chào Eddie!" Poppy gọi.','00:00:33.380','00:00:36.400','little-cat-tire-town-school-5'),
@@ -52915,9 +52915,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The building was noisy','Tòa nhà phát ra những âm thanh ồn ào','00:02:04.500','00:02:06.890','little-cat-tire-town-school-5'),
 	('A sign said, "Car Wash"','Trên một tấm biển có ghi: "Rửa xe"','00:02:08.330','00:02:11.170','little-cat-tire-town-school-5'),
 	('Mr. Grill smiled','Thầy Grill mỉm cười','00:02:11.890','00:02:14.070','little-cat-tire-town-school-5'),
-	('"It\'s bath time!"','"Đến giờ tắm rửa rồi!"','00:02:14.490','00:02:16.510','little-cat-tire-town-school-5'),
-	('The end','Hết.','00:02:17.470','00:02:21.010','little-cat-tire-town-school-5');
-
+	('"It\'s bath time!"','"Đến giờ tắm rửa rồi!"','00:02:14.490','00:02:16.510','little-cat-tire-town-school-5');
 /*=====================================================================================================================================================================================================================================================*/
 
 INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES

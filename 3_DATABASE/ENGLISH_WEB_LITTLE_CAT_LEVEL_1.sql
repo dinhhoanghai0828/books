@@ -140,8 +140,7 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 	('The building was noisy','Tòa nhà phát ra những âm thanh ồn ào','00:02:04.500','00:02:06.890','little-cat-tire-town-school-5'),
 	('A sign said, "Car Wash"','Trên một tấm biển có ghi: "Rửa xe"','00:02:08.330','00:02:11.170','little-cat-tire-town-school-5'),
 	('Mr. Grill smiled','Thầy Grill mỉm cười','00:02:11.890','00:02:14.070','little-cat-tire-town-school-5'),
-	('"It\'s bath time!"','"Đến giờ tắm rửa rồi!"','00:02:14.490','00:02:16.510','little-cat-tire-town-school-5'),
-	('The end','Hết.','00:02:17.470','00:02:21.010','little-cat-tire-town-school-5');
+	('"It\'s bath time!"','"Đến giờ tắm rửa rồi!"','00:02:14.490','00:02:16.510','little-cat-tire-town-school-5');
 
 /*=====================================================================================================================================================================================================================================================*/
 
