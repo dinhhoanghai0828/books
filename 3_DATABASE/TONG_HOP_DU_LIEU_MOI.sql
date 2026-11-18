@@ -2496,7 +2496,3 @@ INSERT INTO CONTENTS (ENG,VI,START_TIME,END_TIME,VOLUME_SLUG) VALUES
 ('He said no','','00:00:49.880','00:00:50.860','esl-fast-beginner-3-9'),
 ('The teacher said sorry to Andrea','','00:00:50.860','00:00:54.480','esl-fast-beginner-3-9');
 
-
-
-
-
