@@ -123,7 +123,7 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
       await markAsRead(volume.slug);
       notifApi.success({
         message: 'Danh dau thanh cong',
-        description: 'Tap da duoc danh dau la da doc xong.',
+        description: 'Tập đã được đánh dấu là đã đọc xong.',
         placement: 'topRight',
         duration: 3,
         style: { backgroundColor: '#f6ffed', border: '1px solid #b7eb8f' },
@@ -150,7 +150,7 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
       await markAsUnread(volume.slug);
       notifApi.success({
         message: 'Danh dau thanh cong',
-        description: 'Tap da duoc danh dau la chua doc.',
+        description: 'Tập đã được đánh dấu là chưa đọc.',
         placement: 'topRight',
         duration: 3,
         style: { backgroundColor: '#f6ffed', border: '1px solid #b7eb8f' },
@@ -178,7 +178,7 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
       await updateVolume(volume.id, volume.eng, volume.vi, volume.startTime, volume.endTime, newIsLanguageApproved, volume.isReviewCompleted);
       notifApi.success({
         message: 'Cap nhat thanh cong',
-        description: `Tap da duoc danh dau la ${newIsLanguageApproved === 1 ? 'da duyet ngon ngu' : 'chua duyet ngon ngu'}.`,
+        description: `Tập đã được đánh dấu là ${newIsLanguageApproved === 1 ? 'đã dịch' : 'chưa dịch'}.`,
         placement: 'topRight',
         duration: 3,
         style: { backgroundColor: '#f6ffed', border: '1px solid #b7eb8f' },
@@ -206,7 +206,7 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
       await updateVolume(volume.id, volume.eng, volume.vi, volume.startTime, volume.endTime, volume.isLanguageApproved, newIsReviewCompleted);
       notifApi.success({
         message: 'Cap nhat thanh cong',
-        description: `Tap da duoc danh dau la ${newIsReviewCompleted === 1 ? 'da duyet' : 'chua duyet'}.`,
+        description: `Tập đã được đánh dấu là ${newIsReviewCompleted === 1 ? 'đã duyệt' : 'chưa duyệt'}.`,
         placement: 'topRight',
         duration: 3,
         style: { backgroundColor: '#f6ffed', border: '1px solid #b7eb8f' },
@@ -432,9 +432,9 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
                           fontWeight: 'bold',
                           height: 'auto'
                         }}
-                        title={volume.isReviewCompleted === 1 ? 'Đánh dấu chưa dịch ngôn ngữ' : 'Đánh dấu đã dịch ngôn ngữ'}
+                        title={volume.isReviewCompleted === 1 ? 'Đánh dấu chưa duyệt' : 'Đánh dấu đã duyệt'}
                       >
-                        {volume.isReviewCompleted === 1 ? 'Đã dịch' : 'Chưa dịch'}
+                        {volume.isReviewCompleted === 1 ? 'Đã duyệt' : 'Chưa duyệt'}
                       </Button>
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
@@ -444,7 +444,7 @@ const VolumeContentComponent = ({ volumes, onVolumeUpdate }: VolumeContentCompon
                         onClick={(e) => handleToggleChecked(volume, e)}
                         loading={checkedLoading === volume.slug}
                         style={{ padding: 0, color: volume.isLanguageApproved === 1 ? 'green' : 'red' }}
-                        title={volume.isLanguageApproved === 1 ? 'Đánh dấu chưa duyệt ngôn ngữ' : 'Đánh dấu đã duyệt ngôn ngữ'}
+                        title={volume.isLanguageApproved === 1 ? 'Đánh dấu chưa dịch' : 'Đánh dấu đã dịch'}
                       />
                       <Button
                         type="link"
